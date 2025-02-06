@@ -2,9 +2,10 @@
 title: Commerce용 클라우드 구성 요소
 description: 클라우드 구성 요소 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.1.0 {#latest}
+## v1.1.1 {#latest}
+
+
+릴리스 날짜: 2025년 2월 6일
+
+- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.<!-- MCLOUD-13148	 - -->
+- ![수정 아이콘](../../assets/fix.svg) **캐시 준비 수정**—캐시 준비 중 범주 URL 문제를 해결했습니다.<!-- MCLOUD-12454 - -->
+
+
+## v1.1.0
 
 릴리스 날짜: 2024년 10월 7일
 

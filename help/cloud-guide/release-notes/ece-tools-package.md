@@ -2,10 +2,11 @@
 title: ECE-Tools 릴리스 노트
 description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-10-07T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2024-02-06T00:00:00Z
+exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '2990'
+source-wordcount: '3022'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.0 {#latest}
+## v2002.2.1 {#latest}
+
+
+릴리스 날짜: 2024년 2월 6일
+
+- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.<!-- MCLOUD-13145	 - -->
+- ![수정 아이콘](../../assets/fix.svg) **Opensearch용 유효성 검사기**-잘못된 서비스 버전에 대한 잘못된 메시지를 생성하는 유효성 검사기를 수정했습니다.<!-- MCLOUD-13184	 - -->
+
+
+## v2002.2.0
 
 릴리스 날짜: 2024년 10월 7일
 

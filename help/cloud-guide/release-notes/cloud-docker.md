@@ -3,10 +3,11 @@ title: Cloud Docker 패키지
 description: Cloud Docker 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-10-07T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2025-02-06T00:00:00Z
+exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
+source-git-commit: 7f62dbc7db9924abfe304b46ed62d9577471386d
 workflow-type: tm+mt
-source-wordcount: '3684'
+source-wordcount: '3697'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.0 {#latest}
+## v1.4.1 {#latest}
+
+릴리스 날짜: 2025년 2월 6일
+
+- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.
+
+
+## v1.4.0
 
 릴리스 날짜: 2024년 10월 7일
 

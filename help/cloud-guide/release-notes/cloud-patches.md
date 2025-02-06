@@ -2,10 +2,11 @@
 title: Commerce용 클라우드 패치
 description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-10-07T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2025-02-06T00:00:00Z
+exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2326'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,16 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.2 {#latest}
+## v1.1.3 {#latest}
+
+
+릴리스 날짜: 2025년 2월 6일
+
+- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.<!-- MCLOUD-13149	 - -->
+
+
+
+## v1.1.2
 
 릴리스 날짜: 2024년 11월 5일
 
