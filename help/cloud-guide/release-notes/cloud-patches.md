@@ -4,9 +4,9 @@ description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 �
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-02-06T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -29,14 +29,17 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.3 {#latest}
+## v1.1.4 {#latest}
 
+릴리스 날짜: 2025년 2월 13일
+
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7로 패치가 추가되었습니다**—이 업데이트는 패치 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+
+## v1.1.3
 
 릴리스 날짜: 2025년 2월 6일
 
 - ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.<!-- MCLOUD-13149	 - -->
-
-
 
 ## v1.1.2
 
@@ -124,9 +127,9 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 Adobe Commerce 2.4.5용 중요 패치:
 
-- **Braintree 결제를 사용한 주문 문제**—이 패치는 관리자가 새로운 주문이나 재주문을 할 수 없는 중요한 문제를 해결합니다.<!-- MCLOUD-9137 -->
+- **Braintree 결제를 사용한 주문 문제**—이 패치는 관리자가 새로운 주문이나 재주문을 할 수 없도록 하는 중요한 문제를 해결합니다.<!-- MCLOUD-9137 -->
 
-Braintree 결제를 사용하도록 설정한 경우 [관리자가 주문/순서를 만들 수 없습니다](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
+[Braintree 결제가 활성화된 경우 관리자가 주문/순서를 만들 수 없습니다](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
 
 ## v1.0.17
 
@@ -216,7 +219,7 @@ Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
 - **Adobe Commerce 2.3.0에서 2.3.5, 2.4.0에 대한 Redis 패치** - 레벨 2 캐시를 구현할 때 범주에 제품을 추가할 수 있도록 Redis 패치를 업데이트했습니다. <!--MCLOUD-6659-->
 
-- **Braintree VBE 패치**—관리자가 Braintree 해결 보고서를 보려고 할 때 오류가 발생하는 문제를 해결했습니다. <!--MCLOUD-6684-->
+- **Braintree VBE 패치**—관리자가 Braintree 결제 보고서를 보려고 할 때 오류가 발생하는 문제를 해결했습니다. <!--MCLOUD-6684-->
 
 - 이제 호스트 시스템에서 Git을 사용할 수 없는 경우 `ece-patches apply` 명령은 Unix `patch` 명령을 사용하여 패치를 적용합니다. <!--MCLOUD-7069-->
 
@@ -303,7 +306,7 @@ magento/magento-cloud-patches v1.0.1 릴리스의 소프트웨어 다운로드 �
 
    - `cron_schedule` 테이블의 데이터를 업데이트하는 동안 교착 상태를 방지하기 위해 _다시 시도_ 작업을 추가합니다.
 
-- **Magento Open Source 2.x에 사용 가능한 모든 패치를 포함하도록 `magento/magento-cloud-patches`을 업데이트함**—소프트웨어 다운로드 페이지에서 사용할 수 있는 모든 Magento Open Source 2.x 패치를 포함하도록 magento/magento-cloud-patches 패키지를 업데이트했습니다. 이전에 Magento Open Source 패치를 Adobe Commerce on cloud infrastructure 프로젝트에 복사한 경우 충돌을 방지하려면 해당 패치를 제거하십시오.<!--MAGECLOUD-4606-->
+- **Magento Open Source 2.x에 사용 가능한 모든 패치를 포함하도록 `magento/magento-cloud-patches`을 업데이트함**—소프트웨어 다운로드 페이지에서 사용할 수 있는 모든 Magento Open Source 2.x 패치를 포함하도록 magento/magento-cloud-patches 패키지를 업데이트했습니다. 이전에 Magento Open Source 패치를 Adobe Commerce on cloud infrastructure 프로젝트에 복사한 경우 충돌을 방지하려면 패치를 제거하십시오.<!--MAGECLOUD-4606-->
 
 - **Elasticsearch 카탈로그 페이지 매김 수정 사항** —magento/magento-cloud-patches v1.0에 제공된 Elasticsearch 카탈로그 페이지 매김 패치를 더 효과적인 수정 사항으로 교체했습니다.<!--MAGECLOUD-4847-->
 
@@ -325,4 +328,4 @@ magento/magento-cloud-patches v1.0.1 릴리스의 소프트웨어 다운로드 �
 
 - **새 메일 인터페이스의 이전 버전과의 호환성**-Adobe Commerce v2.3.3에 도입된 `Magento\Framework\Mail\EmailMessageInterface` PHP 인터페이스로 인한 이전 버전과의 비호환성 문제를 수정합니다. 이 패치의 범위에서 새 `EmailMessageInterface`이(가) 이전 `MessageInterface`에서 상속되고 Adobe Commerce 핵심 모듈이 `MessageInterface`에 종속된 상태로 되돌아갑니다.<!--MAGECLOUD-4422-->
 
-- **Elasticsearch 6.x에서 카탈로그 페이지 매김이 작동하지 않습니다**—카탈로그 검색 엔진으로 Elasticsearch 6.x를 사용하는 고객에게 영향을 주는 검색 결과 페이지 매김과 관련된 중요한 문제를 해결합니다.<!--MAGECLOUD-4448-->
+- **카탈로그 페이지 매김이 Elasticsearch 6.x에서 작동하지 않습니다**—카탈로그 검색 엔진으로 Elasticsearch 6.x를 사용하는 고객에게 영향을 주는 검색 결과 페이지 매김과 관련된 중요한 문제를 해결합니다.<!--MAGECLOUD-4448-->
