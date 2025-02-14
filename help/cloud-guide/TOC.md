@@ -1,12 +1,12 @@
 ---
-user-guide-title: Commerce on Cloud 안내서
+user-guide-title: 클라우드의 Commerce 안내서
 user-guide-description: 클라우드 인프라에서 Adobe Commerce 애플리케이션을 관리하는 방법에 대해 알아봅니다.
 product: magento
 feature: Cloud
 source-git-commit: 4e107bb8696c3c7cb76a0a702624aeb754648f70
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -134,7 +134,7 @@ ht-degree: 6%
       + [Elasticsearch](services/elasticsearch.md)
       + [MySQL](services/mysql.md)
       + [OpenSearch](services/opensearch.md)
-      + [RabbitMQ](services/rabbitmq.md)
+      + [래빗MQ](services/rabbitmq.md)
       + [레디스](services/redis.md)
 + Fastly 서비스 {#cdn}
    + [개요](cdn/fastly.md)
