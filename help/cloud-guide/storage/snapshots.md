@@ -2,9 +2,10 @@
 title: 백업 관리
 description: Adobe Commerce on cloud infrastructure 프로젝트에 대한 백업을 수동으로 만들고 복원하는 방법에 대해 알아봅니다.
 feature: Cloud, Paas, Snapshots, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
+source-git-commit: b5fa153b4eb0569fd16c78fb7bf47c54222752cd
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -14,6 +15,10 @@ ht-degree: 0%
 [!DNL Cloud Console]의 **[!UICONTROL Backup]** 버튼을 사용하거나 `magento-cloud snapshot:create` 명령을 사용하여 언제든지 활성 Starter 환경의 수동 백업을 수행할 수 있습니다.
 
 백업 또는 _스냅숏_&#x200B;은(는) 실행 중인 서비스(MySQL 데이터베이스)의 모든 영구 데이터와 탑재된 볼륨(var, pub/media, app/etc)에 저장된 모든 파일을 포함하는 환경 데이터의 전체 백업입니다. Git 기반 저장소에 코드가 이미 저장되어 있으므로 스냅숏에 코드가 _포함되지_&#x200B;않습니다. 스냅샷의 사본은 다운로드할 수 없습니다.
+
+>[!WARNING]
+>
+>백업에는 일반적으로 `pub/media`과(와) 같은 공용 웹 디렉터리를 포함하여 마운트된 디렉터리의 내용이 포함되지만 백업 출력 파일을 `pub/media` 또는 `pub/static`과(와) 같은 공용 웹 디렉터리로 이동하지 마십시오.
 
 백업/스냅숏 기능은 기본적으로 재해 복구 목적으로 일반 백업을 받는 Pro 스테이징 및 프로덕션 환경에는 **적용되지 않습니다**. 자세한 내용은 [Pro 백업 및 재해 복구](../architecture/pro-architecture.md#backup-and-disaster-recovery)를 참조하십시오. Pro 스테이징 및 프로덕션 환경의 자동 라이브 백업과 달리 백업은 **자동**&#x200B;이 아닙니다. Starter 또는 Pro 통합 환경의 백업을 주기적으로 만들려면 백업을 수동으로 만들거나 cron 작업을 설정하는 것은 _사용자_&#x200B;의 책임입니다.
 
