@@ -2,7 +2,8 @@
 title: 웹 애플리케이션 방화벽(WAF)
 description: Fastly WAF 서비스가 Adobe Commerce 네트워크 또는 사이트를 손상시키기 전에 악의적인 요청 트래픽을 탐지하고 로그하고 차단하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f00e35f2-9800-4e24-a4d0-d36fde59a003
+source-git-commit: 7e61673b343fb954b53bf7cbae88efaf7bbfab4c
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 0%
@@ -17,10 +18,10 @@ WAF 서비스는 다음과 같은 이점을 제공합니다.
 
 - **PCI 규정 준수**—WAF 지원 기능을 통해 프로덕션 환경의 Adobe Commerce 상점이 PCI DSS 6.6 보안 요구 사항을 충족할 수 있습니다.
 - **기본 WAF 정책** - Fastly에서 구성 및 유지 관리하는 기본 WAF 정책은 주입 공격, 악의적인 입력, 교차 사이트 스크립팅, 데이터 내보내기, HTTP 프로토콜 위반 및 기타 [OWASP Top Ten](https://owasp.org/www-project-top-ten/) 보안 위협을 포함한 광범위한 공격으로부터 Adobe Commerce 웹 애플리케이션을 보호하기 위해 맞춤화된 보안 규칙 모음을 제공합니다.
-- **WAF 온보딩 및 지원** - Adobe은 프로비저닝이 완료된 후 2~3주 내에 프로덕션 환경에 기본 WAF 정책을 배포하고 활성화합니다.
+- **WAF 온보딩 및 지원** - Adobe은 프로비저닝이 완료된 후 2~3주 내에 프로덕션 환경에서 기본 WAF 정책을 배포하고 활성화합니다.
 - **작업 및 유지 관리 지원**—
-   - WAF 서비스에 대한 로그, 규칙 및 경고를 Adobe 및 Fastly로 설정하고 관리합니다.
-   - Adobe은 우선순위 1 문제로서 합법적인 트래픽을 차단하는 WAF 서비스 문제와 관련된 고객 지원 티켓을 평가합니다.
+   - Adobe 및 Fastly는 WAF 서비스에 대한 로그, 규칙 및 경고를 설정하고 관리합니다.
+   - Adobe은 적법한 트래픽을 차단하는 WAF 서비스 문제와 관련된 고객 지원 티켓을 우선 순위 1 문제로 분류합니다.
    - WAF 서비스 버전으로 자동 업그레이드하면 새롭거나 진화하는 악용에 대한 즉각적인 적용이 보장됩니다. [WAF 유지 관리 및 업그레이드](#waf-maintenance-and-updates)를 참조하세요.
 
 >[!TIP]
@@ -29,7 +30,7 @@ WAF 서비스는 다음과 같은 이점을 제공합니다.
 
 ## WAF 활성화
 
-Adobe은 프로비저닝이 완료된 후 2~3주 내에 새 계정에서 WAF 서비스를 사용할 수 있도록 합니다. WAF은 Fastly CDN 서비스를 통해 구현됩니다. 하드웨어 또는 소프트웨어를 설치하거나 유지 관리할 필요가 없습니다.
+Adobe은 프로비저닝이 완료된 후 2~3주 내에 새 계정에서 WAF 서비스를 활성화합니다. WAF은 Fastly CDN 서비스를 통해 구현됩니다. 하드웨어 또는 소프트웨어를 설치하거나 유지 관리할 필요가 없습니다.
 
 >[!NOTE]
 >
@@ -49,7 +50,7 @@ WAF 서비스가 활성화되면 WAF 규칙과 비교하여 모든 웹 및 관�
 
 책임자로부터 이 오류 응답 페이지를 사용자 지정할 수 있습니다. [WAF 응답 페이지 사용자 지정](fastly-custom-response.md#customize-the-waf-error-page)을 참조하세요.
 
-Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
+Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
 
 New Relic을 사용하여 특정 요청에 대한 WAF 응답을 식별하려면 다음을 참조하십시오.
 
