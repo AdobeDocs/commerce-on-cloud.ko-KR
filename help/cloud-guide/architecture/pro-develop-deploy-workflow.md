@@ -2,9 +2,10 @@
 title: Pro 프로젝트 워크플로
 description: Pro 개발 및 배포 워크플로우를 사용하는 방법을 알아봅니다.
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efe41991-8940-4d5c-a720-80369274bee3
+source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ Pro 프로젝트에는 글로벌 `master` 분기와 세 개의 기본 환경이 
 
 ## 개발 워크플로
 
-통합 환경은 클라우드 인프라 코드에서 Adobe Commerce을 포함하는 단일 기본 `integration` 분기를 제공합니다. 추가 활성 환경 분기를 만들 수 있습니다. 이렇게 하면 PaaS(Platform as a Service) 컨테이너에 최대 2개의 활성 분기가 배포됩니다. 비활성 환경의 수에는 제한이 없습니다.
+통합 환경은 클라우드 인프라 코드에서 Adobe Commerce을 포함하는 단일 기본 `integration` 분기를 제공합니다. 추가 활성 환경 분기를 만들 수 있습니다. 이렇게 하면 PaaS(Platform as a Service) 컨테이너에 최대 2개의 활성 분기가 배포됩니다. 비활성 환경의 수에는 제한이 없지만 비활성 환경이 많을수록 Cloud Console을 로드하는 데 더 오랜 시간이 걸립니다.
 
 {{enhanced-integration-envs}}
 
