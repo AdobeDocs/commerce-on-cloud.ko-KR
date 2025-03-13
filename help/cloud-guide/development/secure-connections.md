@@ -4,9 +4,10 @@ description: Adobe Commerce on cloud infrastructure 프로젝트에 SSH 키를 �
 role: Developer
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
+source-git-commit: c25e5b74ae8105995107860246ecb9ba45910bb1
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ SSH(Secure Shell)는 원격 서버 및 시스템에 안전하게 로그인하는
 
 ## 계정에 SSH 공개 키 추가
 
-Adobe Commerce on cloud infrastructure 계정에 SSH 공개 키를 추가한 후 계정에 모든 활성 환경을 다시 배포하여 키를 설치합니다.
+클라우드 인프라 계정의 Adobe Commerce에 SSH 공개 키를 추가하거나 업데이트한 후, 계정에 [모든 활성 환경을 다시 배포](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)하여 키를 설치하십시오.
 
 Cloud CLI 또는 [!DNL Cloud Console] 방법 중 하나를 사용하여 계정에 SSH 키를 추가할 수 있습니다.
 
