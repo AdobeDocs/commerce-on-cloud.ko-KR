@@ -2,7 +2,8 @@
 title: 로그 보기 및 관리
 description: 클라우드 인프라에서 사용할 수 있는 로그 파일의 유형과 찾을 수 있는 위치를 파악합니다.
 last-substantial-update: 2023-05-23T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
+source-git-commit: 7615347cd5b528406c2a0e72be3450350655eeb9
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -111,7 +112,7 @@ Re-deploying environment project-integration-ID
 
 >[!TIP]
 >
->클라우드 환경을 구성할 때 빌드 및 배포 작업에 대해 [로그 기반 Slack 및 전자 메일 알림](../environment/set-up-notifications.md)을 설정할 수 있습니다.
+>클라우드 환경을 구성할 때 빌드 및 배포 작업에 대해 [로그 기반 Slack 및 이메일 알림](../environment/set-up-notifications.md)을 설정할 수 있습니다.
 
 다음 로그에는 모든 클라우드 프로젝트에 대한 공통 위치가 있습니다.
 
@@ -208,13 +209,13 @@ Pro 스테이징 및 프로덕션 환경의 경우 배포, 사후 배포 및 Cro
 
 | 로그 파일 | Pro 스테이징 | 프로프로덕션 |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| **로그 배포** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg/deploy.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/deploy.log` |
-| **사후 배포 로그** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/post_deploy.log` |
-| **크론 로그** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg/cron.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/cron.log` |
-| **Nginx 액세스 로그** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
-| **Nginx 오류 로그** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
-| **PHP 액세스 로그** | `/var/log/platform/<project-ID>_stg/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
-| **PHP FPM 로그** | `/var/log/platform/<project-ID>_stg/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
+| **로그 배포** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg*/deploy.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/deploy.log` |
+| **사후 배포 로그** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg*/post_deploy.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **크론 로그** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg*/cron.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/cron.log` |
+| **Nginx 액세스 로그** | `/var/log/platform/<project-ID>_stg*/access.log` | `/var/log/platform/<project-ID>/access.log` |
+| **Nginx 오류 로그** | `/var/log/platform/<project-ID>_stg*/error.log` | `/var/log/platform/<project-ID>/error.log` |
+| **PHP 액세스 로그** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
+| **PHP FPM 로그** | `/var/log/platform/<project-ID>_stg*/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
 
 ### 보관된 로그 파일
 
@@ -234,7 +235,7 @@ Pro 스테이징 및 프로덕션 환경의 경우 배포, 사후 배포 및 Cro
 
 각 서비스는 별도의 컨테이너에서 실행되므로 통합 환경에서 서비스 로그를 사용할 수 없습니다. Adobe Commerce on cloud infrastructure는 통합 환경에서만 웹 서버 컨테이너에 액세스할 수 있습니다. 다음 서비스 로그 위치는 Pro 프로덕션 및 스테이징 환경용입니다.
 
-- **Redis 로그**: `/var/log/platform/<project-ID>_stg/redis-server-<project-ID>_stg.log`
+- **Redis 로그**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
 - **Elasticsearch 로그**: `/var/log/elasticsearch/elasticsearch.log`
 - **Java 가비지 수집 로그**: `/var/log/elasticsearch/gc.log`
 - **메일 로그**: `/var/log/mail.log`
