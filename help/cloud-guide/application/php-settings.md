@@ -2,9 +2,10 @@
 title: PHP 설정
 description: 클라우드 인프라에서 Commerce 애플리케이션 구성에 대한 최적의 PHP 설정에 대해 알아봅니다.
 feature: Cloud, Configuration, Extensions
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
+source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -66,10 +67,16 @@ realpath_cache_ttl = 7200
 
 ### 사용자 정의 PHP 설정 확인
 
-클라우드 환경에 대한 `php.ini` 변경 사항을 푸시한 후 사용자 지정 PHP 구성이 환경에 추가되었는지 확인할 수 있습니다. 예를 들어, SSH를 사용하여 원격 환경에 로그인하고 다음과 유사한 방법을 사용하여 파일을 볼 수 있습니다.
+클라우드 환경에 대한 `php.ini` 변경 사항을 푸시한 후 사용자 지정 PHP 구성이 환경에 추가되었는지 확인할 수 있습니다. 예를들어, SSH를 사용하여 원격 환경에 로그인하고 PHP 구성 정보를 표시하고 `register_argc_argv` 지시문을 필터링합니다.
 
 ```bash
-cat /etc/php/<php-version>/fpm/php.ini
+php -i | grep register_argc_ar
+```
+
+샘플 출력:
+
+```text
+register_argc_argv => On => On
 ```
 
 >[!WARNING]
@@ -127,7 +134,7 @@ Pro 프로젝트의 경우 다음 확장을 설치하려면 추가 지원이 필
 sourceguardian.restrict_unencoded = "1"
 ```
 
-SourceGuardian 설명서의 [섹션 3.5를 참조하십시오](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _PDF 링크_&#x200B;입니다.
+SourceGuardian 설명서의 [섹션 3.5를 참조하십시오](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _PDF 링크입니다_.
 
 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 모든 프로덕션 환경 및 Pro 스테이징 환경에서 이러한 PHP 확장을 설치하는 데 도움을 받으십시오. 업데이트된 `.magento/services.yaml` 파일, 업데이트된 PHP 버전 및 추가 PHP 확장명을 포함하는 `.magento.app.yaml` 파일을 포함하십시오. 라이브 프로덕션 환경을 변경하는 경우 최소 48시간 이상 알림을 제공해야 합니다. 클라우드 인프라 팀이 프로젝트를 업데이트하는 데 최대 48시간이 걸릴 수 있습니다.
 
