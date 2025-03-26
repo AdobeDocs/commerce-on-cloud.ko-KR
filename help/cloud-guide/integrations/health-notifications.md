@@ -1,10 +1,11 @@
 ---
 title: 상태 알림
-description: Adobe Commerce on cloud infrastructure 프로젝트에서 디스크 공간 사용을 위한 Slack, 이메일 및 PagerDuty 알림을 구성하는 방법에 대해 알아봅니다.
+description: Adobe Commerce on cloud infrastructure 프로젝트에서 디스크 공간 사용을 위해 Slack, 이메일 및 PagerDuty 알림을 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Observability, Integration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
+source-git-commit: c3c708656e3d79c0893d1c02e60dcdf2ad8d7c7c
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ magento-cloud integration:add --type health.email --from-address you@example.com
 
 ## Slack 채널 알림
 
-Slack은 봇이라는 인터랙티브한 앱을 이용해 대화방에 메시지를 게시하는 외부 서비스다. Slack에서 상태 알림을 받으려면 Slack 그룹에 대한 사용자 지정 [봇 사용자](https://api.slack.com/bot-users)를 만들어야 합니다. 채널 또는 채널에 대한 봇 사용자를 구성한 후 Slack이 제공한 [봇 토큰](https://api.slack.com/docs/token-types#bot)을 저장하여 통합을 등록합니다. 다음 예제에서는 상태 알림을 Slack 채널에 등록합니다.
+Slack은 봇이라는 인터랙티브한 앱을 이용해 대화방에 메시지를 게시하는 외부 서비스다. Slack에서 상태 알림을 받으려면 먼저 Slack 그룹에 대한 사용자 지정 [봇 사용자](https://api.slack.com/bot-users)를 만들어야 합니다. 채널 또는 채널에 대한 봇 사용자를 구성한 후 Slack에서 제공한 [봇 토큰](https://api.slack.com/docs/token-types#bot)을 저장하여 통합을 등록합니다. 다음 예에서는 Slack 채널에 상태 알림을 등록합니다.
 
 ```bash
 magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --channel '#slack-channel-name'
@@ -44,3 +45,13 @@ PagerDuty는 호출중인 팀원에게 중요한 문제를 알릴 수 있는 외
 ```bash
 magento-cloud integration:add --type health.pagerduty --routing-key PAGERDUTY_ROUTING_KEY
 ```
+
+## 로그 관리
+
+사용 가능한 디스크 공간을 늘리기 위해 환경에서 로그 파일을 자르거나 제거할 수 있습니다. logrotate가 활성화된 경우 먼저 로그의 백업 복사본을 다운로드한 다음 제거합니다.
+
+```bash
+rm -rf some-log-file.log.gz
+```
+
+또는 개별 로그 파일을 잘라서 크기를 줄일 수 있습니다. 로그 파일 잘림에 대한 자세한 예제는 비디오 자습서에서 로그 파일 자르기{target="_blank"}를 참조하십시오.
