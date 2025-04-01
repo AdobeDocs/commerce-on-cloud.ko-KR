@@ -1,9 +1,10 @@
 ---
 title: 지역 IP 주소
 description: 통합 환경을 위해 클라우드 인프라에서 Adobe Commerce에서 사용하는 AWS 및 Azure 지역의 IP 주소 목록을 참조하십시오.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1137f5cf-4879-46d7-878c-bf47de7a0e34
+source-git-commit: f2214dd56625847132298892635c7cf738c3d71f
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,9 @@ ht-degree: 0%
 - **프로젝트 ID** = 13자 프로젝트 ID
 - **지역** = AWS 또는 Azure 지역 이름
 
-`ping` 명령을 사용하여 들어오는 IP 주소를 검색할 수 있습니다.
+`ping` 또는 `dig` 명령을 사용하여 들어오는 IP 주소를 검색할 수 있습니다.
+
+**Ping**
 
 ```bash
 ping integration-abcd123-abcd78910.us-3.magentosite.cloud
@@ -35,6 +38,18 @@ PING integration-abcd123-abcd78910.us-3.magentosite.cloud (34.210.133.187): 56 d
 Request timeout for icmp_seq 0
 Request timeout for icmp_seq 1
 Request timeout for icmp_seq 2
+```
+
+**Dig**
+
+```bash
+dig +short integration-abcd123-abcd78910.us-3.magentosite.cloud
+```
+
+샘플 응답
+
+```bash
+34.210.133.187
 ```
 
 나가는 SSH 연결을 차단하는 회사 방화벽이 있는 경우 인바운드 IP 주소를 허용 목록에 추가하다에 추가할 수 있습니다.
