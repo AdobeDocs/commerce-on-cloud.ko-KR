@@ -2,11 +2,11 @@
 title: ECE-Tools 릴리스 노트
 description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-02-06T00:00:00Z
+last-substantial-update: 2024-04-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 2522e606aebac79285793cd40428d3e064a3c1db
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3065'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,19 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.1 {#latest}
+## v2002.2.2 {#latest}
 
+릴리스 날짜: 2025년 4월 7일
+
+- ![새 아이콘](../../assets/new.svg) **Valkey** - Redis를 대체하는 새 서비스(Valkey)에 대한 지원이 추가되었습니다.&lt;!— MCLOUD-13455 —>
+- ![수정 아이콘](../../assets/fix.svg) **2.4.4/2.4.5용 Opensearch2**—Adobe Commerce 버전 2.4.4/2.4.5에서 `opensearch2`에 대한 지원을 추가했습니다. &lt;!— MCLOUD-13493 —>
+
+## v2002.2.1
 
 릴리스 날짜: 2024년 2월 6일
 
-- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.<!-- MCLOUD-13145	 - -->
-- ![수정 아이콘](../../assets/fix.svg) **Opensearch용 유효성 검사기**-잘못된 서비스 버전에 대한 잘못된 메시지를 생성하는 유효성 검사기를 수정했습니다.<!-- MCLOUD-13184	 - -->
+- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.<!-- MCLOUD-13145     - -->
+- ![수정 아이콘](../../assets/fix.svg) **Opensearch용 유효성 검사기**-잘못된 서비스 버전에 대한 잘못된 메시지를 생성하는 유효성 검사기를 수정했습니다.&lt;!— MCLOUD-13184 —>
 
 
 ## v2002.2.0
@@ -64,7 +70,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2024년 1월 16일
 
-- ![수정 아이콘](../../assets/fix.svg) **Elasticsearch 및 OpenSearch용 유효성 검사기**—LiveSearch가 활성화된 경우 검색 서비스를 설치하는 잘못된 메시지를 생성한 유효성 검사기를 수정했습니다.<!-- MCLOUD-10167 -->
+- ![수정 아이콘](../../assets/fix.svg) **Elasticsearch 및 OpenSearch용 유효성 검사기** - LiveSearch가 활성화된 경우 검색 서비스를 설치하는 잘못된 메시지를 생성한 유효성 검사기를 수정했습니다.<!-- MCLOUD-10167 -->
 - ![수정 아이콘](../../assets/fix.svg) **배포 경고**—비어 있지 않은 폴더에 대한 배포 경고를 초래하는 문제가 해결되었습니다.<!-- MCLOUD-8958 -->
 
 ## v2002.1.16
@@ -79,7 +85,7 @@ ht-degree: 0%
 
 - ![수정 아이콘](../../assets/fix.svg) **오류 코드**—오류 코드 스키마 및 오류 코드 문서 생성기가 업데이트되었습니다.
 - ![수정 아이콘](../../assets/fix.svg) **사용자 지정 Redis 모델의 유효성 검사기**-사용자 지정 Redis 백엔드 모델의 유효성 검사기를 업데이트했습니다. [캐시 구성에 대한 예제를 참조하십시오](../environment/variables-deploy.md#cache_configuration).
-- ![수정 아이콘](../../assets/fix.svg) **RabbitMQ 유효성 검사기** RabbitMQ 3.11에 대한 지원이 추가됨
+- ![수정 아이콘](../../assets/fix.svg) **RabbitMQ용 유효성 검사기** RabbitMQ 3.11에 대한 지원이 추가됨
 - ![수정 아이콘](../../assets/fix.svg) **잘못된 링크를 수정했습니다**-시작 이메일 템플릿의 온보딩 설명서에 대한 잘못된 링크를 수정했습니다.
 
 ## v2002.1.14
@@ -94,7 +100,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2022년 10월 27일
 
-- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 Adobe I/O Events 지원이 추가되었습니다**. 이제 확장 개발자는 [Adobe I/O Events](https://developer.adobe.com/events/docs/) 프레임워크를 사용하여 클라우드 인스턴스에서 [App Builder Adobe](https://developer.adobe.com/app-builder/docs/overview/)을 위해 작성된 응용 프로그램으로 Commerce 이벤트 정보를 보낼 수 있습니다. Adobe Commerce용 Adobe I/O Events이 파트너 미리 보기에 있습니다.<!-- CEXT-932 -->
+- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 Adobe I/O Events 지원이 추가되었습니다**. 이제 확장 개발자는 [Adobe I/O Events](https://developer.adobe.com/events/docs/) 프레임워크를 사용하여 클라우드 인스턴스에서 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)용으로 작성된 응용 프로그램으로 Commerce 이벤트 정보를 보낼 수 있습니다. Adobe Commerce용 Adobe I/O Events이 파트너 미리 보기에 있습니다.<!-- CEXT-932 -->
 - ![새 아이콘](../../assets/new.svg) **OPcache 구성에 대한 유효성 검사기** - 제외된 경로에 대해 OPcache 구성을 확인하는 유효성 검사기를 추가했습니다.<!-- MCLOUD-9485 -->
 - ![수정 아이콘](../../assets/fix.svg) **GraphQL 캐시 구성 문제를 해결했습니다**—이제 ECE-Tools가 `app/etc/env.php` 파일의 `cache` 구성에서 GraphQL `id_salt` 값을 유지합니다.<!-- MCLOUD-9486 -->
 
@@ -117,7 +123,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2022년 3월 31일
 
-- ![수정 아이콘](../../assets/fix.svg) **Elasticsearch 7.10**—7.10 버전의 Elasticsearch을 지원하도록 유효성 검사기를 업데이트했습니다.<!-- MCLOUD-8548 -->
+- ![수정 아이콘](../../assets/fix.svg) **Elasticsearch 7.10**—Elasticsearch 7.10 버전을 지원하도록 유효성 검사기를 업데이트했습니다.<!-- MCLOUD-8548 -->
 
 ## v2002.1.9
 
@@ -128,7 +134,7 @@ ht-degree: 0%
 - ![수정 아이콘](../../assets/fix.svg) **symfony/process**—symfony/process ^5.3과의 호환성을 추가했습니다.<!-- MCLOUD-8283 -->
 
 - ![새 아이콘](../../assets/new.svg) **소비자 다중 프로세스**—각 소비자에 대해 생성할 프로세스 수를 지정할 수 있도록 `multiple_processes` 옵션을 추가했습니다. [변수 배포](../environment/variables-deploy.md#cron_consumers_runner).<!-- MCLOUD-8295 -->에서 `CRON_CONSUMERS_RUNNER` 변수 설명을 참조하십시오.
-- ![새 아이콘](../../assets/new.svg) **OpenSearch 체계 및 전체 호스트 경로**—Elasticsearch 체계 및 전체 호스트 경로를 구성하는 기능이 추가되었습니다.
+- ![새 아이콘](../../assets/new.svg) **OpenSearch 체계 및 전체 호스트 경로** - Elasticsearch 체계 및 전체 호스트 경로를 구성하는 기능이 추가되었습니다.
 - ![수정 아이콘](../../assets/fix.svg) **AWS S3**—AWS S3 사용 방법을 변경했습니다.
 - ![수정 아이콘](../../assets/fix.svg) **드라이버 옵션 수정 판독기**—유효성 검사기에 대해 `ece-tools`이(가) `env.php` 파일에서 DB 연결에 대한 드라이버 옵션 읽기 구성을 추가했습니다.<!-- MCLOUD-8420 -->
 
@@ -253,7 +259,7 @@ ht-degree: 0%
 
    - 오류 코드 102 - `env.php` 파일에 쓸 수 없는 경우 발생하는 문제에 대한 추가 검사를 추가했습니다. <!--MCLOUD-6221-->
 
-- ![새 아이콘](../../assets/new.svg) 배포 프로세스 중에 적용할 하나 이상의 품질 패치를 지정하기 위해 **QUALITY_PATCH** 환경 변수를 추가했습니다. [변수 빌드](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->를 참조하십시오.
+- ![새 아이콘](../../assets/new.svg) 배포 프로세스 중에 적용할 하나 이상의 품질 패치를 지정하기 위해 **QUALITY_PATCHES** 환경 변수를 추가했습니다. [변수 빌드](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->를 참조하십시오.
 
 ## v2002.1.1
 

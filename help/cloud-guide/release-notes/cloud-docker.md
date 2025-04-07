@@ -3,11 +3,11 @@ title: Cloud Docker 패키지
 description: Cloud Docker 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-02-06T00:00:00Z
+last-substantial-update: 2025-04-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 7f62dbc7db9924abfe304b46ed62d9577471386d
+source-git-commit: 5e991f974f33b35497b09c10fde36850c6279586
 workflow-type: tm+mt
-source-wordcount: '3697'
+source-wordcount: '3710'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.1 {#latest}
+## v1.4.2 {#latest}
+
+릴리스 날짜: 2025년 4월 7일
+
+- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—`php-cli` 8.4 및 `php-fpm` 8.4 이미지가 추가되었습니다.
+
+
+## v1.4.1
 
 릴리스 날짜: 2025년 2월 6일
 
@@ -96,7 +103,7 @@ ht-degree: 0%
    - 업그레이드된 xDebug 버전 3.1.2
    - 업그레이드된 xmlrpc 1.0.0RC3
 
-- ![수정 아이콘](../../assets/fix.svg) **Elasticsearch 및 OpenSearch 개선 사항**—Elasticsearch 및 OpenSearch Dockerfiles 개선 사항; Elasticsearch 5.2 이미지를 제거했습니다.
+- ![수정 아이콘](../../assets/fix.svg) **Elasticsearch 및 OpenSearch 개선 사항**—Elasticsearch 및 OpenSearch Dockerfiles의 개선 사항; Elasticsearch 5.2 이미지를 제거했습니다.
 - ![수정 아이콘](../../assets/fix.svg) **나트륨 확장**—모든 PHP 이미지에서 기본적으로 `sodium` 확장을 사용하도록 설정했습니다.
 - ![수정 아이콘](../../assets/fix.svg) **작성기 캐시 볼륨** - 작성기 캐시 볼륨에 캐시된 작성기 패키지가 있는 경로가 수정되었습니다.
 - ![수정 아이콘](../../assets/fix.svg) **nginx의 메모리 제한**—NGINX 이미지의 메모리 제한이 수정되었습니다.
@@ -196,7 +203,7 @@ ht-degree: 0%
 
       - **Elasticsearch 플러그 인 구성** - `services.yaml` 파일의 Elasticsearch 플러그 인 구성 정보를 사용하여 Commerce 환경용 Cloud Docker의 `docker-compose.yaml` 파일을 생성하는 지원이 추가되었습니다. [Elasticsearch 플러그인](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-plugins).<!--MCLOUD-2789-->을 참조하세요.
 
-      - **Elasticsearch 플러그 인 지원**—다음 Elasticsearch 플러그 인에 대한 지원이 추가되었습니다. `analysis-icu`, `analysis-phonetic`, `analysis-stempel` 및 `analysis-nori`. 기본적으로 `analysis-icu` 및 `analysis-phonetic` 플러그인이 설치됩니다. 필요에 따라 `analysis-stempel` 및 `analysis-nori` 플러그인을 추가하거나 제거할 수 있습니다.<!--MCLOUD-2789-->
+      - **Elasticsearch 플러그인 지원**—다음 Elasticsearch 플러그인에 대한 지원이 추가되었습니다. `analysis-icu`, `analysis-phonetic`, `analysis-stempel` 및 `analysis-nori`. 기본적으로 `analysis-icu` 및 `analysis-phonetic` 플러그인이 설치됩니다. 필요에 따라 `analysis-stempel` 및 `analysis-nori` 플러그인을 추가하거나 제거할 수 있습니다.<!--MCLOUD-2789-->
 
    - ![새 아이콘](../../assets/new.svg) **CLI 컨테이너**
 
@@ -263,7 +270,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **Adobe Commerce 및 Magento Open Source 배포 지원**—이제 Commerce용 Cloud Docker를 사용하여 클라우드 인프라의 Adobe Commerce에서 호스팅되지 않은 프로젝트에 대한 로컬 개발 환경을 배포할 수 있습니다.<!--MCLOUD-5667-->
 
-- ![새 아이콘](../../assets/new.svg) **Blackfire.io 지원**—자동화된 성능 테스트를 위해 [Blackfire.io 확장](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire/)을 사용할 수 있는 지원이 추가되었습니다. [Zilker Technology에서 Adarsh Manickam이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
+- ![새 아이콘](../../assets/new.svg) **Blackfire.io 지원** - 자동화된 성능 테스트를 위해 [Blackfire.io 확장](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire/)을 사용할 수 있는 지원이 추가되었습니다. [Zilker Technology에서 Adarsh Manickam이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
 
 - ![새 아이콘](../../assets/new.svg) **컨테이너 업데이트**
 
@@ -289,9 +296,9 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) **Elasticsearch**
 
-      - Elasticsearch 6.8, 7.2, 7.5 및 7.6.<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860-->에 대한 지원을 추가했습니다.
+      - Elasticsearch 6.8, 7.2, 7.5 및 7.6.<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860-->에 대한 지원이 추가되었습니다.
 
-      - 도커 작성 구성 파일을 생성할 때 [Elasticsearch 컨테이너 구성](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)을(를) 사용자 지정하는 기능이 추가되었습니다.<!--MCLOUD-3059-->
+      - 도커 구성 구성 파일을 생성할 때 [Elasticsearch 컨테이너 구성](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)을(를) 사용자 지정하는 기능이 추가되었습니다.<!--MCLOUD-3059-->
 
       - 도커 작성 구성 파일을 생성하기 위한 서비스 구성 옵션에 `--no-es` 옵션을 추가했습니다. 이 옵션을 사용하여 Elasticsearch 컨테이너 설치를 건너뛰고 대신 MySQL 검색을 사용하십시오. 이 옵션은 Adobe Commerce 버전 2.3.5 이하에서만 지원됩니다.<!--MCLOUD-3766-->
 
@@ -340,7 +347,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2020년 2월 5일
 
-- ![새 아이콘](../../assets/new.svg) **전달할 별도의 패키지를 만들었습니다.`Cloud Docker for Commerce`**—코드 품질을 유지하고 독립적인 릴리스를 제공하기 위해 Commerce용 Cloud Docker를 전달할 소스 코드를 `ece-tools` 저장소에서 [새 `magento-cloud-docker` 저장소](https://github.com/magento/magento-cloud-docker)(으)로 이동했습니다. 새 패키지는 ECE-Tools v2002.1.0 이상에 종속됩니다.
+- ![새 아이콘](../../assets/new.svg) **전달할 별도의 패키지를 만들었습니다.`Cloud Docker for Commerce`**—코드 품질을 유지하고 독립적인 릴리스를 제공하기 위해 Commerce용 Cloud Docker를 전달할 소스 코드를 `ece-tools` 저장소에서 [새 `magento-cloud-docker` 저장소](https://github.com/magento/magento-cloud-docker)&#x200B;(으)로 이동했습니다. 새 패키지는 ECE-Tools v2002.1.0 이상에 종속됩니다.
 
   ece-tools를 업데이트할 때 `magento/magento-cloud-docker` 패키지도 버전 1.0.0으로 업데이트합니다. 이전 `ece-tools` 릴리스(2002.0.x)와 함께 Commerce용 Cloud Docker를 사용한 경우 [이전 버전과의 비호환성](backward-incompatible-changes.md)을 검토하고 필요에 따라 프로젝트를 스크립트, 명령 및 프로세스로 업데이트합니다.
 
@@ -360,7 +367,7 @@ ht-degree: 0%
 
       - ![새 아이콘](../../assets/new.svg) **자동으로 생성된 NGINX 인증서**—이제 Docker 구성 파일에 웹 컨테이너에 대한 NGINX 인증서를 자동으로 생성하는 구성이 포함됩니다.<!--MAGECLOUD-4258-->
 
-   - ![새 아이콘](../../assets/new.svg) **새 Selenium 컨테이너**—MTF(Magento 기능 테스트 프레임워크)를 사용하여 Adobe Commerce 응용 프로그램 테스트를 지원하도록 [Selenium 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#selenium-container)를 추가했습니다.<!--MAGECLOUD-4040-->
+   - ![새 아이콘](../../assets/new.svg) **새 Selenium 컨테이너**—MTF(Magento Functional Testing Framework)를 사용하여 Adobe Commerce 응용 프로그램 테스트를 지원하기 위해 [Selenium 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#selenium-container)를 추가했습니다.<!--MAGECLOUD-4040-->
 
    - ![새 아이콘](../../assets/new.svg) **[!DNL RabbitMQ]버전 지원**—[!DNL RabbitMQ] 버전 3.8을 지원하도록 [!DNL RabbitMQ] 컨테이너 구성을 업데이트했습니다.<!--MAGECLOUD-4674-->
 
