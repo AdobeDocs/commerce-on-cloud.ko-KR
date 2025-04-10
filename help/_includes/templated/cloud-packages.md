@@ -1,7 +1,7 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 5567f425f28cb4d19aaa0db80f0ede1fd525a686
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2275'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ ht-degree: 0%
 
 `composer.json` 파일은 패키지 목록을 선언하지만, `composer.lock` 파일은 Adobe Commerce 설치를 빌드하는 데 사용되는 패키지의 전체 목록(각 패키지 및 해당 종속 항목의 전체 버전)을 저장합니다.
 
-다음 참조 설명서는 `composer.lock` 파일에서 생성되며 클라우드 인프라 2.4.7의 Adobe Commerce에 포함된 필수 패키지에 대해 설명합니다.
+다음 참조 설명서는 `composer.lock` 파일에서 생성되며 클라우드 인프라 2.4.8-p1의 Adobe Commerce에 포함된 필수 패키지에 대해 설명합니다.
 
 ## 종속성
 
-`magento/magento-cloud-metapackage 2.4.7`에 다음 종속성이 있습니다.
+`magento/magento-cloud-metapackage 2.4.8-p1`에 다음 종속성이 있습니다.
 
 ```config
 fastly/magento2: ^1.2.34
-magento/ece-tools: ^2002.1.0
+magento/ece-tools: ^2002.2.0
 magento/module-paypal-on-boarding: ~100.5.0
-magento/product-enterprise-edition: >=2.4.7 <2.4.8
+magento/product-enterprise-edition: >=2.4.8 <2.4.9
 ```
 
 ## 타사 라이선스
@@ -49,13 +49,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>
-      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
-    </td>
-    <td>라이브러리</td>
-    <td>Elasticsearch용 PHP 클라이언트</td>
-  </tr>
   <tr>
     <td>
       <a href="https://github.com/opensearch-project/opensearch-php.git">opensearch-project/opensearch-php</a>
@@ -97,6 +90,20 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>라이브러리</td>
     <td>PHP용 AWS SDK - PHP 프로젝트에서 Amazon Web Services 사용</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opentelemetry-php/api.git">원격 분석 열기/api</a>
+    </td>
+    <td>라이브러리</td>
+    <td>OpenTelemetry PHP용 API입니다.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opentelemetry-php/context.git">원격 분석 열기/컨텍스트</a>
+    </td>
+    <td>라이브러리</td>
+    <td>OpenTelemetry PHP에 대한 컨텍스트 구현입니다.</td>
   </tr>
   <tr>
     <td>
@@ -177,6 +184,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/duosecurity/duo_universal_php.git">duosecurity/duo_universal_php</a>
+    </td>
+    <td>라이브러리</td>
+    <td>듀오 유니버설 SDK의 PHP 구현입니다.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/fastly/fastly-magento2.git">fastly/magento2</a>
     </td>
     <td>magento2-module</td>
@@ -188,13 +202,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>라이브러리</td>
     <td>PHP에서 JSON 웹 토큰(JWT)을 인코딩하고 디코딩하는 간단한 라이브러리입니다. 현재 사양을 준수해야 합니다.</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/google/recaptcha.git">google/recaptcha</a>
-    </td>
-    <td>라이브러리</td>
-    <td>스팸 및 악용으로부터 웹 사이트를 보호하는 무료 서비스인 reCAPTCHA용 클라이언트 라이브러리.</td>
   </tr>
   <tr>
     <td>
@@ -216,20 +223,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>라이브러리</td>
     <td>는 응용 프로그램 코드 내에서 이 구성 데이터에 액세스하기 위한 중첩된 개체 속성 기반 사용자 인터페이스를 제공합니다</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-crypt.git">laminas/laminas-crypt</a>
-    </td>
-    <td>라이브러리</td>
-    <td>강력한 암호화 도구 및 암호 해싱</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-db.git">laminas/laminas-db</a>
-    </td>
-    <td>라이브러리</td>
-    <td>데이터베이스 추상화 계층, SQL 추상화, 결과 집합 추상화, RowDataGateway 및 TableDataGateway 구현</td>
   </tr>
   <tr>
     <td>
@@ -258,13 +251,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>라이브러리</td>
     <td>에서는 RSS 및 Atom 피드를 만들고 소비하는 기능을 제공합니다.</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-file.git">laminas/laminas-file</a>
-    </td>
-    <td>라이브러리</td>
-    <td>PHP 클래스 파일 찾기</td>
   </tr>
   <tr>
     <td>
@@ -303,27 +289,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mail.git">laminas/laminas-mail</a>
-    </td>
-    <td>라이브러리</td>
-    <td>텍스트 및 MIME 호환 다중 파트 전자 메일 메시지를 모두 작성하고 전송하는 일반 기능을 제공합니다.</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-math.git">laminas/laminas-math</a>
-    </td>
-    <td>라이브러리</td>
-    <td>암호학적으로 안전한 의사 난수를 만들고 큰 정수를 관리합니다.</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-mime.git">laminas/laminas-mime</a>
-    </td>
-    <td>라이브러리</td>
-    <td>MIME 메시지 및 부분 만들기 및 구문 분석</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-modulemanager.git">laminas/laminas-modulemanager</a>
     </td>
     <td>라이브러리</td>
@@ -335,13 +300,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>라이브러리</td>
     <td>MVC 응용 프로그램, 컨트롤러 및 플러그인을 포함한 Laminas의 이벤트 기반 MVC 계층</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-oauth.git">laminas/laminas-oauth</a>
-    </td>
-    <td>라이브러리</td>
-    <td></td>
   </tr>
   <tr>
     <td>
@@ -408,6 +366,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/laminas/laminas-translator.git">laminas/laminas-translator</a>
+    </td>
+    <td>라이브러리</td>
+    <td>Laminas-i18n의 Translator 구성 요소용 인터페이스</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/laminas/laminas-uri.git">laminas/laminas-uri</a>
     </td>
     <td>라이브러리</td>
@@ -429,10 +394,24 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/marc-mabe/php-enum.git">marc-mabe/php-enum</a>
+    </td>
+    <td>라이브러리</td>
+    <td>기본 PHP를 사용한 열거형의 간단하고 빠른 구현</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/nikic/PHP-Parser.git">nikic/php-parser</a>
     </td>
     <td>라이브러리</td>
     <td>PHP로 작성된 PHP 파서</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/phpfui/recaptcha.git">phpfui/recaptcha</a>
+    </td>
+    <td>라이브러리</td>
+    <td>PHP 8.4 이상용 Google의 reCAPTCHA용 클라이언트 라이브러리</td>
   </tr>
   <tr>
     <td>
@@ -632,6 +611,34 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/doctrine/lexer.git">doctrine/lexer</a>
+    </td>
+    <td>라이브러리</td>
+    <td>하향식 재귀 하강 파서에서 사용할 수 있는 PHP Doctrine 렉서 라이브러리.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/egulias/EmailValidator.git">egulias/email-validator</a>
+    </td>
+    <td>라이브러리</td>
+    <td>여러 RFC에 대한 이메일 유효성 검사를 위한 라이브러리</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/elastic/elastic-transport-php.git">탄력적/전송</a>
+    </td>
+    <td>라이브러리</td>
+    <td>Elastic 제품용 HTTP 전송 PHP 라이브러리</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
+    </td>
+    <td>라이브러리</td>
+    <td>Elasticsearch용 PHP 클라이언트</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/endroid/qr-code.git">endroid/qr-code</a>
     </td>
     <td>라이브러리</td>
@@ -695,6 +702,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/illuminate/conditionable.git">조명/조정 가능</a>
+    </td>
+    <td>라이브러리</td>
+    <td>조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 조명이 달린 양복용 제품이다.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/illuminate/config.git">설정/구성</a>
     </td>
     <td>라이브러리</td>
@@ -737,6 +751,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/thephpleague/flysystem-local.git">league/flysystem-local</a>
+    </td>
+    <td>라이브러리</td>
+    <td>Flysystem용 로컬 파일 시스템 어댑터.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/thephpleague/mime-type-detection.git">league/mime-type-detection</a>
     </td>
     <td>라이브러리</td>
@@ -758,7 +779,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/briannesbitt/Carbon.git">nesbot/carbon</a>
+      <a href="https://github.com/CarbonPHP/carbon.git">nesbot/carbon</a>
     </td>
     <td>라이브러리</td>
     <td>281개의 다른 언어를 지원하는 DateTime용 API 확장입니다.</td>
@@ -783,6 +804,27 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>라이브러리</td>
     <td>CSS 스타일을 HTML 코드의 인라인 스타일 속성으로 변환합니다.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/discovery.git">php-http/discovery</a>
+    </td>
+    <td>composer-plug</td>
+    <td>PSR-7, PSR-17, PSR-18 및 HTTPlug 구현을 찾아서 설치합니다.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/httplug.git">php-http/httplug</a>
+    </td>
+    <td>라이브러리</td>
+    <td>HTTPlug, PHP용 HTTP 클라이언트 추상화</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/promise.git">php-http/promise</a>
+    </td>
+    <td>라이브러리</td>
+    <td>비동기 HTTP 요청에 사용된 Promise</td>
   </tr>
   <tr>
     <td>
@@ -961,6 +1003,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/clock.git">심포니/시계</a>
+    </td>
+    <td>라이브러리</td>
+    <td>시스템 클럭에서 응용 프로그램을 분리합니다.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/config.git">symfony/config</a>
     </td>
     <td>라이브러리</td>
@@ -1066,6 +1115,20 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/mailer.git">심포니/메일 받는 사람</a>
+    </td>
+    <td>라이브러리</td>
+    <td>이메일 전송 지원</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/mime.git">symfony/mime</a>
+    </td>
+    <td>라이브러리</td>
+    <td>MIME 메시지 조작 허용</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-ctype</a>
     </td>
     <td>라이브러리</td>
@@ -1101,13 +1164,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-php72.git">symfony/polyfill-php72</a>
-    </td>
-    <td>라이브러리</td>
-    <td>일부 PHP 7.2+ 기능을 더 낮은 PHP 버전으로 지원하는 Symfony polyfill</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/symfony/polyfill-php73.git">symfony/polyfill-php73</a>
     </td>
     <td>라이브러리</td>
@@ -1126,6 +1182,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>라이브러리</td>
     <td>일부 PHP 8.1+ 기능을 더 낮은 PHP 버전으로 지원하는 Symfony polyfill</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/polyfill-php82.git">symfony/polyfill-php82</a>
+    </td>
+    <td>라이브러리</td>
+    <td>일부 PHP 8.2+ 기능을 더 낮은 PHP 버전으로 지원하는 Symfony polyfill</td>
   </tr>
   <tr>
     <td>
@@ -1213,13 +1276,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/webmozarts/assert.git">webmozart/assert</a>
-    </td>
-    <td>라이브러리</td>
-    <td>좋은 오류 메시지와 함께 메서드 입/출력의 유효성을 검사하는 어설션입니다.</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/webonyx/graphql-php.git">webonyx/graphql-php</a>
     </td>
     <td>라이브러리</td>
@@ -1255,6 +1311,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      paypal/module-braintree-gift-card
+    </td>
+    <td>magento2-module</td>
+    <td>해당 사항 없음</td>
+  </tr>
+  <tr>
+    <td>
       paypal/module-braintree-gift-card-account
     </td>
     <td>magento2-module</td>
@@ -1270,6 +1333,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   <tr>
     <td>
       paypal/module-braintree-graph-ql
+    </td>
+    <td>magento2-module</td>
+    <td>해당 사항 없음</td>
+  </tr>
+  <tr>
+    <td>
+      paypal/module-braintree-reward
     </td>
     <td>magento2-module</td>
     <td>해당 사항 없음</td>
@@ -1342,7 +1412,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
       paypal/module-braintree-core
     </td>
     <td>magento2-module</td>
-    <td>Gene Commerce for PayPal의 Magento Braintree 2.2.0 모듈에서 포크합니다.</td>
+    <td>Gene Commerce for PayPal의 Magento Braintree 2.2.0 모듈 포크.</td>
   </tr>
   </tbody>
 </table>
