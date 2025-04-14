@@ -1,6 +1,6 @@
 ---
-title: ECE-도구 릴리스 정보
-description: ECE-도구 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
+title: ECE-Tools 릴리스 노트
+description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-04-09T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 ---
 
-# ECE-도구 릴리스 정보
+# ECE-Tools 릴리스 노트
 
-[ece-tools](https://github.com/magento/ece-tools) 패키지는 Cloud 프로젝트를 관리 및 배포하도록 설계된 스크립트 및 도구 모음입니다. 이 릴리스 정보에서는 상거래](cloud-tools-suite.md)용 Cloud 도구 Suite의 일부[인 이 패키지의 최신 개선 사항에 대해 설명합니다.
+[ece-tools](https://github.com/magento/ece-tools) 패키지는 클라우드 프로젝트를 관리하고 배포하도록 설계된 스크립트 및 도구 세트입니다. 이 릴리스 노트는 [Commerce용 Cloud Tools 제품군](cloud-tools-suite.md)에 포함된 이 패키지에 대한 최신 개선 사항을 설명합니다.
 
 >[!NOTE]
 >
@@ -60,8 +60,8 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **MariaDB 11.4** MariaDB 11.4에 대한 지원이 추가되었습니다.
 - ![수정 아이콘](../../assets/fix.svg) **리팩터링된 코드**-이전 PHP 버전 7.4, 7.3, 7.2 및 관련 라이브러리에 대한 지원이 제거되었습니다.<!-- MCLOUD-9278 -->
-- ![수정 아이콘](../../assets/fix.svg) **업그레이드된 Monolog 버전** - monolog 3.6에 대한 지원이 추가되었습니다.<!-- MCLOUD-12855 -->
-- ![수정 아이콘](../../assets/fix.svg) **RabbitMQ, MariaDB 및 PHP**&#x200B;용 유효성 검사기 - 잘못된 버전의 서비스에 대해 오해의 소지가 있는 메시지를 생성하는 유효성 검사기를 수정했습니다.
+- ![고정 아이콘](../../assets/fix.svg) **모노로그 버전을 업그레이드함** - 모노로그 3.6.<!-- MCLOUD-12855 -->에 대한 지원이 추가됨
+- ![수정 아이콘](../../assets/fix.svg) **RabbitMQ, MariaDB 및 PHP용 유효성 검사기**-잘못된 버전의 서비스에 대한 잘못된 메시지를 생성한 유효성 검사기를 수정했습니다.
 
 ## v2002.1.19
 
@@ -111,9 +111,9 @@ ht-degree: 0%
 
 릴리스 날짜: 2022년 10월 27일
 
-- ![새 아이콘](../../assets/new.svg) **Adobe Systems Commerce**&#x200B;용 Adobe Systems I/O Events 지원이 추가되었습니다. 확장 개발자는 이제 Adobe Systems I/O Events 프레임워크를 [사용하여 클라우드 인스턴스에서 Adobe Systems 앱 Builder](https://developer.adobe.com/app-builder/docs/overview/)용으로 [작성된 애플리케이션으로 Commerce 이벤트 정보를 보낼 수](https://developer.adobe.com/events/docs/) 있습니다. Adobe Systems I/O Events for Adobe Systems Commerce는 파트너 미리 보기 상태에 있습니다.<!-- CEXT-932 -->
-- ![새 아이콘](../../assets/new.svg) **OPcache 구성을** 위한 유효성 검사기 - 제외된 경로에 대한 OPcache 구성을 확인하기 위해 유효성 검사기를 추가했습니다.<!-- MCLOUD-9485 -->
-- ![fix 아이콘](../../assets/fix.svg) **GraphQL 캐시 구성** 문제 수정 - 이제 ECE-도구 GraphQL `id_salt` 값을 파일의 구성 `app/etc/env.php` 에 `cache` 유지합니다.<!-- MCLOUD-9486 -->
+- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 Adobe I/O Events 지원이 추가되었습니다**. 이제 확장 개발자는 [Adobe I/O Events](https://developer.adobe.com/events/docs/) 프레임워크를 사용하여 클라우드 인스턴스에서 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)용으로 작성된 응용 프로그램으로 Commerce 이벤트 정보를 보낼 수 있습니다. Adobe Commerce용 Adobe I/O Events이 파트너 미리 보기에 있습니다.<!-- CEXT-932 -->
+- ![새 아이콘](../../assets/new.svg) **OPcache 구성에 대한 유효성 검사기** - 제외된 경로에 대해 OPcache 구성을 확인하는 유효성 검사기를 추가했습니다.<!-- MCLOUD-9485 -->
+- ![수정 아이콘](../../assets/fix.svg) **GraphQL 캐시 구성 문제를 해결했습니다**—이제 ECE-Tools가 `app/etc/env.php` 파일의 `cache` 구성에서 GraphQL `id_salt` 값을 유지합니다.<!-- MCLOUD-9486 -->
 
 ## v2002.1.12
 
@@ -154,19 +154,19 @@ ht-degree: 0%
 릴리스 날짜: 2021년 10월 25일
 
 - ![새 아이콘](../../assets/new.svg) **대체 덤프 위치**—DB 덤프의 대상 디렉터리를 선택할 수 있도록 `--dump-directory` 옵션을 추가했습니다. 이제 `/app/var/dump-main`이(가) DB 덤프의 기본 대상 디렉터리입니다. [백업 관리: 데이터베이스 덤프](../storage/database-dump.md)<!-- MCLOUD-8063 -->를 참조하십시오.
-- ![fix 아이콘](../../assets/fix.svg) **Update Monolog** - 패키지`^2.3`에 필요한 최소 버전을 로 업데이트했습니다`monolog`.<!-- ACMP-1263 -->
-- ![fix 아이콘](../../assets/fix.svg) **Symfony-Symfony** 종속성을 Adobe Systems Commerce 2.4.4와 호환되도록 업데이트했습니다.<!-- ACMP-1533 -->
+- ![수정 아이콘](../../assets/fix.svg) **모노로그 업데이트**—`monolog` 패키지에 필요한 최소 버전을 `^2.3`(으)로 업데이트했습니다.<!-- ACMP-1263 -->
+- ![수정 아이콘](../../assets/fix.svg) **Symfony 업데이트**—Adobe Commerce 2.4.4와 호환되도록 Symfony 종속성이 업데이트되었습니다.<!-- ACMP-1533 -->
 - ![수정 아이콘](../../assets/fix.svg) **기능/자동 로드 해결**—통합 환경에 배포하고 `CRITICAL: [9] Required configuration is missed in autoload section of composer.json file.` 오류가 표시되는 문제를 해결했습니다.<!-- https://github.com/magento/ece-tools/pull/799 -->
 
-## v2002.1.7 버전
+## v2002.1.7
 
 릴리스 날짜: 2021년 7월 29일
 
-**구성 업데이트** -
+**구성 업데이트**—
 
-- ![새 아이콘](../../assets/new.svg) Composer 2.0에 대한 지원이 추가되었습니다.<!--MCLOUD-8003-->
+- ![새 아이콘](../../assets/new.svg) 작성기 2.0에 대한 지원이 추가되었습니다.<!--MCLOUD-8003-->
 
-- ![fix 아이콘](../../assets/fix.svg) **Updated composer requirements for`symphony/console`**—패키지에 `symphony/console` 대한 ECE-도구 `composer.json` 버전 요구 사항을 업데이트하여 다음 오류로 인해 명령이 실패하는 `di:compile` 문제를 해결했습니다.`Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
+- ![수정 아이콘](../../assets/fix.svg) **`symphony/console`**&#x200B;에 대한 작성기 요구 사항 업데이트됨—다음 오류로 인해 `di:compile` 명령이 실패하는 문제를 해결하기 위해 `symphony/console` 패키지에 대한 ECE-Tools `composer.json` 버전 요구 사항을 업데이트했습니다. `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
 - ![수정 아이콘](../../assets/fix.svg) Elasticsearch 7.9.x를 포함하도록 수명 종료 소프트웨어 검사(`eol.yaml`)를 업데이트했습니다.<!--MCLOUD-7938-->
 
@@ -174,9 +174,9 @@ ht-degree: 0%
 
 릴리스 날짜: 2021년 4월 20일
 
-- ![새 아이콘](../../assets/new.svg) **Redis 인증 자격 증명** - 배포 단계 중에 속성에서 `relationships` Redis 권한 부여 자격 증명을 읽을 수 있는 기능이 추가되었습니다.<!--MCLOUD-7694-->
+- ![새 아이콘](../../assets/new.svg) **Redis 인증 자격 증명**—배포 단계 동안 `relationships` 속성에서 Redis 인증 자격 증명을 읽는 기능이 추가되었습니다.<!--MCLOUD-7694-->
 
-- ![새 아이콘](../../assets/new.svg) **Elasticsearch 권한 부여 자격 증명** - 배포 단계 중에 속성에서 `relationships` Elasticsearch 권한 부여 자격 증명을 읽을 수 있는 기능이 추가되었습니다.<!--MCLOUD-7695-->
+- ![새 아이콘](../../assets/new.svg) **Elasticsearch 권한 부여 자격 증명**—배포 단계 동안 `relationships` 속성에서 Elasticsearch 권한 부여 자격 증명을 읽는 기능이 추가되었습니다.<!--MCLOUD-7695-->
 
 - ![새 아이콘](../../assets/new.svg) **전용 세션 저장소 서비스**—세션 저장소에 대한 두 번째 옵션으로 `redis-session`을(를) 추가했습니다. `redis-session` 서비스를 사용하여 세션 정보를 저장하고 캐시에 `redis` 서비스를 사용하여 성능을 개선할 수 있습니다.<!--MCLOUD-7698-->
 
@@ -204,13 +204,13 @@ ht-degree: 0%
 
 - ![수정 아이콘](../../assets/fix.svg) **메모리 제한 및 명령**—`cloud.log` 파일의 크기가 PHP memory_limit를 초과할 경우 `php vendor/bin/ece-tools` 명령이 작동하지 않는 문제가 해결되었습니다. 이제 전체 `cloud.log` 파일을 메모리로 읽는 대신 로그 파일에서 더 작은 데이터 하위 집합만 읽습니다.<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
-- ![fix 아이콘](../../assets/fix.svg) **사용자 지정 데이터베이스 연결** - 에 `DATABASE_CONFIGURATION` 대해 정의된 사용자 지정 데이터베이스 연결이 사용되지 않는 구성 문제를 해결 `.magento.env.yaml` 했습니다. 연결 설정이 에 추가 `app/etc/env.php`되지 않았습니다.<!--MCLOUD-7426-->
+- ![수정 아이콘](../../assets/fix.svg) **사용자 지정 데이터베이스 연결**—`DATABASE_CONFIGURATION`에 대해 정의된 사용자 지정 데이터베이스 연결이 사용되지 않는 `.magento.env.yaml` 구성 문제를 해결했습니다. 연결 설정을 `app/etc/env.php`에 추가하지 않았습니다.<!--MCLOUD-7426-->
 
-- ![fix 아이콘](../../assets/fix.svg) **빈 오류 로그** - 이 비어 있는 경우 `cloud.error.log` 배포가 실패하는 문제를 해결했습니다.<!--MCLOUD-7296-->
+- ![수정 아이콘](../../assets/fix.svg) **빈 오류 로그**—`cloud.error.log`이(가) 비어 있는 경우 배포가 실패하는 문제를 해결했습니다.<!--MCLOUD-7296-->
 
-- ![수정 아이콘](../../assets/fix.svg) **MariaDB 10.3 유효성 검사** - Adobe Systems Commerce 2.3.6-p1 용 MariaDB 10.3의 유효성 검사를 수정했습니다.<!--MCLOUD-7416-->
+- ![수정 아이콘](../../assets/fix.svg) **MariaDB 10.3 유효성 검사**—Adobe Commerce 2.3.6-p1에 대한 MariaDB 10.3 유효성 검사가 수정되었습니다.<!--MCLOUD-7416-->
 
-- ![fix 아이콘](../../assets/fix.svg) **Cache:flush 로깅** - 단계의 `cache:flush` 시작과 완료를 나타내도록 로그 항목이 개선되었습니다.<!--MCLOUD-7503-->
+- ![수정 아이콘](../../assets/fix.svg) **캐시:플러시 로깅**—`cache:flush` 단계의 시작 및 완료를 나타내는 로그 항목이 개선되었습니다.<!--MCLOUD-7503-->
 
 ## v2002.1.4
 
@@ -256,13 +256,13 @@ ht-degree: 0%
 
 릴리스 날짜: 2020년 8월 5일
 
-**유효성 검사 및 로그 개선** 사항 -
+**유효성 검사 및 로그 개선 사항**—
 
-- ![새 아이콘](../../assets/new.svg) 빌드, 배포 및 게시물 배포 프로세스 중에 발생할 수 있는 모든 오류 및 경고 알림과 오류 해결을 위한 제안 사항이 포함된 파일이 추가되었습니다 `schema.error.yaml` . 이 파일의 정보는 상거래&#x200B;_용 클라우드 안내서에서도_&#x200B;사용할 수 있습니다. ece-tools](../dev-tools/error-reference.md)에 대한 오류 메시지 참조를 참조하십시오[.<!--MCLOUD-5878-->
+- ![새 아이콘](../../assets/new.svg) 오류를 해결하기 위한 제안 사항과 함께 빌드, 배포 및 배포 후 프로세스 중에 발생할 수 있는 모든 오류 및 경고 알림을 포함하는 `schema.error.yaml` 파일을 추가했습니다. 이 파일의 정보는 _Commerce용 클라우드 가이드_&#x200B;에서도 사용할 수 있습니다. [ece-tools에 대한 오류 메시지 참조](../dev-tools/error-reference.md)를 참조하십시오.<!--MCLOUD-5878-->
 
-- ![새 아이콘](../../assets/new.svg) 로그를 프로그래밍 방식으로 더 쉽게 구문 분석할 수 있도록 클라우드 오류 로그(`/var/log/cloud.error.log`) 항목을 JSON 포맷 형식으로 변경했습니다.<!--MCLOUD-5879-->
+- ![새 아이콘](../../assets/new.svg) 클라우드 오류 로그(`/var/log/cloud.error.log`) 항목을 JSON 형식으로 변경했습니다.<!--MCLOUD-5879-->
 
-- ![새 아이콘](../../assets/new.svg) 빌드, 배포 및 게시물 배포 처리에 대한 추가 오류 검사를 추가하고 기존 검사를 개선했습니다.
+- ![새 아이콘](../../assets/new.svg) 빌드, 배포 및 배포 후 처리에 대한 추가 오류 검사를 추가하고 기존 검사를 개선했습니다.
 
    - 오류 코드 2026 - 빌드 단계 중에 생성된 일부 데이터를 탑재된 디렉터리에 복원하지 못했습니다.
 
@@ -270,9 +270,9 @@ ht-degree: 0%
 
    - 오류 코드 102 - `env.php` 파일에 쓸 수 없는 경우 발생하는 문제에 대한 추가 검사를 추가했습니다. <!--MCLOUD-6221-->
 
-- ![새 아이콘](../../assets/new.svg) 배포 프로세스 중에 적용할 품질 패치를 하나 이상 지정할 수 있도록 QUALITY_PATCHES **환경 변수 추가되었습니다**. [변수 빌드](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->를 참조하십시오.
+- ![새 아이콘](../../assets/new.svg) 배포 프로세스 중에 적용할 하나 이상의 품질 패치를 지정하기 위해 **QUALITY_PATCHES** 환경 변수를 추가했습니다. [변수 빌드](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->를 참조하십시오.
 
-## v2002.1.1 버전
+## v2002.1.1
 
 릴리스 날짜: 2020년 6월 25일
 
@@ -300,19 +300,19 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **CLI 명령 업데이트**—
 
-   - ![새 아이콘](../../assets/new.svg) 다음 CLI 명령이 더 자세한 로깅 옵션으로 업데이트되었습니다.
+   - ![새 아이콘](../../assets/new.svg) 자세한 로깅을 위해 옵션으로 다음 CLI 명령을 업데이트했습니다.
 
       - `app:config:dump`
       - `app:config:import`
       - `module:enable`
 
-     각 호출에 대한 로깅 수준은 파일의 변수 `.magento.env.yaml` 구성 [`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands) 에 의해 결정됩니다.<!--MCLOUD-3503-->
+     각 호출의 로깅 수준은 `.magento.env.yaml` 파일의 [`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands) 변수 구성에 의해 결정됩니다.<!--MCLOUD-3503-->
 
 - ![새 아이콘](../../assets/new.svg) **유효성 검사 개선 사항**—
 
-   - ![새 아이콘](../../assets/new.svg) **Elasticsearch 7.x 호환성 검사** - Elasticsearch 7.x 소프트웨어 호환성 검사에 대한 Elasticsearch 유효성 검사를 업데이트했습니다.<!--MCLOUD-5542-->
+   - ![새 아이콘](../../assets/new.svg) **Elasticsearch 7.x 호환성 검사**—Elasticsearch 7.x 소프트웨어 호환성 검사에 대한 Elasticsearch 유효성 검사가 업데이트되었습니다.<!--MCLOUD-5542-->
 
-   - ![새 아이콘](../../assets/new.svg) **업데이트된 서비스 버전 및 EOL 유효성 검사 -** 설치된 서비스 버전을 Adobe Systems Commerce 2.4. 요구 사항에 대해 확인하도록 업데이트된 유효성 검사.<!--MCLOUD-6144-->
+   - ![새 아이콘](../../assets/new.svg) **서비스 버전 및 EOL 유효성 검사 업데이트**—Adobe Commerce 2.4에 대해 설치된 서비스 버전을 확인하는 유효성 검사가 업데이트되었습니다. 요구 사항.<!--MCLOUD-6144-->
 
    - ![수정 아이콘](../../assets/fix.svg) `.magento.app.yaml` 파일에서 `post-deploy` 후크 구성이 누락된 경우에만 다음 배포 후 경고 메시지가 표시되도록 유효성 검사 문제를 해결했습니다.
 
@@ -386,21 +386,21 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **환경 변수 업데이트**—
 
-   - ![새 아이콘](../../assets/new.svg) 특정 제품 페이지에 대한 캐시 미리 로드를 지원하도록 환경 변수 기능을 `WARM_UP_PAGES` 확장했습니다. 게시물 배포 변수](../environment/variables-post-deploy.md#warm_up_pages) 항목에서 [확장된 정의를 참조하십시오.<!--MAGECLOUD-4444-->
+   - ![새 아이콘](../../assets/new.svg) 특정 제품 페이지에 대한 캐시 미리 로드를 지원하도록 `WARM_UP_PAGES` 환경 변수의 기능을 확장했습니다. [사후 배포 변수](../environment/variables-post-deploy.md#warm_up_pages) 항목에서 확장된 정의를 참조하십시오.<!--MAGECLOUD-4444-->
 
-   - ![새 아이콘](../../assets/new.svg) 디렉토리에서 `<magento_root>/var/report/` 오류 보고서 데이터 관리를 간소화하기 위해 환경 변수 추가 `ERROR_REPORT_DIR_NESTING_LEVEL` 변수](../environment/variables-build.md#error_report_dir_nesting_level) 빌드 항목의 [변수 설명을 참조하십시오.
+   - ![새 아이콘](../../assets/new.svg) `<magento_root>/var/report/` 디렉터리에서 오류 보고서 데이터 관리를 단순화하기 위해 `ERROR_REPORT_DIR_NESTING_LEVEL` 환경 변수를 추가했습니다. [변수 빌드](../environment/variables-build.md#error_report_dir_nesting_level) 항목에서 변수 설명을 참조하십시오.
 
-   - ![fix 아이콘](../../assets/fix.svg) , `STATIC_CONTENT_THREADS`,`DO_DEPLOY_STATIC_CONTENT`, `STATIC_CONTENT_SYMLINK` 환경 변수를 제거`SCD_EXCLUDE_THEMES`했습니다. 이전 버전과 호환되지 않는 변경 내용을](backward-incompatible-changes.md#environment-configuration-changes) 참조하십시오[.<!--MAGECLOUD-4407, MAGECLOUD-3873-->
+   - ![수정 아이콘](../../assets/fix.svg)에서 `SCD_EXCLUDE_THEMES`, `STATIC_CONTENT_THREADS`,`DO_DEPLOY_STATIC_CONTENT` 및 `STATIC_CONTENT_SYMLINK` 환경 변수를 제거했습니다. [이전 버전과 호환되지 않는 변경 내용](backward-incompatible-changes.md#environment-configuration-changes)을 참조하십시오.<!--MAGECLOUD-4407, MAGECLOUD-3873-->
 
    - ![수정 아이콘](../../assets/fix.svg) `_merge` 옵션 없이 `ELASTICSUITE_CONFIGURATION` 배포 변수를 구성할 때 기본 구성이 예상대로 덮어쓰도록 Elastic Suite 구성 프로세스의 문제를 해결했습니다.<!--MAGECLOUD-4388-->
 
 - ![새 아이콘](../../assets/new.svg) **CLI 명령 업데이트**—
 
-   - ![새 아이콘](../../assets/new.svg) **새 cron 명령** - 이제 `cron:disable` 및 `cron:enable` 명령을 사용하여 클라우드 인프라 환경의 Adobe Commerce에서 cron 처리를 수동으로 관리할 수 있습니다. disable 명령을 사용하여 모든 활성 cron 프로세스를 중지하고 모든 cron 작업을 비활성화합니다. 준비가 되면 cron 작업을 다시 활성화하려면 enable 명령을 사용합니다. 크론 작업](../application/crons-property.md#disable-cron-jobs) 비활성화를 참조하십시오[.
+   - ![새 아이콘](../../assets/new.svg) **새 cron 명령** - 이제 `cron:disable` 및 `cron:enable` 명령을 사용하여 클라우드 인프라 환경의 Adobe Commerce에서 cron 처리를 수동으로 관리할 수 있습니다. disable 명령을 사용하여 모든 활성 cron 프로세스를 중지하고 모든 cron 작업을 비활성화합니다. 준비가 되면 cron 작업을 다시 활성화하려면 enable 명령을 사용합니다. [cron 작업 사용 안 함](../application/crons-property.md#disable-cron-jobs)을 참조하세요.
 
-   - ![새 아이콘](../../assets/new.svg) **Improved error reporting**—ECE-도구 처리 중에 발생하는 CLI 명령 실패에 대한 더 나은 로깅을 추가했습니다.<!--MAGECLOUD-4849-->
+   - ![새 아이콘](../../assets/new.svg) **향상된 오류 보고**—ECE-Tools 처리 중에 발생하는 CLI 명령 오류에 대한 로깅이 향상되었습니다.<!--MAGECLOUD-4849-->
 
-   - ![새 아이콘](../../assets/new.svg) **더 이상 사용되지 않는 빌드 명령** 제거— 다음 빌드 명령이 제거되었습니다. `m2-ece-scd-dump``m2-ece-deploy``m2-ece-build`, , 및 명령`ece-docker`의 이름을 `ece-tools docker` . [이전 버전과 호환되지 않는 변경 내용](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->을 참조하십시오.
+   - ![새 아이콘](../../assets/new.svg) **더 이상 사용되지 않는 빌드 명령 제거**— `m2-ece-build`, `m2-ece-deploy`, `m2-ece-scd-dump` 빌드 명령을 제거하고 `ece-tools docker` 명령을 `ece-docker`(으)로 이름을 변경했습니다. [이전 버전과 호환되지 않는 변경 내용](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->을 참조하십시오.
 
 - ![새 아이콘](../../assets/new.svg) 더 이상 사용되지 않는 `build_options.ini` 파일을 제거하고 파일이 있는 경우 빌드에 실패하도록 유효성 검사를 추가했습니다. [.magento.env.yaml](../environment/configure-env-yaml.md) 파일을 사용하여 빌드 옵션을 구성합니다.
 
