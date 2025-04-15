@@ -2,11 +2,11 @@
 title: Commerce용 클라우드 패치
 description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-02-06T00:00:00Z
+last-substantial-update: 2025-04-15T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
+source-git-commit: cebf68dfc1722a055a6217fa50552116d216d579
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2372'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.4 {#latest}
+## v1.1.5 {#latest}
+
+릴리스 날짜: 2025년 4월 15일
+
+- ![새 아이콘](../../assets/new.svg) **B2B 1.5.2용 패치 추가**—B2B 모듈 1.5.2 및 MariaDB 10.6<!-- MCLOUD-13605	-->에서 ACP2E-3833 문제 해결
+
+## v1.1.4
 
 릴리스 날짜: 2025년 2월 13일
 
