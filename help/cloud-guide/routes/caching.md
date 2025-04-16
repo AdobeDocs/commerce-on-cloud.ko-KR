@@ -2,9 +2,10 @@
 title: 캐싱
 description: 클라우드 인프라 환경에서 Adobe Commerce에 대한 캐싱을 활성화하는 방법을 알아봅니다.
 feature: Cloud, Cache, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73c36d6-9a58-45c0-9220-86074c1f46f0
+source-git-commit: a1ed2818cbaf5adf8b673df0ee9b9218e6f700a2
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
@@ -130,7 +131,7 @@ cache:
 
 쿠키에는 다음과 같은 제한 사항이 있습니다.
 
-- 시스템에서 최대 **50개의 쿠키**&#x200B;를 설정할 수 있습니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Maximum number of cookies would be exceeded` 예외가 발생합니다.
+- 시스템에 설정된 최대 **50개의 쿠키**&#x200B;가 있습니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Maximum number of cookies would be exceeded` 예외가 발생합니다. 쿠키 수를 200개로 늘리려면 [품질 패치 도구](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool)를 사용하여 [MDVA-12304 패치](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html)를 적용하세요.
 - 최대 쿠키 크기는 **4,096바이트**&#x200B;입니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Size of '%name' is %size bytes` 예외가 발생합니다.
 
 ### `default_ttl`
