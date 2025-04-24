@@ -2,11 +2,11 @@
 title: ECE-Tools 릴리스 노트
 description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-09T00:00:00Z
+last-substantial-update: 2024-04-24T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 933e0c1b8bfbafeb6a477ec7bba7dcf7667dc6ec
+source-git-commit: dff5792f310382eb97c9595da08faac90e602126
 workflow-type: tm+mt
-source-wordcount: '3092'
+source-wordcount: '3117'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.3 {#latest}
+## v2002.2.4 {#latest}
+
+릴리스 날짜: 2025년 4월 24일
+
+- ![수정 아이콘](../../assets/fix.svg) **2.4.4/2.4.5용 Opensearch2**—Adobe Commerce 버전 2.4.4/2.4.5에서 `opensearch2` 지원과 관련된 문제가 해결되었습니다.<!-- MCLOUD-13607 -->
+
+## v2002.2.3
 
 릴리스 날짜: 2025년 4월 9일
 

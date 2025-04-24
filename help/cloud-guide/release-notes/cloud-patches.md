@@ -2,11 +2,11 @@
 title: Commerce용 클라우드 패치
 description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-04-15T00:00:00Z
+last-substantial-update: 2025-04-24T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: cebf68dfc1722a055a6217fa50552116d216d579
+source-git-commit: db8d20cdf999657c059202131111e71faf50b8e9
 workflow-type: tm+mt
-source-wordcount: '2372'
+source-wordcount: '2402'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.5 {#latest}
+## v1.1.6 {#latest}
+
+릴리스 날짜: 2025년 4월 24일
+
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—1.1.4<!-- MCLOUD-13240 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)용 업데이트된 패치입니다.
+
+## v1.1.5
 
 릴리스 날짜: 2025년 4월 15일
 
