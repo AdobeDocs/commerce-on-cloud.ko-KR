@@ -1,5 +1,5 @@
 ---
-source-git-commit: 713008d26d05f05e3e39e33c0d0df766f4dbe0b0
+source-git-commit: 2207508cf769b712705de5d41e0876ed60e5f614
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**버전**: 2002.2.3
+**버전**: 2002.2.4
 
 이 참조에는 `ece-tools` 명령줄 도구를 통해 사용할 수 있는 34개의 명령이 포함되어 있습니다.
 클라우드 인프라의 Adobe Commerce에서 `ece-tools list` 명령을 사용하여 초기 목록이 자동으로 생성됩니다.
