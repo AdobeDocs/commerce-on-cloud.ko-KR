@@ -2,9 +2,10 @@
 title: 캐시 구성 사용자 정의
 description: Fastly 서비스 설정이 완료된 후 캐시 구성 설정을 검토하고 사용자 지정하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
+source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -30,6 +31,8 @@ Fastly 서비스 구성은 관리자에 대한 HTTPS 요청에 대한 기본 시
 3분 이상 걸리는 대량 작업을 완료하려면 503 오류를 방지하기 위해 _관리 경로 시간 제한_ 값을 변경하십시오.
 
 >[!NOTE]
+>
+>**스토어** > **구성** > **고급** > **관리자** > **관리자 기본 URL**&#x200B;의 **사용자 지정 관리자 경로** 필드에 사용자 지정 관리자 경로 끝점을 지정한 경우 해당 환경의 [ADMIN_URL 변수](../environment/variables-admin.md#change-the-admin-url)도 동일한 값으로 설정해야 합니다. 설정이 다르면 시간 제한이 작동하지 않습니다.
 >
 >Fastly UI에서 관리자 이외의 사용자에 대한 Fastly 시간 제한 매개 변수를 확장하려면 [긴 작업에 대한 시간 제한 늘리기](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md)를 참조하십시오.
 
@@ -218,4 +221,4 @@ _유지 관리 모드_ 옵션을 사용하여 다른 모든 요청에 대한 오
 
    유지 관리 모드를 사용하면 `maint_allowlist` ACL에 있는 IP 주소의 요청을 제외한 모든 트래픽이 차단됩니다. `maint_allowlist`을(를) 업데이트하여 ACL에서 IP 주소를 변경할 수 있습니다.
 
-   Magento 자세한 구성 지침은 Fastly CDN for Module 설명서의 [유지 관리 모드 안내서](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md)를 참조하십시오.
+   자세한 구성 지침은 Magento 2 모듈 설명서에서 Fastly CDN의 [유지 관리 모드 안내서](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md)를 참조하십시오.
