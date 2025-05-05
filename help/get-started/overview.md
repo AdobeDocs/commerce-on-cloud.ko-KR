@@ -19,7 +19,7 @@ Adobe Commerce에 오신 것을 환영합니다!
 
 - [Adobe Commerce 개발자 설명서](https://developer.adobe.com/commerce/docs/)(Adobe Developer 사이트) - 고급 기능 개발, 사용자 지정, 통합, 확장 및 사용
 
-- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html)(Adobe Experience League) - Commerce 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
+- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html?lang=ko)(Adobe Experience League) - Commerce 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
 
 >[!TIP]
 >

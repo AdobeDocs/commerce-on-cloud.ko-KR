@@ -53,5 +53,5 @@ Adobe이 클라우드 인프라 구독에서 Commerce을 활성화하면 라이�
 <!-- link definitions -->
 
 [판매]: https://business.adobe.com/products/magento/get-demo.html
-[공유 액세스]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access
+[공유 액세스]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#shared-access
 [상태 페이지]: https://status.adobe.com/products/503473

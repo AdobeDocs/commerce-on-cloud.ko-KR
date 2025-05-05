@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[[!DNL Cloud Console]](../project/overview.md)을(를) 사용하여 [구성 설정 재정의](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html)에 환경 변수를 추가하려면 다음 예제와 같이 변수 이름 앞에 `env:`을(를) 추가해야 합니다.
+>[[!DNL Cloud Console]](../project/overview.md)을(를) 사용하여 [구성 설정 재정의](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=ko)에 환경 변수를 추가하려면 다음 예제와 같이 변수 이름 앞에 `env:`을(를) 추가해야 합니다.
 >
 >![환경 변수 예](../../assets/set-env-variable-ui.png)
 

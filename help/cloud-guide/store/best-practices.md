@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # 저장소 구성 모범 사례
 
-스토어, 사이트 및 웹 사이트를 구성하기 위한 자세한 정보는 [Adobe Commerce 사용 안내서](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)를 검토해 보십시오. 이 페이지에서는 스토어, 사이트 등을 구성하는 모범 사례, 유용한 정보 및 지침과 함께 시간에 따라 그리고 여러 버전에 걸쳐 게시할 추가 콘텐츠를 제공합니다.
+스토어, 사이트 및 웹 사이트를 구성하기 위한 자세한 정보는 [Adobe Commerce 사용 안내서](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=ko)를 검토해 보십시오. 이 페이지에서는 스토어, 사이트 등을 구성하는 모범 사례, 유용한 정보 및 지침과 함께 시간에 따라 그리고 여러 버전에 걸쳐 게시할 추가 콘텐츠를 제공합니다.
 
 ## 마케팅 캠페인 및 프로모션
 
 이 정보는 클라우드 인프라 2.1.X 및 2.2.X의 Adobe Commerce에 유용합니다.
 
-캠페인 및 프로모션을 만들려면 [콘텐츠 스테이징](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html)에서 옵션 및 설정을 만드십시오. 이 기능을 사용하면 고객 판매를 위해 캠페인을 공개하기 전에 캠페인을 만들고 미리 볼 수 있습니다. 다음 정보는 유용한 정보를 제공합니다. 자세한 지침은 연결된 Adobe Commerce 사용 안내서 콘텐츠를 참조하십시오.
+캠페인 및 프로모션을 만들려면 [콘텐츠 스테이징](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=ko)에서 옵션 및 설정을 만드십시오. 이 기능을 사용하면 고객 판매를 위해 캠페인을 공개하기 전에 캠페인을 만들고 미리 볼 수 있습니다. 다음 정보는 유용한 정보를 제공합니다. 자세한 지침은 연결된 Adobe Commerce 사용 안내서 콘텐츠를 참조하십시오.
 
 _캠페인_&#x200B;은(는) 계절 판매, 새 제품 라인 등에 대한 마케팅 이벤트입니다. 각 캠페인에는 사용자 정의 테마, 컨텐츠에 대한 블록, 컨텐츠를 제어하고 표시하는 위젯, 가격 규칙과 관련된 프로모션이 포함될 수 있습니다. 캠페인의 광범위한 특성으로 인해 콘텐츠 스테이징을 통해 시작 및 종료 날짜를 설정하여 캠페인을 만듭니다.
 
-_프로모션_&#x200B;에서 할인, 일회성 제안, 쿠폰, 최초 구매자 인센티브 등을 제공합니다. 이러한 프로모션을 약관, 할인 및 옵션을 설정하여 고객이 구매하도록 유도하는 _가격 규칙_(으)로 만듭니다. 배너, 보상 포인트 등에 대한 추가 옵션을 사용하여 [장바구니](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html) 또는 [카탈로그](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html)에서 가격 규칙을 만들 수 있습니다. 새 제품 라인 또는 시즌 판매와 같은 주요 이벤트에 대한 가격 규칙을 적용하여 판촉에 대한 캠페인을 예약할 수 있습니다.
+_프로모션_&#x200B;에서 할인, 일회성 제안, 쿠폰, 최초 구매자 인센티브 등을 제공합니다. 이러한 프로모션을 약관, 할인 및 옵션을 설정하여 고객이 구매하도록 유도하는 _가격 규칙_(으)로 만듭니다. 배너, 보상 포인트 등에 대한 추가 옵션을 사용하여 [장바구니](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=ko) 또는 [카탈로그](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=ko)에서 가격 규칙을 만들 수 있습니다. 새 제품 라인 또는 시즌 판매와 같은 주요 이벤트에 대한 가격 규칙을 적용하여 판촉에 대한 캠페인을 예약할 수 있습니다.
 
 다음은 프로모션 및 캠페인을 생성, 업데이트 및 관리하는 데 도움이 되는 팁입니다.
 
@@ -34,7 +34,7 @@ _프로모션_&#x200B;에서 할인, 일회성 제안, 쿠폰, 최초 구매자 
 
 이 정보는 클라우드 인프라 2.1.X 및 2.2.X의 Adobe Commerce에 유용합니다.
 
-일반적으로 관리자의 **제품** > **카탈로그** 영역을 통해 제품에 대한 [고급 가격 책정](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html)을 설정할 수 있습니다. 준비된 콘텐츠를 사용하여 몇 가지 추가 단계를 완료하여 프로모션 및 캠페인에 가격을 추가합니다.
+일반적으로 관리자의 **제품** > **카탈로그** 영역을 통해 제품에 대한 [고급 가격 책정](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=ko)을 설정할 수 있습니다. 준비된 콘텐츠를 사용하여 몇 가지 추가 단계를 완료하여 프로모션 및 캠페인에 가격을 추가합니다.
 
 Advanced Pricing을 편집하고 컨텐츠 스테이징을 갱신하려면
 
@@ -47,17 +47,17 @@ Advanced Pricing을 편집하고 컨텐츠 스테이징을 갱신하려면
 1. 프로모션을 저장합니다. 비활성 초기 캠페인이 만들어집니다.
 1. 미리 보기 를 사용하여 캠페인에 대한 특별 가격, 프로모션 이름, 일반 가격 및 예약된 날짜 범위를 검토할 수 있습니다.
 
-추가 단계를 위해 [카탈로그 가격 규칙에 대한 변경 일정 예약](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html)에 대한 지침을 계속할 수 있습니다. 단계를 진행하려면 **다음**&#x200B;을 클릭하세요.
+추가 단계를 위해 [카탈로그 가격 규칙에 대한 변경 일정 예약](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=ko)에 대한 지침을 계속할 수 있습니다. 단계를 진행하려면 **다음**&#x200B;을 클릭하세요.
 
 ## 가격 규칙
 
 가격 규칙에는 마케팅 상상력만큼 논리와 조건이 무제한 포함될 수 있습니다. 몇 가지 인기 있는 예는 하나 사면 하나를 공짜로, 하나를 사면 하나를 50% 할인해주며, 100달러 이상 주문하면 25달러를 할인해주는 것, 그리고 더 많은 것을 포함합니다.
 
-가격 규칙을 만들려면 [Adobe Commerce 사용 안내서](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html)를 참조하십시오.
+가격 규칙을 만들려면 [Adobe Commerce 사용 안내서](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=ko)를 참조하십시오.
 
 다음은 1차 주문 전용 할인에 대한 가격 규칙을 생성하는 예를 제공합니다. 이 할인에 대해 다음과 같은 작업을 수행할 수 있습니다.
 
-* 다음 조건을 사용하여 [고객 세그먼트](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segment-price-rule)로 가격 규칙을 만듭니다. 총 주문 수는 1보다 작습니다.
+* 다음 조건을 사용하여 [고객 세그먼트](https://experienceleague.adobe.com/ko/docs/commerce-admin/customers/segments/customer-segment-price-rule)로 가격 규칙을 만듭니다. 총 주문 수는 1보다 작습니다.
 * 이 고객 세그먼트를 장바구니 규칙에 조건으로 추가
 * 선택 사항 - 집중 구매를 위해 특정 SKU 또는 제품 범주에 할인을 적용하는 조건 및 규칙을 추가합니다.
 

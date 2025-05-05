@@ -18,7 +18,7 @@ ht-degree: 0%
 
 다음 표의 ADMIN 변수를 사용하여 Commerce 설치 중에 관리자 사용자 자격 증명을 재정의할 수 있습니다.
 
-설치 후 값을 변경하려면 SSH를 사용하여 환경에 연결한 다음 Adobe Commerce CLI [`admin:user` 명령](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html)을 사용하여 관리자 자격 증명을 만들거나 편집하십시오.
+설치 후 값을 변경하려면 SSH를 사용하여 환경에 연결한 다음 Adobe Commerce CLI [`admin:user` 명령](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ko)을 사용하여 관리자 자격 증명을 만들거나 편집하십시오.
 
 | 변수 | 기본값 | 설명 |
 | -------------- | --------------------------- | ----------- |

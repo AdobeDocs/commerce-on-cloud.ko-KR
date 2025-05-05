@@ -27,7 +27,7 @@ Commerce을 처음 사용하든 기존 Commerce 소유자가 클라우드 인프
 
 - **Adobe Commerce 암호화 키**
 
-  기존 시스템만 가져올 경우 데이터베이스에 대한 액세스 및 데이터를 보호하는 데 사용되는 암호화 키를 캡처합니다. 이 키에 대한 자세한 내용은 [암호화 키 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)을 참조하세요.
+  기존 시스템만 가져올 경우 데이터베이스에 대한 액세스 및 데이터를 보호하는 데 사용되는 암호화 키를 캡처합니다. 이 키에 대한 자세한 내용은 [암호화 키 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=ko)을 참조하세요.
 
 ## 개발자 도구
 

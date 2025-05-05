@@ -24,7 +24,7 @@ ht-degree: 7%
    + [Pro 워크플로우](architecture/pro-develop-deploy-workflow.md)
    + [확장 아키텍처](architecture/scaled-architecture.md)
    + [자동 크기 조정](architecture/autoscaling.md)
-+ [시작](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
++ [시작](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=ko)
 + 릴리스 정보 {#release-notes}
    + [클라우드 도구 세트](release-notes/cloud-tools-suite.md)
    + [ECE-Tools 패키지](release-notes/ece-tools-package.md)

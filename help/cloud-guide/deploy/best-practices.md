@@ -61,7 +61,7 @@ ht-degree: 0%
 
 - **서비스 버전 및 관계 및 연결 기능을 확인합니다**
 
-  응용 프로그램에서 사용할 수 있는 서비스를 확인하고 호환되는 최신 버전을 사용 중인지 확인하십시오. 권장 버전은 _설치 안내서_&#x200B;의 [서비스 관계](../services/services-yaml.md#service-relationships) 및 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)을 참조하십시오.
+  응용 프로그램에서 사용할 수 있는 서비스를 확인하고 호환되는 최신 버전을 사용 중인지 확인하십시오. 권장 버전은 _설치 안내서_&#x200B;의 [서비스 관계](../services/services-yaml.md#service-relationships) 및 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
 
 - **스테이징 및 프로덕션에 배포하기 전에 로컬에서 및 통합 환경에서 테스트합니다**
 
@@ -117,7 +117,7 @@ ht-degree: 0%
 이 단계에서는 코드 베이스를 빌드하고 `.magento.app.yaml`의 `build` 섹션에서 후크를 실행합니다. 기본 빌드 후크는 `php ./vendor/bin/ece-tools` 명령이며 다음을 수행합니다.
 
 - `vendor/magento/ece-patches`에 패치를 적용하고 `m2-hotfixes`에 프로젝트별 선택적 패치를 적용합니다.
-- `bin/magento setup:di:compile`을(를) 사용하여 코드와 [종속성 삽입](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) 구성(즉, `generated/code` 및 `generated/metapackage`을(를) 포함하는 `generated/` 디렉터리)을 다시 생성합니다.
+- `bin/magento setup:di:compile`을(를) 사용하여 코드와 [종속성 삽입](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/glossary) 구성(즉, `generated/code` 및 `generated/metapackage`을(를) 포함하는 `generated/` 디렉터리)을 다시 생성합니다.
 - [`app/etc/config.php`](../store/store-settings.md) 파일이 코드 베이스에 있는지 확인합니다. Adobe Commerce은 빌드 단계에서 이 파일을 감지하지 못하고 모듈 및 확장 목록이 포함된 경우 이 파일을 자동으로 생성합니다. 존재하는 경우 빌드 단계는 정상적으로 계속되고 GZIP을 사용하여 정적 파일을 압축하고 배포하므로 배포 단계에서 다운타임이 줄어듭니다. 파일 압축 사용자 지정 또는 비활성화에 대한 자세한 내용은 [빌드 옵션](../environment/variables-build.md)을 참조하세요.
 
 >[!WARNING]
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 ### 4단계: 슬러그 및 클러스터 배포
 
-응용 프로그램 및 모든 [백엔드](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) 서비스가 다음과 같이 프로비저닝됩니다.
+응용 프로그램 및 모든 [백엔드](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/glossary) 서비스가 다음과 같이 프로비저닝됩니다.
 
 - 웹 서버, OpenSearch, [!DNL RabbitMQ]과(와) 같은 컨테이너에 각 서비스를 탑재합니다.
 - 읽기-쓰기 파일 시스템(고가용성 분산 스토리지 그리드에 마운트) 마운트
@@ -170,13 +170,13 @@ ht-degree: 0%
 
 두 개의 배포 후크가 있습니다. `pre-deploy.php` 후크는 빌드 후크에서 생성된 리소스 및 코드의 필요한 정리 및 검색을 완료합니다. `php ./vendor/bin/ece-tools deploy` 후크는 일련의 명령과 스크립트를 실행합니다.
 
-- Adobe Commerce이 **설치되지 않음**&#x200B;인 경우 `bin/magento setup:install`과(와) 함께 설치되고 배포 구성, `app/etc/env.php` 및 지정한 환경에 대한 데이터베이스를 업데이트합니다(예: Redis 및 웹 사이트 URL). **중요:** 설치 중에 [처음 배포](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html)를 완료하면 Adobe Commerce이 모든 환경에 설치되고 배포되었습니다.
+- Adobe Commerce이 **설치되지 않음**&#x200B;인 경우 `bin/magento setup:install`과(와) 함께 설치되고 배포 구성, `app/etc/env.php` 및 지정한 환경에 대한 데이터베이스를 업데이트합니다(예: Redis 및 웹 사이트 URL). **중요:** 설치 중에 [처음 배포](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=ko)를 완료하면 Adobe Commerce이 모든 환경에 설치되고 배포되었습니다.
 
 - Adobe Commerce **이(가) 설치**&#x200B;된 경우 필요한 업그레이드를 수행하십시오. 배포 스크립트는 `bin/magento setup:upgrade`을(를) 실행하여 데이터베이스 스키마 및 데이터(확장 또는 핵심 코드 업데이트 후 필요)를 업데이트하고 환경에 대한 배포 구성, `app/etc/env.php` 및 데이터베이스도 업데이트합니다. 마지막으로 배포 스크립트는 Adobe Commerce 캐시를 지웁니다.
 
 - 스크립트는 선택적으로 `magento setup:static-content:deploy` 명령을 사용하여 정적 웹 콘텐츠를 생성합니다.
 
-- 정적 콘텐츠 배포 전략에 기본 설정인 `quick`의 범위(빌드 스크립트의 `-s` 플래그)를 사용합니다. 환경 변수 [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)을(를) 사용하여 전략을 사용자 지정할 수 있습니다. 이러한 옵션 및 기능에 대한 자세한 내용은 [정적 파일 배포 전략](../deploy/static-content.md) 및 [정적 보기 파일 배포](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)에 대한 `-s` 플래그를 참조하십시오.
+- 정적 콘텐츠 배포 전략에 기본 설정인 `quick`의 범위(빌드 스크립트의 `-s` 플래그)를 사용합니다. 환경 변수 [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)을(를) 사용하여 전략을 사용자 지정할 수 있습니다. 이러한 옵션 및 기능에 대한 자세한 내용은 [정적 파일 배포 전략](../deploy/static-content.md) 및 [정적 보기 파일 배포](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ko)에 대한 `-s` 플래그를 참조하십시오.
 
 >[!NOTE]
 >

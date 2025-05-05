@@ -167,7 +167,7 @@ https://www.example.com/blog
       upstream: "mymagento:http"
   ```
 
-- 스테이징 및 프로덕션 환경의 경우 관리 UI에서 [TLS를 Fastly로 강제 적용](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html) 옵션을 활성화합니다. 이 옵션을 사용하면 Fastly가 HTTPS로의 리디렉션을 처리하므로 `routes.yaml` 구성을 업데이트할 필요가 없습니다.
+- 스테이징 및 프로덕션 환경의 경우 관리 UI에서 [TLS를 Fastly로 강제 적용](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=ko) 옵션을 활성화합니다. 이 옵션을 사용하면 Fastly가 HTTPS로의 리디렉션을 처리하므로 `routes.yaml` 구성을 업데이트할 필요가 없습니다.
 
 ## 경로 옵션
 

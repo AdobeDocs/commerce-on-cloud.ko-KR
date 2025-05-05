@@ -30,7 +30,7 @@ ht-degree: 0%
 
 **프로젝트 `master` 환경을 복제하려면**:
 
-1. [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) 계정으로 로컬 워크스테이션에 로그인합니다.
+1. [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ko) 계정으로 로컬 워크스테이션에 로그인합니다.
 
 1. 웹 서버 또는 가상 호스트 _docroot_ 디렉터리로 변경합니다.
 

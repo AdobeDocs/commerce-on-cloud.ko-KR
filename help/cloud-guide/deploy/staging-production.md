@@ -139,7 +139,7 @@ Cloud CLI는 코드를 배포하는 명령을 제공합니다. 프로젝트에 �
 
 ## 정적 파일 마이그레이션
 
-[정적 파일](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)이(가) `mounts`에 저장되어 있습니다. 로컬 환경과 같은 소스 마운트 위치에서 대상 마운트 위치로 파일을 마이그레이션하는 방법에는 두 가지가 있습니다. Adobe 두 방법 모두 `rsync` 유틸리티를 사용하지만 로컬 환경과 원격 환경 간에 파일을 이동할 때는 `magento-cloud` CLI를 사용하는 것이 좋습니다. 또한 Adobe은 원격 원본에서 다른 원격 위치로 파일을 이동할 때 `rsync` 메서드를 사용하는 것이 좋습니다.
+[정적 파일](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/glossary)이(가) `mounts`에 저장되어 있습니다. 로컬 환경과 같은 소스 마운트 위치에서 대상 마운트 위치로 파일을 마이그레이션하는 방법에는 두 가지가 있습니다. Adobe 두 방법 모두 `rsync` 유틸리티를 사용하지만 로컬 환경과 원격 환경 간에 파일을 이동할 때는 `magento-cloud` CLI를 사용하는 것이 좋습니다. 또한 Adobe은 원격 원본에서 다른 원격 위치로 파일을 이동할 때 `rsync` 메서드를 사용하는 것이 좋습니다.
 
 ### CLI를 사용하여 파일 마이그레이션
 

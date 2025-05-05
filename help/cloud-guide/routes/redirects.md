@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->클라우드 인프라 프로젝트의 Adobe Commerce의 경우 `routes.yaml` 파일에서 regex가 아닌 리디렉션 및 다시 쓰기를 많이 구성하면 성능 문제가 발생할 수 있습니다. `routes.yaml` 파일이 32KB 이상인 경우 Fastly로 regex가 아닌 리디렉션 및 다시 쓰기를 오프로드하십시오. _Adobe Commerce 도움말 센터_&#x200B;에서 [Nginx(경로) 대신 Fastly로 리디렉션 오프로드](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html)를 참조하십시오.
+>클라우드 인프라 프로젝트의 Adobe Commerce의 경우 `routes.yaml` 파일에서 regex가 아닌 리디렉션 및 다시 쓰기를 많이 구성하면 성능 문제가 발생할 수 있습니다. `routes.yaml` 파일이 32KB 이상인 경우 Fastly로 regex가 아닌 리디렉션 및 다시 쓰기를 오프로드하십시오. _Adobe Commerce 도움말 센터_&#x200B;에서 [Nginx(경로) 대신 Fastly로 리디렉션 오프로드](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=ko)를 참조하십시오.
 
 ## 전체 경로 리디렉션
 

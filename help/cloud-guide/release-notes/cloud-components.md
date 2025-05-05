@@ -55,7 +55,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2022년 9월 13일
 
-- ![수정 아이콘](../../assets/fix.svg) **준비 시 오류**—페이지 가시성이 관리자에서 [**개별적으로 표시되지 않음**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)(으)로 설정되어 배포 로그에 `ERROR: Warming up failed: <link to page>` 오류가 발생하는 경우 [준비](../environment/variables-post-deploy.md#warm_up_pages)를 시도하는 문제를 해결했습니다.<!-- MCLOUD-9134 -->
+- ![수정 아이콘](../../assets/fix.svg) **준비 시 오류**—페이지 가시성이 관리자에서 [**개별적으로 표시되지 않음**](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)(으)로 설정되어 배포 로그에 `ERROR: Warming up failed: <link to page>` 오류가 발생하는 경우 [준비](../environment/variables-post-deploy.md#warm_up_pages)를 시도하는 문제를 해결했습니다.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

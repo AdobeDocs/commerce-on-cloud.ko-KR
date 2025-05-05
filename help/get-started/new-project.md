@@ -31,7 +31,7 @@ Pro 스테이징 및 프로덕션 환경에 대한 최상위 수준 도메인 �
 
 여러 도메인 또는 고유 도메인에 대한 자세한 지침은 _Cloud Infrastructure의 Commerce_ 안내서의 [여러 웹 사이트 또는 스토어 설정](../cloud-guide/store/multiple-sites.md)을 참조하십시오.
 
-Adobe Commerce 사이트에서 사용되는 동일한 apex 및 하위 도메인을 연결하는 기존 Fastly 계정이 있는 경우 [여러 Fastly 계정 및 할당된 도메인](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}을 참조하십시오.
+Adobe Commerce 사이트에서 사용되는 동일한 apex 및 하위 도메인을 연결하는 기존 Fastly 계정이 있는 경우 [여러 Fastly 계정 및 할당된 도메인](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}을 참조하십시오.
 
 ## 트랜잭션 이메일 도메인
 

@@ -177,7 +177,7 @@ stage:
 - **기본값**—_설정되지 않음_
 - **버전**—Adobe Commerce 2.1.4 이상
 
-`X_FRAME_CONFIGURATION` 변수를 사용하여 Adobe Commerce 사이트에 대한 [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html) 헤더 구성을 변경합니다. 이 구성은 브라우저가 `<frame>`, `<iframe>` 또는 `<object>`에서 페이지를 렌더링하는 방법을 제어합니다. 다음 옵션 중 하나를 사용합니다.
+`X_FRAME_CONFIGURATION` 변수를 사용하여 Adobe Commerce 사이트에 대한 [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=ko) 헤더 구성을 변경합니다. 이 구성은 브라우저가 `<frame>`, `<iframe>` 또는 `<object>`에서 페이지를 렌더링하는 방법을 제어합니다. 다음 옵션 중 하나를 사용합니다.
 
 - `DENY` - 프레임에 페이지를 표시할 수 없습니다.
 - `SAMEORIGIN`—(기본 Adobe Commerce 설정) 페이지는 페이지 자체와 동일한 원점의 프레임에만 표시될 수 있습니다.

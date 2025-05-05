@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ## 확장 설치
 
-Adobe은 구현에 확장을 추가할 때 개발 분기에서 작업할 것을 권장합니다. 확장을 설치할 때 확장 이름(`<VendorName>_<ComponentName>`)이 [`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html) 파일에 자동으로 삽입됩니다. 파일을 직접 편집할 필요는 없습니다.
+Adobe은 구현에 확장을 추가할 때 개발 분기에서 작업할 것을 권장합니다. 확장을 설치할 때 확장 이름(`<VendorName>_<ComponentName>`)이 [`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=ko) 파일에 자동으로 삽입됩니다. 파일을 직접 편집할 필요는 없습니다.
 
 **확장을 설치하려면**:
 
@@ -155,7 +155,7 @@ Composer를 사용하여 확장을 추가하면 배포 프로세스에서 확장
 
 ## 확장 업그레이드
 
-계속하기 전에 확장에 대한 작성기 이름과 버전이 필요합니다. 또한 확장이 프로젝트 및 Adobe Commerce 버전과 호환되는지 확인하십시오. 특히 시작하기 전에 [필요한 PHP 버전을 확인](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)하세요.
+계속하기 전에 확장에 대한 작성기 이름과 버전이 필요합니다. 또한 확장이 프로젝트 및 Adobe Commerce 버전과 호환되는지 확인하십시오. 특히 시작하기 전에 [필요한 PHP 버전을 확인](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)하세요.
 
 **확장을 업데이트하려면**:
 
@@ -189,4 +189,4 @@ Composer를 사용하여 확장을 추가하면 배포 프로세스에서 확장
    git push origin <branch-names>
    ```
 
-오류가 발생하면 [구성 요소 오류에서 복구](../deploy/recover-failed-deployment.md)를 참조하십시오. Adobe Commerce에서 확장을 사용하는 방법에 대한 자세한 내용은 _관리 안내서_&#x200B;의 [확장](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html)을 참조하세요.
+오류가 발생하면 [구성 요소 오류에서 복구](../deploy/recover-failed-deployment.md)를 참조하십시오. Adobe Commerce에서 확장을 사용하는 방법에 대한 자세한 내용은 _관리 안내서_&#x200B;의 [확장](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=ko)을 참조하세요.

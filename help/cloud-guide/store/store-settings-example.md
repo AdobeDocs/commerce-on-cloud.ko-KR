@@ -56,7 +56,7 @@ _정적 파일 최적화_&#x200B;는 JavaScript 및 CSS(Cascading Style Sheet)�
    ![로케일 변경](../../assets/locale-options.png)
 
 1. **구성 저장**&#x200B;을 클릭합니다.
-1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)합니다.
+1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/tools/cache-management)합니다.
 1. 관리자에서 로그아웃합니다.
 
 ## 값을 내보내고 config.php를 로컬 시스템으로 전송합니다.
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 오른쪽 창에서 **JavaScript 설정**&#x200B;을 확장합니다.
 1. **JavaScript 파일 병합** 목록에서 **예**&#x200B;를 클릭합니다.
 1. **구성 저장**&#x200B;을 클릭합니다.
-1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)합니다.
+1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/tools/cache-management)합니다.
 1. 관리자에서 로그아웃합니다.
 
 dump 명령을 다시 실행하면 새 구성이 파일에 추가됩니다.

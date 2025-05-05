@@ -33,7 +33,7 @@ ht-degree: 0%
 
 귀하의 계정은 제한된 수의 ![활성 분기](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"}(비활성) 개발 분기를 지원합니다. [!DNL Cloud Console] 또는 Cloud CLI만 사용하여 분기를 추가하거나 삭제하여 활성 및 비활성 분기를 관리합니다. 분기를 삭제하려면 먼저 _환경_ 목록에 _비활성_(으)로 남아 있는 분기를 비활성화합니다. 나중에 분기를 다시 활성화하거나 환경 설정에서 또는 Cloud CLI를 사용하여 [분기를 삭제](../dev-tools/cloud-cli-overview.md#)할 수 있습니다.
 
-개발을 위해 추가 활성 환경이 필요한 경우 [지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하세요.
+개발을 위해 추가 활성 환경이 필요한 경우 [지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하세요.
 
 **분기를 추가하려면**:
 

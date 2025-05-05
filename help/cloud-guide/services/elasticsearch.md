@@ -264,6 +264,6 @@ Elastic Suite를 설정할 때 `ELASTICSUITE_CONFIGURATION` 배포 변수에 구
 
 Elasticsearch 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서를 참조하십시오.
 
-- [Elasticsearch 5가 구성되어 있지만 검색 페이지가 &quot;필드 데이터를 사용할 수 없습니다...&quot; 오류](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html)
+- [Elasticsearch 5가 구성되어 있지만 검색 페이지가 &quot;필드 데이터를 사용할 수 없습니다...&quot; 오류](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=ko)
 - Adobe Commerce 문제 해결사의 [Elasticsearch](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
-- [Elasticsearch 인덱스 상태가 `yellow` 또는 `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html)입니다.
+- [Elasticsearch 인덱스 상태가 `yellow` 또는 `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=ko)입니다.

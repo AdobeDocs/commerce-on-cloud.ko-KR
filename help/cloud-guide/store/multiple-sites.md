@@ -35,7 +35,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->사이트 기본 URL에 저장소 보기를 추가하려면 여러 디렉터리를 만들 필요가 없습니다. _구성 가이드_&#x200B;에서 [기본 URL에 스토어 코드 추가](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)를 참조하십시오.
+>사이트 기본 URL에 저장소 보기를 추가하려면 여러 디렉터리를 만들 필요가 없습니다. _구성 가이드_&#x200B;에서 [기본 URL에 스토어 코드 추가](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ko)를 참조하십시오.
 
 ## 도메인 추가
 
@@ -45,11 +45,11 @@ https://store.com/second/
 
 - Pro Staging 및 프로덕션용
 
-  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains)를 참조하거나 지원 티켓을 열어 지원을 요청하세요. 또한 클러스터에 추가할 새 도메인을 요청하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
+  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains)를 참조하거나 지원 티켓을 열어 지원을 요청하세요. 또한 클러스터에 추가할 새 도메인을 요청하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
 
 - 스타터 프로덕션용
 
-  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains) 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 참조하여 지원을 요청하세요. 또한 [!DNL Cloud Console]의 **도메인** 탭에 새 도메인을 추가해야 합니다. `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains) 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 참조하여 지원을 요청하세요. 또한 [!DNL Cloud Console]의 **도메인** 탭에 새 도메인을 추가해야 합니다. `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 로컬 설치 구성
 
@@ -212,7 +212,7 @@ https://store.com/second/
 
 ### 웹 사이트, 스토어 및 스토어 조회수 설정
 
-_관리 UI_&#x200B;에서 Adobe Commerce **웹 사이트**, **스토어** 및 **스토어 보기**&#x200B;를 설정합니다. _구성 가이드_&#x200B;의 [Admin에서 여러 웹 사이트, 스토어 및 스토어 보기 설정](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)을 참조하십시오.
+_관리 UI_&#x200B;에서 Adobe Commerce **웹 사이트**, **스토어** 및 **스토어 보기**&#x200B;를 설정합니다. _구성 가이드_&#x200B;의 [Admin에서 여러 웹 사이트, 스토어 및 스토어 보기 설정](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ko)을 참조하십시오.
 
 로컬 설치를 설정할 때 관리자의 웹 사이트, 스토어 및 스토어 조회수와 동일한 이름과 코드를 사용하는 것이 중요합니다. `magento-vars.php` 파일을 업데이트할 때 이러한 값이 필요합니다.
 
@@ -352,4 +352,4 @@ Adobe은 프로덕션 환경으로 푸시하기 전에 스테이징 환경에서
 
 <!-- link definitions -->
 
-[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html
+[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=ko

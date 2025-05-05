@@ -49,9 +49,9 @@ ht-degree: 0%
 
    - SSH를 사용하여 원격 서버에 로그인하고 다음을 확인합니다.
 
-      - 인덱서 상태를 확인하고 필요에 따라 다시 인덱싱합니다. _구성 가이드_&#x200B;에서 [인덱서 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)를 참조하십시오.
+      - 인덱서 상태를 확인하고 필요에 따라 다시 인덱싱합니다. _구성 가이드_&#x200B;에서 [인덱서 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=ko)를 참조하십시오.
 
       - Adobe Commerce 데이터베이스에서 `cron` 로그 및 `cron_schedule` 테이블을 확인하여 cron 상태를 확인하고 필요에 따라 cron 작업을 다시 실행하십시오.
-_구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)을 참조하십시오.
+_구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=ko#logging)을 참조하십시오.
 
    - 스테이징 및 프로덕션 환경에서 업그레이드 후 사용자 승인 테스트 UAT를 완료하고 서드파티 및 사용자 정의 확장 업그레이드와 관련된 문제를 수정합니다.

@@ -30,7 +30,7 @@ _APM 및 서비스_ 페이지에서 **요약**&#x200B;을 선택하여 응용 �
 
 >[!TIP]
 >
->이 데이터를 사용하여 응용 프로그램 성능 문제를 해결하는 방법에 대한 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;에서 [New Relic을 사용하여 성능 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)을 참조하십시오.
+>이 데이터를 사용하여 응용 프로그램 성능 문제를 해결하는 방법에 대한 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;에서 [New Relic을 사용하여 성능 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=ko)을 참조하십시오.
 
 ## 관리 경고로 성능 모니터링
 
@@ -46,7 +46,7 @@ Adobe은 성능 지표를 추적하기 위해 _Adobe Commerce에 대한 관리 �
 | MariaDB 쿼리 로드 | NRI | Pro |
 | 레디스 메모리 | NRI | Pro |
 
-사이트 인프라 또는 애플리케이션 조건에서 경고 임계값을 트리거하면 New Relic에서 사전 예방적으로 문제를 해결할 수 있도록 경고 알림을 보냅니다. 경고 임계값 및 경고를 트리거한 문제를 해결하기 위한 문제 해결 단계에 대한 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [Adobe Commerce에 대한 관리 경고](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html)를 참조하십시오.
+사이트 인프라 또는 애플리케이션 조건에서 경고 임계값을 트리거하면 New Relic에서 사전 예방적으로 문제를 해결할 수 있도록 경고 알림을 보냅니다. 경고 임계값 및 경고를 트리거한 문제를 해결하기 위한 문제 해결 단계에 대한 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [Adobe Commerce에 대한 관리 경고](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=ko)를 참조하십시오.
 
 >[!TIP]
 >
@@ -76,7 +76,7 @@ Adobe은 성능 지표를 추적하기 위해 _Adobe Commerce에 대한 관리 �
 
      >[!NOTE]
      >
-     >_Adobe Commerce에 대한 관리 경고_ 정책을 사용할 수 없는 경우 _Adobe Commerce 도움말 센터_&#x200B;에서 [Adobe Commerce에 대한 관리 경고](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html)을(를) 참조하십시오.
+     >_Adobe Commerce에 대한 관리 경고_ 정책을 사용할 수 없는 경우 _Adobe Commerce 도움말 센터_&#x200B;에서 [Adobe Commerce에 대한 관리 경고](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=ko)을(를) 참조하십시오.
 
 1. 정책에 정의된 경고 조건을 검토하려면 **[!UICONTROL Alert conditions]** 탭을 클릭하십시오.
 

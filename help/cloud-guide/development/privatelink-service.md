@@ -35,7 +35,7 @@ ht-degree: 0%
 - PrivateLink를 사용하여 SSH 연결을 설정할 수 없습니다. [SSH 키 사용](secure-connections.md)을 참조하세요.
 - Adobe Commerce 지원에서는 초기 지원 외에 AWS PrivateLink 문제 해결을 다루지 않습니다.
 - 고객은 자체 VPC 관리와 관련된 비용을 부담합니다.
-- HTTPS 프로토콜(포트 443)을 사용하여 Azure Private Link를 통해 클라우드 인프라의 Adobe Commerce에 연결할 수 없습니다. [가장 빠른 원본 닫기](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html). 이 제한은 AWS PrivateLink에는 적용되지 않습니다.
+- HTTPS 프로토콜(포트 443)을 사용하여 Azure Private Link를 통해 클라우드 인프라의 Adobe Commerce에 연결할 수 없습니다. [가장 빠른 원본 닫기](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=ko). 이 제한은 AWS PrivateLink에는 적용되지 않습니다.
 - PrivateDNS를 사용할 수 없습니다.
 
 ## PrivateLink 연결 유형
@@ -202,7 +202,7 @@ Telnet 애플리케이션을 사용하여 VPC 엔드포인트 서비스에 대�
 
 ## PrivateLink 구성 변경
 
-기존 PrivateLink 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하십시오. 예를 들어 다음과 같은 변경 사항을 요청할 수 있습니다.
+기존 PrivateLink 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하십시오. 예를 들어 다음과 같은 변경 사항을 요청할 수 있습니다.
 
 - Adobe Commerce on cloud infrastructure Pro 프로덕션 또는 스테이징 환경에서 PrivateLink 연결을 제거합니다.
 - Adobe 끝점 서비스에 액세스하기 위한 고객 클라우드 플랫폼 계정 번호를 변경합니다.

@@ -104,9 +104,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 구성에 대한 최상의 정보는 Adobe Commerce 및 설치된 확장에 대한 설명서를 참조하십시오. 시작하는 데 도움이 되는 몇 가지 링크 및 아이디어는 다음과 같습니다.
 
 - 클라우드의 특정 모범 사례에 대한 [저장소 구성 모범 사례](../store/best-practices.md)
-- 저장소 관리자 액세스, 이름, 언어, 통화, 브랜딩, 사이트, 저장소 보기 등에 대한 [기본 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details)
-- CSS와 레이아웃을 포함한 사이트 및 스토어의 모양과 느낌을 위한 [테마](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features)
-- 데이터베이스의 역할, 도구, 알림 및 암호화 키에 대한 [시스템 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview)
+- 저장소 관리자 액세스, 이름, 언어, 통화, 브랜딩, 사이트, 저장소 보기 등에 대한 [기본 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/start/setup/store-details)
+- CSS와 레이아웃을 포함한 사이트 및 스토어의 모양과 느낌을 위한 [테마](https://experienceleague.adobe.com/ko/docs/commerce-admin/content-design/content-menu#design-features)
+- 데이터베이스의 역할, 도구, 알림 및 암호화 키에 대한 [시스템 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/guide-overview)
 - 해당 설명서를 사용한 확장 설정
 
 단순한 저장소 설정 외에도 여러 사이트 및 저장소, 구성된 서비스 등을 추가로 구성할 수 있습니다. [스토어 구성](../store/overview.md)을 참조하세요.
@@ -162,9 +162,9 @@ Adobe Commerce 버전 2.2 이상을 사용하는 경우 구성 관리 명령은 
 
 스테이징 및 통합 환경에서 사용할 테스트 데이터로 프로덕션 데이터를 내보내려면 다음을 수행합니다.
 
-- Adobe Commerce 암호화 키를 사용하여 고객의 보호된 백업을 내보내고 데이터를 저장할 때 [지원 유틸리티를 실행](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) CLI 명령(권장)
+- Adobe Commerce 암호화 키를 사용하여 고객의 보호된 백업을 내보내고 데이터를 저장할 때 [지원 유틸리티를 실행](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ko) CLI 명령(권장)
 
-- 데이터를 생성하고 내보내는 [데이터 수집](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) 도구
+- 데이터를 생성하고 내보내는 [데이터 수집](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/tools/support#data-collector) 도구
 
 이 데이터를 마이그레이션하려면 [정적 파일 및 데이터 마이그레이션 및 배포](../deploy/staging-production.md#migrate-static-files)를 참조하세요.
 
@@ -172,7 +172,7 @@ Adobe Commerce 버전 2.2 이상을 사용하는 경우 구성 관리 명령은 
 
 >[!NOTE]
 >
->데이터를 다른 환경으로 푸시하기 전에 데이터를 삭제하는 것을 고려해야 합니다. [지원 유틸리티 사용](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) 또는 스크립트를 개발하여 고객 데이터를 삭제하는 등 몇 가지 옵션이 있습니다.
+>데이터를 다른 환경으로 푸시하기 전에 데이터를 삭제하는 것을 고려해야 합니다. [지원 유틸리티 사용](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ko) 또는 스크립트를 개발하여 고객 데이터를 삭제하는 등 몇 가지 옵션이 있습니다.
 
 >[!WARNING]
 >

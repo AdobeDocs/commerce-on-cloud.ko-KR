@@ -14,15 +14,15 @@ ht-degree: 0%
 [Commerce용 클라우드 패치](https://github.com/magento/magento-cloud-patches) 및 [품질 패치 도구](https://github.com/magento/quality-patches)는 설치된 Adobe Commerce 애플리케이션에 패치를 제공합니다.
 
 - Commerce용 클라우드 패치 패키지는 중요한 수정 사항이 있는 필요한 패치를 제공합니다
-- 품질 패치는 이전 버전과 호환되지 않는 변경 사항이 포함되지 않은 [개별 패치](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html#individual-patch)와(과) 같이 영향이 적은 선택적 품질 수정 사항을 제공합니다.
+- 품질 패치는 이전 버전과 호환되지 않는 변경 사항이 포함되지 않은 [개별 패치](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html?lang=ko#individual-patch)와(과) 같이 영향이 적은 선택적 품질 수정 사항을 제공합니다.
 
-릴리스된 패치의 전체 목록을 검토하려면 _Commerce 작업 도구 안내서_&#x200B;의 [사용 가능한 패치](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)를 참조하십시오.
+릴리스된 패치의 전체 목록을 검토하려면 _Commerce 작업 도구 안내서_&#x200B;의 [사용 가능한 패치](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ko)를 참조하십시오.
 
 두 패키지 모두 클라우드 환경과 모든 Adobe Commerce 버전의 통합을 개선하고 중요, 선택 사항 및 사용자 지정 수정 사항의 빠른 전달을 지원합니다. 이 패키지를 사용하여 Commerce에 사용할 수 있는 모든 개별 패치에 대한 일반 정보를 적용, 되돌리기 및 볼 수 있습니다.
 
 >[!TIP]
 >
->Magento Open Source 및 Adobe Commerce 프로젝트의 독립형 패키지로 [품질 패치 도구](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 및 Commerce용 클라우드 패치를 사용할 수 있습니다. 클라우드가 아닌 프로젝트에는 품질 패치 도구 를 사용하는 것이 좋습니다.
+>Magento Open Source 및 Adobe Commerce 프로젝트의 독립형 패키지로 [품질 패치 도구](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ko) 및 Commerce용 클라우드 패치를 사용할 수 있습니다. 클라우드가 아닌 프로젝트에는 품질 패치 도구 를 사용하는 것이 좋습니다.
 
 원격 환경에 변경 내용을 배포할 때 `ece-tools` 패키지는 `magento/magento-cloud-patches` 및 `magento/quality-patches`을(를) 사용하여 보류 중인 패치를 확인하고 다음 순서로 자동으로 적용합니다.
 

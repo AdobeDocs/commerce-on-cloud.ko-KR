@@ -25,8 +25,8 @@ Commerce 관리 패널에 대한 관리 액세스 권한이 있는 사용자는 
 
 >[!TIP]
 >
->암호 재설정이 실패하거나 [관리] 패널에 로그인할 수 없는 경우 관리자 액세스 권한이 있는 사용자는 SSH를 사용하여 프로젝트에 연결할 수 있고 `admin:user:create` CLI 명령을 사용하여 관리자 사용자를 추가할 수 있습니다. _설치 안내서_&#x200B;에서 [관리자 계정 만들기, 편집 또는 잠금 해제](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html)를 참조하십시오.
+>암호 재설정이 실패하거나 [관리] 패널에 로그인할 수 없는 경우 관리자 액세스 권한이 있는 사용자는 SSH를 사용하여 프로젝트에 연결할 수 있고 `admin:user:create` CLI 명령을 사용하여 관리자 사용자를 추가할 수 있습니다. _설치 안내서_&#x200B;에서 [관리자 계정 만들기, 편집 또는 잠금 해제](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ko)를 참조하십시오.
 
 ## 사이트 상태 모니터링
 
-[사이트 전체 분석 도구](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/intro)는 Adobe Commerce 설치의 보안 및 운영을 보장하기 위한 자세한 시스템 통찰력과 권장 사항이 포함된 사전 예방적 셀프서비스 도구이자 중앙 저장소입니다. 24시간 연중무휴 실시간 성능 모니터링, 보고서 및 조언을 제공하여 잠재적인 문제를 식별하고 사이트 상태, 안전 및 애플리케이션 구성에 대한 가시성을 향상시킵니다. 이는 해결 시간을 줄이고 사이트 안정성과 성능을 개선하는 데 도움이 됩니다. [관리 패널](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel)에서 바로 사이트 전체 분석 도구에 액세스할 수 있습니다.
+[사이트 전체 분석 도구](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/site-wide-analysis-tool/intro)는 Adobe Commerce 설치의 보안 및 운영을 보장하기 위한 자세한 시스템 통찰력과 권장 사항이 포함된 사전 예방적 셀프서비스 도구이자 중앙 저장소입니다. 24시간 연중무휴 실시간 성능 모니터링, 보고서 및 조언을 제공하여 잠재적인 문제를 식별하고 사이트 상태, 안전 및 애플리케이션 구성에 대한 가시성을 향상시킵니다. 이는 해결 시간을 줄이고 사이트 안정성과 성능을 개선하는 데 도움이 됩니다. [관리 패널](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel)에서 바로 사이트 전체 분석 도구에 액세스할 수 있습니다.

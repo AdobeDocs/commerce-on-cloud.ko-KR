@@ -66,9 +66,9 @@ Adobe은 핵심 애플리케이션 코드에서 보안 취약점을 정기적으
 - 오와십자프
 - andSqlMap
 
-전체 코드 베이스는 이러한 도구를 사용하여 격주로 검사됩니다. 고객은 직접 전자 메일, 응용 프로그램 및 [보안 센터](https://helpx.adobe.com/security.html)에서 알림을 통해 보안 패치에 대한 알림을 받습니다.
+전체 코드 베이스는 이러한 도구를 사용하여 격주로 검사됩니다. 고객은 직접 전자 메일, 응용 프로그램 및 [보안 센터](https://helpx.adobe.com/kr/security.html)에서 알림을 통해 보안 패치에 대한 알림을 받습니다.
 
-고객은 PCI 지침에 따라 릴리스 후 30일 이내에 이러한 패치가 사용자 정의 애플리케이션에 적용되었는지 확인해야 합니다. Adobe은 또한 가맹점이 사이트를 정기적으로 모니터링하고 알려진 보안 위험, 맬웨어 및 무단 액세스에 대한 업데이트를 받을 수 있도록 하는 [보안 검색 도구](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)를 제공합니다. 보안 검색 도구는 무료 서비스이며 모든 버전의 Adobe Commerce에서 실행할 수 있습니다.
+고객은 PCI 지침에 따라 릴리스 후 30일 이내에 이러한 패치가 사용자 정의 애플리케이션에 적용되었는지 확인해야 합니다. Adobe은 또한 가맹점이 사이트를 정기적으로 모니터링하고 알려진 보안 위험, 맬웨어 및 무단 액세스에 대한 업데이트를 받을 수 있도록 하는 [보안 검색 도구](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/security/security-scan)를 제공합니다. 보안 검색 도구는 무료 서비스이며 모든 버전의 Adobe Commerce에서 실행할 수 있습니다.
 
 보안 연구원이 취약점을 식별하고 보고하도록 장려하기 위해 Adobe Commerce에는 내부 테스트 외에 [버그 바운티 프로그램](https://hackerone.com/magento)이 있습니다. 또한 고객은 원하는 경우 자체 검토를 위해 애플리케이션의 전체 소스 코드를 제공받습니다.
 
@@ -108,7 +108,7 @@ GDPR은 수집된 개인 식별 정보(이름, 인종, 생년월일 등)가 익�
 
 >[!NOTE]
 >
->이 페이지에서는 GDPR에 대해 고려해야 할 사항에 대한 일반적인 개요를 제공합니다. Adobe Commerce에서 개인 정보를 저장하는 방법에 대한 자세한 내용은 _[보안 및 규정 준수 안내서](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)_&#x200B;를 참조하십시오. 비즈니스가 법적 의무를 준수하는 방법을 결정하려면 법률 고문과 상의하거나 [공식 텍스트](https://eur-lex.europa.eu/eli/reg/2016/679/oj)를 참조하십시오.
+>이 페이지에서는 GDPR에 대해 고려해야 할 사항에 대한 일반적인 개요를 제공합니다. Adobe Commerce에서 개인 정보를 저장하는 방법에 대한 자세한 내용은 _[보안 및 규정 준수 안내서](https://experienceleague.adobe.com/ko/docs/commerce-operations/security-and-compliance/overview)_&#x200B;를 참조하십시오. 비즈니스가 법적 의무를 준수하는 방법을 결정하려면 법률 고문과 상의하거나 [공식 텍스트](https://eur-lex.europa.eu/eli/reg/2016/679/oj)를 참조하십시오.
 
 ## 백업
 

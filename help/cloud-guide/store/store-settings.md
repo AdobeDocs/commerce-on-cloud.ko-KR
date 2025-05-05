@@ -15,14 +15,14 @@ ht-degree: 0%
 
 관리자 **스토어** > **설정** > **구성** 섹션의 구성을 참조하는 스토어 설정은 구성 유형에 따라 배포 구성 파일에 저장됩니다.
 
-- `app/etc/config.php` - 저장소, 웹 사이트, 모듈 또는 확장, 정적 파일 최적화 및 정적 콘텐츠 배포와 관련된 시스템 값에 대한 구성 설정입니다. _구성 가이드_&#x200B;에서 [config.php 참조](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html)을 참조하세요.
-- `app/etc/env.php`—소스 제어에 _NOT_&#x200B;해야 하는 시스템별 재정의 및 중요한 설정에 대한 값을 저장합니다. _구성 안내서_&#x200B;에서 [env.php 참조](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html)를 참조하십시오.
+- `app/etc/config.php` - 저장소, 웹 사이트, 모듈 또는 확장, 정적 파일 최적화 및 정적 콘텐츠 배포와 관련된 시스템 값에 대한 구성 설정입니다. _구성 가이드_&#x200B;에서 [config.php 참조](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=ko)을 참조하세요.
+- `app/etc/env.php`—소스 제어에 _NOT_&#x200B;해야 하는 시스템별 재정의 및 중요한 설정에 대한 값을 저장합니다. _구성 안내서_&#x200B;에서 [env.php 참조](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=ko)를 참조하십시오.
 
 >[!NOTE]
 >
 >클라우드 인프라의 Adobe Commerce은 프로덕션 및 유지 관리 모드만 지원하므로 관리에서 **고급** > **개발자** 섹션에 액세스할 수 없습니다. 구성 관리 작업을 완료하려면 [환경 관리자 권한](../project/user-access.md)이 있어야 합니다. [환경 변수](../environment/configure-env-yaml.md)를 사용하여 추가 설정을 구성할 수 있습니다.
 
-구성 관리는 파이프라인 배포를 사용하여 가동 중단을 최소화하면서 환경 전체에 일관된 저장소 설정을 배포하는 방법을 제공합니다. Adobe Commerce on cloud infrastructure 프로젝트에는 빌드 서버, 빌드 및 배포 스크립트, [파이프라인 배포 전략](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)을 염두에 두고 설계된 배포 환경이 포함되어 있습니다.
+구성 관리는 파이프라인 배포를 사용하여 가동 중단을 최소화하면서 환경 전체에 일관된 저장소 설정을 배포하는 방법을 제공합니다. Adobe Commerce on cloud infrastructure 프로젝트에는 빌드 서버, 빌드 및 배포 스크립트, [파이프라인 배포 전략](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=ko)을 염두에 두고 설계된 배포 환경이 포함되어 있습니다.
 
 ## 구성 재정의 스키마
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->파이프라인 배포에 대한 재정의 구성표에 대한 자세한 내용은 _구성 안내서_&#x200B;의 [구성 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)를 참조하십시오.
+>파이프라인 배포에 대한 재정의 구성표에 대한 자세한 내용은 _구성 안내서_&#x200B;의 [구성 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=ko)를 참조하십시오.
 
 동일한 설정이 여러 위치에 구성된 경우 애플리케이션은 다음 구성 계층 구조를 사용하여 환경에 적용할 값을 결정합니다.
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 `bin/magento app:config:dump` 명령을 사용할 때 중요한 구성은 `app/etc/env.php` 파일로 내보냅니다. CLI 명령 `bin/magento config:sensitive:set`을(를) 사용하여 중요한 값을 설정할 수 있습니다. 구성 설정을 중요하거나 시스템별로 지정하는 방법에 대해 알아보려면 _Commerce PHP 확장_ 안내서의 [중요 및 환경별 설정](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/)을 참조하십시오.
 
-_구성 가이드_&#x200B;에서 [중요 또는 시스템별 설정](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html) 목록을 확인하세요.
+_구성 가이드_&#x200B;에서 [중요 또는 시스템별 설정](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=ko) 목록을 확인하세요.
 
 ### SCD 성능
 

@@ -30,7 +30,7 @@ Cloud Console 또는 명령줄에서 각 환경에 대해 발신 이메일을 �
 
 기본적으로 발신 이메일은 Pro 프로덕션 및 스테이징 환경에서 활성화됩니다. 그러나 [명령줄](outgoing-emails.md#enable-emails-in-the-cli) 또는 [클라우드 콘솔](outgoing-emails.md#enable-emails-in-the-cloud-console)을 통해 `enable_smtp` 속성을 설정할 때까지 [!UICONTROL Outgoing emails]이(가) 환경 설정에서 비활성화되어 표시될 수 있습니다. 통합 및 스테이징 환경에 대해 발신 이메일을 활성화하여 Cloud 프로젝트 사용자에 대해 이중 인증 또는 암호 재설정 이메일을 보낼 수 있습니다. [테스트를 위한 전자 메일 구성](outgoing-emails.md)을 참조하세요.
 
-Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하지 않도록 설정하거나 다시 사용하도록 설정해야 하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)을 제출할 수 있습니다.
+Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하지 않도록 설정하거나 다시 사용하도록 설정해야 하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)을 제출할 수 있습니다.
 
 >[!TIP]
 >
@@ -40,7 +40,7 @@ Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하�
 
 모든 클라우드 프로젝트는 중앙 계정에서 관리되므로 지원만 SendGrid 대시보드에 액세스할 수 있습니다. SendGrid는 하위 계정 제한 기능을 제공하지 않습니다.
 
-활동 로그에서 게재 상태 또는 반송되거나 거부되거나 차단된 전자 메일 주소 목록을 검토하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하십시오. 지원 팀 **은(는) 30일 넘는 활동 로그를 검색할 수 없습니다**.
+활동 로그에서 게재 상태 또는 반송되거나 거부되거나 차단된 전자 메일 주소 목록을 검토하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하십시오. 지원 팀 **은(는) 30일 넘는 활동 로그를 검색할 수 없습니다**.
 
 가능한 경우 요청에 다음 정보를 포함하십시오.
 
@@ -54,7 +54,7 @@ DKIM은 인터넷 서비스 공급자(ISP)가 합법적인 발신자 주소와 �
 
 >[!WARNING]
 >
->SendGrid DKIM 서명 및 도메인 인증 지원은 Pro 프로젝트의 프로덕션 및 스테이징 환경에서만 사용할 수 있으며 모든 스타터 환경에는 사용할 수 없습니다. 그 결과, 아웃바운드 트랜잭션 이메일은 스팸 필터에 의해 플래그가 지정될 수 있습니다. DKIM을 사용하면 인증된 이메일 발신자로서의 게재 속도가 향상됩니다. 메시지 게재 속도를 향상시키기 위해 Starter에서 Pro로 업그레이드하거나 자체 SMTP 서버 또는 이메일 게재 서비스 공급자를 사용할 수 있습니다. _관리 시스템 안내서_&#x200B;에서 [전자 메일 연결 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)을 참조하십시오.
+>SendGrid DKIM 서명 및 도메인 인증 지원은 Pro 프로젝트의 프로덕션 및 스테이징 환경에서만 사용할 수 있으며 모든 스타터 환경에는 사용할 수 없습니다. 그 결과, 아웃바운드 트랜잭션 이메일은 스팸 필터에 의해 플래그가 지정될 수 있습니다. DKIM을 사용하면 인증된 이메일 발신자로서의 게재 속도가 향상됩니다. 메시지 게재 속도를 향상시키기 위해 Starter에서 Pro로 업그레이드하거나 자체 SMTP 서버 또는 이메일 게재 서비스 공급자를 사용할 수 있습니다. _관리 시스템 안내서_&#x200B;에서 [전자 메일 연결 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/communications/email-communications)을 참조하십시오.
 
 ### 보낸 사람 및 도메인 인증
 
@@ -66,7 +66,7 @@ SendGrid가 Pro 프로덕션 또는 스테이징 환경에서 사용자를 대�
 
 **도메인 인증을 사용하려면**:
 
-1. 특정 도메인(**Pro 스테이징 및 프로덕션 환경만**)에 대해 DKIM 활성화를 요청하려면 [지원 티켓](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)을 제출하십시오.
+1. 특정 도메인(**Pro 스테이징 및 프로덕션 환경만**)에 대해 DKIM 활성화를 요청하려면 [지원 티켓](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)을 제출하십시오.
 1. 지원 티켓에서 제공한 `TXT` 및 `CNAME` 레코드로 DNS 구성을 업데이트합니다.
 
 **계정 ID가**&#x200B;인 `TXT` 레코드 예:
@@ -117,7 +117,7 @@ dig CNAME s2._domainkey.domain_name
 
 트랜잭션 이메일 임계값은 비프로덕션 환경에서 매월 12,000개의 이메일을 보내는 것과 같이 특정 기간 내에 Pro 환경에서 보낼 수 있는 트랜잭션 이메일 메시지 수를 나타냅니다. 임계값은 스팸 전송을 방지하고 이메일 평판을 손상시킬 수 있는 가능성을 방지하기 위해 설계되었습니다.
 
-보낸 사람의 신뢰도 점수가 95% 이상인 한 프로덕션 환경에서 보낼 수 있는 이메일 수에는 엄격한 제한이 없습니다. 이러한 신뢰도는 반송되거나 거부된 이메일 수와 DNS 기반 스팸 레지스트리가 도메인을 잠재적인 스팸 소스로 플래그를 지정했는지 여부에 따라 영향을 받습니다. _Commerce 지원 기술 자료_&#x200B;에서 [Adobe Commerce에서 SendGrid 크레딧이 초과되면 전송되지 않은 전자 메일](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)을(를) 참조하십시오.
+보낸 사람의 신뢰도 점수가 95% 이상인 한 프로덕션 환경에서 보낼 수 있는 이메일 수에는 엄격한 제한이 없습니다. 이러한 신뢰도는 반송되거나 거부된 이메일 수와 DNS 기반 스팸 레지스트리가 도메인을 잠재적인 스팸 소스로 플래그를 지정했는지 여부에 따라 영향을 받습니다. _Commerce 지원 기술 자료_&#x200B;에서 [Adobe Commerce에서 SendGrid 크레딧이 초과되면 전송되지 않은 전자 메일](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)을(를) 참조하십시오.
 
 **최대 크레딧이 초과되었는지 확인**:
 
@@ -131,7 +131,7 @@ dig CNAME s2._domainkey.domain_name
 
 1. `authentication failed : Maxium credits exceeded`개 항목에 대한 `/var/log/mail.log`을(를) 확인하십시오.
 
-   `authentication failed`개의 로그 항목이 표시되고 **이메일 전송 신뢰도**&#x200B;가 최소 95개라면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하여 크레딧 배분을 늘릴 수 있습니다.
+   `authentication failed`개의 로그 항목이 표시되고 **이메일 전송 신뢰도**&#x200B;가 최소 95개라면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하여 크레딧 배분을 늘릴 수 있습니다.
 
 ### 이메일 전송 신뢰도
 
@@ -143,6 +143,6 @@ dig CNAME s2._domainkey.domain_name
 
 이메일이 스팸 폴더로 전송되지 않도록 하려면 Sendgrid의 모범 사례 문서 [내 이메일이 스팸으로 이어지는 이유](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder)를 따르십시오.
 
-일부 받는 사람이 전자 메일을 받지 못하는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하여 금지 목록 검토를 요청하고 필요한 경우 받는 사람을 제거할 수 있습니다.
+일부 받는 사람이 전자 메일을 받지 못하는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하여 금지 목록 검토를 요청하고 필요한 경우 받는 사람을 제거할 수 있습니다.
 
 자세한 내용은 [제외 목록이란?](https://sendgrid.com/en-us/blog/what-is-a-suppression-list)을 참조하세요.

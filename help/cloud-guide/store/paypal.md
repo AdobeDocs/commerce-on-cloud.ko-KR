@@ -58,7 +58,7 @@ PayPal Express 체크아웃을 구성하려면:
    * **샌드박스 모드** 입력한 자격 증명이 샌드박스에 대한 자격 증명인지 여부를 나타내려면 [예] 또는 [아니요]를 선택하십시오. 프로덕션 자격 증명을 입력한 경우 아니오를 선택합니다.
    * **API 프록시 사용** 시스템에서 프록시 서버를 사용하여 Adobe Commerce과 PayPal 결제 시스템 간의 연결을 설정하는 경우 [예] 또는 [아니요]를 선택하십시오. [예]일 경우 프록시 호스트 및 포트를 입력합니다.
 
-1. 계정 구성에 대한 자세한 내용 및 단계는 2단계부터 [PayPal Express 체크아웃](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) 필수 설정 완료를 참조하십시오.
+1. 계정 구성에 대한 자세한 내용 및 단계는 2단계부터 [PayPal Express 체크아웃](https://experienceleague.adobe.com/ko/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) 필수 설정 완료를 참조하십시오.
 
 계정이 구성 및 인증되면 필수 PayPal 설정에서 PayPal 결제 옵션을 활성화 및 비활성화할 수 있습니다.
 

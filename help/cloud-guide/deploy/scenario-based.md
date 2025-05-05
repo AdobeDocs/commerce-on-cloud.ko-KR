@@ -40,7 +40,7 @@ hooks:
 
 >[!NOTE]
 >
->`ece-tools` 2002.1.x 릴리스에는 새로운 [후크 구성](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html) 형식이 있습니다. `ece-tools` 2002.0.x 릴리스의 레거시 형식은 계속 지원됩니다. 그러나 시나리오 기반 배포 기능을 사용하려면 새 형식으로 업데이트해야 합니다.
+>`ece-tools` 2002.1.x 릴리스에는 새로운 [후크 구성](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=ko) 형식이 있습니다. `ece-tools` 2002.0.x 릴리스의 레거시 형식은 계속 지원됩니다. 그러나 시나리오 기반 배포 기능을 사용하려면 새 형식으로 업데이트해야 합니다.
 
 ## 시나리오 단계 검토
 

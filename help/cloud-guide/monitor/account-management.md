@@ -38,7 +38,7 @@ _New Relic_ 설명서에서 [사용자 관리](https://docs.newrelic.com/docs/ac
 
 >[!NOTE]
 >
->**Pro 환경**&#x200B;은(는) New Relic 서비스를 사용하도록 사전 구성되어 있으며 사용 및 연결 지침을 건너뛸 수 있습니다. New Relic APM이 스테이징 및 프로덕션 환경에 설치되지 않았거나 New Relic 인프라를 프로덕션 환경에서 사용할 수 없는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 설치를 요청하십시오.
+>**Pro 환경**&#x200B;은(는) New Relic 서비스를 사용하도록 사전 구성되어 있으며 사용 및 연결 지침을 건너뛸 수 있습니다. New Relic APM이 스테이징 및 프로덕션 환경에 설치되지 않았거나 New Relic 인프라를 프로덕션 환경에서 사용할 수 없는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 설치를 요청하십시오.
 
 Starter 환경의 경우 `.magento.app.yaml` 파일을 확인하여 `runtime` 섹션에 New Relic 확장이 포함되어 있는지 확인해야 합니다. 확장이 구성되지 않은 경우 다음을 추가하십시오.
 
@@ -58,7 +58,7 @@ runtime:
 
 - **시작 프로젝트**&#x200B;의 경우 최대 _3_ 환경을 지원하는 New Relic 라이선스 키가 있습니다. 환경 구성에 키를 수동으로 추가해야 합니다. 스타터 환경은 New Relic 서비스를 사용하도록 사전 프로비저닝되지 않습니다.
 
-스타터 환경의 경우 환경 구성에 New Relic 라이선스 키를 추가하여 New Relic 통합을 활성화합니다. 키를 스테이징 및 프로덕션 환경과 선택한 다른 환경에 추가합니다. 구성에는 New Relic 라이선스 키만 필요합니다. 추가 구성 옵션에 대한 정보는 _New Relic 사용 안내서_&#x200B;의 [Adobe Commerce 보고](https://experienceleague.adobe.com/docs/commerce-admin/config/general/new-relic-reporting.html) 항목에서 찾을 수 있습니다.
+스타터 환경의 경우 환경 구성에 New Relic 라이선스 키를 추가하여 New Relic 통합을 활성화합니다. 키를 스테이징 및 프로덕션 환경과 선택한 다른 환경에 추가합니다. 구성에는 New Relic 라이선스 키만 필요합니다. 추가 구성 옵션에 대한 정보는 _New Relic 사용 안내서_&#x200B;의 [Adobe Commerce 보고](https://experienceleague.adobe.com/docs/commerce-admin/config/general/new-relic-reporting.html?lang=ko) 항목에서 찾을 수 있습니다.
 
 {{redeploy-warning}}
 
@@ -66,7 +66,7 @@ runtime:
 >
 >- Adobe Commerce 계정 페이지 또는 프로젝트와 연결된 New Relic 라이선스의 로그인 자격 증명
 >- 구성할 스타터 환경에 대한 [관리자 수준 액세스](../project/user-access.md)
->- 환경의 [관리자](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html)에 액세스하기 위한 자격 증명
+>- 환경의 [관리자](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html?lang=ko)에 액세스하기 위한 자격 증명
 
 **스타터 환경을 위한 New Relic을 구성하려면**:
 
@@ -99,7 +99,7 @@ runtime:
      magento-cloud variable:update php:newrelic.license --value <newrelic-license-key>
      ```
 
-   선택적으로 [Commerce 관리자](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html#step-3%3A-configure-your-store)에서 추가할 수 있습니다.
+   선택적으로 [Commerce 관리자](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html?lang=ko#step-3%3A-configure-your-store)에서 추가할 수 있습니다.
 
 1. [New Relic 계정](https://login.newrelic.com/login)에 로그인하여 Adobe Commerce 환경에서 데이터를 볼 수 있는지 확인하십시오. [성능 조사](investigate-performance.md)를 참조하십시오.
 

@@ -58,14 +58,14 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 ## 자동 크기 조정 활성화
 
-클라우드 인프라 프로젝트에서 Adobe Commerce 자동 확장을 활성화하거나 비활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하십시오. 티켓에서 다음 이유를 선택하십시오.
+클라우드 인프라 프로젝트에서 Adobe Commerce 자동 확장을 활성화하거나 비활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하십시오. 티켓에서 다음 이유를 선택하십시오.
 
 - **연락처 이유**: 인프라 변경 요청
 - **Adobe Commerce 인프라 연락처 이유**: 기타 인프라 변경 요청
 
 >[!IMPORTANT]
 >
->자동 크기 조정 기능은 예상치 못한 이벤트를 캡처합니다. Adobe 자동 크기 조절을 활성화한 경우에도 예정된 이벤트가 예상되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하는 것이 좋습니다.
+>자동 크기 조정 기능은 예상치 못한 이벤트를 캡처합니다. Adobe 자동 크기 조절을 활성화한 경우에도 예정된 이벤트가 예상되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하는 것이 좋습니다.
 
 ### 로드 테스트
 

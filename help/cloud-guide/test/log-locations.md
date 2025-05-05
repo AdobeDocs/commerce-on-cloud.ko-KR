@@ -78,7 +78,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >Pro 스태이징 및 Pro 프로덕션 환경의 경우, 고정된 파일 이름의 로그 파일에 대해 자동 로그 회전, 압축 및 제거가 활성화됩니다. 각 로그 파일 유형에는 회전 패턴과 수명이 있습니다.
 >환경의 로그 회전 및 압축된 로그 수명에 대한 전체 세부 정보는 `/etc/logrotate.conf` 및 `/etc/logrotate.d/<various>`에서 찾을 수 있습니다.
->Pro 스테이징 및 Pro 프로덕션 환경의 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 로그 순환 구성의 변경을 요청해야 합니다.
+>Pro 스테이징 및 Pro 프로덕션 환경의 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 로그 순환 구성의 변경을 요청해야 합니다.
 
 >[!TIP]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-대부분의 오류 메시지에는 설명 및 제안 작업이 포함되어 있습니다. 추가 지침을 위해 오류 코드를 조회하려면 [ECE-Tools용 오류 메시지 참조](../dev-tools/error-reference.md)를 사용하십시오. 자세한 지침은 [Adobe Commerce 배포 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)를 사용하십시오.
+대부분의 오류 메시지에는 설명 및 제안 작업이 포함되어 있습니다. 추가 지침을 위해 오류 코드를 조회하려면 [ECE-Tools용 오류 메시지 참조](../dev-tools/error-reference.md)를 사용하십시오. 자세한 지침은 [Adobe Commerce 배포 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ko)를 사용하십시오.
 
 ## 애플리케이션 로그
 

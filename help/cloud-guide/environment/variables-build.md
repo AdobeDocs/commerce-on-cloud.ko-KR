@@ -185,7 +185,7 @@ stage:
 - **기본값**—`quick`
 - **버전**—Adobe Commerce 2.2.0 이상
 
-정적 콘텐츠에 대한 [배포 전략](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)을(를) 사용자 지정하십시오. [정적 보기 파일 배포](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)를 참조하세요.
+정적 콘텐츠에 대한 [배포 전략](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ko)을(를) 사용자 지정하십시오. [정적 보기 파일 배포](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ko)를 참조하세요.
 
 로케일이 두 개 이상인 경우 _only_ 옵션을 사용합니다.
 

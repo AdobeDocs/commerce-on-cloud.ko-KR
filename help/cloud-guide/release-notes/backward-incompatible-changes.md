@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ## 클라우드 패치 변경 사항
 
-- **다운로드한 패치 제거**-`magento/magento-cloud-patches` 패키지는 [소프트웨어 다운로드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) 페이지에서 사용할 수 있는 모든 패치를 번들로 제공하고 클라우드에 배포할 때 자동으로 적용합니다. ECE-Tools 2002.1.0 이상으로 업그레이드한 후 패치 충돌을 방지하려면 수동으로 프로젝트에 다운로드하여 추가한 Adobe 제공 패치를 제거합니다.
+- **다운로드한 패치 제거**-`magento/magento-cloud-patches` 패키지는 [소프트웨어 다운로드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=ko) 페이지에서 사용할 수 있는 모든 패치를 번들로 제공하고 클라우드에 배포할 때 자동으로 적용합니다. ECE-Tools 2002.1.0 이상으로 업그레이드한 후 패치 충돌을 방지하려면 수동으로 프로젝트에 다운로드하여 추가한 Adobe 제공 패치를 제거합니다.
 
 - **패치 적용 명령 업데이트**-패치 적용 명령을 `vendor/bin/ece-tools` 디렉터리에서 `vendor/bin/ece-patches` 디렉터리로 이동했습니다. 이 명령을 사용하여 패치를 수동으로 적용하는 경우 새 경로를 사용합니다.
 

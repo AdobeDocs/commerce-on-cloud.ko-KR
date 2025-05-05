@@ -50,7 +50,7 @@ WAF 서비스가 활성화되면 WAF 규칙과 비교하여 모든 웹 및 관�
 
 책임자로부터 이 오류 응답 페이지를 사용자 지정할 수 있습니다. [WAF 응답 페이지 사용자 지정](fastly-custom-response.md#customize-the-waf-error-page)을 참조하세요.
 
-Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
+Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
 
 New Relic을 사용하여 특정 요청에 대한 WAF 응답을 식별하려면 다음을 참조하십시오.
 

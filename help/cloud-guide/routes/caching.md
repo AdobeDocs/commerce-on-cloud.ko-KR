@@ -131,7 +131,7 @@ cache:
 
 쿠키에는 다음과 같은 제한 사항이 있습니다.
 
-- 시스템에 설정된 최대 **50개의 쿠키**&#x200B;가 있습니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Maximum number of cookies would be exceeded` 예외가 발생합니다. 쿠키 수를 200개로 늘리려면 [품질 패치 도구](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool)를 사용하여 [MDVA-12304 패치](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html)를 적용하세요.
+- 시스템에 설정된 최대 **50개의 쿠키**&#x200B;가 있습니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Maximum number of cookies would be exceeded` 예외가 발생합니다. 쿠키 수를 200개로 늘리려면 [품질 패치 도구](https://experienceleague.adobe.com/ko/docs/commerce-learn/tutorials/tools/quality-patch-tool)를 사용하여 [MDVA-12304 패치](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=ko)를 적용하세요.
 - 최대 쿠키 크기는 **4,096바이트**&#x200B;입니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Size of '%name' is %size bytes` 예외가 발생합니다.
 
 ### `default_ttl`
