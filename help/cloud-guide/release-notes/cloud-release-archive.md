@@ -89,7 +89,7 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) 이제 Docker 환경에서 `ece-tools` 패키지를 사용하여 기능 테스트를 수행할 수 있습니다. [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/).<!-- MAGECLOUD-3129/3684 -->를 참조하세요.
 
-   - ![새 아이콘](../../assets/new.svg) `.magento.app.yaml` 파일을 사용하여 PHP 모듈을 구성할 수 있는 지원이 추가되었습니다. `.magento.app.yaml` 파일](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)에 지정된 모든 [PHP 확장을 도커 PHP 컨테이너에서 사용할 수 있습니다.<!-- MAGECLOUD-3357 -->
+   - ![새 아이콘](../../assets/new.svg) `.magento.app.yaml` 파일을 사용하여 PHP 모듈을 구성할 수 있는 지원이 추가되었습니다. `.magento.app.yaml` 파일[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)에 지정된 모든 PHP 확장을 도커 PHP 컨테이너에서 사용할 수 있습니다.<!-- MAGECLOUD-3357 -->
 
    - ![새 아이콘](../../assets/new.svg) 도커 명령줄 환경을 개선하는 데 사용할 수 있는 새 명령이 있습니다. Docker 참조의 [`bin/magento-docker` 섹션을 참조하십시오](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
 

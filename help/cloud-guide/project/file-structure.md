@@ -80,7 +80,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 기본 템플릿용으로 설계된 `.gitignore` 파일을 추가합니다. 예를 들어 버전 2.2.6 템플릿에 `.gitignore` 파일이 필요한 경우 2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) 파일에 대한 [.gignore를 참조로 사용하십시오.
+1. 기본 템플릿용으로 설계된 `.gitignore` 파일을 추가합니다. 예를 들어 버전 2.2.6 템플릿에 `.gitignore` 파일이 필요한 경우 2.2.6[&#128279;](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) 파일에 대한 .gignore를 참조로 사용하십시오.
 
 1. git 캐시를 지웁니다.
 

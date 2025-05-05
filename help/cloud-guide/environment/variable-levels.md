@@ -39,7 +39,7 @@ ht-degree: 0%
 
 **변수를 설정하려면[!DNL Cloud Console]**&#x200B;을(를) 사용합니다.
 
-1. _[!DNL Cloud Console]_에서 프로젝트 탐색 오른쪽의 구성 아이콘을 클릭합니다.
+1. _[!DNL Cloud Console]_&#x200B;에서 프로젝트 탐색 오른쪽의 구성 아이콘을 클릭합니다.
 
    ![프로젝트 구성](../../assets/icon-configure.png){width="36"}
 

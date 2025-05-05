@@ -317,7 +317,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
    이 단계에서는 [!DNL Xdebug]을(를) 트리거하기 위해 브라우저 요청을 보내는 쿠키를 설정합니다.
 
-1. [!DNL Xdebug](으)로 디버깅을 완료합니다.
+1. [!DNL Xdebug] (으)로 디버깅을 완료합니다.
 
 1. 세션을 종료할 준비가 되면 다음 명령을 사용하여 쿠키를 제거하고 브라우저를 통해 디버깅을 종료합니다. 여기서 `KEY`은(는) `xdebug_key`의 값입니다.
 

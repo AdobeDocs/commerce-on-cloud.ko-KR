@@ -37,7 +37,7 @@ Pro에는 두 개의 활성 분기, 전역 `master` 분기, 스테이징 및 프
 
 스테이징 환경은 데이터베이스, 웹 서버 및 Fastly와 New Relic을 포함한 모든 서비스를 포함하는 프로덕션에 가까운 환경을 제공합니다. 터미널 응용 프로그램을 통해 [[!DNL Cloud Console]](../project/overview.md) 또는 [Cloud CLI 명령](../dev-tools/cloud-cli-overview.md)을 통해 완전히 푸시, 병합 및 배포할 수 있습니다.
 
-### [!DNL Cloud Console](으)로 코드 배포
+### [!DNL Cloud Console] (으)로 코드 배포
 
 [!DNL Cloud Console]은(는) 시작 및 Pro 계획을 위한 통합, 스테이징 및 프로덕션 환경에서 코드를 만들고 관리하고 배포하는 기능을 제공합니다.
 

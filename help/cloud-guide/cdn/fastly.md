@@ -51,7 +51,7 @@ Fastly는 클라우드 인프라 프로젝트에서 Adobe Commerce에 대한 콘
 
 ## Magento 2용 Fastly CDN 모듈
 
-클라우드 인프라의 Adobe Commerce용 Fastly 서비스는 Pro Staging 및 Production, Starter Production(`master` 분기)에 설치된 Magento 2]용 [Fastly CDN 모듈을 사용합니다.
+클라우드 인프라의 Adobe Commerce용 Fastly 서비스는 Pro Staging 및 Production, Starter Production(`master` 분기)에 설치된 Magento 2&rbrack;용 &lbrack;Fastly CDN 모듈을 사용합니다.
 
 Adobe Commerce 프로젝트의 초기 프로비저닝 또는 업그레이드 시 Adobe은 스테이징 및 프로덕션 환경에 Fastly CDN 모듈의 최신 버전을 설치합니다. Fastly에서 모듈 업데이트를 릴리스하면 환경에 대한 알림을 관리자의 알림을 받게 됩니다. Adobe은 최신 릴리스를 사용하도록 환경을 업데이트할 것을 권장합니다. [빠르게 업그레이드](fastly-configuration.md#upgrade-the-fastly-module)를 참조하세요.
 

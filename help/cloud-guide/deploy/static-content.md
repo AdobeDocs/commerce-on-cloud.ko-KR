@@ -52,7 +52,7 @@ HTML이 축소된 빌드 단계 동안 정적 콘텐츠를 생성하는 것은 [
 
 1. `.magento.env.yaml` 구성 파일에는 다음 값이 있어야 합니다.
 
-   - HTML [SKIP_MINIFICATION_1}은(는) `true`입니다.](../environment/variables-global.md#skip_html_minification)
+   - HTML [SKIP_MINIFICATION_1&rbrace;은(는) `true`입니다.](../environment/variables-global.md#skip_html_minification)
    - 빌드 단계의 [SKIP_SCD](../environment/variables-build.md#skip_scd)은(는) `false`입니다.
    - [SCD_STRATEGY](../environment/variables-build.md#scd_strategy)은(는) `compact`입니다.
 

@@ -103,7 +103,7 @@ Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필�
 
    >[!NOTE]
    >
-   >Fastly API 토큰을 만들 링크를 선택하지 마십시오. 대신 Adobe에서 제공한 ](#get-fastly-credentials) Adobe에서 제공한 [Fastly 자격 증명(서비스 ID 및 API 토큰)을 사용하십시오.
+   >Fastly API 토큰을 만들 링크를 선택하지 마십시오. 대신 Adobe에서 제공한 [&#128279;](#get-fastly-credentials) Adobe에서 제공한 Fastly 자격 증명(서비스 ID 및 API 토큰)을 사용하십시오.
 
 1. **자격 증명 테스트**&#x200B;를 클릭합니다.
 

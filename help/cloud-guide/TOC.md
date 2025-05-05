@@ -67,7 +67,7 @@ ht-degree: 7%
    + [인증 키](development/authentication-keys.md)
    + [CLI 분기 관리](development/cli-branches.md)
    + [보안 연결](development/secure-connections.md)
-   + {#deploy} 배포
+   + 배포{#deploy}
       + [배포 프로세스](deploy/process.md)
       + [최적화](deploy/optimization.md)
       + [우수 사례](deploy/best-practices.md)
@@ -77,7 +77,7 @@ ht-degree: 7%
       + [스마트 마법사](deploy/smart-wizards.md)
       + [스테이징 및 프로덕션에 배포](deploy/staging-production.md)
       + [구성 요소 장애 복구](deploy/recover-failed-deployment.md)
-   + {#test} 테스트
+   + 테스트{#test}
       + [테스트 지침](test/guidance.md)
       + [로그](test/log-locations.md)
       + [Xdebug](test/debug.md)
@@ -113,7 +113,7 @@ ht-degree: 7%
    + 환경 {#env}
       + [환경 배포 구성](environment/configure-env-yaml.md)
       + [변수 수준 및 옵션](environment/variable-levels.md)
-      + 변수 {#stage} 재정의
+      + 변수 재정의 {#stage}
          + [환경 변수](environment/variables-intro.md)
          + [관리자](environment/variables-admin.md)
          + [클라우드 변수](environment/variables-cloud.md)
@@ -145,7 +145,7 @@ ht-degree: 7%
       + [오류 및 유지 관리 페이지 사용자 지정](cdn/fastly-custom-response.md)
    + [웹 애플리케이션 방화벽](cdn/fastly-waf-service.md)
    + [이미지 최적화](cdn/fastly-image-optimization.md)
-   + VCL {#custom-vcl-snippets}(으)로 사용자 지정
+   + VCL(으)로 사용자 지정 {#custom-vcl-snippets}
       + [시작하기](cdn/fastly-vcl-custom-snippets.md)
       + [CMS 백엔드로 요청 재라우팅](cdn/fastly-vcl-wordpress.md)
       + [참조 스팸 차단](cdn/fastly-vcl-badreferer.md)
@@ -163,11 +163,11 @@ ht-degree: 7%
    + [사이트 맵 및 검색 엔진 로봇](store/robots-sitemap.md)
    + [PayPal 결제 방법](store/paypal.md)
    + [구성 관리](store/store-settings.md)
-+ 사이트 {#launch} 시작
++ 사이트 시작 {#launch}
    + [개요](launch/overview.md)
    + [시작 체크리스트](launch/checklist.md)
    + [시작 단계](launch/steps.md)
-+ 사이트 {#monitor} 모니터링
++ 사이트 모니터링 {#monitor}
    + [성능](monitor/performance.md)
    + New Relic 서비스 {#new-relic}
       + [New Relic 개요](monitor/new-relic-service.md)
