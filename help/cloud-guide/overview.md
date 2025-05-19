@@ -4,7 +4,7 @@ description: 클라우드 인프라에서 Commerce을 구축, 배포 및 관리�
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 source-git-commit: 10818a862fbba14bdfb3de1e6107d745104e4791
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->보안에 대한 자세한 내용은 [보안 시작 검사 목록](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)을 참조하세요.
+>보안에 대한 자세한 내용은 [보안 시작 검사 목록](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)을 참조하세요.
 
 [기술 스택](architecture/tech-stack.md)을 자세히 보거나 [Commerce용 클라우드 아키텍처](architecture/cloud-architecture.md)의 특정 기능 및 지원 제품에 대해 자세히 알아보십시오.
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 Commerce on cloud infrastructure 안내서에서는 사용자가 Adobe Commerce 애플리케이션에 대한 작업 지식과 이해가 있다고 가정합니다. 아래의 [!DNL Commerce] 개발자 및 사용 안내서를 참조하십시오.
 
-- [Adobe Commerce 개발자 설명서](https://developer.adobe.com/commerce/docs/)(Adobe Developer 사이트) - 고급 기능 개발, 사용자 지정, 통합, 확장 및 사용
+- [Adobe Commerce 개발자 설명서](https://developer.adobe.com/commerce/docs/)&#x200B;(Adobe Developer 사이트) - 고급 기능 개발, 사용자 지정, 통합, 확장 및 사용
 
-- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html?lang=ko)(Adobe Experience League) - [!DNL Commerce] 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
+- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html)&#x200B;(Adobe Experience League) - [!DNL Commerce] 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
 
