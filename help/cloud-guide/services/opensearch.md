@@ -2,16 +2,17 @@
 title: OpenSearch 서비스 설정
 description: 클라우드 인프라에서 Adobe Commerce용 OpenSearch 서비스를 활성화하는 방법을 알아봅니다.
 feature: Cloud, Search, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
+source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
 # OpenSearch 서비스 설정
 
-[OpenSearch](https://www.opensearch.org) 서비스는 Elasticsearch에 대한 라이선스 변경 후 Elasticsearch 7.10.2의 오픈 소스 포크입니다. GitHub에서 [OpenSource 프로젝트](https://github.com/opensearch-project)를 참조하십시오.
+[OpenSearch](https://www.opensearch.org) 서비스는 Elasticsearch의 라이선스 변경에 따른 Elasticsearch 7.10.2의 오픈 소스 포크입니다. GitHub에서 [OpenSource 프로젝트](https://github.com/opensearch-project)를 참조하십시오.
 
 {{elasticsearch-support}}
 
@@ -26,11 +27,11 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 >[!TIP]
 >
->Adobe은 Adobe Commerce 애플리케이션에 대한 서드파티 검색 도구를 구성하려는 경우에도 항상 Adobe Commerce on cloud infrastructure 프로젝트에 대해 OpenSearch를 설정할 것을 권장합니다. OpenSearch 설정은 타사 검색 도구가 실패할 경우 대체 옵션을 제공합니다.
+>Adobe은 Adobe Commerce 애플리케이션에 대한 서드파티 검색 도구를 구성할 계획이더라도 항상 Adobe Commerce on cloud infrastructure 프로젝트에 대한 OpenSearch를 설정할 것을 권장합니다. OpenSearch 설정은 타사 검색 도구가 실패할 경우 대체 옵션을 제공합니다.
 
 **OpenSearch를 사용하려면**:
 
-1. Starter 및 Pro 통합 환경의 경우 적절한 버전과 할당된 디스크 공간(MB)을 사용하여 `opensearch` 서비스를 `.magento/services.yaml` 파일에 추가하십시오. 이 경우 버전 2가 적절합니다. 클라우드 인프라에서 최신 버전의 OpenSearch를 사용하기 때문에 부 버전은 필요하지 않습니다.
+1. 통합 환경의 경우 적절한 버전과 할당된 디스크 공간(MB)을 사용하여 `opensearch` 서비스를 `.magento/services.yaml` 파일에 추가하십시오. 이 경우 버전 2가 적절합니다. 부 버전은 필수가 아닙니다.
 
    ```yaml
    opensearch:
@@ -38,7 +39,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
        disk: 1024
    ```
 
-   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
+   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
 
 1. `.magento.app.yaml` 파일에서 `relationships` 속성을 설정하거나 확인하십시오.
 
@@ -91,7 +92,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 - **프로젝트 업그레이드**-새 응용 프로그램 버전의 OpenSearch PHP 클라이언트가 클라우드 인프라에 설치된 OpenSearch 서비스 버전과 호환되는지 확인하십시오.
 
-서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 _설치 가이드_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
+서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 _설치 가이드_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)을 참조하십시오.
 
 **OpenSearch 소프트웨어 호환성을 확인하려면**:
 
