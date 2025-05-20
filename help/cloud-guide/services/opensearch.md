@@ -39,7 +39,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
        disk: 1024
    ```
 
-   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
+   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
 
 1. `.magento.app.yaml` 파일에서 `relationships` 속성을 설정하거나 확인하십시오.
 
@@ -92,7 +92,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 - **프로젝트 업그레이드**-새 응용 프로그램 버전의 OpenSearch PHP 클라이언트가 클라우드 인프라에 설치된 OpenSearch 서비스 버전과 호환되는지 확인하십시오.
 
-서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 _설치 가이드_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)을 참조하십시오.
+서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 _설치 가이드_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
 
 **OpenSearch 소프트웨어 호환성을 확인하려면**:
 
