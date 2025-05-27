@@ -2,7 +2,8 @@
 title: Valkey 서비스 설정
 description: Cloud Infrastructure의 Adobe Commerce에 대한 백엔드 캐시 솔루션인 Valkey를 설정하고 최적화하는 방법에 대해 알아봅니다.
 feature: Cloud, Cache, Services
-source-git-commit: f73c742cbdbf56ac073802074d5a9cd921591f0f
+exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
+source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)은(는) Adobe Commerce에서 기본적으로 사용하는 `Zend Framework Zend_Cache_Backend_File`을(를) 대체하는 선택적 백엔드 캐시 솔루션입니다.
 
-_구성 가이드_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=ko){target="_blank"} 을(를) 참조하십시오.
+_구성 가이드_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"}을(를) 참조하십시오.
 
 {{service-instruction}}
 
@@ -59,7 +60,7 @@ Valkey 관계의 이름이 `valkey`이라고 가정하면 `valkey-cli` 도구를
 1. 호스트에 대한 SSH 터널을 엽니다.
 
    ```bash
-   valkey-cli -h valkeycache.internal
+   valkey-cli -h valkey.internal
    ```
 
 ## 설치된 Valkey 버전 가져오기
@@ -67,7 +68,7 @@ Valkey 관계의 이름이 `valkey`이라고 가정하면 `valkey-cli` 도구를
 다음 명령을 사용하여 통합 환경에 설치된 Valkey 버전을 가져옵니다.
 
 ```bash
-valkey-cli -h valkeycache.internal info | grep version
+valkey-cli -h valkey.internal info | grep version
 ```
 
 응답:
