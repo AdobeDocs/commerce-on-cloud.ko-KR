@@ -2,11 +2,11 @@
 title: ECE-Tools 릴리스 노트
 description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-24T00:00:00Z
+last-substantial-update: 2024-05-27T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: dff5792f310382eb97c9595da08faac90e602126
+source-git-commit: 70664897a10a59668fad74565c04b4ad72474736
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '3166'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.4 {#latest}
+## v2002.2.5 {#latest}
+
+릴리스 날짜: 2025년 5월 27일
+
+- ![수정 아이콘](../../assets/new.svg) **확장된 Valkey 호환성**-Adobe Commerce의 확장된 Valkey 호환성<!-- MCLOUD-13595	 - -->
+- ![수정 아이콘](../../assets/fix.svg) **RabbitMQ 유효성 검사기를 업데이트함**-RabbitMQ에 대한 유효성 검사기를 업데이트함<!-- MCLOUD-13589	 - -->
+- ![수정 아이콘](../../assets/fix.svg) **MariaDB 유효성 검사기를 업데이트함**-MariaDB 10.11에 대한 ece-tools 유효성 검사기를 업데이트함<!-- MCLOUD-13593	 - -->
+- ![수정 아이콘](../../assets/fix.svg) **확장된 Opensearch2 호환성**-만든 Opensearch2가 최신 2.4.4 버전과 호환됩니다.<!-- MCLOUD-13710	 - -->
+
+## v2002.2.4
 
 릴리스 날짜: 2025년 4월 24일
 
