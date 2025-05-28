@@ -1,5 +1,5 @@
 ---
-source-git-commit: 350cfea06f036f0787b330e6e40c5af46a30f5ad
+source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
 workflow-type: tm+mt
 source-wordcount: '2554'
 ht-degree: 4%
@@ -17,12 +17,12 @@ ht-degree: 4%
 
 | 오류 코드 | 빌드 단계 | 오류 설명(제목) | 제안된 작업 |
 | - | - | - | - |
-| 2 |  | `./app/etc/env.php` 파일에 쓸 수 없습니다. | 배포 스크립트는 `/app/etc/env.php` 파일에 필요한 변경 내용을 적용할 수 없습니다. 파일 시스템 권한을 확인합니다. |
+| 2 |  | `./app/etc/env.php` 파일에 쓸 수 없습니다. | 배포 스크립트는 `/app/etc/env.php` 파일에 필요한 변경을 수행할 수 없습니다. 파일 시스템 권한을 확인합니다. |
 | 3 |  | `schema.yaml` 파일에 구성이 정의되지 않았습니다. | `./vendor/magento/ece-tools/config/schema.yaml` 파일에 구성이 정의되지 않았습니다. 구성 변수 이름이 올바르고 정의되어 있는지 확인합니다. |
 | 4 |  | `.magento.env.yaml` 파일을 구문 분석하지 못했습니다 | `./.magento.env.yaml` 파일 형식이 잘못되었습니다. YAML 파서를 사용하여 구문을 확인하고 오류를 수정합니다. |
 | 5 |  | `.magento.env.yaml` 파일을 읽을 수 없습니다. | `./.magento.env.yaml` 파일을 읽을 수 없습니다. 파일 권한을 확인합니다. |
 | 6 |  | `.schema.yaml` 파일을 읽을 수 없습니다. | `./vendor/magento/ece-tools/config/magento.env.yaml` 파일을 읽을 수 없습니다. 파일 권한을 확인하고 다시 배포합니다(`magento-cloud environment:redeploy`). |
-| 7 | 모듈 새로 고침 | `./app/etc/config.php` 파일에 쓸 수 없음 | 배포 스크립트에서 `/app/etc/config.php` 파일을 변경할 수 없습니다. 파일 시스템 권한을 확인합니다. |
+| 7 | 모듈 새로 고침 | `./app/etc/config.php` 파일에 쓸 수 없습니다. | 배포 스크립트는 `/app/etc/config.php` 파일에 필요한 변경을 수행할 수 없습니다. 파일 시스템 권한을 확인합니다. |
 | 8 | validate-config | `composer.json` 파일을 읽을 수 없습니다. | `./composer.json` 파일을 읽을 수 없습니다. 파일 권한을 확인합니다. |
 | 9 | validate-config | `composer.json` 파일에 필수 자동 로드 섹션이 없습니다. | 필수 `autoload` 섹션이 `composer.json` 파일에 없습니다. 자동 로드 섹션을 클라우드 템플릿의 `composer.json` 파일과 비교하고 누락된 구성을 추가합니다. |
 | 10 | validate-config | `.magento.env.yaml` 파일에 스키마에서 선언되지 않은 옵션 또는 잘못된 값 또는 단계로 구성된 옵션이 포함되어 있습니다. | `./.magento.env.yaml` 파일에 잘못된 구성이 있습니다. 자세한 내용은 오류 로그를 확인하십시오. |
@@ -48,13 +48,13 @@ ht-degree: 4%
 | 오류 코드 | 배포 단계 | 오류 설명(제목) | 제안된 작업 |
 | - | - | - | - |
 | 101 | 사전 배포: 캐시 | 잘못된 캐시 구성(포트 또는 호스트 누락) | 캐시 구성에 필수 매개 변수 `server` 또는 `port`이(가) 없습니다. 자세한 내용은 `cloud.log`을(를) 확인하십시오. |
-| 102 |  | `./app/etc/env.php` 파일에 쓸 수 없음 | 배포 스크립트는 `/app/etc/env.php` 파일에 필요한 변경 내용을 적용할 수 없습니다. 파일 시스템 권한을 확인합니다. |
+| 102 |  | `./app/etc/env.php` 파일에 쓸 수 없습니다. | 배포 스크립트는 `/app/etc/env.php` 파일에 필요한 변경을 수행할 수 없습니다. 파일 시스템 권한을 확인합니다. |
 | 103 |  | `schema.yaml` 파일에 구성이 정의되지 않았습니다. | `./vendor/magento/ece-tools/config/schema.yaml` 파일에 구성이 정의되지 않았습니다. 구성 변수 이름이 올바르고 정의되어 있는지 확인합니다. |
 | 104 |  | `.magento.env.yaml` 파일을 구문 분석하지 못했습니다 | `./vendor/magento/ece-tools/config/schema.yaml` 파일에 구성이 정의되지 않았습니다. 구성 변수 이름이 올바르고 정의되어 있는지 확인합니다. |
 | 105 |  | `.magento.env.yaml` 파일을 읽을 수 없습니다. | `./.magento.env.yaml` 파일을 읽을 수 없습니다. 파일 권한을 확인합니다. |
 | 106 |  | `.schema.yaml` 파일을 읽을 수 없습니다. |  |
-| 107 | 사전 배포: clean-redis-cache | Redis 캐시 정리 실패 | Redis 캐시를 정리하지 못했습니다. Redis 캐시 구성이 올바르고 Redis 서비스를 사용할 수 있는지 확인합니다. [Redis 서비스 설정](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/redis)을 참조하세요. |
-| 140 | 사전 배포: clean-valkey-cache | Valkey 캐시를 정리하지 못했습니다. | Valkey 캐시를 정리하지 못했습니다. Valkey 캐시 구성이 올바르고 Valkey 서비스를 사용할 수 있는지 확인하십시오. [Setup Valkey 서비스](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/valkey)를 참조하십시오. |
+| 107 | 사전 배포: clean-redis-cache | Redis 캐시 정리 실패 | Redis 캐시를 정리하지 못했습니다. Redis 캐시 구성이 올바르고 Redis 서비스를 사용할 수 있는지 확인합니다. [Redis 서비스 설정](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html)을 참조하세요. |
+| 140 | 사전 배포: clean-valkey-cache | Valkey 캐시를 정리하지 못했습니다. | Valkey 캐시를 정리하지 못했습니다. Valkey 캐시 구성이 올바르고 Valkey 서비스를 사용할 수 있는지 확인하십시오. [Setup Valkey 서비스](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/valkey.html)를 참조하십시오. |
 | 108 | 사전 배포: set-production-mode | `/bin/magento maintenance:enable` 명령이 실패했습니다. | 자세한 내용은 `cloud.log`을(를) 확인하십시오. 자세한 명령 출력을 보려면 `VERBOSE_COMMANDS: '-vvv'` 옵션을 `.magento.env.yaml` 파일에 추가하십시오. |
 | 109 | validate-config | 잘못된 데이터베이스 구성 | `DATABASE_CONFIGURATION` 환경 변수가 올바르게 구성되어 있는지 확인하십시오. |
 | 110 | validate-config | 잘못된 세션 구성 | `SESSION_CONFIGURATION` 환경 변수가 올바르게 구성되어 있는지 확인하십시오. 구성에는 `save` 매개 변수가 적어도 포함되어야 합니다. |
@@ -78,7 +78,7 @@ ht-degree: 4%
 | 128 | 유지 관리 모드 비활성화 | `/bin/magento maintenance:disable` 명령이 실패했습니다. | 자세한 내용은 `cloud.log`을(를) 확인하십시오. 자세한 명령 출력을 위해 `VERBOSE_COMMANDS: '-vvv'`을(를) `.magento.env.yaml`에 추가하십시오. |
 | 129 | install-update: reset-password | 암호 재설정 템플릿을 읽을 수 없음 |  |
 | 130 | install-update: cache_type | 명령 실패: `php ./bin/magento cache:enable` | `php ./bin/magento cache:enable` 명령은 Adobe Commerce이 설치되어 있지만 배포 시작 시 `./app/etc/env.php` 파일이 없거나 비어 있을 때만 실행됩니다. 자세한 내용은 `cloud.log`을(를) 확인하십시오. 자세한 명령 출력을 위해 `VERBOSE_COMMANDS: '-vvv'`을(를) `.magento.env.yaml`에 추가하십시오. |
-| 131 | install-update | `crypt/key` 키 값이 `./app/etc/env.php` 파일 또는 `CRYPT_KEY` 클라우드 환경 변수에 없습니다. | 이 오류는 Adobe Commerce 배포가 시작될 때 `./app/etc/env.php` 파일이 없거나 `crypt/key` 값이 정의되지 않은 경우 발생합니다. 다른 환경에서 데이터베이스를 마이그레이션한 경우 해당 환경에서 암호화 키 값을 검색합니다. 그런 다음 현재 환경의 [CRYPT_KEY](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#crypt_key) 클라우드 환경 변수에 값을 추가합니다. [Adobe Commerce 암호화 키](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/overview#gather-credentials)를 참조하세요. 실수로 `./app/etc/env.php` 파일을 제거한 경우 다음 명령을 사용하여 이전 배포에서 만든 백업 파일에서 파일을 복원합니다. `./vendor/bin/ece-tools backup:restore` CLI 명령.&quot; |
+| 131 | install-update | `crypt/key` 키 값이 `./app/etc/env.php` 파일 또는 `CRYPT_KEY` 클라우드 환경 변수에 없습니다. | 이 오류는 Adobe Commerce 배포가 시작될 때 `./app/etc/env.php` 파일이 없거나 `crypt/key` 값이 정의되지 않은 경우 발생합니다. 다른 환경에서 데이터베이스를 마이그레이션한 경우 해당 환경에서 암호화 키 값을 검색합니다. 그런 다음 현재 환경의 [CRYPT_KEY](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#crypt_key) 클라우드 환경 변수에 값을 추가합니다. [Adobe Commerce 암호화 키](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html#gather-credentials)를 참조하세요. 실수로 `./app/etc/env.php` 파일을 제거한 경우 다음 명령을 사용하여 이전 배포에서 만든 백업 파일에서 파일을 복원합니다. `./vendor/bin/ece-tools backup:restore` CLI 명령.&quot; |
 | 132 |  | Elasticsearch 서비스에 연결할 수 없음 | 유효한 Elasticsearch 자격 증명을 확인하고 서비스가 실행 중인지 확인하십시오 |
 | 137 |  | OpenSearch 서비스에 연결할 수 없습니다. | 올바른 OpenSearch 자격 증명을 확인하고 서비스가 실행 중인지 확인하십시오. |
 | 133 | validate-config | Adobe Commerce 또는 Magento Open Source 2.4 이상 버전에서 더 이상 지원되지 않는 Magento Braintree 모듈 구성을 제거합니다. | Braintree 모듈에 대한 지원은 더 이상 Adobe Commerce 또는 Magento Open Source 2.4.0 이상에 포함되지 않습니다. `.magento.app.yaml` 파일의 변수 섹션에서 CONFIG__STORES__DEFAULT__PAYMENT_BRAINTREE__CHANNEL 변수를 제거합니다. Braintree 지원의 경우 Commerce Marketplace의 공식 Braintree 결제 확장 프로그램을 대신 사용하십시오. |
@@ -93,7 +93,7 @@ ht-degree: 4%
 | 오류 코드 | 배포 후 단계 | 오류 설명(제목) | 제안된 작업 |
 | - | - | - | - |
 | 201 | is-deploy-failed | 스테이지 배포 실패 |  |
-| 202 |  | `./app/etc/env.php` 파일에 쓸 수 없습니다. | 배포 스크립트는 `/app/etc/env.php` 파일에 필요한 변경 내용을 적용할 수 없습니다. 파일 시스템 권한을 확인합니다. |
+| 202 |  | `./app/etc/env.php` 파일에 쓸 수 없습니다. | 배포 스크립트는 `/app/etc/env.php` 파일에 필요한 변경을 수행할 수 없습니다. 파일 시스템 권한을 확인합니다. |
 | 203 |  | `schema.yaml` 파일에 구성이 정의되지 않았습니다. | `./vendor/magento/ece-tools/config/schema.yaml` 파일에 구성이 정의되지 않았습니다. 구성 변수 이름이 올바르고 정의되어 있는지 확인합니다. |
 | 204 |  | `.magento.env.yaml` 파일을 구문 분석하지 못했습니다 | `./.magento.env.yaml` 파일 형식이 잘못되었습니다. YAML 파서를 사용하여 구문을 확인하고 오류를 수정합니다. |
 | 205 |  | `.magento.env.yaml` 파일을 읽을 수 없습니다. | 파일 권한을 확인합니다. |
@@ -129,7 +129,7 @@ ht-degree: 4%
 | 1004 | validate-config | 구성이 이 버전의 Magento과 호환되지 않습니다. |  |
 | 1005 | validate-config | SCD 옵션이 무시됨 |  |
 | 1006 | validate-config | 구성된 상태가 이상적이지 않음 |  |
-| 1007 | 런발러 | Baler JS 번들링을 사용할 수 없습니다. |  |
+| 1007 | 런발러 | Baler JS 번들링을 사용할 수 없음 |  |
 
 ### 스테이지 배포
 
@@ -151,7 +151,7 @@ ht-degree: 4%
 | 2013 | validate-config | 빌드 단계에서 배포 프로세스가 실행되지 않았으므로 SCD 옵션이 무시되었습니다. |  |
 | 2014 | validate-config | 구성에 더 이상 사용되지 않는 변수 또는 값이 포함되어 있습니다. |  |
 | 2015 | validate-config | 환경 구성이 잘못되었습니다. |  |
-| 2016 | validate-config | JSON 유형 구성을 디코딩할 수 없습니다. |  |
+| 2016 | validate-config | JSON 유형 구성을 디코딩할 수 없음 |  |
 | 2017 | validate-config | 현재 구성은 이 버전의 Adobe Commerce과 호환되지 않습니다 |  |
 | 2018 | validate-config | 일부 서비스가 EOL을 통과했습니다. |  |
 | 2019 | validate-config | MySQL 검색 구성 옵션은 사용되지 않습니다 | 대신 Elasticsearch을 사용하십시오. |
