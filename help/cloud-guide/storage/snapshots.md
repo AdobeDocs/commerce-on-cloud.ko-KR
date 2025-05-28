@@ -83,7 +83,7 @@ ht-degree: 0%
    +---------------------------+----------------------+------------+
    ```
 
-스테이징 및 프로덕션을 포함한 모든 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
+스테이징 및 프로덕션을 포함한 모든 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
 
 ## 수동 백업 복원
 
@@ -139,7 +139,7 @@ ht-degree: 0%
 
 ## 재해 복구 스냅샷 복원
 
-Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## 롤백 코드
 
