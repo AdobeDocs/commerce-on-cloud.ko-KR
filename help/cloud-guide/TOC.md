@@ -3,10 +3,10 @@ user-guide-title: 클라우드의 Commerce 안내서
 user-guide-description: 클라우드 인프라에서 Adobe Commerce 애플리케이션을 관리하는 방법에 대해 알아봅니다.
 product: magento
 feature: Cloud
-source-git-commit: fd7879e8f3c9e1965cf4aa3d99824e577971529d
+source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 7%
+source-wordcount: '359'
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
    + [Pro 워크플로우](architecture/pro-develop-deploy-workflow.md)
    + [확장 아키텍처](architecture/scaled-architecture.md)
    + [자동 크기 조정](architecture/autoscaling.md)
-+ [시작](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=ko)
++ [시작](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + 릴리스 정보 {#release-notes}
    + [클라우드 도구 세트](release-notes/cloud-tools-suite.md)
    + [ECE-Tools 패키지](release-notes/ece-tools-package.md)
@@ -67,7 +67,7 @@ ht-degree: 7%
    + [인증 키](development/authentication-keys.md)
    + [CLI 분기 관리](development/cli-branches.md)
    + [보안 연결](development/secure-connections.md)
-   + 배포{#deploy}
+   + 배포 {#deploy}
       + [배포 프로세스](deploy/process.md)
       + [최적화](deploy/optimization.md)
       + [우수 사례](deploy/best-practices.md)
@@ -77,7 +77,7 @@ ht-degree: 7%
       + [스마트 마법사](deploy/smart-wizards.md)
       + [스테이징 및 프로덕션에 배포](deploy/staging-production.md)
       + [구성 요소 장애 복구](deploy/recover-failed-deployment.md)
-   + 테스트{#test}
+   + 테스트 {#test}
       + [테스트 지침](test/guidance.md)
       + [로그](test/log-locations.md)
       + [Xdebug](test/debug.md)
@@ -87,7 +87,7 @@ ht-degree: 7%
    + [PrivateLink 서비스](development/privatelink-service.md)
    + [보호 블럭](development/protective-block.md)
    + [환경 복원](development/restore-environment.md)
-   + 저장소 {#storage}
+   + 스토리지 {#storage}
       + [디스크 공간 관리](storage/manage-disk-space.md)
       + [프로필 데이터베이스 쿼리](storage/profile-database-queries.md)
       + [데이터베이스 백업](storage/database-dump.md)
@@ -98,7 +98,7 @@ ht-degree: 7%
       + [패치 적용](development/apply-patches.md)
 + 구성 {#configure}
    + [개요](environment/overview.md)
-   + 응용 프로그램 {#app}
+   + 애플리케이션 {#app}
       + [애플리케이션 배포 구성](application/configure-app-yaml.md)
       + [PHP 설정](application/php-settings.md)
       + 속성 {#properties}
@@ -145,7 +145,7 @@ ht-degree: 7%
       + [오류 및 유지 관리 페이지 사용자 지정](cdn/fastly-custom-response.md)
    + [웹 애플리케이션 방화벽](cdn/fastly-waf-service.md)
    + [이미지 최적화](cdn/fastly-image-optimization.md)
-   + VCL(으)로 사용자 지정 {#custom-vcl-snippets}
+   + VCL로 사용자정의 {#custom-vcl-snippets}
       + [시작하기](cdn/fastly-vcl-custom-snippets.md)
       + [CMS 백엔드로 요청 재라우팅](cdn/fastly-vcl-wordpress.md)
       + [참조 스팸 차단](cdn/fastly-vcl-badreferer.md)
@@ -153,7 +153,7 @@ ht-degree: 7%
       + [IP 차단 목록](cdn/fastly-vcl-blocking.md)
       + [Fastly 캐시 우회](cdn/fastly-vcl-bypass-to-origin.md)
    + [Fastly 문제 해결](cdn/fastly-troubleshooting.md)
-+ 저장소 설정 {#configure-store}
++ 스토어 설정 {#configure-store}
    + [개요](store/overview.md)
    + [우수 사례](store/best-practices.md)
    + [사용자 정의 테마](store/custom-theme.md)
@@ -163,12 +163,13 @@ ht-degree: 7%
    + [사이트 맵 및 검색 엔진 로봇](store/robots-sitemap.md)
    + [PayPal 결제 방법](store/paypal.md)
    + [구성 관리](store/store-settings.md)
-+ 사이트 시작 {#launch}
++ 시작 사이트 {#launch}
    + [개요](launch/overview.md)
    + [시작 체크리스트](launch/checklist.md)
    + [시작 단계](launch/steps.md)
 + 사이트 모니터링 {#monitor}
    + [성능](monitor/performance.md)
+   + [운영 원격 분석](monitor/operational-telemetry.md)
    + New Relic 서비스 {#new-relic}
       + [New Relic 개요](monitor/new-relic-service.md)
       + [계정 및 사용자 관리](monitor/account-management.md)
