@@ -3,9 +3,9 @@ title: 캐시 구성 사용자 정의
 description: Fastly 서비스 설정이 완료된 후 캐시 구성 설정을 검토하고 사용자 지정하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
+source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,10 @@ Fastly 서비스 구성은 관리자에 대한 HTTPS 요청에 대한 기본 시
 1. _빠른 구성_ 섹션에서 **고급 구성**&#x200B;을 확장합니다.
 
 1. **관리자 경로 시간 초과** 값을 초 단위로 설정합니다. 이 값은 10분(600초)을 초과할 수 없습니다.
+
+>[!NOTE]
+>
+>**_관리 경로 시간 초과_** 구성 설정은 Fastly WAF 시간 초과와 같은 Adobe Commerce 외부의 시간 초과 값을 제어하지 않습니다. Fastly WAF 시간 초과 값을 조정하려면 Adobe 지원 티켓을 열어 Fastly 서비스에서 업데이트해야 합니다.
 
 1. 페이지 맨 위에서 **구성 저장**&#x200B;을 클릭합니다.
 
@@ -181,7 +185,7 @@ Starter 및 Pro 프로젝트 모두 [!UICONTROL Domains] 옵션을 사용하여 
 
 - 시작 프로젝트의 경우 [!DNL Cloud Console]의 [!UICONTROL Domains] 탭 아래에 있는 프로젝트 URL로 이동하여 프로젝트 URL을 추가하십시오.
 
-- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
+- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
 
 **관리자로부터 Fastly 도메인 구성을 관리하려면**:
 
