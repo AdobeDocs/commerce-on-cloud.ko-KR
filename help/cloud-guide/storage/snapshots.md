@@ -30,7 +30,7 @@ ht-degree: 0%
 >
 >터미널에서 다음 명령을 실행하여 포함/제외할 폴더/경로에 대해 조정하여 Pro 프로덕션 및 스테이징 클러스터에서 직접 코드 백업을 작성할 수 있습니다.
 >
-```bash
+>```bash
 >mkdir -p var/support
 >/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
 >```
