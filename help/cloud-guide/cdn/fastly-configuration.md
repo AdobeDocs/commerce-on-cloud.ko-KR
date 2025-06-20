@@ -3,9 +3,9 @@ title: Fastly 서비스 구성
 description: Adobe Commerce 프로젝트에 대한 Fastly 서비스를 설정하고 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
-source-git-commit: 184f961a39611ea14dc96648b16644742407badc
+source-git-commit: 867abffd6cbed6e026c20b646ff641cc6ab40580
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '2063'
 ht-degree: 0%
 
 ---
@@ -40,13 +40,23 @@ Adobe Commerce 관리자로부터 Fastly CDN 서비스를 구성하고 Fastly AP
 
 클라우드 인프라의 Adobe Commerce을 사용하면 Fastly 관리 대시보드에 직접 액세스할 수 없습니다.
 
-Adobe Commerce 관리자를 사용하여 환경에 대한 Fastly 구성을 검토하고 업데이트해야 합니다. 관리자의 Fastly 기능을 사용하여 문제를 해결할 수 없는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하세요.
+Adobe Commerce 관리자를 사용하여 환경에 대한 Fastly 구성을 검토하고 업데이트해야 합니다. 관리자의 Fastly 기능을 사용하여 문제를 해결할 수 없는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하세요.
 
 ## Fastly 자격 증명 가져오기
 
 다음 메서드를 사용하여 환경에 대한 Fastly 서비스 ID 및 API 토큰을 찾아 저장합니다.
 
 **Fastly 자격 증명을 보려면**:
+
+>[!NOTE]
+>
+>지원 티켓, 공개 포럼 또는 공개 위치에서 API 토큰을 공유하지 마십시오. 또한 API 토큰을 코드 저장소에 커밋하지 마십시오. 저장소에는 중요한 정보 없이 변경할 수 없는 파일만 포함되어야 합니다.
+>
+>Adobe Commerce 지원에는 이미 필요한 키에 대한 액세스 권한이 있으므로 지원을 요청할 때 API 토큰을 제공할 필요가 없습니다.
+>
+>API 토큰이 공개적으로 공유되거나 지원 티켓에 첨부된 경우 손상된 것으로 간주됩니다. 이러한 경우 Adobe에서 새 토큰을 생성해야 합니다.
+>
+>관련: [Fastly 자격 증명을 확인하는 동안 오류가 발생했습니다](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)
 
 자격 증명을 보는 방법은 Pro 및 Starter 프로젝트에서 다릅니다.
 
@@ -138,7 +148,7 @@ Fastly 모듈을 사용하도록 설정한 후 기본 [VCL 코드](https://githu
 
 ## SSL/TLS 인증서 프로비저닝
 
-Adobe은 Fastly에서 보안 HTTPS 트래픽을 제공하기 위해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe은 각 Pro Production, Staging 및 Starter 프로덕션 환경에 대해 하나의 인증서를 제공하여 해당 환경의 모든 도메인을 보호합니다. 제공된 인증서에 대한 자세한 내용은 [클라우드 인프라의 Adobe Commerce용 Adobe SSL(TLS) 인증서](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=ko)를 참조하십시오.
+Adobe은 Fastly에서 보안 HTTPS 트래픽을 제공하기 위해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe은 각 Pro Production, Staging 및 Starter 프로덕션 환경에 대해 하나의 인증서를 제공하여 해당 환경의 모든 도메인을 보호합니다. 제공된 인증서에 대한 자세한 내용은 [클라우드 인프라의 Adobe Commerce용 Adobe SSL(TLS) 인증서](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -242,7 +252,7 @@ Adobe Commerce 환경에 대한 SSL/TLS 인증서를 활성화하기 위해 Adob
 
    >[!NOTE]
    >
-   >Cloud CLI를 사용하는 대신 [관리자](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ko)에서 기본 URL을 업데이트할 수 있습니다
+   >Cloud CLI를 사용하는 대신 [관리자](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html)에서 기본 URL을 업데이트할 수 있습니다
 
 1. 웹 브라우저를 다시 시작합니다.
 
@@ -317,4 +327,4 @@ Fastly는 Magento 2 모듈용 Fastly CDN을 업데이트하여 문제를 해결�
 
 >[!TIP]
 >
-> Adobe Commerce 환경에서 Fastly 서비스에 문제가 있는 경우 [Adobe Commerce Fastly 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=ko)를 참조하세요.
+> Adobe Commerce 환경에서 Fastly 서비스에 문제가 있는 경우 [Adobe Commerce Fastly 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html)를 참조하세요.
