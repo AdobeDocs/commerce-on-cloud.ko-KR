@@ -2,9 +2,10 @@
 title: Fastly 서비스 개요
 description: 클라우드 인프라의 Adobe Commerce에 포함된 Fastly 서비스를 통해 Adobe Commerce 사이트의 컨텐츠 전달 작업을 최적화하고 보호하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 429b6762-0b01-438b-a962-35376306895b
+source-git-commit: 3cef442321120d8ca813c760d2fd0435f4961235
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -43,7 +44,7 @@ Fastly는 클라우드 인프라 프로젝트에서 Adobe Commerce에 대한 콘
 
 - **원본 차단**—트래픽이 Fastly WAF을 우회하지 못하도록 하고 원본 서버의 IP 주소를 숨겨 직접 액세스 및 DDoS 공격으로부터 보호합니다.
 
-  원본 클로킹은 클라우드 인프라 Pro 프로덕션 프로젝트의 Adobe Commerce에서 기본적으로 활성화됩니다. 클라우드 인프라 스타터 프로덕션 프로젝트에서 Adobe Commerce의 원본 클로킹을 사용하려면 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하십시오. 캐싱이 필요하지 않은 트래픽이 있는 경우 Fastly 서비스 구성을 사용자 지정하여 [Fastly 캐시 우회](fastly-vcl-bypass-to-origin.md)를 요청할 수 있습니다.
+  원본 클로킹은 클라우드 인프라 Pro 프로덕션 프로젝트의 Adobe Commerce에서 기본적으로 활성화됩니다. 클라우드 인프라 스타터 프로덕션 프로젝트에서 Adobe Commerce의 원본 클로킹을 사용하려면 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하십시오. 캐싱이 필요하지 않은 트래픽이 있는 경우 Fastly 서비스 구성을 사용자 지정하여 [Fastly 캐시 우회](fastly-vcl-bypass-to-origin.md)를 요청할 수 있습니다.
 
 - **[이미지 최적화](fastly-image-optimization.md)** - 서버가 주문 및 전환을 보다 효율적으로 처리할 수 있도록 이미지 처리 및 크기 조정 로드를 Fastly 서비스로 오프로드합니다.
 
@@ -51,7 +52,7 @@ Fastly는 클라우드 인프라 프로젝트에서 Adobe Commerce에 대한 콘
 
 ## Magento 2용 Fastly CDN 모듈
 
-클라우드 인프라의 Adobe Commerce용 Fastly 서비스는 Pro Staging 및 Production, Starter Production(`master` 분기)에 설치된 Magento 2&rbrack;용 &lbrack;Fastly CDN 모듈을 사용합니다.
+클라우드 인프라의 Adobe Commerce용 Fastly 서비스는 Pro Staging 및 Production, Starter Production(`master` 분기)에 설치된 Magento 2]용 [Fastly CDN 모듈을 사용합니다.
 
 Adobe Commerce 프로젝트의 초기 프로비저닝 또는 업그레이드 시 Adobe은 스테이징 및 프로덕션 환경에 Fastly CDN 모듈의 최신 버전을 설치합니다. Fastly에서 모듈 업데이트를 릴리스하면 환경에 대한 알림을 관리자의 알림을 받게 됩니다. Adobe은 최신 릴리스를 사용하도록 환경을 업데이트할 것을 권장합니다. [빠르게 업그레이드](fastly-configuration.md#upgrade-the-fastly-module)를 참조하세요.
 
@@ -65,11 +66,13 @@ Adobe Commerce 프로젝트의 초기 프로비저닝 또는 업그레이드 시
 
 ### Fastly API 토큰 변경
 
-Fastly API 토큰 자격 증명을 변경하려면 Adobe Commerce 지원 티켓을 제출하십시오. 새 토큰을 받으면 스테이징 또는 프로덕션 환경을 업데이트하여 새 토큰을 사용합니다.
+새 Fastly API 토큰 자격 증명을 발급하려면 Adobe Commerce 지원 티켓을 제출하십시오. [유효성 검사에 실패하거나 만료된 경우](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) 또는 손상된 것으로 판단되는 경우
+
+새 토큰을 받으면 스테이징 또는 프로덕션 환경을 업데이트하여 새 토큰을 사용합니다.
 
 **Fastly API 토큰 자격 증명을 변경하려면**:
 
-1. 새 Fastly API 자격 증명을 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)합니다.
+1. 새 Fastly API 자격 증명을 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)합니다.
 
    새 자격 증명이 필요한 환경 및 클라우드 인프라 프로젝트 ID에 Adobe Commerce을 포함하십시오.
 
@@ -115,18 +118,18 @@ DDOS 보호는 Fastly CDN 서비스에 내장되어 있습니다. Adobe Commerce
 
   캐시 계층에서 TCP 레벨 공격을 빠르게 관리합니다. 이 전략은 클라이언트별로 SYN 플러드 공격과 Fastly 시스템 내의 TCP 스택, 리소스 공격 및 TLS 공격을 포함한 다양한 변형을 처리하는 데 필요한 규모와 컨텍스트를 제공합니다.
 
-- Fastly는 Layer 7 공격으로부터 보호합니다. 스토어에서 성능 문제가 발생하고 Layer 7 DDoS 공격이 의심되는 경우 Adobe Commerce 지원 티켓을 제출하십시오. Adobe은 사용자 정의 규칙을 만들어 Fastly 서비스에 적용하여 헤더, 페이로드 또는 공격 트래픽을 식별하는 속성의 조합을 기반으로 악의적인 요청을 검사하고 필터링할 수 있습니다. *Adobe Commerce 도움말 센터*&#x200B;에서 [DDoS 공격 확인] 및 [악성 트래픽을 차단하는 방법]을 참조하세요.
+- Fastly는 Layer 7 공격으로부터 보호합니다. 스토어에서 성능 문제가 발생하고 Layer 7 DDoS 공격이 의심되는 경우 Adobe Commerce 지원 티켓을 제출하십시오. Adobe은 사용자 지정 규칙을 만들어 Fastly 서비스에 적용하여 공격 트래픽을 식별하는 헤더, 페이로드 또는 속성의 조합을 기반으로 악의적인 요청을 검사하고 필터링할 수 있습니다. *Adobe Commerce 도움말 센터*&#x200B;에서 [DDoS 공격 확인] 및 [악성 트래픽을 차단하는 방법]을 참조하세요.
 
 <!--Link definitions-->
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[DDoS 공격 확인]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=ko
+[DDoS 공격 확인]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
 
 [Magento 2용 Fastly CDN 모듈]: https://github.com/fastly/fastly-magento2
 
 [Fastly 지원 티켓]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[악성 트래픽을 차단하는 방법]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=ko
+[악성 트래픽을 차단하는 방법]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
 
 [도메인 작업]: https://docs.fastly.com/en/guides/working-with-domains
