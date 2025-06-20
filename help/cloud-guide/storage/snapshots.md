@@ -3,9 +3,9 @@ title: 백업 관리
 description: Adobe Commerce on cloud infrastructure 프로젝트에 대한 백업을 수동으로 만들고 복원하는 방법에 대해 알아봅니다.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 3efc5478428c4ede9e2106e1cbef8362c525ccd8
+source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,9 @@ ht-degree: 0%
 ## 수동 백업 만들기
 
 [!DNL Cloud Console]에서 활성 Starter 환경 및 통합 Pro 환경의 수동 백업을 만들거나 Cloud CLI에서 스냅숏을 만들 수 있습니다. 환경에 대한 [관리자 역할](../project/user-access.md)이(가) 있어야 합니다.
+
+**Pro 환경의 데이터베이스 백업을 만들려면**:
+스테이징 및 프로덕션을 포함한 모든 Pro 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
 
 **[!DNL Cloud Console]**&#x200B;을(를) 사용하여 Starter 환경의 백업을 만들려면 다음을 수행하십시오.
 
@@ -83,8 +86,6 @@ ht-degree: 0%
    +---------------------------+----------------------+------------+
    ```
 
-스테이징 및 프로덕션을 포함한 모든 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
-
 ## 수동 백업 복원
 
 환경에 대한 [관리자 액세스 권한](../project/user-access.md)이 있어야 합니다. 수동 백업은 최대 **7일**&#x200B;에서 _복원_&#x200B;할 수 있습니다. 백업을 복원해도 현재 git 분기의 코드는 변경되지 않습니다. 이러한 방식으로 백업을 복원하는 것은 Pro 스테이징 및 프로덕션 환경에는 적용되지 않습니다. [Pro 백업 및 재해 복구](../architecture/pro-architecture.md#backup-and-disaster-recovery)를 참조하십시오.
@@ -139,7 +140,7 @@ ht-degree: 0%
 
 ## 재해 복구 스냅샷 복원
 
-Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## 롤백 코드
 
