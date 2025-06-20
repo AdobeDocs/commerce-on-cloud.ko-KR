@@ -2,9 +2,10 @@
 title: 사용자 지정 VCL 코드 조각 시작
 description: Varnish Control Language 코드 조각을 사용하여 Adobe Commerce에 대한 Fastly 서비스 구성을 맞춤화하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
+source-git-commit: 71fb8f5b3f32553d8b247de44fea29b1bb945584
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2037'
 ht-degree: 0%
 
 ---
@@ -313,6 +314,19 @@ Fastly 서비스에서 `500 Internal Server Error` 응답을 받은 경우 JSON 
   curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_VERSION/snippet/<snippet_name> -X DELETE
   ```
 
-- **기본 Fastly VCL 코드에서 값 재정의[&#128279;](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
+- **기본 Fastly VCL 코드에서 값 재정의](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**[
 
   업데이트된 값으로 코드 조각을 만들고 `100` 우선 순위를 지정하십시오.
+
+## Commerce 관리자에서 보거나 수정할 수 없는 코드 조각
+
+Commerce 관리자 내에서 일부 코드 조각을 직접 보거나 수정할 수 없습니다. 예를 들어 [동적 코드 조각](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets)입니다. 사용자 지정 VCL 코드 조각 섹션에서 클라우드 지원 팀이 [Fastly 관리 대시보드](fastly.md#fastly-service-account-and-credentials)에 직접 추가한 코드 조각은 표시되지 않습니다.
+
+
+**클라우드 지원 팀에서 추가한 코드 조각을 보려면:**
+
+1. **도구** 섹션으로 이동합니다.
+
+1. _버전 기록_ 옆에 있는 **모든 버전 나열**&#x200B;을 클릭합니다.
+
+1. 기존 코드 조각을 보려면 해당 VCL 버전 옆의 눈 모양 아이콘을 클릭합니다.
