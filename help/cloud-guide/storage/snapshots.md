@@ -3,9 +3,9 @@ title: 백업 관리
 description: Adobe Commerce on cloud infrastructure 프로젝트에 대한 백업을 수동으로 만들고 복원하는 방법에 대해 알아봅니다.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
+source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,18 @@ ht-degree: 0%
 
 [!DNL Cloud Console]에서 활성 Starter 환경 및 통합 Pro 환경의 수동 백업을 만들거나 Cloud CLI에서 스냅숏을 만들 수 있습니다. 환경에 대한 [관리자 역할](../project/user-access.md)이(가) 있어야 합니다.
 
+>[!NOTE]
+>
+>터미널에서 다음 명령을 실행하여 포함/제외할 폴더/경로에 대해 조정하여 Pro 프로덕션 및 스테이징 클러스터에서 직접 코드 백업을 작성할 수 있습니다.
+>
+```bash
+>mkdir -p var/support
+>/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
+>```
+
 **Pro 환경의 데이터베이스 백업을 만들려면**:
-스테이징 및 프로덕션을 포함한 모든 Pro 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
+
+스테이징 및 프로덕션을 포함한 모든 Pro 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
 
 **[!DNL Cloud Console]**&#x200B;을(를) 사용하여 Starter 환경의 백업을 만들려면 다음을 수행하십시오.
 
@@ -140,10 +150,15 @@ ht-degree: 0%
 
 ## 재해 복구 스냅샷 복원
 
-Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## 롤백 코드
 
 백업 및 스냅숏에 코드 사본이 포함되어 있지 _않습니다_. 코드가 이미 Git 기반 저장소에 저장되었으므로 Git 기반 명령을 사용하여 코드를 롤백(또는 되돌리기)할 수 있습니다. 예를 들어 `git log --oneline`을(를) 사용하여 이전 커밋을 스크롤한 다음 [`git revert`](https://git-scm.com/docs/git-revert)을(를) 사용하여 특정 커밋에서 코드를 복원합니다.
 
 또한 _비활성_ 분기에 코드를 저장하도록 선택할 수 있습니다. `magento-cloud` 명령을 사용하는 대신 git 명령을 사용하여 분기를 만드십시오. Cloud CLI 항목에서 [Git 명령](../dev-tools/cloud-cli-overview.md#git-commands) 정보를 참조하십시오.
+
+## 관련 정보
+
+- [데이터베이스 백업](database-dump.md)
+- Pro 프로덕션 및 스테이징 클러스터용 [백업 및 재해 복구](../architecture/pro-architecture.md#backup-and-disaster-recovery)
