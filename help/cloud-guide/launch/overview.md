@@ -43,7 +43,7 @@ Adobe Commerce on cloud infrastructure 구독의 일부로 Adobe은 Let&#39;s En
 
 >[!NOTE]
 >
->Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)에 문의하십시오.
+>Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)에 문의하십시오.
 
 ## 보안 검색 도구 설정
 
@@ -69,7 +69,7 @@ Security Scan Tool을 사용하면 스토어 웹 사이트를 정기적으로 �
 >
 >Adobe에서는 조사 결과를 조사하는 동안 최상의 서비스 품질을 보장하기 위해 다른 서드파티 도구보다 보안 검색 도구를 사용하는 것이 좋습니다.
 
-보안 검색 도구 설정 및 사용에 대한 자세한 내용은 [사용 안내서](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)를 참조하세요. 일반적으로 UAT(사용자 승인 테스트)를 시작할 때 이 도구를 사용하기 시작합니다.
+보안 검색 도구 설정 및 사용에 대한 자세한 내용은 [사용 안내서](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/security/security-scan)를 참조하세요. 일반적으로 UAT(사용자 승인 테스트)를 시작할 때 이 도구를 사용하기 시작합니다.
 
 검색하는 각 사이트는 Security Scan 탭을 통해 등록해야 합니다. 등록 프로세스 중에 면책조항에 동의해야 스캔을 시작할 수 있습니다. 각 검사가 완료되면 사용자에게 알림을 수신하도록 예약과 인증을 모두 제어합니다. 특정 반복 날짜 및 시간에 대한 검사를 예약하거나 필요에 따라 요청 시 검사를 실행할 수 있습니다.
 
