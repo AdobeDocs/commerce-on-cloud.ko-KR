@@ -63,7 +63,7 @@ SendGrid가 Pro 프로덕션 또는 스테이징 환경에서 사용자를 대�
 
 >[!TIP]
 >
->**[!UICONTROLS에서 올바른 도메인으로]**&#x200B;저장된 전자 메일 주소&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;을(를) 구성해야 합니다. 도메인 인증은 발신자의 이메일 주소에 대해 수행됩니다. 기본 설정(`example.com`)이 구성된 경우 `example.com`의 전자 메일이 Sendgrid에 의해 차단됩니다.
+>**[!UICONTROL S에서 올바른 도메인으로]**&#x200B;저장된 전자 메일 주소&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;을(를) 구성해야 합니다. 도메인 인증은 발신자의 이메일 주소에 대해 수행됩니다. 기본 설정(`example.com`)이 구성된 경우 `example.com`의 전자 메일이 Sendgrid에 의해 차단됩니다.
 
 **도메인 인증을 사용하려면**:
 
