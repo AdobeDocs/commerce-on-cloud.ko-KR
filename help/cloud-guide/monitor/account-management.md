@@ -3,18 +3,21 @@ title: New Relic 계정 관리
 description: New Relic 계정에 액세스하고 Adobe Commerce on cloud infrastructure 프로젝트에 대한 액세스, 통합 및 도구 사용을 관리하는 방법을 알아봅니다.
 feature: Cloud, Observability
 role: Admin
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 7aeedd12-7a81-47eb-a82f-3079e16ecb06
+source-git-commit: 5b633108f4113b26f6487073c1ccedebb632b111
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 # New Relic 계정 관리
 
-Adobe이 클라우드 인프라 프로젝트를 프로비저닝할 때 라이선스 소유자는 New Relic 계정에서 자격 증명과 New Relic 계정 액세스에 대한 지침이 포함된 이메일을 수신합니다. 이메일을 받지 못한 경우 라이선스 소유자 이메일 주소를 사용하여 New Relic 암호를 재설정합니다.
+Adobe에서 클라우드 인프라 프로젝트를 프로비저닝하면 라이선스 소유자는 New Relic에서 자격 증명과 New Relic 계정 액세스에 대한 지침이 포함된 이메일을 받게 됩니다. 이메일을 받지 못한 경우 라이선스 소유자 이메일 주소를 사용하여 New Relic 암호를 재설정합니다.
 
-## 사용자 액세스 관리
+라이선스 소유자가 변경되었으며 새 라이선스 소유자가 현재 New Relic에 액세스할 수 없는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하십시오.
+
+## 사용자 액세스 관리(관리자 역할)
 
 >[!NOTE]
 >
@@ -32,13 +35,13 @@ Adobe이 클라우드 인프라 프로젝트를 프로비저닝할 때 라이선
 
    - **[!UICONTROL Access management]**: 사용자 그룹, 역할 및 계정을 관리합니다.
 
-_New Relic_ 설명서에서 [사용자 관리](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/user-management-ui-and-tasks/)를 참조하십시오.
+[New Relic](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/user-management-ui-and-tasks/) 설명서에서 _사용자 관리_&#x200B;를 참조하십시오.
 
 ## Starter 환경을 위한 New Relic 구성
 
 >[!NOTE]
 >
->**Pro 환경**&#x200B;은(는) New Relic 서비스를 사용하도록 사전 구성되어 있으며 사용 및 연결 지침을 건너뛸 수 있습니다. New Relic APM이 스테이징 및 프로덕션 환경에 설치되지 않았거나 New Relic 인프라를 프로덕션 환경에서 사용할 수 없는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 설치를 요청하십시오.
+>**Pro 환경**&#x200B;은(는) New Relic 서비스를 사용하도록 사전 구성되어 있으며 사용 및 연결 지침을 건너뛸 수 있습니다. New Relic APM이 스테이징 및 프로덕션 환경에 설치되지 않았거나 New Relic 인프라를 프로덕션 환경에서 사용할 수 없는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 설치를 요청하십시오.
 
 Starter 환경의 경우 `.magento.app.yaml` 파일을 확인하여 `runtime` 섹션에 New Relic 확장이 포함되어 있는지 확인해야 합니다. 확장이 구성되지 않은 경우 다음을 추가하십시오.
 
@@ -58,7 +61,7 @@ runtime:
 
 - **시작 프로젝트**&#x200B;의 경우 최대 _3_ 환경을 지원하는 New Relic 라이선스 키가 있습니다. 환경 구성에 키를 수동으로 추가해야 합니다. 스타터 환경은 New Relic 서비스를 사용하도록 사전 프로비저닝되지 않습니다.
 
-스타터 환경의 경우 환경 구성에 New Relic 라이선스 키를 추가하여 New Relic 통합을 활성화합니다. 키를 스테이징 및 프로덕션 환경과 선택한 다른 환경에 추가합니다. 구성에는 New Relic 라이선스 키만 필요합니다. 추가 구성 옵션에 대한 정보는 _New Relic 사용 안내서_&#x200B;의 [Adobe Commerce 보고](https://experienceleague.adobe.com/docs/commerce-admin/config/general/new-relic-reporting.html?lang=ko) 항목에서 찾을 수 있습니다.
+스타터 환경의 경우 환경 구성에 New Relic 라이선스 키를 추가하여 New Relic 통합을 활성화합니다. 키를 스테이징 및 프로덕션 환경과 선택한 다른 환경에 추가합니다. 구성에는 New Relic 라이선스 키만 필요합니다. 추가 구성 옵션에 대한 정보는 [New Relic 사용 안내서](https://experienceleague.adobe.com/docs/commerce-admin/config/general/new-relic-reporting.html)의 _Adobe Commerce 보고_ 항목에서 찾을 수 있습니다.
 
 {{redeploy-warning}}
 
@@ -66,7 +69,7 @@ runtime:
 >
 >- Adobe Commerce 계정 페이지 또는 프로젝트와 연결된 New Relic 라이선스의 로그인 자격 증명
 >- 구성할 스타터 환경에 대한 [관리자 수준 액세스](../project/user-access.md)
->- 환경의 [관리자](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html?lang=ko)에 액세스하기 위한 자격 증명
+>- 환경의 [관리자](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html)에 액세스하기 위한 자격 증명
 
 **스타터 환경을 위한 New Relic을 구성하려면**:
 
@@ -99,7 +102,7 @@ runtime:
      magento-cloud variable:update php:newrelic.license --value <newrelic-license-key>
      ```
 
-   선택적으로 [Commerce 관리자](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html?lang=ko#step-3%3A-configure-your-store)에서 추가할 수 있습니다.
+   선택적으로 [Commerce 관리자](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html#step-3%3A-configure-your-store)에서 추가할 수 있습니다.
 
 1. [New Relic 계정](https://login.newrelic.com/login)에 로그인하여 Adobe Commerce 환경에서 데이터를 볼 수 있는지 확인하십시오. [성능 조사](investigate-performance.md)를 참조하십시오.
 
