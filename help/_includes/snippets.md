@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020년 6월 5일 이전에 프로비저닝된 프로젝트에는 소규모 통합 환경이 여러 개 있었습니다. 테스트 및 개발을 위해 더 큰 통합 환경이 필요한 경우 향상된 통합 환경으로 업그레이드를 요청하십시오. 자세한 내용은 [Adobe Commerce 도움말 센터](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html)의 _통합 환경 요청_ 문서를 참조하십시오.
+>2020년 6월 5일 이전에 프로비저닝된 프로젝트에는 소규모 통합 환경이 여러 개 있었습니다. 테스트 및 개발을 위해 더 큰 통합 환경이 필요한 경우 향상된 통합 환경으로 업그레이드를 요청하십시오. 자세한 내용은 [Adobe Commerce 도움말 센터](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=ko)의 _통합 환경 요청_ 문서를 참조하십시오.
 
 ## 병합 옵션 {#merge-options}
 
@@ -38,15 +38,15 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->일부 **Pro 프로젝트**&#x200B;에서는 `routes.yaml` 파일의 경로 구성과 `.magento.app.yaml` 파일의 cron 구성을 업데이트하려면 지원 티켓이 필요합니다. Adobe은 통합 환경에서 YAML 구성 파일을 업데이트하고 테스트한 다음 스테이징 환경에 변경 사항을 배포하는 것을 권장합니다. 다시 배포한 후 변경 사항이 스테이징 사이트에 적용되지 않고 로그에 관련 오류 메시지가 없는 경우 시도한 구성 변경 사항을 설명하는 **MUST** [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)합니다. 업데이트된 YAML 구성 파일을 티켓에 포함합니다.
+>일부 **Pro 프로젝트**&#x200B;에서는 `routes.yaml` 파일의 경로 구성과 `.magento.app.yaml` 파일의 cron 구성을 업데이트하려면 지원 티켓이 필요합니다. Adobe은 통합 환경에서 YAML 구성 파일을 업데이트하고 테스트한 다음 스테이징 환경에 변경 사항을 배포하는 것을 권장합니다. 다시 배포한 후 변경 사항이 스테이징 사이트에 적용되지 않고 로그에 관련 오류 메시지가 없는 경우 시도한 구성 변경 사항을 설명하는 **MUST** [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)합니다. 업데이트된 YAML 구성 파일을 티켓에 포함합니다.
 
 ## Pro 서비스 지원 {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- Pro 프로젝트의 경우 [ 및 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 환경에서만 [서비스](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html)를 설치하거나 업데이트하려면 `Staging`Adobe Commerce 지원 티켓을 제출`Production`해야 합니다.
+- Pro 프로젝트의 경우 [ 및 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket) 환경에서만 [서비스](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=ko)를 설치하거나 업데이트하려면 `Staging`Adobe Commerce 지원 티켓을 제출`Production`해야 합니다.
 
-- 필요한 서비스 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 및 `services.yaml` 파일을 포함하고 티켓에 PHP 버전을 명시하십시오. PHP 버전, 확장, 환경 설정에 대한 셀프 서비스 변경 내용은 [응용 프로그램 구성](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html)의 _PHP 설정_&#x200B;을 참조하십시오.
+- 필요한 서비스 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 및 `services.yaml` 파일을 포함하고 티켓에 PHP 버전을 명시하십시오. PHP 버전, 확장, 환경 설정에 대한 셀프 서비스 변경 내용은 [응용 프로그램 구성](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=ko)의 _PHP 설정_&#x200B;을 참조하십시오.
 
 - 라이브 프로덕션 환경(**Pro 전용**)을 변경하려면 최소 48시간 이상 알림이 필요합니다. 이를 통해 클라우드 인프라 팀은 리소스를 마샬링하고 보안 업그레이드를 수행할 수 있는 충분한 시간을 확보할 수 있습니다. 공지 기간은 인프라 팀이 요청을 승인하고 주말을 제외하고 업그레이드 일정을 잡을 때 시작됩니다. 예를 들어 월요일에 서비스 업그레이드를 완료하려면 예약된 업그레이드에 대한 승인을 수요일까지 받아야 합니다. 최대 수요 기간 동안 요청을 처리하는 데 더 많은 시간이 걸릴 수 있습니다.
 
@@ -56,9 +56,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Pro 스테이징 및 프로덕션 환경에서는 티켓의 날짜, 시간 및 시간대를 나타내는 특정 백업을 검색하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
+>Pro 스테이징 및 프로덕션 환경에서는 티켓의 날짜, 시간 및 시간대를 나타내는 특정 백업을 검색하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
 >
->Adobe은 자동 백업에서 환경을 복원하지 **않습니다**. 스테이징 또는 프로덕션 스냅숏을 복원하는 방법을 선택하는 데 도움이 필요하면 [스테이징 또는 프로덕션에서 DB 스냅숏 복원](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html)을 참조하십시오.
+>Adobe은 자동 백업에서 환경을 복원하지 **않습니다**. 스테이징 또는 프로덕션 스냅숏을 복원하는 방법을 선택하는 데 도움이 필요하면 [스테이징 또는 프로덕션에서 DB 스냅숏 복원](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=ko)을 참조하십시오.
 
 ## 재배포 경고 {#redeploy-warning}
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Pro 프로덕션 및 스테이징 환경에서 서비스 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하십시오.
+>Pro 프로덕션 및 스테이징 환경에서 서비스 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하십시오.
 
 ## 서비스 변경 {#service-change-tip}
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->중단 배포에 대한 도움말을 보려면 [Adobe Commerce 도움말 센터](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)에서 _Commerce 배포 문제 해결사_&#x200B;를 사용하십시오.
+>중단 배포에 대한 도움말을 보려면 [Adobe Commerce 도움말 센터](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ko)에서 _Commerce 배포 문제 해결사_&#x200B;를 사용하십시오.
 
 ## ECE-Tools 업데이트 {#ece-tools-package}
 
