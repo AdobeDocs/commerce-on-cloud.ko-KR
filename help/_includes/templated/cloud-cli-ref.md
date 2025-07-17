@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 9166b44ae53e8cfc6b8022730a6b91406ba696c0
 workflow-type: tm+mt
 source-wordcount: '13341'
 ht-degree: 0%
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 #### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 MAGENTO_CLOUD_CLI_NO_INTERACTION=1 사용과 같음
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -59,7 +59,7 @@ ht-degree: 0%
 ## `clear-cache`
 
 ```bash
-magento-cloud magento-cloud cc
+magento-cloud cc
 ```
 
 CLI 캐시 지우기
@@ -72,7 +72,7 @@ CLI 캐시 지우기
 ## `decode`
 
 ```bash
-magento-cloud magento-cloud decode [-P|--property PROPERTY] [--] <value>
+magento-cloud decode [-P|--property PROPERTY] [--] <value>
 ```
 
 Magento_CLOUD_VARIABLES와 같은 인코딩된 문자열 디코딩
@@ -99,7 +99,7 @@ Magento_CLOUD_VARIABLES와 같은 인코딩된 문자열 디코딩
 ## `docs`
 
 ```bash
-magento-cloud magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
+magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 ```
 
 온라인 설명서 열기
@@ -134,7 +134,7 @@ URL을 stdout으로 출력합니다.
 ## `help`
 
 ```bash
-magento-cloud magento-cloud help [--format FORMAT] [--raw] [--] [<command_name>]
+magento-cloud help [--format FORMAT] [--raw] [--] [<command_name>]
 ```
 
 명령에 대한 도움말을 표시합니다.
@@ -181,7 +181,7 @@ To display the list of available commands, please use the list command.
 ## `list`
 
 ```bash
-magento-cloud magento-cloud list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
+magento-cloud list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
 ```
 
 명령 나열
@@ -246,7 +246,7 @@ It's also possible to get raw list of commands (useful for embedding command run
 ## `multi`
 
 ```bash
-magento-cloud magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--reverse] [--] <cmd> (<cmd>)...
+magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--reverse] [--] <cmd> (<cmd>)...
 ```
 
 여러 프로젝트에서 명령 실행
@@ -297,7 +297,7 @@ magento-cloud magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort 
 ## `web`
 
 ```bash
-magento-cloud magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 웹 UI에서 프로젝트 열기
@@ -335,7 +335,7 @@ URL을 stdout으로 출력합니다.
 ## `activity:cancel`
 
 ```bash
-magento-cloud magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 활동 취소
@@ -387,7 +387,7 @@ magento-cloud magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type 
 ## `activity:get`
 
 ```bash
-magento-cloud magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<id>]
+magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<id>]
 ```
 
 단일 활동에 대한 세부 정보 보기
@@ -493,7 +493,7 @@ magento-cloud magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYP
 ## `activity:list`
 
 ```bash
-magento-cloud magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 환경 또는 프로젝트에 대한 활동 목록 가져오기
@@ -600,7 +600,7 @@ magento-cloud magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLU
 ## `activity:log`
 
 ```bash
-magento-cloud magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 활동에 대한 로그 표시
@@ -693,7 +693,7 @@ magento-cloud magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [
 ## `app:config-get`
 
 ```bash
-magento-cloud magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 앱 구성 보기
@@ -743,7 +743,7 @@ magento-cloud magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] 
 ## `app:list`
 
 ```bash
-magento-cloud magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 프로젝트의 앱 나열
@@ -803,10 +803,10 @@ magento-cloud magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e
 ## `auth:api-token-login`
 
 ```bash
-magento-cloud magento-cloud auth:api-token-login
+magento-cloud auth:api-token-login
 ```
 
-API 토큰을 사용하여 Magento 클라우드에 로그인
+API 토큰을 사용하여 Magento Cloud에 로그인
 
 ```
 Use this command to log in to your Magento Cloud account using an API token.
@@ -829,10 +829,10 @@ Alternatively, to log in to the CLI with a browser, run:
 ## `auth:browser-login`
 
 ```bash
-magento-cloud magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
+magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
 ```
 
-브라우저를 통해 Magento 클라우드에 로그인합니다
+브라우저를 통해 Magento Cloud에 로그인합니다
 
 ```
 Use this command to log in to the Magento Cloud CLI using a web browser.
@@ -878,7 +878,7 @@ URL을 stdout으로 출력합니다.
 ## `auth:info`
 
 ```bash
-magento-cloud magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--] [<property>]
+magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--] [<property>]
 ```
 
 계정 정보 표시
@@ -938,7 +938,7 @@ magento-cloud magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY]
 ## `auth:logout`
 
 ```bash
-magento-cloud magento-cloud logout [-a|--all] [--other]
+magento-cloud logout [-a|--all] [--other]
 ```
 
 Magento 클라우드에서 로그아웃
@@ -965,7 +965,7 @@ Magento 클라우드에서 로그아웃
 ## `blackfire:setup`
 
 ```bash
-magento-cloud magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOKEN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
+magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOKEN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 프로젝트에 대한 Blackfire.io 통합 설정
@@ -1010,7 +1010,7 @@ magento-cloud magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_to
 ## `certificate:add`
 
 ```bash
-magento-cloud magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
+magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 프로젝트에 SSL 인증서 추가
@@ -1062,7 +1062,7 @@ magento-cloud magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain C
 ## `certificate:delete`
 
 ```bash
-magento-cloud magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <id>
+magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <id>
 ```
 
 프로젝트에서 인증서 삭제
@@ -1103,7 +1103,7 @@ magento-cloud magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-w
 ## `certificate:get`
 
 ```bash
-magento-cloud magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--] <id>
+magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--] <id>
 ```
 
 인증서 보기
@@ -1143,7 +1143,7 @@ magento-cloud magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt
 ## `certificate:list`
 
 ```bash
-magento-cloud magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [--issuer ISSUER] [--only-auto] [--no-auto] [--ignore-expiry] [--only-expired] [--no-expired] [--pipe-domains] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [--issuer ISSUER] [--only-auto] [--no-auto] [--ignore-expiry] [--only-expired] [--no-expired] [--pipe-domains] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 프로젝트 인증서 나열
@@ -1250,7 +1250,7 @@ magento-cloud magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXC
 ## `commit:get`
 
 ```bash
-magento-cloud magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<commit>]
+magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<commit>]
 ```
 
 커밋 세부 정보 표시
@@ -1296,7 +1296,7 @@ magento-cloud magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PR
 ## `commit:list`
 
 ```bash
-magento-cloud magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<commit>]
+magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<commit>]
 ```
 
 목록 커밋
@@ -1362,7 +1362,7 @@ Git 커밋 SHA를 시작하는 중입니다. 상위 커밋에 대해 &quot;HEAD&
 ## `db:dump`
 
 ```bash
-magento-cloud magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 원격 데이터베이스의 로컬 덤프 만들기
@@ -1471,7 +1471,7 @@ gzip을 사용하여 덤프 압축
 ## `db:size`
 
 ```bash
-magento-cloud magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
 ```
 
 데이터베이스의 디스크 사용량 예측
@@ -1555,7 +1555,7 @@ To see more accurate disk usage, run: magento-cloud disk
 ## `db:sql`
 
 ```bash
-magento-cloud magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
+magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
 ```
 
 원격 데이터베이스에서 SQL 실행
@@ -1617,7 +1617,7 @@ magento-cloud magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT]
 ## `domain:add`
 
 ```bash
-magento-cloud magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATTACH] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATTACH] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 프로젝트에 새 도메인 추가
@@ -1689,7 +1689,7 @@ magento-cloud magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN]
 ## `domain:delete`
 
 ```bash
-magento-cloud magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 프로젝트에서 도메인 삭제
@@ -1736,7 +1736,7 @@ magento-cloud magento-cloud domain:delete [-p|--project PROJECT] [-e|--environme
 ## `domain:get`
 
 ```bash
-magento-cloud magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
+magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
 ```
 
 도메인에 대한 세부 정보 표시
@@ -1801,7 +1801,7 @@ magento-cloud magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT
 ## `domain:list`
 
 ```bash
-magento-cloud magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 모든 도메인 목록 가져오기
@@ -1847,7 +1847,7 @@ magento-cloud magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--
 ## `domain:update`
 
 ```bash
-magento-cloud magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 도메인 업데이트
@@ -1913,7 +1913,7 @@ magento-cloud magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHA
 ## `environment:activate`
 
 ```bash
-magento-cloud magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 환경 활성화
@@ -1967,7 +1967,7 @@ magento-cloud magento-cloud environment:activate [--parent PARENT] [-p|--project
 ## `environment:branch`
 
 ```bash
-magento-cloud magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
+magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
 ```
 
 환경 분기
@@ -2036,7 +2036,7 @@ magento-cloud magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-par
 ## `environment:checkout`
 
 ```bash
-magento-cloud magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
+magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 ```
 
 환경 확인
@@ -2061,7 +2061,7 @@ magento-cloud magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<i
 ## `environment:delete`
 
 ```bash
-magento-cloud magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 하나 이상의 환경 삭제
@@ -2180,7 +2180,7 @@ Git 분기(비활성 환경)를 삭제하지 마십시오
 ## `environment:http-access`
 
 ```bash
-magento-cloud magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 환경에 대한 HTTP 액세스 설정 업데이트
@@ -2239,7 +2239,7 @@ magento-cloud magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enable
 ## `environment:info`
 
 ```bash
-magento-cloud magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
+magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
 ```
 
 환경에 대한 속성 읽기 또는 설정
@@ -2324,7 +2324,7 @@ magento-cloud magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [
 ## `environment:init`
 
 ```bash
-magento-cloud magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <url>
+magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <url>
 ```
 
 공개 Git 저장소에서 환경 초기화
@@ -2377,7 +2377,7 @@ Git 저장소의 URL
 ## `environment:list`
 
 ```bash
-magento-cloud magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 환경 목록 가져오기
@@ -2459,7 +2459,7 @@ magento-cloud magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh 
 ## `environment:logs`
 
 ```bash
-magento-cloud magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<type>]
+magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<type>]
 ```
 
 환경 로그 읽기
@@ -2522,7 +2522,7 @@ magento-cloud magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] 
 ## `environment:merge`
 
 ```bash
-magento-cloud magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
+magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
 ```
 
 환경 병합
@@ -2571,7 +2571,7 @@ This command will initiate a Git merge of the specified environment into its par
 ## `environment:pause`
 
 ```bash
-magento-cloud magento-cloud environment:pause [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud environment:pause [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 환경 일시 중지
@@ -2616,7 +2616,7 @@ The environment will be unavailable until it is resumed. No data will be lost.
 ## `environment:push`
 
 ```bash
-magento-cloud magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
+magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
 ```
 
 환경에 코드 푸시
@@ -2722,7 +2722,7 @@ magento-cloud magento-cloud push [--target TARGET] [-f|--force] [--force-with-le
 ## `environment:redeploy`
 
 ```bash
-magento-cloud magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 환경 재배포
@@ -2761,7 +2761,7 @@ magento-cloud magento-cloud redeploy [-p|--project PROJECT] [-e|--environment EN
 ## `environment:relationships`
 
 ```bash
-magento-cloud magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
+magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
 ```
 
 환경의 관계 표시
@@ -2817,7 +2817,7 @@ magento-cloud magento-cloud relationships [-P|--property PROPERTY] [--refresh] [
 ## `environment:resume`
 
 ```bash
-magento-cloud magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 일시 중지된 환경 다시 시작
@@ -2856,7 +2856,7 @@ magento-cloud magento-cloud environment:resume [-p|--project PROJECT] [-e|--envi
 ## `environment:scp`
 
 ```bash
-magento-cloud magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
+magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
 ```
 
 scp를 사용하여 환경 간에 파일 복사
@@ -2921,7 +2921,7 @@ scp를 사용하여 환경 간에 파일 복사
 ## `environment:ssh`
 
 ```bash
-magento-cloud magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
+magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
 ```
 
 SSH를 현재 환경에
@@ -2993,7 +2993,7 @@ SSH URL만 출력합니다.
 ## `environment:synchronize`
 
 ```bash
-magento-cloud magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<synchronize>]...
+magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<synchronize>]...
 ```
 
 환경의 코드 및/또는 데이터를 해당 상위 항목에서 동기화
@@ -3057,7 +3057,7 @@ parent to the child.
 ## `environment:url`
 
 ```bash
-magento-cloud magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 환경의 공개 URL 가져오기
@@ -3102,7 +3102,7 @@ URL을 stdout으로 출력합니다.
 ## `environment:xdebug`
 
 ```bash
-magento-cloud magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 환경에서 Xdebug에 대한 터널을 엽니다.
@@ -3158,7 +3158,7 @@ magento-cloud magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--en
 ## `integration:activity:get`
 
 ```bash
-magento-cloud magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<integration>] [<activity>]
+magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<integration>] [<activity>]
 ```
 
 단일 통합 활동에 대한 세부 정보 보기
@@ -3228,7 +3228,7 @@ magento-cloud magento-cloud integration:activity:get [-P|--property PROPERTY] [-
 ## `integration:activity:list`
 
 ```bash
-magento-cloud magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 통합을 위한 활동 목록 가져오기
@@ -3334,7 +3334,7 @@ magento-cloud magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYP
 ## `integration:activity:log`
 
 ```bash
-magento-cloud magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<integration>] [<activity>]
+magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<integration>] [<activity>]
 ```
 
 통합 활동에 대한 로그 표시
@@ -3384,7 +3384,7 @@ magento-cloud magento-cloud integration:activity:log [-t|--timestamps] [--date-f
 ## `integration:add`
 
 ```bash
-magento-cloud magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--resources-init RESOURCES-INIT] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait]
+magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--resources-init RESOURCES-INIT] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 프로젝트에 통합 추가
@@ -3702,7 +3702,7 @@ POST 요청에 사용할 HTTP 헤더입니다. 콜론(:)으로 이름과 값을 
 ## `integration:delete`
 
 ```bash
-magento-cloud magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 프로젝트에서 통합 삭제
@@ -3741,7 +3741,7 @@ magento-cloud magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-w
 ## `integration:get`
 
 ```bash
-magento-cloud magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<id>]
+magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<id>]
 ```
 
 통합 세부 정보 보기
@@ -3793,7 +3793,7 @@ magento-cloud magento-cloud integration:get [-P|--property [PROPERTY]] [--format
 ## `integration:list`
 
 ```bash
-magento-cloud magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 프로젝트 통합 목록 보기
@@ -3833,7 +3833,7 @@ magento-cloud magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS
 ## `integration:update`
 
 ```bash
-magento-cloud magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--resources-init RESOURCES-INIT] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--resources-init RESOURCES-INIT] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 통합 업데이트
@@ -4157,7 +4157,7 @@ POST 요청에 사용할 HTTP 헤더입니다. 콜론(:)으로 이름과 값을 
 ## `integration:validate`
 
 ```bash
-magento-cloud magento-cloud integration:validate [-p|--project PROJECT] [--] [<id>]
+magento-cloud integration:validate [-p|--project PROJECT] [--] [<id>]
 ```
 
 기존 통합의 유효성 검사
@@ -4194,7 +4194,7 @@ repository may be deleted.
 ## `local:build`
 
 ```bash
-magento-cloud magento-cloud build [-a|--abslinks] [-s|--source SOURCE] [-d|--destination DESTINATION] [-c|--copy] [--clone] [--run-deploy-hooks] [--no-clean] [--no-archive] [--no-backup] [--no-cache] [--no-build-hooks] [--no-deps] [--working-copy] [--concurrency CONCURRENCY] [--lock] [--] [<app>]...
+magento-cloud build [-a|--abslinks] [-s|--source SOURCE] [-d|--destination DESTINATION] [-c|--copy] [--clone] [--run-deploy-hooks] [--no-clean] [--no-archive] [--no-backup] [--no-cache] [--no-build-hooks] [--no-deps] [--working-copy] [--concurrency CONCURRENCY] [--lock] [--] [<app>]...
 ```
 
 로컬에서 현재 프로젝트 빌드
@@ -4240,7 +4240,7 @@ magento-cloud magento-cloud build [-a|--abslinks] [-s|--source SOURCE] [-d|--des
 
 #### `--clone`
 
-Git을 사용하여 현재 HEAD을 빌드 디렉터리에 복제
+Git을 사용하여 현재 HEAD을 빌드 디렉터리에 복제합니다
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4319,7 +4319,7 @@ Drush: 잠금 파일 만들기 또는 업데이트(Drush 버전 7 이상에서�
 ## `local:dir`
 
 ```bash
-magento-cloud magento-cloud dir [<subdir>]
+magento-cloud dir [<subdir>]
 ```
 
 로컬 프로젝트 루트 찾기
@@ -4338,7 +4338,7 @@ magento-cloud magento-cloud dir [<subdir>]
 ## `metrics:all`
 
 ```bash
-magento-cloud magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 BETA 환경에 대한 CPU, 디스크 및 메모리 지표 표시
@@ -4437,7 +4437,7 @@ BETA 환경에 대한 CPU, 디스크 및 메모리 지표 표시
 ## `metrics:cpu`
 
 ```bash
-magento-cloud magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 BETA 환경의 CPU 사용 표시
@@ -4529,7 +4529,7 @@ BETA 환경의 CPU 사용 표시
 ## `metrics:disk-usage`
 
 ```bash
-magento-cloud magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [--tmp] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [--tmp] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 환경의 디스크 사용량 표시
@@ -4635,7 +4635,7 @@ magento-cloud magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval 
 ## `metrics:memory`
 
 ```bash
-magento-cloud magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 BETA 환경의 메모리 사용량 표시
@@ -4734,7 +4734,7 @@ BETA 환경의 메모리 사용량 표시
 ## `mount:download`
 
 ```bash
-magento-cloud magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 rsync를 사용하여 마운트에서 파일 다운로드
@@ -4837,7 +4837,7 @@ rsync를 사용하여 마운트에서 파일 다운로드
 ## `mount:list`
 
 ```bash
-magento-cloud magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
+magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 마운트 목록 가져오기
@@ -4915,7 +4915,7 @@ magento-cloud magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|-
 ## `mount:size`
 
 ```bash
-magento-cloud magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
+magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 마운트의 디스크 사용량 확인
@@ -5008,7 +5008,7 @@ The filesystem's total size is determined by the disk key in the same file.
 ## `mount:upload`
 
 ```bash
-magento-cloud magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 rsync를 사용하여 마운트에 파일 업로드
@@ -5097,7 +5097,7 @@ rsync를 사용하여 마운트에 파일 업로드
 ## `operation:list`
 
 ```bash
-magento-cloud magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 환경에 대한 Beta 목록 런타임 작업
@@ -5162,7 +5162,7 @@ magento-cloud magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environmen
 ## `operation:run`
 
 ```bash
-magento-cloud magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
+magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
 BETA 환경에서 작업 실행
@@ -5219,7 +5219,7 @@ BETA 환경에서 작업 실행
 ## `project:clear-build-cache`
 
 ```bash
-magento-cloud magento-cloud project:clear-build-cache [-p|--project PROJECT]
+magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ```
 
 프로젝트의 빌드 캐시 지우기
@@ -5238,7 +5238,7 @@ magento-cloud magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ## `project:get`
 
 ```bash
-magento-cloud magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
 ```
 
 로컬로 프로젝트 복제
@@ -5293,7 +5293,7 @@ magento-cloud magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [
 ## `project:info`
 
 ```bash
-magento-cloud magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
+magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
 ```
 
 프로젝트 속성 읽기 또는 설정
@@ -5372,7 +5372,7 @@ magento-cloud magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--fo
 ## `project:list`
 
 ```bash
-magento-cloud magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refresh REFRESH] [--sort SORT] [--reverse] [--page PAGE] [-c|--count COUNT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refresh REFRESH] [--sort SORT] [--reverse] [--page PAGE] [-c|--count COUNT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 모든 활성 프로젝트 목록 가져오기
@@ -5472,7 +5472,7 @@ magento-cloud magento-cloud projects [--pipe] [--region REGION] [--title TITLE] 
 ## `project:set-remote`
 
 ```bash
-magento-cloud magento-cloud set-remote [<project>]
+magento-cloud set-remote [<project>]
 ```
 
 현재 Git 저장소에 대한 원격 프로젝트 설정
@@ -5491,7 +5491,7 @@ magento-cloud magento-cloud set-remote [<project>]
 ## `repo:cat`
 
 ```bash
-magento-cloud magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] <path>
+magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] <path>
 ```
 
 프로젝트 저장소의 파일 읽기
@@ -5530,7 +5530,7 @@ magento-cloud magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT]
 ## `repo:ls`
 
 ```bash
-magento-cloud magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
+magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
 ```
 
 프로젝트 저장소의 파일 나열
@@ -5588,7 +5588,7 @@ magento-cloud magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style
 ## `repo:read`
 
 ```bash
-magento-cloud magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
+magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
 ```
 
 프로젝트 저장소의 디렉터리 또는 파일 읽기
@@ -5625,7 +5625,7 @@ magento-cloud magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e
 ## `route:get`
 
 ```bash
-magento-cloud magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--refresh] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<route>]
+magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--refresh] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<route>]
 ```
 
 경로에 대한 세부 정보 보기
@@ -5701,7 +5701,7 @@ magento-cloud magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PR
 ## `route:list`
 
 ```bash
-magento-cloud magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<environment>]
+magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<environment>]
 ```
 
 환경의 모든 경로 나열
@@ -5760,7 +5760,7 @@ magento-cloud magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns C
 ## `self:install`
 
 ```bash
-magento-cloud magento-cloud self:install [--shell-type SHELL-TYPE]
+magento-cloud self:install [--shell-type SHELL-TYPE]
 ```
 
 CLI 구성 파일 설치 또는 업데이트
@@ -5784,7 +5784,7 @@ adding autocompletion support and handy aliases. Bash and ZSH are supported.
 ## `self:update`
 
 ```bash
-magento-cloud magento-cloud update [--no-major] [--unstable] [--manifest MANIFEST] [--current-version CURRENT-VERSION] [--timeout TIMEOUT]
+magento-cloud update [--no-major] [--unstable] [--manifest MANIFEST] [--current-version CURRENT-VERSION] [--timeout TIMEOUT]
 ```
 
 CLI를 최신 버전으로 업데이트
@@ -5830,7 +5830,7 @@ CLI를 최신 버전으로 업데이트
 ## `service:list`
 
 ```bash
-magento-cloud magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 프로젝트의 서비스 나열
@@ -5890,7 +5890,7 @@ magento-cloud magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT]
 ## `service:mongo:dump`
 
 ```bash
-magento-cloud magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB에서 데이터의 바이너리 아카이브 덤프 만들기
@@ -5953,7 +5953,7 @@ gzip을 사용하여 덤프 압축
 ## `service:mongo:export`
 
 ```bash
-magento-cloud magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB에서 데이터 내보내기
@@ -6022,7 +6022,7 @@ MongoDB에서 데이터 내보내기
 ## `service:mongo:restore`
 
 ```bash
-magento-cloud magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 데이터의 바이너리 아카이브 덤프를 MongoDB로 복원
@@ -6071,7 +6071,7 @@ magento-cloud magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--rela
 ## `service:mongo:shell`
 
 ```bash
-magento-cloud magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB 셸 사용
@@ -6120,7 +6120,7 @@ MongoDB 셸 사용
 ## `service:redis-cli`
 
 ```bash
-magento-cloud magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
+magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
 ```
 
 Redis CLI 액세스
@@ -6169,7 +6169,7 @@ Redis 명령에 추가할 인수
 ## `snapshot:create`
 
 ```bash
-magento-cloud magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
+magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
 ```
 
 환경의 스냅샷 만들기
@@ -6221,7 +6221,7 @@ magento-cloud magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environ
 ## `snapshot:delete`
 
 ```bash
-magento-cloud magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 환경 스냅숏 삭제
@@ -6266,7 +6266,7 @@ magento-cloud magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environ
 ## `snapshot:get`
 
 ```bash
-magento-cloud magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<id>]
+magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<id>]
 ```
 
 환경 스냅숏 보기
@@ -6310,7 +6310,7 @@ magento-cloud magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project 
 ## `snapshot:list`
 
 ```bash
-magento-cloud magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 환경의 사용 가능한 스냅샷 나열
@@ -6363,7 +6363,7 @@ magento-cloud magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [
 ## `snapshot:restore`
 
 ```bash
-magento-cloud magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
+magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
 ```
 
 환경 스냅샷 복원
@@ -6420,7 +6420,7 @@ magento-cloud magento-cloud snapshot:restore [--target TARGET] [--branch-from BR
 ## `source-operation:list`
 
 ```bash
-magento-cloud magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 환경에 대한 소스 작업 나열
@@ -6473,7 +6473,7 @@ magento-cloud magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--env
 ## `source-operation:run`
 
 ```bash
-magento-cloud magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<operation>]
+magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
 소스 작업 실행
@@ -6525,7 +6525,7 @@ magento-cloud magento-cloud source-operation:run [--variable VARIABLE] [-p|--pro
 ## `ssh-cert:load`
 
 ```bash
-magento-cloud magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
+magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
 ```
 
 SSH 인증서 생성
@@ -6577,7 +6577,7 @@ explicitly. For unattended scripts, remember to turn off interaction via
 ## `ssh-key:add`
 
 ```bash
-magento-cloud magento-cloud ssh-key:add [--name NAME] [--] [<path>]
+magento-cloud ssh-key:add [--name NAME] [--] [<path>]
 ```
 
 새 SSH 키 추가
@@ -6612,7 +6612,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 ## `ssh-key:delete`
 
 ```bash
-magento-cloud magento-cloud ssh-key:delete [<id>]
+magento-cloud ssh-key:delete [<id>]
 ```
 
 SSH 키 삭제
@@ -6641,7 +6641,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 ## `ssh-key:list`
 
 ```bash
-magento-cloud magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 계정의 SSH 키 목록 가져오기
@@ -6685,7 +6685,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 ## `subscription:info`
 
 ```bash
-magento-cloud magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<property>] [<value>]
+magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<property>] [<value>]
 ```
 
 구독 속성 읽기 또는 수정
@@ -6749,7 +6749,7 @@ magento-cloud magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT]
 ## `tunnel:close`
 
 ```bash
-magento-cloud magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 SSH 터널 닫기
@@ -6787,7 +6787,7 @@ SSH 터널 닫기
 ## `tunnel:info`
 
 ```bash
-magento-cloud magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 SSH 터널에 대한 관계 정보 보기
@@ -6831,7 +6831,7 @@ base64 인코딩 JSON으로 출력
 ## `tunnel:list`
 
 ```bash
-magento-cloud magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 SSH 터널 나열
@@ -6890,7 +6890,7 @@ SSH 터널 나열
 ## `tunnel:open`
 
 ```bash
-magento-cloud magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 앱 관계에 대한 SSH 터널 열기
@@ -6947,7 +6947,7 @@ extensions.
 ## `tunnel:single`
 
 ```bash
-magento-cloud magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 앱 관계에 대한 단일 SSH 터널 열기
@@ -7003,7 +7003,7 @@ magento-cloud magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p
 ## `user:add`
 
 ```bash
-magento-cloud magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
+magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
 ```
 
 프로젝트에 사용자 추가
@@ -7056,7 +7056,7 @@ magento-cloud magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--pro
 ## `user:delete`
 
 ```bash
-magento-cloud magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <email>
+magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <email>
 ```
 
 프로젝트에서 사용자 삭제
@@ -7097,7 +7097,7 @@ magento-cloud magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [-
 ## `user:get`
 
 ```bash
-magento-cloud magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-r|--role ROLE] [--] [<email>]
+magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-r|--role ROLE] [--] [<email>]
 ```
 
 사용자의 역할 보기
@@ -7161,7 +7161,7 @@ magento-cloud magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project P
 ## `user:list`
 
 ```bash
-magento-cloud magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 프로젝트 사용자 나열
@@ -7201,7 +7201,7 @@ magento-cloud magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no
 ## `user:update`
 
 ```bash
-magento-cloud magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
+magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
 ```
 
 프로젝트에서 사용자 역할 업데이트
@@ -7247,7 +7247,7 @@ magento-cloud magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] 
 ## `variable:create`
 
 ```bash
-magento-cloud magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--prefix PREFIX] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<name>]
+magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--prefix PREFIX] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<name>]
 ```
 
 변수 만들기
@@ -7365,7 +7365,7 @@ magento-cloud magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--
 ## `variable:delete`
 
 ```bash
-magento-cloud magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 변수 삭제
@@ -7418,7 +7418,7 @@ magento-cloud magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PRO
 ## `variable:get`
 
 ```bash
-magento-cloud magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--pipe] [--] [<name>]
+magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--pipe] [--] [<name>]
 ```
 
 변수 보기
@@ -7489,7 +7489,7 @@ magento-cloud magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--
 ## `variable:list`
 
 ```bash
-magento-cloud magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 목록 변수
@@ -7541,7 +7541,7 @@ magento-cloud magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|-
 ## `variable:update`
 
 ```bash
-magento-cloud magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 변수 업데이트
@@ -7648,7 +7648,7 @@ magento-cloud magento-cloud variable:update [--allow-no-change] [-l|--level LEVE
 ## `worker:list`
 
 ```bash
-magento-cloud magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 배포된 모든 작업자 목록 가져오기
