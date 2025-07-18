@@ -3,9 +3,9 @@ title: Valkey 서비스 설정
 description: Cloud Infrastructure의 Adobe Commerce에 대한 백엔드 캐시 솔루션인 Valkey를 설정하고 최적화하는 방법에 대해 알아봅니다.
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
-source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
+source-git-commit: cf2e659267445603b3f5eaf877f4eb7ac0c1b54c
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)은(는) Adobe Commerce에서 기본적으로 사용하는 `Zend Framework Zend_Cache_Backend_File`을(를) 대체하는 선택적 백엔드 캐시 솔루션입니다.
 
-_구성 가이드_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=ko){target="_blank"}을(를) 참조하십시오.
+[구성 가이드](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"}에서 _Valkey 구성_&#x200B;을(를) 참조하십시오.
 
 {{service-instruction}}
 
-**Valkey를 사용하려면**:
+**Redis를 Valkey로 바꾸려면 다음 세 개의 파일에서 구성을 업데이트하세요**:
 
 1. `.magento/services.yaml` 파일에 필요한 이름과 형식을 추가합니다.
 
@@ -27,7 +27,7 @@ _구성 가이드_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.
        type: valkey:<version>
    ```
 
-   고유한 Valkey 구성을 제공하려면 `.magento/services.yaml` 파일에 `core_config` 키를 추가하십시오.
+   고유한 Valkey 구성을 제공하려면 `core_config` 파일에 `.magento/services.yaml` 키를 추가하십시오.
 
    ```yaml
    cache:
@@ -41,10 +41,19 @@ _구성 가이드_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.
        valkey: "cache:valkey"
    ```
 
+1. 다음과 같이 `.magento.env.yaml`을(를) 구성합니다.
+
+   ```yaml
+    stage:
+        deploy:
+        VALKEY_USE_SLAVE_CONNECTION: true
+        VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+   ```
+
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
 
    ```bash
-   git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
+   git add .magento/services.yaml .magento.app.yaml .magento.env.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
    ```
 
 1. [서비스 관계를 확인](services-yaml.md#service-relationships)합니다.
