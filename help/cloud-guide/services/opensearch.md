@@ -3,9 +3,9 @@ title: OpenSearch 서비스 설정
 description: 클라우드 인프라에서 Adobe Commerce용 OpenSearch 서비스를 활성화하는 방법을 알아봅니다.
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
+source-git-commit: 1f965749e59e3c48be2d8e04ac58683234e7b685
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
        disk: 1024
    ```
 
-   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
+   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
 
-1. `.magento.app.yaml` 파일에서 `relationships` 속성을 설정하거나 확인하십시오.
+1. `relationships` 파일에서 `.magento.app.yaml` 속성을 설정하거나 확인하십시오.
 
    ```yaml
    relationships:
@@ -92,7 +92,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 - **프로젝트 업그레이드**-새 응용 프로그램 버전의 OpenSearch PHP 클라이언트가 클라우드 인프라에 설치된 OpenSearch 서비스 버전과 호환되는지 확인하십시오.
 
-서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 _설치 가이드_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
+서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)의 _시스템 요구 사항_&#x200B;을 참조하십시오.
 
 **OpenSearch 소프트웨어 호환성을 확인하려면**:
 
@@ -180,7 +180,12 @@ OpenSearch 서비스를 다시 시작해야 하는 경우에는 Adobe Commerce �
 
 ### OpenSearch에 대한 플러그인 추가
 
-필요한 경우 `.magento/services.yaml` 파일의 OpenSearch 서비스에 `configuration:plugins` 섹션을 추가하여 OpenSearch에 대한 플러그인을 추가할 수 있습니다. 예를 들어 다음 코드는 ICU 분석 및 음성 분석 플러그인을 활성화합니다.
+필요한 경우 `configuration:plugins` 파일의 OpenSearch 서비스에 `.magento/services.yaml` 섹션을 추가하여 OpenSearch에 대한 플러그인을 추가할 수 있습니다. 예를 들어 다음 코드는 ICU 분석 및 음성 분석 플러그인을 활성화합니다.
+
+>[!NOTE]
+>
+>이는 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에 플러그인을 설치하려면 [지원 요청을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하십시오.
+
 
 ```yaml
 opensearch:
@@ -196,9 +201,14 @@ opensearch:
 
 ### OpenSearch에 대한 플러그인 제거
 
-`.magento/services.yaml` 파일의 `opensearch:` 섹션에서 플러그 인 항목을 제거하면 서비스를 제거하거나 사용하지 않도록 설정할 수 **없습니다**. 서비스를 완전히 사용하지 않도록 설정하려면 `.magento/services.yaml` 파일에서 플러그인을 제거한 후 OpenSearch 데이터를 다시 인덱싱해야 합니다. 이 설계는 이러한 플러그인에 의존하는 데이터의 가능한 손실 또는 손상을 방지합니다.
+`opensearch:` 파일의 `.magento/services.yaml` 섹션에서 플러그 인 항목을 제거하면 서비스를 제거하거나 사용하지 않도록 설정할 수 **없습니다**. 서비스를 완전히 사용하지 않도록 설정하려면 `.magento/services.yaml` 파일에서 플러그인을 제거한 후 OpenSearch 데이터를 다시 인덱싱해야 합니다. 이 설계는 이러한 플러그인에 의존하는 데이터의 가능한 손실 또는 손상을 방지합니다.
+
 
 **OpenSearch 플러그인을 제거하려면**:
+
+>[!NOTE]
+>
+>이 변경 사항은 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에서 플러그인을 제거하려면 [지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)해야 합니다.
 
 1. `.magento/services.yaml` 파일에서 OpenSearch 플러그인 항목을 제거합니다.
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
@@ -216,7 +226,7 @@ opensearch:
    ```
 
 1. 클라우드 저장소에 `.magento/services.yaml` 변경 내용을 커밋합니다.
-1. 카탈로그 검색 색인을 다시 색인화합니다.
+1. 카탈로그 검색 색인을 다시 색인화합니다(모든 환경: 통합, 시작, Pro 스테이징 및 프로덕션 클러스터).
 
    ```bash
    bin/magento indexer:reindex catalogsearch_fulltext
