@@ -3,9 +3,9 @@ title: 캐시 구성 사용자 정의
 description: Fastly 서비스 설정이 완료된 후 캐시 구성 설정을 검토하고 사용자 지정하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
+source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1953'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## TLS 강제 실행
 
-Fastly는 암호화되지 않은 요청(HTTP)을 Fastly로 리디렉션하기 위한 _TLS 강제 적용_ 옵션을 제공합니다. 스테이징 또는 프로덕션 환경에 [유효한 SSL/TLS 인증서](fastly-configuration.md#provision-ssltls-certificates)가 제공되면 스토어의 Fastly 구성을 업데이트하여 TLS 강제 적용 옵션을 활성화할 수 있습니다. Magento 2 _설명서의_ Fastly CDN 모듈에서 Fastly [Force TLS 안내서](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)를 참조하십시오.
+Fastly는 암호화되지 않은 요청(HTTP)을 Fastly로 리디렉션하기 위한 _TLS 강제 적용_ 옵션을 제공합니다. 스테이징 또는 프로덕션 환경에 [유효한 SSL/TLS 인증서](fastly-configuration.md#provision-ssltls-certificates)가 제공되면 스토어의 Fastly 구성을 업데이트하여 TLS 강제 적용 옵션을 활성화할 수 있습니다. Magento 2[ 설명서의 ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly CDN 모듈에서 Fastly _Force TLS 안내서_&#x200B;를 참조하십시오.
 
 >[!NOTE]
 >
@@ -52,7 +52,7 @@ Fastly 서비스 구성은 관리자에 대한 HTTPS 요청에 대한 기본 시
 
 1. 페이지 맨 위에서 **구성 저장**&#x200B;을 클릭합니다.
 
-1. 페이지가 다시 로드되면 _Fastly 구성_ 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 선택합니다.
+1. 페이지가 다시 로드되면 **Fastly 구성** 섹션에서 _Fastly에 VCL 업로드_&#x200B;를 선택합니다.
 
 `app/etc/env.php` 구성 파일에서 VCL 파일을 생성하기 위한 관리 경로를 빠르게 검색합니다.
 
@@ -79,7 +79,7 @@ Fastly는 제품 범주, 제품 에셋 및 콘텐츠를 제거하는 옵션을 �
 
 1. 페이지 맨 위에서 **구성 저장**&#x200B;을 클릭합니다.
 
-1. 페이지가 다시 로드되면 _Fastly 구성_ 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 선택합니다.
+1. 페이지가 다시 로드되면 **Fastly 구성** 섹션에서 _Fastly에 VCL 업로드_&#x200B;를 선택합니다.
 
 자세한 내용은 [Fastly 구성 옵션](https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/CONFIGURATION.md#further-configuration-options)을 참조하십시오.
 
@@ -105,7 +105,7 @@ Fastly 모듈에는 방문자를 자동으로 리디렉션하거나 획득한 �
 
 1. 페이지 맨 위에서 **구성 저장**&#x200B;을 클릭합니다.
 
-1. 페이지를 다시 로드한 후 _Fastly 구성_ 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 선택하십시오.
+1. 페이지를 다시 로드한 후 **Fastly 구성** 섹션에서 _Fastly에 VCL 업로드_&#x200B;를 선택하십시오.
 
 >[!NOTE]
 >
@@ -161,13 +161,15 @@ _원본 보호_&#x200B;는 저장소에 대한 모든 요청을 특정 POP(Point
 
 ## 기본 인증
 
-기본 인증은 사이트의 모든 페이지와 자산을 보호하는 기능입니다
-사용자 이름과 암호가 있어야 합니다. **기본 정품 인증을 권장하지 않음**
-프로덕션 환경에서 인증합니다. 스테이징에서 구성할 수 있습니다.
-개발 프로세스 중에 사이트를 보호합니다. Fastly CDN 모듈 설명서의 [기본 인증 안내서](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)를 참조하십시오.
+기본 인증은 사용자 이름과 암호로 사이트의 모든 페이지와 자산을 보호하는 기능입니다.
 
-사용자 액세스를 추가하고 스테이징에서 기본 인증을 활성화해도
-추가 자격 증명 없이도 관리자에 액세스합니다.
+Adobe **프로덕션 환경에서 기본 인증을 활성화하는 것을 권장하지 않습니다**. 스테이징에서 구성 하여 개발 프로세스 중에 사이트를 보호할 수 있습니다. Fastly CDN 모듈 설명서의 [기본 인증 안내서](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)를 참조하십시오.
+
+스테이징에서 사용자 액세스를 추가하고 기본 인증을 활성화해도 추가 자격 증명을 요구하지 않고 관리자에 액세스할 수 있습니다.
+
+>[!NOTE]
+>
+>클라우드 콘솔에서 Fastly가 활성화된 환경(예: 스테이징 또는 라이브 프로덕션 환경이 아닌 환경)을 **확인하지**&#x200B;마십시오[!UICONTROL Enable HTTP access control]. 액세스 제어가 이러한 방식으로 구성된 경우, 이전에 액세스 권한이 있었던 사용자는 액세스가 취소된 후에도 Fastly에서 자격 증명을 캐시한 상태로 유지하는 경우 여전히 사이트에 액세스할 수 있습니다.
 
 ## 사용자 지정 VCL 코드 조각 만들기
 
@@ -183,9 +185,9 @@ Fastly는 사용자 지정된 버전의 VCL(Varnish Configuration Language)을 �
 
 Starter 및 Pro 프로젝트 모두 [!UICONTROL Domains] 옵션을 사용하여 스토어에 대한 Fastly 도메인 구성을 추가하고 관리할 수 있습니다.
 
-- 시작 프로젝트의 경우 [!DNL Cloud Console]의 [!UICONTROL Domains] 탭 아래에 있는 프로젝트 URL로 이동하여 프로젝트 URL을 추가하십시오.
+- 시작 프로젝트의 경우 [!UICONTROL Domains]의 [!DNL Cloud Console] 탭 아래에 있는 프로젝트 URL로 이동하여 프로젝트 URL을 추가하십시오.
 
-- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
+- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
 
 **관리자로부터 Fastly 도메인 구성을 관리하려면**:
 
