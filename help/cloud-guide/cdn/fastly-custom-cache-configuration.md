@@ -187,7 +187,7 @@ Starter 및 Pro 프로젝트 모두 [!UICONTROL Domains] 옵션을 사용하여 
 
 - 시작 프로젝트의 경우 [!UICONTROL Domains]의 [!DNL Cloud Console] 탭 아래에 있는 프로젝트 URL로 이동하여 프로젝트 URL을 추가하십시오.
 
-- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
+- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
 
 **관리자로부터 Fastly 도메인 구성을 관리하려면**:
 
