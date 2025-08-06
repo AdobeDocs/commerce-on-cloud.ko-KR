@@ -3,9 +3,9 @@ title: 디스크 공간 관리
 description: 명령줄 인터페이스를 사용하여 디스크 공간을 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Storage
 exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
-source-git-commit: b8cabaad4b7805858563cecbe5ffc2fdb9aeac58
+source-git-commit: 45d5a54bfd02fe9e61ca92789689dabf634d4bbe
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,8 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->Pro 프로덕션 및 스테이징 환경의 경우 디스크 공간 할당을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다. Pro 프로덕션 및 스테이징 환경의 크기 증가는 특정 간격으로만 이루어질 수 있으므로 현재 디스크 공간 사용량에 따라 디스크 공간 할당을 최소 10GB 늘리는 것이 좋습니다. 할당되면 Pro 스테이징 및 프로덕션에 대한 스토리지 증가는 되돌릴 수 없습니다. 리소스 간에 스토리지를 재할당하거나 재배포할 수 없습니다. 파일 저장 공간을 더 추가하려면 MySQL에 할당된 디스크 공간을 줄이십시오.
+>- Pro 프로덕션 및 스테이징 환경의 경우 디스크 공간 할당을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다. Pro 프로덕션 및 스테이징 환경의 크기 증가는 특정 간격으로만 이루어질 수 있으므로 현재 디스크 공간 사용량에 따라 디스크 공간 할당을 최소 10GB 늘리는 것이 좋습니다. 할당되면 Pro 스테이징 및 프로덕션에 대한 스토리지 증가는 되돌릴 수 없습니다. 리소스 간에 스토리지를 재할당하거나 재배포할 수 없습니다. 파일 저장 공간을 더 추가하려면 MySQL에 할당된 디스크 공간을 줄이십시오.
+>- AWS에서 호스팅되는 Pro 프로덕션 및 스테이징 환경에는 디스크 공간 증가에 적용되는 [필수 6시간 쿨다운](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html)이 있습니다. 마운트에서 디스크 공간이 증가하면 해당 마운트에서 디스크 공간을 다시 늘릴 때까지 6시간을 기다려야 합니다.
 
 ### 응용 프로그램 디스크 공간
 
@@ -188,7 +189,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## 디스크 공간 모니터링
 
-Pro 프로덕션 환경에서는 New Relic에 대한 Adobe Commerce 경고 관리 정책을 사용하여 디스크 공간 및 기타 성능 지표를 모니터링할 수 있습니다. 자세한 내용은 [관리 경고로 성능 모니터링](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)을 참조하십시오. 자세한 지침은 [데이터베이스 성능 문제를 해결하는 모범 사례](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=ko)를 참조하세요.
+Pro 프로덕션 환경에서는 New Relic에 대한 Adobe Commerce 경고 관리 정책을 사용하여 디스크 공간 및 기타 성능 지표를 모니터링할 수 있습니다. 자세한 내용은 [관리 경고로 성능 모니터링](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)을 참조하십시오. 자세한 지침은 [데이터베이스 성능 문제를 해결하는 모범 사례](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html)를 참조하세요.
 
 ## 남은 공간 없음
 
