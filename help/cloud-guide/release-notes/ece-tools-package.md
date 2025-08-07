@@ -2,11 +2,11 @@
 title: ECE-Tools 릴리스 노트
 description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-06-03T00:00:00Z
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '3185'
+source-wordcount: '3269'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`ece-tools` 패키지의 최신 릴리스로 업데이트하는 방법은 [ECE 도구 업그레이드](../dev-tools/update-package.md)를 참조하십시오.
+>[ 패키지의 최신 릴리스로 업데이트하는 방법은 ](../dev-tools/update-package.md)ECE 도구 업그레이드`ece-tools`를 참조하십시오.
 
 `ece-tools` 패키지는 다음 릴리스 버전 관리 시퀀스를 사용합니다. `200<major>.<minor>.<patch>`
 
@@ -28,20 +28,34 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.6 {#latest}
+## v2002.2.7 {#latest}
+
+릴리스 날짜: 2025년 8월 7일
+
+- ![수정 아이콘](../../assets/fix.svg) **PHP 8.4 수정**-형식 호환성 추가<!-- MCLOUD-13965 -->
+- ![수정 아이콘](../../assets/fix.svg) **EOL 유효성 검사기**-EOL(서비스 종료) 날짜가 업데이트되었습니다.<!-- MCLOUD-13929 -->
+- ![새 아이콘](../../assets/new.svg) **Valkey**-PHP 8.2 및 PHP 8.3 기능 테스트를 추가했습니다.<!-- MCLOUD-13610 -->
+- ![수정 아이콘](../../assets/fix.svg) **Valkey 유효성 검사기**-ECE 도구 경고 메시지를 수정했습니다.<!-- MCLOUD-13896 -->
+- ![수정 아이콘](../../assets/fix.svg) **ECE 도구** 추가된 단위 테스트 개선 사항.<!-- MCLOUD-13838 -->
+- ![새 아이콘](../../assets/new.svg) **서비스 유효성 검사기** - Opensearch, MariaDB 및 PHP에 대한 새 버전을 추가했습니다.<!-- MCLOUD-13923 -->
+- ![새 아이콘](../../assets/new.svg) **Opensearch3** - Opensearch3에 대한 지원이 추가되었습니다.<!-- MCLOUD-13763 -->
+- ![수정 아이콘](../../assets/fix.svg) **2.4.4-p7/p12에 대한 Opensearch 지원**-유효성 검사기 스크립트를 업데이트했습니다.<!-- MCLOUD-13945 -->
+- ![새 아이콘](../../assets/new.svg) **Opensearch3 테스트**&#x200B;가 추가된 기능 테스트<!-- MCLOUD-13769 -->
+
+## v2002.2.6
 
 릴리스 날짜: 2025년 6월 3일
 
-- ![수정 아이콘](../../assets/fix.svg) **2.4.8과의 향상된 호환성**-타사 라이브러리를 업데이트하여 2.4.8과의 더 나은 호환성<!-- MCLOUD-13707	 - -->
+- ![수정 아이콘](../../assets/fix.svg) **2.4.8과의 향상된 호환성**-타사 라이브러리를 업데이트하여 2.4.8과의 더 나은 호환성<!-- MCLOUD-13707 -->
 
 ## v2002.2.5
 
 릴리스 날짜: 2025년 5월 27일
 
-- ![새 아이콘](../../assets/new.svg) **확장된 Valkey 호환성**-Adobe Commerce의 확장된 Valkey 호환성<!-- MCLOUD-13595	 - -->
-- ![수정 아이콘](../../assets/fix.svg) **RabbitMQ 유효성 검사기를 업데이트함**-RabbitMQ에 대한 유효성 검사기를 업데이트함<!-- MCLOUD-13589	 - -->
-- ![수정 아이콘](../../assets/fix.svg) **MariaDB 유효성 검사기를 업데이트함**-MariaDB 10.11에 대한 ece-tools 유효성 검사기를 업데이트함<!-- MCLOUD-13593	 - -->
-- ![수정 아이콘](../../assets/fix.svg) **확장된 Opensearch2 호환성**-만든 Opensearch2가 최신 2.4.4 버전과 호환됩니다.<!-- MCLOUD-13710	 - -->
+- ![새 아이콘](../../assets/new.svg) **확장된 Valkey 호환성**-Adobe Commerce의 확장된 Valkey 호환성<!-- MCLOUD-13595 -->
+- ![수정 아이콘](../../assets/fix.svg) **RabbitMQ 유효성 검사기를 업데이트함**-RabbitMQ에 대한 유효성 검사기를 업데이트함<!-- MCLOUD-13589 -->
+- ![수정 아이콘](../../assets/fix.svg) **MariaDB 유효성 검사기를 업데이트함**-MariaDB 10.11에 대한 ece-tools 유효성 검사기를 업데이트함<!-- MCLOUD-13593 -->
+- ![수정 아이콘](../../assets/fix.svg) **확장된 Opensearch2 호환성**-만든 Opensearch2가 최신 2.4.4 버전과 호환됩니다.<!-- MCLOUD-13710 -->
 
 ## v2002.2.4
 
@@ -53,8 +67,8 @@ ht-degree: 0%
 
 릴리스 날짜: 2025년 4월 9일
 
-- ![수정 아이콘](../../assets/fix.svg) **값 키 수정**&#x200B;값 키 사용자 지정 구성에서 발생한 문제를 해결했습니다.<!-- MCLOUD-13569	 - -->
-- ![수정 아이콘](../../assets/fix.svg) **수정 검사기** - RabbitMQ 4.0에 대한 수정 검사기<!-- MCLOUD-13560	 - -->
+- ![수정 아이콘](../../assets/fix.svg) **값 키 수정**&#x200B;값 키 사용자 지정 구성에서 발생한 문제를 해결했습니다.<!-- MCLOUD-13569 -->
+- ![수정 아이콘](../../assets/fix.svg) **수정 검사기** - RabbitMQ 4.0에 대한 수정 검사기<!-- MCLOUD-13560 -->
 
 ## v2002.2.2
 
@@ -64,16 +78,15 @@ ht-degree: 0%
 
 릴리스 날짜: 2025년 4월 7일
 
-- ![새 아이콘](../../assets/new.svg) **Valkey** - Redis를 대체하는 새 서비스(Valkey)에 대한 지원이 추가되었습니다.&lt;!— MCLOUD-13455 —>
-- ![수정 아이콘](../../assets/fix.svg) **2.4.4/2.4.5용 Opensearch2**—Adobe Commerce 버전 2.4.4/2.4.5에서 `opensearch2`에 대한 지원을 추가했습니다. &lt;!— MCLOUD-13493 —>
+- ![새 아이콘](../../assets/new.svg) **Valkey**—Redis를 대체하는 새 서비스(Valkey)에 대한 지원이 추가되었습니다.<!-- MCLOUD-13455 -->
+- ![수정 아이콘](../../assets/fix.svg) **2.4.4/2.4.5용 Opensearch2**—Adobe Commerce 버전 2.4.4/2.4.5에서 `opensearch2`에 대한 지원이 추가되었습니다.<!-- MCLOUD-13493 -->
 
 ## v2002.2.1
 
 릴리스 날짜: 2024년 2월 6일
 
-- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.<!-- MCLOUD-13145     - -->
-- ![수정 아이콘](../../assets/fix.svg) **Opensearch용 유효성 검사기**-잘못된 서비스 버전에 대한 잘못된 메시지를 생성하는 유효성 검사기를 수정했습니다.&lt;!— MCLOUD-13184 —>
-
+- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 지원이 추가되었습니다.<!-- MCLOUD-13145 -->
+- ![수정 아이콘](../../assets/fix.svg) **Opensearch용 유효성 검사기**-잘못된 서비스 버전에 대한 잘못된 메시지를 생성하는 유효성 검사기를 수정했습니다.<!-- MCLOUD-13184 -->
 
 ## v2002.2.0
 
@@ -134,13 +147,13 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 Adobe I/O Events 지원이 추가되었습니다**. 이제 확장 개발자는 [Adobe I/O Events](https://developer.adobe.com/events/docs/) 프레임워크를 사용하여 클라우드 인스턴스에서 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)용으로 작성된 응용 프로그램으로 Commerce 이벤트 정보를 보낼 수 있습니다. Adobe Commerce용 Adobe I/O Events이 파트너 미리 보기에 있습니다.<!-- CEXT-932 -->
 - ![새 아이콘](../../assets/new.svg) **OPcache 구성에 대한 유효성 검사기** - 제외된 경로에 대해 OPcache 구성을 확인하는 유효성 검사기를 추가했습니다.<!-- MCLOUD-9485 -->
-- ![수정 아이콘](../../assets/fix.svg) **GraphQL 캐시 구성 문제를 해결했습니다**—이제 ECE-Tools가 `app/etc/env.php` 파일의 `cache` 구성에서 GraphQL `id_salt` 값을 유지합니다.<!-- MCLOUD-9486 -->
+- ![수정 아이콘](../../assets/fix.svg) **GraphQL 캐시 구성 문제를 해결했습니다**—이제 ECE-Tools가 `id_salt` 파일의 `cache` 구성에서 GraphQL `app/etc/env.php` 값을 유지합니다.<!-- MCLOUD-9486 -->
 
 ## v2002.1.12
 
 릴리스 날짜: 2022년 9월 13일
 
-- ![새 아이콘](../../assets/new.svg) **활성화`synchronous_replication`**—ECE-Tools는 `MYSQL_USE_SLAVE_CONNECTION`이(가) 활성화되면 `app/etc/env.php` 파일에서 `synchronous_replication=>true`을(를) 설정합니다. 이 구성은 Commerce 2.4.6+에만 영향을 줍니다. [변수 배포](../environment/variables-deploy.md#mysql_use_slave_connection).<!-- MCLOUD-9142 -->에서 `MYSQL_USE_SLAVE_CONNECTION` 변수 설명을 참조하십시오.
+- ![새 아이콘](../../assets/new.svg) **활성화`synchronous_replication`**—ECE-Tools는 `synchronous_replication=>true`이(가) 활성화되면 `app/etc/env.php` 파일에서 `MYSQL_USE_SLAVE_CONNECTION`을(를) 설정합니다. 이 구성은 Commerce 2.4.6+에만 영향을 줍니다. `MYSQL_USE_SLAVE_CONNECTION`변수 배포[.](../environment/variables-deploy.md#mysql_use_slave_connection)에서 <!-- MCLOUD-9142 --> 변수 설명을 참조하십시오.
 - ![새 아이콘](../../assets/new.svg) **OpenSearch**—다음 Adobe Commerce 릴리스 2.4.6에 대해 `opensearch` 엔진을 구성하고 설정하는 기능이 추가되었습니다. [OpenSearch 서비스 설정](../services/opensearch.md).<!-- MCLOUD-9236 -->을 참조하십시오.
 
 ## v2002.1.11
@@ -165,10 +178,10 @@ ht-degree: 0%
 - ![새 아이콘](../../assets/new.svg) **PHP**—PHP 8.1에 대한 지원을 추가했습니다.
 - ![수정 아이콘](../../assets/fix.svg) **symfony/process**—symfony/process ^5.3과의 호환성을 추가했습니다.<!-- MCLOUD-8283 -->
 
-- ![새 아이콘](../../assets/new.svg) **소비자 다중 프로세스**—각 소비자에 대해 생성할 프로세스 수를 지정할 수 있도록 `multiple_processes` 옵션을 추가했습니다. [변수 배포](../environment/variables-deploy.md#cron_consumers_runner).<!-- MCLOUD-8295 -->에서 `CRON_CONSUMERS_RUNNER` 변수 설명을 참조하십시오.
+- ![새 아이콘](../../assets/new.svg) **소비자 다중 프로세스**—각 소비자에 대해 생성할 프로세스 수를 지정할 수 있도록 `multiple_processes` 옵션을 추가했습니다. `CRON_CONSUMERS_RUNNER`변수 배포[.](../environment/variables-deploy.md#cron_consumers_runner)에서 <!-- MCLOUD-8295 --> 변수 설명을 참조하십시오.
 - ![새 아이콘](../../assets/new.svg) **OpenSearch 체계 및 전체 호스트 경로** - Elasticsearch 체계 및 전체 호스트 경로를 구성하는 기능이 추가되었습니다.
 - ![수정 아이콘](../../assets/fix.svg) **AWS S3**—AWS S3 사용 방법을 변경했습니다.
-- ![수정 아이콘](../../assets/fix.svg) **드라이버 옵션 수정 판독기**—유효성 검사기에 대해 `ece-tools`이(가) `env.php` 파일에서 DB 연결에 대한 드라이버 옵션 읽기 구성을 추가했습니다.<!-- MCLOUD-8420 -->
+- ![수정 아이콘](../../assets/fix.svg) **드라이버 옵션 수정 판독기**—유효성 검사기에 대해 `env.php`이(가) `ece-tools` 파일에서 DB 연결에 대한 드라이버 옵션 읽기 구성을 추가했습니다.<!-- MCLOUD-8420 -->
 
 ## v2002.1.8
 
@@ -187,7 +200,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) 작성기 2.0에 대한 지원이 추가되었습니다.<!--MCLOUD-8003-->
 
-- ![수정 아이콘](../../assets/fix.svg) **`symphony/console`**&#x200B;에 대한 작성기 요구 사항 업데이트됨—다음 오류로 인해 `di:compile` 명령이 실패하는 문제를 해결하기 위해 `symphony/console` 패키지에 대한 ECE-Tools `composer.json` 버전 요구 사항을 업데이트했습니다. `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
+- ![수정 아이콘](../../assets/fix.svg) **`symphony/console`**&#x200B;에 대한 작성기 요구 사항 업데이트됨—다음 오류로 인해 `composer.json` 명령이 실패하는 문제를 해결하기 위해 `symphony/console` 패키지에 대한 ECE-Tools `di:compile` 버전 요구 사항을 업데이트했습니다. `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
 - ![수정 아이콘](../../assets/fix.svg) Elasticsearch 7.9.x를 포함하도록 수명 종료 소프트웨어 검사(`eol.yaml`)를 업데이트했습니다.<!--MCLOUD-7938-->
 
@@ -215,7 +228,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **원격 저장소**—AWS S3와 같은 저장소 서비스를 사용하여 미디어 파일의 원격 저장을 위해 Cloud Projects를 사용하도록 설정하는 `REMOTE_STORAGE` 환경 변수를 추가했습니다. 이 구성 옵션은 ECE-Tools 패키지의 일부이지만 클라우드 인프라의 Adobe Commerce에서는 지원되지 않습니다.<!--MCLOUD-7153-->
 
-- ![새 아이콘](../../assets/new.svg) **새 `cloud:config:validate` 명령**—변경 내용을 원격 클라우드 환경에 적용하기 전에 `.magento.env.yaml` 구성의 유효성을 검사하기 위해 명령 `php vendor/bin/ece-tools cloud:config:validate`을(를) 추가했습니다.<!--MCLOUD-7120-->
+- ![새 아이콘](../../assets/new.svg) **새 `cloud:config:validate` 명령**—변경 내용을 원격 클라우드 환경에 적용하기 전에 `php vendor/bin/ece-tools cloud:config:validate` 구성의 유효성을 검사하기 위해 명령 `.magento.env.yaml`을(를) 추가했습니다.<!--MCLOUD-7120-->
 
 - ![새 아이콘](../../assets/new.svg) **opcache 초기화**—배포 후크를 실행하기 전에 OPcache를 플러시하는 `opcache.enable_cli` PHP 옵션에 대한 지원을 추가했습니다. 이 구성은 각 배포에 현재 구성 설정이 적용되도록 캐시 구성을 재설정합니다.<!--MCLOUD-7015-->
 
@@ -223,15 +236,15 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **새 SCD_NO_PARENT 환경 변수**—상위 테마에 대한 정적 콘텐츠 생성을 관리하기 위해 `SCD_NO_PARENT` 환경 변수(Adobe Commerce >=2.4.2용)를 추가했습니다.<!--MCLOUD-7284-->
 
-- ![수정 아이콘](../../assets/fix.svg) **메모리 제한 및 명령**—`cloud.log` 파일의 크기가 PHP memory_limit를 초과할 경우 `php vendor/bin/ece-tools` 명령이 작동하지 않는 문제가 해결되었습니다. 이제 전체 `cloud.log` 파일을 메모리로 읽는 대신 로그 파일에서 더 작은 데이터 하위 집합만 읽습니다.<!--MCLOUD-7275--><!--MCLOUD-7400-->
+- ![수정 아이콘](../../assets/fix.svg) **메모리 제한 및 명령**—`php vendor/bin/ece-tools` 파일의 크기가 PHP memory_limit를 초과할 경우 `cloud.log` 명령이 작동하지 않는 문제가 해결되었습니다. 이제 전체 `cloud.log` 파일을 메모리로 읽는 대신 로그 파일에서 더 작은 데이터 하위 집합만 읽습니다.<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
-- ![수정 아이콘](../../assets/fix.svg) **사용자 지정 데이터베이스 연결**—`DATABASE_CONFIGURATION`에 대해 정의된 사용자 지정 데이터베이스 연결이 사용되지 않는 `.magento.env.yaml` 구성 문제를 해결했습니다. 연결 설정을 `app/etc/env.php`에 추가하지 않았습니다.<!--MCLOUD-7426-->
+- ![수정 아이콘](../../assets/fix.svg) **사용자 지정 데이터베이스 연결**—`.magento.env.yaml`에 대해 정의된 사용자 지정 데이터베이스 연결이 사용되지 않는 `DATABASE_CONFIGURATION` 구성 문제를 해결했습니다. 연결 설정을 `app/etc/env.php`에 추가하지 않았습니다.<!--MCLOUD-7426-->
 
 - ![수정 아이콘](../../assets/fix.svg) **빈 오류 로그**—`cloud.error.log`이(가) 비어 있는 경우 배포가 실패하는 문제를 해결했습니다.<!--MCLOUD-7296-->
 
 - ![수정 아이콘](../../assets/fix.svg) **MariaDB 10.3 유효성 검사**—Adobe Commerce 2.3.6-p1에 대한 MariaDB 10.3 유효성 검사가 수정되었습니다.<!--MCLOUD-7416-->
 
-- ![수정 아이콘](../../assets/fix.svg) **캐시:플러시 로깅**—`cache:flush` 단계의 시작 및 완료를 나타내는 로그 항목이 개선되었습니다.<!--MCLOUD-7503-->
+- ![수정 아이콘](../../assets/fix.svg) **캐시:flush 로깅** - `cache:flush` 단계의 시작 및 완료를 나타내는 로그 항목이 개선되었습니다.<!--MCLOUD-7503-->
 
 ## v2002.1.4
 
@@ -259,7 +272,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) Adobe Commerce Elasticsearch 모듈과 호환되는 Elasticsearch 버전을 표시하도록 Elasticsearch 호환성 오류 메시지를 업데이트했습니다. 이제 오류 메시지는 Adobe Commerce 버전에서 사용하는 Elasticsearch 모듈과 호환되도록 클라우드 인프라에 설치할 특정 Elasticsearch 버전을 제공합니다. [경고 오류, 단계 배포](../dev-tools/error-reference.md#deploy-stage-1)를 참조하십시오.<!--MCLOUD-6698-->
 
-- ![새 아이콘](../../assets/new.svg)에 잘못된 `MAGE_MODE` 환경 변수 설정에 대한 경고 오류 `2026` 및 `2027`이(가) 추가되었습니다. 올바른 값은 `production`뿐입니다. 이 수정 전에 배포 오류 없이 `MAGE_MODE`을(를) `developer`(으)로 설정할 수 있습니다. 나중에 읽기 전용 파일에 쓰려고 할 때 오류가 발생합니다. [경고 오류](../dev-tools/error-reference.md#warning-errors).<!--MCLOUD-6708-->를 참조하십시오.
+- ![새 아이콘](../../assets/new.svg)에 잘못된 `2026` 환경 변수 설정에 대한 경고 오류 `2027` 및 `MAGE_MODE`이(가) 추가되었습니다. 올바른 값은 `production`뿐입니다. 이 수정 전에 배포 오류 없이 `MAGE_MODE`을(를) `developer`(으)로 설정할 수 있습니다. 나중에 읽기 전용 파일에 쓰려고 할 때 오류가 발생합니다. [경고 오류](../dev-tools/error-reference.md#warning-errors).<!--MCLOUD-6708-->를 참조하십시오.
 
 - ![수정 아이콘](../../assets/fix.svg) 이러한 버전이 Adobe Commerce 버전과 호환되는지 확인하기 위해 Redis, RabbitMQ 및 MySQL 서비스에 대한 유효성 검사를 수정했습니다. 이러한 서비스의 올바른 버전이 이제 `cloud.log`.<!--MCLOUD-7098-->에 작성되었습니다.
 
@@ -267,7 +280,7 @@ ht-degree: 0%
 
 **CLI 명령 업데이트**—
 
-- ![새 아이콘](../../assets/new.svg) 하나 이상의 빌드, 배포 및 배포 후 변수를 포함할 수 있는 구성으로 `.magento.env.yaml` 파일을 만들고 업데이트하는 CLI 명령(`cloud:config:create` 및 `cloud:config:update`)을 추가했습니다. [CLI에서 구성 파일 만들기](../environment/configure-env-yaml.md#create-configuration-file-from-cli)를 참조하십시오.<!--MCLOUD-7072-->
+- ![새 아이콘](../../assets/new.svg) 하나 이상의 빌드, 배포 및 배포 후 변수를 포함할 수 있는 구성으로 `cloud:config:create` 파일을 만들고 업데이트하는 CLI 명령(`cloud:config:update` 및 `.magento.env.yaml`)을 추가했습니다. [CLI에서 구성 파일 만들기](../environment/configure-env-yaml.md#create-configuration-file-from-cli)를 참조하십시오.<!--MCLOUD-7072-->
 
 **환경 변수 업데이트**—
 
@@ -327,7 +340,7 @@ ht-degree: 0%
       - `app:config:import`
       - `module:enable`
 
-     각 호출의 로깅 수준은 `.magento.env.yaml` 파일의 [`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands) 변수 구성에 의해 결정됩니다.<!--MCLOUD-3503-->
+     각 호출의 로깅 수준은 [`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands) 파일의 `.magento.env.yaml` 변수 구성에 의해 결정됩니다.<!--MCLOUD-3503-->
 
 - ![새 아이콘](../../assets/new.svg) **유효성 검사 개선 사항**—
 
@@ -335,7 +348,7 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) **서비스 버전 및 EOL 유효성 검사 업데이트**—Adobe Commerce 2.4에 대해 설치된 서비스 버전을 확인하는 유효성 검사가 업데이트되었습니다. 요구 사항.<!--MCLOUD-6144-->
 
-   - ![수정 아이콘](../../assets/fix.svg) `.magento.app.yaml` 파일에서 `post-deploy` 후크 구성이 누락된 경우에만 다음 배포 후 경고 메시지가 표시되도록 유효성 검사 문제를 해결했습니다.
+   - ![수정 아이콘](../../assets/fix.svg) `post-deploy` 파일에서 `.magento.app.yaml` 후크 구성이 누락된 경우에만 다음 배포 후 경고 메시지가 표시되도록 유효성 검사 문제를 해결했습니다.
 
      ```text
      Your application does not have the "post_deploy" hook enabled.
@@ -385,7 +398,7 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) 이제 XML 구성 파일을 사용하여 빌드, 배포 및 배포 후 프로세스를 사용자 지정하여 기본 구성을 재정의하거나 사용자 지정할 수 있습니다.
 
-   - ![새 아이콘](../../assets/new.svg) **`.magento.app.yaml`**&#x200B;에서 `hooks` 구성을 변경했습니다. 시나리오 기반 배포를 지원하도록 `hooks` 구성 형식을 업데이트했습니다. 이전 ECE-Tools 2002.0.x 릴리스의 레거시 형식은 여전히 지원됩니다. 그러나 시나리오 기반 배포 기능을 사용하려면 새 형식으로 업데이트해야 합니다. [시나리오 기반 배포](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)를 참조하세요.
+   - ![새 아이콘](../../assets/new.svg) **`hooks`에서`.magento.app.yaml`** 구성을 변경했습니다. 시나리오 기반 배포를 지원하도록 `hooks` 구성 형식을 업데이트했습니다. 이전 ECE-Tools 2002.0.x 릴리스의 레거시 형식은 여전히 지원됩니다. 그러나 시나리오 기반 배포 기능을 사용하려면 새 형식으로 업데이트해야 합니다. [시나리오 기반 배포](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)를 참조하세요.
 
 >[!NOTE]
 >
@@ -409,11 +422,11 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) 특정 제품 페이지에 대한 캐시 미리 로드를 지원하도록 `WARM_UP_PAGES` 환경 변수의 기능을 확장했습니다. [사후 배포 변수](../environment/variables-post-deploy.md#warm_up_pages) 항목에서 확장된 정의를 참조하십시오.<!--MAGECLOUD-4444-->
 
-   - ![새 아이콘](../../assets/new.svg) `<magento_root>/var/report/` 디렉터리에서 오류 보고서 데이터 관리를 단순화하기 위해 `ERROR_REPORT_DIR_NESTING_LEVEL` 환경 변수를 추가했습니다. [변수 빌드](../environment/variables-build.md#error_report_dir_nesting_level) 항목에서 변수 설명을 참조하십시오.
+   - ![새 아이콘](../../assets/new.svg) `ERROR_REPORT_DIR_NESTING_LEVEL` 디렉터리에서 오류 보고서 데이터 관리를 단순화하기 위해 `<magento_root>/var/report/` 환경 변수를 추가했습니다. [변수 빌드](../environment/variables-build.md#error_report_dir_nesting_level) 항목에서 변수 설명을 참조하십시오.
 
    - ![수정 아이콘](../../assets/fix.svg)에서 `SCD_EXCLUDE_THEMES`, `STATIC_CONTENT_THREADS`,`DO_DEPLOY_STATIC_CONTENT` 및 `STATIC_CONTENT_SYMLINK` 환경 변수를 제거했습니다. [이전 버전과 호환되지 않는 변경 내용](backward-incompatible-changes.md#environment-configuration-changes)을 참조하십시오.<!--MAGECLOUD-4407, MAGECLOUD-3873-->
 
-   - ![수정 아이콘](../../assets/fix.svg) `_merge` 옵션 없이 `ELASTICSUITE_CONFIGURATION` 배포 변수를 구성할 때 기본 구성이 예상대로 덮어쓰도록 Elastic Suite 구성 프로세스의 문제를 해결했습니다.<!--MAGECLOUD-4388-->
+   - ![수정 아이콘](../../assets/fix.svg) `ELASTICSUITE_CONFIGURATION` 옵션 없이 `_merge` 배포 변수를 구성할 때 기본 구성이 예상대로 덮어쓰도록 Elastic Suite 구성 프로세스의 문제를 해결했습니다.<!--MAGECLOUD-4388-->
 
 - ![새 아이콘](../../assets/new.svg) **CLI 명령 업데이트**—
 

@@ -2,10 +2,11 @@
 title: Commerce용 클라우드 구성 요소
 description: 클라우드 구성 요소 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: dcf71ffbdafae46e6a02735c090c33a8fe248bc6
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.1.2 {#latest}
+## v1.1.3 {#latest}
+
+릴리스 날짜: 2025년 8월 7일
+
+- ![새 아이콘](../../assets/new.svg) **PHP 8.4**—PHP 8.4에 대한 기능 테스트를 추가했습니다.<!-- MCLOUD-13313 -->
+
+## v1.1.2
 
 릴리스 날짜: 2025년 6월 3일
 
@@ -60,7 +67,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2022년 9월 13일
 
-- ![수정 아이콘](../../assets/fix.svg) **준비 시 오류**—페이지 가시성이 관리자에서 [**개별적으로 표시되지 않음**](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)&#x200B;(으)로 설정되어 배포 로그에 `ERROR: Warming up failed: <link to page>` 오류가 발생하는 경우 [준비](../environment/variables-post-deploy.md#warm_up_pages)를 시도하는 문제를 해결했습니다.<!-- MCLOUD-9134 -->
+- ![수정 아이콘](../../assets/fix.svg) **준비 시 오류**—페이지 가시성이 관리자에서 [개별적으로 표시되지 않음](../environment/variables-post-deploy.md#warm_up_pages)[**(으)로 설정되어 배포 로그에** 오류가 발생하는 경우 ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)준비`ERROR: Warming up failed: <link to page>`를 시도하는 문제를 해결했습니다.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 
