@@ -1,13 +1,13 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 69b764a03e6c272498e57645dca40d29c4e79626
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '934'
 ht-degree: 3%
 
 ---
 # ece-tools
 
-**버전**: 2002.2.5
+**버전**: 2002.2.7
 
 이 참조에는 `ece-tools` 명령줄 도구를 통해 사용할 수 있는 34개의 명령이 포함되어 있습니다.
 클라우드 인프라의 Adobe Commerce에서 `ece-tools list` 명령을 사용하여 초기 목록이 자동으로 생성됩니다.
@@ -25,9 +25,16 @@ ht-degree: 3%
 - 기본값: `false`
 - 값을 수락하지 않음
 
-#### `--quiet`, `-q`
+#### `--silent`
 
 메시지 출력 안 함
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+#### `--quiet`, `-q`
+
+오류만 표시됩니다. 다른 모든 출력은 억제됨
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -56,7 +63,6 @@ ANSI 출력 강제(또는 비활성화 —no-ansi)
 
 &quot;—ansi&quot; 옵션 무시
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 #### `--no-interaction`, `-n`
@@ -401,7 +407,7 @@ ece-tools backup:list
 ece-tools backup:restore [-f|--force] [--file [FILE]]
 ```
 
-중요한 구성 파일을 복원합니다. backup:list를 실행하여 백업 파일 목록을 표시합니다.
+중요한 구성 파일을 복원합니다. 백업 파일 목록을 표시하려면 백업:list을(를) 실행하십시오.
 
 ### 옵션
 
