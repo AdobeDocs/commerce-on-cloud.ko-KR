@@ -6,9 +6,9 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+source-git-commit: 1cf1f9097f9897591fe59a390b0e73921f2300fa
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Composer는 `vendor` 디렉터리에 프로젝트에 필요한 라이브러리 �
 
 {style="table-layout:auto"}
 
-업데이트된 코드를 추가, 커밋 및 푸시하면 [빌드 단계](../deploy/process.md#build-phase-build-phase) 동안 배포 프로세스에서 `composer install` 명령을 자동으로 실행합니다.
+업데이트된 코드를 추가, 커밋 및 푸시하면 `composer install`빌드 단계[ 동안 배포 프로세스에서 ](../deploy/process.md#build-phase-build-phase) 명령을 자동으로 실행합니다.
 
 ### 클라우드 메타패키지
 
@@ -47,7 +47,7 @@ Composer는 `vendor` 디렉터리에 프로젝트에 필요한 라이브러리 �
 >=current_version <next_version
 ```
 
-예를 들어 최신 Adobe Commerce 버전 2.4.9를 사용하려면 `composer.json` 파일에서 `2.4.8`을(를) &quot;현재&quot; 버전으로 설정하고 `2.4.9`을(를) &quot;다음&quot; 버전으로 설정합니다.
+예를 들어 최신 Adobe Commerce 버전 2.4.9를 사용하려면 `2.4.8` 파일에서 `2.4.9`을(를) &quot;현재&quot; 버전으로 설정하고 `composer.json`을(를) &quot;다음&quot; 버전으로 설정합니다.
 
 ```text
 "magento/magento-cloud-metapackage": ">=2.4.8 <2.4.9"
@@ -59,10 +59,11 @@ Composer는 `vendor` 디렉터리에 프로젝트에 필요한 라이브러리 �
 - **vendor/magento/product-enterprise-edition**—이 메타패키지에는 모듈, 프레임워크, 테마 등을 비롯한 애플리케이션 구성 요소가 필요합니다.
 - **vendor/fastly2/magento2**—이 모듈은 Pro 스테이징 및 프로덕션 및 스타터 프로덕션 환경에 대한 Fastly CDN 및 서비스를 관리합니다. [Fastly 서비스](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)를 참조하세요.
 - **vendor/magento/module-paypal-on-boarding**—이 모듈은 PayPal 가맹점 계정에 연결하여 PayPal 결제 게이트웨이 체크아웃을 제공합니다. [PayPal 온보딩 도구](../store/paypal.md)를 참조하세요.
+- **공급업체/aem/rum**—이 모듈은 [운영 원격 분석](../monitor/operational-telemetry.md) 데이터 수집 도구를 관리합니다.
 
 >[!TIP]
 >
->종속성 및 타사 라이선스 목록은 _Adobe Commerce 릴리스 정보_&#x200B;의 [Commerce용 클라우드 패키지](/help/cloud-guide/release-notes/cloud-packages.md)를 참조하십시오.
+>종속성 및 타사 라이선스 목록은 [Adobe Commerce 릴리스 정보](/help/cloud-guide/release-notes/cloud-packages.md)의 _Commerce용 클라우드 패키지_&#x200B;를 참조하십시오.
 
 ## Docker 환경
 
