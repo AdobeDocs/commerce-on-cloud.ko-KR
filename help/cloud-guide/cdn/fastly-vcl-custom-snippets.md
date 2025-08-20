@@ -3,7 +3,7 @@ title: 사용자 지정 VCL 코드 조각 시작
 description: Varnish Control Language 코드 조각을 사용하여 Adobe Commerce에 대한 Fastly 서비스 구성을 맞춤화하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: 71fb8f5b3f32553d8b247de44fea29b1bb945584
+source-git-commit: a51946f65ccd606cde6fbb4278f625a49ae42dad
 workflow-type: tm+mt
 source-wordcount: '2037'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Adobe Commerce 관리자 또는 Fastly API를 사용하여 사용자 지정 VCL 
 | `API_KEY` | Fastly 계정에 액세스하기 위한 API 키. [자격 증명 가져오기](fastly-configuration.md)를 참조하십시오. |
 | `active` | 코드 조각 또는 버전의 활성 상태입니다. `true` 또는 `false`을 반환합니다. true인 경우 코드 조각 또는 버전이 사용 중입니다. 버전 번호를 사용하여 활성 코드 조각을 복제합니다. |
 | `content` | 실행할 VCL 코드 조각입니다. Fastly는 모든 VCL 언어 기능을 지원하지 않습니다. 또한 Fastly는 사용자 지정 기능을 갖춘 확장을 제공합니다. 지원되는 기능에 대한 자세한 내용은 [Fastly VCL 프로그래밍 참조](https://docs.fastly.com/vcl/reference/)를 참조하십시오. |
-| `dynamic` | 코드 조각의 동적 상태. Fastly 서비스 구성을 위한 버전 관리 VCL에 포함된 [일반 코드 조각](https://docs.fastly.com/en/guides/about-vcl-snippets)에 대해 `false`을(를) 반환합니다. 새 VCL 버전 필요 없이 수정 및 배포할 수 있는 [동적 코드 조각](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/)에 대해 `true`을(를) 반환합니다. |
+| `dynamic` | 코드 조각의 동적 상태. Fastly 서비스 구성을 위한 버전 관리 VCL에 포함된 `false`일반 코드 조각[에 대해 ](https://docs.fastly.com/en/guides/about-vcl-snippets)을(를) 반환합니다. 새 VCL 버전 필요 없이 수정 및 배포할 수 있는 `true`동적 코드 조각[에 대해 ](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/)을(를) 반환합니다. |
 | `number` | 코드 조각이 포함된 VCL 버전 번호입니다. 예제 값에서 *편집 가능한 버전 #*&#x200B;을(를) 주로 사용합니다. API에서 사용자 지정 코드 조각을 추가하는 경우 API 요청에 버전 번호를 포함하십시오. 관리자에서 사용자 정의 VCL을 추가하는 경우 버전이 제공됩니다. |
 | `priority` | 사용자 지정 VCL 코드 조각 코드가 실행되는 시기를 지정하는 `1`부터 `100`까지의 숫자 값입니다. 우선 순위 값이 낮은 코드 조각이 먼저 실행됩니다. 지정하지 않으면 `priority` 값이 기본적으로 `100`(으)로 설정됩니다.<p>우선 순위 값이 `5`인 사용자 지정 VCL 코드 조각이 즉시 실행되며, 이는 요청 라우팅(블록 및 허용 목록 및 리디렉션)을 구현하는 VCL 코드에 가장 적합합니다. 우선 순위 `100`은(는) 기본 VCL 코드 조각 코드를 재정의하는 데 가장 적합합니다.<p>Magento-Fastly 모듈에 포함된 모든 [기본 VCL 코드 조각](fastly-configuration.md#upload-vcl-snippets)에 `priority=50`이(가) 있습니다.<ul><li>다른 모든 VCL 함수 다음에 사용자 지정 VCL 코드를 실행하고 기본 VCL 코드를 재정의하려면 `100`과(와) 같은 높은 우선 순위를 지정하십시오.</li></ul> |
 | `service_id` | 특정 스테이징 또는 프로덕션 환경에 대한 Fastly 서비스 ID입니다. 이 ID는 프로젝트가 클라우드 인프라 [Fastly 서비스 계정](fastly.md#fastly-service-account-and-credentials)의 Adobe Commerce에 추가될 때 할당됩니다. |
@@ -94,7 +94,7 @@ Adobe Commerce 관리자 또는 Fastly API를 사용하여 사용자 지정 VCL 
 
 ## 관리자로부터 사용자 지정 VCL 관리
 
-관리자의 *빠른 구성* > *사용자 지정 VCL 조각* 섹션에서 [사용자 지정 VCL 조각을 추가](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md)할 수 있습니다.
+관리자의 [빠른 구성](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md) > *사용자 지정 VCL 조각* 섹션에서 *사용자 지정 VCL 조각을 추가*&#x200B;할 수 있습니다.
 
 ![사용자 지정 VCL 코드 조각 관리](../../assets/cdn/fastly-edit-snippets.png)
 
@@ -108,6 +108,20 @@ Adobe Commerce 관리자 또는 Fastly API를 사용하여 사용자 지정 VCL 
 - [허용 목록에 추가하다 IP vcl에 대한 사용자 정의 VCL](fastly-vcl-allowlist.md)
 - [차단 목록에 추가하다 IP vcl에 대한 사용자 정의 VCL](fastly-vcl-blocking.md)
 - [Fastly 캐시 우회](fastly-vcl-bypass-to-origin.md)
+
+## Commerce 관리자에서 보거나 수정할 수 없는 코드 조각
+
+Commerce 관리자 내에서 일부 코드 조각을 직접 보거나 수정할 수 없습니다. 예를 들어 [동적 코드 조각](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets)입니다. 사용자 지정 VCL 코드 조각 섹션에서 클라우드 지원 팀이 [Fastly 관리 대시보드](fastly.md#fastly-service-account-and-credentials)에 직접 추가한 코드 조각은 표시되지 않습니다.
+
+
+**클라우드 지원 팀에서 추가한 코드 조각을 보려면:**
+
+1. **도구** 섹션으로 이동합니다.
+
+1. **버전 기록** 옆에 있는 _모든 버전 나열_&#x200B;을 클릭합니다.
+
+1. 기존 코드 조각을 보려면 해당 VCL 버전 옆의 눈 모양 아이콘을 클릭합니다.
+
 
 ## API를 사용하여 VCL 관리
 
@@ -236,7 +250,7 @@ export FASTLY_EDIT_VERSION=<Version>
 
 - `priority`—사용자 지정 VCL 코드 조각 코드가 실행되는 시기를 결정하는 `1`에서 `100` 사이의 값입니다. 값이 낮은 사용자 지정 VCL 코드 조각이 먼저 실행됩니다.
 
-  Fastly VCL 모듈의 모든 기본 VCL 코드에는 `50`의 `priority`이(가) 있습니다. 작업을 마지막으로 수행하거나 기본 VCL 코드를 재정의하려면 `100`과(와) 같이 더 높은 숫자를 사용합니다. 사용자 지정 VCL 코드 조각 코드를 즉시 실행하려면 우선 순위를 `5`과(와) 같이 더 낮은 값으로 설정하십시오.
+  Fastly VCL 모듈의 모든 기본 VCL 코드에는 `priority`의 `50`이(가) 있습니다. 작업을 마지막으로 수행하거나 기본 VCL 코드를 재정의하려면 `100`과(와) 같이 더 높은 숫자를 사용합니다. 사용자 지정 VCL 코드 조각 코드를 즉시 실행하려면 우선 순위를 `5`과(와) 같이 더 낮은 값으로 설정하십시오.
 
 - `content` - 줄 바꿈 없이 한 줄로 실행되는 VCL 코드 조각입니다. [사용자 지정 VCL 코드 조각 예제](#example-vcl-snippet-code)를 참조하십시오.
 
@@ -269,6 +283,7 @@ Fastly 서비스에서 `500 Internal Server Error` 응답을 받은 경우 JSON 
    ```bash
    curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_EDIT_VERSION/activate -X PUT
    ```
+
 
 ## VCL 코드 조각에 대한 API 빠른 참조
 
@@ -314,19 +329,6 @@ Fastly 서비스에서 `500 Internal Server Error` 응답을 받은 경우 JSON 
   curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_VERSION/snippet/<snippet_name> -X DELETE
   ```
 
-- **기본 Fastly VCL 코드에서 값 재정의[&#128279;](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
+- **기본 Fastly VCL 코드에서 값 재정의[](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   업데이트된 값으로 코드 조각을 만들고 `100` 우선 순위를 지정하십시오.
-
-## Commerce 관리자에서 보거나 수정할 수 없는 코드 조각
-
-Commerce 관리자 내에서 일부 코드 조각을 직접 보거나 수정할 수 없습니다. 예를 들어 [동적 코드 조각](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets)입니다. 사용자 지정 VCL 코드 조각 섹션에서 클라우드 지원 팀이 [Fastly 관리 대시보드](fastly.md#fastly-service-account-and-credentials)에 직접 추가한 코드 조각은 표시되지 않습니다.
-
-
-**클라우드 지원 팀에서 추가한 코드 조각을 보려면:**
-
-1. **도구** 섹션으로 이동합니다.
-
-1. _버전 기록_ 옆에 있는 **모든 버전 나열**&#x200B;을 클릭합니다.
-
-1. 기존 코드 조각을 보려면 해당 VCL 버전 옆의 눈 모양 아이콘을 클릭합니다.
