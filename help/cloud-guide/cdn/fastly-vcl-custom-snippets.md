@@ -3,7 +3,7 @@ title: 사용자 지정 VCL 코드 조각 시작
 description: Varnish Control Language 코드 조각을 사용하여 Adobe Commerce에 대한 Fastly 서비스 구성을 맞춤화하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: a51946f65ccd606cde6fbb4278f625a49ae42dad
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '2037'
 ht-degree: 0%
@@ -329,6 +329,8 @@ Fastly 서비스에서 `500 Internal Server Error` 응답을 받은 경우 JSON 
   curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_VERSION/snippet/<snippet_name> -X DELETE
   ```
 
-- **기본 Fastly VCL 코드에서 값 재정의[&#128279;](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
+- **기본 Fastly VCL 코드에서 값 재정의[](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   업데이트된 값으로 코드 조각을 만들고 `100` 우선 순위를 지정하십시오.
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

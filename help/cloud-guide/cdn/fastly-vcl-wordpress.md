@@ -2,7 +2,8 @@
 title: CMS 백엔드로 요청 재라우팅
 description: Fastly Edge 모듈을 사용하여 Adobe Commerce 스토어의 수신 요청을 별도의 WordPress 사이트로 라우팅하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ef024c68-395b-4d47-9362-a8404a93dbbe
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -45,6 +46,8 @@ VCL 코드를 수동으로 작성하고 Fastly API를 사용하여 업로드하�
 
    - Adobe Commerce에서 WordPress 백엔드로 URL 재작성을 처리하도록 _기타 CMS/백 엔드 통합_ Edge 모듈을 구성합니다.
 
-     자세한 지침은 _Fastly CDN module for Target 2_ 설명서의 [Fastly Edge Modules - Other CMS Magento/Backend 통합](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md)을 참조하십시오.
+     자세한 지침은 [Magento용 Fastly CDN 모듈](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md) 설명서의 _Fastly Edge 모듈 - 기타 CMS/백엔드 통합_&#x200B;을 참조하십시오.
 
 1. Fastly 서비스 구성을 업데이트한 후 Adobe Commerce 스토어를 테스트하여 WordPress에 대해 지정된 URL 요청이 올바르게 리디렉션되는지 확인하십시오.
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

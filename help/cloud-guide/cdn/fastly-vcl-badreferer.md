@@ -2,7 +2,8 @@
 title: 참조 스팸 차단
 description: Fastly Edge 사전 및 사용자 지정 VCL 코드 조각을 사용하여 사이트의 레퍼러 스팸을 차단합니다.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 0%
@@ -79,7 +80,7 @@ Edge 사전에 대한 자세한 내용은 Fastly 설명서에서 [Edge 사전 �
 
 - `dynamic` — 값 0은 Fastly 구성을 위해 버전이 지정된 VCL에 업로드할 [일반 코드 조각](https://docs.fastly.com/en/guides/using-regular-vcl-snippets)을 나타냅니다.
 
-- `priority` — VCL 코드 조각이 실행되는 시기를 결정합니다. 기본 Magento VCL 코드 조각(`magentomodule_*`)에 우선 순위 50이 할당되기 전에 이 코드 조각 코드를 실행하는 우선 순위는 `5`입니다. 코드 조각을 실행할 시기에 따라 각 사용자 지정 코드 조각의 우선 순위를 50보다 높거나 낮게 설정합니다. 우선 순위가 낮은 번호가 있는 코드 조각이 먼저 실행됩니다.
+- `priority` — VCL 코드 조각이 실행되는 시기를 결정합니다. 기본 Magento VCL 코드 조각(`5`)에 우선 순위 50이 할당되기 전에 이 코드 조각 코드를 실행하는 우선 순위는 `magentomodule_*`입니다. 코드 조각을 실행할 시기에 따라 각 사용자 지정 코드 조각의 우선 순위를 50보다 높거나 낮게 설정합니다. 우선 순위가 낮은 번호가 있는 코드 조각이 먼저 실행됩니다.
 
 - `type` — VCL 버전에 코드 조각을 삽입할 위치를 지정합니다. 이 예에서 VCL 코드 조각은 `recv` 코드 조각입니다. 코드 조각이 VCL 버전에 삽입되면 기본 Fastly VCL 코드 아래 및 개체 위의 `vcl_recv` 서브루틴에 추가됩니다.
 
@@ -124,7 +125,7 @@ Edge 사전에 대한 자세한 내용은 Fastly 설명서에서 [Edge 사전 �
 
    ![사용자 지정 레퍼러 블록 VCL 코드 조각 만들기](/help/assets/cdn/fastly-create-referrer-block-snippet.png)
 
-1. 페이지가 다시 로드되면 *Fastly 구성* 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 클릭합니다.
+1. 페이지가 다시 로드되면 **Fastly 구성** 섹션에서 *Fastly에 VCL 업로드*&#x200B;를 클릭합니다.
 
 1. 업로드가 완료되면 페이지 상단의 알림에 따라 캐시를 새로 고칩니다.
 
@@ -135,3 +136,5 @@ Edge 사전에 대한 자세한 내용은 Fastly 설명서에서 [Edge 사전 �
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

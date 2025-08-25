@@ -2,7 +2,8 @@
 title: 요청을 허용하기 위한 사용자 지정 VCL
 description: Fastly Edge ACL 목록 및 사용자 지정 VCL 코드 조각을 사용하여 수신 요청을 필터링하고 Adobe Commerce 사이트에 대한 IP 주소별 액세스를 허용합니다.
 feature: Cloud, Configuration, Security
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '848'
 ht-degree: 0%
@@ -74,23 +75,23 @@ Edge ACL은 사이트에 대한 액세스를 관리하기 위한 IP 주소 목�
 }
 ```
 
-이 예제에서 [사용자 지정 코드 조각을 만들기](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=ko#add-the-custom-vcl-snippet)하기 전에 값을 검토하여 변경해야 하는지 확인하십시오. 그런 다음 각 값을 각 필드에 입력합니다(예: `type`은(는) 유형 필드에, `content`은(는) 콘텐츠 필드에).
+이 예제에서 [사용자 지정 코드 조각을 만들기](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet)하기 전에 값을 검토하여 변경해야 하는지 확인하십시오. 그런 다음 각 값을 각 필드에 입력합니다(예: `type`은(는) 유형 필드에, `content`은(는) 콘텐츠 필드에).
 
 - `name` — VCL 코드 조각의 이름입니다. 이 예제의 경우 `allowlist`입니다.
 
-- `priority` — VCL 코드 조각이 실행되는 시기를 결정합니다. 관리자 요청이 허용된 IP 주소에서 오는지 여부를 즉시 실행하고 확인하는 우선 순위는 `5`입니다. 코드 조각은 기본 Magento VCL 코드 조각(`magentomodule_*`)에 우선 순위 50이 할당되기 전에 실행됩니다. 코드 조각을 실행할 시기에 따라 각 사용자 지정 코드 조각의 우선 순위를 50보다 높거나 낮게 설정합니다. 우선 순위가 낮은 번호가 있는 코드 조각이 먼저 실행됩니다.
+- `priority` — VCL 코드 조각이 실행되는 시기를 결정합니다. 관리자 요청이 허용된 IP 주소에서 오는지 여부를 즉시 실행하고 확인하는 우선 순위는 `5`입니다. 이 코드 조각은 기본 Magento VCL 코드 조각(`magentomodule_*`)에 우선 순위 50이 할당되기 전에 실행됩니다. 코드 조각을 실행할 시기에 따라 각 사용자 지정 코드 조각의 우선 순위를 50보다 높거나 낮게 설정합니다. 우선 순위가 낮은 번호가 있는 코드 조각이 먼저 실행됩니다.
 
-- `type` — 버전이 지정된 VCL 코드에 코드 조각을 삽입할 위치를 지정합니다. 이 VCL은 기본 Fastly VCL 코드 아래 및 개체 위의 `vcl_recv` 서브루틴에 코드 조각 코드를 추가하는 `recv` 코드 조각 유형입니다.
+- `type` — 버전이 지정된 VCL 코드에 코드 조각을 삽입할 위치를 지정합니다. 이 VCL은 기본 Fastly VCL 코드 아래 및 개체 위의 `recv` 서브루틴에 코드 조각 코드를 추가하는 `vcl_recv` 코드 조각 유형입니다.
 
 - `content` — 실행할 VCL 코드 조각입니다. 이 예에서 코드는 관리자에게 요청을 필터링하고 클라이언트 IP 주소가 `allowlist` ACL의 주소와 일치하는 경우 액세스를 허용합니다. 주소가 일치하지 않으면 `403 Forbidden` 오류가 발생하여 요청이 차단됩니다.
 
   관리자의 URL이 변경된 경우 샘플 값 `/admin`을(를) 환경의 URL로 바꾸십시오. 예: `/company-admin`.
 
-코드 샘플에서는 [원본 차폐](fastly-custom-cache-configuration.md#configure-back-ends-and-origin-shielding)를 사용할 때 `!req.http.Fastly-FF` 조건이 중요합니다. 이 코드를 제거하거나 편집하지 마십시오.
+코드 샘플에서는 `!req.http.Fastly-FF`원본 차폐[를 사용할 때 ](fastly-custom-cache-configuration.md#configure-back-ends-and-origin-shielding) 조건이 중요합니다. 이 코드를 제거하거나 편집하지 마십시오.
 
 환경에 대한 코드를 검토하고 업데이트한 후 다음 방법 중 하나를 사용하여 사용자 지정 VCL 코드 조각을 Fastly 서비스 구성에 추가합니다.
 
-- [관리자로부터 사용자 지정 VCL 코드 조각을 추가](#add-the-custom-vcl-snippet)합니다. 관리자에 액세스할 수 있는 경우 이 방법이 권장됩니다. (Magento 2 버전 1.2.58[&#128279;](fastly-configuration.md#upgrade) 이상에 Fastly CDN 모듈이 필요합니다.)
+- [관리자로부터 사용자 지정 VCL 코드 조각을 추가](#add-the-custom-vcl-snippet)합니다. 관리자에 액세스할 수 있는 경우 이 방법이 권장됩니다. (Magento 2 버전 1.2.58[ 이상을 위한 ](fastly-configuration.md#upgrade)Fastly CDN 모듈이 필요합니다.)
 
 - JSON 코드 예제를 파일(예: `allowlist.json`)에 저장하고 [Fastly API를 사용하여 업로드](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)합니다. 관리자에 액세스할 수 없는 경우 이 메서드를 사용합니다.
 
@@ -120,7 +121,7 @@ Edge ACL은 사이트에 대한 액세스를 관리하기 위한 IP 주소 목�
 
 1. **만들기**&#x200B;를 클릭하여 이름 패턴이 `type_priority_name.vcl`인 VCL 코드 조각 파일을 생성합니다(예: `recv_5_allowlist.vcl`).
 
-1. 페이지가 다시 로드되면 *Fastly 구성* 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 클릭하여 Fastly 서비스 구성에 파일을 추가하십시오.
+1. 페이지가 다시 로드되면 **Fastly 구성** 섹션에서 *Fastly에 VCL 업로드*&#x200B;를 클릭하여 Fastly 서비스 구성에 파일을 추가하십시오.
 
 1. 업로드가 완료되면 페이지 상단의 알림에 따라 캐시를 새로 고칩니다.
 
@@ -129,3 +130,5 @@ Edge ACL은 사이트에 대한 액세스를 관리하기 위한 IP 주소 목�
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

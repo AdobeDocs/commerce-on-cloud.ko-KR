@@ -2,7 +2,8 @@
 title: 차단 요청에 대한 사용자 지정 VCL
 description: 사용자 지정 VCL 코드 조각과 함께 Edge ACL(액세스 제어 목록)을 사용하여 IP 주소별 수신 요청을 차단합니다.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # 차단 요청에 대한 사용자 지정 VCL
 
-Magento 2에 대해 Fastly CDN 모듈을 사용하여 차단하려는 IP 주소 목록과 함께 Edge ACL을 만들 수 있습니다. 그런 다음 VCL 코드 조각과 함께 해당 목록을 사용하여 들어오는 요청을 차단할 수 있습니다. 이 코드는 수신 요청의 IP 주소를 확인합니다. ACL 목록에 포함된 IP 주소와 일치하는 경우 Fastly는 요청이 사이트에 액세스하지 못하도록 차단하고 `403 Forbidden error`을(를) 반환합니다. 다른 모든 클라이언트 IP 주소는 액세스가 허용됩니다.
+Magento 2용 Fastly CDN 모듈을 사용하여 차단하려는 IP 주소 목록과 함께 Edge ACL을 만들 수 있습니다. 그런 다음 VCL 코드 조각과 함께 해당 목록을 사용하여 들어오는 요청을 차단할 수 있습니다. 이 코드는 수신 요청의 IP 주소를 확인합니다. ACL 목록에 포함된 IP 주소와 일치하는 경우 Fastly는 요청이 사이트에 액세스하지 못하도록 차단하고 `403 Forbidden error`을(를) 반환합니다. 다른 모든 클라이언트 IP 주소는 액세스가 허용됩니다.
 
 **필수 구성 요소:**
 
@@ -58,7 +59,7 @@ Edge ACL을 정의한 후 이 ACL을 사용하여 ACL에 지정된 IP 주소에 
 
 - `name`: VCL 코드 조각의 이름입니다. 이 예제에서는 `blocklist` 이름을 사용했습니다.
 
-- `priority`: VCL 코드 조각이 실행되는 시기를 결정합니다. 관리자 요청이 허용된 IP 주소에서 오는지 여부를 즉시 실행하고 확인하는 우선 순위는 `5`입니다. 코드 조각은 기본 Magento VCL 코드 조각(`magentomodule_*`)에 우선 순위 50이 할당되기 전에 실행됩니다. 코드 조각을 실행할 시기에 따라 각 사용자 지정 코드 조각의 우선 순위를 50보다 높거나 낮게 설정합니다. 우선 순위가 낮은 번호가 있는 코드 조각이 먼저 실행됩니다.
+- `priority`: VCL 코드 조각이 실행되는 시기를 결정합니다. 관리자 요청이 허용된 IP 주소에서 오는지 여부를 즉시 실행하고 확인하는 우선 순위는 `5`입니다. 이 코드 조각은 기본 Magento VCL 코드 조각(`magentomodule_*`)에 우선 순위 50이 할당되기 전에 실행됩니다. 코드 조각을 실행할 시기에 따라 각 사용자 지정 코드 조각의 우선 순위를 50보다 높거나 낮게 설정합니다. 우선 순위가 낮은 번호가 있는 코드 조각이 먼저 실행됩니다.
 
 - `type`: 생성된 VCL 코드에서 코드 조각의 위치를 결정하는 VCL 코드 조각 유형을 지정합니다. 이 예제에서는 `recv`을(를) 사용합니다. 이 은(는) `vcl_recv` 서브루틴에 보일러판 VCL 아래와 모든 개체 위에 VCL 코드를 삽입합니다. 코드 조각 형식 목록은 [Fastly VCL 코드 조각 참조](https://docs.fastly.com/api/config#api-section-snippet)를 참조하십시오.
 
@@ -96,7 +97,7 @@ Edge ACL을 정의한 후 이 ACL을 사용하여 ACL에 지정된 IP 주소에 
 
 1. **만들기**&#x200B;를 클릭하여 이름 패턴이 `type_priority_name.vcl`인 VCL 코드 조각 파일을 생성합니다(예: `recv_5_blocklist.vcl`).
 
-1. 페이지가 다시 로드되면 *Fastly 구성* 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 클릭하여 Fastly 서비스 구성에 파일을 추가하십시오.
+1. 페이지가 다시 로드되면 **Fastly 구성** 섹션에서 *Fastly에 VCL 업로드*&#x200B;를 클릭하여 Fastly 서비스 구성에 파일을 추가하십시오.
 
 1. 업로드 후 페이지 상단의 알림에 따라 캐시를 새로 고칩니다.
 
@@ -155,3 +156,5 @@ Fastly VCL 설명서에서 [동적 VCL 조각 사용](https://docs.fastly.com/vc
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->
