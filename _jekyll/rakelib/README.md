@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: f75dbbc9726ff21a648b1bb3d8f06cb45a5d6b08
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -11,15 +11,30 @@ ht-degree: 0%
 
 ## 파일 구성
 
+### `adobe-docs-tasks.rake`
+
+Experience League 설명서 저장소 레이크 작업에서 Adobe Commerce에 대한 일반적인 요구 사항, 공유 기능 및 네임스페이스가 지정되지 않은 작업이 포함됩니다.
+
+- `whatsnew` - 뉴스 다이제스트에 대한 데이터 생성(기본값: 마지막 업데이트 이후)
+- `render` - 템플릿 파일 렌더링 및 유지 관리에 포함
+
 ### `includes.rake`
 
-`:includes` 네임스페이스 아래에 모든 포함 관련 레이크 작업이 포함되어 있습니다.
+`:includes` 네임스페이스에 구성된 포함 관리 작업을 포함합니다.
 
-- `includes:maintain_relationships` - 포함 관계 검색 및 유지
+- `includes:maintain_relationships` - Markdown 파일에서 포함 관계 검색 및 유지 관리
 - `includes:maintain_timestamps` - 포함 파일 변경 내용에 따라 타임스탬프 추가/업데이트
 - `includes:maintain_all` - 두 작업을 순서대로 실행합니다.
+- `includes:unused` - 사용하지 않은 포함 파일 찾기
 
-## 작동 방법
+### `images.rake`
+
+`:images` 네임스페이스로 구성된 이미지 관리 작업을 포함합니다.
+
+- `images:optimize` - 수정된 커밋되지 않은 파일의 이미지 최적화
+- `images:unused` - 프로젝트에서 사용하지 않는 이미지 찾기
+
+## 작동 방식
 
 Rake는 `.rake` 디렉터리에 있는 `rakelib/`개의 파일을 자동으로 검색하여 로드합니다. 이를 통해 다음과 같은 작업을 수행할 수 있습니다.
 
