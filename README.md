@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 이 사이트에는 클라우드 인프라의 Commerce에 대한 최신 개발자 설명서가 포함되어 있습니다.
 
-- [Cloud Infrastructure의 Commerce 안내서](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/overview)
-- 클라우드 인프라에서 [Commerce 시작](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/start/overview)
+- [Cloud Infrastructure의 Commerce 안내서](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- 클라우드 인프라에서 [Commerce 시작](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source 행동 수칙
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## Adobe 콘텐츠에 대한 귀하의 기여 관련 정보
 
-[Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/ko/docs/contributor/contributor-guide/introduction)를 참조하세요.
+[Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)를 참조하세요.
 
 기여 방식은 기여자 및 기여 하고자 하는 변경 사항의 종류에 따라 다릅니다.
 
@@ -40,7 +40,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 
 커뮤니티 기여자는 기본 편집에 GitHub UI를 사용하거나 리포지토리를 포크하여 크게 기여할 수 있습니다.
 
-자세한 내용은 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/ko/docs/contributor/contributor-guide/introduction)를 참조하십시오.
+자세한 내용은 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)를 참조하십시오.
 
 ## Markdown을 사용하여 주제 서식을 지정하는 방법
 
@@ -70,7 +70,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 >**참고:**
 >
 >- 템플릿화된 콘텐츠를 생성하려면 터미널의 명령줄에서 작업해야 합니다.
->- 렌더링 스크립트를 실행하려면 루비가 설치되어 있어야 합니다. 필요한 버전은 [_jekyll/.ruby-version] (_jekyll/.ruby-version)을(를) 참조하십시오.
+>- 렌더링 스크립트를 실행하려면 루비가 설치되어 있어야 합니다. 필요한 버전은 [_jekyll/.ruby-version](_jekyll/.ruby-version)을(를) 참조하십시오.
 
 템플릿 컨텐츠의 파일 구조에 대한 설명은 다음을 참조하십시오.
 
@@ -131,3 +131,31 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
    ```
 
 [데이터 파일](https://jekyllrb.com/docs/datafiles), [액체 필터](https://jekyllrb.com/docs/liquid/filters/) 및 기타 기능에 대한 자세한 내용은 Jekyll 설명서를 참조하세요.
+
+## 이미지 최적화를 위한 사전 커밋 후크
+
+이 저장소에는 커밋하기 전에 이미지를 최적화하는 자동화된 사전 커밋 후크가 포함됩니다. **일관된 이미지 최적화와 저장소 크기를 줄이려면 모든 기여자가 이러한 후크를 사용하도록 설정해야 합니다**.
+
+### 빠른 설정
+
+저장소를 복제한 후 다음을 실행합니다.
+
+```bash
+.githooks/setup-hooks.sh
+```
+
+### 후크가 수행하는 작업
+
+- 스테이징된 이미지 파일(PNG, JPG, JPEG, GIF, SVG) 자동 감지
+- `image_optim`을(를) 실행하여 이미지 압축 및 최적화
+- 최적화된 이미지 자동 재스테이지
+- 커밋된 모든 이미지가 올바르게 최적화되었는지 확인
+
+### 이점
+
+- 저장소 크기 감소
+- 설명서를 위한 빠른 페이지 로드
+- 모든 기여자에서 일관된 이미지 품질
+- 수동 최적화 불필요
+
+자세한 설정 지침, 문제 해결 및 구성은 [`.githooks/README.md`](.githooks/README.md)을(를) 참조하십시오.
