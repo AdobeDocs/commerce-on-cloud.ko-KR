@@ -19,12 +19,12 @@ ht-degree: 0%
 >
 >로컬 도구이며 Unix 기반 운영 체제에서만 지원됩니다. Windows는 지원되지 않습니다. 이 페이지에 설명된 방법을 사용하여 클라우드 환경(읽기 전용)에 설치할 수 없습니다. 다음 **배포 워크플로** 중 하나를 통해서만 클라우드 환경에 모듈을 설치할 수 있습니다.
 >
->- [Pro 배포 워크플로](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [스타터 배포 워크플로](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [Pro 배포 워크플로](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [스타터 배포 워크플로](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **`magento-cloud` CLI를 설치하려면**:
 
-1. _로컬 워크스테이션_&#x200B;에서 클라우드 프로젝트를 복제하려는 디렉터리와 [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)에게 _쓰기_ 액세스 권한이 있는 디렉터리로 변경합니다.
+1. _로컬 워크스테이션_&#x200B;에서 클라우드 프로젝트를 복제하려는 디렉터리와 [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ko)에게 _쓰기_ 액세스 권한이 있는 디렉터리로 변경합니다.
 
 1. `magento-cloud` CLI를 설치합니다.
 
@@ -137,7 +137,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. 로컬 워크스테이션에서 프로젝트 디렉터리로 변경합니다.
 
-1. [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)&#x200B;(으)로 전환합니다.
+1. [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ko)&#x200B;(으)로 전환합니다.
 
 1. 프로젝트에 로그인.
 
