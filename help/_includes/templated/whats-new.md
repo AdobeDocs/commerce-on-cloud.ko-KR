@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1c4ff862d63020546bb1647ee0b546eff0395e42
+source-git-commit: f985bfc32040919a992b82b56e2f1a58370b3834
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '145'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p><code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI 도구 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">설치</a>에 대해 지원되는 운영 체제를 명확히 설명했습니다.</p>
+      <td><p><code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI 도구 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">설치</a>에 대해 지원되는 운영 체제를 명확히 설명했습니다.</p>
 </td>
       <td>
         피드백
@@ -45,7 +45,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>Cloud Patches 패키지 v1.1.11에 대한 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">릴리스 노트</a>가 추가되었습니다.</p>
+      <td><p>Cloud Patches 패키지 v1.1.11에 대한 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">릴리스 노트</a>가 추가되었습니다.</p>
 </td>
       <td>
         주요 업데이트
@@ -67,7 +67,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools 릴리스, v2002.2.7 이후에 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a> 및 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">오류 메시지</a>가 업데이트되었습니다.</p>
+      <td><p>ECE-Tools 릴리스, v2002.2.7 이후에 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a> 및 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">오류 메시지</a>가 업데이트되었습니다.</p>
 </td>
       <td>
         기술
@@ -89,7 +89,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>클라우드 구성 요소, 도커, 패치 및 ECE 도구 패키지에 대한 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">릴리스 노트</a>를 추가했습니다.</p>
+      <td><p>클라우드 구성 요소, 도커, 패치 및 ECE 도구 패키지에 대한 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">릴리스 노트</a>를 추가했습니다.</p>
 </td>
       <td>
         주요 업데이트
@@ -111,7 +111,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>AWS에서 호스팅되는 프로젝트의 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">디스크 공간 증가</a> 후 필수 6시간 쿨다운 기간에 대한 메모를 추가했습니다.</p>
+      <td><p>AWS에서 호스팅되는 프로젝트의 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">디스크 공간 증가</a> 후 필수 6시간 쿨다운 기간에 대한 메모를 추가했습니다.</p>
 </td>
       <td>
         기술
@@ -133,56 +133,12 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">기본 인증</a>에 대한 추가 정보를 Fastly로 추가했습니다.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">기본 인증</a>에 대한 추가 정보를 Fastly로 추가했습니다.</p>
 </td>
       <td>
         주요 업데이트
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/6d949fbbab631e633ba27641a48829d74856fcaa">커밋</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025년 7월 18일
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>설명</th>
-      <th>유형</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Valkey 서비스에 누락된 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/valkey">구성</a> 정보가 추가되었습니다.</p>
-</td>
-      <td>
-        기술
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/add0d4f3bd91b66fd1bd8f5306ff206076121871">커밋</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025년 7월 15일
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>설명</th>
-      <th>유형</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>지원 종료에 도달하여 혼동을 일으키고 있는 Commerce 버전에 대한 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">업그레이드 지침</a>을 제거했습니다.</p>
-</td>
-      <td>
-        주요 업데이트, 피드백
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/7c0fcf520cd76f25d51f3a644a60132ac6028959">커밋</a></td>
     </tr>
   </tbody>
 </table>
