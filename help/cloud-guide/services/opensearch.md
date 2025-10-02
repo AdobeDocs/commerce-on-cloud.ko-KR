@@ -27,7 +27,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 >[!TIP]
 >
->[실시간 검색](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview)을 사용하지 않는 한, Adobe에서는 Adobe Commerce 애플리케이션에 대한 서드파티 검색 도구를 구성할 계획이더라도 항상 Adobe Commerce on cloud infrastructure 프로젝트에 대한 OpenSearch를 설정할 것을 권장합니다. OpenSearch 설정은 타사 검색 도구가 실패할 경우 대체 옵션을 제공합니다.
+>[실시간 검색](https://experienceleague.adobe.com/ko/docs/commerce/live-search/overview)을 사용하지 않는 한, Adobe에서는 Adobe Commerce 애플리케이션에 대한 서드파티 검색 도구를 구성할 계획이더라도 항상 Adobe Commerce on cloud infrastructure 프로젝트에 대한 OpenSearch를 설정할 것을 권장합니다. OpenSearch 설정은 타사 검색 도구가 실패할 경우 대체 옵션을 제공합니다.
 
 **OpenSearch를 사용하려면**:
 
@@ -39,7 +39,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
        disk: 1024
    ```
 
-   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
+   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
 
 1. `relationships` 파일에서 `.magento.app.yaml` 속성을 설정하거나 확인하십시오.
 
@@ -92,7 +92,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 - **프로젝트 업그레이드**-새 응용 프로그램 버전의 OpenSearch PHP 클라이언트가 클라우드 인프라에 설치된 OpenSearch 서비스 버전과 호환되는지 확인하십시오.
 
-서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)의 _시스템 요구 사항_&#x200B;을 참조하십시오.
+서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)의 _시스템 요구 사항_&#x200B;을 참조하십시오.
 
 **OpenSearch 소프트웨어 호환성을 확인하려면**:
 
@@ -184,7 +184,7 @@ OpenSearch 서비스를 다시 시작해야 하는 경우에는 Adobe Commerce �
 
 >[!NOTE]
 >
->이는 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에 플러그인을 설치하려면 [지원 요청을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하십시오.
+>이는 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에 플러그인을 설치하려면 [지원 요청을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하십시오.
 
 
 ```yaml
@@ -208,7 +208,7 @@ opensearch:
 
 >[!NOTE]
 >
->이 변경 사항은 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에서 플러그인을 제거하려면 [지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)해야 합니다.
+>이 변경 사항은 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에서 플러그인을 제거하려면 [지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)해야 합니다.
 
 1. `.magento/services.yaml` 파일에서 OpenSearch 플러그인 항목을 제거합니다.
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
