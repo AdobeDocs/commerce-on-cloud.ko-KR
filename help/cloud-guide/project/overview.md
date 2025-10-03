@@ -2,9 +2,10 @@
 title: 클라우드 인프라 프로젝트
 description: 클라우드 인프라의 Adobe Commerce에 대한 개요 [!DNL Cloud Console] 를 읽고 계정 설정에 액세스하는 방법을 알아보십시오.
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8eed04c7-6469-45a4-aa89-dc594c977264
+source-git-commit: 00b1b6578c226a304697963d17ba349ea17da260
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ Adobe은 프로젝트의 모든 측면을 완전히 관리할 수 있는 [!DNL C
 
 >[!TIP]
 >
->프로젝트가 표시되지 않으면 프로젝트와 연결된 [계정 소유자 또는 프로젝트 관리자](../project/user-access.md)에게 연락하여 액세스 권한을 요청해야 합니다. 처음 사용하는 사용자의 경우 _시작_ 안내서에서 [온보딩 항목](../../get-started/onboarding.md#cloud-console)을 참조하세요.
+>프로젝트가 표시되지 않으면 프로젝트와 연결된 [계정 소유자 또는 프로젝트 관리자](../project/user-access.md)에게 연락하여 액세스 권한을 요청해야 합니다. 처음 사용하는 사용자의 경우 [시작](../../get-started/onboarding.md#cloud-console) 안내서에서 _온보딩 항목_&#x200B;을 참조하세요.
 
 _모든 프로젝트_ 보기에는 액세스 권한이 있는 모든 프로젝트가 나열됩니다. **[!UICONTROL Show filters]**&#x200B;을(를) 클릭하고 프로젝트 목록을 유형, 지역 또는 계획별로 필터링할 수 있습니다.
 
@@ -42,11 +43,11 @@ _모든 프로젝트_ 목록에서 프로젝트를 선택하면 프로젝트 개
 
 기본 프로젝트 개요에서는
 
-- 환경 보기는 ![활성 분기](../../assets/icon-active.png){width="32"} (active) and ![inactive branch](../../assets/icon-inactive.png){width="32"}(비활성) 환경의 목록 또는 트리 보기를 표시합니다.
+- 환경 보기에는 ![활성 분기](../../assets/icon-active.png){width="32"}(활성) 및 ![비활성 분기](../../assets/icon-inactive.png){width="32"}(비활성) 환경의 목록 또는 트리 보기가 표시됩니다.
 - [활동 스트림](activity-stream.md)에 프로젝트에 대한 실행 중, 보류 중 및 최근 활동이 표시됩니다.
 <!-- - Apps & Services—Shows a topology of service containers -->
 
-**Starter** 프로젝트의 경우 `master`(프로덕션)부터 시작되는 분기 계층이 있습니다. 만든 모든 분기는 `master` 분기의 하위 분기로 표시됩니다. Adobe은 `staging` 분기를 만든 다음 개발을 위해 `integration` 분기를 만들 것을 권장합니다. [Starter 아키텍처](../architecture/starter-architecture.md)를 참조하세요.
+**Starter** 프로젝트의 경우 `master`(프로덕션)부터 시작되는 분기 계층이 있습니다. 만든 모든 분기는 `master` 분기의 하위 분기로 표시됩니다. Adobe에서는 `staging` 분기를 만든 다음 개발을 위해 `integration` 분기를 만들 것을 권장합니다. [Starter 아키텍처](../architecture/starter-architecture.md)를 참조하세요.
 
 **Pro**&#x200B;의 경우 `production`부터 `staging`까지 `integration`까지 분기의 계층 구조가 있습니다. ![전용 아이콘](../../assets/icon-dedicated.png){width="32"} 아이콘은 분기가 전용 환경에 배포됨을 나타냅니다. 만든 모든 분기는 `integration` 분기의 하위 분기로 표시됩니다. [Pro 아키텍처](../architecture/pro-architecture.md)를 참조하십시오.
 
@@ -104,7 +105,7 @@ Pro 프로덕션 및 스테이징 환경에는 다음 링크를 사용하여 액
 
 ## 설정
 
-프로젝트 탐색 오른쪽의 ![프로젝트 구성 아이콘](../../assets/icon-configure.png){width="36"}(구성) 아이콘을 클릭하여 _설정_ 패널을 엽니다.
+프로젝트 탐색 오른쪽의 _프로젝트 구성 아이콘_(구성) 아이콘을 클릭하여 ![설정](../../assets/icon-configure.png){width="36"} 패널을 엽니다.
 
 ### 프로젝트 설정
 
@@ -140,7 +141,7 @@ Pro 프로덕션 및 스테이징 환경에는 다음 링크를 사용하여 액
 
 >[!WARNING]
 >
->**HTTP 액세스 제어 메서드를 사용하여 Pro 스테이징 및 프로덕션 환경을 보호하지 마십시오**. 이는 Fastly 캐싱을 중단합니다. 대신 Adobe Commerce용 Fastly CDN에서 사용할 수 있는 [차단](../cdn/fastly-vcl-blocking.md) 기능을 사용하십시오.
+>**HTTP 액세스 제어 메서드를 사용하여 Pro 스테이징 및 프로덕션 환경을 보호하지 마십시오**. 이는 Fastly 캐싱을 중단합니다. 대신 Adobe Commerce용 Fastly CDN에서 사용할 수 있는 [차단](../cdn/fastly-vcl-blocking.md) 기능을 사용하여 액세스를 차단하거나 [Fastly 기본 인증](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)을 사용하여 액세스 제어를 구현하십시오.
 
 ## Fastly 및 New Relic 자격 증명
 
