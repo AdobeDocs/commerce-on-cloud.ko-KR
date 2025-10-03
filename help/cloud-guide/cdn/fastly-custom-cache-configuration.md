@@ -3,9 +3,9 @@ title: 캐시 구성 사용자 정의
 description: Fastly 서비스 설정이 완료된 후 캐시 구성 설정을 검토하고 사용자 지정하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
+source-git-commit: a2f5e2f67c7739302a87eaa27df25a62fca1acb7
 workflow-type: tm+mt
-source-wordcount: '1953'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,11 @@ ht-degree: 0%
 
 스테이징 및 프로덕션 환경에서 Fastly 서비스를 설정하고 테스트한 후 캐시 구성 설정을 검토하고 사용자 지정합니다. 예를 들어 설정을 업데이트하여 TLS가 HTTP 요청을 Fastly로 리디렉션하도록 하고, 제거 설정을 업데이트하며, 기본 인증을 활성화하여 개발 중에 사이트를 암호로 보호할 수 있습니다.
 
-다음 섹션에서는 일부 캐시 설정을 구성하는 방법에 대한 개요와 지침을 제공합니다. 사용 가능한 구성 옵션에 대한 자세한 내용은 [Fastly CDN Module for Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation) 설명서를 참조하십시오.
+다음 섹션에서는 일부 캐시 설정을 구성하는 방법에 대한 개요와 지침을 제공합니다.
+
+>[!IMPORTANT]
+>
+>Fastly 캐시를 구성하는 데 사용할 수 있는 관리 옵션은 설치된 Magento 2용 Fastly CDN 모듈 버전에 따라 다릅니다. Adobe은 스테이징 및 프로덕션 환경에서 [Fastly 모듈을 업그레이드](fastly-configuration.md#upgrade)할 것을 권장합니다. 최신 정보는 [Magento2 모듈용 Fastly CDN에 대한 릴리스 노트](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)를 참조하십시오.
 
 ## TLS 강제 실행
 
@@ -187,7 +191,7 @@ Starter 및 Pro 프로젝트 모두 [!UICONTROL Domains] 옵션을 사용하여 
 
 - 시작 프로젝트의 경우 [!UICONTROL Domains]의 [!DNL Cloud Console] 탭 아래에 있는 프로젝트 URL로 이동하여 프로젝트 URL을 추가하십시오.
 
-- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
+- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
 
 **관리자로부터 Fastly 도메인 구성을 관리하려면**:
 
