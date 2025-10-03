@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## TLS 강제 실행
 
-Fastly는 암호화되지 않은 요청(HTTP)을 Fastly로 리디렉션하기 위한 _TLS 강제 적용_ 옵션을 제공합니다. 스테이징 또는 프로덕션 환경에 [유효한 SSL/TLS 인증서](fastly-configuration.md#provision-ssltls-certificates)가 제공되면 스토어의 Fastly 구성을 업데이트하여 TLS 강제 적용 옵션을 활성화할 수 있습니다. Magento 2[ 설명서의 ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly CDN 모듈에서 Fastly _Force TLS 안내서_&#x200B;를 참조하십시오.
+Fastly는 암호화되지 않은 요청(HTTP)을 Fastly로 리디렉션하기 위한 _TLS 강제 적용_ 옵션을 제공합니다. 스테이징 또는 프로덕션 환경에 [유효한 SSL/TLS 인증서](fastly-configuration.md#provision-ssltls-certificates)가 제공되면 스토어의 Fastly 구성을 업데이트하여 TLS 강제 적용 옵션을 활성화할 수 있습니다. Magento 2[&#x200B; 설명서의 &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly CDN 모듈에서 Fastly _Force TLS 안내서_&#x200B;를 참조하십시오.
 
 >[!NOTE]
 >

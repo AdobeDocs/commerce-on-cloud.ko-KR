@@ -38,7 +38,7 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
 다음 목록을 사용하여 클라우드 인프라 환경의 Adobe Commerce에 대한 Fastly 서비스 구성과 관련된 문제를 식별하고 해결하십시오.
 
-- **스토어 메뉴가 표시되지 않거나 작동하지 않음**—라이브 사이트 URL을 사용하는 대신 원본 서버에 직접 연결된 링크 또는 임시 링크를 사용하거나 `-H "host:URL"`cURL 명령[에서 ](#check-live-site-through-fastly)을(를) 사용했을 수 있습니다. 원본 서버로 Fastly를 무시하면 기본 메뉴가 작동하지 않고 브라우저측에서 캐싱을 허용하는 잘못된 헤더가 표시됩니다.
+- **스토어 메뉴가 표시되지 않거나 작동하지 않음**—라이브 사이트 URL을 사용하는 대신 원본 서버에 직접 연결된 링크 또는 임시 링크를 사용하거나 `-H "host:URL"`cURL 명령[에서 &#x200B;](#check-live-site-through-fastly)을(를) 사용했을 수 있습니다. 원본 서버로 Fastly를 무시하면 기본 메뉴가 작동하지 않고 브라우저측에서 캐싱을 허용하는 잘못된 헤더가 표시됩니다.
 
 - **위쪽 탐색이 작동하지 않습니다**—위쪽 탐색은 기본 Magento Fastly VCL 스니펫을 업로드할 때 사용할 수 있는 ESI(Edge Side Includes) 처리를 사용합니다. 탐색이 작동하지 않으면 [Fastly VCL을 업로드](fastly-configuration.md#upload-vcl-to-fastly)하고 사이트를 다시 확인하십시오.
 
