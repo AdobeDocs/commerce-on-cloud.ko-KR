@@ -3,9 +3,9 @@ title: Fastly 서비스 구성
 description: Adobe Commerce 프로젝트에 대한 Fastly 서비스를 설정하고 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
-source-git-commit: 867abffd6cbed6e026c20b646ff641cc6ab40580
+source-git-commit: 084e41d074f0abd9019bd45c8e337b174f8736b2
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2098'
 ht-degree: 0%
 
 ---
@@ -40,49 +40,57 @@ Adobe Commerce 관리자로부터 Fastly CDN 서비스를 구성하고 Fastly AP
 
 클라우드 인프라의 Adobe Commerce을 사용하면 Fastly 관리 대시보드에 직접 액세스할 수 없습니다.
 
-Adobe Commerce 관리자를 사용하여 환경에 대한 Fastly 구성을 검토하고 업데이트해야 합니다. 관리자의 Fastly 기능을 사용하여 문제를 해결할 수 없는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하세요.
+Adobe Commerce 관리자를 사용하여 환경에 대한 Fastly 구성을 검토하고 업데이트합니다. 관리자의 Fastly 기능을 사용하여 문제를 해결할 수 없는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html)을 제출하세요.
 
 ## Fastly 자격 증명 가져오기
 
-다음 메서드를 사용하여 환경에 대한 Fastly 서비스 ID 및 API 토큰을 찾아 저장합니다.
+스테이징 및 프로덕션 환경에 대한 Fastly 서비스 ID 및 API 토큰은 클라우드 프로젝트 환경에 저장됩니다. 두 환경 모두에 대한 자격 증명이 필요합니다.
 
-**Fastly 자격 증명을 보려면**:
+**Cloud Pro 프로젝트에 대한 자격 증명 가져오기**:
 
->[!NOTE]
->
->지원 티켓, 공개 포럼 또는 공개 위치에서 API 토큰을 공유하지 마십시오. 또한 API 토큰을 코드 저장소에 커밋하지 마십시오. 저장소에는 중요한 정보 없이 변경할 수 없는 파일만 포함되어야 합니다.
->
->Adobe Commerce 지원에는 이미 필요한 키에 대한 액세스 권한이 있으므로 지원을 요청할 때 API 토큰을 제공할 필요가 없습니다.
->
->API 토큰이 공개적으로 공유되거나 지원 티켓에 첨부된 경우 손상된 것으로 간주됩니다. 이러한 경우 Adobe에서 새 토큰을 생성해야 합니다.
->
->관련: [Fastly 자격 증명을 확인하는 동안 오류가 발생했습니다](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)
+Cloud Pro 프로젝트의 IaaS 탑재 공유 디렉터리에서 자격 증명을 확인합니다.
 
-자격 증명을 보는 방법은 Pro 및 Starter 프로젝트에서 다릅니다.
+1. SSH를 사용하여 서버에 연결합니다.
 
-- IaaS 탑재 공유 디렉터리 - Pro 프로젝트에서 SSH를 사용하여 서버에 연결하고 `/mnt/shared/fastly_tokens.txt` 파일에서 Fastly 자격 증명을 가져옵니다. 스테이징 및 프로덕션 환경에는 고유한 자격 증명이 있습니다. 각 환경에 대한 자격 증명을 가져와야 합니다.
+2. 자격 증명을 가져오려면 `/mnt/shared/fastly_tokens.txt` 파일을 여십시오.
 
-- 로컬 작업 영역—명령줄에서 `magento-cloud` CLI를 사용하여 Fastly 환경 변수를 [나열하고 검토](../environment/variables-cloud.md#viewing-environment-variables)합니다.
+   스테이징 및 프로덕션 환경에는 고유한 자격 증명이 있습니다. 각 환경에 대한 자격 증명을 가져와야 합니다.
 
-  ```bash
-  magento-cloud variable:get -e <environment-ID>
-  ```
+**클라우드 시작 프로젝트에 대한 자격 증명 가져오기**:
 
-- [!DNL Cloud Console] - [환경 구성](../project/overview.md#configure-environment)에서 다음 환경 변수를 확인하십시오.
+Cloud Starter 프로젝트에서 Cloud Console 또는 Cloud CLI를 사용하여 자격 증명을 가져옵니다.
+
+- [!DNL Cloud Console]에서 [환경 구성](../project/overview.md#configure-environment)에서 다음 환경 변수를 확인하십시오.
 
    - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
 
    - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
 
->[!NOTE]
->
->스테이징 또는 프로덕션 환경에 대한 Fastly 자격 증명을 찾을 수 없는 경우 Adobe 고객 기술 관리자(CTA)에 문의하십시오.
+- 로컬 작업 영역의 명령줄에서 `magento-cloud` CLI를 사용하여 Fastly 환경 변수를 [나열하고 검토](../environment/variables-cloud.md#viewing-environment-variables)합니다.
+
+  ```bash
+  magento-cloud variable:get -e <environment-ID>
+  ```
+
+### 문제 해결
+
+- 스테이징 또는 프로덕션 환경에 대한 Fastly 자격 증명을 찾을 수 없는 경우 Adobe 고객 기술 관리자(CTA)에 문의하십시오.
+
+- [Fastly 자격 증명을 확인하는 동안 오류가 발생했습니다](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution).
+
+## 자격 증명 보호
+
+지원 티켓, 공개 포럼 또는 공개 위치에서 API 토큰을 공유하지 마십시오. 또한 API 토큰을 코드 저장소에 커밋하지 마십시오. 저장소에는 중요한 정보 없이 변경할 수 없는 파일만 포함되어야 합니다.
+
+Adobe Commerce 지원에는 이미 필요한 키에 대한 액세스 권한이 있으므로 지원을 요청할 때 API 토큰을 제공할 필요가 없습니다.
+
+API 토큰이 공개적으로 공유되거나 지원 티켓에 첨부된 경우 손상된 것으로 간주됩니다. 이러한 경우 Adobe에서 새 토큰을 생성해야 합니다.
 
 ## Fastly 캐싱 활성화
 
 Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필요합니다.
 
-- 스테이징 및 프로덕션 환경에 설치된 [Fastly CDN for Magento 2 모듈](fastly.md#fastly-cdn-module-for-magento-2)의 최신 버전입니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
+- Magento 2 모듈[용 ](fastly.md#fastly-cdn-module-for-magento-2)Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
 
 - 클라우드 인프라 스테이징 및 프로덕션 환경의 Adobe Commerce에 대한 [Fastly 자격 증명](#get-fastly-credentials)
 
@@ -148,11 +156,11 @@ Fastly 모듈을 사용하도록 설정한 후 기본 [VCL 코드](https://githu
 
 ## SSL/TLS 인증서 프로비저닝
 
-Adobe은 Fastly에서 보안 HTTPS 트래픽을 제공하기 위해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe은 각 Pro Production, Staging 및 Starter 프로덕션 환경에 대해 하나의 인증서를 제공하여 해당 환경의 모든 도메인을 보호합니다. 제공된 인증서에 대한 자세한 내용은 [클라우드 인프라의 Adobe Commerce용 Adobe SSL(TLS) 인증서](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=ko)를 참조하십시오.
+Adobe은 Fastly에서 보안 HTTPS 트래픽을 제공하기 위해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe은 각 Pro Production, Staging 및 Starter 프로덕션 환경에 대해 하나의 인증서를 제공하여 해당 환경의 모든 도메인을 보호합니다. 제공된 인증서에 대한 자세한 내용은 [클라우드 인프라의 Adobe Commerce용 Adobe SSL(TLS) 인증서](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)를 참조하십시오.
 
 >[!NOTE]
 >
->Adobe에서 제공하는 Let&#39;s Encrypt 인증서를 사용하는 대신 자체 TLS 또는 SSL 인증서를 제공할 수 있습니다. 그러나 이 프로세스를 설정하고 유지 관리하려면 추가 작업이 필요합니다. 이 옵션을 선택하려면 Adobe Commerce 지원 티켓을 제출하거나 Adobe을 사용하여 사용자 지정 호스팅 인증서를 클라우드 인프라 환경의 Adobe Commerce에 추가하십시오.
+>Adobe에서 제공하는 Let&#39;s Encrypt 인증서를 사용하는 대신 자체 TLS 또는 SSL 인증서를 제공할 수 있습니다. 그러나 이 프로세스를 설정하고 유지 관리하기 위해서는 추가 작업이 필요합니다. 이 옵션을 선택하려면 Adobe Commerce 지원 티켓을 제출하거나 Adobe을 사용하여 사용자 지정 호스팅 인증서를 클라우드 인프라 환경의 Adobe Commerce에 추가하십시오.
 
 Adobe Commerce 환경에 대한 SSL/TLS 인증서를 활성화하기 위해 Adobe 자동화는 다음 단계를 완료합니다.
 
@@ -169,7 +177,7 @@ Adobe Commerce 환경에 대한 SSL/TLS 인증서를 활성화하기 위해 Adob
 >
 >활성화되지 않은 프로덕션 도메인이 있는 경우 도메인 유효성 검사에 ACME 챌린지 CNAME 레코드를 사용합니다. 일찍 DNS 구성에 레코드를 추가하면 Adobe은 사이트를 시작하기 전에 올바른 도메인에 SSL/TLS 인증서를 프로비저닝할 수 있습니다. 프로덕션에 시작하기 전에 이러한 자리 표시자 레코드를 Adobe에서 제공하는 CNAME 레코드로 바꿔야 합니다.
 
-도메인 유효성 검사가 완료되면 Adobe은 Let&#39;s Encrypt TLS/SSL 인증서를 프로비저닝하고 라이브 스테이징 또는 프로덕션 환경에 업로드합니다. 이 프로세스는 최대 12시간 정도 소요될 수 있습니다. 사이트 개발 및 사이트 실행이 지연되지 않도록 며칠 전에 DNS 구성 업데이트를 완료하는 것이 좋습니다.
+도메인 유효성 검사가 완료되면 Adobe은 Let&#39;s Encrypt TLS/SSL 인증서를 프로비저닝하고 라이브 스테이징 또는 프로덕션 환경에 업로드합니다. 이 프로세스는 최대 12시간 정도 소요될 수 있습니다. Adobe은 사이트 개발 및 사이트 실행이 지연되지 않도록 며칠 전에 DNS 구성 업데이트를 완료할 것을 권장합니다.
 
 ## 개발 설정으로 DNS 구성 업데이트
 
@@ -252,7 +260,7 @@ Adobe Commerce 환경에 대한 SSL/TLS 인증서를 활성화하기 위해 Adob
 
    >[!NOTE]
    >
-   >Cloud CLI를 사용하는 대신 [관리자](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ko)에서 기본 URL을 업데이트할 수 있습니다
+   >Cloud CLI를 사용하는 대신 [관리자](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)에서 기본 URL을 업데이트할 수 있습니다
 
 1. 웹 브라우저를 다시 시작합니다.
 
@@ -276,10 +284,10 @@ DNS 구성 변경을 완료한 후 [cURL](https://curl.se/) 명령줄 도구를 
    curl -vo /dev/null -H Fastly-Debug:1 --resolve <live-URL-hostname>:443:<live-IP-address>
    ```
 
-1. 응답에서 [headers](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)을(를) 확인하여 Fastly가 작동하는지 확인하십시오. 응답에 다음의 고유한 헤더가 표시되어야 합니다.
+1. 응답에서 [headers](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)을(를) 확인하여 Fastly가 작동하는지 확인하십시오. 예를 들어 응답에 다음의 고유한 헤더가 표시되어야 합니다.
 
    ```http
-   < Fastly-Magento-VCL-Uploaded: yes
+   < Fastly-Magento-VCL-Uploaded: 1.2.228
    < X-Cache: HIT, MISS
    ```
 
@@ -288,7 +296,7 @@ DNS 구성 변경을 완료한 후 [cURL](https://curl.se/) 명령줄 도구를 
 ## Fastly 모듈 업그레이드
 
 Fastly는 Magento 2 모듈용 Fastly CDN을 업데이트하여 문제를 해결하고, 성능을 향상시키며, 새로운 기능을 제공합니다.
-스테이징 및 프로덕션 환경의 Fastly 모듈을 [최신 버전](https://github.com/fastly/fastly-magento2/blob/master/VERSION)&#x200B;(으)로 업데이트하는 것이 좋습니다.
+Adobe에서는 스테이징 및 프로덕션 환경의 Fastly 모듈을 [최신 버전](https://github.com/fastly/fastly-magento2/blob/master/VERSION)&#x200B;(으)로 업데이트할 것을 권장합니다.
 
 모듈을 업데이트한 후 VCL 코드를 업로드하여 변경 사항을 Fastly 서비스 구성에 적용해야 합니다.
 
@@ -327,4 +335,4 @@ Fastly는 Magento 2 모듈용 Fastly CDN을 업데이트하여 문제를 해결�
 
 >[!TIP]
 >
-> Adobe Commerce 환경에서 Fastly 서비스에 문제가 있는 경우 [Adobe Commerce Fastly 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=ko)를 참조하세요.
+> Adobe Commerce 환경에서 Fastly 서비스에 문제가 있는 경우 [Adobe Commerce Fastly 문제 해결사](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter)를 참조하세요.
