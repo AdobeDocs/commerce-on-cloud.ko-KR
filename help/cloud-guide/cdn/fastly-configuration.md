@@ -90,7 +90,7 @@ API 토큰이 공개적으로 공유되거나 지원 티켓에 첨부된 경우 
 
 Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필요합니다.
 
-- Magento 2 모듈[용 ](fastly.md#fastly-cdn-module-for-magento-2)Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
+- Magento 2 모듈[용 &#x200B;](fastly.md#fastly-cdn-module-for-magento-2)Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
 
 - 클라우드 인프라 스테이징 및 프로덕션 환경의 Adobe Commerce에 대한 [Fastly 자격 증명](#get-fastly-credentials)
 
