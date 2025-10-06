@@ -82,7 +82,7 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
 
    >[!NOTE]
    >
-   >`magento-cloud db:dump` 명령은 테이블을 잠그지 않고 데이터베이스를 백업할 수 있도록 [ 플래그를 사용하여 ](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)mysqldump`--single-transaction` 명령을 실행합니다.
+   >`magento-cloud db:dump` 명령은 테이블을 잠그지 않고 데이터베이스를 백업할 수 있도록 [&#x200B; 플래그를 사용하여 &#x200B;](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)mysqldump`--single-transaction` 명령을 실행합니다.
 
 1. 코드 및 미디어를 백업합니다.
 
