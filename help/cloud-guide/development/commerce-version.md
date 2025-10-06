@@ -3,20 +3,20 @@ title: Commerce 버전 업그레이드
 description: 클라우드 인프라 환경에서 Adobe Commerce 버전을 업그레이드하는 방법을 알아봅니다.
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
-source-git-commit: 7f9aac358effdf200b59678098e6a1635612301b
+source-git-commit: fe1da39c1d00d74d3f116423e06d11cefd3c2659
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # Commerce 버전 업그레이드
 
-Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 있습니다. 환경을 업그레이드하기 전에 [설치](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko) 안내서의 _시스템 요구 사항_&#x200B;에서 최신 소프트웨어 버전 요구 사항을 검토하십시오.
+Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 있습니다. 환경을 업그레이드하기 전에 [설치](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) 안내서의 _시스템 요구 사항_&#x200B;에서 최신 소프트웨어 버전 요구 사항을 검토하십시오.
 
 환경 유형(개발, 스테이징 또는 프로덕션)에 따라 업그레이드 작업에는 다음이 포함될 수 있습니다.
 
-- 새 Adobe Commerce 버전과의 호환성을 위해 MariaDB(MySQL), OpenSearch, RabbitMQ 및 Redis의 새 버전으로 `.magento/services.yaml` 파일을 업데이트하십시오.
+- 새 Adobe Commerce 버전과의 호환성을 위해 MariaDB(MySQL), OpenSearch, RabbitMQ 및 Redis의 새 버전으로 `.magento/services.yaml` 파일을 업데이트하십시오. Pro 프로젝트의 경우 Adobe Commerce 지원 티켓을 제출하여 스테이징 및 프로덕션 환경에서 서비스를 설치하거나 업데이트해야 합니다.
 - 후크 및 환경 변수에 대한 새로운 설정으로 `.magento.app.yaml` 파일을 업데이트합니다.
 - 타사 확장을 지원되는 최신 버전으로 업그레이드하십시오.
 
@@ -82,7 +82,7 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
 
    >[!NOTE]
    >
-   >`magento-cloud db:dump` 명령은 테이블을 잠그지 않고 데이터베이스를 백업할 수 있도록 [&#x200B; 플래그를 사용하여 &#x200B;](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)mysqldump`--single-transaction` 명령을 실행합니다.
+   >`magento-cloud db:dump` 명령은 테이블을 잠그지 않고 데이터베이스를 백업할 수 있도록 [ 플래그를 사용하여 ](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)mysqldump`--single-transaction` 명령을 실행합니다.
 
 1. 코드 및 미디어를 백업합니다.
 
@@ -128,7 +128,7 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. B2B를 사용하는 경우 `composer.json` 파일을 Commerce용 [지원되는 버전](https://experienceleague.adobe.com/ko/docs/commerce-operations/release/product-availability#adobe-authored-extensions)&#x200B;(으)로 업데이트하십시오.
+1. B2B를 사용하는 경우 `composer.json` 파일을 Commerce용 [지원되는 버전](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)&#x200B;(으)로 업데이트하십시오.
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -142,15 +142,15 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
 
 1. 현재 적용된 패치를 검토합니다.
 
-   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
+   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
 
    - [ 파일에 ]품질 패치`.magento.env.yaml`가 적용된 경우 새 버전에 계속 적용할 수 있는지 확인하십시오. `QUALITY_PATCHES` 파일의 `.magento.env.yaml` 섹션에서 적용할 수 없는 패치를 제거합니다.
 
-   **메서드 1**: [품질 패치 릴리스 정보에서 해당 버전을 확인](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **메서드 1**: [품질 패치 릴리스 정보에서 해당 버전을 확인](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **메서드 2**: [사용 가능한 패치와 상태 보기](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **메서드 2**: [사용 가능한 패치와 상태 보기](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **메서드 3**: [패치 검색](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ko)
+   **메서드 3**: [패치 검색](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
 
 
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
