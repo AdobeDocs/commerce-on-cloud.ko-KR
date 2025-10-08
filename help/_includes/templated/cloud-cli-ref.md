@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9166b44ae53e8cfc6b8022730a6b91406ba696c0
+source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
 workflow-type: tm+mt
-source-wordcount: '13341'
+source-wordcount: '13671'
 ht-degree: 0%
 
 ---
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**버전**: 1.46.1
+**버전**: 1.47.0
 
-이 참조에는 `magento-cloud` 명령줄 도구를 통해 사용할 수 있는 119개의 명령이 포함되어 있습니다.
+이 참조에는 `magento-cloud` 명령줄 도구를 통해 사용할 수 있는 123개의 명령이 포함되어 있습니다.
 클라우드 인프라의 Adobe Commerce에서 `magento-cloud list` 명령을 사용하여 초기 목록이 자동으로 생성됩니다.
 
 ## 일반
@@ -27,6 +27,13 @@ ht-degree: 0%
 - 기본값: `false`
 - 값을 수락하지 않음
 
+#### `--version`, `-V`
+
+이 응용 프로그램 버전 표시
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
 #### `--verbose`, `-v|-vv|-vvv`
 
 메시지의 다양성 증가
@@ -34,9 +41,9 @@ ht-degree: 0%
 - 기본값: `false`
 - 값을 수락하지 않음
 
-#### `--version`, `-V`
+#### `--quiet`, `-q`
 
-이 응용 프로그램 버전 표시
+필요한 출력만 인쇄합니다. 다른 메시지와 오류는 표시하지 않습니다. 이것은 —no-interaction을 의미합니다. 상세 표시 모드에서는 무시됩니다.
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -67,6 +74,44 @@ CLI 캐시 지우기
 ### 옵션
 
 전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+
+## `console`
+
+```bash
+magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+콘솔에서 프로젝트를 엽니다.
+
+### 옵션
+
+전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+#### `--browser`
+
+URL을 여는 데 사용할 브라우저입니다. 없음에 대해 0을 설정합니다.
+
+- 값 필요
+
+#### `--pipe`
+
+URL을 stdout으로 출력합니다.
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+#### `--project`, `-p`
+
+프로젝트 ID 또는 URL
+
+- 값 필요
+
+#### `--environment`, `-e`
+
+환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
+
+- 값 필요
 
 
 ## `decode`
@@ -292,44 +337,6 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 
 - 기본값: `false`
 - 값을 수락하지 않음
-
-
-## `web`
-
-```bash
-magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-웹 UI에서 프로젝트 열기
-
-### 옵션
-
-전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
-
-#### `--browser`
-
-URL을 여는 데 사용할 브라우저입니다. 없음에 대해 0을 설정합니다.
-
-- 값 필요
-
-#### `--pipe`
-
-URL을 stdout으로 출력합니다.
-
-- 기본값: `false`
-- 값을 수락하지 않음
-
-#### `--project`, `-p`
-
-프로젝트 ID 또는 URL
-
-- 값 필요
-
-#### `--environment`, `-e`
-
-환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
-
-- 값 필요
 
 
 ## `activity:cancel`
@@ -565,7 +572,7 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 
 #### `--columns`, `-c`
 
-표시할 열입니다. 사용 가능한 열: id*, created*, description*, progress*, state*, result*, completed, environments, type (* = 기본 열). &quot;+&quot; 문자는 기본 열의 자리 표시자로 사용할 수 있습니다. % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
+표시할 열입니다. 사용 가능한 열: id*, created*, description*, progress*, state*, result*, completed, environments, time_build, time_deploy, time_execute, time_wait, type (* = 기본 열). &quot;+&quot; 문자는 기본 열의 자리 표시자로 사용할 수 있습니다. % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
 
 - 기본값: `[]`
 - 값 필요
@@ -829,7 +836,7 @@ Alternatively, to log in to the CLI with a browser, run:
 ## `auth:browser-login`
 
 ```bash
-magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
+magento-cloud login [-f|--force] [--method METHOD] [--max-age MAX-AGE] [--browser BROWSER] [--pipe]
 ```
 
 브라우저를 통해 Magento Cloud에 로그인합니다
@@ -860,6 +867,19 @@ MAGENTO_CLOUD_CLI_TOKEN environment variable.
 
 - 기본값: `false`
 - 값을 수락하지 않음
+
+#### `--method`
+
+특정 인증 방법 필요
+
+- 기본값: `[]`
+- 값 필요
+
+#### `--max-age`
+
+웹 인증 세션의 최대 기간(초)
+
+- 값 필요
 
 #### `--browser`
 
@@ -960,6 +980,156 @@ Magento 클라우드에서 로그아웃
 
 - 기본값: `false`
 - 값을 수락하지 않음
+
+
+## `autoscaling:get`
+
+```bash
+magento-cloud autoscaling [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+환경에서 앱 및 작업자의 자동 크기 조정 구성 보기
+
+### 옵션
+
+전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+#### `--project`, `-p`
+
+프로젝트 ID 또는 URL
+
+- 값 필요
+
+#### `--environment`, `-e`
+
+환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
+
+- 값 필요
+
+#### `--format`
+
+출력 형식: table, csv, tsv 또는 plain
+
+- 기본값: `table`
+- 값 필요
+
+#### `--columns`, `-c`
+
+표시할 열입니다. 사용 가능한 열: 서비스*, 지표*, 방향*, 임계값*, 기간*, 활성화*, instance_count*, cooldown, max_instances, min_instances (* = 기본 열). &quot;+&quot; 문자는 기본 열의 자리 표시자로 사용할 수 있습니다. % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
+
+- 기본값: `[]`
+- 값 필요
+
+#### `--no-header`
+
+테이블 머리글 출력 안 함
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+
+## `autoscaling:set`
+
+```bash
+magento-cloud autoscaling:set [-s|--service SERVICE] [-m|--metric METRIC] [--enabled ENABLED] [--threshold-up THRESHOLD-UP] [--duration-up DURATION-UP] [--cooldown-up COOLDOWN-UP] [--threshold-down THRESHOLD-DOWN] [--duration-down DURATION-DOWN] [--cooldown-down COOLDOWN-DOWN] [--instances-min INSTANCES-MIN] [--instances-max INSTANCES-MAX] [--dry-run] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+환경에서 앱 또는 작업자의 자동 크기 조정 구성 설정
+
+```
+Configure automatic scaling for apps or workers in an environment.
+
+You can also configure resources statically by running: magento-cloud resources:set
+```
+
+### 옵션
+
+전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+#### `--service`, `-s`
+
+자동 크기 조정을 구성할 앱 또는 작업자 이름
+
+- 값 필요
+
+#### `--metric`, `-m`
+
+자동 크기 조절을 트리거하는 데 사용할 지표 이름
+
+- 값 필요
+
+#### `--enabled`
+
+주어진 지표를 기반으로 자동 크기 조정 활성화
+
+- 값 필요
+
+#### `--threshold-up`
+
+서비스를 확장할 임계값
+
+- 값 필요
+
+#### `--duration-up`
+
+크기 조절을 위한 임계값에 대해 지표를 평가하는 기간
+
+- 값 필요
+
+#### `--cooldown-up`
+
+크기 조정 이벤트 후 추가 확장을 시도하기 전에 대기하는 기간
+
+- 값 필요
+
+#### `--threshold-down`
+
+서비스를 축소할 임계값
+
+- 값 필요
+
+#### `--duration-down`
+
+축소 임계값에 대해 지표를 평가하는 기간
+
+- 값 필요
+
+#### `--cooldown-down`
+
+크기 조정 이벤트 후 추가 확장을 시도하기 전에 대기하는 기간
+
+- 값 필요
+
+#### `--instances-min`
+
+다음으로 크기가 축소될 최소 인스턴스 수
+
+- 값 필요
+
+#### `--instances-max`
+
+최대 확장 가능한 인스턴스 수
+
+- 값 필요
+
+#### `--dry-run`
+
+아무것도 변경하지 않고 변경한 내용 표시
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+#### `--project`, `-p`
+
+프로젝트 ID 또는 URL
+
+- 값 필요
+
+#### `--environment`, `-e`
+
+환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
+
+- 값 필요
 
 
 ## `blackfire:setup`
@@ -1362,7 +1532,7 @@ Git 커밋 SHA를 시작하는 중입니다. 상위 커밋에 대해 &quot;HEAD&
 ## `db:dump`
 
 ```bash
-magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 원격 데이터베이스의 로컬 덤프 만들기
@@ -1461,101 +1631,11 @@ gzip을 사용하여 덤프 압축
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
-
-## `db:size`
-
-```bash
-magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
-```
-
-데이터베이스의 디스크 사용량 예측
-
-```
-This is an estimate of the database disk usage. The real size on disk is usually higher because of overhead.
-
-To see more accurate disk usage, run: magento-cloud disk
-```
-
-### 옵션
-
-전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
-
-#### `--bytes`, `-B`
-
-크기(바이트)를 표시합니다.
-
-- 기본값: `false`
-- 값을 수락하지 않음
-
-#### `--cleanup`, `-C`
-
-테이블을 정리할 수 있는지 확인하고 권장 사항을 표시합니다(InnoDb만 해당).
-
-- 기본값: `false`
-- 값을 수락하지 않음
-
-#### `--project`, `-p`
-
-프로젝트 ID 또는 URL
-
-- 값 필요
-
-#### `--environment`, `-e`
-
-환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
-
-- 값 필요
-
-#### `--app`, `-A`
-
-원격 애플리케이션 이름
-
-- 값 필요
-
-#### `--relationship`, `-r`
-
-사용할 서비스 관계
-
-- 값 필요
-
-#### `--format`
-
-출력 형식: table, csv, tsv 또는 plain
-
-- 기본값: `table`
-- 값 필요
-
-#### `--columns`, `-c`
-
-표시할 열입니다. 사용 가능한 열: max, percent_used, used % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
-
-- 기본값: `[]`
-- 값 필요
-
-#### `--no-header`
-
-테이블 머리글 출력 안 함
-
-- 기본값: `false`
-- 값을 수락하지 않음
-
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `db:sql`
 
 ```bash
-magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
+magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--] [<query>]
 ```
 
 원격 데이터베이스에서 SQL 실행
@@ -1607,12 +1687,6 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `domain:add`
 
@@ -1636,19 +1710,19 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 
 #### `--cert`
 
-이 도메인의 인증서 파일 경로
+사용자 정의 인증서 파일의 경로
 
 - 값 필요
 
 #### `--key`
 
-제공된 인증서의 개인 키 파일 경로.
+사용자 정의 인증서의 개인 키 경로
 
 - 값 필요
 
 #### `--chain`
 
-제공된 인증서의 인증서 체인 파일 경로
+사용자 정의 인증서의 체인 파일 경로
 
 - 기본값: `[]`
 - 값 필요
@@ -1866,19 +1940,19 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 
 #### `--cert`
 
-이 도메인의 인증서 파일 경로
+사용자 정의 인증서 파일의 경로
 
 - 값 필요
 
 #### `--key`
 
-제공된 인증서의 개인 키 파일 경로.
+사용자 정의 인증서의 개인 키 경로
 
 - 값 필요
 
 #### `--chain`
 
-제공된 인증서의 인증서 체인 파일 경로
+사용자 정의 인증서의 체인 파일 경로
 
 - 기본값: `[]`
 - 값 필요
@@ -1967,7 +2041,7 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|
 ## `environment:branch`
 
 ```bash
-magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
+magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [--no-checkout] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
 ```
 
 환경 분기
@@ -2006,6 +2080,13 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 - 기본값: `false`
 - 값을 수락하지 않음
 
+#### `--no-checkout`
+
+로컬에서 분기를 체크아웃하지 않음
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
 #### `--project`, `-p`
 
 프로젝트 ID 또는 URL
@@ -2036,7 +2117,7 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 ## `environment:checkout`
 
 ```bash
-magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
+magento-cloud checkout [<id>]
 ```
 
 환경 확인
@@ -2051,17 +2132,11 @@ magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 
 전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `environment:delete`
 
 ```bash
-magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--status STATUS] [--only-status ONLY-STATUS] [--exclude-status EXCLUDE-STATUS] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 하나 이상의 환경 삭제
@@ -2136,6 +2211,27 @@ Git 분기(비활성 환경)를 삭제하지 마십시오
 - 기본값: `false`
 - 값을 수락하지 않음
 
+#### `--status`
+
+상태의 모든 환경 삭제(선택한 다른 환경에 추가) 값은 쉼표(예: &quot;a,b,c&quot;) 및/또는 공백으로 분할할 수 있습니다.
+
+- 기본값: `[]`
+- 값 필요
+
+#### `--only-status`
+
+특정 상태의 삭제 환경만 쉼표(예: &quot;a,b,c&quot;) 및/또는 공백으로 분할할 수 있습니다.
+
+- 기본값: `[]`
+- 값 필요
+
+#### `--exclude-status`
+
+값을 삭제하지 않는 환경 상태는 쉼표(예: &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있습니다.
+
+- 기본값: `[]`
+- 값 필요
+
 #### `--merged`
 
 모든 병합된 환경 삭제(선택한 다른 환경에 추가)
@@ -2146,6 +2242,108 @@ Git 분기(비활성 환경)를 삭제하지 마십시오
 #### `--allow-delete-parent`
 
 하위 항목이 있는 환경 삭제 허용
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+#### `--project`, `-p`
+
+프로젝트 ID 또는 URL
+
+- 값 필요
+
+#### `--environment`, `-e`
+
+환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
+
+- 값 필요
+
+#### `--no-wait`, `-W`
+
+작업이 완료될 때까지 기다리지 마십시오.
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+#### `--wait`
+
+작업이 완료될 때까지 대기(기본값)
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+
+## `environment:deploy`
+
+```bash
+magento-cloud deploy [-s|--strategy STRATEGY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+```
+
+환경의 스테이징된 변경 사항 배포
+
+### 옵션
+
+전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+#### `--strategy`, `-s`
+
+배포 전략, 중지 시작(기본값, 종료와 함께 다시 시작) 또는 롤링(가동 중지 없음)
+
+- 값 필요
+
+#### `--project`, `-p`
+
+프로젝트 ID 또는 URL
+
+- 값 필요
+
+#### `--environment`, `-e`
+
+환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
+
+- 값 필요
+
+#### `--no-wait`, `-W`
+
+작업이 완료될 때까지 기다리지 마십시오.
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+#### `--wait`
+
+작업이 완료될 때까지 대기(기본값)
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+
+## `environment:deploy:type`
+
+```bash
+magento-cloud environment:deploy:type [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<type>]
+```
+
+환경 배포 유형 표시 또는 설정
+
+```
+Choose automatic (the default) if you want your changes to be deployed immediately as they are made.
+Choose manual to have changes staged until you trigger a deployment (including changes to code, variables, domains and settings).
+```
+
+### 인수
+
+#### `type`
+
+환경 배포 유형: 자동 또는 수동.
+
+### 옵션
+
+전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+#### `--pipe`
+
+배포 유형을 stdout으로 출력
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2191,14 +2389,14 @@ magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p
 
 #### `--access`
 
-&quot;permission:address&quot; 형식의 액세스 제한. 모든 주소를 지우려면 0을 사용합니다.
+&quot;permission:address&quot; 형식의 액세스 제한입니다. 모든 주소를 지우려면 0을 사용합니다.
 
 - 기본값: `[]`
 - 값 필요
 
 #### `--auth`
 
-&quot;사용자 이름:암호&quot; 형식의 HTTP 기본 인증 자격 증명입니다. 모든 자격 증명을 지우려면 0을 사용합니다.
+사용자 이름 :password 형식의 HTTP 기본 인증 자격 증명입니다. 모든 자격 증명을 지우려면 0을 사용합니다.
 
 - 기본값: `[]`
 - 값 필요
@@ -2377,7 +2575,7 @@ Git 저장소의 URL
 ## `environment:list`
 
 ```bash
-magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud environments [-I|--no-inactive] [--status STATUS] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 환경 목록 가져오기
@@ -2392,6 +2590,13 @@ magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--so
 
 - 기본값: `false`
 - 값을 수락하지 않음
+
+#### `--status`
+
+상태(활성, 비활성, 더티, 일시 중지됨, 삭제)별로 환경을 필터링합니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
+
+- 기본값: `[]`
+- 값 필요
 
 #### `--pipe`
 
@@ -2616,7 +2821,7 @@ The environment will be unavailable until it is resumed. No data will be lost.
 ## `environment:push`
 
 ```bash
-magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
+magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<source>]
 ```
 
 환경에 코드 푸시
@@ -2625,7 +2830,7 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 #### `source`
 
-소스 참조: 분기 이름 또는 커밋 해시
+Git 소스 참조(예: 분기 이름 또는 커밋 해시).
 
 - 기본값: `HEAD`
 
@@ -2662,14 +2867,14 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 #### `--activate`
 
-푸시하기 전에 환경 활성화
+환경을 활성화합니다. 일시 중지된 환경이 다시 시작됩니다. 이렇게 하면 변경 사항이 푸시되지 않은 경우에도 환경이 활성 상태가 됩니다.
 
 - 기본값: `false`
 - 값을 수락하지 않음
 
 #### `--parent`
 
-새 환경 상위 설정( —activate와만 사용)
+환경 상위 설정( —activate와만 사용)
 
 - 값 필요
 
@@ -2709,12 +2914,6 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 #### `--environment`, `-e`
 
 환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
-
-- 값 필요
-
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
 
 - 값 필요
 
@@ -2761,7 +2960,7 @@ magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W
 ## `environment:relationships`
 
 ```bash
-magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
+magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<environment>]
 ```
 
 환경의 관계 표시
@@ -2804,12 +3003,6 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 #### `--app`, `-A`
 
 원격 애플리케이션 이름
-
-- 값 필요
-
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
 
 - 값 필요
 
@@ -2856,7 +3049,7 @@ magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRO
 ## `environment:scp`
 
 ```bash
-magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
+magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<files>]...
 ```
 
 scp를 사용하여 환경 간에 파일 복사
@@ -2911,17 +3104,11 @@ scp를 사용하여 환경 간에 파일 복사
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `environment:ssh`
 
 ```bash
-magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
+magento-cloud ssh [--pipe] [--all] [-o|--option OPTION] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<cmd>]...
 ```
 
 SSH를 현재 환경에
@@ -2953,6 +3140,13 @@ SSH URL만 출력합니다.
 - 기본값: `false`
 - 값을 수락하지 않음
 
+#### `--option`, `-o`
+
+SSH에 추가 옵션 전달
+
+- 기본값: `[]`
+- 값 필요
+
 #### `--project`, `-p`
 
 프로젝트 ID 또는 URL
@@ -2983,12 +3177,6 @@ SSH URL만 출력합니다.
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `environment:synchronize`
 
@@ -3002,7 +3190,9 @@ magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONME
 This command synchronizes to a child environment from its parent environment.
 
 Synchronizing "code" means there will be a Git merge from the parent to the
-child. Synchronizing "data" means that all files in all services (including
+child.
+
+Synchronizing "data" means that all files in all services (including
 static files, databases, logs, search indices, etc.) will be copied from the
 parent to the child.
 ```
@@ -3102,7 +3292,7 @@ URL을 stdout으로 출력합니다.
 ## `environment:xdebug`
 
 ```bash
-magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 환경에서 Xdebug에 대한 터널을 엽니다.
@@ -3145,12 +3335,6 @@ magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVI
 #### `--instance`, `-I`
 
 인스턴스 ID
-
-- 값 필요
-
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
 
 - 값 필요
 
@@ -3228,7 +3412,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 ## `integration:activity:list`
 
 ```bash
-magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud integration:activities [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 통합을 위한 활동 목록 가져오기
@@ -3299,7 +3483,7 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 
 #### `--columns`, `-c`
 
-표시할 열입니다. 사용 가능한 열: id*, created*, description*, type*, state*, result*, completed(* = 기본 열). &quot;+&quot; 문자는 기본 열의 자리 표시자로 사용할 수 있습니다. % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
+표시할 열입니다. 사용 가능한 열: id*, created*, description*, type*, state*, result*, completed, progress, time_build, time_deploy, time_execute, time_wait (* = 기본 열). &quot;+&quot; 문자는 기본 열의 자리 표시자로 사용할 수 있습니다. % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
 
 - 기본값: `[]`
 - 값 필요
@@ -3395,7 +3579,7 @@ magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-u
 
 #### `--type`
 
-통합 유형(&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webhook&#39;, &#39;health.email&#39;, &#39;health.pagerduty&#39;, &#39;health.slack&#39;, &#39;health.webhook&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;)
+통합 유형(&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webhook&#39;, &#39;health.email&#39;, &#39;health.pagerduty&#39;, &#39;health.slack&#39;, &#39;health.webhook&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;, &#39;otlplog&#39;)
 
 - 값 필요
 
@@ -3793,7 +3977,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 ## `integration:list`
 
 ```bash
-magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud integrations [-t|--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 프로젝트 통합 목록 보기
@@ -3801,6 +3985,12 @@ magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header
 ### 옵션
 
 전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+#### `--type`, `-t`
+
+유형별 필터링
+
+- 값 필요
 
 #### `--format`
 
@@ -3850,7 +4040,7 @@ magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucke
 
 #### `--type`
 
-통합 유형(&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webhook&#39;, &#39;health.email&#39;, &#39;health.pagerduty&#39;, &#39;health.slack&#39;, &#39;health.webhook&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;)
+통합 유형(&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webhook&#39;, &#39;health.email&#39;, &#39;health.pagerduty&#39;, &#39;health.slack&#39;, &#39;health.webhook&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;, &#39;otlplog&#39;)
 
 - 값 필요
 
@@ -4341,7 +4531,7 @@ magento-cloud dir [<subdir>]
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA 환경에 대한 CPU, 디스크 및 메모리 지표 표시
+환경에 대한 CPU, 디스크 및 메모리 지표 표시
 
 ### 옵션
 
@@ -4440,7 +4630,7 @@ BETA 환경에 대한 CPU, 디스크 및 메모리 지표 표시
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA 환경의 CPU 사용 표시
+환경의 CPU 사용 표시
 
 ### 옵션
 
@@ -4638,7 +4828,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA 환경의 메모리 사용량 표시
+환경의 메모리 사용량 표시
 
 ### 옵션
 
@@ -4734,7 +4924,7 @@ BETA 환경의 메모리 사용량 표시
 ## `mount:download`
 
 ```bash
-magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 rsync를 사용하여 마운트에서 파일 다운로드
@@ -4827,12 +5017,6 @@ rsync를 사용하여 마운트에서 파일 다운로드
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `mount:list`
 
@@ -4912,103 +5096,10 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 - 값 필요
 
 
-## `mount:size`
-
-```bash
-magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
-```
-
-마운트의 디스크 사용량 확인
-
-```
-Use this command to check the disk size and usage for an application's mounts.
-
-Mounts are directories mounted into the application from a persistent, writable
-filesystem. They are configured in the mounts key in the application configuration.
-
-The filesystem's total size is determined by the disk key in the same file.
-```
-
-### 옵션
-
-전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
-
-#### `--bytes`, `-B`
-
-크기(바이트) 표시
-
-- 기본값: `false`
-- 값을 수락하지 않음
-
-#### `--refresh`
-
-캐시 새로 고침
-
-- 기본값: `false`
-- 값을 수락하지 않음
-
-#### `--format`
-
-출력 형식: table, csv, tsv 또는 plain
-
-- 기본값: `table`
-- 값 필요
-
-#### `--columns`, `-c`
-
-표시할 열입니다. 사용 가능한 열: available, max, mounts, percent_used, sizes, used % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
-
-- 기본값: `[]`
-- 값 필요
-
-#### `--no-header`
-
-테이블 머리글 출력 안 함
-
-- 기본값: `false`
-- 값을 수락하지 않음
-
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
-#### `--project`, `-p`
-
-프로젝트 ID 또는 URL
-
-- 값 필요
-
-#### `--environment`, `-e`
-
-환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
-
-- 값 필요
-
-#### `--app`, `-A`
-
-원격 애플리케이션 이름
-
-- 값 필요
-
-#### `--worker`
-
-작업자 이름
-
-- 값 필요
-
-#### `--instance`, `-I`
-
-인스턴스 ID
-
-- 값 필요
-
-
 ## `mount:upload`
 
 ```bash
-magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 rsync를 사용하여 마운트에 파일 업로드
@@ -5087,12 +5178,6 @@ rsync를 사용하여 마운트에 파일 업로드
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `operation:list`
 
@@ -5100,7 +5185,7 @@ rsync를 사용하여 마운트에 파일 업로드
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
-환경에 대한 Beta 목록 런타임 작업
+환경에 대한 런타임 작업 나열
 
 ### 옵션
 
@@ -5165,7 +5250,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
-BETA 환경에서 작업 실행
+환경에서 작업 실행
 
 ### 인수
 
@@ -5238,7 +5323,7 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ## `project:get`
 
 ```bash
-magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [--] [<project>] [<directory>]
 ```
 
 로컬로 프로젝트 복제
@@ -5280,12 +5365,6 @@ magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|-
 #### `--project`, `-p`
 
 프로젝트 ID 또는 URL
-
-- 값 필요
-
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
 
 - 값 필요
 
@@ -5449,7 +5528,7 @@ magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refr
 
 #### `--columns`
 
-표시할 열입니다. 사용 가능한 열: id*, title*, region*, created_at, organization_id, organization_label, organization_name, status (* = 기본 열). &quot;+&quot; 문자는 기본 열의 자리 표시자로 사용할 수 있습니다. % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
+표시할 열입니다. 사용 가능한 열: id*, title*, region*, created_at, organization_id, organization_label, organization_name, organization_type, status (* = 기본 열). &quot;+&quot; 문자는 기본 열의 자리 표시자로 사용할 수 있습니다. % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
 
 - 기본값: `[]`
 - 값 필요
@@ -5620,6 +5699,46 @@ magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment
 환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
 
 - 값 필요
+
+
+## `resources:build:get`
+
+```bash
+magento-cloud build-resources:get [-p|--project PROJECT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+프로젝트의 빌드 리소스 보기
+
+### 옵션
+
+전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+#### `--project`, `-p`
+
+프로젝트 ID 또는 URL
+
+- 값 필요
+
+#### `--format`
+
+출력 형식: table, csv, tsv 또는 plain
+
+- 기본값: `table`
+- 값 필요
+
+#### `--columns`, `-c`
+
+표시할 열입니다. 사용 가능한 열: cpu, 메모리. % 또는 * 문자는 와일드카드로 사용될 수 있습니다. 값들은 쉼표(예를 들어, &quot;a,b,c&quot;) 및/또는 공백으로 분할될 수 있다.
+
+- 기본값: `[]`
+- 값 필요
+
+#### `--no-header`
+
+테이블 머리글 출력 안 함
+
+- 기본값: `false`
+- 값을 수락하지 않음
 
 
 ## `route:get`
@@ -5890,7 +6009,7 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 ## `service:mongo:dump`
 
 ```bash
-magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB에서 데이터의 바이너리 아카이브 덤프 만들기
@@ -5925,12 +6044,6 @@ gzip을 사용하여 덤프 압축
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 #### `--project`, `-p`
 
 프로젝트 ID 또는 URL
@@ -5953,7 +6066,7 @@ gzip을 사용하여 덤프 압축
 ## `service:mongo:export`
 
 ```bash
-magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB에서 데이터 내보내기
@@ -5994,12 +6107,6 @@ MongoDB에서 데이터 내보내기
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 #### `--project`, `-p`
 
 프로젝트 ID 또는 URL
@@ -6022,7 +6129,7 @@ MongoDB에서 데이터 내보내기
 ## `service:mongo:restore`
 
 ```bash
-magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 데이터의 바이너리 아카이브 덤프를 MongoDB로 복원
@@ -6040,12 +6147,6 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 #### `--relationship`, `-r`
 
 사용할 서비스 관계
-
-- 값 필요
-
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
 
 - 값 필요
 
@@ -6071,7 +6172,7 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 ## `service:mongo:shell`
 
 ```bash
-magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB 셸 사용
@@ -6089,12 +6190,6 @@ MongoDB 셸 사용
 #### `--relationship`, `-r`
 
 사용할 서비스 관계
-
-- 값 필요
-
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
 
 - 값 필요
 
@@ -6120,7 +6215,7 @@ MongoDB 셸 사용
 ## `service:redis-cli`
 
 ```bash
-magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
+magento-cloud redis [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
 ```
 
 Redis CLI 액세스
@@ -6129,7 +6224,10 @@ Redis CLI 액세스
 
 #### `args`
 
-Redis 명령에 추가할 인수
+redis-cli 명령에 추가할 인수
+
+- 기본값: `[]`
+- 배열
 
 ### 옵션
 
@@ -6141,9 +6239,49 @@ Redis 명령에 추가할 인수
 
 - 값 필요
 
-#### `--identity-file`, `-i`
+#### `--project`, `-p`
 
-사용할 SSH ID(개인 키)
+프로젝트 ID 또는 URL
+
+- 값 필요
+
+#### `--environment`, `-e`
+
+환경 ID. &quot;.&quot; 사용 을 클릭하여 프로젝트의 기본 환경을 선택합니다.
+
+- 값 필요
+
+#### `--app`, `-A`
+
+원격 애플리케이션 이름
+
+- 값 필요
+
+
+## `service:valkey-cli`
+
+```bash
+magento-cloud valkey [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
+```
+
+Valkey CLI 액세스
+
+### 인수
+
+#### `args`
+
+valkey-cli 명령에 추가할 인수
+
+- 기본값: `[]`
+- 배열
+
+### 옵션
+
+전역 옵션에 대해서는 [전역 옵션](#global-options)을 참조하십시오.
+
+#### `--relationship`, `-r`
+
+사용할 서비스 관계
 
 - 값 필요
 
@@ -6186,7 +6324,7 @@ magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 #### `--live`
 
-라이브 백업: 환경을 중지하지 마십시오. 설정하면 백업 중에 환경이 실행되고 연결에 대해 열려 있게 됩니다. 따라서 다운타임이 줄어들어 일관성 없는 상태에서 데이터를 백업할 수 있습니다.
+라이브 스냅샷: 환경을 중지하지 마십시오. 이 설정을 지정하면 환경이 실행 중인 상태로 유지되며 스냅샷 중에 연결이 열립니다. 따라서 다운타임이 줄어들어 일관성 없는 상태에서 데이터를 백업할 수 있습니다.
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6363,7 +6501,7 @@ magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [
 ## `snapshot:restore`
 
 ```bash
-magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
+magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [--no-code] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
 ```
 
 환경 스냅샷 복원
@@ -6372,7 +6510,7 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 
 #### `snapshot`
 
-스냅샷의 이름입니다. 기본값은 가장 최근 값으로 설정됩니다.
+스냅샷의 ID입니다. 기본값은 가장 최근 값으로 설정됩니다.
 
 ### 옵션
 
@@ -6389,6 +6527,13 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 —target이 아직 존재하지 않는 경우 새 환경의 상위 항목을 지정합니다
 
 - 값 필요
+
+#### `--no-code`
+
+코드를 복원하지 않고 데이터만 복원합니다.
+
+- 기본값: `false`
+- 값을 수락하지 않음
 
 #### `--project`, `-p`
 
@@ -6490,7 +6635,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 #### `--variable`
 
-작업 중에 설정할 변수(type:name=value 형식)
+작업 중에 설정할 변수(형식: :name=value)
 
 - 기본값: `[]`
 - 값 필요
@@ -6568,7 +6713,7 @@ explicitly. For unattended scripts, remember to turn off interaction via
 
 #### `--new-key`
 
-[사용하지 않음] 대신 —new 사용
+새 키 쌍을 강제로 생성합니다.
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6890,7 +7035,7 @@ SSH 터널 나열
 ## `tunnel:open`
 
 ```bash
-magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 앱 관계에 대한 SSH 터널 열기
@@ -6937,17 +7082,11 @@ extensions.
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `tunnel:single`
 
 ```bash
-magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 앱 관계에 대한 단일 SSH 터널 열기
@@ -6993,12 +7132,6 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 - 값 필요
 
-#### `--identity-file`, `-i`
-
-사용할 SSH ID(개인 키)
-
-- 값 필요
-
 
 ## `user:add`
 
@@ -7020,7 +7153,7 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 
 #### `--role`, `-r`
 
-사용자의 프로젝트 역할(&#39;admin&#39; 또는 &#39;viewer&#39;) 또는 환경 유형 역할(예: &#39;staging:contributor&#39; 또는 &#39;production:viewer&#39;). 환경 유형에서 사용자를 제거하려면 역할을 &#39;none&#39;으로 설정하십시오. % 또는 * 문자는 환경 유형에 대한 와일드카드로 사용할 수 있습니다(예: &#39;%:viewer&#39;). 사용자에게 모든 유형에서 &#39;viewer&#39; 역할을 부여할 수 있습니다. 역할은 축약될 수 있습니다(예: &#39;production:v&#39;).
+사용자의 프로젝트 역할(&#39;admin&#39; 또는 &#39;viewer&#39;) 또는 환경 유형 역할(예: &#39;staging:contributor&#39; 또는 &#39;production:viewer&#39;). 환경 유형에서 사용자를 제거하려면 역할을 &#39;none&#39;으로 설정하십시오. % 또는 * 문자는 환경 유형에 대한 와일드카드로 사용할 수 있습니다(예: &#39;%:viewer&#39;). 사용자에게 모든 유형에서 &#39;뷰어&#39; 역할을 제공할 수 있습니다. 역할을 축약할 수 있습니다(예: &#39;production:v&#39;).
 
 - 기본값: `[]`
 - 값 필요
@@ -7153,7 +7286,7 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 
 #### `--role`, `-r`
 
-[사용하지 않음: user:update를 사용하여 사용자의 역할을 변경합니다]
+[사용되지 않음: 사용자:update을(를) 사용하여 사용자의 역할을 변경합니다.]
 
 - 값 필요
 
@@ -7218,7 +7351,7 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait]
 
 #### `--role`, `-r`
 
-사용자의 프로젝트 역할(&#39;admin&#39; 또는 &#39;viewer&#39;) 또는 환경 유형 역할(예: &#39;staging:contributor&#39; 또는 &#39;production:viewer&#39;). 환경 유형에서 사용자를 제거하려면 역할을 &#39;none&#39;으로 설정하십시오. % 또는 * 문자는 환경 유형에 대한 와일드카드로 사용할 수 있습니다(예: &#39;%:viewer&#39;). 사용자에게 모든 유형에서 &#39;viewer&#39; 역할을 부여할 수 있습니다. 역할은 축약될 수 있습니다(예: &#39;production:v&#39;).
+사용자의 프로젝트 역할(&#39;admin&#39; 또는 &#39;viewer&#39;) 또는 환경 유형 역할(예: &#39;staging:contributor&#39; 또는 &#39;production:viewer&#39;). 환경 유형에서 사용자를 제거하려면 역할을 &#39;none&#39;으로 설정하십시오. % 또는 * 문자는 환경 유형에 대한 와일드카드로 사용할 수 있습니다(예: &#39;%:viewer&#39;). 사용자에게 모든 유형에서 &#39;뷰어&#39; 역할을 제공할 수 있습니다. 역할을 축약할 수 있습니다(예: &#39;production:v&#39;).
 
 - 기본값: `[]`
 - 값 필요
