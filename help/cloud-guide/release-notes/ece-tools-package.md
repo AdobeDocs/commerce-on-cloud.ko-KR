@@ -4,9 +4,9 @@ description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
+source-git-commit: e39b348b02b4edfbe091420c54a20b320387a4b6
 workflow-type: tm+mt
-source-wordcount: '3269'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,15 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.7 {#latest}
+## v2002.2.8 {#latest}
+
+릴리스 날짜: 2025년 10월 08일
+
+- ![새 아이콘](../../assets/new.svg) **ActiveMQ** - ActiveMQ에 대한 지원이 추가되었습니다.<!-- MCLOUD-13770 -->
+- ![새 아이콘](../../assets/new.svg) **ActiveMQ**&#x200B;이(가) 기능 테스트를 추가했습니다.<!-- MCLOUD-13813 -->
+
+
+## v2002.2.7
 
 릴리스 날짜: 2025년 8월 7일
 
