@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5567f425f28cb4d19aaa0db80f0ede1fd525a686
+source-git-commit: 50e1a864dcde1148f5ed036b55815442c5986eaf
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2313'
 ht-degree: 0%
 
 ---
@@ -111,6 +111,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>메타패키지</td>
     <td>Braintree Magento</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/stomp-php/stomp-php.git">stomp-php/stomp-php</a>
+    </td>
+    <td>라이브러리</td>
+    <td>PHP에 대한 stomp 지원</td>
   </tr>
   <tr>
     <td>
@@ -835,7 +842,7 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PhpGt/Dom.git">phpgt/dom</a>
+      <a href="https://github.com/phpgt/Dom.git">phpgt/dom</a>
     </td>
     <td>라이브러리</td>
     <td>최신 DOM API.</td>
@@ -1196,6 +1203,20 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>라이브러리</td>
     <td>일부 PHP 8.3+ 기능을 더 낮은 PHP 버전으로 지원하는 Symfony polyfill</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/polyfill-php84.git">symfony/polyfill-php84</a>
+    </td>
+    <td>라이브러리</td>
+    <td>일부 PHP 8.4+ 기능을 더 낮은 PHP 버전으로 지원하는 Symfony polyfill</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/polyfill-php85.git">symfony/polyfill-php85</a>
+    </td>
+    <td>라이브러리</td>
+    <td>일부 PHP 8.5+ 기능을 더 낮은 PHP 버전으로 지원하는 Symfony polyfill</td>
   </tr>
   <tr>
     <td>
