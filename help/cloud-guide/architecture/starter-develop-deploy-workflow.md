@@ -29,7 +29,7 @@ ht-degree: 0%
 
 개발 워크플로우는 다음과 같이 구성됩니다.
 
-- `master`에서 [분기 및 ](#clone-and-branch)을(를) 복제하여 `staging` 및 개발 분기를 만듭니다.
+- `master`에서 [분기 및 &#x200B;](#clone-and-branch)을(를) 복제하여 `staging` 및 개발 분기를 만듭니다.
 - [코드를 개발](#develop-code)하고 [!DNL Composer] 업데이트를 포함하여 개발 분기에 확장을 로컬로 설치합니다.
 - 저장소 및 확장 설정을 [구성](#configure-store)합니다.
 - [구성 생성](#generate-configuration-management-files) 관리 파일

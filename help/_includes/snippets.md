@@ -44,7 +44,7 @@ ht-degree: 0%
 
 >[!BEGINSHADEBOX]
 
-- Pro 프로젝트의 경우 [ 및 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket) 환경에서만 [서비스](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=ko)를 설치하거나 업데이트하려면 `Staging`Adobe Commerce 지원 티켓을 제출`Production`해야 합니다.
+- Pro 프로젝트의 경우 [&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket) 환경에서만 [서비스](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=ko)를 설치하거나 업데이트하려면 `Staging`Adobe Commerce 지원 티켓을 제출`Production`해야 합니다.
 
 - 필요한 서비스 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 및 `services.yaml` 파일을 포함하고 티켓에 PHP 버전을 명시하십시오. PHP 버전, 확장, 환경 설정에 대한 셀프 서비스 변경 내용은 [응용 프로그램 구성](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=ko)의 _PHP 설정_&#x200B;을 참조하십시오.
 

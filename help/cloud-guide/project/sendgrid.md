@@ -29,13 +29,13 @@ SendGrid SMTP 프록시는 수신 이메일을 수신하기 위한 범용 이메
 
 Cloud Console 또는 명령줄에서 각 환경에 대해 발신 이메일을 활성화하거나 비활성화할 수 있습니다.
 
-기본적으로 발신 이메일은 Pro 프로덕션 및 스테이징 환경에서 활성화됩니다. 그러나 [!UICONTROL Outgoing emails]명령줄`enable_smtp` 또는 [클라우드 콘솔](outgoing-emails.md#enable-emails-in-the-cli)을 통해 [ 속성을 설정할 때까지 ](outgoing-emails.md#enable-emails-in-the-cloud-console)이(가) 환경 설정에서 비활성화되어 표시될 수 있습니다. 통합 및 스테이징 환경에 대해 발신 이메일을 활성화하여 Cloud 프로젝트 사용자에 대해 이중 인증 또는 암호 재설정 이메일을 보낼 수 있습니다. [테스트를 위한 전자 메일 구성](outgoing-emails.md)을 참조하세요.
+기본적으로 발신 이메일은 Pro 프로덕션 및 스테이징 환경에서 활성화됩니다. 그러나 [!UICONTROL Outgoing emails]명령줄`enable_smtp` 또는 [클라우드 콘솔](outgoing-emails.md#enable-emails-in-the-cli)을 통해 [&#x200B; 속성을 설정할 때까지 &#x200B;](outgoing-emails.md#enable-emails-in-the-cloud-console)이(가) 환경 설정에서 비활성화되어 표시될 수 있습니다. 통합 및 스테이징 환경에 대해 발신 이메일을 활성화하여 Cloud 프로젝트 사용자에 대해 이중 인증 또는 암호 재설정 이메일을 보낼 수 있습니다. [테스트를 위한 전자 메일 구성](outgoing-emails.md)을 참조하세요.
 
 Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하지 않도록 설정하거나 다시 사용하도록 설정해야 하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)을 제출할 수 있습니다.
 
 >[!TIP]
 >
->[!UICONTROL enable_smtp]명령줄[에 의해 ](outgoing-emails.md#enable-emails-in-the-cli) 속성 값을 업데이트하면 [!UICONTROL Enable outgoing emails]클라우드 콘솔[에서 이 환경에 대한 ](outgoing-emails.md#enable-emails-in-the-cloud-console) 설정 값도 변경됩니다.
+>[!UICONTROL enable_smtp]명령줄[에 의해 &#x200B;](outgoing-emails.md#enable-emails-in-the-cli) 속성 값을 업데이트하면 [!UICONTROL Enable outgoing emails]클라우드 콘솔[에서 이 환경에 대한 &#x200B;](outgoing-emails.md#enable-emails-in-the-cloud-console) 설정 값도 변경됩니다.
 
 ## SendGrid 대시보드
 

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP 설정
 
-[ 파일에서 실행할 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)PHP 버전`.magento.app.yaml`을(를) 선택할 수 있습니다.
+[&#x200B; 파일에서 실행할 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)PHP 버전`.magento.app.yaml`을(를) 선택할 수 있습니다.
 
 ```yaml
 name: mymagento
@@ -21,7 +21,7 @@ type: php:<version>
 
 >[!TIP]
 >
->PHP 8.1 이상으로 업그레이드하는 경우 [`runtime: extensions:` 파일의 ](properties.md#runtime) 속성`.magento.app.yaml`에서 JSON을 제거하고 다시 배포하십시오. JSON 확장은 PHP 8.0 이후 Cloud 환경에 설치됩니다.
+>PHP 8.1 이상으로 업그레이드하는 경우 [`runtime: extensions:` 파일의 &#x200B;](properties.md#runtime) 속성`.magento.app.yaml`에서 JSON을 제거하고 다시 배포하십시오. JSON 확장은 PHP 8.0 이후 Cloud 환경에 설치됩니다.
 
 ## PHP 구성
 
@@ -81,7 +81,7 @@ register_argc_argv => On => On
 
 >[!WARNING]
 >
->로컬 개발에 Commerce용 Cloud Docker를 사용하는 경우 Docker 환경에서 사용자 지정 [ 파일을 사용하는 방법에 대한 자세한 내용은 ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#fpm-container)Docker 서비스 컨테이너`php.ini`를 참조하십시오.
+>로컬 개발에 Commerce용 Cloud Docker를 사용하는 경우 Docker 환경에서 사용자 지정 [&#x200B; 파일을 사용하는 방법에 대한 자세한 내용은 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#fpm-container)Docker 서비스 컨테이너`php.ini`를 참조하십시오.
 
 ## 확장 활성화
 
