@@ -20,7 +20,7 @@ ht-degree: 0%
 
 |          | 스타터 | Pro |
 | -------- | --------------------| ------------------ |
-| 핵심 기능 | <ul><li>[모든 Adobe Commerce 기능](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal 온보딩 도구</li><li>[Commerce 보고](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[모든 Adobe Commerce 기능](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal 온보딩 도구</li><li>[Commerce 보고](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B 모듈](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
+| 핵심 기능 | <ul><li>[모든 Adobe Commerce 기능](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=ko)</li><li>PayPal 온보딩 도구</li><li>[Commerce 보고](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[모든 Adobe Commerce 기능](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=ko)</li><li>PayPal 온보딩 도구</li><li>[Commerce 보고](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B 모듈](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
 | 인프라 및 구축 | <ul><li>무제한 사용자가 포함된 지속적인 클라우드 통합 도구</li><li>Fastly CDN(Content Delivery Network), IO(이미지 최적화) 및 충분한 대역폭 허용으로 보안 강화 웹 응용 프로그램 방화벽(WAF) 서비스는 프로덕션 환경에서만 사용할 수 있습니다.</li><li>[New Relic](../monitor/new-relic-service.md) 선택한 분기 `master` 및 2개의 APM(성능 모니터링)<br>PaaS(Platform as a Service) 프로덕션, 스테이징 및 개발 환경(총 4개의 활성 환경)에서 Adobe Commerce에 최적화되었습니다.</li><li>이그레스 필터링(아웃바운드 방화벽)</li></ul> | <ul><li>무제한 사용자가 포함된 지속적인 클라우드 통합 도구</li><li>Fastly CDN(Content Delivery Network), IO(이미지 최적화) 및 충분한 대역폭 허용으로 보안 강화 웹 응용 프로그램 방화벽(WAF) 서비스는 프로덕션 환경에서만 사용할 수 있습니다.</li><li>프로덕션의 [New Relic](../monitor/new-relic-service.md) 인프라 + 스테이징 및 프로덕션의 APM(성능 모니터링). Adobe Commerce 정책에 대한 [관리 경고 정책](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)은(는) 모니터링 모범 사례를 구현하여 사이트 성능에 영향을 주는 응용 프로그램 및 인프라 문제에 대해 미리 알려줍니다.</li><li>Adobe Commerce에 최적화된 PaaS(Platform as a Service) 기반 [통합 개발](pro-architecture.md#integration-environment) 환경(총 2개의 활성 환경)</li><li>IaaS(Infrastructure as a Service)—스테이징 및 프로덕션 환경을 위한 전용 가상 인프라</li></ul> |
 | 고가용성 인프라 | | 엔터프라이즈급 안정성과 가용성을 제공하기 위해 기본 IaaS(Infrastructure as a Service)에서 3개의 서버를 설정한 [고가용성 아키텍처](pro-architecture.md#redundant-hardware) |
 | 전용 하드웨어 | | 기본 IaaS(Infrastructure as a Service)에 있는 전용 하드웨어를 격리하여 더욱 높은 수준의 안정성과 가용성을 제공합니다. |
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->권장 버전은 [설치 안내서](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)의 _시스템 요구 사항_&#x200B;을 참조하십시오.
+>권장 버전은 [설치 안내서](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)의 _시스템 요구 사항_&#x200B;을 참조하십시오.
 
 Fastly CDN 모듈은 스테이징 및 프로덕션 환경에서 CDN 및 캐싱 서비스에 사용됩니다. [Fastly 서비스 구성](../cdn/fastly.md)을 참조하세요.
 

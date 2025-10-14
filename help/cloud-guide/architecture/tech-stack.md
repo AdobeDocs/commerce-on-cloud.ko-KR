@@ -18,7 +18,7 @@ ht-degree: 0%
 
 1. [**클라우드 인프라**](pro-architecture.md): Adobe Commerce on cloud infrastructure Pro 프로젝트를 위한 IaaS(Infrastructure as a Service) 기반으로 Amazon Web Services(AWS) 또는 Microsoft Azure를 선택합니다.
 
-   Adobe은 정기적으로 가상 컴퓨팅 리소스(vCPU) 사용을 분석하고 리소스를 자동으로 할당하여 장기 사용을 최적화하고 최대 연간 vCPU 일 허용량을 초과할 위험을 완화합니다. 특정 기간 동안 사이트 트래픽이 증가할 것으로 예상되면 [임시 업사이징을 요청](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html)할 지원 티켓을 계속 열어야 합니다.
+   Adobe은 정기적으로 가상 컴퓨팅 리소스(vCPU) 사용을 분석하고 리소스를 자동으로 할당하여 장기 사용을 최적화하고 최대 연간 vCPU 일 허용량을 초과할 위험을 완화합니다. 특정 기간 동안 사이트 트래픽이 증가할 것으로 예상되면 [임시 업사이징을 요청](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ko)할 지원 티켓을 계속 열어야 합니다.
 
 1. [**Platform as a Service**](cloud-architecture.md): 클라우드 인프라 프로젝트의 각 Adobe Commerce은 서비스 개발, 테스트 및 통합을 위한 PaaS(Platform as a Service) 통합 환경을 제공합니다.
 1. [**Adobe Commerce**](../project/overview.md): 클라우드 인프라의 Adobe Commerce은 PHP, MySQL(MariaDB), Redis, 메시지 큐 서비스([!DNL RabbitMQ] 또는 [!DNL ActiveMQ]) 및 지원되는 검색 엔진 기술을 포함하는 사전 제공된 인프라를 제공합니다.
