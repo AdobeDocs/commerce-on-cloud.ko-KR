@@ -123,7 +123,7 @@ mysql:
 
 ## 서비스 관계
 
-클라우드 인프라 프로젝트의 Adobe Commerce에서 [ 파일에 구성된 서비스 ](../application/properties.md#relationships)관계`.magento.app.yaml`은(는) 애플리케이션에서 사용할 수 있는 서비스를 결정합니다.
+클라우드 인프라 프로젝트의 Adobe Commerce에서 [&#x200B; 파일에 구성된 서비스 &#x200B;](../application/properties.md#relationships)관계`.magento.app.yaml`은(는) 애플리케이션에서 사용할 수 있는 서비스를 결정합니다.
 
 [`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md) 환경 변수에서 모든 서비스 관계에 대한 구성 데이터를 검색할 수 있습니다. 구성 데이터에는 포트 번호 및 로그인 자격 증명과 같은 필수 연결 세부 정보와 함께 서비스 이름, 유형 및 버전이 포함됩니다.
 

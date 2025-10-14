@@ -196,7 +196,7 @@ stage:
 - **기본값**—_설정되지 않음_
 - **버전**—Adobe Commerce 2.1.4 이상
 
-[ 파일의 ](../application/properties.md#relationships)관계 속성`.magento.app.yaml`에서 데이터베이스를 정의한 경우 배포를 위해 데이터베이스 연결을 사용자 지정할 수 있습니다.
+[&#x200B; 파일의 &#x200B;](../application/properties.md#relationships)관계 속성`.magento.app.yaml`에서 데이터베이스를 정의한 경우 배포를 위해 데이터베이스 연결을 사용자 지정할 수 있습니다.
 
 ```yaml
 stage:
@@ -456,7 +456,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`L2 캐시[를 사용하도록 Redis 백 엔드 모델로 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)을(를) 지정하면 `ece-tools`에서 캐시 구성을 자동으로 생성합니다. [Adobe Commerce 구성 가이드](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)에서 예제 _구성 파일_&#x200B;을(를) 참조하십시오. 생성된 캐시 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`L2 캐시[를 사용하도록 Redis 백 엔드 모델로 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)을(를) 지정하면 `ece-tools`에서 캐시 구성을 자동으로 생성합니다. [Adobe Commerce 구성 가이드](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)에서 예제 _구성 파일_&#x200B;을(를) 참조하십시오. 생성된 캐시 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -675,7 +675,7 @@ stage:
     SCD_THREADS: 2
 ```
 
-배포 시간을 더 줄이려면 [ 명령과 함께 ](../store/store-settings.md)구성 관리`scd-dump`를 사용하여 정적 배포를 빌드 단계로 이동하십시오.
+배포 시간을 더 줄이려면 [&#x200B; 명령과 함께 &#x200B;](../store/store-settings.md)구성 관리`scd-dump`를 사용하여 정적 배포를 빌드 단계로 이동하십시오.
 
 ## `SEARCH_CONFIGURATION`
 
@@ -795,7 +795,7 @@ stage:
 - **기본값**—_설정되지 않음_
 - **버전**—Adobe Commerce 2.1.4 이상
 
-배포 단계에서 수행되는 [ CLI 명령에 대해 ](https://symfony.com/doc/current/console/verbosity.html)Symfony`bin/magento` 디버그 세부 정보 수준을 활성화하거나 비활성화합니다.
+배포 단계에서 수행되는 [&#x200B; CLI 명령에 대해 &#x200B;](https://symfony.com/doc/current/console/verbosity.html)Symfony`bin/magento` 디버그 세부 정보 수준을 활성화하거나 비활성화합니다.
 
 >[!NOTE]
 >
