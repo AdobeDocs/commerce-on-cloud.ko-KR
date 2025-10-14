@@ -2,9 +2,10 @@
 title: 서비스 구성
 description: 클라우드 인프라에서 Adobe Commerce에서 사용하는 서비스를 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 >`.magento/services.yaml` 파일은 프로젝트의 `.magento` 디렉터리에서 로컬로 관리됩니다. 이 구성은 통합 환경에서 필요한 서비스 버전을 정의하기 위한 빌드 프로세스 중에만 액세스되며 배포가 완료되면 제거되므로 서버에서 찾을 수 없습니다.
 
 
-배포 스크립트는 `.magento` 디렉터리의 구성 파일을 사용하여 구성된 서비스로 환경을 프로비전합니다. 응용 프로그램이 `.magento.app.yaml` 파일의 [`relationships`](../application/properties.md#relationships) 속성에 포함된 경우 해당 응용 프로그램에서 서비스를 사용할 수 있게 됩니다. `services.yaml` 파일에 _type_ 및 _disk_ 값이 있습니다. 서비스 유형은 서비스 _name_ 및 _version_&#x200B;을(를) 정의합니다.
+배포 스크립트는 `.magento` 디렉터리의 구성 파일을 사용하여 구성된 서비스로 환경을 프로비전합니다. 응용 프로그램이 [`relationships`](../application/properties.md#relationships) 파일의 `.magento.app.yaml` 속성에 포함된 경우 해당 응용 프로그램에서 서비스를 사용할 수 있게 됩니다. `services.yaml` 파일에 _type_ 및 _disk_ 값이 있습니다. 서비스 유형은 서비스 _name_ 및 _version_&#x200B;을(를) 정의합니다.
 
 서비스 구성을 변경하면 배포에서 업데이트된 서비스로 환경을 프로비저닝하게 되며, 이는 다음 환경에 영향을 줍니다.
 
@@ -31,13 +32,14 @@ ht-degree: 0%
 
 클라우드 인프라는 다음 서비스를 지원하고 배포합니다.
 
+- [액티브MQ](activemq.md)
 - [MySQL](mysql.md)
 - [레디스](redis.md)
-- [RabbitMQ](rabbitmq.md)
+- [래빗MQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
-현재 [기본 `services.yaml` 파일](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)에서 기본 버전 및 디스크 값을 볼 수 있습니다. 다음 샘플은 `services.yaml` 구성 파일에 정의된 `mysql`, `redis`, `opensearch` 또는 `elasticsearch` 및 `rabbitmq` 서비스를 보여줍니다.
+현재 [기본 `services.yaml` 파일](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)에서 기본 버전 및 디스크 값을 볼 수 있습니다. 다음 샘플은 `mysql` 구성 파일에 정의된 `redis`, `opensearch`, `elasticsearch` 또는 `rabbitmq`, `activemq-artemis` 및 `services.yaml` 서비스를 보여줍니다.
 
 ```yaml
 mysql:
@@ -53,6 +55,10 @@ opensearch:
 
 rabbitmq:
     type: rabbitmq:3.9
+    disk: 1024
+
+activemq-artemis:
+    type: activemq-artemis:2.42
     disk: 1024
 ```
 
@@ -72,7 +78,7 @@ rabbitmq:
 
 `service-id` 값은 프로젝트에서 서비스를 식별합니다. `a`에서 `z`까지, `0`에서 `9`까지 영숫자만 사용할 수 있습니다(예: `redis`).
 
-이 _service-id_ 값은 `.magento.app.yaml` 구성 파일의 [`relationships`](../application/properties.md#relationships) 속성에 사용됩니다.
+이 _service-id_ 값은 [`relationships`](../application/properties.md#relationships) 구성 파일의 `.magento.app.yaml` 속성에 사용됩니다.
 
 ```yaml
 relationships:
@@ -117,7 +123,7 @@ mysql:
 
 ## 서비스 관계
 
-클라우드 인프라 프로젝트의 Adobe Commerce에서 `.magento.app.yaml` 파일에 구성된 서비스 [관계](../application/properties.md#relationships)은(는) 애플리케이션에서 사용할 수 있는 서비스를 결정합니다.
+클라우드 인프라 프로젝트의 Adobe Commerce에서 [ 파일에 구성된 서비스 ](../application/properties.md#relationships)관계`.magento.app.yaml`은(는) 애플리케이션에서 사용할 수 있는 서비스를 결정합니다.
 
 [`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md) 환경 변수에서 모든 서비스 관계에 대한 구성 데이터를 검색할 수 있습니다. 구성 데이터에는 포트 번호 및 로그인 자격 증명과 같은 필수 연결 세부 정보와 함께 서비스 이름, 유형 및 버전이 포함됩니다.
 
@@ -171,7 +177,7 @@ mysql:
 
 ## 서비스 버전
 
-클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원은 클라우드 인프라에서 배포되고 테스트된 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
+클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원은 클라우드 인프라에서 배포되고 테스트된 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 [설치](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) 안내서의 _시스템 요구 사항_&#x200B;을 참조하십시오.
 
 ### 소프트웨어 EOL 확인
 
@@ -198,7 +204,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
 `services.yaml` 파일에서 서비스 구성을 업데이트하여 설치된 서비스 버전을 업그레이드할 수 있습니다.
 
-1. `.magento/services.yaml` 파일에서 서비스에 대한 [`type`](#type) 값을 변경합니다.
+1. [`type`](#type) 파일에서 서비스에 대한 `.magento/services.yaml` 값을 변경합니다.
 
    > 원래 서비스 정의
 

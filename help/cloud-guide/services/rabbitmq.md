@@ -1,27 +1,32 @@
 ---
 title: RabbitMQ 서비스 설정
-description: RabbitMQ 서비스를 사용하여 클라우드 인프라에서 Adobe Commerce에 대한 메시지 대기열을 관리하는 방법을 알아봅니다.
+description: RabbitMQ 서비스가 클라우드 인프라에서 Adobe Commerce에 대한 메시지 대기열을 관리할 수 있도록 하는 방법을 알아봅니다.
 feature: Cloud, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
+source-git-commit: 2df119f1c09b92e45ae30544e5c2ee0e0d21834c
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
 
 # [!DNL RabbitMQ] 서비스 설정
 
-[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ko)은(는) [모듈](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
+[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)은(는) [모듈](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
 
 MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사용하여 메시지를 보내고 받는 확장 가능한 플랫폼을 제공합니다. 게재되지 않은 메시지를 저장하는 메커니즘도 포함됩니다. [!DNL RabbitMQ]은(는) AMQP(고급 메시지 대기열 프로토콜) 0.9.1 사양을 기반으로 합니다.
 
->[!WARNING]
+>[!NOTE]
+>
+>클라우드 인프라의 Adobe Commerce은 또한 STOMP 프로토콜을 사용하여 대체 메시지 큐 서비스로 [ActiveMQ Artemis](activemq.md)를 지원합니다.
+
+>[!IMPORTANT]
 >
 >[!DNL RabbitMQ]과(와) 같은 기존 AMQP 기반 서비스를 사용하는 경우 클라우드 인프라의 Adobe Commerce을 사용하여 서비스를 만드는 대신 [`QUEUE_CONFIGURATION`](../environment/variables-deploy.md#queue_configuration) 환경 변수를 사용하여 사이트에 연결합니다.
 
 {{service-instruction}}
 
-**RabbitMQ을 사용하려면**:
+**RabbitMQ를 사용하려면**:
 
 1. 설치된 RabbitMQ 버전과 함께 필요한 이름, 유형 및 디스크 값(MB)을 `.magento/services.yaml` 파일에 추가합니다.
 
@@ -72,7 +77,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사�
    magento-cloud login
    ```
 
-1. RabbitMQ이 설치 및 구성된 환경을 확인하십시오.
+1. RabbitMQ가 설치 및 구성된 환경을 확인하십시오.
 
    ```bash
    magento-cloud environment:checkout <environment-id>
@@ -84,7 +89,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사�
    magento-cloud ssh
    ```
 
-1. [$CLOUD_RELATIONSHIPS](../application/properties.md#relationships) 변수에서 RabbitMQ MAGENTO 연결 세부 정보 및 로그인 자격 증명을 검색합니다.
+1. [$MAGENTO_CLOUD_RELATIONSHIPS](../application/properties.md#relationships) 변수에서 RabbitMQ 연결 세부 정보 및 로그인 자격 증명을 검색합니다.
 
    ```bash
    echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
@@ -113,7 +118,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사�
    }
    ```
 
-1. RabbitMQ으로 로컬 포트 전달을 활성화합니다(프로젝트가 US-3, EU-5 또는 AP-3 지역과 같은 다른 지역에 있는 경우 ``us``을(를) ``us-3``/``eu-5``/``ap-3``(으)로 대체)
+1. RabbitMQ로 로컬 포트 전달 활성화(프로젝트가 US-3, EU-5 또는 AP-3 지역과 같은 다른 지역에 있는 경우 ``us-3``을(를) ``eu-5``/``ap-3``/``us``(으)로 대체)
 
    ```bash
    ssh -L <port-number>:rabbitmq.internal:<port-number> <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
@@ -125,11 +130,11 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사�
    ssh -L 15672:rabbitmq.internal:15672 <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-1. 세션이 열려 있는 동안 로컬 워크스테이션에서 원하는 RabbitMQ 클라이언트를 시작할 수 있습니다. MAGENTO_CLOUD_RELATIONSHIPS 변수의 포트 번호, 사용자 이름 및 암호 정보를 사용하여 `localhost:<portnumber>`에 연결하도록 구성되었습니다.
+1. 세션이 열려 있는 동안 로컬 워크스테이션에서 원하는 RabbitMQ 클라이언트를 시작할 수 있습니다. 이 클라이언트는 MAGENTO_CLOUD_RELATIONSHIPS 변수의 포트 번호, 사용자 이름 및 암호 정보를 사용하여 `localhost:<portnumber>`에 연결하도록 구성됩니다.
 
 ### 응용 프로그램에서 연결
 
-응용 프로그램에서 실행 중인 RabbitMQ에 연결하려면 `.magento.app.yaml` 파일에 프로젝트 종속성으로 [amqp-utils](https://github.com/dougbarth/amqp-utils)과(와) 같은 클라이언트를 설치합니다.
+응용 프로그램에서 실행 중인 RabbitMQ에 연결하려면 [ 파일에 프로젝트 종속성으로 ](https://github.com/dougbarth/amqp-utils)amqp-utils`.magento.app.yaml`과(와) 같은 클라이언트를 설치합니다.
 
 For example,
 
@@ -143,4 +148,4 @@ PHP 컨테이너에 로그인하면 대기열을 관리하는 데 사용할 수 
 
 ### PHP 응용 프로그램에서 연결
 
-PHP 애플리케이션을 사용하여 RabbitMQ에 연결하려면 소스 트리에 PHP 라이브러리를 추가합니다.
+PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 소스 트리에 PHP 라이브러리를 추가합니다.
