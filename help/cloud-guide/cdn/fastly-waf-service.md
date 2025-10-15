@@ -26,7 +26,7 @@ WAF 서비스는 다음과 같은 이점을 제공합니다.
 
 >[!TIP]
 >
->클라우드 인프라 스토어의 Adobe Commerce에 대한 PCI 규정 준수 유지 관리에 대한 자세한 내용은 [PCI 규정 준수](https://business.adobe.com/products/magento/pci-compliance.html)를 참조하십시오.
+>클라우드 인프라 스토어의 Adobe Commerce에 대한 PCI 규정 준수 유지 관리에 대한 자세한 내용은 [PCI 규정 준수](https://business.adobe.com/kr/products/magento/pci-compliance.html)를 참조하십시오.
 
 ## WAF 활성화
 
