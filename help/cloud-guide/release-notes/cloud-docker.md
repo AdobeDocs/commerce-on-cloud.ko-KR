@@ -5,9 +5,9 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: c1f5e663716d3c9390e8ffb8bb2da6c7c67996b0
+source-git-commit: 562fd6e1dcd09600e00d034a94509b2dfd69d1ef
 workflow-type: tm+mt
-source-wordcount: '3790'
+source-wordcount: '3806'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.5 {#latest}
+## v1.4.6 {#latest}
+
+릴리스 날짜: 2025년 11월 6일
+
+- ![수정 아이콘](../../assets/fix.svg) **Symfony 패키지** 최신 Symfony YAML 패키지에 대한 지원이 추가되었습니다.<!-- MCLOUD-14020 -->
+
+## v1.4.5
 
 릴리스 날짜: 2025년 10월 08일
 
@@ -157,7 +163,7 @@ ht-degree: 0%
 - ![새 아이콘](../../assets/new.svg) **PHP 8.0 추가**—PHP를 버전 8.0으로 업데이트하여 PHP 8.0에 포함된 모든 새로운 기능과 최적화를 활용할 수 있습니다.<!--MCLOUD-7941-->
 - ![새 아이콘](../../assets/new.svg) **Varnish 6.6 및 Elasticsearch 7.11.2**(으)로 업데이트됨—다음 링크는 [Varnish Cache 6.6](https://varnish-cache.org/releases/rel6.6.0.html#rel6-6-0) 및 Elasticsearch 7.11.2.<!--MCLOUD-7921-->에 대한 릴리스 정보를 제공합니다.
 - ![새 아이콘](../../assets/new.svg) **PHP 7.4 이미지용 `ioncube` 확장 추가**—PHP 7.3에서 PHP 7.4로 업그레이드하는 동안 처음 제외되었던 `ioncube` 확장이 PHP 7.4 이미지에 다시 추가되었습니다. *[mattskr에서 제출함](https://github.com/magento/magento-cloud-docker/pull/314).*<!--PR #314-->
-- ![새 아이콘](../../assets/new.svg) **파일 동기화 옵션 추가:`manual-native`** - `manual-native` 파일 동기화 옵션은 수동으로 동기화를 제어하므로 macOS 및 Windows 환경에 최상의 성능을 제공합니다. `manual-native`개발자 모드[에서 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode/) 옵션을 사용하는 방법과 [Docker 개발자 환경에서 데이터 동기화](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data/#file-synchronization-options)에 대해 읽어 보십시오.<!--MCLOUD-7977-->
+- ![새 아이콘](../../assets/new.svg) **파일 동기화 옵션 추가:`manual-native`** - `manual-native` 파일 동기화 옵션은 수동으로 동기화를 제어하므로 macOS 및 Windows 환경에 최상의 성능을 제공합니다. `manual-native`개발자 모드[에서 ](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode/) 옵션을 사용하는 방법과 [Docker 개발자 환경에서 데이터 동기화](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data/#file-synchronization-options)에 대해 읽어 보십시오.<!--MCLOUD-7977-->
 - ![새 아이콘](../../assets/new.svg) **`up` 및 `down` 명령에서 볼륨 삭제 제거**—`--volume` 옵션이 `bin/magento-docker up` 및 `bin/magento-docker down` 명령에서 제거되었으며, 데이터 손실 경고가 있는 새 `bin/magento-docker init` 명령으로 대체되었습니다. 이 변경 사항은 우발적인 데이터 손실을 방지하는 데 도움이 됩니다. *[Joeshelton-wagento에서 제출함](https://github.com/magento/magento-cloud-docker/pull/319).*<!--PR #319-->
 - ![고정 아이콘](../../assets/fix.svg) **생성된 인증서에 대한 `CN` 값을 업데이트했습니다**—Dockerfile에서 하드코딩된 `CN` 값을 제거했습니다. 이 값으로 인해 인증서 오류(`NET::ERR_CERT_INVALID`)가 발생하여 `--host` 명령에 대한 `ece-docker build:compose` 옵션이 무시됩니다.<!--MCLOUD-7934-->
 
