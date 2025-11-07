@@ -4,9 +4,9 @@ description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 562fd6e1dcd09600e00d034a94509b2dfd69d1ef
+source-git-commit: 4f96ed89edbbc148c5558050368d8366bd89053a
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[&#x200B; 패키지의 최신 릴리스로 업데이트하는 방법은 &#x200B;](../dev-tools/update-package.md)ECE 도구 업그레이드`ece-tools`를 참조하십시오.
+>[ 패키지의 최신 릴리스로 업데이트하는 방법은 ](../dev-tools/update-package.md)ECE 도구 업그레이드`ece-tools`를 참조하십시오.
 
 `ece-tools` 패키지는 다음 릴리스 버전 관리 시퀀스를 사용합니다. `200<major>.<minor>.<patch>`
 
@@ -28,14 +28,7 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.9 {#latest}
-
-릴리스 날짜: 2025년 11월 6일
-
-- ![수정 아이콘](../../assets/fix.svg) **Symfony 패키지** 최신 Symfony YAML 패키지에 대한 지원이 추가되었습니다.<!-- MCLOUD-14020 -->
-- ![수정 아이콘](../../assets/fix.svg) **활성 서비스에 대한 캐시 정리를 수정했습니다** - 활성 서비스 유효성 검사를 추가했습니다.<!-- MCLOUD-14166 -->
-
-## v2002.2.8
+## v2002.2.8 {#latest}
 
 릴리스 날짜: 2025년 10월 08일
 
