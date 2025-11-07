@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[ 패키지의 최신 릴리스로 업데이트하는 방법은 ](../dev-tools/update-package.md)ECE 도구 업그레이드`ece-tools`를 참조하십시오.
+>[&#x200B; 패키지의 최신 릴리스로 업데이트하는 방법은 &#x200B;](../dev-tools/update-package.md)ECE 도구 업그레이드`ece-tools`를 참조하십시오.
 
 `ece-tools` 패키지는 다음 릴리스 버전 관리 시퀀스를 사용합니다. `200<major>.<minor>.<patch>`
 
