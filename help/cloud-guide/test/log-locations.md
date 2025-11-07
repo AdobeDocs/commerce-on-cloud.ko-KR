@@ -3,9 +3,9 @@ title: 로그 보기 및 관리
 description: 클라우드 인프라에서 사용할 수 있는 로그 파일의 유형과 찾을 수 있는 위치를 파악합니다.
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: afdc6f2b72d53199634faff7f30fd87ff3b31f3f
+source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,37 @@ ht-degree: 0%
 `<project-ID>`의 값은 프로젝트와 환경이 스테이징인지 아니면 프로덕션인지에 따라 다릅니다. 예를 들어 프로젝트 ID가 `yw1unoukjcawe`인 경우 스테이징 환경 사용자는 `yw1unoukjcawe_stg`이고 프로덕션 환경 사용자는 `yw1unoukjcawe`입니다.
 
 이 예제를 사용하면 배포 로그는 `/var/log/platform/yw1unoukjcawe_stg/deploy.log`입니다.
+
+### 특정 오류 로그 레코드 찾기
+
+특정 로그 레코드 번호(예: `475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9`)에 오류가 발생하면 다음 메서드를 사용하여 Commerce Application Server 원격 환경 로그를 쿼리하여 레코드를 찾을 수 있습니다.
+
+>[!NOTE]
+>
+>SSH(Secure Shell)를 사용하여 Commerce 응용 프로그램의 원격 환경 로그에 액세스하는 방법에 대한 지침은 [원격 환경에 대한 보안 연결](../development/secure-connections.md)을 참조하십시오.
+
+#### 방법 1: grep를 사용하여 검색
+
+```bash
+# Search for the specific error record in all log files
+magento-cloud ssh -e <environment-ID> "grep -r '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/"
+
+# Search in specific log files
+magento-cloud ssh -e <environment-ID> "grep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/exception.log"
+```
+
+#### 방법 2: 보관된 로그에서 검색
+
+이전에 오류가 발생한 경우 보관된 로그 파일을 확인하십시오.
+
+```bash
+# Search in compressed log files
+magento-cloud ssh -e <environment-ID> "find /var/log -name '*.gz' -exec zgrep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' {} \;"
+```
+
+#### 방법 3: New Relic 사용(Pro 환경)
+
+Pro 프로덕션 및 스테이징 환경의 경우 New Relic 로그를 사용하여 특정 오류 레코드를 검색합니다. 자세한 내용은 [New Relic 로그 관리](../monitor/log-management.md)를 참조하십시오.
 
 ### 원격 환경 로그 보기
 
@@ -78,7 +109,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >Pro 스태이징 및 Pro 프로덕션 환경의 경우, 고정된 파일 이름의 로그 파일에 대해 자동 로그 회전, 압축 및 제거가 활성화됩니다. 각 로그 파일 유형에는 회전 패턴과 수명이 있습니다.
 >환경의 로그 회전 및 압축된 로그 수명에 대한 전체 세부 정보는 `/etc/logrotate.conf` 및 `/etc/logrotate.d/<various>`에서 찾을 수 있습니다.
->Pro 스테이징 및 Pro 프로덕션 환경의 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 로그 순환 구성의 변경을 요청해야 합니다.
+>Pro 스테이징 및 Pro 프로덕션 환경의 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 로그 순환 구성의 변경을 요청해야 합니다.
 
 >[!TIP]
 >
@@ -143,7 +174,7 @@ magento-cloud log -e <environment-ID> deploy
 ```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
 
-[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\n''.
+[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\\n''.
 
 [2023-04-24T18:58:04.129888+00:00] INFO: Starting scenario(s): scenario/deploy.xml (magento/ece-tools version: 2002.1.14, magento/magento2-base version: 2.4.6)
 [2023-04-24T18:58:04.364714+00:00] NOTICE: Starting pre-deploy.
@@ -189,7 +220,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-대부분의 오류 메시지에는 설명 및 제안 작업이 포함되어 있습니다. 추가 지침을 위해 오류 코드를 조회하려면 [ECE-Tools용 오류 메시지 참조](../dev-tools/error-reference.md)를 사용하십시오. 자세한 지침은 [Adobe Commerce 배포 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ko)를 사용하십시오.
+대부분의 오류 메시지에는 설명 및 제안 작업이 포함되어 있습니다. 추가 지침을 위해 오류 코드를 조회하려면 [ECE-Tools용 오류 메시지 참조](../dev-tools/error-reference.md)를 사용하십시오. 자세한 지침은 [Adobe Commerce 배포 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)를 사용하십시오.
 
 ## 애플리케이션 로그
 
@@ -227,7 +258,7 @@ Pro 스테이징 및 프로덕션 환경의 경우 배포, 사후 배포 및 Cro
 
 아카이브된 로그 파일은 항상 압축 전에 원래 파일이 있던 디렉토리에 저장됩니다.
 
-[지원 티켓을 제출](https://experienceleague.adobe.com/home?lang=ko&support-tab=home#support)하여 로그 보존 기간 또는 logrotate 구성에 대한 변경을 요청할 수 있습니다. 최대 365일까지 보존 기간을 늘리거나, 저장소 할당량을 절약하기 위해 보존 기간을 줄이거나, logrotate 구성에 추가 로그 경로를 추가할 수 있습니다. 이러한 변경 사항은 Pro Staging 및 Production 클러스터에 사용할 수 있습니다.
+[지원 티켓을 제출](https://experienceleague.adobe.com/home?support-tab=home#support)하여 로그 보존 기간 또는 logrotate 구성에 대한 변경을 요청할 수 있습니다. 최대 365일까지 보존 기간을 늘리거나, 저장소 할당량을 절약하기 위해 보존 기간을 줄이거나, logrotate 구성에 추가 로그 경로를 추가할 수 있습니다. 이러한 변경 사항은 Pro Staging 및 Production 클러스터에 사용할 수 있습니다.
 
 예를 들어, `var/log/mymodule` 디렉터리에 로그를 저장할 사용자 지정 경로를 만드는 경우 이 경로에 대해 로그 회전을 요청할 수 있습니다. 그러나 현재 인프라에서는 Adobe이 로그 순환을 제대로 구성하려면 일관된 파일 이름이 필요합니다. Adobe에서는 구성 문제를 방지하기 위해 로그 이름을 일관되게 유지하는 것이 좋습니다.
 
