@@ -3,9 +3,9 @@ title: 서비스 구성
 description: 클라우드 인프라에서 Adobe Commerce에서 사용하는 서비스를 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >`.magento/services.yaml` 파일은 프로젝트의 `.magento` 디렉터리에서 로컬로 관리됩니다. 이 구성은 통합 환경에서 필요한 서비스 버전을 정의하기 위한 빌드 프로세스 중에만 액세스되며 배포가 완료되면 제거되므로 서버에서 찾을 수 없습니다.
-
 
 배포 스크립트는 `.magento` 디렉터리의 구성 파일을 사용하여 구성된 서비스로 환경을 프로비전합니다. 응용 프로그램이 [`relationships`](../application/properties.md#relationships) 파일의 `.magento.app.yaml` 속성에 포함된 경우 해당 응용 프로그램에서 서비스를 사용할 수 있게 됩니다. `services.yaml` 파일에 _type_ 및 _disk_ 값이 있습니다. 서비스 유형은 서비스 _name_ 및 _version_&#x200B;을(를) 정의합니다.
 
@@ -38,6 +37,10 @@ ht-degree: 0%
 - [래빗MQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
+
+>[!NOTE]
+>
+>새 버전의 RabbitMQ로 업그레이드한 후 전체 배포를 트리거하여 사용자 지정 메시지 대기열이 RabbitMQ에서 다시 생성되도록 합니다.
 
 현재 [기본 `services.yaml` 파일](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)에서 기본 버전 및 디스크 값을 볼 수 있습니다. 다음 샘플은 `mysql` 구성 파일에 정의된 `redis`, `opensearch`, `elasticsearch` 또는 `rabbitmq`, `activemq-artemis` 및 `services.yaml` 서비스를 보여줍니다.
 
@@ -123,7 +126,7 @@ mysql:
 
 ## 서비스 관계
 
-클라우드 인프라 프로젝트의 Adobe Commerce에서 [&#x200B; 파일에 구성된 서비스 &#x200B;](../application/properties.md#relationships)관계`.magento.app.yaml`은(는) 애플리케이션에서 사용할 수 있는 서비스를 결정합니다.
+클라우드 인프라 프로젝트의 Adobe Commerce에서 [ 파일에 구성된 서비스 ](../application/properties.md#relationships)관계`.magento.app.yaml`은(는) 애플리케이션에서 사용할 수 있는 서비스를 결정합니다.
 
 [`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md) 환경 변수에서 모든 서비스 관계에 대한 구성 데이터를 검색할 수 있습니다. 구성 데이터에는 포트 번호 및 로그인 자격 증명과 같은 필수 연결 세부 정보와 함께 서비스 이름, 유형 및 버전이 포함됩니다.
 
@@ -177,7 +180,7 @@ mysql:
 
 ## 서비스 버전
 
-클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원은 클라우드 인프라에서 배포되고 테스트된 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 [설치](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko) 안내서의 _시스템 요구 사항_&#x200B;을 참조하십시오.
+클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원은 클라우드 인프라에서 배포되고 테스트된 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 [설치](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) 안내서의 _시스템 요구 사항_&#x200B;을 참조하십시오.
 
 ### 소프트웨어 EOL 확인
 
