@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>이제 Commerce on cloud projects에 대해 보관된 로그 파일의 보존 기간이 30일입니다. Commerce on Cloud Guide에서 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/log-locations">로그 보기 및 관리</a>를 참조하십시오.</p>
+      <td><p>이제 Commerce on cloud projects에 대해 보관된 로그 파일의 보존 기간이 30일입니다. Commerce on Cloud Guide에서 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/test/log-locations">로그 보기 및 관리</a>를 참조하십시오.</p>
 </td>
       <td>
         기술, 피드백
@@ -45,7 +45,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools 릴리스, v2002.2.8 이후 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다.</p>
+      <td><p>ECE-Tools 릴리스, v2002.2.8 이후 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다.</p>
 </td>
       <td>
         기술
@@ -67,7 +67,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>Cloud CLI 릴리스 v1.47.0 이후 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference">CLI 참조</a>를 업데이트했습니다.</p>
+      <td><p>Cloud CLI 릴리스 v1.47.0 이후 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference">CLI 참조</a>를 업데이트했습니다.</p>
 </td>
       <td>
         기술
@@ -89,7 +89,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p><code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI 도구 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">설치</a>에 대해 지원되는 운영 체제를 명확히 설명했습니다.</p>
+      <td><p><code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI 도구 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">설치</a>에 대해 지원되는 운영 체제를 명확히 설명했습니다.</p>
 </td>
       <td>
         피드백
@@ -111,7 +111,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>Cloud Patches 패키지 v1.1.11에 대한 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">릴리스 노트</a>가 추가되었습니다.</p>
+      <td><p>Cloud Patches 패키지 v1.1.11에 대한 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">릴리스 노트</a>가 추가되었습니다.</p>
 </td>
       <td>
         주요 업데이트
