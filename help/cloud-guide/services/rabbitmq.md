@@ -3,16 +3,16 @@ title: RabbitMQ 서비스 설정
 description: RabbitMQ 서비스가 클라우드 인프라에서 Adobe Commerce에 대한 메시지 대기열을 관리할 수 있도록 하는 방법을 알아봅니다.
 feature: Cloud, Services
 exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
-source-git-commit: 2df119f1c09b92e45ae30544e5c2ee0e0d21834c
+source-git-commit: 76a9721767cbd4328347311cc308810f0f7914c0
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
 
 # [!DNL RabbitMQ] 서비스 설정
 
-[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ko)은(는) [모듈](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
+[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)은(는) [모듈](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
 
 MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사용하여 메시지를 보내고 받는 확장 가능한 플랫폼을 제공합니다. 게재되지 않은 메시지를 저장하는 메커니즘도 포함됩니다. [!DNL RabbitMQ]은(는) AMQP(고급 메시지 대기열 프로토콜) 0.9.1 사양을 기반으로 합니다.
 
@@ -134,7 +134,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사�
 
 ### 응용 프로그램에서 연결
 
-응용 프로그램에서 실행 중인 RabbitMQ에 연결하려면 [&#x200B; 파일에 프로젝트 종속성으로 &#x200B;](https://github.com/dougbarth/amqp-utils)amqp-utils`.magento.app.yaml`과(와) 같은 클라이언트를 설치합니다.
+응용 프로그램에서 실행 중인 RabbitMQ에 연결하려면 [ 파일에 프로젝트 종속성으로 ](https://github.com/dougbarth/amqp-utils)amqp-utils`.magento.app.yaml`과(와) 같은 클라이언트를 설치합니다.
 
 For example,
 
@@ -149,3 +149,11 @@ PHP 컨테이너에 로그인하면 대기열을 관리하는 데 사용할 수 
 ### PHP 응용 프로그램에서 연결
 
 PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 소스 트리에 PHP 라이브러리를 추가합니다.
+
+## [!DNL RabbitMQ] 서비스 문제 해결
+
+[Adobe Commerce Cloud에서 RabbitMQ에 연결할 수 없음](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688)을 참조하십시오.
+
+## [!DNL RabbitMQ] 서비스 업그레이드 중
+
+업그레이드 지침은 [서비스 버전 변경](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)을 참조하십시오.
