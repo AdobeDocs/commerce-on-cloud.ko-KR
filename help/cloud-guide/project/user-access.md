@@ -5,9 +5,10 @@ role: Admin
 feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 953593de-f675-49fd-988f-f11306f67fbd
+source-git-commit: c972d9f2029499cf53edc334c1d9a40b155a991d
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ ht-degree: 0%
 
 **필수 구성 요소:**
 
-- Adobe ID에 등록된 사용자. 클라우드 프로젝트에 추가하려면 먼저 사용자가 [Adobe 계정에 등록](https://account.adobe.com)한 다음 [클라우드 계정을 초기화](https://console.adobecommerce.com)해야 합니다.
+- Adobe ID에 등록된 사용자. 사용자는 [Adobe 계정에 등록](https://account.adobe.com)한 다음 [https://console.adobecommerce.com](https://console.adobecommerce.com)을(를) 방문하여 [Cloud 계정](https://console.adobecommerce.com)을 초기화해야 클라우드 프로젝트에 추가할 수 있습니다.
 - **관리자** 역할을 할당받은 사용자가 `magento-cloud` CLI로 사용자를 관리할 수 없습니다. **계정 소유자** 역할이 부여된 사용자만 사용자를 관리할 수 있습니다.
 
 >[!ENDSHADEBOX]
@@ -112,7 +113,7 @@ Current role(s) of User (alice@example.com) on Production (project_id):
 
 ### 여러 환경에 사용자 추가
 
-사용자를 `Production` 환경에서는 `viewer`(으)로, `Integration` 환경에서는 `contributor`(으)로 추가하려면 다음 작업을 수행하십시오.
+사용자를 `viewer` 환경에서는 `Production`(으)로, `contributor` 환경에서는 `Integration`(으)로 추가하려면 다음 작업을 수행하십시오.
 
 ```bash
 magento-cloud user:add alice@example.com -r production:v -r integration:c
@@ -120,7 +121,7 @@ magento-cloud user:add alice@example.com -r production:v -r integration:c
 
 ### 사용자 환경 권한 업데이트
 
-`Production` 환경에서 사용자 환경 권한을 `admin`(으)로 업데이트하려면:
+`admin` 환경에서 사용자 환경 권한을 `Production`(으)로 업데이트하려면:
 
 ```bash
 magento-cloud user:update alice@example.com -r production:a
@@ -146,7 +147,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. _액세스_ 보기에서 **[!UICONTROL Add]**&#x200B;을(를) 클릭합니다.
 
-1. _[!UICONTROL Add User]_&#x200B;양식을 작성합니다.
+1. _[!UICONTROL Add User]_양식을 작성합니다.
 
    - 사용자 이메일 주소를 입력합니다.
 
@@ -170,7 +171,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 ## 사용자 인증 요구 사항
 
-보안 강화를 위해 Adobe은 클라우드 인프라 프로젝트 소스 코드 및 환경에서 Adobe Commerce에 대한 SSH 액세스에 TFA(2단계 인증)가 필요하도록 프로젝트 수준의 MFA(Multi-Factor Authentication) 적용을 제공합니다. [SSH용 MFA 사용](multi-factor-authentication.md)을 참조하세요.
+보안 강화를 위해 Adobe은 클라우드 인프라 프로젝트 소스 코드 및 환경에서 Adobe Commerce에 대한 SSH 액세스에 TFA(2단계 인증)가 필요한 프로젝트 수준의 MFA(다중 요소 인증) 적용을 제공합니다. [SSH용 MFA 사용](multi-factor-authentication.md)을 참조하세요.
 
 Adobe Commerce on cloud infrastructure 프로젝트에서 MFA 시행이 활성화되면 해당 프로젝트의 환경에 대한 SSH 액세스 권한이 있는 모든 사용자는 Adobe Commerce on cloud infrastructure 계정에서 TFA를 활성화해야 합니다. 자동화된 프로세스의 경우 명령줄에서 인증할 컴퓨터 사용자 및 API 토큰을 만들 수 있습니다.
 
@@ -193,7 +194,7 @@ Adobe Commerce on cloud infrastructure는 다음 애플리케이션 중 하나�
 - [FreeOTP(Android)](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp)
 - [GAuth 인증자(Firefox OS, 데스크톱 등)](https://github.com/gbraad-apps/gauth)
 
-인증자 응용 프로그램을 설치하고 TFA를 사용하도록 설정하는 방법은 [!DNL Cloud Console]의 _계정 설정_ 페이지에서 확인할 수 있습니다.
+인증자 응용 프로그램을 설치하고 TFA를 사용하도록 설정하는 방법은 _의_&#x200B;계정 설정[!DNL Cloud Console] 페이지에서 확인할 수 있습니다.
 
 **사용자 계정에서 TFA를 활성화하려면**:
 
@@ -213,7 +214,7 @@ Adobe Commerce on cloud infrastructure는 다음 애플리케이션 중 하나�
 
    - **[!UICONTROL Verify and save]**&#x200B;을(를) 클릭합니다.
 
-     코드가 유효하면 Adobe이 계정 이메일 주소로 알림이 전송되어 계정에 TFA가 있음을 확인할 수 있습니다.
+     코드가 유효하면 Adobe에서 계정 이메일 주소로 알림이 전송되어 계정에 TFA가 있음을 확인할 수 있습니다.
 
 1. 선택 사항입니다. _신뢰할 수 있는 브라우저_ 설정을 사용하여 30일 동안 브라우저에서 인증 코드를 캐시합니다.
 
@@ -231,7 +232,7 @@ Adobe Commerce on cloud infrastructure는 다음 애플리케이션 중 하나�
 
      >[!WARNING]
      >
-     >TFA가 있는 계정에 액세스할 수 없고 복구 코드 목록이 없는 경우 프로젝트 관리자에게 문의하거나 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 TFA 애플리케이션을 재설정해야 합니다.
+     >TFA가 있는 계정에 액세스할 수 없고 복구 코드 목록이 없는 경우 프로젝트 관리자에게 문의하거나 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 TFA 애플리케이션을 재설정해야 합니다.
 
 1. TFA 설정을 완료한 후 **저장**&#x200B;을 클릭하여 계정을 업데이트합니다.
 
@@ -266,7 +267,7 @@ MFA 적용이 활성화된 프로젝트의 경우 컴퓨터 사용자 및 자동
 
 >[!IMPORTANT]
 >
->계정에 대한 Protect API 토큰 값입니다. 코드 샘플, 화면 캡처 또는 비보안 클라이언트-서버 통신에 값을 표시하지 마십시오. 또한 공개 저장소에 저장된 소스 코드의 값을 노출하지 마십시오.
+>계정의 API 토큰 값을 보호합니다. 코드 샘플, 화면 캡처 또는 비보안 클라이언트-서버 통신에 값을 표시하지 마십시오. 또한 공개 저장소에 저장된 소스 코드의 값을 노출하지 마십시오.
 
 **API 토큰을 만들려면**:
 
