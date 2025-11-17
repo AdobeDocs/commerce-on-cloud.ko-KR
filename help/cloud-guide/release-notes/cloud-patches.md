@@ -4,9 +4,9 @@ description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 �
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 07f42fc886d394b602533927b153a3f9370d192c
+source-git-commit: 299a1081c66654c997f0a7d952cbc824280e0070
 workflow-type: tm+mt
-source-wordcount: '2536'
+source-wordcount: '2551'
 ht-degree: 0%
 
 ---
@@ -34,8 +34,8 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 릴리스 날짜: 2025년 11월 13일
 
 - ![수정 아이콘](../../assets/fix.svg) **Symfony 패키지** 최신 Symfony YAML 패키지에 대한 지원이 추가되었습니다.<!-- MCLOUD-14020 -->
-- ![수정 아이콘](../../assets/fix.svg) **패치**-체크아웃 중단(AC-15867) 및 Newrelic(ACSD-68617)에 대한 수정.<!-- MCLOUD-14191 -->
-- ![수정 아이콘](../../assets/fix.svg) **개선된 범주 보기** - MCLOUD-13752: 범주 보기 개선<!-- MCLOUD-13752 | MCLOUD-14139  - -->
+- ![수정 아이콘](../../assets/fix.svg) **패치** - *Commerce 기술 자료&quot;(티켓 AC-15867 및 ACSD-68617)에 설명된 문제([)로 인해 ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997)JS 축소 및 번들링이 사용되면 체크아웃 오류가 발생합니다.<!-- MCLOUD-14191 -->
+- ![수정 아이콘](../../assets/fix.svg) **개선된 범주 보기** - MCLOUD-13752: 범주 보기를 개선합니다.<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
 
@@ -66,13 +66,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2025년 5월 5일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.8로 업데이트된 패치**—1.1.7[에 릴리스된 &#x200B;](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)CVE-2025-24434<!-- MCLOUD-13619 -->용 업데이트된 패치입니다.
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.8로 업데이트된 패치**—1.1.7[에 릴리스된 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)CVE-2025-24434<!-- MCLOUD-13619 -->용 업데이트된 패치입니다.
 
 ## v1.1.6
 
 릴리스 날짜: 2025년 4월 24일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—1.1.4[에 릴리스된 &#x200B;](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)CVE-2025-24434<!-- MCLOUD-13240 -->용 업데이트된 패치입니다.
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—1.1.4[에 릴리스된 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)CVE-2025-24434<!-- MCLOUD-13240 -->용 업데이트된 패치입니다.
 
 ## v1.1.5
 
@@ -84,7 +84,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2025년 2월 13일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7로 패치가 추가되었습니다**—이 업데이트는 패치 [CVE-2025-24434](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7로 패치가 추가되었습니다**—이 업데이트는 패치 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
 
 ## v1.1.3
 
@@ -96,13 +96,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2024년 11월 5일
 
-- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치 추가—이 업데이트는 B2B 모듈을 사용할 때 Adobe Commerce에 대한 중요한 [CVE-2024-45115](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) 취약점을 수정합니다.<!-- MCLOUD-12980 - -->
+- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치 추가—이 업데이트는 B2B 모듈을 사용할 때 Adobe Commerce에 대한 중요한 [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) 취약점을 수정합니다.<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 릴리스 날짜: 2024년 11월 5일
 
-- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치가 추가되었습니다. 이 업데이트는 중요한 [CVE-2024-34102](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting 취약성을 패치합니다.<!-- MCLOUD-12980 - -->
+- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치가 추가되었습니다. 이 업데이트는 중요한 [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting 취약성을 패치합니다.<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -180,7 +180,7 @@ Adobe Commerce 2.4.5용 중요 패치:
 
 - **Braintree 결제를 사용한 주문 문제**—이 패치는 관리자가 새로운 주문이나 재주문을 할 수 없도록 하는 중요한 문제를 해결합니다.<!-- MCLOUD-9137 -->
 
-[Braintree 결제가 활성화된 경우 관리자가 주문/순서를 만들 수 없습니다](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html?lang=ko).
+[Braintree 결제가 활성화된 경우 관리자가 주문/순서를 만들 수 없습니다](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
 
 ## v1.0.17
 
@@ -196,7 +196,7 @@ Adobe Commerce 2.3.3-p1 이상 버전용 주요 패치:
 
 인증되지 않은 원격 코드 실행을 초래하는 **중요** 취약성을 해결하기 위해 패치를 업데이트했습니다.<!-- MCLOUD-8479 -->
 
-[Adobe 보안 게시판 APSB22-12](https://helpx.adobe.com/kr/security/products/magento/apsb22-12.html)을 참조하세요.
+[Adobe 보안 게시판 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)을 참조하세요.
 
 ## v1.0.15
 
@@ -213,7 +213,7 @@ Adobe Commerce 2.3.3-p1 이상 버전용 주요 패치:
 
 인증되지 않은 원격 코드 실행을 초래하는 **중요** 취약성을 해결하기 위한 패치를 추가했습니다.<!-- MCLOUD-8461 -->
 
-[Adobe 보안 게시판 APSB22-12](https://helpx.adobe.com/kr/security/products/magento/apsb22-12.html)을 참조하세요.
+[Adobe 보안 게시판 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)을 참조하세요.
 
 ## v1.0.13
 
@@ -229,7 +229,7 @@ Adobe Commerce 2.3.3-p1 이상 버전용 주요 패치:
 
 Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
-- **API 속도 제한 문제**—이 패치는 배열에 있는 항목이 20개가 넘는 요청을 웹 API에서 처리하지 못하게 하는 기본 속도 제한을 수정합니다. 이 패치는 속도 제한의 기본값을 높입니다. Adobe Commerce [2.4.3 릴리스 정보](https://experienceleague.adobe.com/ko/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->를 참조하세요.
+- **API 속도 제한 문제**—이 패치는 배열에 있는 항목이 20개가 넘는 요청을 웹 API에서 처리하지 못하게 하는 기본 속도 제한을 수정합니다. 이 패치는 속도 제한의 기본값을 높입니다. Adobe Commerce [2.4.3 릴리스 정보](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->를 참조하세요.
 
 ## v1.0.11
 
