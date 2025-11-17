@@ -1,36 +1,37 @@
 ---
 title: Elasticsearch 서비스 설정
-description: 클라우드 인프라에서 Adobe Commerce에 대한 Elasticsearch 서비스를 활성화하는 방법을 알아봅니다.
+description: 클라우드 인프라에서 Adobe Commerce용 Elasticsearch 서비스를 활성화하는 방법을 알아봅니다.
 feature: Cloud, Search, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
+source-git-commit: ef22e7b305c20148f4ee4b2c0e64e2114bf229b5
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
 
 # Elasticsearch 서비스 설정
 
-[Elasticsearch](https://www.elastic.co)은(는) 모든 원본, 모든 형식에서 데이터를 가져와 실시간으로 검색하고 시각화할 수 있는 오픈 소스 제품입니다.
+[Elasticsearch](https://www.elastic.co)은(는) 모든 소스, 모든 형식에서 데이터를 가져오고 실시간으로 검색하고 시각화할 수 있는 오픈 소스 제품입니다.
 
 {{elasticsearch-support}}
 
 Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.md)을 참조하십시오.
 
 - Elasticsearch은 제품 카탈로그의 제품에 대해 빠른 검색 및 고급 검색을 수행합니다
-- Elasticsearch 분석기는 여러 언어를 지원합니다
+- Elasticsearch Analyzer 는 여러 언어를 지원합니다
 - 정지어 및 동의어 지원
 - 색인 재지정 작업이 완료될 때까지 색인화는 고객에게 영향을 주지 않습니다
 
 >[!TIP]
 >
->Adobe은 Adobe Commerce 애플리케이션에 대한 서드파티 Elasticsearch을 구성하려는 경우에도 항상 Adobe Commerce on cloud infrastructure 프로젝트에 대한 검색을 설정할 것을 권장합니다. Elasticsearch 설정은 서드파티 검색 도구가 실패할 경우에 대비하기 위한 대체 옵션을 제공합니다.
+>Adobe은 Adobe Commerce 애플리케이션에 대한 서드파티 검색 도구를 구성할 계획이라도 항상 Adobe Commerce on cloud infrastructure 프로젝트에 Elasticsearch을 설정할 것을 권장합니다. Elasticsearch을 설정하면 서드파티 검색 도구가 실패할 경우에 대비한 대체 옵션이 제공됩니다.
 
 {{service-instruction}}
 
 **Elasticsearch을 사용하려면**:
 
-1. 시작 프로젝트의 경우 Elasticsearch 버전과 할당된 디스크 공간(MB)을 사용하여 `elasticsearch` 서비스를 `.magento/services.yaml` 파일에 추가하십시오.
+1. 시작 프로젝트의 경우 Elasticsearch 버전과 할당된 디스크 공간(MB)이 있는 `elasticsearch` 파일에 `.magento/services.yaml` 서비스를 추가하십시오.
 
    ```yaml
    elasticsearch:
@@ -40,7 +41,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
    Pro 프로젝트의 경우 Adobe Commerce 지원 티켓을 제출하여 스테이징 및 프로덕션 환경에서 Elasticsearch 버전을 변경해야 합니다.
 
-1. `.magento.app.yaml` 파일에서 `relationships` 속성을 설정합니다.
+1. `relationships` 파일에서 `.magento.app.yaml` 속성을 설정합니다.
 
    ```yaml
    relationships:
@@ -79,7 +80,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
 클라우드 인프라 프로젝트에서 Adobe Commerce을 설치하거나 업그레이드할 때 항상 Elasticsearch 서비스 버전과 Adobe Commerce용 [Elasticsearch PHP](https://github.com/elastic/elasticsearch-php) 클라이언트 간의 호환성을 확인하십시오.
 
-- **처음 설치**-`services.yaml` 파일에 지정된 Elasticsearch 버전이 Adobe Commerce에 대해 구성된 Elasticsearch PHP 클라이언트와 호환되는지 확인하십시오.
+- **처음 설치**-`services.yaml` 파일에 지정된 Elasticsearch 버전이 Adobe Commerce용으로 구성된 Elasticsearch PHP 클라이언트와 호환되는지 확인합니다.
 
 - **프로젝트 업그레이드**-새 응용 프로그램 버전의 Elasticsearch PHP 클라이언트가 클라우드 인프라에 설치된 Elasticsearch 서비스 버전과 호환되는지 확인하십시오.
 
@@ -205,9 +206,9 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
 - 프로젝트에 대한 Elasticsearch 서비스를 설정한 후 관리 UI를 사용하여 Elasticsearch 연결을 테스트하고 Adobe Commerce에 대한 Elasticsearch 설정을 사용자 지정합니다.
 
-### Elasticsearch을 위한 플러그인 추가
+### Elasticsearch에 대한 플러그인 추가
 
-필요한 경우 `.magento/services.yaml` 파일의 Elasticsearch 서비스에 `configuration:plugins` 섹션을 추가하여 Elasticsearch에 대한 플러그인을 추가할 수 있습니다. 예를 들어 다음 코드는 ICU 분석 및 음성 분석 플러그인을 활성화합니다.
+필요한 경우 `configuration:plugins` 파일의 Elasticsearch 서비스에 `.magento/services.yaml` 섹션을 추가하여 Elasticsearch에 대한 플러그인을 추가할 수 있습니다. 예를 들어 다음 코드는 ICU 분석 및 음성 분석 플러그인을 활성화합니다.
 
 ```yaml
 elasticsearch:
@@ -224,11 +225,11 @@ Elastic Suite를 설정할 때 `ELASTICSUITE_CONFIGURATION` 배포 변수에 구
 
 ### Elasticsearch에 대한 플러그인 제거
 
-`.magento/services.yaml`의 `elasticsearch:`에서 플러그 인 항목을 제거해도 예상대로 제거되거나 비활성화되지 않습니다. Elasticsearch 데이터를 다시 색인화해야 합니다. 이 동작은 이러한 플러그인에 의존하는 데이터의 가능한 손실이나 손상을 방지하기 위한 것입니다.
+`elasticsearch:`의 `.magento/services.yaml`에서 플러그 인 항목을 제거해도 예상대로 제거되거나 비활성화되지 않습니다. Elasticsearch 데이터를 다시 색인화해야 합니다. 이 동작은 이러한 플러그인에 의존하는 데이터의 가능한 손실이나 손상을 방지하기 위한 것입니다.
 
 **Elasticsearch 플러그인을 제거하려면**:
 
-1. `.magento/services.yaml` 파일에서 Elasticsearch 플러그 인 항목을 제거하십시오.
+1. `.magento/services.yaml` 파일에서 Elasticsearch 플러그인 항목을 제거합니다.
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
 
    ```bash
@@ -260,10 +261,3 @@ Elastic Suite를 설정할 때 `ELASTICSUITE_CONFIGURATION` 배포 변수에 구
 >
 >Adobe Commerce에서 Elastic Suite 플러그인을 사용하거나 문제를 해결하는 방법에 대한 자세한 내용은 [Elastic Suite 설명서](https://github.com/Smile-SA/elasticsuite)를 참조하십시오.
 
-## 문제 해결
-
-Elasticsearch 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서를 참조하십시오.
-
-- [Elasticsearch 5가 구성되어 있지만 검색 페이지가 &quot;필드 데이터를 사용할 수 없습니다...&quot; 오류](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=ko)
-- Adobe Commerce 문제 해결사의 [Elasticsearch](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
-- [Elasticsearch 인덱스 상태가 `yellow` 또는 `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=ko)입니다.
