@@ -126,7 +126,7 @@ Adobe에서는 `staging`에서 `master`(이)라는 분기를 만들 것을 권�
 
 - [OpenSearch](../services/opensearch.md)
 
-스테이징 및 프로덕션 환경에서는 CDN 및 캐싱에 Fastly를 사용합니다. Fastly CDN 확장의 최신 버전은 프로젝트의 초기 프로비저닝 중에 설치됩니다. 확장을 업그레이드하여 최신 버그 수정 및 개선 사항을 얻을 수 있습니다. Magento 2[용 ](https://github.com/fastly/fastly-magento2)Fastly CDN 모듈을 참조하십시오. 또한 성능 모니터링을 위해 [New Relic](../monitor/account-management.md)에 액세스할 수 있습니다.
+스테이징 및 프로덕션 환경에서는 CDN 및 캐싱에 Fastly를 사용합니다. Fastly CDN 확장의 최신 버전은 프로젝트의 초기 프로비저닝 중에 설치됩니다. 확장을 업그레이드하여 최신 버그 수정 및 개선 사항을 얻을 수 있습니다. Magento 2[용 &#x200B;](https://github.com/fastly/fastly-magento2)Fastly CDN 모듈을 참조하십시오. 또한 성능 모니터링을 위해 [New Relic](../monitor/account-management.md)에 액세스할 수 있습니다.
 
 다음 파일을 사용하여 구현에 사용할 소프트웨어 버전을 구성합니다.
 
