@@ -2,20 +2,23 @@
 title: 스타터 아키텍처
 description: Starter 아키텍처에서 지원하는 환경에 대해 알아봅니다.
 feature: Cloud, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
+source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 # 스타터 아키텍처
 
-Adobe Commerce on cloud infrastructure Starter 아키텍처는 초기 프로젝트 코드, 스테이징 환경 및 최대 2개의 통합 환경을 포함하는 `master` 환경을 포함하여 최대 **4개** 환경을 지원합니다.
+Adobe Commerce on cloud infrastructure Starter 아키텍처는 초기 프로젝트 코드, 스테이징 환경 및 최대 2개의 통합 환경을 포함하는 **환경을 포함하여 최대** 4개`master` 환경을 지원합니다.
 
 모든 환경은 PaaS(Platform as a Service) 컨테이너에 있습니다. 이러한 컨테이너는 서버 그리드의 매우 제한된 컨테이너 내에 배포됩니다. 이러한 환경은 로컬 작업 영역에서 푸시된 분기의 배포된 코드 변경 사항을 수락하는 읽기 전용입니다. 각 환경은 데이터베이스와 웹 서버를 제공합니다.
 
-원하는 개발 및 분기 방법을 사용할 수 있습니다. 프로젝트에 처음 액세스하면 `master` 환경에서 `staging` 환경을 만듭니다. 그런 다음 `staging`에서 분기하여 `integration` 환경을 만듭니다.
+>[!NOTE]
+>
+>시작 환경에서는 읽기 전용 폴더에 대한 권한을 변경할 수 없습니다. 이러한 제한은 애플리케이션의 무결성과 보안을 보호합니다. 이러한 읽기 전용 파일 시스템에 대한 폴더 권한은 변경할 수 없습니다. 지원 팀에서도 수정할 수 없습니다. 모든 변경 내용은 로컬 개발 환경의 분기에서 수행한 후 애플리케이션 환경으로 푸시해야 합니다. 원하는 개발 및 분기 방법을 사용할 수 있습니다. 프로젝트에 처음 액세스하면 `staging` 환경에서 `master` 환경을 만듭니다. 그런 다음 `integration`에서 분기하여 `staging` 환경을 만듭니다.
 
 ## 초보자 환경 아키텍처
 
@@ -29,11 +32,11 @@ Adobe Commerce on cloud infrastructure Starter 아키텍처는 초기 프로젝�
 
 `production` 환경은 읽기 전용이므로 `integration` 환경을 사용하여 코드를 변경하고, `integration`에서 `staging`(으)로, 그리고 마지막으로 `production` 환경으로 배포합니다. [스토어 배포](../deploy/staging-production.md) 및 [사이트 시작](../launch/overview.md)을 참조하세요.
 
-Adobe은 `production` 환경에 배포되는 `master` 분기로 푸시하기 전에 `staging` 분기에서 완전히 테스트하는 것을 권장합니다.
+Adobe에서는 `staging` 환경에 배포되는 `master` 분기로 푸시하기 전에 `production` 분기에서 전체 테스트를 수행하는 것이 좋습니다.
 
 ## 스테이징 환경
 
-Adobe은 `master`에서 `staging`(이)라는 분기를 만들 것을 권장합니다. `staging` 분기는 스테이징 환경에 코드를 배포하여 코드, 모듈 및 확장, 결제 게이트웨이, 배송, 제품 데이터 등을 테스트하는 사전 프로덕션 환경을 제공합니다. 이 환경은 Fastly, New Relic APM 및 검색을 포함하여 프로덕션 환경에 맞게 모든 서비스를 구성할 수 있도록 제공합니다.
+Adobe에서는 `staging`에서 `master`(이)라는 분기를 만들 것을 권장합니다. `staging` 분기는 스테이징 환경에 코드를 배포하여 코드, 모듈 및 확장, 결제 게이트웨이, 배송, 제품 데이터 등을 테스트하는 사전 프로덕션 환경을 제공합니다. 이 환경은 Fastly, New Relic APM 및 검색을 포함하여 프로덕션 환경에 맞게 모든 서비스를 구성할 수 있도록 제공합니다.
 
 이 안내서의 추가 섹션에서는 보안 스테이징 환경에서 최종 코드 배포 및 프로덕션 수준 상호 작용을 테스트하는 방법에 대한 지침을 제공합니다. 최상의 성능 및 기능 테스트를 위해 데이터베이스를 스테이징 환경으로 복제하십시오.
 
@@ -89,7 +92,7 @@ Adobe은 `master`에서 `staging`(이)라는 분기를 만들 것을 권장합�
 - HTTP 캐싱 및 CDN용 Fastly
 - PHP-FPM과 대화하는 Nginx 웹 서버, 여러 작업자가 있는 하나의 인스턴스
 - Redis 서버
-- Adobe Commerce 2.2 - 2.4.3-p2에 대한 카탈로그 검색 Elasticsearch
+- Elasticsearch for catalog Adobe Commerce 2.2 - 2.4.3-p2 검색
 - Adobe Commerce 2.3.7-p3, 2.4.3-p2 및 2.4.4 이상에 대한 카탈로그 검색 OpenSearch
 - 이그레스 필터링(아웃바운드 방화벽)
 
@@ -117,13 +120,13 @@ Adobe은 `master`에서 `staging`(이)라는 분기를 만들 것을 권장합�
 
 - [레디스](../services/redis.md)
 
-- [RabbitMQ](../services/rabbitmq.md)
+- [래빗MQ](../services/rabbitmq.md)
 
 - [Elasticsearch](../services/elasticsearch.md)
 
 - [OpenSearch](../services/opensearch.md)
 
-스테이징 및 프로덕션 환경에서는 CDN 및 캐싱에 Fastly를 사용합니다. Fastly CDN 확장의 최신 버전은 프로젝트의 초기 프로비저닝 중에 설치됩니다. 확장을 업그레이드하여 최신 버그 수정 및 개선 사항을 얻을 수 있습니다. Magento 2[&#128279;](https://github.com/fastly/fastly-magento2)에 대한 Fastly CDN 모듈을 참조하십시오. 또한 성능 모니터링을 위해 [New Relic](../monitor/account-management.md)에 액세스할 수 있습니다.
+스테이징 및 프로덕션 환경에서는 CDN 및 캐싱에 Fastly를 사용합니다. Fastly CDN 확장의 최신 버전은 프로젝트의 초기 프로비저닝 중에 설치됩니다. 확장을 업그레이드하여 최신 버그 수정 및 개선 사항을 얻을 수 있습니다. Magento 2[용 ](https://github.com/fastly/fastly-magento2)Fastly CDN 모듈을 참조하십시오. 또한 성능 모니터링을 위해 [New Relic](../monitor/account-management.md)에 액세스할 수 있습니다.
 
 다음 파일을 사용하여 구현에 사용할 소프트웨어 버전을 구성합니다.
 
@@ -145,7 +148,7 @@ Adobe은 `master`에서 `staging`(이)라는 분기를 만들 것을 권장합�
 
 1. 로컬 환경에 `master` 분기 복제
 
-1. `master`에서 `staging` 분기 만들기
+1. `staging`에서 `master` 분기 만들기
 
 1. `staging`에서 개발할 분기 만들기
 

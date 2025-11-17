@@ -3,9 +3,9 @@ title: Pro 프로젝트 워크플로
 description: Pro 개발 및 배포 워크플로우를 사용하는 방법을 알아봅니다.
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: edff4efe0af54542321e887defc27dc96e6ae7f6
+source-git-commit: 7758ca69fc8232a8e1798c536410dc028c87fee6
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Pro 프로젝트에는 글로벌 `master` 분기와 세 개의 기본 환경이 
 
 이러한 환경은 `read-only`이며 로컬 작업 영역에서 푸시된 분기의 배포된 코드 변경 사항만 수락합니다.
 
-다음 그래픽은 간단한 git 분기 접근 방식을 사용하는 Pro 개발 및 배포 워크플로우를 보여 줍니다. [&#x200B; 환경을 기반으로 하는 활성 분기를 사용하여 &#x200B;](#development-workflow)개발`integration` 코드를 사용합니다. 원격 활성 분기에서 _푸싱_ 및 _당기기_ 코드 변경 사항을 가져옵니다. 원격 분기를 _병합_&#x200B;하여 해당 환경에 대해 자동화된 [빌드 및 배포](#deployment-workflow) 프로세스를 활성화하는 기본 분기로 확인된 코드를 배포합니다.
+다음 그래픽은 간단한 git 분기 접근 방식을 사용하는 Pro 개발 및 배포 워크플로우를 보여 줍니다. [ 환경을 기반으로 하는 활성 분기를 사용하여 ](#development-workflow)개발`integration` 코드를 사용합니다. 원격 활성 분기에서 _푸싱_ 및 _당기기_ 코드 변경 사항을 가져옵니다. 원격 분기를 _병합_&#x200B;하여 해당 환경에 대해 자동화된 [빌드 및 배포](#deployment-workflow) 프로세스를 활성화하는 기본 분기로 확인된 코드를 배포합니다.
 
 ![Pro 아키텍처 개발 워크플로에 대한 높은 수준의 보기](../../assets/pro-dev-workflow.png)
 
@@ -35,7 +35,7 @@ The disk hosting /app/<cluster_ID> is full
 
 >[!NOTE]
 >
->이러한 제한은 애플리케이션의 무결성과 보안을 보호합니다. 이러한 읽기 전용 파일 시스템에 대한 폴더 권한은 변경할 수 없습니다. 지원 팀에서도 수정할 수 없습니다. 모든 변경 내용은 로컬 개발 환경의 분기에서 수행한 후 애플리케이션 환경으로 푸시해야 합니다. 자세한 내용은 Pro 환경에 대한 개요는 [Pro 아키텍처](pro-architecture.md)를, 프로젝트 보기의 Pro 환경 목록에 대한 개요는 [[!DNL Cloud Console]](../project/overview.md#cloud-console)을(를) 참조하십시오.
+>Pro 환경에서는 읽기 전용 폴더의 권한을 변경할 수 없습니다. 이러한 제한은 애플리케이션의 무결성과 보안을 보호합니다. 이러한 읽기 전용 파일 시스템에 대한 폴더 권한은 변경할 수 없습니다. 지원 팀에서도 수정할 수 없습니다. 모든 변경 내용은 로컬 개발 환경의 분기에서 수행한 후 애플리케이션 환경으로 푸시해야 합니다. 자세한 내용은 Pro 환경에 대한 개요는 [Pro 아키텍처](pro-architecture.md)를, 프로젝트 보기의 Pro 환경 목록에 대한 개요는 [[!DNL Cloud Console]](../project/overview.md#cloud-console)을(를) 참조하십시오.
 
 ## 개발 워크플로
 
@@ -61,7 +61,7 @@ The disk hosting /app/<cluster_ID> is full
 
 - **구성 관리 파일 생성**—배포된 환경에서 일부 구성 설정은 _읽기 전용_&#x200B;입니다.
 
-- **저장소 구성**—통합 환경을 사용하여 모든 저장소 설정을 완전히 구성해야 합니다. **의**&#x200B;통합&#x200B;_환경 보기에서_&#x200B;저장소 관리자 URL _[!DNL Cloud Console]_&#x200B;을 찾을 수 있습니다.
+- **저장소 구성**—통합 환경을 사용하여 모든 저장소 설정을 완전히 구성해야 합니다. **의**&#x200B;통합&#x200B;_환경 보기에서_&#x200B;저장소 관리자 URL _[!DNL Cloud Console]_을 찾을 수 있습니다.
 
 ## 배포 워크플로
 
