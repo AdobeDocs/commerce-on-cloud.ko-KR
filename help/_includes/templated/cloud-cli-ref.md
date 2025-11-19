@@ -1,7 +1,7 @@
 ---
-source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
+source-git-commit: fddcfdb97aede07b2cd6ef12bda6d7998f941951
 workflow-type: tm+mt
-source-wordcount: '13671'
+source-wordcount: '13721'
 ht-degree: 0%
 
 ---
@@ -819,7 +819,7 @@ API 토큰을 사용하여 Magento Cloud에 로그인
 Use this command to log in to your Magento Cloud account using an API token.
 
 You can create an account at:
-    https://business.adobe.com/kr/products/magento/magento-commerce.html
+    https://business.adobe.com/products/magento/magento-commerce.html
 
 If you have an account, but you do not already have an API token, you can create one here:
     https://accounts.magento.cloud/user/api-tokens
@@ -1694,7 +1694,7 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATTACH] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-프로젝트에 새 도메인 추가
+프로젝트에 새 도메인을 추가합니다. 이 옵션은 Cloud Pro 계획 프로젝트에 사용할 수 없습니다.
 
 ### 인수
 
@@ -1766,7 +1766,7 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-프로젝트에서 도메인 삭제
+프로젝트에서 도메인을 삭제합니다. 이 옵션은 Cloud Pro 계획 프로젝트에 사용할 수 없습니다.
 
 ### 인수
 
@@ -1813,7 +1813,7 @@ magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
 ```
 
-도메인에 대한 세부 정보 표시
+도메인에 대한 세부 정보를 표시합니다. 이 옵션은 Cloud Pro 계획 프로젝트에 사용할 수 없습니다.
 
 ### 인수
 
@@ -1878,7 +1878,7 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--column
 magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
-모든 도메인 목록 가져오기
+모든 도메인 목록을 가져옵니다. 이 옵션은 Cloud Pro 계획 프로젝트에 사용할 수 없습니다.
 
 ### 옵션
 
@@ -1924,7 +1924,7 @@ magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p
 magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-도메인 업데이트
+도메인을 업데이트합니다. 이 옵션은 Cloud Pro 계획 프로젝트에 사용할 수 없습니다.
 
 ### 인수
 
