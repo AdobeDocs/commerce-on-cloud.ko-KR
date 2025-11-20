@@ -66,13 +66,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2025년 5월 5일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.8로 업데이트된 패치**—1.1.7[에 릴리스된 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)CVE-2025-24434<!-- MCLOUD-13619 -->용 업데이트된 패치입니다.
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.8로 업데이트된 패치**—1.1.7[에 릴리스된 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)CVE-2025-24434<!-- MCLOUD-13619 -->용 업데이트된 패치입니다.
 
 ## v1.1.6
 
 릴리스 날짜: 2025년 4월 24일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—1.1.4[에 릴리스된 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)CVE-2025-24434<!-- MCLOUD-13240 -->용 업데이트된 패치입니다.
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—1.1.4[에 릴리스된 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)CVE-2025-24434<!-- MCLOUD-13240 -->용 업데이트된 패치입니다.
 
 ## v1.1.5
 
