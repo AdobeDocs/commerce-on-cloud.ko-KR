@@ -138,5 +138,5 @@ magento-cloud environment:info -p <project_id> -e production restrict_robots fal
 >
 >- 검색 엔진별 색인화는 프로덕션에서만 활성화할 수 있으며 하위 환경에서는 활성화할 수 없습니다.
 >
->- PWA Studio을 사용 중이며 구성된 `robots.txt` 파일에 액세스할 수 없는 경우 `robots.txt`스토어[ > 구성 > ](https://github.com/magento/magento2-upward-connector#front-name-allowlist)일반&#x200B;**>**&#x200B;웹&#x200B;**> 상향 PWA 구성에서**&#x200B;전면 허용 목록에 추가하다 이름&#x200B;**에**&#x200B;을(를) 추가하십시오.
+>- PWA Studio을 사용 중이며 구성된 `robots.txt` 파일에 액세스할 수 없는 경우 `robots.txt`스토어[&#x200B; > 구성 > &#x200B;](https://github.com/magento/magento2-upward-connector#front-name-allowlist)일반&#x200B;**>**&#x200B;웹&#x200B;**> 상향 PWA 구성에서**&#x200B;전면 허용 목록에 추가하다 이름&#x200B;**에**&#x200B;을(를) 추가하십시오.
 
