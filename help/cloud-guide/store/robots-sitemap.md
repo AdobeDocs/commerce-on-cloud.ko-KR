@@ -3,9 +3,9 @@ title: 사이트 맵 및 검색 엔진 로봇 추가
 description: 클라우드 인프라의 Adobe Commerce에 사이트 맵 및 검색 엔진 로봇을 추가하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
+source-git-commit: 1ecb820d55faa78e369d63996f11cd4d1d554e26
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Please make sure that "/" is writable by the web-server.
 **버전 2.2 이상에서 `sitemap.xml` 파일을 생성하려면**:
 
 1. 관리자에 액세스합니다.
-1. _마케팅_ 메뉴의 _SEO 및 검색_ 섹션에서 **사이트 맵**&#x200B;을 클릭합니다.
+1. _마케팅_ 메뉴의 **SEO 및 검색** 섹션에서 _사이트 맵_&#x200B;을 클릭합니다.
 1. _사이트 맵_ 보기에서 **사이트 맵 추가**&#x200B;를 클릭합니다.
 1. _새 사이트 맵_ 보기에서 다음 값을 입력하십시오.
 
@@ -40,8 +40,8 @@ Please make sure that "/" is writable by the web-server.
 **콘텐츠를 `robots.txt` 파일에 추가하려면**:
 
 1. 관리자에 액세스합니다.
-1. _콘텐츠_ 메뉴의 _디자인_ 섹션에서 **구성**&#x200B;을 클릭합니다.
-1. _디자인 구성_ 보기에서 _작업_ 열의 웹 사이트에 대해 **편집**&#x200B;을 클릭합니다.
+1. _콘텐츠_ 메뉴의 **디자인** 섹션에서 _구성_&#x200B;을 클릭합니다.
+1. _디자인 구성_ 보기에서 **작업** 열의 웹 사이트에 대해 _편집_&#x200B;을 클릭합니다.
 1. _기본 웹 사이트_ 보기에서 **검색 엔진 로봇**&#x200B;을 클릭합니다.
 1. **robots.txt의 사용자 지정 명령 편집** 필드를 업데이트합니다.
 1. **구성 저장**&#x200B;을 클릭합니다.
@@ -49,7 +49,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` 파일에서 `404 error`이(가) 생성되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 `/robots.txt`에서 `/media/robots.txt`(으)로 리디렉션을 제거합니다.
+>`<domain.your.project>/robots.txt` 파일에서 `404 error`이(가) 생성되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 `/robots.txt`에서 `/media/robots.txt`(으)로 리디렉션을 제거합니다.
 
 ## Fastly VCL 코드 조각을 사용하여 다시 작성
 
@@ -61,7 +61,7 @@ Please make sure that "/" is writable by the web-server.
 
 ### 리디렉션용 Fastly VCL 코드 조각 사용
 
-`type` 및 `content` 키-값 쌍을 사용하여 `sitemap.xml`에서 `/media/sitemap.xml`로의 경로를 다시 쓰는 사용자 지정 VCL 코드 조각을 만드십시오.
+`sitemap.xml` 및 `/media/sitemap.xml` 키-값 쌍을 사용하여 `type`에서 `content`로의 경로를 다시 쓰는 사용자 지정 VCL 코드 조각을 만드십시오.
 
 ```json
 {
@@ -87,7 +87,7 @@ Please make sure that "/" is writable by the web-server.
 
 **특정 도메인 리디렉션에 대해 Fastly VCL 코드 조각을 사용하려면**:
 
-도메인이 `domain.com`인 `pub/media/domain_robots.txt` 파일을 만들고 다음 VCL 코드 조각을 사용합니다.
+도메인이 `pub/media/domain_robots.txt`인 `domain.com` 파일을 만들고 다음 VCL 코드 조각을 사용합니다.
 
 ```json
 {
@@ -113,13 +113,20 @@ VCL 코드 조각은 `http://domain.com/robots.txt`을(를) 라우팅하고 `pub
 }
 ```
 
-`sitemap` 관리자 구성에서 `/`이(가) 아닌 `pub/media/`을(를) 사용하여 파일의 위치를 지정해야 합니다.
+`sitemap` 관리자 구성에서 `pub/media/`이(가) 아닌 `/`을(를) 사용하여 파일의 위치를 지정해야 합니다.
 
 ### 검색 엔진별 색인화 구성
 
-프로덕션에서 `robots.txt` 사용자 지정을 활성화하려면 클라우드 콘솔의 프로젝트 설정에서 `<environment-name>`**에 대해**&#x200B;검색 엔진별 색인화가 켜져 있음 옵션을 활성화해야 합니다.
+프로덕션에서 `robots.txt` 사용자 지정을 활성화하려면 Cloud Console의 프로젝트 설정에서 `<environment-name>`** 옵션에 대해 검색 엔진별 색인화를 활성화하십시오.
 
-![환경을 관리하려면 [!DNL Cloud Console]을(를) 사용](../../assets/robots-indexing-by-search-engine.png)
+- 레거시 클라우드 콘솔 - URL이 `https://<region-id>.magento.cloud/projects/<project_id>` 패턴을 따릅니다.
+- Adobe 클라우드 콘솔 - URL이 ``https://console.adobecommerce.com/<username>/<project_id>`` 패턴을 따릅니다.
+
+1. [!UICONTROL Indexing by search engines] 설정을 **켜짐**(으)로 전환합니다.
+
+   ![환경을 관리하려면 [!DNL Cloud Console]을(를) 사용](../../assets/robots-indexing-by-search-engine.png)
+
+1. [!UICONTROL Hide from search engines] 설정을 선택 취소합니다.
 
 magento-cloud CLI를 사용하여 이 설정을 업데이트할 수도 있습니다.
 
@@ -131,5 +138,5 @@ magento-cloud environment:info -p <project_id> -e production restrict_robots fal
 >
 >- 검색 엔진별 색인화는 프로덕션에서만 활성화할 수 있으며 하위 환경에서는 활성화할 수 없습니다.
 >
->- PWA Studio을 사용 중이며 구성된 `robots.txt` 파일에 액세스할 수 없는 경우 **스토어** > 구성 > **일반** > **웹** > 상향 PWA 구성에서 [전면 허용 목록에 추가하다 이름](https://github.com/magento/magento2-upward-connector#front-name-allowlist)에 `robots.txt`을(를) 추가하십시오.
+>- PWA Studio을 사용 중이며 구성된 `robots.txt` 파일에 액세스할 수 없는 경우 `robots.txt`스토어[ > 구성 > ](https://github.com/magento/magento2-upward-connector#front-name-allowlist)일반&#x200B;**>**&#x200B;웹&#x200B;**> 상향 PWA 구성에서**&#x200B;전면 허용 목록에 추가하다 이름&#x200B;**에**&#x200B;을(를) 추가하십시오.
 
