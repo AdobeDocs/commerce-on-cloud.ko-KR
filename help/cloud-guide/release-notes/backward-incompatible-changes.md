@@ -3,7 +3,8 @@ title: 이전 버전과 호환 불가능한 변경 사항
 description: 기존 클라우드 프로젝트를 업그레이드할 때 이전 버전과의 호환성에 대해 알아봅니다.
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
+source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 0%
@@ -22,11 +23,11 @@ ht-degree: 0%
 
 ### 서비스 버전 요구 사항 변경
 
-`ece-tools` v2002.1.0 이상을 사용하는 클라우드 프로젝트의 최소 PHP 버전 요구 사항을 7.0.x에서 7.1.x로 변경했습니다. 환경 구성에 PHP 7.0이 지정되어 있으면 `.magento.app.yaml` 파일에서 [php 구성](../application/php-settings.md)을 업데이트합니다.
+`ece-tools` v2002.1.0 이상을 사용하는 클라우드 프로젝트의 최소 PHP 버전 요구 사항을 7.0.x에서 7.1.x로 변경했습니다. 환경 구성에 PHP 7.0이 지정되어 있으면 [ 파일에서 ](../application/php-settings.md)php 구성`.magento.app.yaml`을 업데이트합니다.
 
 >[!WARNING]
 >
->PHP 버전 요구 사항 변경으로 인해 `ece-tools` 2002.1.0에서는 Adobe Commerce 2.1.15 이상을 실행하는 클라우드 인프라 프로젝트에서 Adobe Commerce만 지원합니다. 프로젝트에서 이전 릴리스를 사용하는 경우 `ece-tools` 2002.1.0으로 업데이트하기 전에 [업그레이드](../development/commerce-version.md)해야 합니다.
+>PHP 버전 요구 사항 변경으로 인해 `ece-tools` 2002.1.0에서는 Adobe Commerce 2.1.15 이상을 실행하는 클라우드 인프라 프로젝트에서 Adobe Commerce만 지원합니다. 프로젝트에서 이전 릴리스를 사용하는 경우 [ 2002.1.0으로 업데이트하기 전에 ](../development/commerce-version.md)업그레이드`ece-tools`해야 합니다.
 
 ### 환경 구성 변경 사항
 
@@ -53,11 +54,11 @@ ht-degree: 0%
 | `vendor/bin/ece-tools docker:build` | `vendor/bin/ece-docker build:compose` |
 | `vendor/bin/ece-tools docker:config:convert` | `vendor/bin/ece-docker  image:generate:php` |
 
-이전 ECE-Tools 릴리스에서는 `m2-ece-build` 및 `m2-ece-deploy` 명령을 사용하여 `.magento.app.yaml` 파일에서 배포 후크를 구성할 수 있습니다. v2002.1.0으로 업데이트할 때 `.magento.app.yaml` 파일의 `hooks` 구성에서 사용되지 않는 명령을 확인하고 필요한 경우 바꿉니다.
+이전 ECE-Tools 릴리스에서는 `m2-ece-build` 및 `m2-ece-deploy` 명령을 사용하여 `.magento.app.yaml` 파일에서 배포 후크를 구성할 수 있습니다. v2002.1.0으로 업데이트할 때 `hooks` 파일의 `.magento.app.yaml` 구성에서 사용되지 않는 명령을 확인하고 필요한 경우 바꿉니다.
 
 ## 클라우드 패치 변경 사항
 
-- **다운로드한 패치 제거**-`magento/magento-cloud-patches` 패키지는 [소프트웨어 다운로드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=ko) 페이지에서 사용할 수 있는 모든 패치를 번들로 제공하고 클라우드에 배포할 때 자동으로 적용합니다. ECE-Tools 2002.1.0 이상으로 업그레이드한 후 패치 충돌을 방지하려면 수동으로 프로젝트에 다운로드하여 추가한 Adobe 제공 패치를 제거합니다.
+- **다운로드한 패치 제거**-`magento/magento-cloud-patches` 패키지는 [소프트웨어 다운로드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) 페이지에서 사용할 수 있는 모든 패치를 번들로 제공하고 클라우드에 배포할 때 자동으로 적용합니다. ECE-Tools 2002.1.0 이상으로 업그레이드한 후 패치 충돌을 방지하려면 다운로드하여 프로젝트에 추가한 Adobe 제공 패치를 수동으로 제거합니다.
 
 - **패치 적용 명령 업데이트**-패치 적용 명령을 `vendor/bin/ece-tools` 디렉터리에서 `vendor/bin/ece-patches` 디렉터리로 이동했습니다. 이 명령을 사용하여 패치를 수동으로 적용하는 경우 새 경로를 사용합니다.
 
@@ -83,13 +84,13 @@ ht-degree: 0%
 
    - **Cloud Docker 구성 명령 업데이트**-명령 파일에 대한 경로 이름을 `./bin/docker`에서 `./bin/magento-docker`(으)로 변경했습니다. 새 경로를 사용하도록 스크립트 및 명령을 업데이트합니다.
 
-   - **Cron 컨테이너가 더 이상 기본 Docker 구성에 포함되지 않습니다**-이제 `ece-docker build:compose` 명령에 `--with-cron` 옵션을 추가하여 Cron 컨테이너를 Docker 환경 구성에 포함해야 합니다. _Commerce용 Cloud Docker_ 안내서의 [크론 작업 관리](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs/)를 참조하십시오.
+   - **Cron 컨테이너가 더 이상 기본 Docker 구성에 포함되지 않습니다**-이제 `--with-cron` 명령에 `ece-docker build:compose` 옵션을 추가하여 Cron 컨테이너를 Docker 환경 구성에 포함해야 합니다. [Commerce용 Cloud Docker](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs) 안내서의 _크론 작업 관리_&#x200B;를 참조하십시오.
 
      cron 작업이 있는 이전에 생성된 컨테이너에 이제 cron 컨테이너가 없는 스크립트입니다.
 
    - **임시 컨테이너 사용**-이전 버전에서는 `bin/magento-docker` 명령 작업으로 만든 컨테이너가 제거되지 않았으므로 다른 작업에 사용할 수 있습니다. 이제 `magento-docker` 명령은 명령이 완료된 후 만들어진 모든 컨테이너를 제거합니다.
 
-     도커 작성 작업으로 생성된 컨테이너를 유지하려면 `bin/magento-docker` 명령 대신 `docker-compose run` 명령을 사용합니다.
+     도커 작성 작업으로 생성된 컨테이너를 유지하려면 `docker-compose run` 명령 대신 `bin/magento-docker` 명령을 사용합니다.
 
    - **배포 후 후크 실행** - `cloud-deploy` 명령은 더 이상 배포 후 후크를 실행하지 않습니다. 배포한 후 새 `cloud-post-deploy` 명령을 사용하여 배포 후 후크를 실행합니다. 스크립트를 업데이트하여 배포 후 후크를 실행하는 명령을 추가합니다.
 

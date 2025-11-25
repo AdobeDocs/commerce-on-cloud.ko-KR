@@ -3,7 +3,7 @@ title: PHP 설정
 description: 클라우드 인프라에서 Commerce 애플리케이션 구성에 대한 최적의 PHP 설정에 대해 알아봅니다.
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP 설정
 
-[&#x200B; 파일에서 실행할 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)PHP 버전`.magento.app.yaml`을(를) 선택할 수 있습니다.
+[ 파일에서 실행할 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)PHP 버전`.magento.app.yaml`을(를) 선택할 수 있습니다.
 
 ```yaml
 name: mymagento
@@ -21,7 +21,7 @@ type: php:<version>
 
 >[!TIP]
 >
->PHP 8.1 이상으로 업그레이드하는 경우 [`runtime: extensions:` 파일의 &#x200B;](properties.md#runtime) 속성`.magento.app.yaml`에서 JSON을 제거하고 다시 배포하십시오. JSON 확장은 PHP 8.0 이후 Cloud 환경에 설치됩니다.
+>PHP 8.1 이상으로 업그레이드하는 경우 [`runtime: extensions:` 파일의 ](properties.md#runtime) 속성`.magento.app.yaml`에서 JSON을 제거하고 다시 배포하십시오. JSON 확장은 PHP 8.0 이후 Cloud 환경에 설치됩니다.
 
 ## PHP 구성
 
@@ -63,7 +63,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->권장 PHP 구성 설정 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ko)의 _필수 PHP 설정_&#x200B;을 참조하십시오.
+>권장 PHP 구성 설정 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)의 _필수 PHP 설정_&#x200B;을 참조하십시오.
 
 ### 사용자 정의 PHP 설정 확인
 
@@ -81,7 +81,7 @@ register_argc_argv => On => On
 
 >[!WARNING]
 >
->로컬 개발에 Commerce용 Cloud Docker를 사용하는 경우 Docker 환경에서 사용자 지정 [&#x200B; 파일을 사용하는 방법에 대한 자세한 내용은 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#fpm-container)Docker 서비스 컨테이너`php.ini`를 참조하십시오.
+>로컬 개발에 Commerce용 Cloud Docker를 사용하는 경우 Docker 환경에서 사용자 지정 [ 파일을 사용하는 방법에 대한 자세한 내용은 ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#fpm-container)Docker 서비스 컨테이너`php.ini`를 참조하십시오.
 
 ## 확장 활성화
 
@@ -118,7 +118,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP 모듈 요구 사항은 Adobe Commerce 버전에 연결되어 있습니다. [PHP 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ko)을 참조하세요.
+PHP 모듈 요구 사항은 Adobe Commerce 버전에 연결되어 있습니다. [PHP 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)을 참조하세요.
 
 ### 확장 지원
 
@@ -136,7 +136,7 @@ sourceguardian.restrict_unencoded = "1"
 
 SourceGuardian 설명서의 [섹션 3.5를 참조하십시오](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _PDF 링크입니다_.
 
-[Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 모든 프로덕션 환경 및 Pro 스테이징 환경에서 이러한 PHP 확장을 설치하는 데 도움을 받으십시오. 업데이트된 `.magento/services.yaml` 파일, 업데이트된 PHP 버전 및 추가 PHP 확장명을 포함하는 `.magento.app.yaml` 파일을 포함하십시오. 라이브 프로덕션 환경을 변경하는 경우 최소 48시간 이상 알림을 제공해야 합니다. 클라우드 인프라 팀이 프로젝트를 업데이트하는 데 최대 48시간이 걸릴 수 있습니다.
+[Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 모든 프로덕션 환경 및 Pro 스테이징 환경에서 이러한 PHP 확장을 설치하는 데 도움을 받으십시오. 업데이트된 `.magento/services.yaml` 파일, 업데이트된 PHP 버전 및 추가 PHP 확장명을 포함하는 `.magento.app.yaml` 파일을 포함하십시오. 라이브 프로덕션 환경을 변경하는 경우 최소 48시간 이상 알림을 제공해야 합니다. 클라우드 인프라 팀이 프로젝트를 업데이트하는 데 최대 48시간이 걸릴 수 있습니다.
 
 >[!WARNING]
 >

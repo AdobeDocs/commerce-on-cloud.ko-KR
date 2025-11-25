@@ -1,7 +1,8 @@
 ---
 title: 테스트 지침
 description: 클라우드 인프라에서 Adobe Commerce을 시작하기 위한 테스트 유형 및 모범 사례에 대해 알아보십시오.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 70fdfbbd-1763-4b1b-9ffd-9ffdc92f4f91
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -16,9 +17,9 @@ ht-degree: 0%
 
 개발 중에 Adobe Commerce on cloud infrastructure 프로젝트에서 엔드 투 엔드 기능 테스트를 수행하는 것이 중요합니다. Docker 환경에서 기능 테스트를 수행하려면 다음 지침을 참조하십시오.
 
-- **응용 프로그램 테스트**—Cloud Docker 환경에서 응용 프로그램 테스트를 수행하려면 [Magento MTF(Function Testing Framework)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)을 사용하십시오.
+- **응용 프로그램 테스트**—Cloud Docker 환경에서 응용 프로그램 테스트를 수행하려면 [Magento MTF(Functional Testing Framework)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)을 사용하십시오.
 
-- **코드 테스트** - 클라우드 패키지 저장소에 기여하기 위한 코드의 유효성을 검사하려면 PHP용 [Codeception 테스트 프레임워크를 사용](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/)하십시오.
+- **코드 테스트** - 클라우드 패키지 저장소에 기여하기 위한 코드의 유효성을 검사하려면 PHP용 [Codeception 테스트 프레임워크를 사용](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing)하십시오.
 
 ## 시작 전 우수 사례
 
