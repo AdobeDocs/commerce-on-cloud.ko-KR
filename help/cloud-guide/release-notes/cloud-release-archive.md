@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이 릴리스 정보는 `ece-tools` v2002.0.22 이상에 대한 정보와 업데이트를 제공합니다. [ 및 기타 클라우드 패키지에 대한 최신 업데이트를 받으려면 ](cloud-tools-suite.md)Cloud Tools 제품군의 릴리스 정보`ece-tools`를 참조하십시오.
+>이 릴리스 정보는 `ece-tools` v2002.0.22 이상에 대한 정보와 업데이트를 제공합니다. [&#x200B; 및 기타 클라우드 패키지에 대한 최신 업데이트를 받으려면 &#x200B;](cloud-tools-suite.md)Cloud Tools 제품군의 릴리스 정보`ece-tools`를 참조하십시오.
 
 ## v2002.0.22
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) 이제 Docker 환경에서 `ece-tools` 패키지를 사용하여 기능 테스트를 수행할 수 있습니다. [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing).<!-- MAGECLOUD-3129/3684 -->를 참조하세요.
 
-   - ![새 아이콘](../../assets/new.svg) `.magento.app.yaml` 파일을 사용하여 PHP 모듈을 구성할 수 있는 지원이 추가되었습니다. [ 파일`.magento.app.yaml`에 지정된 모든 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)PHP 확장을 도커 PHP 컨테이너에서 사용할 수 있습니다.<!-- MAGECLOUD-3357 -->
+   - ![새 아이콘](../../assets/new.svg) `.magento.app.yaml` 파일을 사용하여 PHP 모듈을 구성할 수 있는 지원이 추가되었습니다. [&#x200B; 파일`.magento.app.yaml`에 지정된 모든 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)PHP 확장을 도커 PHP 컨테이너에서 사용할 수 있습니다.<!-- MAGECLOUD-3357 -->
 
    - ![새 아이콘](../../assets/new.svg) 도커 명령줄 환경을 개선하는 데 사용할 수 있는 새 명령이 있습니다. Docker 참조의 [`bin/magento-docker` 섹션을 참조하십시오](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
 
@@ -224,7 +224,7 @@ ht-degree: 0%
 
 - ![수정 아이콘](../../assets/fix.svg) 배포 프로세스가 실패하는 데이터베이스 구성의 유효성 검사 문제를 해결했습니다.<!-- MAGECLOUD-3003 -->
 
-- ![수정 아이콘](../../assets/fix.svg) `symfony/yaml`PHP 상수[와 함께 사용할 적절한 버전의 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants) 패키지로 제약 조건을 업데이트했습니다. 3.2 이전 버전의 `symfony/yaml` 패키지를 사용하는 경우 상수 구문 분석이 작동하지 않습니다. [Vladimir Kerkhoff가 제출한 수정 내용](https://github.com/magento/ece-tools/pull/404).<!-- MAGECLOUD-2956 -->
+- ![수정 아이콘](../../assets/fix.svg) `symfony/yaml`PHP 상수[와 함께 사용할 적절한 버전의 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants) 패키지로 제약 조건을 업데이트했습니다. 3.2 이전 버전의 `symfony/yaml` 패키지를 사용하는 경우 상수 구문 분석이 작동하지 않습니다. [Vladimir Kerkhoff가 제출한 수정 내용](https://github.com/magento/ece-tools/pull/404).<!-- MAGECLOUD-2956 -->
 
 - ![새 아이콘](../../assets/new.svg) **환경 구성 확인**—PHP 버전을 확인하고 최신 권장 버전을 사용하지 않는 사용자에게 경고하는 유효성 검사가 추가되었습니다.<!--MAGECLOUD-2903-->
 
@@ -266,9 +266,9 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **도커 업데이트**—
 
-   - 이제 `.magento.app.yaml`도커 환경을 빌드`.magento/services.yaml`할 때 도커 생성기가 [ 및 ](https://developer.adobe.com/commerce/cloud-tools/docker/configure/) 구성 파일에 지정된 서비스를 사용합니다. 빌드 매개 변수를 사용하여 다른 서비스 버전을 선택할 수 있습니다.<!-- MAGECLOUD-2888 -->
+   - 이제 `.magento.app.yaml`도커 환경을 빌드`.magento/services.yaml`할 때 도커 생성기가 [&#x200B; 및 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/configure/) 구성 파일에 지정된 서비스를 사용합니다. 빌드 매개 변수를 사용하여 다른 서비스 버전을 선택할 수 있습니다.<!-- MAGECLOUD-2888 -->
 
-   - PHP 7.2 이미지 추가—클라우드 도커에서 PHP 7.2에 대한 지원을 추가했습니다. 사용 중인 Adobe Commerce 버전과 호환되는 PHP 버전을 지정하는 [ 옵션을 포함하도록 ](https://developer.adobe.com/commerce/cloud-tools/docker/configure/)Launch Docker 구성`docker:build --php`을 업데이트했습니다.<!-- MAGECLOUD-2799 -->
+   - PHP 7.2 이미지 추가—클라우드 도커에서 PHP 7.2에 대한 지원을 추가했습니다. 사용 중인 Adobe Commerce 버전과 호환되는 PHP 버전을 지정하는 [&#x200B; 옵션을 포함하도록 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/configure/)Launch Docker 구성`docker:build --php`을 업데이트했습니다.<!-- MAGECLOUD-2799 -->
 
    - PHP-CLI 이미지를 기반으로 [Cron 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/cli#cron-container)을 추가했습니다.<!-- MAGECLOUD-2565 -->
 
@@ -280,7 +280,7 @@ ht-degree: 0%
 
       - Redis 3.2 및 4.0<!-- MAGECLOUD-2886 -->
 
-- ![새 아이콘](../../assets/new.svg) **PHP 상수로 구성**—[ 구성 파일에서 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants)PHP 상수`.magento.env.yaml`에 대한 지원을 추가했습니다.<!-- MAGECLOUD- 2575 -->
+- ![새 아이콘](../../assets/new.svg) **PHP 상수로 구성**—[&#x200B; 구성 파일에서 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants)PHP 상수`.magento.env.yaml`에 대한 지원을 추가했습니다.<!-- MAGECLOUD- 2575 -->
 
 - ![새 아이콘](../../assets/new.svg) **새 환경 변수**—기본적으로 프로덕션 환경에서만 Google Analytics이 활성화됩니다. [ENABLE_ANALYTICS_ANALYTICS 환경 변수](../environment/variables-deploy.md#enable_google_analytics)을(를) 사용하여 스테이징 및 통합 환경에서 Google AnalyticsGOOGLE 를 활성화할 수 있습니다.<!--MAGECLOUD-2879-->
 
@@ -342,7 +342,7 @@ ht-degree: 0%
 
    - **Redis 서비스 지원** - Docker 컨테이너에 배포되고 Docker 설치에서 작동하도록 자동으로 구성된 Redis 이미지가 추가되었습니다.&lt;!—MAGECLOUD—2442—>
 
-   - 이제 Cloud Docker [데이터베이스 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#database-container)를 사용할 때 DB 덤프 기능을 사용할 수 있습니다. 또한 [ 디렉터리를 사용하여 호스트 컴퓨터와 컨테이너 간에 ](https://developer.adobe.com/commerce/cloud-tools/docker/containers#sharing-data-between-host-machine-and-container)파일을 공유`docker/mnt`할 수 있습니다.<!-- MAGECLOUD-2577 -->
+   - 이제 Cloud Docker [데이터베이스 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#database-container)를 사용할 때 DB 덤프 기능을 사용할 수 있습니다. 또한 [&#x200B; 디렉터리를 사용하여 호스트 컴퓨터와 컨테이너 간에 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/containers#sharing-data-between-host-machine-and-container)파일을 공유`docker/mnt`할 수 있습니다.<!-- MAGECLOUD-2577 -->
 
    - **바니시 서비스 지원**— 도커 컨테이너에 자동으로 배포되는 바니시 이미지가 추가되었습니다. 배포 후 Adobe Commerce 모범 사례에 따라 Vannish를 수동으로 구성할 수 있습니다. [바니시 구성 및 사용](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish)을 참조하세요.&lt;!—MAGECLOUD—2358—>
 
@@ -392,7 +392,7 @@ ht-degree: 0%
 
    - Adobe Commerce 버전 2.2.0 이상에서 cron job이 중복된 consumer를 실행하지 않도록 cron job이 시작한 소비자를 예약하기 위한 잠금 메커니즘의 문제를 해결했습니다.<!--MAGECLOUD-2464-->
 
-- ![수정 아이콘](../../assets/fix.svg) 배포 프로세스 중에 압축된 파일을 참조할 때 [ 및 ](../environment/variables-intro.md) 오류가 발생하는 `gzip`정적 콘텐츠 압축 프로세스`not overwritten`(`no such file or directory`) 문제를 해결했습니다.<!-- MAGECLOUD-2182-->
+- ![수정 아이콘](../../assets/fix.svg) 배포 프로세스 중에 압축된 파일을 참조할 때 [&#x200B; 및 &#x200B;](../environment/variables-intro.md) 오류가 발생하는 `gzip`정적 콘텐츠 압축 프로세스`not overwritten`(`no such file or directory`) 문제를 해결했습니다.<!-- MAGECLOUD-2182-->
 
 - ![수정 아이콘](../../assets/fix.svg) 저장소 로캘이 지정되지 않은 경우 덤프 프로세스 중에 `php ./vendor/bin/ece-tools config:dump` 명령이 `config.php` 파일에서 중복 섹션을 제거하지 못하는 문제를 해결했습니다. 이제 구성 파일을 환경 간에 쉽게 이동할 수 있습니다. `ece-tools` v2002.0.13으로 업데이트한 후 개선된 `config.php` 명령을 사용하여 이전 `config:dump` 파일을 다시 생성합니다. 저장소 설정에 대한 [구성 관리](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/store-settings)를 참조하십시오.<!--MAGECLOUD-2444-->
 
@@ -408,7 +408,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **로케일 변경**—이제 구성 내보내기 및 가져오기 프로세스를 수행하지 않고도 스토어 로케일을 변경할 수 있습니다. 응용 프로그램이 프로덕션에 있고 SCD_ON_DEMAND가 활성화되어 있는 동안 저장소 및 관리자 로케일 옵션을 사용할 수 있습니다.<!-- MAGECLOUD-2019 -->
 
-- ![새 아이콘](../../assets/new.svg) <!-- MAGECLOU-1998 -->**사이트 맵 및 로봇**—인프라를 변경하지 않고도 [ 파일을 추가하고 단일 도메인 구성에 대한 ](../store/robots-sitemap.md) 파일을 생성하는 `robots.txt`워크플로`sitemap.xml`를 만들었습니다.
+- ![새 아이콘](../../assets/new.svg) <!-- MAGECLOU-1998 -->**사이트 맵 및 로봇**—인프라를 변경하지 않고도 [&#x200B; 파일을 추가하고 단일 도메인 구성에 대한 &#x200B;](../store/robots-sitemap.md) 파일을 생성하는 `robots.txt`워크플로`sitemap.xml`를 만들었습니다.
 
 - ![새 아이콘](../../assets/new.svg) **마법사**—클라우드 구성에 도움이 되는 두 개의 [마법사](../deploy/smart-wizards.md)가 추가되었습니다.<!-- MAGECLOUD-1910 -->
 
@@ -418,7 +418,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **모듈 새로 고침**—빌드 중에 자동으로 수행되는 방식과 유사한 방식으로 비활성화되었거나 명시적으로 활성화되지 않은 모듈을 활성화하기 위한 클라우드 명령—`module:refresh`을(를) 추가했습니다.<!-- MAGECLOUD-1521 -->
 
-- ![새 아이콘](../../assets/new.svg) `_merge`CACHE[, ](../environment/variables-deploy.md#cache_configuration)SESSION[, ](../environment/variables-deploy.md#session_configuration)QUEUE[ 및 ](../environment/variables-deploy.md#queue_configuration)SEARCH[ 구성에서 ](../environment/variables-deploy.md#search_configuration) 옵션을 사용하여 서비스에 대한 구성을 병합하거나 덮어쓰는 기능을 추가했습니다.<!-- MAGECLOUD-2105 -->
+- ![새 아이콘](../../assets/new.svg) `_merge`CACHE[, &#x200B;](../environment/variables-deploy.md#cache_configuration)SESSION[, &#x200B;](../environment/variables-deploy.md#session_configuration)QUEUE[&#x200B; 및 &#x200B;](../environment/variables-deploy.md#queue_configuration)SEARCH[&#x200B; 구성에서 &#x200B;](../environment/variables-deploy.md#search_configuration) 옵션을 사용하여 서비스에 대한 구성을 병합하거나 덮어쓰는 기능을 추가했습니다.<!-- MAGECLOUD-2105 -->
 
 - ![새 아이콘](../../assets/new.svg) **환경 구성 샘플 파일**—자세한 설명과 각 환경 변수에 대해 가능한 값을 포함하는 `.magento.env.yaml` 샘플 파일을 ECE-Tools 패키지에 추가했습니다.<!-- MAGECLOUD-1908 -->
 
@@ -456,7 +456,7 @@ ht-degree: 0%
 
 - ![수정 아이콘](../../assets/fix.svg) **Cron 예약 최적화**—cron 관련 문제를 디버깅하는 데 도움이 되도록 큐 관리 및 향상된 로깅을 개선했습니다.<!-- MAGECLOUD-1607 -->
 
-- ![ 또는 ](../../assets/fix.svg) 값이 기존 관리자 계정과 동일한 경우 `ADMIN_EMAIL`수정 아이콘`ADMIN_USERNAME` 배포 유효성 검사가 실패합니다.<!-- MAGECLOUD-1221 -->
+- ![&#x200B; 또는 &#x200B;](../../assets/fix.svg) 값이 기존 관리자 계정과 동일한 경우 `ADMIN_EMAIL`수정 아이콘`ADMIN_USERNAME` 배포 유효성 검사가 실패합니다.<!-- MAGECLOUD-1221 -->
 
 - ![수정 아이콘](../../assets/fix.svg) 2.2.x 버전에 대한 SOLR 지원이 제거되었습니다. 2.1.x 버전에서는 SOLR을 활성화하는 기능이 유지됩니다.<!-- MAGECLOUD-1282 -->
 

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [!DNL Xdebug]을(를) 사용하려면 Git 저장소에서 파일을 구성하고 IDE를 구성하고 포트 전달을 설정해야 합니다. `magento.app.yaml` 파일에서 일부 설정을 구성할 수 있습니다. 편집한 후 모든 Starter 환경 및 Pro 통합 환경에서 Git 변경 사항을 푸시하여 [!DNL Xdebug]을(를) 사용하도록 설정합니다. [!DNL Xdebug]은(는) Pro 스테이징 및 프로덕션 환경에서 이미 사용할 수 있습니다.
 
-구성하고 나면 CLI 명령, 웹 요청 및 코드를 디버깅할 수 있습니다. 모든 클라우드 인프라 환경은 읽기 전용입니다. 코드를 로컬 개발 환경에 복제하여 디버깅을 수행합니다. Pro 스테이징 및 프로덕션 환경의 경우 [에 대한 ](#debug-for-pro-staging-and-production)추가 지침[!DNL Xdebug]을 참조하세요.
+구성하고 나면 CLI 명령, 웹 요청 및 코드를 디버깅할 수 있습니다. 모든 클라우드 인프라 환경은 읽기 전용입니다. 코드를 로컬 개발 환경에 복제하여 디버깅을 수행합니다. Pro 스테이징 및 프로덕션 환경의 경우 [에 대한 &#x200B;](#debug-for-pro-staging-and-production)추가 지침[!DNL Xdebug]을 참조하세요.
 
 ## 요구 사항
 
@@ -84,7 +84,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437409?learn=on)
 
-[에서 제대로 작동하도록 ](https://www.jetbrains.com/phpstorm/)PhpStorm[!DNL Xdebug] IDE를 구성해야 합니다.
+[에서 제대로 작동하도록 &#x200B;](https://www.jetbrains.com/phpstorm/)PhpStorm[!DNL Xdebug] IDE를 구성해야 합니다.
 
 **Xdebug에서 작동하도록 PhpStorm을 구성하려면**:
 
@@ -99,7 +99,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
 1. [선택 사항] 새 서버 구성에 대해 다음 설정을 구성합니다. [PHPStorm](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured) 설명서에서 _구성된 디버그 서버가 없음_&#x200B;을 참조하십시오.
 
-   - **이름**—호스트 이름과 동일하게 입력합니다. 이 값은 디버깅에 CLI를 사용하려면 `PHP_IDE_CONFIG`Debug CLI 명령[의 ](#debug-cli-commands) 변수 값과 일치해야 합니다.
+   - **이름**—호스트 이름과 동일하게 입력합니다. 이 값은 디버깅에 CLI를 사용하려면 `PHP_IDE_CONFIG`Debug CLI 명령[의 &#x200B;](#debug-cli-commands) 변수 값과 일치해야 합니다.
    - **호스트**—호스트 이름을 입력하십시오.
    - **포트**—`443`을(를) 입력하십시오.
    - **디버거**—`Xdebug`을(를) 선택합니다.

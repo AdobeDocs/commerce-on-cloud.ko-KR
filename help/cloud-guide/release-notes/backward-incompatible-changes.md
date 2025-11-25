@@ -23,11 +23,11 @@ ht-degree: 0%
 
 ### 서비스 버전 요구 사항 변경
 
-`ece-tools` v2002.1.0 이상을 사용하는 클라우드 프로젝트의 최소 PHP 버전 요구 사항을 7.0.x에서 7.1.x로 변경했습니다. 환경 구성에 PHP 7.0이 지정되어 있으면 [ 파일에서 ](../application/php-settings.md)php 구성`.magento.app.yaml`을 업데이트합니다.
+`ece-tools` v2002.1.0 이상을 사용하는 클라우드 프로젝트의 최소 PHP 버전 요구 사항을 7.0.x에서 7.1.x로 변경했습니다. 환경 구성에 PHP 7.0이 지정되어 있으면 [&#x200B; 파일에서 &#x200B;](../application/php-settings.md)php 구성`.magento.app.yaml`을 업데이트합니다.
 
 >[!WARNING]
 >
->PHP 버전 요구 사항 변경으로 인해 `ece-tools` 2002.1.0에서는 Adobe Commerce 2.1.15 이상을 실행하는 클라우드 인프라 프로젝트에서 Adobe Commerce만 지원합니다. 프로젝트에서 이전 릴리스를 사용하는 경우 [ 2002.1.0으로 업데이트하기 전에 ](../development/commerce-version.md)업그레이드`ece-tools`해야 합니다.
+>PHP 버전 요구 사항 변경으로 인해 `ece-tools` 2002.1.0에서는 Adobe Commerce 2.1.15 이상을 실행하는 클라우드 인프라 프로젝트에서 Adobe Commerce만 지원합니다. 프로젝트에서 이전 릴리스를 사용하는 경우 [&#x200B; 2002.1.0으로 업데이트하기 전에 &#x200B;](../development/commerce-version.md)업그레이드`ece-tools`해야 합니다.
 
 ### 환경 구성 변경 사항
 
