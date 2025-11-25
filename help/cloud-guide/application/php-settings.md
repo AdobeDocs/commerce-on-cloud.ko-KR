@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP 설정
 
-[&#x200B; 파일에서 실행할 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)PHP 버전`.magento.app.yaml`을(를) 선택할 수 있습니다.
+[&#x200B; 파일에서 실행할 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)PHP 버전`.magento.app.yaml`을(를) 선택할 수 있습니다.
 
 ```yaml
 name: mymagento
@@ -63,7 +63,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->권장 PHP 구성 설정 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)의 _필수 PHP 설정_&#x200B;을 참조하십시오.
+>권장 PHP 구성 설정 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ko)의 _필수 PHP 설정_&#x200B;을 참조하십시오.
 
 ### 사용자 정의 PHP 설정 확인
 
@@ -118,7 +118,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP 모듈 요구 사항은 Adobe Commerce 버전에 연결되어 있습니다. [PHP 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)을 참조하세요.
+PHP 모듈 요구 사항은 Adobe Commerce 버전에 연결되어 있습니다. [PHP 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ko)을 참조하세요.
 
 ### 확장 지원
 
@@ -136,7 +136,7 @@ sourceguardian.restrict_unencoded = "1"
 
 SourceGuardian 설명서의 [섹션 3.5를 참조하십시오](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _PDF 링크입니다_.
 
-[Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 모든 프로덕션 환경 및 Pro 스테이징 환경에서 이러한 PHP 확장을 설치하는 데 도움을 받으십시오. 업데이트된 `.magento/services.yaml` 파일, 업데이트된 PHP 버전 및 추가 PHP 확장명을 포함하는 `.magento.app.yaml` 파일을 포함하십시오. 라이브 프로덕션 환경을 변경하는 경우 최소 48시간 이상 알림을 제공해야 합니다. 클라우드 인프라 팀이 프로젝트를 업데이트하는 데 최대 48시간이 걸릴 수 있습니다.
+[Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 모든 프로덕션 환경 및 Pro 스테이징 환경에서 이러한 PHP 확장을 설치하는 데 도움을 받으십시오. 업데이트된 `.magento/services.yaml` 파일, 업데이트된 PHP 버전 및 추가 PHP 확장명을 포함하는 `.magento.app.yaml` 파일을 포함하십시오. 라이브 프로덕션 환경을 변경하는 경우 최소 48시간 이상 알림을 제공해야 합니다. 클라우드 인프라 팀이 프로젝트를 업데이트하는 데 최대 48시간이 걸릴 수 있습니다.
 
 >[!WARNING]
 >
