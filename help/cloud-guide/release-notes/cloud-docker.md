@@ -5,7 +5,7 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: bbf11023474cb6ac6b3b881c40897c3260542de9
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '3806'
 ht-degree: 0%
@@ -87,7 +87,7 @@ ht-degree: 0%
 릴리스 날짜: 2023년 7월 31일
 
 - ![새 아이콘](../../assets/new.svg) **새 서비스 버전을 추가했습니다**—OpenSearch 2.5.
-- ![새 아이콘](../../assets/new.svg) **작성기 캐시 사용**—이제 Docker 컨테이너를 시작할 때 작성기 지우기 캐시를 사용하도록 Docker 구성을 확장할 수 있습니다. [Commerce용 클라우드 도커](https://developer.adobe.com/commerce/cloud-tools/docker/configure) 안내서에서 _도커 구성 확장_&#x200B;을 참조하십시오.
+- ![새 아이콘](../../assets/new.svg) **작성기 캐시 사용**—이제 Docker 컨테이너를 시작할 때 작성기 지우기 캐시를 사용하도록 Docker 구성을 확장할 수 있습니다. [Commerce용 클라우드 도커](https://developer.adobe.com/commerce/cloud-tools/docker/configure/) 안내서에서 _도커 구성 확장_&#x200B;을 참조하십시오.
 
 ## v1.3.5
 
@@ -163,7 +163,7 @@ ht-degree: 0%
 - ![새 아이콘](../../assets/new.svg) **PHP 8.0 추가**—PHP를 버전 8.0으로 업데이트하여 PHP 8.0에 포함된 모든 새로운 기능과 최적화를 활용할 수 있습니다.<!--MCLOUD-7941-->
 - ![새 아이콘](../../assets/new.svg) **Varnish 6.6 및 Elasticsearch 7.11.2**(으)로 업데이트됨—다음 링크는 [Varnish Cache 6.6](https://varnish-cache.org/releases/rel6.6.0.html#rel6-6-0) 및 Elasticsearch 7.11.2.<!--MCLOUD-7921-->에 대한 릴리스 정보를 제공합니다.
 - ![새 아이콘](../../assets/new.svg) **PHP 7.4 이미지용 `ioncube` 확장 추가**—PHP 7.3에서 PHP 7.4로 업그레이드하는 동안 처음 제외되었던 `ioncube` 확장이 PHP 7.4 이미지에 다시 추가되었습니다. *[mattskr에서 제출함](https://github.com/magento/magento-cloud-docker/pull/314).*<!--PR #314-->
-- ![새 아이콘](../../assets/new.svg) **파일 동기화 옵션 추가:`manual-native`** - `manual-native` 파일 동기화 옵션은 수동으로 동기화를 제어하므로 macOS 및 Windows 환경에 최상의 성능을 제공합니다. `manual-native`개발자 모드[에서 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode) 옵션을 사용하는 방법과 [Docker 개발자 환경에서 데이터 동기화](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data#file-synchronization-options)에 대해 읽어 보십시오.<!--MCLOUD-7977-->
+- ![새 아이콘](../../assets/new.svg) **파일 동기화 옵션 추가:`manual-native`** - `manual-native` 파일 동기화 옵션은 수동으로 동기화를 제어하므로 macOS 및 Windows 환경에 최상의 성능을 제공합니다. `manual-native`개발자 모드[에서 ](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode) 옵션을 사용하는 방법과 [Docker 개발자 환경에서 데이터 동기화](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data#file-synchronization-options)에 대해 읽어 보십시오.<!--MCLOUD-7977-->
 - ![새 아이콘](../../assets/new.svg) **`up` 및 `down` 명령에서 볼륨 삭제 제거**—`--volume` 옵션이 `bin/magento-docker up` 및 `bin/magento-docker down` 명령에서 제거되었으며, 데이터 손실 경고가 있는 새 `bin/magento-docker init` 명령으로 대체되었습니다. 이 변경 사항은 우발적인 데이터 손실을 방지하는 데 도움이 됩니다. *[Joeshelton-wagento에서 제출함](https://github.com/magento/magento-cloud-docker/pull/319).*<!--PR #319-->
 - ![고정 아이콘](../../assets/fix.svg) **생성된 인증서에 대한 `CN` 값을 업데이트했습니다**—Dockerfile에서 하드코딩된 `CN` 값을 제거했습니다. 이 값으로 인해 인증서 오류(`NET::ERR_CERT_INVALID`)가 발생하여 `--host` 명령에 대한 `ece-docker build:compose` 옵션이 무시됩니다.<!--MCLOUD-7934-->
 
@@ -241,7 +241,7 @@ ht-degree: 0%
 
    - ![수정 아이콘](../../assets/fix.svg) **TLS 컨테이너**—이제 [TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)은(는) CentOS 이미지 대신 `https://hub.docker.com/r/magento/magento-cloud-docker-nginx` 도커 이미지를 기반으로 합니다. 이 변경 사항은 Cloud Docker 환경의 컨테이너 간에 HTTPS 요청을 보낼 때 오류가 발생하는 문제를 해결합니다.<!--MCLOUD-6469-->
 
-   - ![새 아이콘](../../assets/new.svg) **테스트 컨테이너**—응용 프로그램 테스트를 위한 테스트 컨테이너를 추가하고 Docker `--with-test` 명령에 `build:compose` 옵션을 추가하여 Docker 환경에서 테스트할 때만 컨테이너를 만들었습니다. [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test-application-testing).<!--MCLOUD-6394-->를 참조하세요.
+   - ![새 아이콘](../../assets/new.svg) **테스트 컨테이너**—응용 프로그램 테스트를 위한 테스트 컨테이너를 추가하고 Docker `--with-test` 명령에 `build:compose` 옵션을 추가하여 Docker 환경에서 테스트할 때만 컨테이너를 만들었습니다. [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->를 참조하세요.
 
    - ![새 아이콘](../../assets/new.svg) **FPM-XDEBUG 컨테이너**
 
@@ -251,7 +251,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **Docker 구성 변경**
 
-   - **MailHog 구성**—이제 `ece-docker build:compose` 명령 옵션을 사용하여 MailHog를 사용하지 않도록 설정하고 포트를 지정할 수 있습니다. `--no-mailhog`, `--mailhog-http-port` 및 `--mailhog-smtp-port`. [전자 메일 설정](https://developer.adobe.com/commerce/cloud-tools/docker/configure#set-up-email).<!--MCLOUD-6898, MCLOUD-6660-->을 참조하세요.
+   - **MailHog 구성**—이제 `ece-docker build:compose` 명령 옵션을 사용하여 MailHog를 사용하지 않도록 설정하고 포트를 지정할 수 있습니다. `--no-mailhog`, `--mailhog-http-port` 및 `--mailhog-smtp-port`. [전자 메일 설정](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#set-up-email).<!--MCLOUD-6898, MCLOUD-6660-->을 참조하세요.
 
    - Commerce 1.2.0 이상용 Cloud Docker의 경우, 이제 Adobe에서 각 패치 버전에 대한 Docker 이미지를 제공하며, Docker 구성 생성기가 최신 버전을 사용하는 대신 지정된 패치 버전으로 Docker 구성을 생성합니다. 이전에는 도커 구성 생성기가 최신 패치 버전을 사용하여 구성을 빌드했습니다. 이로 인해 이전 버전을 사용하여 빌드된 Commerce 환경용 Cloud Docker가 중단될 수 있습니다.<!--MCLOUD-7093-->
 
@@ -427,7 +427,7 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) **네트워크 브리지 모드 지원**—로컬 네트워크를 통해 Docker 컨테이너 간 연결을 사용하도록 네트워크 브리지 모드에 대한 지원을 추가했습니다.<!--MAGECLOUD-4165-->
 
-   - ![새 아이콘](../../assets/new.svg) **Cron 컨테이너가 기본적으로 비활성화되어 있음**—성능을 개선하기 위해 Docker 환경을 빌드할 때 Cron 컨테이너가 더 이상 기본적으로 구성되지 않습니다. Docker 빌드 명령의 `--with-cron` 옵션을 사용하여 Cron 컨테이너를 환경에 추가할 수 있습니다. [cron 작업 관리](https://developer.adobe.com/commerce/cloud-tools/docker/configure#manage-cron-jobs).<!--MAGECLOUD-5181-->를 참조하십시오.
+   - ![새 아이콘](../../assets/new.svg) **Cron 컨테이너가 기본적으로 비활성화되어 있음**—성능을 개선하기 위해 Docker 환경을 빌드할 때 Cron 컨테이너가 더 이상 기본적으로 구성되지 않습니다. Docker 빌드 명령의 `--with-cron` 옵션을 사용하여 Cron 컨테이너를 환경에 추가할 수 있습니다. [cron 작업 관리](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#manage-cron-jobs).<!--MAGECLOUD-5181-->를 참조하십시오.
 
    - ![새 아이콘](../../assets/new.svg) **대용량 백업 파일 동기화 중지**—DB 덤프 및 보관 파일(ZIP, SQL, GZ 및 BZ2)을 `dist/docker-sync.yml` 및 `dist/mutagen.sh` 파일의 제외 목록에 추가했습니다. 대용량 파일(>1GB)을 동기화하면 사용하지 않는 기간이 발생할 수 있으며 백업 파일을 다시 생성할 수 있으므로 동기화가 일반적으로 필요하지 않습니다.<!--MAGECLOUD-3979-->
 

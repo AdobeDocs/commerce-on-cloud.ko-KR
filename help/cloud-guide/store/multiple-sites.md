@@ -2,7 +2,8 @@
 title: 여러 웹 사이트 또는 스토어 설정
 description: 클라우드 인프라에서 Adobe Commerce에 대한 여러 웹 사이트 또는 스토어를 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Routes, Site Navigation
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 0%
@@ -35,7 +36,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->사이트 기본 URL에 저장소 보기를 추가하려면 여러 디렉터리를 만들 필요가 없습니다. _구성 가이드_&#x200B;에서 [기본 URL에 스토어 코드 추가](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ko)를 참조하십시오.
+>사이트 기본 URL에 저장소 보기를 추가하려면 여러 디렉터리를 만들 필요가 없습니다. [구성 가이드](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)에서 _기본 URL에 스토어 코드 추가_&#x200B;를 참조하십시오.
 
 ## 도메인 추가
 
@@ -45,15 +46,15 @@ https://store.com/second/
 
 - Pro Staging 및 프로덕션용
 
-  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains)를 참조하거나 지원 티켓을 열어 지원을 요청하세요. 또한 클러스터에 추가할 새 도메인을 요청하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
+  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains)를 참조하거나 지원 티켓을 열어 지원을 요청하세요. 또한 클러스터에 추가할 새 도메인을 요청하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
 
 - 스타터 프로덕션용
 
-  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains) 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 참조하여 지원을 요청하세요. 또한 [!DNL Cloud Console]의 **도메인** 탭에 새 도메인을 추가해야 합니다. `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains) 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 참조하여 지원을 요청하세요. 또한 **의**&#x200B;도메인[!DNL Cloud Console] 탭에 새 도메인을 추가해야 합니다. `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 로컬 설치 구성
 
-여러 스토어를 사용하도록 로컬 설치를 구성하려면 _구성 가이드_&#x200B;에서 [여러 웹 사이트 또는 스토어][config-multiweb]를 참조하십시오.
+여러 스토어를 사용하도록 로컬 설치를 구성하려면 [구성 가이드][config-multiweb]에서 _여러 웹 사이트 또는 스토어_&#x200B;를 참조하십시오.
 
 여러 스토어를 사용하도록 로컬 설치를 성공적으로 만들고 테스트한 후 통합 환경을 준비해야 합니다.
 
@@ -63,12 +64,12 @@ https://store.com/second/
    - [공유 도메인의 위치](#configure-locations-for-shared-domains)
 
 1. **웹 사이트, 스토어 및 스토어 보기 설정**—Adobe Commerce 관리 UI를 사용하여 구성
-1. **변수 수정** - `magento-vars.php` 파일에서 `MAGE_RUN_TYPE` 및 `MAGE_RUN_CODE` 변수의 값을 지정합니다.
+1. **변수 수정** - `MAGE_RUN_TYPE` 파일에서 `MAGE_RUN_CODE` 및 `magento-vars.php` 변수의 값을 지정합니다.
 1. **환경 배포 및 테스트**—`integration` 분기 배포 및 테스트
 
 >[!TIP]
 >
->로컬 환경을 사용하여 여러 웹 사이트나 스토어를 설정할 수 있습니다. [여러 웹 사이트 또는 스토어를 설정](https://developer.adobe.com/commerce/cloud-tools/docker/configure/multiple-sites/)하는 Cloud Docker 지침을 참조하십시오.
+>로컬 환경을 사용하여 여러 웹 사이트나 스토어를 설정할 수 있습니다. [여러 웹 사이트 또는 스토어를 설정](https://developer.adobe.com/commerce/cloud-tools/docker/configure/multiple-sites)하는 Cloud Docker 지침을 참조하십시오.
 
 ### Pro 환경에 대한 구성 업데이트
 
@@ -100,7 +101,7 @@ https://store.com/second/
 
 ### 공유 도메인의 위치 구성
 
-경로 구성이 URL의 처리 방법을 정의하는 경우 `.magento.app.yaml` 파일의 `web` 속성은 응용 프로그램이 웹에 노출되는 방법을 정의합니다. 웹 _위치_&#x200B;에서 수신 요청을 더 세부적으로 지정할 수 있습니다. 예를 들어 도메인이 `store.com`인 경우 도메인을 공유하는 두 개의 다른 저장소에 대한 요청에 `/first`(기본 사이트) 및 `/second`을(를) 사용할 수 있습니다.
+경로 구성이 URL의 처리 방법을 정의하는 경우 `web` 파일의 `.magento.app.yaml` 속성은 응용 프로그램이 웹에 노출되는 방법을 정의합니다. 웹 _위치_&#x200B;에서 수신 요청을 더 세부적으로 지정할 수 있습니다. 예를 들어 도메인이 `store.com`인 경우 도메인을 공유하는 두 개의 다른 저장소에 대한 요청에 `/first`(기본 사이트) 및 `/second`을(를) 사용할 수 있습니다.
 
 **새 웹 위치를 구성하려면**:
 
@@ -212,13 +213,13 @@ https://store.com/second/
 
 ### 웹 사이트, 스토어 및 스토어 조회수 설정
 
-_관리 UI_&#x200B;에서 Adobe Commerce **웹 사이트**, **스토어** 및 **스토어 보기**&#x200B;를 설정합니다. _구성 가이드_&#x200B;의 [Admin에서 여러 웹 사이트, 스토어 및 스토어 보기 설정](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ko)을 참조하십시오.
+_관리 UI_&#x200B;에서 Adobe Commerce **웹 사이트**, **스토어** 및 **스토어 보기**&#x200B;를 설정합니다. [구성 가이드](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)의 _Admin에서 여러 웹 사이트, 스토어 및 스토어 보기 설정_&#x200B;을 참조하십시오.
 
 로컬 설치를 설정할 때 관리자의 웹 사이트, 스토어 및 스토어 조회수와 동일한 이름과 코드를 사용하는 것이 중요합니다. `magento-vars.php` 파일을 업데이트할 때 이러한 값이 필요합니다.
 
 ### 변수 수정
 
-NGINX 가상 호스트를 구성하는 대신 프로젝트 루트 디렉터리의 `magento-vars.php` 파일을 사용하여 `MAGE_RUN_CODE` 및 `MAGE_RUN_TYPE` 변수를 전달합니다.
+NGINX 가상 호스트를 구성하는 대신 프로젝트 루트 디렉터리의 `MAGE_RUN_CODE` 파일을 사용하여 `MAGE_RUN_TYPE` 및 `magento-vars.php` 변수를 전달합니다.
 
 **`magento-vars.php` 파일을 사용하여 변수를 전달하려면**:
 
@@ -243,7 +244,7 @@ NGINX 가상 호스트를 구성하는 대신 프로젝트 루트 디렉터리�
    }
    ```
 
-1. `function` 블록의 _after_&#x200B;가 되고 더 이상 주석을 달지 않도록 주석 처리된 `if` 블록을 이동하십시오.
+1. `if` 블록의 _after_&#x200B;가 되고 더 이상 주석을 달지 않도록 주석 처리된 `function` 블록을 이동하십시오.
 
    ```php
    <?php
@@ -352,4 +353,4 @@ Adobe은 프로덕션 환경으로 푸시하기 전에 스테이징 환경에서
 
 <!-- link definitions -->
 
-[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=ko
+[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html

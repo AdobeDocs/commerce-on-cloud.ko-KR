@@ -1,7 +1,8 @@
 ---
 title: 스테이징 및 프로덕션 테스트
 description: 스테이징 및 프로덕션 환경에서 테스트하는 방법을 알아봅니다.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -211,7 +212,7 @@ ht-degree: 0%
 
 ## 기능 테스트
 
-MFTF(Magento 기능 테스트 프레임워크)를 사용하여 Cloud Docker 환경에서 Adobe Commerce에 대한 기능 테스트를 완료할 수 있습니다. _Commerce용 Cloud Docker 안내서_&#x200B;에서 [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)를 참조하십시오.
+MFTF(Magento 기능 테스트 프레임워크)를 사용하여 Cloud Docker 환경에서 Adobe Commerce에 대한 기능 테스트를 완료할 수 있습니다. [Commerce용 Cloud Docker 안내서](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)에서 _응용 프로그램 테스트_&#x200B;를 참조하십시오.
 
 ## 보안 검색 도구 설정
 

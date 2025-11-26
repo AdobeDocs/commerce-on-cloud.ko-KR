@@ -6,7 +6,7 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
-source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Composer는 `vendor` 디렉터리에 프로젝트에 필요한 라이브러리 �
 
 {style="table-layout:auto"}
 
-업데이트된 코드를 추가, 커밋 및 푸시하면 `composer install`빌드 단계[&#x200B; 동안 배포 프로세스에서 &#x200B;](../deploy/process.md#build-phase-build-phase) 명령을 자동으로 실행합니다.
+업데이트된 코드를 추가, 커밋 및 푸시하면 `composer install`빌드 단계[ 동안 배포 프로세스에서 ](../deploy/process.md#build-phase-build-phase) 명령을 자동으로 실행합니다.
 
 ### 클라우드 메타패키지
 
@@ -69,7 +69,7 @@ Composer는 `vendor` 디렉터리에 프로젝트에 필요한 라이브러리 �
 
 Commerce용 Cloud Docker 도구를 사용하여 로컬 개발을 위한 클라우드 인프라 프로덕션 및 개발 환경에서 Adobe Commerce을 에뮬레이션할 수 있습니다. Commerce용 Cloud Docker에서는 PHP 및 Composer를 로컬에 설치할 필요가 없습니다.
 
-- Adobe Developer 사이트의 [Cloud Docker를 사용한 로컬 개발](https://developer.adobe.com/commerce/cloud-tools/docker/setup)
+- Adobe Developer 사이트의 [Cloud Docker를 사용한 로컬 개발](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)
 - [Docker 아키텍처 및 공통 명령](../dev-tools/cloud-docker.md)
 - [Cloud Docker 릴리스 정보](../release-notes/cloud-docker.md)
 
