@@ -1,7 +1,7 @@
 ---
-source-git-commit: b151aac666510594751937e80dc3d9db4ede41b7
+source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 이 사이트에는 클라우드 인프라의 Commerce에 대한 최신 개발자 설명서가 포함되어 있습니다.
 
-- [Cloud Infrastructure의 Commerce 안내서](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/overview)
-- 클라우드 인프라에서 [Commerce 시작](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/start/overview)
+- [Cloud Infrastructure의 Commerce 안내서](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- 클라우드 인프라에서 [Commerce 시작](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source 행동 수칙
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## Adobe 콘텐츠에 대한 귀하의 기여 관련 정보
 
-[Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/ko/docs/contributor/contributor-guide/introduction)를 참조하세요.
+[Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)를 참조하세요.
 
 기여 방식은 기여자 및 기여 하고자 하는 변경 사항의 종류에 따라 다릅니다.
 
@@ -40,7 +40,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 
 커뮤니티 기여자는 기본 편집에 GitHub UI를 사용하거나 리포지토리를 포크하여 크게 기여할 수 있습니다.
 
-자세한 내용은 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/ko/docs/contributor/contributor-guide/introduction)를 참조하십시오.
+자세한 내용은 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)를 참조하십시오.
 
 ## Markdown을 사용하여 주제 서식을 지정하는 방법
 
@@ -70,7 +70,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 >**참고:**
 >
 >- 템플릿화된 콘텐츠를 생성하려면 터미널의 명령줄에서 작업해야 합니다.
->- 렌더링 스크립트를 실행하려면 루비가 설치되어 있어야 합니다. 필요한 버전은 [_jekyll/.ruby-version] (_jekyll/.ruby-version)을(를) 참조하십시오.
+>- 렌더링 스크립트를 실행하려면 루비가 설치되어 있어야 합니다. 필요한 버전은 [_jekyll/.ruby-version](_jekyll/.ruby-version)을(를) 참조하십시오.
 
 템플릿 컨텐츠의 파일 구조에 대한 설명은 다음을 참조하십시오.
 
@@ -101,7 +101,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
    bundle exec rake render
    ```
 
-   >**참고:** `_jekyll` 디렉터리에서 스크립트를 실행해야 합니다. 스크립트를 처음 실행하는 경우에는 먼저 `bundle install` 명령을 사용하여 Ruby 종속성을 설치해야 합니다. 레이크 작업은 Adobe Commerce 문서 저장소 전체에서 유지 관리 기능이 향상되도록 `adobe-comdox-exl-rake-tasks` gem에서 제공합니다.
+   >**참고:** `_jekyll` 디렉터리에서 스크립트를 실행해야 합니다. 스크립트를 처음 실행하는 경우에는 먼저 `bundle install` 명령을 사용하여 Ruby 종속성을 설치해야 합니다. `adobe-comdox-exl-rake-tasks` gem에서 핵심 레이크 작업 및 종속성(Jekyll, Rake, 이미지 최적화)을 제공하여 Adobe Commerce 설명서 저장소 전반에서 유지 관리를 향상시킵니다. 이 리포지토리와 관련된 사용자 지정 작업은 `Rakefile`에서 구현됩니다.
 
 5. `root` 디렉터리로 다시 이동합니다.
 
