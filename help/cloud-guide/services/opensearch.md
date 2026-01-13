@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # OpenSearch 서비스 설정
 
-[OpenSearch](https://www.opensearch.org) 서비스는 Elasticsearch의 라이선스 변경에 따른 Elasticsearch 7.10.2의 오픈 소스 포크입니다. GitHub에서 [OpenSource 프로젝트](https://github.com/opensearch-project)를 참조하십시오. [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)은(는) 지원되는 버전을 나열합니다.
+[OpenSearch](https://www.opensearch.org) 서비스는 Elasticsearch의 라이선스 변경에 따른 Elasticsearch 7.10.2의 오픈 소스 포크입니다. GitHub에서 [OpenSource 프로젝트](https://github.com/opensearch-project)를 참조하십시오. [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)은(는) 지원되는 버전을 나열합니다.
 
 {{elasticsearch-support}}
 
@@ -27,7 +27,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 >[!TIP]
 >
->[Live Search](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview)을(를) 사용하지 않는 Cloud Infrastructure의 Adobe Commerce 프로젝트의 경우 Adobe에서는 타사 검색 도구에 대한 대체 옵션을 제공하도록 [!DNL OpenSearch]을(를) 설정할 것을 권장합니다. 그러나 [!DNL OpenSearch]과(와) [!DNL Live Search]은(는) 동일한 Commerce 인스턴스에서 모두 사용할 수 없습니다.
+>[Live Search](https://experienceleague.adobe.com/ko/docs/commerce/live-search/overview)을(를) 사용하지 않는 Cloud Infrastructure의 Adobe Commerce 프로젝트의 경우 Adobe에서는 타사 검색 도구에 대한 대체 옵션을 제공하도록 [!DNL OpenSearch]을(를) 설정할 것을 권장합니다. 그러나 [!DNL OpenSearch]과(와) [!DNL Live Search]은(는) 동일한 Commerce 인스턴스에서 모두 사용할 수 없습니다.
 
 **OpenSearch를 사용하려면**:
 
@@ -39,7 +39,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
        disk: 1024
    ```
 
-   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
+   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
 
 1. `relationships` 파일에서 `.magento.app.yaml` 속성을 설정하거나 확인하십시오.
 
@@ -92,7 +92,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 - **프로젝트 업그레이드**-새 응용 프로그램 버전의 OpenSearch PHP 클라이언트가 클라우드 인프라에 설치된 OpenSearch 서비스 버전과 호환되는지 확인하십시오.
 
-서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)의 _시스템 요구 사항_&#x200B;을 참조하십시오.
+서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 [설치 가이드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)의 _시스템 요구 사항_&#x200B;을 참조하십시오.
 
 **OpenSearch 소프트웨어 호환성을 확인하려면**:
 
@@ -184,7 +184,7 @@ OpenSearch 서비스를 다시 시작해야 하는 경우에는 Adobe Commerce �
 
 >[!NOTE]
 >
->이는 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에 플러그인을 설치하려면 [지원 요청을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하십시오.
+>이는 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에 플러그인을 설치하려면 [지원 요청을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하십시오.
 
 
 ```yaml
@@ -208,7 +208,7 @@ opensearch:
 
 >[!NOTE]
 >
->이 변경 사항은 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에서 플러그인을 제거하려면 [지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)해야 합니다.
+>이 변경 사항은 통합 및 스타터 환경에만 적용됩니다. Pro 스테이징 또는 프로덕션 클러스터에서 플러그인을 제거하려면 [지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)해야 합니다.
 
 1. `.magento/services.yaml` 파일에서 OpenSearch 플러그인 항목을 제거합니다.
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
