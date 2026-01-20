@@ -1,8 +1,8 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: c5e52c70c121aa3650acfba8a98b743834a95428
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 4%
+source-wordcount: '47'
+ht-degree: 6%
 
 ---
 # 새로운 기능 템플릿
@@ -11,7 +11,7 @@ ht-degree: 4%
 
 이 페이지에는 지난 60일 동안의 변경 사항이 포함되어 있습니다. 복사 편집과 같은 모든 부분 업데이트는 이 목록에서 제외합니다.
 
-### 2025년 11월 17일
+### 2026년 1월 13일
 
 <table style="table-layout:auto;">
   <thead>
@@ -23,20 +23,12 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12 릴리스 정보</a>를 업데이트하여 "JS 축소 및 번들링을 사용할 때 체크아웃 실패: 문제"에 대한 수정 사항을 포함합니다.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch 서비스 설정</a>에서 예제 버전을 업데이트했습니다.</p>
 </td>
       <td>
-        기술
+        피드백
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">커밋</a></td>
-    </tr>
-    <tr>
-      <td><p>ECE-Tools 릴리스, v2002.2.9 이후에 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다.</p>
-</td>
-      <td>
-        기술
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/5f088df3e7bc35cc1d7fa93d06b5fa9968802572">커밋</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f5d325dbb14e5e524c89b41c4d5b82383b5b1ac7">커밋</a></td>
     </tr>
   </tbody>
 </table>
