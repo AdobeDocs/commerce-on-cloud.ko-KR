@@ -23,7 +23,7 @@ ht-degree: 6%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch 서비스 설정</a>에서 예제 버전을 업데이트했습니다.</p>
+      <td><p><a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch 서비스 설정</a>에서 예제 버전을 업데이트했습니다.</p>
 </td>
       <td>
         피드백
