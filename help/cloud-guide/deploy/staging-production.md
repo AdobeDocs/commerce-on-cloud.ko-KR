@@ -2,28 +2,29 @@
 title: 스테이징 및 프로덕션에 배포
 description: 추가 테스트를 위해 클라우드 인프라 코드에서 Adobe Commerce을 스테이징 및 프로덕션 환경에 배포하는 방법에 대해 알아봅니다.
 feature: Cloud, Console, Deploy, SCD, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
+source-git-commit: fe634412c6de8325faa36c07e9769cde0eb76c48
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
 
 # 스테이징 및 프로덕션에 배포
 
-배포 및 라이브 진행 프로세스는 개발에서 시작하여 스테이징으로 이어지고 프로덕션에서 라이브로 끝납니다. Adobe은 일관된 구성을 보장하는 완벽한 환경 솔루션을 제공합니다. 모든 환경에서는 Storefront 및 Admin에 대한 직접 URL 액세스와 CLI 명령에 대한 SSH 액세스를 지원합니다.
+배포 및 라이브 진행 프로세스는 개발에서 시작하여 스테이징으로 이어지고 프로덕션에서 라이브로 끝납니다. Adobe은 일관된 구성을 보장하는 엔드 투 엔드 환경 솔루션을 제공합니다. 모든 환경에서는 Storefront 및 Admin에 대한 직접 URL 액세스와 CLI 명령에 대한 SSH 액세스를 지원합니다.
 
 스토어를 배포할 준비가 되면 프로덕션에 배포하기 전에 스테이징 환경에서 배포 및 테스트를 완료해야 합니다. 이 섹션에서는 빌드 및 배포 프로세스, 데이터 및 콘텐츠 마이그레이션, 테스트에 대한 심층적인 지침과 정보를 제공합니다.
 
 >[!TIP]
 >
->Adobe은 배포하기 전에 환경의 [백업](../storage/snapshots.md)을(를) 만들 것을 권장합니다.
+>Adobe에서는 배포하기 전에 환경의 [백업](../storage/snapshots.md)을(를) 만드는 것이 좋습니다.
 
 또한 [New Relic을 사용하여 배포 추적](../monitor/track-deployments.md)을 사용하면 배포 이벤트를 모니터링하고 배포 간 성능을 분석할 수 있습니다.
 
 ## 스타터 배포 플로우
 
-Adobe은 스타터 계획 개발 및 배포를 가장 잘 지원하기 위해 `master` 분기에서 `staging` 분기를 만들 것을 권장합니다. 그러면 네 개의 활성 환경 중 두 개를 준비했습니다. 프로덕션용 `master` 및 스테이징용 `staging`.
+Adobe에서는 스타터 계획 개발 및 배포를 가장 잘 지원하기 위해 `staging` 분기에서 `master` 분기를 만들 것을 권장합니다. 그러면 네 개의 활성 환경 중 두 개를 준비했습니다. 프로덕션용 `master` 및 스테이징용 `staging`.
 
 프로세스에 대한 자세한 내용은 [Starter Develop and Deploy Workflow](../architecture/starter-develop-deploy-workflow.md)를 참조하십시오.
 
@@ -37,7 +38,7 @@ Pro에는 두 개의 활성 분기, 전역 `master` 분기, 스테이징 및 프
 
 스테이징 환경은 데이터베이스, 웹 서버 및 Fastly와 New Relic을 포함한 모든 서비스를 포함하는 프로덕션에 가까운 환경을 제공합니다. 터미널 응용 프로그램을 통해 [[!DNL Cloud Console]](../project/overview.md) 또는 [Cloud CLI 명령](../dev-tools/cloud-cli-overview.md)을 통해 완전히 푸시, 병합 및 배포할 수 있습니다.
 
-### [!DNL Cloud Console] (으)로 코드 배포
+### [!DNL Cloud Console]&#x200B;(으)로 코드 배포
 
 [!DNL Cloud Console]은(는) 시작 및 Pro 계획을 위한 통합, 스테이징 및 프로덕션 환경에서 코드를 만들고 관리하고 배포하는 기능을 제공합니다.
 
@@ -139,7 +140,7 @@ Cloud CLI는 코드를 배포하는 명령을 제공합니다. 프로젝트에 �
 
 ## 정적 파일 마이그레이션
 
-[정적 파일](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/glossary)이(가) `mounts`에 저장되어 있습니다. 로컬 환경과 같은 소스 마운트 위치에서 대상 마운트 위치로 파일을 마이그레이션하는 방법에는 두 가지가 있습니다. Adobe 두 방법 모두 `rsync` 유틸리티를 사용하지만 로컬 환경과 원격 환경 간에 파일을 이동할 때는 `magento-cloud` CLI를 사용하는 것이 좋습니다. 또한 Adobe은 원격 원본에서 다른 원격 위치로 파일을 이동할 때 `rsync` 메서드를 사용하는 것이 좋습니다.
+[정적 파일](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)이(가) `mounts`에 저장되어 있습니다. 로컬 환경과 같은 소스 마운트 위치에서 대상 마운트 위치로 파일을 마이그레이션하는 방법에는 두 가지가 있습니다. 두 방법 모두 `rsync` 유틸리티를 사용하지만 Adobe에서는 로컬 환경과 원격 환경 간에 파일을 이동할 때 `magento-cloud` CLI를 사용하는 것이 좋습니다. 또한 Adobe에서는 원격 원본에서 다른 원격 위치로 파일을 이동할 때 `rsync` 메서드를 사용하는 것이 좋습니다.
 
 ### CLI를 사용하여 파일 마이그레이션
 
@@ -188,7 +189,7 @@ Are you sure you want to continue? [Y/n] Y
   total size is 154.57K  speedup is 18.23
 ```
 
-더 많은 옵션을 보려면 `mount:upload` 및 `mount:download` 명령에 `--help` 옵션을 사용하십시오. 예를 들어 마이그레이션하는 동안 불필요한 파일을 제거하는 `--delete` 옵션이 있습니다.
+더 많은 옵션을 보려면 `--help` 및 `mount:upload` 명령에 `mount:download` 옵션을 사용하십시오. 예를 들어 마이그레이션하는 동안 불필요한 파일을 제거하는 `--delete` 옵션이 있습니다.
 
 ### rsync를 사용하여 파일 마이그레이션
 
@@ -217,7 +218,7 @@ rsync -azvP <source> <destination>
 
    >[!TIP]
    >
-   >[!DNL Cloud Console]에서 **SSH 액세스** 링크를 찾으려면 환경을 선택하고 **사이트 액세스**&#x200B;를 클릭합니다.
+   >**에서** SSH 액세스[!DNL Cloud Console] 링크를 찾으려면 환경을 선택하고 **사이트 액세스**&#x200B;를 클릭합니다.
 
    ```bash
    ssh -A <environment_ssh_link@ssh.region.magento.cloud>
@@ -245,11 +246,11 @@ rsync -azvP <source> <destination>
 >
 >통합 환경 데이터베이스는 엄격히 개발 테스트를 위한 것이며 스테이징 및 프로덕션으로 마이그레이션하지 않으려는 데이터를 포함할 수 있습니다.
 
-지속적인 통합 배포의 경우 **Adobe은 데이터를 통합에서 스테이징 및 프로덕션으로 마이그레이션하는 것을 권장하지 않습니다**. 테스트 데이터를 전달하거나 중요한 데이터를 덮어쓸 수 있습니다. 빌드 및 배포 중 [구성 파일](../store/store-settings.md) 및 `setup:upgrade` 명령을 사용하여 중요한 구성이 전달됩니다.
+지속적인 통합 배포의 경우 Adobe **은(는) 데이터를 통합에서 스테이징 및 프로덕션으로 마이그레이션하는 것을 권장하지 않습니다**. 테스트 데이터를 전달하거나 중요한 데이터를 덮어쓸 수 있습니다. 빌드 및 배포 중 [구성 파일](../store/store-settings.md) 및 `setup:upgrade` 명령을 사용하여 중요한 구성이 전달됩니다.
 
 >[!ENDSHADEBOX]
 
-**Adobe은 모든 서비스 및 설정을 사용하여 프로덕션 환경에 저장하고 사이트를 완전히 테스트하려면 프로덕션에서 스테이징으로 데이터를 마이그레이션하는 것이 좋습니다**.
+Adobe은 모든 서비스 및 설정을 사용하여 프로덕션 환경에 있는 사이트를 완전히 테스트하고 저장하기 위해 프로덕션에서 스테이징으로 데이터를 마이그레이션하는 것을 **권장**&#x200B;합니다.
 
 >[!NOTE]
 >
@@ -319,16 +320,10 @@ rsync -azvP <source> <destination>
    drop database main;
    ```
 
-   프로덕션의 경우:
+   프로덕션 및 스테이징 환경의 경우:
 
    ```shell
-   drop database <cluster-id>;
-   ```
-
-   스테이징의 경우:
-
-   ```shell
-   drop database <cluster-ID_stg>;
+   drop database <database_name>;
    ```
 
 1. 데이터베이스를 다시 만듭니다.
