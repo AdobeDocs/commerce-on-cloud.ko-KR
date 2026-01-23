@@ -134,7 +134,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사�
 
 ### 응용 프로그램에서 연결
 
-응용 프로그램에서 실행 중인 RabbitMQ에 연결하려면 [ 파일에 프로젝트 종속성으로 ](https://github.com/dougbarth/amqp-utils)amqp-utils`.magento.app.yaml`과(와) 같은 클라이언트를 설치합니다.
+응용 프로그램에서 실행 중인 RabbitMQ에 연결하려면 [&#x200B; 파일에 프로젝트 종속성으로 &#x200B;](https://github.com/dougbarth/amqp-utils)amqp-utils`.magento.app.yaml`과(와) 같은 클라이언트를 설치합니다.
 
 For example,
 
