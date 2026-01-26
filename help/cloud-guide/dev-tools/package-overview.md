@@ -27,7 +27,7 @@ php ./vendor/bin/ece-tools list
 
 `ece-tools` 패키지에는 클라우드 인프라 응용 프로그램에서 Adobe Commerce을 시작하는 빌드, 배포 및 배포 후 단계에 대한 작업을 수행하는 명령이 포함되어 있습니다. 예를들어, `php ./vendor/bin/ece-tools build` 명령은 응용 프로그램 빌드 프로세스를 시작합니다.
 
-기본적으로 이 `ece-tools` 명령은 [ 구성 파일의 ](../application/hooks-property.md)hooks 속성`.magento.app.yaml`에 있습니다.
+기본적으로 이 `ece-tools` 명령은 [&#x200B; 구성 파일의 &#x200B;](../application/hooks-property.md)hooks 속성`.magento.app.yaml`에 있습니다.
 
 ## 도커 구성 생성기
 
