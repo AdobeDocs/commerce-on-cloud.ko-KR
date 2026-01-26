@@ -21,7 +21,7 @@ Adobe이 클라우드 인프라 구독에서 Commerce을 활성화하면 라이�
 
 ## 클라우드 계정에 등록
 
-클라우드 인프라 계정에 Adobe Commerce이 없는 경우 [판매](https://business.adobe.com/products/magento/get-demo.html)에 문의하십시오. 등록하면 Adobe에서 계정을 만들고 프로젝트 인터페이스에 액세스하는 방법에 대한 지침을 제공하는 시작 이메일을 보냅니다. 이메일에는 계정에 로그인하여 초기 프로젝트 설정을 완료할 수 있는 링크가 포함되어 있습니다.
+클라우드 인프라 계정에 Adobe Commerce이 없는 경우 [판매](https://business.adobe.com/kr/products/magento/get-demo.html)에 문의하십시오. 등록하면 Adobe에서 계정을 만들고 프로젝트 인터페이스에 액세스하는 방법에 대한 지침을 제공하는 시작 이메일을 보냅니다. 이메일에는 계정에 로그인하여 초기 프로젝트 설정을 완료할 수 있는 링크가 포함되어 있습니다.
 
 ## 프로젝트 액세스 및 사용자 추가
 
@@ -33,7 +33,7 @@ Adobe이 클라우드 인프라 구독에서 Commerce을 활성화하면 라이�
 
 ### 공유 계정 액세스
 
-라이선스 소유자는 계정에 대한 공유 액세스를 설정할 수 있습니다. 공유 액세스를 통해 신뢰할 수 있는 직원과 서비스 공급자는 도움말 센터를 사용하여 클라우드 인프라 프로젝트에서 Adobe Commerce과 관련된 지원 티켓을 제출하고 추적할 수 있습니다. 설치 지침은 도움말 센터에서 [공유 액세스](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access) 문서를 참조하십시오.
+라이선스 소유자는 계정에 대한 공유 액세스를 설정할 수 있습니다. 공유 액세스를 통해 신뢰할 수 있는 직원과 서비스 공급자는 도움말 센터를 사용하여 클라우드 인프라 프로젝트에서 Adobe Commerce과 관련된 지원 티켓을 제출하고 추적할 수 있습니다. 설치 지침은 도움말 센터에서 [공유 액세스](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#shared-access) 문서를 참조하십시오.
 
 ### [!DNL Cloud Console]
 
