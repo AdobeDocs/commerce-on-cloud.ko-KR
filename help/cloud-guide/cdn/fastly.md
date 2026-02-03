@@ -104,13 +104,13 @@ Adobe Commerce 프로젝트의 초기 프로비저닝 또는 업그레이드 시
 
 ### Fastly API 토큰 변경
 
-새 Fastly API 토큰 자격 증명을 발급하려면 Adobe Commerce 지원 티켓을 제출하십시오. [유효성 검사에 실패하거나 만료된 경우](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) 또는 손상된 것으로 판단되는 경우
+새 Fastly API 토큰 자격 증명을 발급하려면 Adobe Commerce 지원 티켓을 제출하십시오. [유효성 검사에 실패하거나 만료된 경우](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) 또는 손상된 것으로 판단되는 경우
 
 새 토큰을 받으면 스테이징 또는 프로덕션 환경을 업데이트하여 새 토큰을 사용합니다.
 
 **Fastly API 토큰 자격 증명을 변경하려면**:
 
-1. 새 Fastly API 자격 증명을 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)합니다.
+1. 새 Fastly API 자격 증명을 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)합니다.
 
    새 자격 증명이 필요한 환경 및 클라우드 인프라 프로젝트 ID에 Adobe Commerce을 포함하십시오.
 
@@ -158,18 +158,18 @@ DDOS 보호는 Fastly CDN 서비스에 내장되어 있습니다. Adobe Commerce
 
 >[!NOTE]
 >
->Layer 7 공격에 대한 보호는 Adobe Commerce과 통합된 Fastly CDN 서비스에서 다루지 않습니다. 레이어 7 공격으로부터 보호하는 방법은 [Adobe Commerce 기술 자료](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)에서 [DDoS 공격 확인](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level) 및 *악의적인 공격을 차단하는 방법*&#x200B;을 참조하세요.
+>Layer 7 공격에 대한 보호는 Adobe Commerce과 통합된 Fastly CDN 서비스에서 다루지 않습니다. 레이어 7 공격으로부터 보호하는 방법은 [Adobe Commerce 기술 자료](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)에서 [DDoS 공격 확인](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level) 및 *악의적인 공격을 차단하는 방법*&#x200B;을 참조하세요.
 
 <!--Link definitions-->
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=ko
 
 [Magento 2용 Fastly CDN 모듈]: https://github.com/fastly/fastly-magento2
 
 [Fastly 지원 티켓]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
+[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=ko
 
 [도메인 작업]: https://docs.fastly.com/en/guides/working-with-domains
