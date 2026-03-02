@@ -20,5 +20,5 @@ ht-degree: 0%
 
 ## 관련 읽기
 
-개발자 설명서에서 [디스크 공간 관리](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/storage/manage-disk-space?lang=en).
+개발자 설명서에서 [디스크 공간 관리](https://experienceleague.adobe.com/ko/docs/commerce-cloud-service/user-guide/develop/storage/manage-disk-space?lang=en).
 
