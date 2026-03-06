@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a> 릴리스, v2002.2.10.</p>
+      <td><p><a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a> 릴리스, v2002.2.10.</p>
 </td>
       <td>
         기술
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>온-프레미스가 아닌 Adobe Commerce on Cloud에서 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">관리자 URL을 변경</a>하는 방법에 대한 설명이 추가되었습니다.</p>
+      <td><p>온-프레미스가 아닌 Adobe Commerce on Cloud에서 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">관리자 URL을 변경</a>하는 방법에 대한 설명이 추가되었습니다.</p>
 </td>
       <td>
         주요 업데이트, 피드백
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>클라우드 콘솔에서 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">클라우드 프로젝트의 Adobe Commerce에 대한 디스크 공간 제한 확인</a>에 대한 설명서를 추가했습니다.</p>
+      <td><p>클라우드 콘솔에서 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">클라우드 프로젝트의 Adobe Commerce에 대한 디스크 공간 제한 확인</a>에 대한 설명서를 추가했습니다.</p>
 </td>
       <td>
         새로운 주제, 기술
@@ -89,7 +89,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>Fastly AAAA 레코드를 DNS 구성 지침에 추가하도록 클라우드 프로젝트의 Commerce에 대한 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">시작 검사 목록</a>을 업데이트했습니다.</p>
+      <td><p>Fastly AAAA 레코드를 DNS 구성 지침에 추가하도록 클라우드 프로젝트의 Commerce에 대한 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/launch/checklist">시작 검사 목록</a>을 업데이트했습니다.</p>
 </td>
       <td>
         피드백
@@ -111,7 +111,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">New Relic 계정 소유자 변경</a>에 대한 지침을 <em>Commerce on Cloud Infrastructure Guide</em>(으)로 추가했습니다.</p>
+      <td><p><a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">New Relic 계정 소유자 변경</a>에 대한 지침을 <em>Commerce on Cloud Infrastructure Guide</em>(으)로 추가했습니다.</p>
 </td>
       <td>
         기술
@@ -133,7 +133,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly 서비스 개요</a>.<br />- 정의 및 트래픽 흐름<br />- 활성화 상태(2021년 이후 모든 클라우드 프로젝트에서 활성화됨) 차단된 원본 URL 예<br />- REST API 사용 예제에 원본 클로킹에 대한 다음 정보를 추가했습니다</p>
+      <td><p><a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly 서비스 개요</a>.<br />- 정의 및 트래픽 흐름<br />- 활성화 상태(2021년 이후 모든 클라우드 프로젝트에서 활성화됨) 차단된 원본 URL 예<br />- REST API 사용 예제에 원본 클로킹에 대한 다음 정보를 추가했습니다</p>
 </td>
       <td>
         기술
@@ -155,7 +155,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch 서비스 설정</a>에서 예제 버전을 업데이트했습니다.</p>
+      <td><p><a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch 서비스 설정</a>에서 예제 버전을 업데이트했습니다.</p>
 </td>
       <td>
         피드백
