@@ -179,7 +179,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2021년 4월 20일
 
-- ![새 아이콘](../../assets/new.svg) **플랫폼 독립적이 되도록 `host.docker.internal`을 업데이트함**—이제 Ubuntu, Windows 및 macOS에 대해 동일한 도커 작성 스크립트를 만들 수 있습니다. Ubuntu에서 Xdebug를 사용하는 경우 더 이상 별도의 환경 변수가 필요하지 않습니다. [Igor Vitol이 제출한 수정 내용 ](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #298-->
+- ![새 아이콘](../../assets/new.svg) **플랫폼 독립적이 되도록 `host.docker.internal`을 업데이트함**—이제 Ubuntu, Windows 및 macOS에 대해 동일한 도커 작성 스크립트를 만들 수 있습니다. Ubuntu에서 Xdebug를 사용하는 경우 더 이상 별도의 환경 변수가 필요하지 않습니다. [Igor Vitol이 제출한 수정 내용 &#x200B;](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #298-->
 - ![새 아이콘](../../assets/new.svg) **init-docker.sh를 업데이트했습니다**—`MAGENTO_CLOUD_APPLICATION` 환경 변수에 `mounts` 개체를 추가했습니다. [Chiranjeevi가 수정 제출함](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #299-->
 - ![새 아이콘](../../assets/new.svg) **init-docker.sh** 업데이트—PHP 7.4 및 Cloud Docker 1.2.1 버전으로 `init-docker.sh` 스크립트를 업데이트했습니다. [Adarsh Manickam이 수정 제출함](https://github.com/magento/magento-cloud-docker/pull/300).<!--Issue #300-->
 - ![새 아이콘](../../assets/new.svg) **기본적으로 활성화된 나트륨**—PHP 도커 이미지 내에서 기본적으로 `sodium` PHP 확장을 활성화했습니다.<!--MCLOUD-7548-->
@@ -413,7 +413,7 @@ ht-degree: 0%
 
       - ![새 아이콘](../../assets/new.svg) **공식 이미지를 사용하도록 컨테이너 기본 이미지를 업데이트했습니다**—이제 [Cloud TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container) 이미지가 공식 `debian:jessie` 도커 이미지를 기반으로 합니다.—<!--MAGECLOUD-4163-->
 
-      - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시]**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.[
+      - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시&rbrack;**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.&lbrack;
 
          - **`TimeOut`** - 시간을 첫 번째 바이트(TTFB) 시간 초과 값으로 설정합니다. 기본값은 300초입니다.
 
