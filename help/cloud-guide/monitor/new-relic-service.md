@@ -3,9 +3,10 @@ title: New Relic 서비스
 description: Adobe Commerce on cloud infrastructure 프로젝트에서 사용할 수 있는 New Relic 서비스에 대해 알아봅니다.
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 10966241-311d-4b68-804d-4c9569bf933d
+source-git-commit: 3784e7b2ddc8f6ae20fd2c6fd557f2408d870cf2
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -23,6 +24,8 @@ ht-degree: 0%
 >[!INFO]
 >
 >다른 New Relic 기능은 Adobe Commerce 프로젝트에서 사용할 수 없습니다.
+>
+>Adobe Commerce on Cloud 고객은 외부 서버의 데이터를 프로비저닝된 New Relic 계정에 직접 통합하거나 전송할 수 없습니다. New Relic 서비스는 Commerce Cloud 애플리케이션 환경 모니터링으로 제한됩니다. 애플리케이션 자체에서 호출하는 서드파티 서비스(예: 외부 API 또는 런타임 중에 호출된 서비스)만 New Relic 내에서 추적 및 모니터링될 수 있습니다.
 
 ## NEW RELIC API
 
