@@ -39,7 +39,7 @@ ht-degree: 0%
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->[사용 가능한 버전 간에 순차적으로 RabbitMQ를 업그레이드](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)해야 합니다. 예를 들어 3.9에서 4.1로 바로 업그레이드할 수는 없습니다.
+>[사용 가능한 버전 간에 순차적으로 RabbitMQ를 업그레이드](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)해야 합니다. 예를 들어 3.9에서 4.1로 바로 업그레이드할 수는 없습니다.
 >
 >새 버전의 RabbitMQ로 업그레이드한 후 전체 배포를 트리거하여 사용자 지정 메시지 대기열이 RabbitMQ에서 다시 생성되도록 합니다.
 
@@ -181,7 +181,7 @@ mysql:
 
 ## 서비스 버전
 
-클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원은 클라우드 인프라에서 배포되고 테스트된 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)을 참조하십시오.
+클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원은 클라우드 인프라에서 배포되고 테스트된 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
 
 ### 소프트웨어 EOL 확인
 
