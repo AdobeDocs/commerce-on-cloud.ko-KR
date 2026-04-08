@@ -4,9 +4,9 @@ description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
+source-git-commit: b3d634838e562ceba4221a69e87eda377d8f9363
 workflow-type: tm+mt
-source-wordcount: '3491'
+source-wordcount: '3485'
 ht-degree: 0%
 
 ---
@@ -85,18 +85,14 @@ ht-degree: 0%
 
 릴리스 날짜: 2025년 4월 24일
 
-- ![수정 아이콘](../../assets/fix.svg) **2.4.4/2.4.5용 Opensearch2**—Adobe Commerce 버전 2.4.4/2.4.5에서 `opensearch2` 지원과 관련된 문제가 해결되었습니다.<!-- MCLOUD-13607 -->
+- ![수정 아이콘](../../assets/fix.svg) **2.4.4/2.4.5용 Opensearch2**—Adobe Commerce 버전 2.4.4/2.4.5에서 `opensearch2` 지원과 관련된 문제가 해결되었습니다. <!-- MCLOUD-13607 -->
 
 ## v2002.2.3
 
 릴리스 날짜: 2025년 4월 9일
 
-- ![수정 아이콘](../../assets/fix.svg) **값 키 수정**&#x200B;값 키 사용자 지정 구성에서 발생한 문제를 해결했습니다.<!-- MCLOUD-13569 -->
-- ![수정 아이콘](../../assets/fix.svg) **수정 검사기** - RabbitMQ 4.0에 대한 수정 검사기<!-- MCLOUD-13560 -->
-
-## v2002.2.2
-
-릴리스 날짜: 2025년 4월 7일
+- ![수정 아이콘](../../assets/fix.svg) **키 수정**&#x200B;키 사용자 지정 구성 관련 문제를 해결했습니다. <!-- MCLOUD-13569 -->
+- ![수정 아이콘](../../assets/fix.svg) **수정 유효성 검사기** - RabbitMQ 4.0에 대한 유효성 검사기를 수정했습니다. <!-- MCLOUD-13560 -->
 
 ## v2002.2.2
 
