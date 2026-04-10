@@ -2,9 +2,10 @@
 title: 웹 속성
 description: ' [!DNL Commerce] 응용 프로그램 구성 파일에서 웹 속성을 구성하는 방법에 대한 예를 참조하십시오.'
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
+source-git-commit: 94a7748348ba590bb4fed740df658c5bac4c31e9
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -31,12 +32,16 @@ web:
 | `rules` | 위치에 대한 재정의를 지정합니다. 정규 표현식을 사용하여 요청을 일치시키십시오. 들어오는 요청이 규칙과 일치하는 경우, 규칙에서 사용되는 키에 의해 요청의 일반 처리가 무시됩니다. |
 | `passthru` | 정적 파일 또는 PHP 파일을 찾을 수 없는 경우에 사용할 URL을 설정합니다. 일반적으로 이 URL은 `/index.php` 또는 `/app.php`과(와) 같은 응용 프로그램의 전면 컨트롤러입니다. |
 | `root` | 웹에 노출되는 애플리케이션의 루트를 기준으로 상대 경로를 설정합니다. 클라우드 프로젝트의 공용 디렉터리(위치 &quot;/&quot;)는 기본적으로 &quot;pub&quot;로 설정됩니다. |
-| `scripts` | 이 위치에서 스크립트를 로드할 수 있습니다. 스크립트를 허용하려면 값을 `true`(으)로 설정하십시오. |
+| `scripts` | 이 위치에서 스크립트를 로드할 수 있습니다. 스크립트를 허용하려면 값을 `true`(으)로 설정하십시오. `pub/media` 및 `pub/static` 디렉터리의 경우 업로드된 파일이 실행되지 않도록 기본 구성을 `scripts: false`(으)로 설정합니다. |
+
+>[!IMPORTANT]
+>
+>**보안 정보:** 클라우드에서 Adobe Commerce의 기본 `web` 속성 구성은 업로드된 파일이 실행되지 않도록 미디어 위치에 대해 `scripts: false`을(를) 설정합니다. 구현에 대한 보안 영향을 완전히 이해하지 못한 경우 이 설정을 재정의하지 마십시오.
 
 기본 구성에서는 다음 작업을 수행할 수 있습니다.
 
 - 루트(`/`) 경로에서 웹 및 미디어에만 액세스할 수 있습니다.
-- `~/pub/static` 및 `~/pub/media` 경로에서 모든 파일에 액세스할 수 있습니다.
+- `~/pub/media` 및 `~/pub/static` 경로에서 모든 파일에 액세스할 수 있습니다.
 
 다음 예제에서는 [`mounts` 속성의 항목](properties.md#mounts)과(와) 연결된 웹 액세스 가능 위치 집합에 대한 `.magento.app.yaml` 파일의 기본 구성을 보여 줍니다.
 
