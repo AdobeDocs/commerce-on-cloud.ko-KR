@@ -2,9 +2,10 @@
 title: 프로젝트 업그레이드 모범 사례
 description: 프로젝트 파일 업그레이드에 대한 모범 사례 목록을 참조하십시오.
 feature: Cloud, Best Practices, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 64f92739-9170-4cbf-90ef-aab6593a37ca
+source-git-commit: 31494a956babaf15320d0ffa86fcba9e845d53a1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
    - 모든 사용자 지정 테마가 새 Adobe Commerce 버전과 호환되는지 확인합니다
 
-   - 타사 및 사용자 지정 확장을 업그레이드한 후 배포하기 전에 `magento-cloud local:build` 명령을 사용하여 Composer 종속성을 확인하십시오.
+   - 타사 및 사용자 지정 확장을 업그레이드한 후 `magento-cloud local:build` 명령을 사용하여 배포하기 전에 Composer 종속성을 확인하고 [호환성 업그레이드 도구](#use-the-upgrade-compatibility-tool)를 실행하여 현재 버전과 대상 버전 간의 코드 수준 비호환성을 식별합니다. 그런 다음 통합, 스테이징 또는 프로덕션에 배포하기 전에 [호환성 업그레이드 도구](https://fluffyjaws.adobe.com/#use-the-upgrade-compatibility-tool)를 사용하여 코드 수준 비호환성을 식별하고 우선 순위를 지정하십시오.
 
    - Adobe Commerce 릴리스 노트 및 확장 설명서 를 검토하여 업그레이드된 Adobe Commerce 버전 및 확장과 관련된 알려진 기능 문제 및 버그를 해결하는 데 필요한 해결 방법 또는 구성 변경 사항을 구현했는지 확인하십시오.
 
@@ -49,9 +50,24 @@ ht-degree: 0%
 
    - SSH를 사용하여 원격 서버에 로그인하고 다음을 확인합니다.
 
-      - 인덱서 상태를 확인하고 필요에 따라 다시 인덱싱합니다. _구성 가이드_&#x200B;에서 [인덱서 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=ko)를 참조하십시오.
+      - 인덱서 상태를 확인하고 필요에 따라 다시 인덱싱합니다. _구성 가이드_&#x200B;에서 [인덱서 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)를 참조하십시오.
 
       - Adobe Commerce 데이터베이스에서 `cron` 로그 및 `cron_schedule` 테이블을 확인하여 cron 상태를 확인하고 필요에 따라 cron 작업을 다시 실행하십시오.
-_구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=ko#logging)을 참조하십시오.
+_구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)을 참조하십시오.
 
    - 스테이징 및 프로덕션 환경에서 업그레이드 후 사용자 승인 테스트 UAT를 완료하고 서드파티 및 사용자 정의 확장 업그레이드와 관련된 문제를 수정합니다.
+
+## 업그레이드 호환성 도구 사용
+
+업그레이드 전 분석의 일부로 UCT(업그레이드 호환성 도구)를 실행하여 업그레이드의 범위와 영향을 파악합니다.
+
+- UCT는 현재 인스턴스를 대상 Adobe Commerce 버전과 비교하여 업그레이드하기 전에 수정해야 하는 중요한 문제, 오류 및 경고 목록을 반환합니다.
+- `--coming-version (-c)`을(를) 사용하여 계획된 대상 버전과 비교하고 `--ignore-current-version-compatibility-issues`을(를) 사용하여 업그레이드에 의해 도입된 새로운 문제에만 집중하십시오.
+- UCT HTML 보고서를 확장 호환성, 서비스 버전 및 데이터베이스 검사와 함께 업그레이드 체크리스트에 대한 입력으로 취급합니다.
+
+설정 및 사용에 대한 자세한 내용은 다음을 참조하십시오.
+
+- [업그레이드 호환성 도구 개요](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [업그레이드 호환성 도구 실행](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+
+사이트 전체 분석 도구를 사용하는 Cloud 판매자의 경우 대시보드에서 UCT를 트리거하고 위젯에서 직접 HTML 보고서를 다운로드할 수도 있습니다. [사이트 전체 분석 도구 통합](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)을 참조하십시오.
