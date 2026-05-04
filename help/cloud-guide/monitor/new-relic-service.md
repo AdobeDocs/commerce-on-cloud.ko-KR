@@ -4,7 +4,7 @@ description: Adobe Commerce on cloud infrastructure 프로젝트에서 사용할
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00Z
 exl-id: 10966241-311d-4b68-804d-4c9569bf933d
-source-git-commit: 3784e7b2ddc8f6ae20fd2c6fd557f2408d870cf2
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -35,7 +35,7 @@ ht-degree: 0%
 - **데이터베이스 쿼리 모니터링**—성능에 영향을 주는 데이터베이스 쿼리를 찾아 모니터링합니다.
 - **앱 맵** - 사이트, 확장 및 외부 서비스 내의 모든 응용 프로그램 종속성을 봅니다.
 - **[!DNL Apdex]점수** - 성능을 평가하고 문제를 식별하고 발생 시 알리는 경고(예: 플래시 판매나 웹 이벤트의 영향을 받는 사이트 성능)를 만듭니다. [Apdex 점수](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction/)를 참조하세요.
-- **Adobe Commerce에 대한 관리 경고**-이 New Relic 경고 정책을 사용하여 업계 모범 사례를 기반으로 응용 프로그램 및 인프라 성능을 모니터링합니다. [Adobe Commerce 경고 정책에 대한 관리 경고를 사용하여 성능 모니터링](investigate-performance.md/#monitor-performance-with-managed-alerts)을 참조하십시오.
+- **Adobe Commerce에 대한 관리 경고**-이 New Relic 경고 정책을 사용하여 업계 모범 사례를 기반으로 응용 프로그램 및 인프라 성능을 모니터링합니다. [Adobe Commerce 경고 정책에 대한 관리 경고를 사용하여 성능 모니터링](investigate-performance.md#monitor-performance-with-managed-alerts)을 참조하십시오.
 - **배포 추적** - 배포 이벤트를 모니터링하고 배포가 전체 성능에 미치는 영향을 분석합니다. [배포 추적](track-deployments.md)을 참조하세요.
 
 Adobe Commerce on cloud infrastructure 프로젝트에는 라이선스 키와 함께 New Relic APM 서비스용 소프트웨어가 포함되어 있습니다. 추가 소프트웨어를 구입하거나 설치할 필요가 없습니다.

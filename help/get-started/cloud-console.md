@@ -3,13 +3,13 @@ title: ' [!DNL Cloud Console]에 로그인'
 description: 클라우드 인프라의 Adobe Commerce용  [!DNL Cloud Console] 에 대해 알아봅니다.
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4c68508a-f25a-457b-be6d-36dc8ac428f1
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Cloud Console]에 로그인
 
@@ -43,8 +43,10 @@ ht-degree: 0%
 | [프로젝트 목록](../cloud-guide/project/overview.md#cloud-console) | _모든 프로젝트_ 보기에는 액세스 권한이 있는 모든 프로젝트가 나열됩니다. **[!UICONTROL Show filters]**&#x200B;을(를) 클릭하고 프로젝트 목록을 유형, 지역 또는 계획별로 필터링할 수 있습니다. |
 | [변수 가시성 옵션](../cloud-guide/environment/variable-levels.md) | 빌드 또는 런타임 중 프로젝트 수준 또는 환경 수준 변수의 가시성을 제한합니다. |
 
-<!-- The following are features yet to be activated:
-| **Apps and services topology** | The Apps & Services topology is visible on Project and Environment views. This interactive diagram allows you to select a service and view the relationship details, such as name, type, version, port, and more. Click **[!UICONTROL View details]** to access the overview and configuration panel for each service. | -->
+<!--
+The following are features yet to be activated:
+| **Apps and services topology** | The Apps & Services topology is visible on Project and Environment views. This interactive diagram allows you to select a service and view the relationship details, such as name, type, version, port, and more. Click **[!UICONTROL View details]** to access the overview and configuration panel for each service. | 
+-->
 
 ## 콘솔 질문
 
