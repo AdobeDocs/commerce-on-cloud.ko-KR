@@ -37,7 +37,7 @@ ht-degree: 0%
 
 **Pro 환경의 데이터베이스 백업을 만들려면**:
 
-스테이징 및 프로덕션을 포함한 모든 Pro 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
+스테이징 및 프로덕션을 포함한 모든 Pro 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
 
 **[!DNL Cloud Console]**&#x200B;을(를) 사용하여 Starter 환경의 백업을 만들려면 다음을 수행하십시오.
 
@@ -150,7 +150,7 @@ ht-degree: 0%
 
 ## 재해 복구 스냅샷 복원
 
-Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## 롤백 코드
 
