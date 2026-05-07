@@ -2,11 +2,11 @@
 title: ECE-Tools 릴리스 노트
 description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-08-07T00:00:00Z
+last-substantial-update: 2026-05-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+source-git-commit: 0781fdfe8b0dbc6312848572ff4b996e51270a3f
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3563'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,18 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.10 {#latest}
+## v2002.2.11 {#latest}
+
+릴리스 날짜: 2026년 5월 6일
+
+- ![새 아이콘](../../assets/new.svg) **RabbitMQ**—RabbitMQ 4.2 지원이 추가되었습니다.<!-- MCLOUD-14374 -->
+- ![새 아이콘](../../assets/new.svg) **Opensearch**—여러 Magento 버전에 대한 Opensearch 2.19 및 3.5 지원이 추가되었습니다. <!-- MCLOUD-14682 -->
+- ![새 아이콘](../../assets/new.svg) **Valkey**—Valkey 8.1 및 9 지원이 추가되었습니다.<!-- MCLOUD-14784/MCLOUD-14625 -->
+- ![새 아이콘](../../assets/new.svg) **ActiveMQ**—ActiveMQ 2.5.1 지원이 추가되었습니다.<!-- MCLOUD-14683 -->
+- ![새 아이콘](../../assets/new.svg) **MariaDB**—MariaDB 11.8 및 12.2 지원이 추가되었습니다.<!-- MCLOUD-14628 -->
+- ![수정 아이콘](../../assets/fix.svg) **구성 및 배포**—클라우드 배포 경고를 수정하고, 작성기 테스트 사용 중단을 업데이트하고, 배포 시 ECE 도구 버전 가시성을 수정했습니다.<!-- MCLOUD-14822 -->
+
+## v2002.2.10
 
 릴리스 날짜: 2026년 3월 5일
 
@@ -85,14 +96,18 @@ ht-degree: 0%
 
 릴리스 날짜: 2025년 4월 24일
 
-- ![수정 아이콘](../../assets/fix.svg) **2.4.4/2.4.5용 Opensearch2**—Adobe Commerce 버전 2.4.4/2.4.5에서 `opensearch2` 지원과 관련된 문제가 해결되었습니다. <!-- MCLOUD-13607 -->
+- ![수정 아이콘](../../assets/fix.svg) **2.4.4/2.4.5용 Opensearch2**—Adobe Commerce 버전 2.4.4/2.4.5에서 `opensearch2` 지원과 관련된 문제가 해결되었습니다.<!-- MCLOUD-13607 -->
 
 ## v2002.2.3
 
 릴리스 날짜: 2025년 4월 9일
 
-- ![수정 아이콘](../../assets/fix.svg) **키 수정**&#x200B;키 사용자 지정 구성 관련 문제를 해결했습니다. <!-- MCLOUD-13569 -->
-- ![수정 아이콘](../../assets/fix.svg) **수정 유효성 검사기** - RabbitMQ 4.0에 대한 유효성 검사기를 수정했습니다. <!-- MCLOUD-13560 -->
+- ![수정 아이콘](../../assets/fix.svg) **값 키 수정**&#x200B;값 키 사용자 지정 구성에서 발생한 문제를 해결했습니다.<!-- MCLOUD-13569 -->
+- ![수정 아이콘](../../assets/fix.svg) **수정 검사기** - RabbitMQ 4.0에 대한 수정 검사기<!-- MCLOUD-13560 -->
+
+## v2002.2.2
+
+릴리스 날짜: 2025년 4월 7일
 
 ## v2002.2.2
 
@@ -256,9 +271,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **새 SCD_NO_PARENT 환경 변수**—상위 테마에 대한 정적 콘텐츠 생성을 관리하기 위해 `SCD_NO_PARENT` 환경 변수(Adobe Commerce >=2.4.2용)를 추가했습니다.<!--MCLOUD-7284-->
 
-- ![수정 아이콘](../../assets/fix.svg) **메모리 제한 및 명령**—`cloud.log` 파일의 크기가 PHP memory_limit를 초과할 경우 `php vendor/bin/ece-tools` 명령이 작동하지 않는 문제가 해결되었습니다. 이제 전체 `cloud.log` 파일을 메모리로 읽는 대신 로그 파일에서 더 작은 데이터 하위 집합만 읽습니다.
-  <!--MCLOUD-7275-->
-  <!--MCLOUD-7400-->
+- ![수정 아이콘](../../assets/fix.svg) **메모리 제한 및 명령**—`cloud.log` 파일의 크기가 PHP memory_limit를 초과할 경우 `php vendor/bin/ece-tools` 명령이 작동하지 않는 문제가 해결되었습니다. 이제 전체 `cloud.log` 파일을 메모리로 읽는 대신 로그 파일에서 더 작은 데이터 하위 집합만 읽습니다.<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
 - ![수정 아이콘](../../assets/fix.svg) **사용자 지정 데이터베이스 연결**—`DATABASE_CONFIGURATION`에 대해 정의된 사용자 지정 데이터베이스 연결이 사용되지 않는 `.magento.env.yaml` 구성 문제를 해결했습니다. 연결 설정을 `app/etc/env.php`에 추가하지 않았습니다.<!--MCLOUD-7426-->
 

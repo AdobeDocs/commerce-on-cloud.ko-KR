@@ -5,9 +5,9 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: c668b984ae4353757adfde23fd5c028c80b9d2a7
+source-git-commit: 819b3a70ce88eb40db1ac6521f0b38c9eb115e7b
 workflow-type: tm+mt
-source-wordcount: '4437'
+source-wordcount: '4496'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,18 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.7 {#latest}
+## v1.4.8 {#latest}
+
+릴리스 날짜: 2026년 5월 6일
+
+- ![새 아이콘](../../assets/new.svg) **업데이트된 서비스 테스트**—MariaDB, RabbitMQ, ActiveMQ, Opensearch 및 Valkey에 대한 테스트가 업데이트되었습니다.<!-- MCLOUD-14821 -->
+- ![새 아이콘](../../assets/new.svg) **Valkey**—Valkey 8.1 지원이 추가되었습니다.<!-- MCLOUD-14784 -->
+- ![새 아이콘](../../assets/new.svg) **Opensearch 이미지**—Opensearch 2.19 및 3.5.<!-- MCLOUD-14790/MCLOUD-14785 --> 추가됨
+- ![새 아이콘](../../assets/new.svg) **ActiveMQ**—ActiveMQ 2.51 지원이 추가되었습니다.<!-- MCLOUD-14683 -->
+- ![새 아이콘](../../assets/new.svg) **MariaDB**—MariaDB 11.8 및 12.2 지원이 추가되었습니다.<!-- MCLOUD-14635 -->
+- ![수정 아이콘](../../assets/fix.svg) **MailHog**—MailHog 이미지를 수정했습니다.<!-- MCLOUD-14663 -->
+
+## v1.4.7
 
 릴리스 날짜: 2026년 3월 5일
 
@@ -170,7 +181,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **PHP 8.0 추가**—PHP를 버전 8.0으로 업데이트하여 PHP 8.0에 포함된 모든 새로운 기능과 최적화를 활용할 수 있습니다.<!--MCLOUD-7941-->
 - ![새 아이콘](../../assets/new.svg) **Varnish 6.6 및 Elasticsearch 7.11.2**(으)로 업데이트됨—다음 링크는 [Varnish Cache 6.6](https://varnish-cache.org/releases/rel6.6.0.html#rel6-6-0) 및 Elasticsearch 7.11.2.<!--MCLOUD-7921-->에 대한 릴리스 정보를 제공합니다.
-- ![새 아이콘](../../assets/new.svg) **PHP 7.4 이미지용 `ioncube` 확장 추가**—PHP 7.3에서 PHP 7.4로 업그레이드하는 동안 처음 제외되었던 `ioncube` 확장이 PHP 7.4 이미지에 다시 추가되었습니다. *[matskr](https://github.com/magento/magento-cloud-docker/pull/314).*<!--PR #314-->&#x200B;이(가) 제출함
+- ![새 아이콘](../../assets/new.svg) **PHP 7.4 이미지용 `ioncube` 확장 추가**—PHP 7.3에서 PHP 7.4로 업그레이드하는 동안 처음 제외되었던 `ioncube` 확장이 PHP 7.4 이미지에 다시 추가되었습니다. *[mattskr에서 제출함](https://github.com/magento/magento-cloud-docker/pull/314).*<!--PR #314-->
 - ![새 아이콘](../../assets/new.svg) **파일 동기화 옵션 추가:`manual-native`** - `manual-native` 파일 동기화 옵션은 수동으로 동기화를 제어하므로 macOS 및 Windows 환경에 최상의 성능을 제공합니다. [개발자 모드](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode)에서 `manual-native` 옵션을 사용하는 방법과 [Docker 개발자 환경에서 데이터 동기화](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data#file-synchronization-options)에 대해 읽어 보십시오.<!--MCLOUD-7977-->
 - ![새 아이콘](../../assets/new.svg) **`up` 및 `down` 명령에서 볼륨 삭제 제거**—`--volume` 옵션이 `bin/magento-docker up` 및 `bin/magento-docker down` 명령에서 제거되었으며, 데이터 손실 경고가 있는 새 `bin/magento-docker init` 명령으로 대체되었습니다. 이 변경 사항은 우발적인 데이터 손실을 방지하는 데 도움이 됩니다. *[Joeshelton-wagento에서 제출함](https://github.com/magento/magento-cloud-docker/pull/319).*<!--PR #319-->
 - ![고정 아이콘](../../assets/fix.svg) **생성된 인증서에 대한 `CN` 값을 업데이트했습니다**—Dockerfile에서 하드코딩된 `CN` 값을 제거했습니다. 이 값으로 인해 인증서 오류(`NET::ERR_CERT_INVALID`)가 발생하여 `ece-docker build:compose` 명령에 대한 `--host` 옵션이 무시됩니다.<!--MCLOUD-7934-->
@@ -179,9 +190,9 @@ ht-degree: 0%
 
 릴리스 날짜: 2021년 4월 20일
 
-- ![새 아이콘](../../assets/new.svg) **플랫폼 독립적이 되도록 `host.docker.internal`을 업데이트함**—이제 Ubuntu, Windows 및 macOS에 대해 동일한 도커 작성 스크립트를 만들 수 있습니다. Ubuntu에서 Xdebug를 사용하는 경우 더 이상 별도의 환경 변수가 필요하지 않습니다. [Igor Vitol이 제출한 수정 내용 &#x200B;](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #298-->
-- ![새 아이콘](../../assets/new.svg) **init-docker.sh를 업데이트했습니다**—`MAGENTO_CLOUD_APPLICATION` 환경 변수에 `mounts` 개체를 추가했습니다. [Chiranjeevi가 수정 제출함](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #299-->
-- ![새 아이콘](../../assets/new.svg) **init-docker.sh** 업데이트—PHP 7.4 및 Cloud Docker 1.2.1 버전으로 `init-docker.sh` 스크립트를 업데이트했습니다. [Adarsh Manickam이 수정 제출함](https://github.com/magento/magento-cloud-docker/pull/300).<!--Issue #300-->
+- ![새 아이콘](../../assets/new.svg) **플랫폼 독립적이 되도록 `host.docker.internal`을 업데이트함**—이제 Ubuntu, Windows 및 macOS에 대해 동일한 도커 작성 스크립트를 만들 수 있습니다. Ubuntu에서 Xdebug를 사용하는 경우 더 이상 별도의 환경 변수가 필요하지 않습니다. [Igor Vitol이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #298-->
+- ![새 아이콘](../../assets/new.svg) **init-docker.sh를 업데이트했습니다**—`MAGENTO_CLOUD_APPLICATION` 환경 변수에 `mounts` 개체를 추가했습니다. [Chiranjeevi에서 수정 제출](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #299-->
+- ![새 아이콘](../../assets/new.svg) **init-docker.sh** 업데이트—PHP 7.4 및 Cloud Docker 1.2.1 버전으로 `init-docker.sh` 스크립트를 업데이트했습니다. [Adarsh Manickam에서 수정 제출](https://github.com/magento/magento-cloud-docker/pull/300).<!--Issue #300-->
 - ![새 아이콘](../../assets/new.svg) **기본적으로 활성화된 나트륨**—PHP 도커 이미지 내에서 기본적으로 `sodium` PHP 확장을 활성화했습니다.<!--MCLOUD-7548-->
 - ![새 아이콘](../../assets/new.svg) **`custom-registry`옵션**—고유한 이미지 레지스트리를 사용하기 위해 `php ./vendor/bin/ece-docker build:compose` 명령에 `--custom-registry` 옵션을 추가했습니다.<!--MCLOUD-7476-->
 
@@ -221,7 +232,7 @@ ht-degree: 0%
 
 - ![수정 아이콘](../../assets/fix.svg) **잘못된 볼륨 이름 지정**—개발자 모드에서 잘못된 볼륨 이름 지정으로 오류를 해결했습니다.<!--MCLOUD-7442-->
 
-- ![수정 아이콘](../../assets/fix.svg) **NGINX 업스트림 포트**—무한 루프를 방지하기 위해 포트 8080을 사용하도록 도커 NGINX 1.19 이미지를 업데이트했습니다. [Adarsh Manickam이 수정 제출함](https://github.com/magento/magento-cloud-docker/pull/296).<!--Issue 295-->
+- ![수정 아이콘](../../assets/fix.svg) **NGINX 업스트림 포트**—무한 루프를 방지하기 위해 포트 8080을 사용하도록 도커 NGINX 1.19 이미지를 업데이트했습니다. [Adarsh Manickam에서 수정 제출](https://github.com/magento/magento-cloud-docker/pull/296).<!--Issue 295-->
 
 ## v1.2.0
 
@@ -229,7 +240,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **컨테이너 업데이트—**
 
-   - ![새 아이콘](../../assets/new.svg) **PHP-FPM 컨테이너**—gnupg PHP 확장에 대한 지원을 추가했습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->에서 G Arvind가 제출한 수정 사항
+   - ![새 아이콘](../../assets/new.svg) **PHP-FPM 컨테이너**—gnupg PHP 확장에 대한 지원을 추가했습니다. [Zilker Technology에서 G Arvind가 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->
 
    - ![수정 아이콘](../../assets/fix.svg) **데이터베이스 컨테이너**—상태 검사 명령에 필요한 데이터베이스 암호를 추가하여 데이터베이스 컨테이너 상태 검사를 해결했습니다.<!--MCLOUD-7122-->
 
@@ -243,7 +254,7 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) **CLI 컨테이너**
 
-      - **Docker PHP 컨테이너 내에서 명령 실행**—이제 Cloud Docker CLI를 사용하여 호스트에 PHP를 설치하지 않고도 Docker 환경의 PHP 컨테이너 내에서 명령을 실행할 수 있습니다. 예를 들어 `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose` 명령은 구성을 빌드합니다. [Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli)를 참조하십시오. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->에서 G Arvind가 제출한 수정 사항
+      - **Docker PHP 컨테이너 내에서 명령 실행**—이제 Cloud Docker CLI를 사용하여 호스트에 PHP를 설치하지 않고도 Docker 환경의 PHP 컨테이너 내에서 명령을 실행할 수 있습니다. 예를 들어 `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose` 명령은 구성을 빌드합니다. [Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli)를 참조하십시오. [Zilker Technology에서 G Arvind가 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->
 
       - PHP CLI 컨테이너에 OpenSSH-client를 추가했습니다. 이제 `composer.json` 파일에 Composer 명령을 사용하기 위해 ssh 클라이언트가 필요한 개인 git 저장소가 포함된 경우 Composer에 대해 ssh 에이전트 전달을 사용할 수 있습니다.<!--MCLOUD-6008-->
 
@@ -255,7 +266,7 @@ ht-degree: 0%
 
       - ![새 아이콘](../../assets/new.svg) **Linux에서 Xdebug 구성**—Xdebug 컨테이너에서 `host.docker.internal` 값을 구성하기 위해 `ece-docker build:compose` 명령에 `--set-docker-host` 옵션을 추가했습니다. 이 옵션은 Linux 시스템에서 Xdebug를 사용하는 데 필요합니다. [Docker용 Xdebug 구성](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug)을 참조하십시오.<!--MCLOUD-6430-->
 
-      - ![수정 아이콘](../../assets/fix.svg) 로그에서 `uninitialized "with_xdebug" variable` 오류를 해결하기 위해 도커 진입점에 대한 Xdebug 변수 구성을 수정했습니다. [Florent Olivaud가 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
+      - ![수정 아이콘](../../assets/fix.svg) 로그에서 `uninitialized "with_xdebug" variable` 오류를 해결하기 위해 도커 진입점에 대한 Xdebug 변수 구성을 수정했습니다. [Florent Olivaud에서 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
 
 - ![새 아이콘](../../assets/new.svg) **Docker 구성 변경**
 
@@ -306,7 +317,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **Adobe Commerce 및 Magento Open Source 배포 지원**—이제 Commerce용 Cloud Docker를 사용하여 클라우드 인프라의 Adobe Commerce에서 호스팅되지 않은 프로젝트에 대한 로컬 개발 환경을 배포할 수 있습니다.<!--MCLOUD-5667-->
 
-- ![새 아이콘](../../assets/new.svg) **Blackfire.io 지원** - 자동화된 성능 테스트를 위해 [Blackfire.io 확장](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire)을 사용할 수 있는 지원이 추가되었습니다. [Adarsh Manickam이 Zilker Technology에서 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
+- ![새 아이콘](../../assets/new.svg) **Blackfire.io 지원** - 자동화된 성능 테스트를 위해 [Blackfire.io 확장](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire)을 사용할 수 있는 지원이 추가되었습니다. [Zilker Technology에서 Adarsh Manickam이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
 
 - ![새 아이콘](../../assets/new.svg) **컨테이너 업데이트**
 
@@ -322,13 +333,13 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) **PHP-FPM**
 
-      - PHP 7.4에 대한 지원을 추가했습니다. [Mohanela Murugan이 Zilker Technology에서 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
+      - PHP 7.4에 대한 지원이 추가되었습니다. [Zilker Technology에서 Mohanela Murugan이 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
 
-      - 루트 프로젝트 디렉터리의 `php.ini` 파일을 Cloud Docker 환경에 복사하고 사용자 지정 PHP 설정을 PHP-FPM 및 CLI 컨테이너에 적용하는 기능이 추가되었습니다. [PHP 설정 사용자 지정](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings)을 참조하십시오. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->에서 Mathew Beane이 제출한 수정 내용
+      - 루트 프로젝트 디렉터리의 `php.ini` 파일을 Cloud Docker 환경에 복사하고 사용자 지정 PHP 설정을 PHP-FPM 및 CLI 컨테이너에 적용하는 기능이 추가되었습니다. [PHP 설정 사용자 지정](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings)을 참조하십시오. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
 
-      - 컨테이너 상태 검사를 추가했습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->에서 Visanth Sampath가 제출한 수정 내용
+      - 컨테이너 상태 검사를 추가했습니다. [Zilker Technology에서 Visanth Sampath가 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
 
-   - ![수정 아이콘](../../assets/fix.svg) **Node.js** - 보안을 개선하기 위해 기본 Node.js 버전을 버전 8에서 버전 10으로 업데이트했습니다. Node.js 버전 8은 더 이상 사용되지 않으며 버그 수정 또는 보안 패치로 더 이상 업데이트되지 않습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->에서 Mohan Elamurugan이 제출한 수정 사항
+   - ![수정 아이콘](../../assets/fix.svg) **Node.js** - 보안을 개선하기 위해 기본 Node.js 버전을 버전 8에서 버전 10으로 업데이트했습니다. Node.js 버전 8은 더 이상 사용되지 않으며 버그 수정 또는 보안 패치로 더 이상 업데이트되지 않습니다. [Zilker Technology에서 Mohan Elamurugan이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->
 
    - ![새 아이콘](../../assets/new.svg) **Elasticsearch**
 
@@ -350,7 +361,7 @@ ht-degree: 0%
 
    - Nginx 서버의 `fastcgi_buffers` 값을 늘려 업스트림 PHP-FPM 컨테이너에서 큰 응답을 처리하는 기능이 향상되었습니다.<!--MCLOUD-5980-->
 
-   - `vendor` 디렉터리의 파일을 동기화하는 두 번째 동기화 세션을 추가하여 가변 파일 동기화 성능을 개선했습니다. 이 변경 사항으로 인해 파일 동기화 프로세스 중에 돌연변이가 중단되는 것을 방지할 수 있습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->에서 Mathew Beane이 제출한 수정 내용
+   - `vendor` 디렉터리의 파일을 동기화하는 두 번째 동기화 세션을 추가하여 가변 파일 동기화 성능을 개선했습니다. 이 변경 사항으로 인해 파일 동기화 프로세스 중에 돌연변이가 중단되는 것을 방지할 수 있습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
 
    - ![새 아이콘](../../assets/new.svg) **CLI 명령 업데이트**
 
@@ -365,17 +376,17 @@ ht-degree: 0%
 | 사용자 지정 기본 URL 지정 | `./vendor/bin/ece-docker build:compose --host=<hostname> --port=<port-number>`<!--MCLOUD-3063--> |
 | [Xdebug 구성에 대한 컨테이너 추가](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug) | `.vendor/bin/ece-docker build:compose --mode developer --sync-engine native --with-xdebug`<!--MCLOUD-4098--> |
 
-- ![수정 아이콘](../../assets/fix.svg) 변경 내용이 오래된 세션을 만들지 않도록 변경 내용 파일 동기화 구성을 수정했습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->에서 Mathew Beane이 제출한 수정 내용
+- ![수정 아이콘](../../assets/fix.svg) 변경 내용이 오래된 세션을 만들지 않도록 변경 내용 파일 동기화 구성을 수정했습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
 
 - ![수정 아이콘](../../assets/fix.svg) PHP-FPM 컨테이너를 시작할 때 도커 작성 로그에 구문 오류가 발생하는 구성 문제를 해결했습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/129)<!--MCLOUD-3958-->
 
-- ![수정 아이콘](../../assets/fix.svg) 여러 Docker 환경을 사용할 때 발생하는 볼륨 충돌 오류를 수정했습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/168)에서 G Arvind가 제출한 수정 사항입니다.
+- ![수정 아이콘](../../assets/fix.svg) 여러 Docker 환경을 사용할 때 발생하는 볼륨 충돌 오류를 수정했습니다. [Zilker Technology에서 G Arvind가 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/168).
 
-- ![수정 아이콘](../../assets/fix.svg) 구성에 Blackfire.io가 포함된 경우 `ece-docker build:compose` 명령이 실패하는 문제를 해결했습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/199)에서 G Arvind가 제출한 수정 사항입니다. <!--MCLOUD-5797-->
+- ![수정 아이콘](../../assets/fix.svg) 구성에 Blackfire.io가 포함된 경우 `ece-docker build:compose` 명령이 실패하는 문제를 해결했습니다. [Zilker Technology에서 G Arvind가 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/199). <!--MCLOUD-5797-->
 
-- ![수정 아이콘](../../assets/fix.svg) Commerce용 Cloud Docker를 사용하여 여러 패키지를 설치할 때 발생하는 메모리 부족 오류를 방지하기 위해 PHP CLI 이미지 구성을 업데이트했습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/197).*<!--MCLOUD-5818-->에서 Mohan Elamurugan이 제출한 수정 사항
+- ![수정 아이콘](../../assets/fix.svg) Commerce용 Cloud Docker를 사용하여 여러 패키지를 설치할 때 발생하는 메모리 부족 오류를 방지하기 위해 PHP CLI 이미지 구성을 업데이트했습니다. [Zilker Technology에서 Mohan Elamurugan이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/197).*<!--MCLOUD-5818-->
 
-- ![수정 아이콘](../../assets/fix.svg) Cloud Docker 환경에서 여러 MySQL 사용자에 대한 지원을 추가했습니다. 이전 릴리스에서는 `magento.app.yaml` 파일에 여러 데이터베이스 사용자가 지정된 경우 `build:compose` 작업이 실패했습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/181).<!--MCLOUD-5670-->에서 G Arvind가 제출한 수정 사항
+- ![수정 아이콘](../../assets/fix.svg) Cloud Docker 환경에서 여러 MySQL 사용자에 대한 지원을 추가했습니다. 이전 릴리스에서는 `magento.app.yaml` 파일에 여러 데이터베이스 사용자가 지정된 경우 `build:compose` 작업이 실패했습니다. [Zilker Technology에서 G Arvind가 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/181).<!--MCLOUD-5670-->
 
 - ![수정 아이콘](../../assets/fix.svg) 배포 중에 경고 알림을 발생시킨 호환성 문제를 해결하기 위해 Commerce PHP 컨테이너용 Cloud Docker에서 `rsyslog`을(를) 제거했습니다. Cloud Docker는 rsyslog 유틸리티를 사용하지 않습니다.<!--MCLOUD-6173-->
 
@@ -413,11 +424,11 @@ ht-degree: 0%
 
       - ![새 아이콘](../../assets/new.svg) **공식 이미지를 사용하도록 컨테이너 기본 이미지를 업데이트했습니다**—이제 [Cloud TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container) 이미지가 공식 `debian:jessie` 도커 이미지를 기반으로 합니다.—<!--MAGECLOUD-4163-->
 
-      - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시&rbrack;**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.&lbrack;
+      - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시]**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.[
 
          - **`TimeOut`** - 시간을 첫 번째 바이트(TTFB) 시간 초과 값으로 설정합니다. 기본값은 300초입니다.
 
-         - **`RewriteLocation`** - 기본적으로 파운드 프록시가 위치를 요청 URL에 다시 쓸지 여부를 결정합니다. 다시 작성으로 인해 외부 SSO 사이트와 같은 외부 웹 사이트로의 리디렉션이 중단되지 않도록 하려면 기본값이 `0`입니다. [Sorin Sugar에서 수정 제출](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
+         - **`RewriteLocation`** - 기본적으로 파운드 프록시가 위치를 요청 URL에 다시 쓸지 여부를 결정합니다. 다시 작성으로 인해 외부 SSO 사이트와 같은 외부 웹 사이트로의 리디렉션이 중단되지 않도록 하려면 기본값이 `0`입니다. [Sorin Sugar에서 수정 제출됨](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
 
       - ![새 아이콘](../../assets/new.svg) TLS 컨테이너 구성의 시간 제한 값을 15초에서 300초로 늘렸습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
@@ -427,7 +438,7 @@ ht-degree: 0%
 
       - ![새 아이콘](../../assets/new.svg) **기본 시간 초과 구성 개선**-바니시 컨테이너에 `.first_byte_timeout` 및 `.between_bytes_timeout` 구성 추가 두 시간 제한 값은 모두 기본적으로 `300s`(5분)입니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
-      - ![수정 아이콘](../../assets/fix.svg) **Xdebug 세션 중 바니시 건너뛰기**—Xdebug가 활성화된 경우 받은 요청에 대해 `pass`을(를) 반환하도록 바니시 컨테이너 구성을 업데이트했습니다. 이전 릴리스에서는 도커 환경에 Varnish가 포함된 경우 Xdebug를 사용할 수 없었습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->에서 Mathew Beane이 제출한 수정 내용
+      - ![수정 아이콘](../../assets/fix.svg) **Xdebug 세션 중 바니시 건너뛰기**—Xdebug가 활성화된 경우 받은 요청에 대해 `pass`을(를) 반환하도록 바니시 컨테이너 구성을 업데이트했습니다. 이전 릴리스에서는 도커 환경에 Varnish가 포함된 경우 Xdebug를 사용할 수 없었습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
 
 - ![새 아이콘](../../assets/new.svg) **Docker 구성 변경**—
 
@@ -453,7 +464,7 @@ ht-degree: 0%
 
       - ![새 아이콘](../../assets/new.svg) 개발자 모드에서 Docker 구성 파일을 생성할 때 파일 동기화를 사용하지 않도록 하기 위해 `docker-build` 명령에 `--sync-engine="native"` 옵션을 추가했습니다. 로컬 도커 개발을 위해 파일 동기화가 필요하지 않은 Linux 시스템에서 개발할 때 이 옵션을 사용합니다. [도커 환경에서 데이터 동기화](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data)를 참조하십시오.<!--MCLOUD-3231, MCLOUD-3890-->
 
-   - ![새 아이콘](../../assets/new.svg) 기본 파일 동기화 설정을 `docker-sync`에서 `native`(으)로 변경했습니다. [Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->에서 Mathew Beane이 제출한 수정 내용
+   - ![새 아이콘](../../assets/new.svg) 기본 파일 동기화 설정을 `docker-sync`에서 `native`(으)로 변경했습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
 
 - ![새 아이콘](../../assets/new.svg) **유효성 검사 개선 사항**—
 
