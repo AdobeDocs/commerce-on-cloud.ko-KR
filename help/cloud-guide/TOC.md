@@ -5,9 +5,9 @@ user-guide-title: 클라우드의 Commerce 안내서
 user-guide-description: 클라우드 인프라에서 Adobe Commerce 애플리케이션을 관리하는 방법에 대해 알아봅니다.
 product: magento
 feature: Cloud
-source-git-commit: 14964492bc82a50b1eea0636d01b8f7f2583755b
+source-git-commit: 5475b65cb9606b200ff6ac3096ed0d0cf3168cf9
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '389'
 ht-degree: 8%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 8%
    + [Pro 워크플로우](architecture/pro-develop-deploy-workflow.md)
    + [확장 아키텍처](architecture/scaled-architecture.md)
    + [자동 크기 조정](architecture/autoscaling.md)
-+ [시작하기](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=ko)
++ [시작하기](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + 릴리스 정보 {#release-notes}
    + [클라우드 도구 세트](release-notes/cloud-tools-suite.md)
    + [ECE-Tools 패키지](release-notes/ece-tools-package.md)
@@ -148,6 +148,7 @@ ht-degree: 8%
       + [캐시 구성 사용자 정의](cdn/fastly-custom-cache-configuration.md)
       + [오류 및 유지 관리 페이지 사용자 지정](cdn/fastly-custom-response.md)
    + [웹 애플리케이션 방화벽](cdn/fastly-waf-service.md)
+   + [고급 보안](cdn/advanced-security.md)
    + [이미지 최적화](cdn/fastly-image-optimization.md)
    + VCL로 사용자정의 {#custom-vcl-snippets}
       + [시작하기](cdn/fastly-vcl-custom-snippets.md)
