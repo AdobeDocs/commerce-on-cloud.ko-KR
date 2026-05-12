@@ -1,7 +1,7 @@
 ---
-source-git-commit: bd353c3d100dee7fd0a1846b582a8af44448ff1b
+source-git-commit: 30d2462df80a252519fcaa90e225c219d4ead2f1
 workflow-type: tm+mt
-source-wordcount: '3168'
+source-wordcount: '3177'
 ht-degree: 0%
 
 ---
@@ -27,17 +27,18 @@ The edition variable contains `cloud` value from the _data/names.yml file
 
 `composer.json` 파일은 패키지 목록을 선언하지만, `composer.lock` 파일은 Adobe Commerce 설치를 빌드하는 데 사용되는 패키지의 전체 목록(각 패키지 및 해당 종속 항목의 전체 버전)을 저장합니다.
 
-다음 참조 설명서는 `composer.lock` 파일에서 생성되며 클라우드 인프라 2.4.8-p1의 Adobe Commerce에 포함된 필수 패키지에 대해 설명합니다.
+다음 참조 설명서는 `composer.lock` 파일에서 생성되며 클라우드 인프라 2.4.9-p2의 Adobe Commerce에 포함된 필수 패키지에 대해 설명합니다.
 
 ## 종속성
 
-`magento/magento-cloud-metapackage 2.4.8-p1`에 다음 종속성이 있습니다.
+`magento/magento-cloud-metapackage 2.4.9-p2`에 다음 종속성이 있습니다.
 
 ```config
+aem/rum: ^1.0.4
 fastly/magento2: ^1.2.34
 magento/ece-tools: ^2002.2.0
 magento/module-paypal-on-boarding: ~100.5.0
-magento/product-enterprise-edition: >=2.4.8 <2.4.9
+magento/product-enterprise-edition: >=2.4.9 <2.4.10
 ```
 
 ## 타사 라이선스
@@ -94,6 +95,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>라이브러리</td>
     <td>PHP용 AWS SDK - PHP 프로젝트에서 Amazon Web Services 사용</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/giggsey/libphonenumber-for-php.git">ggsey/libphonenumber-for-php</a>
+    </td>
+    <td>라이브러리</td>
+    <td>국제 전화 번호, Google libphoneumber의 PHP 포트를 구문 분석, 서식 지정, 저장 및 확인하기 위한 라이브러리입니다.</td>
   </tr>
   <tr>
     <td>
@@ -209,17 +217,10 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/firebase/php-jwt.git">firebase/php-jwt</a>
+      <a href="https://github.com/googleapis/php-jwt.git">firebase/php-jwt</a>
     </td>
     <td>라이브러리</td>
     <td>PHP에서 JSON 웹 토큰(JWT)을 인코딩하고 디코딩하는 간단한 라이브러리입니다. 현재 사양을 준수해야 합니다.</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-captcha.git">laminas/laminas-captcha</a>
-    </td>
-    <td>라이브러리</td>
-    <td>Figlet, 이미지, ReCaptcha 등을 사용하여 CAPTCHA를 생성하고 확인합니다.</td>
   </tr>
   <tr>
     <td>
@@ -234,13 +235,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>라이브러리</td>
     <td>는 응용 프로그램 코드 내에서 이 구성 데이터에 액세스하기 위한 중첩된 개체 속성 기반 사용자 인터페이스를 제공합니다</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-di.git">laminas/laminas-di</a>
-    </td>
-    <td>라이브러리</td>
-    <td>PSR-11 컨테이너에 대한 자동 종속성 삽입</td>
   </tr>
   <tr>
     <td>
@@ -307,13 +301,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mvc.git">laminas/laminas-mvc</a>
-    </td>
-    <td>라이브러리</td>
-    <td>MVC 응용 프로그램, 컨트롤러 및 플러그인을 포함한 Laminas의 이벤트 기반 MVC 계층</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-permissions-acl.git">laminas/laminas-permissions-acl</a>
     </td>
     <td>라이브러리</td>
@@ -328,20 +315,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-router.git">laminas/laminas-router</a>
-    </td>
-    <td>라이브러리</td>
-    <td>HTTP 및 콘솔 애플리케이션을 위한 유연한 라우팅 시스템</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-server.git">laminas/laminas-server</a>
-    </td>
-    <td>라이브러리</td>
-    <td>리플렉션 기반 RPC 서버 만들기</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-servicemanager.git">laminas/laminas-servicemanager</a>
     </td>
     <td>라이브러리</td>
@@ -353,13 +326,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>라이브러리</td>
     <td>PHP 세션 및 스토리지에 대한 객체 지향 인터페이스</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-soap.git">laminas/laminas-soap</a>
-    </td>
-    <td>라이브러리</td>
-    <td></td>
   </tr>
   <tr>
     <td>
@@ -419,6 +385,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/php-db/phpdb.git">php-db/phpdb</a>
+    </td>
+    <td>라이브러리</td>
+    <td>데이터베이스 추상화 계층, SQL 추상화, 결과 집합 추상화, RowDataGateway 및 TableDataGateway 구현</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/phpfui/recaptcha.git">phpfui/recaptcha</a>
     </td>
     <td>라이브러리</td>
@@ -458,27 +431,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>magento-module</td>
     <td>태그에 대한 모든 지원을 제공하는 Redis를 사용하는 Zend_Cache 백엔드.</td>
-  </tr>
-  </tbody>
-</table>
-
-### ISC
-
-<table>
-  <thead>
-    <tr>
-      <th>이름</th>
-      <th>유형</th>
-      <th>설명</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>
-      <a href="https://github.com/paragonie/sodium_compat.git">파라고니/나트륨_호환</a>
-    </td>
-    <td>라이브러리</td>
-    <td>libsodium의 순수 PHP 구현; 존재하는 경우 PHP 확장을 사용합니다.</td>
   </tr>
   </tbody>
 </table>
@@ -535,6 +487,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>라이브러리</td>
     <td>임의 정밀도 산술 라이브러리</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/brick/phonenumber.git">brick/phonenumber</a>
+    </td>
+    <td>라이브러리</td>
+    <td>전화번호 라이브러리</td>
   </tr>
   <tr>
     <td>
@@ -675,6 +634,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>라이브러리</td>
     <td>Ochromius/proxy-manager에 광범위한 PHP 버전에 대한 지원 추가</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/giggsey/Locale.git">gigsey/locale</a>
+    </td>
+    <td>라이브러리</td>
+    <td>libphonenumber-for-php에 필요한 로케일 함수</td>
   </tr>
   <tr>
     <td>
@@ -839,7 +805,7 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PhpGt/CssXPath.git">phpgt/cssxpath</a>
+      <a href="https://github.com/phpgt/CssXPath.git">phpgt/cssxpath</a>
     </td>
     <td>라이브러리</td>
     <td>CSS 선택기를 XPath 쿼리로 변환합니다.</td>
@@ -871,6 +837,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>라이브러리</td>
     <td>PHP 보안 통신 라이브러리 - RSA, AES, SSH2, SFTP, X.509 등의 순수 PHP 구현.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/predis/predis.git">predis/predis</a>
+    </td>
+    <td>라이브러리</td>
+    <td>PHP용 유연하고 완벽한 Redis/Valkey 클라이언트.</td>
   </tr>
   <tr>
     <td>
@@ -1014,6 +987,20 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/cache.git">symfony/cache</a>
+    </td>
+    <td>라이브러리</td>
+    <td>확장된 PSR-6, PSR-16(및 태그) 구현 제공</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/cache-contracts.git">symfony/cache-contracts</a>
+    </td>
+    <td>라이브러리</td>
+    <td>캐싱과 관련된 일반 요약</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/clock.git">심포니/시계</a>
     </td>
     <td>라이브러리</td>
@@ -1088,13 +1075,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>라이브러리</td>
     <td>직관적인 유창한 인터페이스를 통해 파일 및 디렉터리 찾기</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/symfony/http-client.git">symfony/http-client</a>
-    </td>
-    <td>라이브러리</td>
-    <td>HTTP 리소스를 동기식으로 또는 비동기식으로 가져오는 강력한 방법 제공</td>
   </tr>
   <tr>
     <td>
@@ -1294,6 +1274,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/thecodingmachine/safe.git">coodingmachine/safe</a>
+    </td>
+    <td>라이브러리</td>
+    <td>오류 시 FALSE를 반환하는 대신 예외를 발생시키는 PHP 코어 함수</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/web-token/jwt-framework.git">웹 토큰/jwt 프레임워크</a>
     </td>
     <td>교향다발</td>
@@ -1432,6 +1419,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </tr>
   </thead>
   <tbody>
+  <tr>
+    <td>
+      aem/rum
+    </td>
+    <td>magento2-module</td>
+    <td>해당 사항 없음</td>
+  </tr>
   <tr>
     <td>
       paypal/module-braintree-core
