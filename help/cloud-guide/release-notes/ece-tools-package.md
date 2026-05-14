@@ -4,7 +4,7 @@ description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조
 recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 0781fdfe8b0dbc6312848572ff4b996e51270a3f
+source-git-commit: 84f9a4ba4d3942fc0461b18aeda2405ab2fbf67e
 workflow-type: tm+mt
 source-wordcount: '3563'
 ht-degree: 0%
@@ -271,7 +271,9 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **새 SCD_NO_PARENT 환경 변수**—상위 테마에 대한 정적 콘텐츠 생성을 관리하기 위해 `SCD_NO_PARENT` 환경 변수(Adobe Commerce >=2.4.2용)를 추가했습니다.<!--MCLOUD-7284-->
 
-- ![수정 아이콘](../../assets/fix.svg) **메모리 제한 및 명령**—`cloud.log` 파일의 크기가 PHP memory_limit를 초과할 경우 `php vendor/bin/ece-tools` 명령이 작동하지 않는 문제가 해결되었습니다. 이제 전체 `cloud.log` 파일을 메모리로 읽는 대신 로그 파일에서 더 작은 데이터 하위 집합만 읽습니다.<!--MCLOUD-7275--><!--MCLOUD-7400-->
+- ![수정 아이콘](../../assets/fix.svg) **메모리 제한 및 명령**—`cloud.log` 파일의 크기가 PHP memory_limit를 초과할 경우 `php vendor/bin/ece-tools` 명령이 작동하지 않는 문제가 해결되었습니다. 이제 전체 `cloud.log` 파일을 메모리로 읽는 대신 로그 파일에서 더 작은 데이터 하위 집합만 읽습니다.
+  <!--MCLOUD-7275-->
+  <!--MCLOUD-7400-->
 
 - ![수정 아이콘](../../assets/fix.svg) **사용자 지정 데이터베이스 연결**—`DATABASE_CONFIGURATION`에 대해 정의된 사용자 지정 데이터베이스 연결이 사용되지 않는 `.magento.env.yaml` 구성 문제를 해결했습니다. 연결 설정을 `app/etc/env.php`에 추가하지 않았습니다.<!--MCLOUD-7426-->
 
