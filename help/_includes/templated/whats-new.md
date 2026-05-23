@@ -23,7 +23,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>클라우드 인프라의 Adobe Commerce에 대해 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">고급 보안</a> 서비스를 추가했습니다.</p>
+      <td><p>클라우드 인프라의 Adobe Commerce에 대해 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/cdn/advanced-security">고급 보안</a> 서비스를 추가했습니다.</p>
 </td>
       <td>
         새 주제
