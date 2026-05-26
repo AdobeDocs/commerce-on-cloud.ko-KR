@@ -1,5 +1,5 @@
 ---
-source-git-commit: e22b5b3508105aa17d397ac299df12f07004383f
+source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 1%
@@ -97,7 +97,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>클라우드 인프라의 Adobe Commerce에 대한 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">웹 속성 구성</a> 참조에 보안 메모를 추가하여 웹 속성의 기본 구성이 미디어 위치에 대해 <code class="language-plaintext highlighter-rouge">scripts:false</code>을(를) 사용하여 업로드된 파일이 실행되지 않도록 명확하게 했습니다.</p>
+      <td><p>클라우드 인프라의 Adobe Commerce에 대한 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">웹 속성 구성</a> 참조에 보안 메모를 추가하여 웹 속성의 기본 구성이 미디어 위치에 대해 <code>scripts:false</code>을(를) 사용하여 업로드된 파일이 실행되지 않도록 명확하게 했습니다.</p>
 </td>
       <td>
         기술, 피드백
