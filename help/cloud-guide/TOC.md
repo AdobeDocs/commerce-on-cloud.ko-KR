@@ -2,12 +2,13 @@
 cloud: Experience Cloud
 solution-title: Commerce
 user-guide-title: 클라우드의 Commerce 안내서
+breadcrumb-title: 클라우드의 Commerce
 user-guide-description: 클라우드 인프라에서 Adobe Commerce 애플리케이션을 관리하는 방법에 대해 알아봅니다.
 product: magento
 feature: Cloud
-source-git-commit: 6f70f167bbd29c6a83f4feaf14e5b642cd39e87f
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '392'
 ht-degree: 8%
 
 ---

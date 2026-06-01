@@ -3,9 +3,9 @@ title: 기술 스택
 description: 클라우드 인프라에서 Commerce을 구성하는 기술 스택을 참조하십시오.
 feature: Cloud, Iaas, Paas
 exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 아래와 같이 클라우드 인프라의 Adobe Commerce을 5개의 기능 계층으로 생각해 보십시오.
 
-![클라우드 스택](../../assets/CloudStack.svg)
+![클라우드 스택](../../assets/CloudStack.png)
 
-1. [**클라우드 인프라**](pro-architecture.md): Adobe Commerce on cloud infrastructure Pro 프로젝트를 위한 IaaS(Infrastructure as a Service) 기반으로 Amazon Web Services(AWS) 또는 Microsoft Azure를 선택합니다.
+1. [**클라우드 인프라**](pro-architecture.md): Adobe Commerce on cloud infrastructure Pro 프로젝트를 위해 Amazon Web Services(AWS) 또는 Microsoft Azure을 IaaS(Infrastructure as a Service) 기반으로 선택합니다.
 
    Adobe은 정기적으로 가상 컴퓨팅 리소스(vCPU) 사용을 분석하고 리소스를 자동으로 할당하여 장기 사용을 최적화하고 최대 연간 vCPU 일 허용량을 초과할 위험을 완화합니다. 특정 기간 동안 사이트 트래픽이 증가할 것으로 예상되면 [임시 업사이징을 요청](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ko)할 지원 티켓을 계속 열어야 합니다.
 
