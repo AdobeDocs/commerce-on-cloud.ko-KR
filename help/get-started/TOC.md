@@ -21,4 +21,4 @@ ht-degree: 0%
 + [&#x200B; [!DNL Cloud Console]에 로그인](cloud-console.md)
 + [상점 첫 화면](access-storefront.md)
 + [개발 준비](prepare-workspace.md)
-+ [클라우드 인프라로 돌아가기 안내서](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
++ [클라우드 인프라로 돌아가기 안내서](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=ko)
