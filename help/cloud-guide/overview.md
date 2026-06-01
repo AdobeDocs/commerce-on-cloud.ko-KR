@@ -2,7 +2,7 @@
 title: 클라우드 인프라의 Commerce
 description: 클라우드 인프라의 Commerce를 빌드하고, 배포하고, 관리하는 방법에 대해 알아봅니다.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
+source-git-commit: 37505db0488204c40ca37356c4d496bba73c537f
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->보안에 대한 자세한 내용은 [보안 시작 검사 목록](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)을 참조하세요.
+>보안에 대한 자세한 내용은 [보안 시작 검사 목록](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)을 참조하세요.
 
 [기술 스택](architecture/tech-stack.md)을 자세히 보거나 [Commerce용 클라우드 아키텍처](architecture/cloud-architecture.md)의 특정 기능 및 지원 제품에 대해 자세히 알아보십시오.
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 ## AWS 지역
 
-![AWS 지역을 보여 주는 다이어그램](../assets/aws-regions.svg){zoomable="yes"}
+![AWS 지역을 보여 주는 다이어그램](../assets/aws-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ ht-degree: 3%
 
 ## Azure 지역
 
-![Azure 지역을 보여 주는 다이어그램](../assets/azure-regions.svg){zoomable="yes"}
+![Azure 지역을 보여 주는 다이어그램](../assets/azure-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ Commerce on cloud infrastructure 안내서에서는 사용자가 Adobe Commerce 
 
 - [Adobe Commerce 개발자 설명서](https://developer.adobe.com/commerce/docs/)&#x200B;(Adobe Developer 사이트) - 고급 기능 개발, 사용자 지정, 통합, 확장 및 사용
 
-- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html?lang=ko)&#x200B;(Adobe Experience League) - [!DNL Commerce] 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
+- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html)&#x200B;(Adobe Experience League) - [!DNL Commerce] 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
 
 {{$include /help/_includes/templated/whats-new.md}}
 
