@@ -1,7 +1,7 @@
 ---
-source-git-commit: c8effbdb82060e2a2cbcbdef577fed7249a76799
+source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Elasticsearch 7.11 이상 버전은 클라우드 인프라의 Adobe Commerce에서 지원되지 않습니다. Adobe Commerce 버전 2.3.7-p3, 2.4.3-p2 및 2.4.4 이상 버전은 OpenSearch 서비스를 지원합니다. 온-프레미스 설치는 Elasticsearch을 계속 지원합니다.
+>Elasticsearch 7 이상 버전은 클라우드 인프라의 Adobe Commerce에서 지원되지 않습니다. Adobe Commerce 버전 2.3.7-p3, 2.4.3-p2 및 2.4.4 이상 버전은 OpenSearch 서비스를 지원합니다.
 
 ## 향상된 통합 {#enhanced-integration-envs}
 
