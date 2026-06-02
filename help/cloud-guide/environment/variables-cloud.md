@@ -6,15 +6,12 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 82923b6f-221d-4902-a1b8-5ba6c7b3339a
 TQID: https://experienceleague.adobe.com/Zk52OMqjrB74v9djO1PVOYd3wOS8EbdfL1rnqIdA8B4
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
 workflow-type: tm+mt
-source-wordcount: 289
+source-wordcount: 343
 ht-degree: 0%
 
 ---
@@ -35,11 +32,11 @@ ht-degree: 0%
 | `MAGENTO_CLOUD_ROUTES` | 환경 `.magento/routes.yaml` 파일에 정의된 경로를 설명합니다. |
 | `MAGENTO_CLOUD_TREE_ID` | Git에 있는 트리의 SHA에 해당하는 애플리케이션용 트리 ID입니다. |
 | `MAGENTO_CLOUD_VARIABLES` | 키-값 쌍이 있는 base64 인코딩 JSON 개체(예: `"key":"value"`). |
-| `MAGENTO_CLOUD_LOCKS_DIR` | 클라우드 인프라의 잠금 제공자에 대한 마운트 지점 경로를 제공합니다. 잠금 공급자는 중복 크론 작업 및 크론 그룹의 시작을 방지합니다. |
+| `MAGENTO_CLOUD_LOCKS_DIR` | 클라우드 인프라의 잠금 제공자에 대한 마운트 지점 경로를 제공합니다. 잠금 공급자는 중복 크론 작업 및 크론 그룹의 시작을 방지합니다.<br><br>잠금 공급자 `file` 및 `db`만 지원됩니다.<br><br>**Pro 프로덕션 및 스테이징 환경**&#x200B;은 기본적으로 `file` 잠금 공급자로 설정됩니다. 이 값은 변경할 수 없습니다.<br><br>**Pro 통합 및 Starter 환경**&#x200B;에서는 `MAGENTO_CLOUD_LOCKS_DIR` 변수를 사용하지 마십시오. 기본적으로 `db` 잠금 공급자가 적용됩니다. `.magento.env.yaml` 파일에서 `[LOCK_PROVIDER](variables-deploy.md#lock_provider` 환경 배포 변수를 업데이트하여 기본값을 변경할 수 있습니다. |
 
 >[!WARNING]
 >
->[[!DNL Cloud Console]](../project/overview.md)을(를) 사용하여 [구성 설정 재정의](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=ko)에 환경 변수를 추가하려면 다음 예제와 같이 변수 이름 앞에 `env:`을(를) 추가해야 합니다.
+>[[!DNL Cloud Console]](../project/overview.md)을(를) 사용하여 [구성 설정 재정의](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html)에 환경 변수를 추가하려면 다음 예제와 같이 변수 이름 앞에 `env:`을(를) 추가해야 합니다.
 >
 >![환경 변수 예](../../assets/set-env-variable-ui.png)
 
