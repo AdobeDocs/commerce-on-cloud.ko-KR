@@ -3,9 +3,13 @@ title: 데이터베이스 백업
 description: ECE-tools를 사용하여 Adobe Commerce on cloud infrastructure 프로젝트에 사용할 데이터베이스 백업을 만드는 방법에 대해 알아봅니다.
 feature: Cloud, Iaas, Storage
 exl-id: 351f7691-3153-4b8a-83af-8b8895b93d98
-source-git-commit: 3a3b0cd6e28f3e6ed3521a86f7c7c8868be0cf83
+TQID: https://experienceleague.adobe.com/bT80HnUguAzsYdVx-kNcxJUyggLzzyfomXHdZvUAcrY
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: 364
 ht-degree: 0%
 
 ---
@@ -19,7 +23,7 @@ DB 덤프에 대한 다음 지침을 고려하십시오.
 - 프로덕션 환경의 경우, Adobe은 사이트가 유지 관리 모드에 있을 때 발생하는 서비스 중단을 최소화하기 위해 사용량이 적은 시간 동안 데이터베이스 덤프 작업을 완료하는 것을 권장합니다.
 - 덤프 작업 중에 오류가 발생하면 이 명령은 디스크 공간을 절약하기 위해 덤프 파일을 삭제합니다. 자세한 내용은 로그를 검토하십시오(`var/log/cloud.log`).
 - Pro 프로덕션 환경의 경우 이 명령은 세 개의 고가용성 노드 중 _one_&#x200B;에서만 덤프하므로 덤프 중에 다른 노드에 기록된 프로덕션 데이터는 복사되지 않을 수 있습니다. 명령이 둘 이상의 노드에서 실행되지 않도록 하기 위해 명령이 `var/dbdump.lock` 파일을 생성합니다.
-- Adobe 모든 환경 서비스를 백업하려면 [백업](snapshots.md)을 만드는 것이 좋습니다.
+- 모든 환경 서비스를 백업하려면 [백업](snapshots.md)을 만드는 것이 좋습니다.
 
 데이터베이스 이름을 명령에 추가하여 여러 데이터베이스를 백업하도록 선택할 수 있습니다. 다음 예제에서는 두 개의 데이터베이스를 백업합니다. `main` 및 `sales`:
 

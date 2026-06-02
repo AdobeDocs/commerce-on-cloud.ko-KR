@@ -3,9 +3,13 @@ title: Valkey 서비스 설정
 description: Cloud Infrastructure의 Adobe Commerce에 대한 백엔드 캐시 솔루션인 Valkey를 설정하고 최적화하는 방법에 대해 알아봅니다.
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
-source-git-commit: cf2e659267445603b3f5eaf877f4eb7ac0c1b54c
+TQID: https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: 212
 ht-degree: 0%
 
 ---
@@ -14,7 +18,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)은(는) Adobe Commerce에서 기본적으로 사용하는 `Zend Framework Zend_Cache_Backend_File`을(를) 대체하는 선택적 백엔드 캐시 솔루션입니다.
 
-[구성 가이드](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=ko){target="_blank"}에서 _Valkey 구성_&#x200B;을(를) 참조하십시오.
+_구성 가이드_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"}을(를) 참조하십시오.
 
 {{service-instruction}}
 
@@ -27,7 +31,7 @@ ht-degree: 0%
        type: valkey:<version>
    ```
 
-   고유한 Valkey 구성을 제공하려면 `core_config` 파일에 `.magento/services.yaml` 키를 추가하십시오.
+   고유한 Valkey 구성을 제공하려면 `.magento/services.yaml` 파일에 `core_config` 키를 추가하십시오.
 
    ```yaml
    cache:

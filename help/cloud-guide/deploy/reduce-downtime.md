@@ -3,16 +3,20 @@ title: 다운타임 없는 배포
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce을 배포할 때 전반적인 가동 중지 시간을 줄이는 방법을 알아봅니다.
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
-source-git-commit: b831bc5bce0f76ec8972b3578c500508dd4d7d41
+TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: 502
 ht-degree: 0%
 
 ---
 
 # 다운타임 없는 배포
 
-클라우드 인프라의 Adobe Commerce은 배포 단계 동안 [_유지 관리_ 모드](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=ko#production-mode)로 응용 프로그램을 실행하며, 배포가 완료될 때까지 사이트를 오프라인으로 전환합니다. 프로덕션 사이트가 유지 관리 모드에 있는 시간은 사이트 크기, 배포 중 적용된 변경 사항 수 및 정적 콘텐츠 배포에 대한 구성에 따라 다릅니다. 프로젝트가 **제로** 중단 시간 효과로 배포되도록 구성할 수 있습니다.
+클라우드 인프라의 Adobe Commerce은 배포 단계 동안 [_유지 관리_ 모드](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode)로 응용 프로그램을 실행하며, 배포가 완료될 때까지 사이트를 오프라인으로 전환합니다. 프로덕션 사이트가 유지 관리 모드에 있는 시간은 사이트 크기, 배포 중 적용된 변경 사항 수 및 정적 콘텐츠 배포에 대한 구성에 따라 다릅니다. 프로젝트가 **제로** 중단 시간 효과로 배포되도록 구성할 수 있습니다.
 
 배포 프로세스 중에 모든 연결은 활성 세션 및 보류 중인 작업(예: 장바구니에 추가 또는 체크아웃)을 보존하기 위해 최대 5분 동안 대기합니다. 배포 후 큐가 해제되고 연결이 중단 없이 계속됩니다. 이 _연결 유지_&#x200B;를 사용하여 배포를 _제로_ 다운타임으로 줄이려면 가장 효율적인 배포 전략을 사용하도록 프로젝트를 구성해야 합니다.
 
@@ -40,7 +44,7 @@ ht-degree: 0%
 1. [테마 파일 줄이기](../environment/variables-deploy.md#scdmatrix)
 SCD\_MATRIX 환경 변수를 구성하여 불필요한 테마 파일의 수를 줄일 수 있습니다.
 
-1. [정적 콘텐츠 배포 속도 향상](../environment/variables-deploy.md#scdthreads)
+1. [정적 콘텐츠 배포 속도 높이기](../environment/variables-deploy.md#scdthreads)
 SCD\_THREADS 환경 변수를 업데이트하여 정적 콘텐츠 배포의 스레드 수를 늘려 배포 프로세스 속도를 높일 수 있습니다.
 
 >[!NOTE]

@@ -3,9 +3,15 @@ title: SSH 액세스에 다단계 인증 사용
 description: 클라우드 인프라 환경에서 Adobe Commerce에 대한 SSH 액세스를 위한 인증 요구 사항을 관리하는 방법을 알아봅니다.
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 90458fa8-42b0-4825-948e-56ef7884eb82
+TQID: https://experienceleague.adobe.com/KWGl-ZyF5aKZ-XxOOmL85ip8arBeH-G1pN5ckUdAqNw
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: 1080
 ht-degree: 0%
 
 ---
@@ -18,11 +24,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->MFA는 기본적으로 클라우드 프로젝트에서 활성화되지 않습니다. 클라우드 인프라 프로젝트의 Adobe Commerce 계정 소유자가 활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다. MFA가 활성화되면 프로젝트 환경에 대한 SSH 액세스를 위해 모든 사용자는 Adobe Commerce on cloud infrastructure 계정에서 TFA(2단계 인증)가 활성화되어 있어야 합니다.
+>MFA는 기본적으로 클라우드 프로젝트에서 활성화되지 않습니다. 클라우드 인프라 프로젝트의 Adobe Commerce 계정 소유자가 활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다. MFA가 활성화되면 프로젝트 환경에 대한 SSH 액세스를 위해 모든 사용자는 Adobe Commerce on cloud infrastructure 계정에서 TFA(2단계 인증)가 활성화되어 있어야 합니다.
 
 ## SSH 액세스용 인증서
 
-MFA를 통해 사용자는 OAUTH 액세스 토큰을 Adobe 클라우드 인증자 API에서 생성된 단기 SSH 인증서와 교환할 수 있습니다. 사용자에게 관리자 또는 기여자 역할, 유효한 SSH 키 및 유효한 TFA 코드나 API 토큰이 있는 경우, 클라우드 인프라의 Adobe Commerce은 이러한 자격 증명을 사용하여 임시 SSH 인증서를 생성합니다. 인증서 만료는 1시간으로 설정되지만 현재 세션 중에 자동으로 새로 고쳐집니다.
+MFA를 통해 사용자는 Adobe Cloud Certificator API에서 생성한 단기 SSH 인증서와 OAUTH 액세스 토큰을 교환할 수 있습니다. 사용자에게 관리자 또는 기여자 역할, 유효한 SSH 키 및 유효한 TFA 코드나 API 토큰이 있는 경우, 클라우드 인프라의 Adobe Commerce은 이러한 자격 증명을 사용하여 임시 SSH 인증서를 생성합니다. 인증서 만료는 1시간으로 설정되지만 현재 세션 중에 자동으로 새로 고쳐집니다.
 
 MFA를 사용하여 프로젝트에 로그인한 후 사용자는 `magento-cloud` CLI를 사용하여 SSH 인증서를 생성해야 합니다.
 

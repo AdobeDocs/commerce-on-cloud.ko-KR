@@ -3,9 +3,15 @@ title: Pro 프로젝트 워크플로
 description: Pro 개발 및 배포 워크플로우를 사용하는 방법을 알아봅니다.
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: 7758ca69fc8232a8e1798c536410dc028c87fee6
+TQID: https://experienceleague.adobe.com/bRmbWxABneX08LwTxhlUMFX2H7WbCqVg8DDS9RRxQNI
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: 904
 ht-degree: 0%
 
 ---
@@ -22,7 +28,7 @@ Pro 프로젝트에는 글로벌 `master` 분기와 세 개의 기본 환경이 
 
 이러한 환경은 `read-only`이며 로컬 작업 영역에서 푸시된 분기의 배포된 코드 변경 사항만 수락합니다.
 
-다음 그래픽은 간단한 git 분기 접근 방식을 사용하는 Pro 개발 및 배포 워크플로우를 보여 줍니다. [&#x200B; 환경을 기반으로 하는 활성 분기를 사용하여 &#x200B;](#development-workflow)개발`integration` 코드를 사용합니다. 원격 활성 분기에서 _푸싱_ 및 _당기기_ 코드 변경 사항을 가져옵니다. 원격 분기를 _병합_&#x200B;하여 해당 환경에 대해 자동화된 [빌드 및 배포](#deployment-workflow) 프로세스를 활성화하는 기본 분기로 확인된 코드를 배포합니다.
+다음 그래픽은 간단한 git 분기 접근 방식을 사용하는 Pro 개발 및 배포 워크플로우를 보여 줍니다. `integration` 환경을 기반으로 하는 활성 분기를 사용하여 [개발](#development-workflow) 코드를 사용합니다. 원격 활성 분기에서 _푸싱_ 및 _당기기_ 코드 변경 사항을 가져옵니다. 원격 분기를 _병합_&#x200B;하여 해당 환경에 대해 자동화된 [빌드 및 배포](#deployment-workflow) 프로세스를 활성화하는 기본 분기로 확인된 코드를 배포합니다.
 
 ![Pro 아키텍처 개발 워크플로에 대한 높은 수준의 보기](../../assets/pro-dev-workflow.png)
 
@@ -45,15 +51,15 @@ The disk hosting /app/<cluster_ID> is full
 
 프로젝트 환경은 유연하고 지속적인 통합 프로세스를 지원합니다. 로컬 프로젝트 폴더에 `integration` 분기를 복제하는 것부터 시작합니다. 분기 또는 여러 분기를 만들고, 새 기능을 개발하고, 변경 사항을 구성하고, 확장을 추가하고, 업데이트를 배포합니다.
 
-- **에서**&#x200B;변경 내용 가져오기`integration`
+- `integration`에서 **변경 내용 가져오기**
 
-- **의**&#x200B;분기`integration`
+- `integration`의 **분기**
 
-- **업데이트를 포함하여 로컬 워크스테이션에서**&#x200B;개발[!DNL Composer] 코드
+- [!DNL Composer] 업데이트를 포함하여 로컬 워크스테이션에서 **개발** 코드
 
 - 원격으로 **푸시** 코드 변경 및 유효성 검사
 
-- **에**&#x200B;병합`integration` 및 테스트
+- `integration`에 **병합** 및 테스트
 
 개발된 코드 분기 및 해당 구성 파일을 사용하면 보다 포괄적인 테스트를 위해 코드 변경 내용을 `integration` 분기에 병합할 준비가 되었습니다. `integration` 환경도 다음 경우에 가장 적합합니다.
 
@@ -61,7 +67,7 @@ The disk hosting /app/<cluster_ID> is full
 
 - **구성 관리 파일 생성**—배포된 환경에서 일부 구성 설정은 _읽기 전용_&#x200B;입니다.
 
-- **저장소 구성**—통합 환경을 사용하여 모든 저장소 설정을 완전히 구성해야 합니다. **의**&#x200B;통합&#x200B;_환경 보기에서_&#x200B;저장소 관리자 URL _[!DNL Cloud Console]_&#x200B;을 찾을 수 있습니다.
+- **저장소 구성**—통합 환경을 사용하여 모든 저장소 설정을 완전히 구성해야 합니다. _[!DNL Cloud Console]_의_&#x200B;통합&#x200B;_환경 보기에서&#x200B;**저장소 관리자 URL**을 찾을 수 있습니다.
 
 ## 배포 워크플로
 
@@ -116,4 +122,4 @@ The disk hosting /app/<cluster_ID> is full
 
 서비스를 중단하지 않고 프로덕션 환경을 디버깅해야 하는 경우 항상 프로덕션 코드의 복사본을 전역 `master`에 푸시합니다.
 
-**글로벌에서 분기를**&#x200B;만들 수 없음`master`. `integration` 분기를 사용하여 개발 및 수정을 위한 활성 분기를 새로 만드십시오.
+`master` 글로벌에서 분기를 **만들 수 없음**. `integration` 분기를 사용하여 개발 및 수정을 위한 활성 분기를 새로 만드십시오.

@@ -2,9 +2,14 @@
 title: 알림 설정
 description: 클라우드 인프라 환경에서 Adobe Commerce에 대한 알림을 구성하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Logs
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: dfbe1084-ad30-4489-af2d-d6f6b5eae1c4
+TQID: https://experienceleague.adobe.com/YWCv3iFJDvmDTCSaB9cWGmR0WVAEd4ckJdd5MFb8XOo
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: 413
 ht-degree: 0%
 
 ---
@@ -13,7 +18,7 @@ ht-degree: 0%
 
 기본적으로 클라우드 인프라의 Adobe Commerce은 Adobe Commerce 루트 응용 프로그램 디렉터리 내의 `app/var/log/cloud.log` 파일에 빌드 및 배포 작업을 기록합니다. 원할 경우 Slack 및 이메일과 같은 메시징 시스템에 로그를 전송하여 실시간 알림을 받을 수 있습니다.
 
-예를 들어 Slack 메시지를 전송하여 배포가 실패할 때 그룹의 사용자에게 경고하고 무엇이 잘못되었는지 조사할 수 있습니다.
+예를 들어, 배포가 실패할 때 그룹의 사용자에게 경고하고 무엇이 잘못되었는지 조사하기 위한 Slack 메시지를 보낼 수 있습니다.
 
 ## 플랜 알림
 
@@ -36,7 +41,7 @@ ht-degree: 0%
 1. 로컬 워크스테이션에서 프로젝트 디렉터리로 변경합니다.
 1. 프로젝트 루트의 `.magento.env.yaml` 파일에서 기본 알림 [로그 수준](log-handlers.md#log-levels)을(를) 포함한 메시징 시스템 설정을 추가합니다.
 
-   예를 들어 Slack _과(와)_ 전자 메일 구성을 모두 구성하려면 다음을 사용하십시오.
+   예를 들어 Slack _및_ 전자 메일 구성을 모두 구성하려면 다음을 사용하십시오.
 
    ```yaml
    log:
@@ -68,7 +73,7 @@ ht-degree: 0%
 
 ### Slack 구성 예
 
-다음 예는 Slack 전용 구성을 보여 줍니다.
+다음 예는 Slack 전용 구성을 보여줍니다.
 
 ```yaml
 log:
@@ -81,7 +86,7 @@ log:
 
 - `token`—Slack [사용자 토큰](https://api.slack.com/docs/token-types#user). 사용자 토큰은 클라우드 인프라의 Adobe Commerce에서 메시지를 보내도록 승인합니다.
 - `channel` - 클라우드 인프라에서 알림을 보내는 Slack 채널 Adobe Commerce의 이름입니다.
-- `username` - Cloud Infrastructure의 사용자 이름 Adobe Commerce은 Slack에서 알림 메시지를 보내는 데 사용합니다.
+- `username` - 클라우드 인프라의 사용자 이름 Adobe Commerce은 Slack에서 알림 메시지를 보내는 데 사용합니다.
 - `min_level`—알림 메시지의 최소 로그 수준입니다. `info`을(를) 사용하는 것이 좋습니다.
 
 ### 이메일 구성 예

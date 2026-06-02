@@ -3,9 +3,14 @@ title: 차단 요청에 대한 사용자 지정 VCL
 description: 사용자 지정 VCL 코드 조각과 함께 Edge ACL(액세스 제어 목록)을 사용하여 IP 주소별 수신 요청을 차단합니다.
 feature: Cloud, Configuration, Security
 exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: 1026
 ht-degree: 0%
 
 ---
@@ -43,7 +48,7 @@ VCL 코드 조각에서 이름별 Edge ACL을 참조합니다.
 
 Edge ACL을 정의한 후 이 ACL을 사용하여 ACL에 지정된 IP 주소에 대한 액세스를 차단하는 VCL 코드 조각을 만들 수 있습니다. 스테이징 및 프로덕션 환경 모두에서 동일한 VCL 코드 조각을 사용할 수 있지만 각 환경에 별도로 코드 조각을 업로드해야 합니다.
 
-차단 목록에 추가하다 다음 사용자 지정 VCL 코드 조각 코드(JSON 형식)는 ACL에 있는 주소와 일치하는 클라이언트 IP 주소를 사용하여 들어오는 요청을 차단하는 논리를 보여 줍니다.
+다음 사용자 지정 VCL 코드 조각 코드(JSON 형식)는 ACL에 있는 주소와 일치하는 클라이언트 IP 주소를 사용하여 들어오는 요청을 차단하는 논리를 보여 줍니다.
 
 ```json
 {
@@ -97,7 +102,7 @@ Edge ACL을 정의한 후 이 ACL을 사용하여 ACL에 지정된 IP 주소에 
 
 1. **만들기**&#x200B;를 클릭하여 이름 패턴이 `type_priority_name.vcl`인 VCL 코드 조각 파일을 생성합니다(예: `recv_5_blocklist.vcl`).
 
-1. 페이지가 다시 로드되면 **Fastly 구성** 섹션에서 *Fastly에 VCL 업로드*&#x200B;를 클릭하여 Fastly 서비스 구성에 파일을 추가하십시오.
+1. 페이지가 다시 로드되면 *Fastly 구성* 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 클릭하여 Fastly 서비스 구성에 파일을 추가하십시오.
 
 1. 업로드 후 페이지 상단의 알림에 따라 캐시를 새로 고칩니다.
 

@@ -2,9 +2,14 @@
 title: ' [!DNL Xdebug] 구성'
 description: 클라우드 인프라 프로젝트 개발에서 Adobe Commerce을 디버깅하기 위해 Xdebug 확장을 구성하는 방법을 알아봅니다.
 exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
-source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
+TQID: https://experienceleague.adobe.com/DGrQ8tHkdWCLbWQ6Mt-RvED2SCATyzyqZznZB8dUjGM
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: 1955
 ht-degree: 0%
 
 ---
@@ -19,7 +24,7 @@ ht-degree: 0%
 
 [!DNL Xdebug]을(를) 사용하려면 Git 저장소에서 파일을 구성하고 IDE를 구성하고 포트 전달을 설정해야 합니다. `magento.app.yaml` 파일에서 일부 설정을 구성할 수 있습니다. 편집한 후 모든 Starter 환경 및 Pro 통합 환경에서 Git 변경 사항을 푸시하여 [!DNL Xdebug]을(를) 사용하도록 설정합니다. [!DNL Xdebug]은(는) Pro 스테이징 및 프로덕션 환경에서 이미 사용할 수 있습니다.
 
-구성하고 나면 CLI 명령, 웹 요청 및 코드를 디버깅할 수 있습니다. 모든 클라우드 인프라 환경은 읽기 전용입니다. 코드를 로컬 개발 환경에 복제하여 디버깅을 수행합니다. Pro 스테이징 및 프로덕션 환경의 경우 [에 대한 &#x200B;](#debug-for-pro-staging-and-production)추가 지침[!DNL Xdebug]을 참조하세요.
+구성하고 나면 CLI 명령, 웹 요청 및 코드를 디버깅할 수 있습니다. 모든 클라우드 인프라 환경은 읽기 전용입니다. 코드를 로컬 개발 환경에 복제하여 디버깅을 수행합니다. Pro 스테이징 및 프로덕션 환경의 경우 [!DNL Xdebug]에 대한 [추가 지침](#debug-for-pro-staging-and-production)을 참조하세요.
 
 ## 요구 사항
 
@@ -36,7 +41,7 @@ ht-degree: 0%
 
 ### 분기 시작
 
-Adobe [!DNL Xdebug]을(를) 추가하려면 [개발 분기](../dev-tools/cloud-cli-overview.md#create-an-environment-branch)에서 작업하는 것이 좋습니다.
+[!DNL Xdebug]을(를) 추가하려면 [개발 분기](../dev-tools/cloud-cli-overview.md#create-an-environment-branch)에서 작업하는 것이 좋습니다.
 
 ### 환경에서 Xdebug 활성화
 
@@ -44,7 +49,7 @@ Adobe [!DNL Xdebug]을(를) 추가하려면 [개발 분기](../dev-tools/cloud-c
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
 
-프로젝트에 대해 [!DNL Xdebug]을(를) 사용하려면 `xdebug` 파일의 `runtime:extensions` 섹션에 `.magento.app.yaml`을(를) 추가하십시오.
+프로젝트에 대해 [!DNL Xdebug]을(를) 사용하려면 `.magento.app.yaml` 파일의 `runtime:extensions` 섹션에 `xdebug`을(를) 추가하십시오.
 
 **Xdebug를 사용하려면**:
 
@@ -84,7 +89,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437409?learn=on)
 
-[에서 제대로 작동하도록 &#x200B;](https://www.jetbrains.com/phpstorm/)PhpStorm[!DNL Xdebug] IDE를 구성해야 합니다.
+[!DNL Xdebug]에서 제대로 작동하도록 [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE를 구성해야 합니다.
 
 **Xdebug에서 작동하도록 PhpStorm을 구성하려면**:
 
@@ -97,9 +102,9 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
 1. 서버 구성을 추가하려면 **+**&#x200B;을(를) 클릭하십시오. 프로젝트 이름이 맨 위에 회색으로 표시됩니다.
 
-1. [선택 사항] 새 서버 구성에 대해 다음 설정을 구성합니다. [PHPStorm](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured) 설명서에서 _구성된 디버그 서버가 없음_&#x200B;을 참조하십시오.
+1. [선택 사항] 새 서버 구성에 대해 다음 설정을 구성합니다. _PHPStorm_ 설명서에서 [구성된 디버그 서버가 없음](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured)을 참조하십시오.
 
-   - **이름**—호스트 이름과 동일하게 입력합니다. 이 값은 디버깅에 CLI를 사용하려면 `PHP_IDE_CONFIG`Debug CLI 명령[의 &#x200B;](#debug-cli-commands) 변수 값과 일치해야 합니다.
+   - **이름**—호스트 이름과 동일하게 입력합니다. 이 값은 디버깅에 CLI를 사용하려면 [Debug CLI 명령](#debug-cli-commands)의 `PHP_IDE_CONFIG` 변수 값과 일치해야 합니다.
    - **호스트**—호스트 이름을 입력하십시오.
    - **포트**—`443`을(를) 입력하십시오.
    - **디버거**—`Xdebug`을(를) 선택합니다.
@@ -114,7 +119,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
       - 프로덕션: `/app/<project_code>/`
       - 준비 중: `/app/<project_code>_stg/`
 
-1. [!DNL Xdebug] 포트를 `9000,9003`(으)로 변경하거나 `9000`PHP **>** Debug **>** Xdebug **>** Debug Port **패널에서**(으)로 제한할 수 있습니다.
+1. [!DNL Xdebug] 포트를 `9000,9003`(으)로 변경하거나 **PHP** > **Debug** > **Xdebug** > **Debug Port** 패널에서 `9000`(으)로 제한할 수 있습니다.
 
 1. **적용**&#x200B;을 클릭합니다.
 
@@ -143,7 +148,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
 서버에서 로컬 시스템에 `XDEBUG` 연결을 매핑합니다. 모든 유형의 디버깅을 수행하려면 Adobe Commerce on cloud infrastructure 서버에서 로컬 시스템으로 포트 9000을 전달해야 합니다. 다음 섹션 중 하나를 참조하십시오.
 
-- [Mac 또는 UNIX의 포트 전달](#port-forwarding-on-mac-or-unix)
+- [Mac 또는 UNIX에서 포트 ®](#port-forwarding-on-mac-or-unix)
 - [Windows에서 포트 전달](#port-forwarding-on-windows)
 
 #### Mac 또는 UNIX에서 포트 ®
@@ -306,7 +311,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
 **환경 URL을 사용하여 디버깅을 시작하려면**:
 
-이는 사용된 구성에 대한 데모이자 원격 디버깅 세션을 시작하기 위한 GET 매개 변수에 대한 데모입니다.
+이는 사용된 구성에 대한 데모뿐만 아니라 원격 디버깅 세션을 시작하기 위한 GET 매개 변수에 대한 데모입니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
 
@@ -328,7 +333,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
    >[!NOTE]
    >
-   >`XDEBUG_SESSION_START` 요청에 의해 전달된 `POST`은(는) 지원되지 않습니다.
+   >`POST` 요청에 의해 전달된 `XDEBUG_SESSION_START`은(는) 지원되지 않습니다.
 
 ## CLI 명령 디버그
 

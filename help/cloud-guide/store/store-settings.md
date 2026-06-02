@@ -2,9 +2,15 @@
 title: 저장소 구성 관리
 description: 클라우드 인프라 환경의 모든 Adobe Commerce에서 스토어 구성 설정을 관리하고 동기화하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 01850a7b-2c03-45e8-8051-b24ae95c5f87
+TQID: https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: 1507
 ht-degree: 0%
 
 ---
@@ -15,14 +21,14 @@ ht-degree: 0%
 
 관리자 **스토어** > **설정** > **구성** 섹션의 구성을 참조하는 스토어 설정은 구성 유형에 따라 배포 구성 파일에 저장됩니다.
 
-- `app/etc/config.php` - 저장소, 웹 사이트, 모듈 또는 확장, 정적 파일 최적화 및 정적 콘텐츠 배포와 관련된 시스템 값에 대한 구성 설정입니다. _구성 가이드_&#x200B;에서 [config.php 참조](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=ko)을 참조하세요.
-- `app/etc/env.php`—소스 제어에 _NOT_&#x200B;해야 하는 시스템별 재정의 및 중요한 설정에 대한 값을 저장합니다. _구성 안내서_&#x200B;에서 [env.php 참조](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=ko)를 참조하십시오.
+- `app/etc/config.php` - 저장소, 웹 사이트, 모듈 또는 확장, 정적 파일 최적화 및 정적 콘텐츠 배포와 관련된 시스템 값에 대한 구성 설정입니다. _구성 가이드_&#x200B;에서 [config.php 참조](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html)을 참조하세요.
+- `app/etc/env.php`—소스 제어에 _NOT_&#x200B;해야 하는 시스템별 재정의 및 중요한 설정에 대한 값을 저장합니다. _구성 안내서_&#x200B;에서 [env.php 참조](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html)를 참조하십시오.
 
 >[!NOTE]
 >
 >클라우드 인프라의 Adobe Commerce은 프로덕션 및 유지 관리 모드만 지원하므로 관리에서 **고급** > **개발자** 섹션에 액세스할 수 없습니다. 구성 관리 작업을 완료하려면 [환경 관리자 권한](../project/user-access.md)이 있어야 합니다. [환경 변수](../environment/configure-env-yaml.md)를 사용하여 추가 설정을 구성할 수 있습니다.
 
-구성 관리는 파이프라인 배포를 사용하여 가동 중단을 최소화하면서 환경 전체에 일관된 저장소 설정을 배포하는 방법을 제공합니다. Adobe Commerce on cloud infrastructure 프로젝트에는 빌드 서버, 빌드 및 배포 스크립트, [파이프라인 배포 전략](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=ko)을 염두에 두고 설계된 배포 환경이 포함되어 있습니다.
+구성 관리는 파이프라인 배포를 사용하여 가동 중단을 최소화하면서 환경 전체에 일관된 저장소 설정을 배포하는 방법을 제공합니다. Adobe Commerce on cloud infrastructure 프로젝트에는 빌드 서버, 빌드 및 배포 스크립트, [파이프라인 배포 전략](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)을 염두에 두고 설계된 배포 환경이 포함되어 있습니다.
 
 ## 구성 재정의 스키마
 
@@ -36,14 +42,14 @@ ht-degree: 0%
 
 >[!TIP]
 >
->파이프라인 배포에 대한 재정의 구성표에 대한 자세한 내용은 _구성 안내서_&#x200B;의 [구성 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=ko)를 참조하십시오.
+>파이프라인 배포에 대한 재정의 구성표에 대한 자세한 내용은 _구성 안내서_&#x200B;의 [구성 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)를 참조하십시오.
 
 동일한 설정이 여러 위치에 구성된 경우 애플리케이션은 다음 구성 계층 구조를 사용하여 환경에 적용할 값을 결정합니다.
 
 | 우선순위 | 구성<br>메서드 | 설명 |
 | -------- | ------------------------ | ----------- |
 | 1 | [!DNL Cloud Console]<br>환경 변수 | 환경 구성의 _변수_ 탭에서 추가된 값은 [!DNL Cloud Console]입니다. 중요한 구성 또는 환경별 구성에 대한 값을 여기에 지정하십시오. 여기에서 지정된 설정은 책임자로부터 편집할 수 없습니다. [환경 구성 변수](../project/overview.md#configure-environment)를 참조하십시오. |
-| 2 | `.magento.app.yaml` | `.magento.app.yaml` 파일의 `variables` 섹션에 추가된 값입니다. 모든 환경에서 일관된 구성을 위해 여기에 값을 지정하십시오. **`.magento.app.yaml` 파일에 중요한 값을 지정하지 마십시오.** [응용 프로그램 설정](../application/configure-app-yaml.md)을 참조하십시오. |
+| 2 | `.magento.app.yaml` | `.magento.app.yaml` 파일의 `variables` 섹션에 추가된 값입니다. 모든 환경에서 일관된 구성을 위해 여기에 값을 지정하십시오. **`.magento.app.yaml` 파일에 중요한 값을 지정하지 마십시오.** [응용 프로그램 설정](../application/configure-app-yaml.md)을 참조하세요. |
 | 3 | `app/etc/env.php` | 여기에 저장된 환경별 구성 값은 `app:config:dump` 명령을 사용하여 추가됩니다. 환경 변수 또는 CLI를 사용하여 시스템별로 중요 값을 설정합니다. [중요 데이터](#sensitive-data)를 참조하세요. `env.php` 파일이 소스 제어에 포함되어 **not**(이)입니다. |
 | 4 | `app/etc/config.php` | 여기에 저장된 값은 `app:config:dump` 명령을 사용하여 추가됩니다. 공유 구성 값이 `config.php`에 추가됩니다. 관리자로부터 또는 CLI를 사용하여 공유 구성을 설정합니다. `config.php` 파일이 소스 제어에 포함되어 있습니다. |
 | 5 | 데이터베이스 | 여기에 저장된 값은 관리자에서 구성을 설정하여 추가됩니다. 위의 방법 중 하나를 사용하여 설정된 구성은 잠겨(회색으로 표시됨) 관리자에서 편집할 수 없습니다. |
@@ -69,7 +75,7 @@ ht-degree: 0%
 
 `bin/magento app:config:dump` 명령을 사용할 때 중요한 구성은 `app/etc/env.php` 파일로 내보냅니다. CLI 명령 `bin/magento config:sensitive:set`을(를) 사용하여 중요한 값을 설정할 수 있습니다. 구성 설정을 중요하거나 시스템별로 지정하는 방법에 대해 알아보려면 _Commerce PHP 확장_ 안내서의 [중요 및 환경별 설정](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/)을 참조하십시오.
 
-_구성 가이드_&#x200B;에서 [중요 또는 시스템별 설정](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=ko) 목록을 확인하세요.
+_구성 가이드_&#x200B;에서 [중요 또는 시스템별 설정](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html) 목록을 확인하세요.
 
 ### SCD 성능
 

@@ -1,9 +1,14 @@
 ---
 title: 시작 단계
 description: 사이트 론치를 완료하는 방법을 알아봅니다.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e7a3cd6b-32de-4fd0-9fbd-da8299e77114
+TQID: https://experienceleague.adobe.com/Nl8YFJUZUkxtsm0eqBgJklsTysKuUE31PkEDsJmvBMU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: 347
 ht-degree: 0%
 
 ---
@@ -12,9 +17,9 @@ ht-degree: 0%
 
 시작 검사 목록을 테스트하고 완료한 후 실행할 마지막 단계를 시작할 수 있습니다. 이러한 단계에는 티켓 입력, 사이트 액세스 전송 및 라이브 시 스토어 테스트가 포함됩니다.
 
-Adobe 지원 직원은 프로세스, 상태 확인, 질문 또는 문제 발생 시 지원 등을 통해 귀하와 협력합니다. 발생한 사항과 해결 방법을 가장 잘 포착하기 위해 티켓으로 모든 문제를 추적해야 합니다. 시작된 스토어에 업데이트를 배포하는 연속 반복을 시작할 때 유사한 문제가 다시 발생할 수 있습니다. 이러한 티켓을 통해 문제를 정확히 파악하고 배포 작업을 조정할 수 있습니다.
+Adobe 지원 팀은 프로세스 과정을 통해 귀하와 협력하고 상태를 확인하며 질문이 있거나 문제가 발생할 경우 지원합니다. 발생한 사항과 해결 방법을 가장 잘 포착하기 위해 티켓으로 모든 문제를 추적해야 합니다. 시작된 스토어에 업데이트를 배포하는 연속 반복을 시작할 때 유사한 문제가 다시 발생할 수 있습니다. 이러한 티켓을 통해 문제를 정확히 파악하고 배포 작업을 조정할 수 있습니다.
 
-## 사이트를 시작하려면 Adobe에게 문의하십시오.
+## Adobe에 문의하여 사이트 시작
 
 Adobe Commerce 지원에 문의하고 스토어를 전환하고 시작하는 데 필요한 날짜 및 시간으로 사이트 시작(라이브) 티켓을 업데이트합니다.
 

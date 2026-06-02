@@ -2,9 +2,15 @@
 title: 개발 준비
 description: 자격 증명을 수집하고 Commerce on cloud infrastructure 프로젝트와 함께 사용할 개발 작업 영역을 설정하는 데 사용할 수 있는 도구에 대해 알아봅니다.
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: adb7f74f-8007-4f23-bc07-46b0f7d0ebd9
+TQID: https://experienceleague.adobe.com/al-kKS6wmNpCQt5tDRMIO2L10UEShSC2kOf66eThcfw
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: cc250cf1-34eb-4863-80d0-d170d45ea067id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: 498
 ht-degree: 0%
 
 ---
@@ -27,7 +33,7 @@ Commerce을 처음 사용하든 기존 Commerce 소유자가 클라우드 인프
 
 - **Adobe Commerce 암호화 키**
 
-  기존 시스템만 가져올 경우 데이터베이스에 대한 액세스 및 데이터를 보호하는 데 사용되는 암호화 키를 캡처합니다. 이 키에 대한 자세한 내용은 [암호화 키 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=ko)을 참조하세요.
+  기존 시스템만 가져올 경우 데이터베이스에 대한 액세스 및 데이터를 보호하는 데 사용되는 암호화 키를 캡처합니다. 이 키에 대한 자세한 내용은 [암호화 키 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)을 참조하세요.
 
 ## 개발자 도구
 

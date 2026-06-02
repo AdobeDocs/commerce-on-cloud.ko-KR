@@ -3,16 +3,21 @@ title: 로그 핸들러
 description: 클라우드 인프라에서 Adobe Commerce에 대한 로그 처리기를 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Logs, Configuration
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 0d7fb653-468b-432c-9830-582b0fed8512
+TQID: https://experienceleague.adobe.com/4dowk2oMMCROVmEc8muHE7CzaZ-T3SaQi4sANVnMeWQ
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: 235
 ht-degree: 0%
 
 ---
 
 # 로그 핸들러
 
-원격 로깅 서버로 메시지를 보내도록 로그 처리기를 구성할 수 있습니다. 로그 처리기는 Slack 및 전자 메일에 로그를 푸시하는 방식과 유사하게 빌드 및 배포 로그를 다른 시스템에 푸시합니다. 하드웨어와 관련된 메시지를 로깅하는 데 적합한 _syslog_ 핸들러나 소프트웨어 응용 프로그램에서 메시지를 로깅하는 데 적합한 GELF(Graylog Extended Log Format) 핸들러를 사용하도록 설정할 수 있습니다.
+원격 로깅 서버로 메시지를 보내도록 로그 처리기를 구성할 수 있습니다. 로그 처리기는 Slack 및 이메일에 로그를 푸시하는 방식과 유사하게 빌드 및 배포 로그를 다른 시스템에 푸시합니다. 하드웨어와 관련된 메시지를 로깅하는 데 적합한 _syslog_ 핸들러나 소프트웨어 응용 프로그램에서 메시지를 로깅하는 데 적합한 GELF(Graylog Extended Log Format) 핸들러를 사용하도록 설정할 수 있습니다.
 
 다음 예제에서는 `.magento.env.yaml` 파일에 구성을 추가하여 이 두 처리기를 모두 구성합니다. 최소 로깅 수준(`min_level`) 값은 [로그 수준](#log-levels)을 참조하십시오.
 

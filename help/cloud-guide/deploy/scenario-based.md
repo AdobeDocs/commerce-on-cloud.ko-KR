@@ -2,9 +2,15 @@
 title: 시나리오 기반 배포
 description: 사용자 지정 구성 파일을 사용하여 클라우드 인프라 배포에서 Adobe Commerce을 사용자 지정하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Deploy, Build
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 44c2a73e-4ea2-49a6-86c1-9fa8cfc8b66e
+TQID: https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: 874
 ht-degree: 0%
 
 ---
@@ -40,7 +46,7 @@ hooks:
 
 >[!NOTE]
 >
->`ece-tools` 2002.1.x 릴리스에는 새로운 [후크 구성](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=ko) 형식이 있습니다. `ece-tools` 2002.0.x 릴리스의 레거시 형식은 계속 지원됩니다. 그러나 시나리오 기반 배포 기능을 사용하려면 새 형식으로 업데이트해야 합니다.
+>`ece-tools` 2002.1.x 릴리스에는 새로운 [후크 구성](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html) 형식이 있습니다. `ece-tools` 2002.0.x 릴리스의 레거시 형식은 계속 지원됩니다. 그러나 시나리오 기반 배포 기능을 사용하려면 새 형식으로 업데이트해야 합니다.
 
 ## 시나리오 단계 검토
 

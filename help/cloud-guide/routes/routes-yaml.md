@@ -2,9 +2,14 @@
 title: 경로 구성
 description: 클라우드 인프라 환경에서 Adobe Commerce에 대한 수신 HTTPS 요청의 경로를 정의하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0d6eefa-1122-4753-8a7c-1fa0c77590f0
+TQID: https://experienceleague.adobe.com/4EUSHNE6YAfXk4e7ooGRjZiICgHueLKrEA-tDskIPl0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: 910
 ht-degree: 0%
 
 ---
@@ -167,7 +172,7 @@ https://www.example.com/blog
       upstream: "mymagento:http"
   ```
 
-- 스테이징 및 프로덕션 환경의 경우 관리 UI에서 [TLS를 Fastly로 강제 적용](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=ko) 옵션을 활성화합니다. 이 옵션을 사용하면 Fastly가 HTTPS로의 리디렉션을 처리하므로 `routes.yaml` 구성을 업데이트할 필요가 없습니다.
+- 스테이징 및 프로덕션 환경의 경우 관리 UI에서 [TLS를 Fastly로 강제 적용](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html) 옵션을 활성화합니다. 이 옵션을 사용하면 Fastly가 HTTPS로의 리디렉션을 처리하므로 `routes.yaml` 구성을 업데이트할 필요가 없습니다.
 
 ## 경로 옵션
 

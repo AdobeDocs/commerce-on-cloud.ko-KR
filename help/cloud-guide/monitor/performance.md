@@ -4,9 +4,12 @@ description: 클라우드 인프라의 Adobe Commerce에 대한 성능 모니터
 feature: Cloud, Observability
 topic: Performance
 exl-id: 51e371cf-8374-4dae-8e5a-f31477dc59c1
-source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
+TQID: https://experienceleague.adobe.com/m90Dn1QULOga6Q-Rlq6bvfYkN2FXd3k1GRkpAvayuig
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: 154
 ht-degree: 0%
 
 ---
@@ -16,7 +19,7 @@ ht-degree: 0%
 다음 서비스를 사용하여 클라우드 환경의 성능을 모니터링할 수 있습니다.
 
 - [상태 알림](../integrations/health-notifications.md)—Starter 및 Pro 통합 환경에 디스크 공간 경고를 제공하는 통합입니다.
-- [Adobe Commerce 관찰 가이드](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) - 여러 소스의 로그 데이터를 결합하는 모든 Commerce 사이트에 대한 포괄적인 모니터링을 통해 Adobe Commerce 사이트 성능을 보다 효율적으로 관리하고 문제를 진단할 수 있습니다.
+- [Adobe Commerce 관찰 가이드](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) - 여러 소스의 로그 데이터를 결합하는 모든 Commerce 사이트에 대한 포괄적인 모니터링을 통해 Adobe Commerce 사이트 성능을 보다 효율적으로 관리하고 문제를 진단할 수 있습니다.
 - [운영 원격 분석 서비스](operational-telemetry.md)—상점 앞에서의 클라이언트측 트래픽에 대한 성능 모니터링.
 
 ## New Relic 서비스

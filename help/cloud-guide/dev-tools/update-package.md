@@ -2,9 +2,13 @@
 title: ECE-Tools 패키지 업데이트
 description: ECE-Tools 패키지를 업그레이드하여 Adobe Commerce on cloud infrastructure에 적용된 최신 수정 사항 및 기능을 활용하는 방법에 대해 알아봅니다.
 feature: Cloud, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: acb4fd0d-6ffb-4094-8dd4-83bb7735d64f
+TQID: https://experienceleague.adobe.com/WqcVa0BJN0ot6yg2unhzeEB8nkjKXM7o26tOwmrg5mU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: 172
 ht-degree: 0%
 
 ---

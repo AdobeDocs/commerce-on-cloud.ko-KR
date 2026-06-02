@@ -3,9 +3,13 @@ title: 프로젝트 업그레이드 모범 사례
 description: 프로젝트 파일 업그레이드에 대한 모범 사례 목록을 참조하십시오.
 feature: Cloud, Best Practices, Upgrade
 exl-id: 64f92739-9170-4cbf-90ef-aab6593a37ca
-source-git-commit: 31494a956babaf15320d0ffa86fcba9e845d53a1
+TQID: https://experienceleague.adobe.com/Nnr9fNMT210WTnaLTWyRM-YCWRXrZuOv0m-EZYpzKVw
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: 696
 ht-degree: 0%
 
 ---
@@ -50,10 +54,10 @@ ht-degree: 0%
 
    - SSH를 사용하여 원격 서버에 로그인하고 다음을 확인합니다.
 
-      - 인덱서 상태를 확인하고 필요에 따라 다시 인덱싱합니다. _구성 가이드_&#x200B;에서 [인덱서 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=ko)를 참조하십시오.
+      - 인덱서 상태를 확인하고 필요에 따라 다시 인덱싱합니다. _구성 가이드_&#x200B;에서 [인덱서 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)를 참조하십시오.
 
       - Adobe Commerce 데이터베이스에서 `cron` 로그 및 `cron_schedule` 테이블을 확인하여 cron 상태를 확인하고 필요에 따라 cron 작업을 다시 실행하십시오.
-_구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=ko#logging)을 참조하십시오.
+_구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)을 참조하십시오.
 
    - 스테이징 및 프로덕션 환경에서 업그레이드 후 사용자 승인 테스트 UAT를 완료하고 서드파티 및 사용자 정의 확장 업그레이드와 관련된 문제를 수정합니다.
 
@@ -67,7 +71,7 @@ _구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/doc
 
 설정 및 사용에 대한 자세한 내용은 다음을 참조하십시오.
 
-- [업그레이드 호환성 도구 개요](https://experienceleague.adobe.com/ko/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
-- [업그레이드 호환성 도구 실행](https://experienceleague.adobe.com/ko/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+- [업그레이드 호환성 도구 개요](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [업그레이드 호환성 도구 실행](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
-사이트 전체 분석 도구를 사용하는 Cloud 판매자의 경우 대시보드에서 UCT를 트리거하고 위젯에서 직접 HTML 보고서를 다운로드할 수도 있습니다. [사이트 전체 분석 도구 통합](https://experienceleague.adobe.com/ko/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)을 참조하십시오.
+사이트 전체 분석 도구를 사용하는 Cloud 판매자의 경우 대시보드에서 UCT를 트리거하고 위젯에서 직접 HTML 보고서를 다운로드할 수도 있습니다. [사이트 전체 분석 도구 통합](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)을 참조하십시오.

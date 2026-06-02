@@ -1,9 +1,15 @@
 ---
 title: 프로젝트 구조
 description: 클라우드 인프라의 Adobe Commerce에 대한 파일 구조 및 프로젝트 템플릿에 대해 알아봅니다.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 364e40e4-a5b3-4d23-b86d-74fc0696ac19
+TQID: https://experienceleague.adobe.com/B6fTvmHLFa5THSgLKsjl1smPC8ekPdXB9A-vyqFVwG8
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: 473
 ht-degree: 0%
 
 ---
@@ -80,7 +86,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 기본 템플릿용으로 설계된 `.gitignore` 파일을 추가합니다. 예를 들어 버전 2.2.6 템플릿에 `.gitignore` 파일이 필요한 경우 2.2.6[&#128279;](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) 파일에 대한 .gignore를 참조로 사용하십시오.
+1. 기본 템플릿용으로 설계된 `.gitignore` 파일을 추가합니다. 예를 들어 버전 2.2.6 템플릿에 `.gitignore` 파일이 필요한 경우 2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) 파일에 대한 [.gignore를 참조로 사용하십시오.
 
 1. git 캐시를 지웁니다.
 

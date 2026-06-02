@@ -3,9 +3,13 @@ title: 백업 관리
 description: Adobe Commerce on cloud infrastructure 프로젝트에 대한 백업을 수동으로 만들고 복원하는 방법에 대해 알아봅니다.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+TQID: https://experienceleague.adobe.com/UHzlr5FQsXz6FEDpwWzYE5JxThIHAMXI-MKM-7DF2P0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: 865
 ht-degree: 0%
 
 ---
@@ -37,7 +41,7 @@ ht-degree: 0%
 
 **Pro 환경의 데이터베이스 백업을 만들려면**:
 
-스테이징 및 프로덕션을 포함한 모든 Pro 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
+스테이징 및 프로덕션을 포함한 모든 Pro 환경의 데이터베이스 덤프를 만들려면 [데이터베이스 덤프 만들기](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) 기술 자료 문서를 참조하십시오.
 
 **[!DNL Cloud Console]**&#x200B;을(를) 사용하여 Starter 환경의 백업을 만들려면 다음을 수행하십시오.
 
@@ -150,7 +154,7 @@ ht-degree: 0%
 
 ## 재해 복구 스냅샷 복원
 
-Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Pro 스테이징 및 프로덕션 환경에서 재해 복구 스냅숏을 복원하려면 [서버에서 직접 데이터베이스 덤프를 가져옵니다](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## 롤백 코드
 
