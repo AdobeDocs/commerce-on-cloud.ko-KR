@@ -2,9 +2,17 @@
 title: '[!DNL ECE-Tools] 패키지'
 description: ' [!DNL ECE-Tools] 패키지 및 Adobe Commerce 관리 및 배포 방법에 대해 알아봅니다.'
 exl-id: 15d762ef-bca7-480b-b719-caf131dc9180
-source-git-commit: db34528be490f92cc61c609ca143c01ef3284157
+TQID: https://experienceleague.adobe.com/YMuy2Ta0Ylkewxb2EhQgpZG8WW8bG4kFzrCXm0A7rX0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: 450
 ht-degree: 0%
 
 ---
@@ -27,7 +35,7 @@ php ./vendor/bin/ece-tools list
 
 `ece-tools` 패키지에는 클라우드 인프라 응용 프로그램에서 Adobe Commerce을 시작하는 빌드, 배포 및 배포 후 단계에 대한 작업을 수행하는 명령이 포함되어 있습니다. 예를들어, `php ./vendor/bin/ece-tools build` 명령은 응용 프로그램 빌드 프로세스를 시작합니다.
 
-기본적으로 이 `ece-tools` 명령은 [&#x200B; 구성 파일의 &#x200B;](../application/hooks-property.md)hooks 속성`.magento.app.yaml`에 있습니다.
+기본적으로 이 `ece-tools` 명령은 `.magento.app.yaml` 구성 파일의 [hooks 속성](../application/hooks-property.md)에 있습니다.
 
 ## 도커 구성 생성기
 
@@ -47,7 +55,7 @@ php ./vendor/bin/ece-tools env:config:show
 php ./vendor/bin/ece-tools env:config:show <option>
 ```
 
-- `services` - `MAGENTO_CLOUD_RELATIONSHIPS` 파일에 정의된 `services.yaml` 환경 변수의 관계 데이터를 표시합니다.
+- `services` - `services.yaml` 파일에 정의된 `MAGENTO_CLOUD_RELATIONSHIPS` 환경 변수의 관계 데이터를 표시합니다.
 - `routes` - `MAGENTO_CLOUD_ROUTES` 환경 변수를 사용하여 프로젝트에 대해 구성된 경로를 표시합니다.
 - `variables` - `MAGENTO_CLOUD_VARIABLES` 환경 변수를 사용하여 프로젝트에 대해 구성된 변수를 표시합니다.
 
@@ -73,7 +81,7 @@ Magento Cloud Services:
 
 ## 환경 구성 확인
 
-프로젝트의 구성을 평가하는 데 도움이 되는 일련의 확인 명령을 사용할 수 있습니다. 각 마법사 명령에 대한 자세한 설명은 [배포 최적화](../deploy/smart-wizards.md) 섹션의 _스마트 마법사_&#x200B;를 참조하십시오. 빌드 단계에서 `wizard:ideal-state` 명령이 자동으로 실행됩니다. 프로젝트의 이상적인 상태를 확인하려면:
+프로젝트의 구성을 평가하는 데 도움이 되는 일련의 확인 명령을 사용할 수 있습니다. 각 마법사 명령에 대한 자세한 설명은 _배포 최적화_ 섹션의 [스마트 마법사](../deploy/smart-wizards.md)를 참조하십시오. 빌드 단계에서 `wizard:ideal-state` 명령이 자동으로 실행됩니다. 프로젝트의 이상적인 상태를 확인하려면:
 
 ```bash
 php ./vendor/bin/ece-tools wizard:ideal-state

@@ -2,17 +2,29 @@
 title: 개발자 도구 개요
 description: 클라우드 인프라에서 Adobe Commerce과 함께 사용할 수 있는 개발자 도구 목록을 봅니다.
 feature: Cloud, Docker, Integration, Upgrade
-last-substantial-update: 2023-05-19T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2023-05-19T00:00:00.000Z
+exl-id: 2f2fcdce-d0d9-46c1-a6a6-6d86da529aa3
+TQID: https://experienceleague.adobe.com/7gA5JA0-AGoYicEdnpJkDGT5YsjTPKfRIrxlxn5ePto
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: cc250cf1-34eb-4863-80d0-d170d45ea067
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+subfeature_v2:
+  - id: fa7753f5-a3dd-4259-a6b9-23f8da7b5f40
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: 125
 ht-degree: 0%
 
 ---
 
 # 개발자 도구 개요
 
-Adobe은 Commerce에서 Adobe Commerce 설치 및 업그레이드를 배포하고 관리하도록 설계된 패키지를 포함하는 Cloud Tools Suite for Cloud Platform을 제공합니다.
+Adobe은 Commerce에서 Adobe Commerce 설치 및 업그레이드를 배포하고 관리하도록 설계된 패키지가 포함된 Cloud Tools Suite for Cloud Platform을 제공합니다.
 
 - [Cloud CLI](cloud-cli-overview.md) - `magento-cloud` CLI를 사용하여 클라우드 프로젝트 및 환경을 관리하고 루틴을 수행하며 자동화 작업을 실행합니다.
 - [Commerce용 Cloud Docker](cloud-docker.md)—로컬 개발, 테스트 및 자동화 작업을 위해 Docker 환경에 Adobe Commerce을 배포합니다.

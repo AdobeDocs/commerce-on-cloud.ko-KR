@@ -3,9 +3,24 @@ title: 스테이징 및 프로덕션에 배포
 description: 추가 테스트를 위해 클라우드 인프라 코드에서 Adobe Commerce을 스테이징 및 프로덕션 환경에 배포하는 방법에 대해 알아봅니다.
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
-source-git-commit: fe634412c6de8325faa36c07e9769cde0eb76c48
+TQID: https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: b01a71b7-d17a-42b2-a9ac-af4b8d9d2ef5
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: 1374
 ht-degree: 0%
 
 ---
@@ -24,7 +39,7 @@ ht-degree: 0%
 
 ## 스타터 배포 플로우
 
-Adobe에서는 스타터 계획 개발 및 배포를 가장 잘 지원하기 위해 `staging` 분기에서 `master` 분기를 만들 것을 권장합니다. 그러면 네 개의 활성 환경 중 두 개를 준비했습니다. 프로덕션용 `master` 및 스테이징용 `staging`.
+Adobe에서는 스타터 계획 개발 및 배포를 가장 잘 지원하기 위해 `master` 분기에서 `staging` 분기를 만들 것을 권장합니다. 그러면 네 개의 활성 환경 중 두 개를 준비했습니다. 프로덕션용 `master` 및 스테이징용 `staging`.
 
 프로세스에 대한 자세한 내용은 [Starter Develop and Deploy Workflow](../architecture/starter-develop-deploy-workflow.md)를 참조하십시오.
 
@@ -189,7 +204,7 @@ Are you sure you want to continue? [Y/n] Y
   total size is 154.57K  speedup is 18.23
 ```
 
-더 많은 옵션을 보려면 `--help` 및 `mount:upload` 명령에 `mount:download` 옵션을 사용하십시오. 예를 들어 마이그레이션하는 동안 불필요한 파일을 제거하는 `--delete` 옵션이 있습니다.
+더 많은 옵션을 보려면 `mount:upload` 및 `mount:download` 명령에 `--help` 옵션을 사용하십시오. 예를 들어 마이그레이션하는 동안 불필요한 파일을 제거하는 `--delete` 옵션이 있습니다.
 
 ### rsync를 사용하여 파일 마이그레이션
 
@@ -218,7 +233,7 @@ rsync -azvP <source> <destination>
 
    >[!TIP]
    >
-   >**에서** SSH 액세스[!DNL Cloud Console] 링크를 찾으려면 환경을 선택하고 **사이트 액세스**&#x200B;를 클릭합니다.
+   >[!DNL Cloud Console]에서 **SSH 액세스** 링크를 찾으려면 환경을 선택하고 **사이트 액세스**&#x200B;를 클릭합니다.
 
    ```bash
    ssh -A <environment_ssh_link@ssh.region.magento.cloud>

@@ -3,9 +3,19 @@ title: Elasticsearch 서비스 설정
 description: 클라우드 인프라에서 Adobe Commerce용 Elasticsearch 서비스를 활성화하는 방법을 알아봅니다.
 feature: Cloud, Search, Services
 exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
-source-git-commit: ef22e7b305c20148f4ee4b2c0e64e2114bf229b5
+TQID: https://experienceleague.adobe.com/RYv3SjF62YHhPtM9vFrlPD0MVwfPS7EIhHxQXaMEeuI
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: 739
 ht-degree: 0%
 
 ---
@@ -31,7 +41,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
 **Elasticsearch을 사용하려면**:
 
-1. 시작 프로젝트의 경우 Elasticsearch 버전과 할당된 디스크 공간(MB)이 있는 `elasticsearch` 파일에 `.magento/services.yaml` 서비스를 추가하십시오.
+1. 시작 프로젝트의 경우 Elasticsearch 버전과 할당된 디스크 공간(MB)이 있는 `.magento/services.yaml` 파일에 `elasticsearch` 서비스를 추가하십시오.
 
    ```yaml
    elasticsearch:
@@ -41,7 +51,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
    Pro 프로젝트의 경우 Adobe Commerce 지원 티켓을 제출하여 스테이징 및 프로덕션 환경에서 Elasticsearch 버전을 변경해야 합니다.
 
-1. `relationships` 파일에서 `.magento.app.yaml` 속성을 설정합니다.
+1. `.magento.app.yaml` 파일에서 `relationships` 속성을 설정합니다.
 
    ```yaml
    relationships:
@@ -208,7 +218,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
 ### Elasticsearch에 대한 플러그인 추가
 
-필요한 경우 `configuration:plugins` 파일의 Elasticsearch 서비스에 `.magento/services.yaml` 섹션을 추가하여 Elasticsearch에 대한 플러그인을 추가할 수 있습니다. 예를 들어 다음 코드는 ICU 분석 및 음성 분석 플러그인을 활성화합니다.
+필요한 경우 `.magento/services.yaml` 파일의 Elasticsearch 서비스에 `configuration:plugins` 섹션을 추가하여 Elasticsearch에 대한 플러그인을 추가할 수 있습니다. 예를 들어 다음 코드는 ICU 분석 및 음성 분석 플러그인을 활성화합니다.
 
 ```yaml
 elasticsearch:
@@ -225,7 +235,7 @@ Elastic Suite를 설정할 때 `ELASTICSUITE_CONFIGURATION` 배포 변수에 구
 
 ### Elasticsearch에 대한 플러그인 제거
 
-`elasticsearch:`의 `.magento/services.yaml`에서 플러그 인 항목을 제거해도 예상대로 제거되거나 비활성화되지 않습니다. Elasticsearch 데이터를 다시 색인화해야 합니다. 이 동작은 이러한 플러그인에 의존하는 데이터의 가능한 손실이나 손상을 방지하기 위한 것입니다.
+`.magento/services.yaml`의 `elasticsearch:`에서 플러그 인 항목을 제거해도 예상대로 제거되거나 비활성화되지 않습니다. Elasticsearch 데이터를 다시 색인화해야 합니다. 이 동작은 이러한 플러그인에 의존하는 데이터의 가능한 손실이나 손상을 방지하기 위한 것입니다.
 
 **Elasticsearch 플러그인을 제거하려면**:
 

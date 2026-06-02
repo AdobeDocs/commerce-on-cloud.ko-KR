@@ -3,9 +3,19 @@ title: Fastly 캐시를 무시하는 사용자 지정 VCL
 description: Fastly 캐시를 무시하는 사용자 지정 VCL 코드 조각을 만들어 원본 서버로의 요청 트래픽 문제를 해결합니다.
 feature: Cloud, Configuration, Cache
 exl-id: 4e19d6d4-b5a1-4623-b0be-804ddc81ff3d
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/67LdlbG62T-cBEgNTwQ5p5MvvYQwNuHUYVQhrVBSn1A
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: 303
 ht-degree: 0%
 
 ---
@@ -58,13 +68,13 @@ ht-degree: 0%
      if (req.url ~ "/media/feeds/GoogleShoppingHiVisNew.xml") {  return (pass);}
      ```
 
-     정확한 URL을 일치시키려면 `==` 연산자 대신 `~` 연산자를 사용하십시오. 자세한 내용은 [Fastly VCL 참조]를 참조하십시오.
+     정확한 URL을 일치시키려면 `~` 연산자 대신 `==` 연산자를 사용하십시오. 자세한 내용은 [Fastly VCL 참조]를 참조하십시오.
 
 1. **만들기**&#x200B;를 클릭합니다.
 
    ![VCL 코드 조각을 빠르게 우회](/help/assets/cdn/fastly-create-bypass-snippet.png)
 
-1. 페이지가 다시 로드되면 **Fastly 구성** 섹션에서 *Fastly에 VCL 업로드*&#x200B;를 클릭합니다.
+1. 페이지가 다시 로드되면 *Fastly 구성* 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 클릭합니다.
 
 1. 업로드가 완료되면 페이지 상단의 알림에 따라 캐시를 새로 고칩니다.
 

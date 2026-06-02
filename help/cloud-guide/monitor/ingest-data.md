@@ -2,9 +2,19 @@
 title: 데이터 수집
 description: New Relic에서 Commerce 데이터 수집을 보고 관리하는 방법을 알아봅니다.
 feature: Cloud, Observability
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: b457b4de-deeb-4e92-b95a-c2b89d6f7a05
+TQID: https://experienceleague.adobe.com/60hhI0IvazUSrw6cCRoXfbGjA4fkLLPXb8Q4Q08AqeE
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: 209
 ht-degree: 0%
 
 ---
@@ -33,4 +43,4 @@ Adobe Commerce의 데이터 소스는 다음과 같습니다.
 - **인프라**—CPU, 스토리지, 네트워킹과 같은 프로세스 및 호스트 지표
 - **로깅**—CDN, APM 및 응용 프로그램 서버에 대한 로그
 
-로그 데이터는 수집의 많은 부분에 기여합니다. [로그 데이터를 보고 분석](log-management.md#view-and-analyze-log-data)하는 방법을 확인하고 Adobe 담당자와 협력하여 데이터 수집 및 유지 요구 사항에 대한 전략을 수립합니다. _New Relic 설명서_&#x200B;에서 [데이터 수집 관리](https://docs.newrelic.com/docs/data-apis/manage-data/manage-data-coming-new-relic/)에 대해 자세히 알아보세요.
+로그 데이터는 수집의 많은 부분에 기여합니다. [로그 데이터를 보고 분석](log-management.md#view-and-analyze-log-data)하는 방법과 Adobe 담당자와 협력하여 데이터 수집 및 유지 요구 사항에 대한 전략을 구성하는 방법을 알아보십시오. _New Relic 설명서_&#x200B;에서 [데이터 수집 관리](https://docs.newrelic.com/docs/data-apis/manage-data/manage-data-coming-new-relic/)에 대해 자세히 알아보세요.

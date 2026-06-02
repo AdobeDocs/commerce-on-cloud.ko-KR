@@ -3,9 +3,19 @@ title: 환경 구성
 description: 환경 변수를 사용하여 Pro 스테이징 및 프로덕션을 포함하여 클라우드 인프라 환경의 모든 Commerce에 빌드 및 배포 작업을 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f39c73fc-351a-41ed-9e74-2c3f14871246
+TQID: https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: 706
 ht-degree: 0%
 
 ---
@@ -28,7 +38,7 @@ ht-degree: 0%
    - `deploy` - 배포 단계의 작업만 제어합니다. 이 섹션에서 설정을 지정하지 않으면 배포 단계에서 전역 섹션의 설정을 사용합니다.
    - `post-deploy` - 응용 프로그램을 배포하는 _후_ 및 컨테이너가 연결을 수락하는 _후_ 작업을 제어합니다.
 - `log`—로그 섹션을 사용하여 알림 유형 및 세부 정보 수준을 포함하여 [알림](set-up-notifications.md)을(를) 구성합니다.
-   - `slack`—Slack 봇에 보낼 메시지를 구성합니다.
+   - `slack` - Slack 봇에 보낼 메시지를 구성합니다.
    - `email` - 하나 이상의 전자 메일 받는 사람에게 보낼 전자 메일을 구성합니다.
    - [로그 처리기](log-handlers.md)—원격 로깅 서버로 전송되는 하드웨어 및 소프트웨어 응용 프로그램 메시지를 구성합니다.
 

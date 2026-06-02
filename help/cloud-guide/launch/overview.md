@@ -2,9 +2,24 @@
 title: 사이트 시작
 description: 사이트 시작 준비를 시작하는 방법에 대해 알아봅니다.
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
-source-git-commit: 38ac38d4edd0f317155d0d4537021a29a21d5761
+TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: 966
 ht-degree: 0%
 
 ---
@@ -57,7 +72,7 @@ Adobe Commerce on cloud infrastructure 구독의 일부로 Adobe은 Let&#39;s En
 >3.218.25.102
 >```
 >
->허용 목록에 추가하다 네트워크 방화벽 규칙에 이러한 IP 주소를 추가하여 도구를 통해 사이트를 스캔할 수 있습니다. 이 도구는 포트 80 및 443에만 요청을 게시합니다.
+>네트워크 방화벽 규칙에 이러한 IP 주소를 추가하여 도구를 통해 사이트를 스캔할 수 있습니다. 이 도구는 포트 80 및 443에만 요청을 게시합니다.
 
 Security Scan Tool을 사용하면 스토어 웹 사이트를 정기적으로 모니터링하고 알려진 보안 위험, 맬웨어 및 오래된 소프트웨어에 대한 업데이트를 받을 수 있습니다. 이 도구는 클라우드 인프라의 모든 Adobe Commerce 구현 및 버전에서 사용할 수 있는 무료 서비스입니다. [Commerce Marketplace 계정](https://account.magento.com/customer/account/login)을 통해 도구에 액세스합니다.
 

@@ -3,9 +3,20 @@ title: 자동 크기 조정
 description: 클라우드 인프라의 Adobe Commerce이 리소스 요구 사항을 충족하도록 확장하는 방법을 알아봅니다.
 feature: Cloud, Auto Scaling
 topic: Architecture
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 11bfde40-79d1-4d51-9233-150c4cfb80fd
+TQID: https://experienceleague.adobe.com/uL--0lHHJ-4SN3BkFU8reAefWhpMQOLBRVG7fX3jTM8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: 605
 ht-degree: 0%
 
 ---
@@ -65,11 +76,11 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 >[!IMPORTANT]
 >
->자동 크기 조정 기능은 예상치 못한 이벤트를 캡처합니다. Adobe 자동 크기 조절을 활성화한 경우에도 예정된 이벤트가 예상되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하는 것이 좋습니다.
+>자동 크기 조정 기능은 예상치 못한 이벤트를 캡처합니다. 자동 크기 조절을 활성화한 경우에도 예정된 이벤트가 예상되면 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 계속하는 것이 좋습니다.
 
 ### 로드 테스트
 
-Adobe을 사용하면 먼저 클라우드 프로젝트 _스테이징_ 클러스터에서 자동 크기 조절을 사용할 수 있습니다. Adobe에서 사용자 환경에서 로드 테스트를 수행하고 완료한 후 프로덕션 클러스터에서 Auto Scaling을 활성화합니다. 부하 테스트에 대한 지침은 [성능 테스트](../launch/checklist.md#performance-testing)를 참조하십시오.
+Adobe은 먼저 클라우드 프로젝트 _스테이징_ 클러스터에서 자동 크기 조절을 활성화합니다. 사용자 환경에서 로드 테스트를 수행하고 완료되면 Adobe에서 프로덕션 클러스터에 대한 Auto Scaling을 활성화합니다. 부하 테스트에 대한 지침은 [성능 테스트](../launch/checklist.md#performance-testing)를 참조하십시오.
 
 ### IP 허용 목록
 

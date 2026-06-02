@@ -3,13 +3,21 @@ title: 운영 원격 분석 서비스
 description: 클라우드 인프라 상점의 Adobe Commerce에 대한 클라이언트측 성능 모니터링에 대해 알아봅니다.
 feature: Cloud, Observability
 topic: Performance
-source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
+exl-id: f6fffa63-f522-41f4-ac8a-95da96b0e73d
+TQID: https://experienceleague.adobe.com/-6vaWjXBGh6IpWMdsAU7QVpVpjcEfGZ0SrkT02lfb9Q
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: 131
 ht-degree: 0%
 
 ---
-
 
 # 운영 원격 분석 서비스
 

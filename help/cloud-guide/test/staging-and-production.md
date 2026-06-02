@@ -2,9 +2,24 @@
 title: 스테이징 및 프로덕션 테스트
 description: 스테이징 및 프로덕션 환경에서 테스트하는 방법을 알아봅니다.
 exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
-source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
+TQID: https://experienceleague.adobe.com/kcmgbPlj1Pa0JW6daRzbr40HMfoy64ETmowCiWzXD-A
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: 1368
 ht-degree: 0%
 
 ---
@@ -212,7 +227,7 @@ ht-degree: 0%
 
 ## 기능 테스트
 
-MFTF(Magento 기능 테스트 프레임워크)를 사용하여 Cloud Docker 환경에서 Adobe Commerce에 대한 기능 테스트를 완료할 수 있습니다. [Commerce용 Cloud Docker 안내서](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)에서 _응용 프로그램 테스트_&#x200B;를 참조하십시오.
+MFTF(Magento 기능 테스트 프레임워크)를 사용하여 Cloud Docker 환경에서 Adobe Commerce에 대한 기능 테스트를 완료할 수 있습니다. _Commerce용 Cloud Docker 안내서_&#x200B;에서 [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)를 참조하십시오.
 
 ## 보안 검색 도구 설정
 

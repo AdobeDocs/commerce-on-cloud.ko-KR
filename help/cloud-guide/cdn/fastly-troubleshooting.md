@@ -3,9 +3,22 @@ title: Fastly 문제 해결
 description: Adobe Commerce용 Fastly CDN 모듈 및 서비스의 문제를 해결하고 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Cache, Services
 exl-id: 69954ef9-9ece-411e-934e-814a56542290
-source-git-commit: f496a4a96936558e6808b3ce74eac32dfdb9db19
+TQID: https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: 1911
 ht-degree: 0%
 
 ---
@@ -32,13 +45,13 @@ Pro 프로덕션 및 스테이징 환경에서 [New Relic 로그](../monitor/log
 log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 ```
 
-프로덕션 및 스테이징 환경에 동일한 VCL을 사용할 수 있습니다. [`vcl_log`Fastly 설명서](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)에서 __&#x200B;을(를) 참조하세요.
+프로덕션 및 스테이징 환경에 동일한 VCL을 사용할 수 있습니다. _Fastly 설명서_&#x200B;에서 [`vcl_log`](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)을(를) 참조하세요.
 
 ## 사이트 성능, 제거 및 캐시 문제
 
 다음 목록을 사용하여 클라우드 인프라 환경의 Adobe Commerce에 대한 Fastly 서비스 구성과 관련된 문제를 식별하고 해결하십시오.
 
-- **스토어 메뉴가 표시되지 않거나 작동하지 않음**—라이브 사이트 URL을 사용하는 대신 원본 서버에 직접 연결된 링크 또는 임시 링크를 사용하거나 `-H "host:URL"`cURL 명령[에서 &#x200B;](#check-live-site-through-fastly)을(를) 사용했을 수 있습니다. 원본 서버로 Fastly를 무시하면 기본 메뉴가 작동하지 않고 브라우저측에서 캐싱을 허용하는 잘못된 헤더가 표시됩니다.
+- **스토어 메뉴가 표시되지 않거나 작동하지 않음**—라이브 사이트 URL을 사용하는 대신 원본 서버에 직접 연결된 링크 또는 임시 링크를 사용하거나 [cURL 명령](#check-live-site-through-fastly)에서 `-H "host:URL"`을(를) 사용했을 수 있습니다. 원본 서버로 Fastly를 무시하면 기본 메뉴가 작동하지 않고 브라우저측에서 캐싱을 허용하는 잘못된 헤더가 표시됩니다.
 
 - **위쪽 탐색이 작동하지 않습니다**—위쪽 탐색은 기본 Magento Fastly VCL 스니펫을 업로드할 때 사용할 수 있는 ESI(Edge Side Includes) 처리를 사용합니다. 탐색이 작동하지 않으면 [Fastly VCL을 업로드](fastly-configuration.md#upload-vcl-to-fastly)하고 사이트를 다시 확인하십시오.
 
@@ -243,7 +256,7 @@ php bin/magento module:status Fastly_Cdn
 
   [구성 관리](../store/store-settings.md#configure-store)를 사용하는 경우 변경 내용을 프로덕션 또는 스테이징 환경에 푸시하기 전에 `app/etc/config.php` 구성 파일에서 Fastly CDN 모듈 상태를 확인하십시오.
 
-  `Fastly_CDN => 0` 파일에서 모듈이 활성화되지 않은 경우(`config.php`) 파일을 삭제하고 다음 명령을 실행하여 `config.php`을(를) 최신 구성 설정으로 업데이트합니다.
+  `config.php` 파일에서 모듈이 활성화되지 않은 경우(`Fastly_CDN => 0`) 파일을 삭제하고 다음 명령을 실행하여 `config.php`을(를) 최신 구성 설정으로 업데이트합니다.
 
   ```bash
   bin/magento magento-cloud:scd-dump

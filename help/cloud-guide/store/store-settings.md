@@ -2,9 +2,20 @@
 title: 저장소 구성 관리
 description: 클라우드 인프라 환경의 모든 Adobe Commerce에서 스토어 구성 설정을 관리하고 동기화하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 01850a7b-2c03-45e8-8051-b24ae95c5f87
+TQID: https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: 1507
 ht-degree: 0%
 
 ---
@@ -43,7 +54,7 @@ ht-degree: 0%
 | 우선순위 | 구성<br>메서드 | 설명 |
 | -------- | ------------------------ | ----------- |
 | 1 | [!DNL Cloud Console]<br>환경 변수 | 환경 구성의 _변수_ 탭에서 추가된 값은 [!DNL Cloud Console]입니다. 중요한 구성 또는 환경별 구성에 대한 값을 여기에 지정하십시오. 여기에서 지정된 설정은 책임자로부터 편집할 수 없습니다. [환경 구성 변수](../project/overview.md#configure-environment)를 참조하십시오. |
-| 2 | `.magento.app.yaml` | `.magento.app.yaml` 파일의 `variables` 섹션에 추가된 값입니다. 모든 환경에서 일관된 구성을 위해 여기에 값을 지정하십시오. **`.magento.app.yaml` 파일에 중요한 값을 지정하지 마십시오.** [응용 프로그램 설정](../application/configure-app-yaml.md)을 참조하십시오. |
+| 2 | `.magento.app.yaml` | `.magento.app.yaml` 파일의 `variables` 섹션에 추가된 값입니다. 모든 환경에서 일관된 구성을 위해 여기에 값을 지정하십시오. **`.magento.app.yaml` 파일에 중요한 값을 지정하지 마십시오.** [응용 프로그램 설정](../application/configure-app-yaml.md)을 참조하세요. |
 | 3 | `app/etc/env.php` | 여기에 저장된 환경별 구성 값은 `app:config:dump` 명령을 사용하여 추가됩니다. 환경 변수 또는 CLI를 사용하여 시스템별로 중요 값을 설정합니다. [중요 데이터](#sensitive-data)를 참조하세요. `env.php` 파일이 소스 제어에 포함되어 **not**(이)입니다. |
 | 4 | `app/etc/config.php` | 여기에 저장된 값은 `app:config:dump` 명령을 사용하여 추가됩니다. 공유 구성 값이 `config.php`에 추가됩니다. 관리자로부터 또는 CLI를 사용하여 공유 구성을 설정합니다. `config.php` 파일이 소스 제어에 포함되어 있습니다. |
 | 5 | 데이터베이스 | 여기에 저장된 값은 관리자에서 구성을 설정하여 추가됩니다. 위의 방법 중 하나를 사용하여 설정된 구성은 잠겨(회색으로 표시됨) 관리자에서 편집할 수 없습니다. |

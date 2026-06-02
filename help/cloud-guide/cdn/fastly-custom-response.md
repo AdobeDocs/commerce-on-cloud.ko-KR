@@ -2,9 +2,21 @@
 title: 오류 및 유지 관리 페이지 사용자 지정
 description: Fastly 원본 서버에 대한 요청이 실패할 때 표시되는 기본 오류 페이지를 사용자 지정하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 960195c7-5ee9-4134-8b0a-a251c5e6adf9
+TQID: https://experienceleague.adobe.com/EhK04rgGdkT3Tvd6wbefYjY9Yqozkzra4-ELdkH8sMo
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: 803
 ht-degree: 0%
 
 ---
@@ -26,11 +38,11 @@ Fastly 원본 요청이 실패하면 Fastly는 기본 서식과 일반 메시징
 
 **HTML 코딩 요구 사항:**
 
-사용자 지정 페이지의 HTML 코드는 다음 요구 사항을 충족해야 합니다.
+사용자 지정 페이지에 대한 HTML 코드는 다음 요구 사항을 충족해야 합니다.
 
 - 컨텐츠는 최대 65,535자를 포함할 수 있습니다.
 - HTML 소스에서 모든 CSS 인라인을 지정합니다.
-- Fastly가 오프라인 상태라도 표시되도록 base64를 사용하여 HTML 페이지에서 이미지를 번들로 묶습니다. css-tricks 사이트의 [데이터 URI](https://css-tricks.com/data-uris/)를 참조하세요.
+- Fastly가 오프라인 상태라도 표시되도록 base64를 사용하여 HTML 페이지의 이미지를 번들로 묶습니다. css-tricks 사이트의 [데이터 URI](https://css-tricks.com/data-uris/)를 참조하세요.
 
 ## 503 오류 페이지 사용자 지정
 
@@ -79,7 +91,7 @@ Adobe Commerce 스토어 테마와 일치하는 스타일을 포함하고 필요
 
    - 페이지 상단의 알림에서 *캐시 관리* 링크를 선택합니다.
 
-   - 캐시 관리 페이지에서 **Magento 캐시 플러시**&#x200B;를 선택합니다.
+   - [캐시 관리] 페이지에서 **Magento 캐시 플러시**&#x200B;를 선택합니다.
 
 ## WAF 오류 페이지 사용자 지정
 
@@ -87,7 +99,7 @@ Adobe Commerce 스토어 테마와 일치하는 스타일을 포함하고 필요
 
 ![WAF 오류 페이지](../../assets/cdn/fastly-waf-403-error.png)
 
-다음 코드 샘플은 기본 페이지에 대한 HTML 소스를 보여 줍니다.
+다음 코드 샘플은 기본 페이지의 HTML 소스를 보여 줍니다.
 
 ```html
 <html>
@@ -141,7 +153,7 @@ Fastly 구성 메뉴의 **합성 페이지 사용자 지정** > **WAF 페이지 
 
    - 페이지 상단의 알림에서 **캐시 관리** 링크를 선택합니다.
 
-   - 캐시 관리 페이지에서 **Magento 캐시 플러시**&#x200B;를 선택합니다.
+   - [캐시 관리] 페이지에서 **Magento 캐시 플러시**&#x200B;를 선택합니다.
 
 ## 오류 보고서 번호 표시
 

@@ -3,9 +3,20 @@ title: 정적 콘텐츠 배포
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce에 이미지, 스크립트 및 CSS와 같은 정적 콘텐츠를 배포하는 전략에 대해 알아봅니다.
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
-source-git-commit: 325b7584daa38ad788905a6124e6d037cf679332
+TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: 768
 ht-degree: 0%
 
 ---
@@ -41,9 +52,9 @@ ht-degree: 0%
 정적 콘텐츠를 생성하려면 테마 및 로케일에 액세스해야 합니다. Adobe Commerce은 빌드 단계에서 액세스할 수 있는 파일 시스템에 테마를 저장하지만 Adobe Commerce은 로케일을 데이터베이스에 저장합니다. 빌드 단계에서 데이터베이스를 _사용할 수 없습니다_. 빌드 단계에서 정적 콘텐츠를 생성하려면 `ece-tools` 패키지의 `config:dump` 명령을 사용하여 로케일을 파일 시스템으로 이동해야 합니다. 로케일을 읽고 `app/etc/config.php` 파일에 저장합니다.
 
 >[!NOTE]
->`ece-tools` 패키지에서 `config:dump` 명령을 실행한 후 `config.php` 파일 [에 덤프된 구성이 관리 대시보드에서 잠김(회색으로 표시)됩니다](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). 관리자에서 이러한 구성을 업데이트하는 유일한 방법은 파일에서 로컬로 구성을 삭제하고 프로젝트를 다시 배포하는 것입니다.
->&#x200B;>또한 인스턴스에 새 저장소/저장소 그룹/웹 사이트를 추가할 때마다 `config:dump` 명령을 실행하여 데이터베이스가 동기화되어 있는지 확인해야 합니다. [어떤 구성을 `config.php` 파일에 덤프할지](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)를 선택할 수도 있습니다.
->&#x200B;>필드가 회색으로 표시되지만 이 단계를 수행하지 않아 `config.php` 파일에서 저장소/저장소 그룹/웹 사이트 구성을 삭제하면 덤프되지 않은 새 엔터티가 다음 배포의 데이터베이스에서 삭제됩니다.
+>`ece-tools` 패키지에서 `config:dump` 명령을 실행한 후에는 `config.php` 파일 [에 덤프된 구성이 관리 대시보드](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)에서 잠깁니다(회색으로 표시됨). 관리에서 이러한 구성을 업데이트하는 유일한 방법은 파일에서 로컬로 구성을 삭제하고 프로젝트를 다시 배포하는 것입니다.
+>또한 인스턴스에 새 저장소/저장소 그룹/웹 사이트를 추가할 때마다 `config:dump` 명령을 실행하여 데이터베이스가 동기화되어 있는지 확인해야 합니다. `config.php` 파일에 [어떤 구성을 덤프할지](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)를 선택할 수도 있습니다.
+>필드가 회색으로 표시되지만 이 단계를 수행하지 않아 `config.php` 파일에서 저장소/저장소 그룹/웹 사이트 구성을 삭제하면 덤프되지 않은 새 엔터티가 다음 배포 시 데이터베이스에서 삭제됩니다.
 
 **빌드에서 SCD를 생성하도록 프로젝트를 구성하려면**:
 

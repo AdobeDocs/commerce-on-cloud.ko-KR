@@ -1,11 +1,27 @@
 ---
 title: 클라우드 인프라 프로젝트
 description: 클라우드 인프라의 Adobe Commerce에 대한 개요 [!DNL Cloud Console] 를 읽고 계정 설정에 액세스하는 방법을 알아보십시오.
-last-substantial-update: 2024-02-06T00:00:00Z
+last-substantial-update: 2024-02-06T00:00:00.000Z
 exl-id: 8eed04c7-6469-45a4-aa89-dc594c977264
-source-git-commit: 00b1b6578c226a304697963d17ba349ea17da260
+TQID: https://experienceleague.adobe.com/I7odylklFhMfZP0R43bY6LXyXXT6Pk5-vFsGsbSrqOk
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: cc250cf1-34eb-4863-80d0-d170d45ea067
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: 1022
 ht-degree: 0%
 
 ---
@@ -22,7 +38,7 @@ Adobe은 프로젝트의 모든 측면을 완전히 관리할 수 있는 [!DNL C
 
 >[!TIP]
 >
->프로젝트가 표시되지 않으면 프로젝트와 연결된 [계정 소유자 또는 프로젝트 관리자](../project/user-access.md)에게 연락하여 액세스 권한을 요청해야 합니다. 처음 사용하는 사용자의 경우 [시작](../../get-started/onboarding.md#cloud-console) 안내서에서 _온보딩 항목_&#x200B;을 참조하세요.
+>프로젝트가 표시되지 않으면 프로젝트와 연결된 [계정 소유자 또는 프로젝트 관리자](../project/user-access.md)에게 연락하여 액세스 권한을 요청해야 합니다. 처음 사용하는 사용자의 경우 _시작_ 안내서에서 [온보딩 항목](../../get-started/onboarding.md#cloud-console)을 참조하세요.
 
 _모든 프로젝트_ 보기에는 액세스 권한이 있는 모든 프로젝트가 나열됩니다. **[!UICONTROL Show filters]**&#x200B;을(를) 클릭하고 프로젝트 목록을 유형, 지역 또는 계획별로 필터링할 수 있습니다.
 
@@ -87,7 +103,7 @@ https://<branch>-<unique-ID>-<project-ID>.<region>.magentosite.cloud/
 
 - **고유 ID** = 임의의 영숫자 문자 7개
 - **프로젝트 ID** = 13자 프로젝트 ID
-- **지역** = AWS 또는 Azure 지역 이름입니다. [지역 IP 주소](regional-ip-addresses.md)를 참조하세요.
+- **지역** = AWS 또는 Azure 지역 이름, [지역 IP 주소](regional-ip-addresses.md) 참조
 
 Pro 프로덕션 및 스테이징 환경에는 다음 링크를 사용하여 액세스할 수 있는 세 개의 노드가 포함됩니다.
 
@@ -105,7 +121,7 @@ Pro 프로덕션 및 스테이징 환경에는 다음 링크를 사용하여 액
 
 ## 설정
 
-프로젝트 탐색 오른쪽의 _프로젝트 구성 아이콘_(구성) 아이콘을 클릭하여 ![설정](../../assets/icon-configure.png){width="36"} 패널을 엽니다.
+프로젝트 탐색 오른쪽의 ![프로젝트 구성 아이콘](../../assets/icon-configure.png){width="36"}(구성) 아이콘을 클릭하여 _설정_ 패널을 엽니다.
 
 ### 프로젝트 설정
 
@@ -131,7 +147,7 @@ Pro 프로덕션 및 스테이징 환경에는 다음 링크를 사용하여 액
 | --------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | 일반 | 디스플레이 이름, 환경 유형 및 상위 환경을 구성합니다.<br>다른 환경 설정 전환: |
 |           | **발신 전자 메일 사용**: SMTP 프로토콜을 사용하여 환경에서 [발신 전자 메일 보내기](outgoing-emails.md). |
-|           | **검색 엔진에서 숨기기**: 사이트에서 검색 엔진 인덱서와 크롤러를 차단합니다. |
+|           | **검색 엔진에서 숨기기**: 사이트에서 검색 엔진 인덱서 및 웹 크롤러 차단 |
 |           | **HTTP 액세스 제어**: 로그인 및 IP 주소 액세스 제어를 사용하여 [!DNL Cloud Console]에 대한 보안 구성을 사용하도록 설정합니다. |
 |           | 상태는 `active` 또는 `inactive`입니다. 대부분의 작업이 활성 환경에 있습니다. 환경을 비활성화하거나 삭제할 수 있습니다. |
 | 변수 | 런타임에 사용할 수 있는 [환경 수준 변수](../environment/variable-levels.md)를 보고 만들고 관리합니다. |

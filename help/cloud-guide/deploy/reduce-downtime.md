@@ -3,9 +3,17 @@ title: 다운타임 없는 배포
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce을 배포할 때 전반적인 가동 중지 시간을 줄이는 방법을 알아봅니다.
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
-source-git-commit: b831bc5bce0f76ec8972b3578c500508dd4d7d41
+TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: 502
 ht-degree: 0%
 
 ---
@@ -40,7 +48,7 @@ ht-degree: 0%
 1. [테마 파일 줄이기](../environment/variables-deploy.md#scdmatrix)
 SCD\_MATRIX 환경 변수를 구성하여 불필요한 테마 파일의 수를 줄일 수 있습니다.
 
-1. [정적 콘텐츠 배포 속도 향상](../environment/variables-deploy.md#scdthreads)
+1. [정적 콘텐츠 배포 속도 높이기](../environment/variables-deploy.md#scdthreads)
 SCD\_THREADS 환경 변수를 업데이트하여 정적 콘텐츠 배포의 스레드 수를 늘려 배포 프로세스 속도를 높일 수 있습니다.
 
 >[!NOTE]

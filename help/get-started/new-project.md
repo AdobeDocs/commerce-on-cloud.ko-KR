@@ -1,11 +1,22 @@
 ---
 title: 클라우드에서 Commerce 프로비저닝
-description: 클라우드 인프라 프로젝트에서 Adobe Commerce을 프로비저닝할 Adobe 고객 기술 관리자를 준비하는 방법에 대해 알아봅니다.
+description: Adobe Customer Technical Advisor를 준비하여 클라우드 인프라 프로젝트에서 Adobe Commerce을 프로비저닝하는 방법에 대해 알아봅니다.
 recommendations: noDisplay, catalog
 role: Admin
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 77e8c9fb-8c4a-4c98-adbc-e57871c5bdbc
+TQID: https://experienceleague.adobe.com/GzCPqYxn0-ACS34UfvHypqv6BveTRpbLJNN2jNmCL-E
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: 774
 ht-degree: 0%
 
 ---
@@ -14,7 +25,7 @@ ht-degree: 0%
 
 클라우드 인프라에서 Commerce 프로젝트를 시작하고 초기화해 보겠습니다!
 
-Adobe이 클라우드 프로젝트 환경에 Commerce을 프로비저닝하기 전에 다음 전략을 검토하고 Adobe 계정 팀과 첫 번째 협의할 답변을 준비하는 것이 좋습니다. 다음 섹션을 체크리스트로 사용하여 클라우드 프로젝트를 프로비저닝할 고객 기술 관리자와의 대화를 준비하는 데 도움이 됩니다.
+Adobe에서 클라우드 프로젝트 환경에 Commerce을 프로비저닝하기 전에 다음 전략을 검토하고 Adobe 계정 팀과 첫 번째 협의할 답변을 준비하는 것이 좋습니다. 다음 섹션을 체크리스트로 사용하여 클라우드 프로젝트를 프로비저닝할 고객 기술 관리자와의 대화를 준비하는 데 도움이 됩니다.
 
 ## 도메인 정의
 
@@ -59,7 +70,7 @@ _Cloud Infrastructure의 Commerce_ 안내서에서 [디스크 공간 관리](../
 
 **질문 4**: _가까운 곳에서 가장 편리한 클라우드 서비스 지역이 어디입니까?_
 
-Adobe Commerce on cloud infrastructure Pro 프로젝트를 위해 Amazon Web Services(AWS) 또는 Microsoft Azure를 IaaS(Infrastructure as a Service) 기반으로 선택합니다. 각 서비스 제공업체는 여러 지역에서 작동하며 여러 가용 영역을 제공합니다. 위치에 편리한 지역을 선택하고 지연 시간 및 높은 비용을 줄일 수 있습니다.
+Adobe Commerce on cloud infrastructure Pro 프로젝트를 위해 Amazon Web Services(AWS) 또는 Microsoft Azure as a Service(IaaS) 기반을 선택합니다. 각 서비스 제공업체는 여러 지역에서 작동하며 여러 가용 영역을 제공합니다. 위치에 편리한 지역을 선택하고 지연 시간 및 높은 비용을 줄일 수 있습니다.
 
 [Adobe Commerce 클라우드 지역 지도](../cloud-guide/overview.md)를 참조하세요.
 
@@ -75,7 +86,7 @@ Adobe Commerce on cloud infrastructure는 AWS PrivateLink 또는 Azure Private L
 
 **질문 6**: _예상 목표 시작 날짜가 어떻게 됩니까?_
 
-사이트를 실행하려면 반복적인 구성과 테스트가 필요하며 이를 통해 사이트 실행이 성공적으로 수행됩니다. 대상 날짜를 설정하면 사용자와 Adobe 계정 팀이 최종 단계를 조정하기 위한 호출을 포함하여 최종 실행 전 활동을 준비하는 데 도움이 됩니다.
+사이트를 실행하려면 반복적인 구성과 테스트가 필요하며 이를 통해 사이트 실행이 성공적으로 수행됩니다. 목표 날짜를 설정하면 사용자와 Adobe 계정 팀이 최종 단계를 조정하는 호출을 포함하여, 최종 실행 전 활동을 준비하는 데 도움이 됩니다.
 
 전체 프로세스를 검토하고 Launch 검사 목록 복사본을 다운로드하려면 _Commerce on Cloud Infrastructure_ 안내서의 [Launch 사이트 개요](../cloud-guide/launch/overview.md)를 참조하십시오.
 

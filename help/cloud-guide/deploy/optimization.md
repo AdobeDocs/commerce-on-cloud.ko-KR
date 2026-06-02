@@ -2,9 +2,20 @@
 title: 클라우드 배포 최적화
 description: 가동 중지 시간 감소, 정적 콘텐츠 배포, 시나리오 기반 배포 및 스마트 마법사를 포함하여 클라우드 인프라 프로젝트에서 Adobe Commerce의 배포 프로세스를 최적화하는 방법에 대해 알아봅니다.
 feature: Cloud, Deploy, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4315e2f4-06af-4a5c-9db9-e7b2f63660df
+TQID: https://experienceleague.adobe.com/bd9n9CFrpyn1UZG6SX8qkoZGBOFd2N7z9Hoa1hQ8rew
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: 230
 ht-degree: 0%
 
 ---
@@ -18,14 +29,14 @@ ht-degree: 0%
 - [클라우드 배포 프로세스](process.md)
 클라우드 구축 과정에는 세 가지 단계가 있으며, 각 단계의 장단점을 자신의 장점으로 활용할 수 있다.
 
-- [다운타임 없는 배포](reduce-downtime.md)
+- [가동 중지 시간 제로 배포](reduce-downtime.md)
 배포 중에 발생하는 상황과 프로덕션 환경으로 업데이트하는 동안 스토어에 발생하는 다운타임을 줄이는 방법을 이해합니다.
 
 - [정적 콘텐츠 배포](static-content.md)
 클라우드 배포를 최적화하는 가장 좋은 방법은 정적 콘텐츠를 생성하는 방법과 시기를 제어하는 것입니다.
 
-- [스마트 마법사](smart-wizards.md)
+- [고급 마법사](smart-wizards.md)
 `ece-tools` 패키지는 프로젝트 구성을 빠르게 평가할 수 있는 스마트 마법사 명령을 제공합니다.
 
-- [New Relic을 사용하여 배포 추적](../monitor/track-deployments.md)
+- New Relic을 사용하여 [배포 추적](../monitor/track-deployments.md)
 New Relic 서비스를 사용하여 배포 이벤트를 모니터링하고 배포가 전체 성능에 미치는 영향을 분석합니다.
