@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
 workflow-type: tm+mt
-source-wordcount: 2551
+source-wordcount: 2575
 ht-degree: 0%
 
 ---
@@ -357,18 +357,18 @@ stage:
 
 ## `LOCK_PROVIDER`
 
-- **기본값**—`file`
+- **기본값**— 프로덕션 및 스테이징 환경에서 기본값은 `file`입니다. Pro 통합 및 스타터 환경의 경우 기본값은 `db`입니다.
 - **버전**—Adobe Commerce 2.2.5 이상
 
-잠금 공급자는 중복 크론 작업 및 크론 그룹의 시작을 방지합니다. 프로덕션 환경에서 `file` 잠금 공급자를 사용합니다. 스타터 환경 및 Pro 통합 환경에서는 [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md) 변수를 사용하지 않으므로 `ece-tools`이(가) `db` 잠금 공급자를 자동으로 적용합니다.
+잠금 공급자는 중복 크론 작업 및 크론 그룹의 시작을 방지합니다. Commerce on Cloud는 `file` 및 `db` 잠금 공급자만 지원합니다.
+
+프로덕션 및 스테이징 환경의 경우 기본값 `file`이(가) [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md)에 의해 설정되어 재정의할 수 없습니다. Starter 환경 및 Pro 통합 환경의 경우 `ece-tools`에서 `db` 잠금 공급자를 자동으로 설정합니다. 이러한 환경에서 기본값을 `file`(으)로 변경하여 로컬 성능 및 미러 프로덕션 아키텍처를 최적화할 수 있습니다.
 
 ```yaml
 stage:
   deploy:
     LOCK_PROVIDER: "db"
 ```
-
-_설치 가이드_&#x200B;에서 [잠금 구성](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=ko)을 참조하십시오.
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
