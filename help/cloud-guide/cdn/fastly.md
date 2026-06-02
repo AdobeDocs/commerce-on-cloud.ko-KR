@@ -4,11 +4,23 @@ description: 클라우드 인프라의 Adobe Commerce에 포함된 Fastly 서비
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
 exl-id: 429b6762-0b01-438b-a962-35376306895b
 TQID: https://experienceleague.adobe.com/Lq2rzR14xlcj5y3ycfAWGHEKAIxboekZX8YtyOJPQXA
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-subfeature_v2: id: f2261633-201d-46c5-8a66-999e70527a83
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+subfeature_v2:
+  - id: f2261633-201d-46c5-8a66-999e70527a83
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 1637
@@ -96,7 +108,7 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 ## Magento 2용 Fastly CDN 모듈
 
-클라우드 인프라의 Adobe Commerce용 Fastly 서비스는 Pro Staging 및 Production, Starter Production(`master` 분기)에 설치된 Magento 2]용 [Fastly CDN 모듈을 사용합니다.
+클라우드 인프라의 Adobe Commerce용 Fastly 서비스는 Pro Staging 및 Production, Starter Production(`master` 분기)에 설치된 Magento 2&rbrack;용 &lbrack;Fastly CDN 모듈을 사용합니다.
 
 Adobe Commerce 프로젝트의 초기 프로비저닝 또는 업그레이드 시 Adobe은 스테이징 및 프로덕션 환경에 Fastly CDN 모듈의 최신 버전을 설치합니다. Fastly에서 모듈 업데이트를 릴리스하면 환경에 대한 알림을 관리자의 알림을 받게 됩니다. Adobe은 최신 릴리스를 사용하도록 환경을 업데이트할 것을 권장합니다. [빠르게 업그레이드](fastly-configuration.md#upgrade-the-fastly-module)를 참조하세요.
 

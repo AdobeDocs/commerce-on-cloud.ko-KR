@@ -3,9 +3,13 @@ title: 지역 IP 주소
 description: 통합 환경을 위한 클라우드 인프라에서 Adobe Commerce에 의해 사용되는 AWS 및 Azure 지역의 IP 주소 목록을 참조하십시오.
 exl-id: 1137f5cf-4879-46d7-878c-bf47de7a0e34
 TQID: https://experienceleague.adobe.com/Ozs-ubM3egZwkxKYqvGnjOfjhxiSxNUFNXdWqLGP94k
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 167

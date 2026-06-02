@@ -1,15 +1,22 @@
 ---
-title: ' [!DNL Cloud Console](으)로 분기 관리'
+title: ' [!DNL Cloud Console] (으)로 분기 관리'
 description: ' [!DNL Cloud Console]을(를) 사용하여 클라우드 인프라에서 Adobe Commerce의 환경 분기를 관리하는 방법을 알아봅니다.'
 role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
 TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 1638
@@ -94,7 +101,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 1. 상단 탐색 막대의 오른쪽에 있는 구성 아이콘을 클릭하면 환경 설정이 열립니다.
 
-1. _[!UICONTROL General]_탭에서_[!UICONTROL Deactivate environment]_ 섹션으로 스크롤한 다음 **[!UICONTROL Deactivate environment and delete data]**&#x200B;을(를) 클릭하고 지침을 따릅니다.
+1. _[!UICONTROL General]_&#x200B;탭에서&#x200B;_[!UICONTROL Deactivate environment]_ 섹션으로 스크롤한 다음 **[!UICONTROL Deactivate environment and delete data]**&#x200B;을(를) 클릭하고 지침을 따릅니다.
 
 ## 환경 동기화
 
