@@ -14,7 +14,7 @@ ht-degree: 0%
 
 [!DNL Adobe Commerce Advanced Security]은(는) [!DNL Adobe Commerce on Cloud Infrastructure]과(와) 함께 온라인 스토어를 빠르고, 사용 가능하며, 안전하게 유지하는 제품입니다. 이를 통해 최대 트래픽 이벤트 및 자동화된 공격 동안 매출을 보호하고 다운타임을 줄이고 고객의 신뢰를 유지하는 데 도움이 될 수 있습니다.
 
-[!DNL Adobe Commerce on Cloud Infrastructure]에 기본 제공 [레이어 3 및 4 DDoS 보호](./fastly.md#ddos-protection) 및 [웹 응용 프로그램 방화벽(WAF)](./fastly-waf-service.md)이(가) 포함되어 있습니다. [공유 책임 모델](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)에서 L7 DDoS 탐지, 보트 보호 및 사전 IP 차단은 판매자 책임이며, [!DNL Adobe Commerce Advanced Security]은(는) 이를 해결하기 위해 설계되었습니다.
+[!DNL Adobe Commerce on Cloud Infrastructure]에 기본 제공 [레이어 3 및 4 DDoS 보호](./fastly.md#ddos-protection) 및 [웹 응용 프로그램 방화벽(WAF)](./fastly-waf-service.md)이(가) 포함되어 있습니다. [공유 책임 모델](https://experienceleague.adobe.com/ko/docs/commerce-operations/security-and-compliance/shared-responsibility)에서 L7 DDoS 탐지, 보트 보호 및 사전 IP 차단은 판매자 책임이며, [!DNL Adobe Commerce Advanced Security]은(는) 이를 해결하기 위해 설계되었습니다.
 
 [!DNL Advanced Security]은(는) 네트워크 에지에서 규모, 성능 및 보안을 결합하는 통합 에지 플랫폼의 일부로 보트 관리, 고급 속도 제한 및 레이어 7 DDoS 보호를 제공하는 Fastly 기반 에지 보안 기능을 통해 상점 보호를 확장합니다.
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 >
 >2026년 3분기가 끝날 때까지 고객은 보트 관리 규칙을 직접 수정하거나 관리할 수 없습니다.
 >
->규칙을 추가, 수정 또는 조정하려면 [지원 티켓](https://experienceleague.adobe.com/home?support-tab=home#support)을 통해 Adobe Commerce 지원에 문의하십시오. 지원 팀이 요청된 변경 사항을 구현합니다.
+>규칙을 추가, 수정 또는 조정하려면 [지원 티켓](https://experienceleague.adobe.com/home?lang=ko&support-tab=home#support)을 통해 Adobe Commerce 지원에 문의하십시오. 지원 팀이 요청된 변경 사항을 구현합니다.
 >
 >2026년 4분기부터 Fastly는 고객이 Commerce 관리 패널에서 보트 관리 규칙을 관리할 수 있는 추가 기능 기능을 출시할 예정입니다.
 
@@ -216,7 +216,7 @@ CDN 로그에는 Signal Sciences(Bot Protection/차세대 WAF)의 기본 제공 
 - **규정 준수 도구**—PCI 스캔, SOC 규정 준수 보고 및 규정 감사 도구.
 - **응용 프로그램 수준 강화**—토큰 기반 API 인증, 쿼리 매개 변수 정규화 및 캐싱 전략 디자인입니다.
 
-Adobe 및 고객 보안 책임에 대한 전체 개요는 [공유 책임 모델](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)을 참조하십시오.
+Adobe 및 고객 보안 책임에 대한 전체 개요는 [공유 책임 모델](https://experienceleague.adobe.com/ko/docs/commerce-operations/security-and-compliance/shared-responsibility)을 참조하십시오.
 
 ## 일반적인 공격 패턴 및 보호
 
@@ -254,7 +254,7 @@ Adobe 및 고객 보안 책임에 대한 전체 개요는 [공유 책임 모델]
 
 1. 프로젝트의 [!DNL Advanced Security]에 대해 논의하려면 Adobe 계정 팀이나 Adobe 영업 담당자에게 문의하십시오.
 
-1. [!DNL Advanced Security]을(를) 구매한 후 [!DNL Advanced Security] 활성화를 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)합니다. [!DNL Adobe Commerce on Cloud Infrastructure] 프로젝트 ID와 지원이 필요한 환경(예: 프로덕션 및 스테이징)을 포함하십시오.
+1. [!DNL Advanced Security]을(를) 구매한 후 [!DNL Advanced Security] 활성화를 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)합니다. [!DNL Adobe Commerce on Cloud Infrastructure] 프로젝트 ID와 지원이 필요한 환경(예: 프로덕션 및 스테이징)을 포함하십시오.
 
 1. Adobe은 Fastly 서비스에서 [!DNL Advanced Security]을(를) 활성화하고 초기 보호 정책을 구성합니다. 활성화는 일반적으로 티켓 제출 후 영업일 기준으로 몇 일 이내에 완료됩니다.
 
@@ -262,7 +262,7 @@ Adobe 및 고객 보안 책임에 대한 전체 개요는 [공유 책임 모델]
 
 >[!NOTE]
 >
->[!DNL Advanced Security]에 대한 구성을 변경하려면 현재 [지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다. 관리 UI를 통한 셀프서비스 구성은 향후 릴리스에 포함될 예정입니다.
+>[!DNL Advanced Security]에 대한 구성을 변경하려면 현재 [지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다. 관리 UI를 통한 셀프서비스 구성은 향후 릴리스에 포함될 예정입니다.
 
 ## 제한 사항
 
