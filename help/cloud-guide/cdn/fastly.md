@@ -21,9 +21,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: e0e1d3994a6b9ceef9e45b55cc9946bc62203ddb
 workflow-type: tm+mt
-source-wordcount: 1637
+source-wordcount: 1667
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ Adobe Commerce 프로젝트의 초기 프로비저닝 또는 업그레이드 시
 
 ## 빠른 서비스 계정 및 자격 증명
 
-클라우드 인프라 프로젝트에 대한 Adobe Commerce에는 전용 Fastly 계정이 제공되지 않습니다. Fastly 서비스는 Adobe에 등록된 중앙 집중식 계정에서 관리되며 관리 대시보드는 클라우드 지원 팀에서만 액세스할 수 있습니다.
+클라우드 인프라 프로젝트에 대한 Adobe Commerce에는 전용 Fastly 계정이 제공되지 않습니다. Fastly 서비스는 Adobe에 등록된 중앙 집중식 계정에서 관리되며 대시보드 액세스는 클라우드 지원 팀으로 제한됩니다. 따라서 고객 요청에 대한 응답으로 Fastly 대시보드 액세스를 지원할 수 없습니다. 지원되는 Fastly 구성 및 관리 작업을 수행하려면 Adobe Commerce 관리 및 환경별 Fastly 자격 증명을 사용하십시오.
 
 대신, 각 스테이징 및 프로덕션 환경에는 Commerce 관리자의 Fastly 서비스를 구성하고 관리할 수 있는 고유한 Fastly 자격 증명(API 토큰 및 서비스 ID)이 있습니다. Fastly API는 Fastly 서비스의 고급 관리를 수행하는 데 사용할 수 있으며, 이러한 요청을 제출하려면 자격 증명이 필요합니다.
 
