@@ -15,7 +15,7 @@ role_v2:
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 029e44cd82c07d692dbbfacb4573763dbb4b579a
 workflow-type: tm+mt
 source-wordcount: 393
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
 - 통합 추가를 위한 간단한 양식 및 지침
 - 웹 컨텐츠 액세스 가능성 지침(WCAG) 준수
 
-![[!DNL Cloud Console]](../assets/CloudConsole.svg)
+![[!DNL Cloud Console]](../assets/CloudConsole.png)
 
 새 기능 또는 개선된 기능은 다음과 같습니다.
 
