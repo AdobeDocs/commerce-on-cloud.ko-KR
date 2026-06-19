@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
+source-git-commit: 020a2699befa042a37170a638ded9657a72933e8
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020년 6월 5일 이전에 프로비저닝된 프로젝트에는 소규모 통합 환경이 여러 개 있었습니다. 테스트 및 개발을 위해 더 큰 통합 환경이 필요한 경우 향상된 통합 환경으로 업그레이드를 요청하십시오. 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [통합 환경 요청](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=ko) 문서를 참조하십시오.
+>2020년 6월 5일 이전에 프로비저닝된 프로젝트에는 소규모 통합 환경이 여러 개 있었습니다. 테스트 및 개발을 위해 더 큰 통합 환경이 필요한 경우 향상된 통합 환경으로 업그레이드를 요청하십시오. 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [통합 환경 요청](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) 문서를 참조하십시오.
 
 ## 병합 옵션 {#merge-options}
 
@@ -143,6 +143,16 @@ ht-degree: 0%
 >[!TIP]
 >
 >업그레이드 또는 패치 프로세스를 시작하기 전에 통합 환경에서 활성 분기를 만들고 로컬 워크스테이션에 새 분기를 체크아웃합니다. 업그레이드 또는 패치 프로세스에 분기를 할당하면 진행 중인 작업에 방해가 되지 않습니다.
+
+## New Relic의 Valkey {#valkey-newrelic}
+
+>[!NOTE]
+>
+>New Relic은 Valkey로 마이그레이션한 후에도 여전히 Redis를 보여줄 수 있습니다.
+>
+>환경이 Valkey로 마이그레이션된 후에도 New Relic에서 Redis로 캐시 서비스를 계속 참조할 수 있습니다.
+>
+>Valkey는 Redis의 오픈 소스 포크이며 일부 도구 및 통합은 고유한 Valkey 레이블이 아닌 Redis 이름 지정을 사용하여 서비스를 계속 식별합니다. Redis가 여전히 설치되어 있다는 의미는 아닙니다.
 
 <!-- Fastly-related snippets begin -->
 
