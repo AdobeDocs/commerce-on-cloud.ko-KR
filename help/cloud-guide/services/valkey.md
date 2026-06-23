@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 7828287703ea93d9b84f7991e316bd2286964b90
 workflow-type: tm+mt
-source-wordcount: 212
+source-wordcount: 229
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)은(는) Adobe Commerce에서 기본적으로 사용하는 `Zend Framework Zend_Cache_Backend_File`을(를) 대체하는 선택적 백엔드 캐시 솔루션입니다.
 
-_구성 가이드_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=ko){target="_blank"}을(를) 참조하십시오.
+_구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}을(를) 참조하십시오.
 
 {{service-instruction}}
 
 **Redis를 Valkey로 바꾸려면 다음 세 개의 파일에서 구성을 업데이트하세요**:
 
-1. `.magento/services.yaml` 파일에 필요한 이름과 형식을 추가합니다.
+1. Redis 구성을 `.magento/services.yaml` 파일에서 필요한 Valkey 이름과 형식으로 바꾸십시오.
 
    ```yaml
    cache:
@@ -49,7 +49,7 @@ _구성 가이드_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.
        valkey: "cache:valkey"
    ```
 
-1. 다음과 같이 `.magento.env.yaml`을(를) 구성합니다.
+1. 다음과 같이 Redis 구성을 바꾸도록 `.magento.env.yaml`을(를) 구성합니다.
 
    ```yaml
     stage:
