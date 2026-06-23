@@ -18,7 +18,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1979
 ht-degree: 0%
@@ -207,3 +207,4 @@ ht-degree: 0%
 `SCD_ON_DEMAND` 변수를 사용하여 정적 콘텐츠 생성을 사용하도록 설정하고, [`post_deploy` 후크](../application/hooks-property.md)를 구성하여 캐시를 지우고 _후_ 컨테이너가 연결을 수락하기 시작하고 _받는 동안_&#x200B;의 정상적인 트래픽을 받는 동안 캐시를 미리 로드(Warms)합니다.
 
 빌드 및 배포 로그를 검토하려면 [로그 보기](../test/log-locations.md#view-and-manage-logs)를 참조하세요.
+

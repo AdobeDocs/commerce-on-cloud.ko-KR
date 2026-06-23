@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 696
 ht-degree: 0%
@@ -79,3 +79,4 @@ _구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/doc
 - [업그레이드 호환성 도구 실행](https://experienceleague.adobe.com/ko/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
 사이트 전체 분석 도구를 사용하는 Cloud 판매자의 경우 대시보드에서 UCT를 트리거하고 위젯에서 직접 HTML 보고서를 다운로드할 수도 있습니다. [사이트 전체 분석 도구 통합](https://experienceleague.adobe.com/ko/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)을 참조하십시오.
+

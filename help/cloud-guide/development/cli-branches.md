@@ -12,7 +12,7 @@ feature_v2:
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 688
 ht-degree: 0%
@@ -205,3 +205,4 @@ ht-degree: 0%
 ## 원격 환경과 상호 작용
 
 [SSH 키를 설정](../development/secure-connections.md)한 후 [로컬 작업 공간에서 원격 환경에 연결](../development/secure-connections.md#connect-to-a-remote-environment)하고 프로젝트 서비스와 상호 작용하고 설정을 수정할 수 있습니다.
+

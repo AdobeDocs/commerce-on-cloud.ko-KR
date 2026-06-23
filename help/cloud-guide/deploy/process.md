@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 413
 ht-degree: 0%
@@ -54,3 +54,4 @@ _사후 배포_ 단계는 `.magento.app.yaml` 파일에 정의된 사후 배포 
 >[!NOTE]
 >
 >`ece-tools` 2002.1.0 이상 버전에서는 시나리오 기반 배포 기능을 사용하여 Adobe Commerce on cloud infrastructure 프로젝트의 빌드, 배포 및 배포 후 프로세스를 사용자 지정할 수 있습니다. [시나리오 기반 배포](scenario-based.md)를 참조하세요.
+

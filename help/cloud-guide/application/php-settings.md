@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 605
 ht-degree: 0%
@@ -151,3 +151,4 @@ SourceGuardian 설명서의 [섹션 3.5를 참조하십시오](https://sourcegua
 >디버그로 컴파일된 PHP는 지원되지 않으며 Probe가 [!DNL XDebug] 또는 [!DNL XHProf]과(와) 충돌할 수 있습니다. Probe를 활성화할 때 이러한 확장을 비활성화합니다. Probe가 [!DNL Pinba] 또는 IonCube와 같은 일부 PHP 확장과 충돌합니다.
 
 <!-- Last updated from includes: 2026-04-24 14:50:02 -->
+

@@ -15,7 +15,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 828
 ht-degree: 0%
@@ -117,3 +117,4 @@ project-id@server-id:~$
 로그 위치는 노드에 따라 약간 다릅니다. 예를 들어 **MySQL 오류 로그**&#x200B;와 같은 데이터베이스 로그는 서비스 노드(`/var/log/mysql/mysql-error.log`)에서 사용할 수 있지만 웹 노드에서는 사용할 수 없습니다.
 
 각 Pro 계정에는 동적 로그 관리를 제공하기 위해 애플리케이션의 로그 데이터와 자동으로 연결되는 [New Relic 로그 서비스](../monitor/new-relic-service.md)가 포함되어 있습니다. 모든 노드에서 집계된 로그 데이터는 New Relic 로그 애플리케이션에 표시되므로 단일 대시보드에서 특정 노드의 성능 문제를 해결할 수 있습니다.
+

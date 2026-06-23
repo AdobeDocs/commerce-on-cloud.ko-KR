@@ -14,7 +14,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 605
 ht-degree: 0%
@@ -91,3 +91,4 @@ For example:
 - 허용 목록에 추가하다에 서비스 노드의 IP 주소(1, 3)가 포함되어 있으면 별도의 작업이 필요하지 않습니다.
 - 허용 목록에 서비스 노드(4, 5, 6)의 IP 주소(1, 2, 3)가 포함되어 있으면 별도의 조치가 필요 없습니다.
 - 허용 목록에 _웹 노드 4개, 5개, 6개의 IP 주소만 포함된 경우_&#x200B;에 해당 서비스의 IP 주소를 포함하도록 허용 목록을 업데이트해야 합니다.
+

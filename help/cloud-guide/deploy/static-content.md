@@ -14,7 +14,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 768
 ht-degree: 0%
@@ -94,3 +94,4 @@ SCD 온디맨드 전략을 사용할 때, 이 전략은 홈 페이지와 같이 
 ### SCD 건너뛰기
 
 경우에 따라 정적 콘텐츠 생성을 완전히 건너뛰도록 선택할 수 있습니다. 전역 단계에서 SCD와 관련된 다른 구성을 무시하도록 [SKIP_SCD](../environment/variables-build.md#skipscd) 환경 변수를 설정할 수 있습니다. `~/pub/static` 디렉터리의 기존 콘텐츠에는 영향을 주지 않습니다.
+

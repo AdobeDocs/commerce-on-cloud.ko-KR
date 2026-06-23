@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 230
 ht-degree: 0%
@@ -40,3 +40,4 @@ ht-degree: 0%
 
 - New Relic을 사용하여 [배포 추적](../monitor/track-deployments.md)
 New Relic 서비스를 사용하여 배포 이벤트를 모니터링하고 배포가 전체 성능에 미치는 영향을 분석합니다.
+

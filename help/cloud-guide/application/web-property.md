@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 462
 ht-degree: 0%
@@ -92,3 +92,4 @@ web:
 >[!NOTE]
 >
 >이 예제에서는 단일 도메인을 지원하도록 구성된 클라우드 프로젝트에 대한 기본 웹 구성을 보여줍니다. 여러 웹 사이트 또는 스토어에 대한 지원이 필요한 프로젝트의 경우 공유 도메인을 지원하도록 `web` 구성을 설정해야 합니다. [공유 도메인의 위치 구성](../store/multiple-sites.md#configure-locations-for-shared-domains)을 참조하십시오.
+

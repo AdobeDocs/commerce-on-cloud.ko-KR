@@ -21,7 +21,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 987
 ht-degree: 0%
@@ -96,3 +96,4 @@ Fastly에서 제공하는 표준 WAF 서비스는 다음 기능을 지원하지 
 WAF 서비스를 사용하면 IP 주소를 기반으로 트래픽을 차단하거나 허용할 수 있습니다. Fastly 서비스에 ACL(액세스 제어 목록) 및 사용자 지정 VCL 코드 조각을 추가하여 트래픽을 차단하거나 허용하는 IP 주소와 VCL 논리를 지정할 수 있습니다. [사용자 지정 Fastly VCL 코드 조각](fastly-vcl-custom-snippets.md)을 참조하세요.
 
 WAF 서비스에서는 TCP, UDP 또는 ICMP 요청에 대한 필터링이 지원되지 않습니다. 그러나 이 기능은 Fastly CDN 서비스에 포함된 내장 DDoS 보호에서 제공됩니다. [DDoS 보호](fastly.md#ddos-protection)를 참조하세요.
+

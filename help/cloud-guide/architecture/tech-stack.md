@@ -21,7 +21,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: efe0f95c16d9aab9af6a9c263034b08dce4d7c93
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 405
 ht-degree: 0%
@@ -50,3 +50,4 @@ ht-degree: 0%
 모노리식 응용 프로그램은 리소스 집약적이고 확장과 신속한 서비스가 어렵습니다. Commerce 고객은 클라우드 인프라를 통해 풍부하고 지능적이며 성능이 뛰어난 SaaS 기반 마이크로서비스에 매우 쉽게 액세스할 수 있습니다. [지원되는 소프트웨어 및 서비스](cloud-architecture.md#supported-software-and-services)를 참조하십시오.
 
 [Commerce 시작 안내서](../../get-started/overview.md)를 사용하여 새 클라우드 프로그램을 설정하고 클라우드 기반 환경에서 [!DNL Commerce] 응용 프로그램을 관리할 수 있습니다.
+
