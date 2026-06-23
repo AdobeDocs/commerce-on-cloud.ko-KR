@@ -4,10 +4,15 @@ description: Fastly 이미지 최적화를 활성화하고 구성하여 Adobe Co
 feature: Cloud, Configuration, Media
 exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
 TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1211
@@ -84,8 +89,8 @@ Fastly IO VCL 코드 조각을 업로드하여 관리 패널에서 Fastly 이미
 
    - **필터 크기 조정**—기본 설정(`Lancsoz3`)을 그대로 유지하거나 다른 설정을 선택하세요. 이 설정은 크기 조정된 이미지를 전달하는 데 사용되는 필터를 지정합니다. 선택한 필터에 따라 크기 조정된 이미지가 더 많거나 더 적은 픽셀 수를 가질 수 있습니다.
 
-      - `Lanczos3`(기본값) - 최상의 품질 이미지를 제공합니다. 이미지 내의 가장자리와 선형 기능을 감지하는 기능이 향상되고 _[!DNL sinc]_리샘플링을 사용하여 가능한 최상의 재구성을 제공합니다.
-      - `Lanczos2` - `Lancsoz3`과(와) 동일한 필터를 사용하지만 _[!DNL sinc]_리샘플링 함수의 정확도는 낮습니다.
+      - `Lanczos3`(기본값) - 최상의 품질 이미지를 제공합니다. 이미지 내의 가장자리와 선형 기능을 감지하는 기능이 향상되고 _[!DNL sinc]_&#x200B;리샘플링을 사용하여 가능한 최상의 재구성을 제공합니다.
+      - `Lanczos2` - `Lancsoz3`과(와) 동일한 필터를 사용하지만 _[!DNL sinc]_&#x200B;리샘플링 함수의 정확도는 낮습니다.
       - `Bicubic` - 이미지를 더 작게 만들 때 자연스럽게 선명하게 합니다.
       - `Bilinear` - 이미지를 더 크게 만들 때 자연스럽게 매끄럽게 하는 효과가 있습니다.
       - `Nearest` - 픽셀 아트 크기를 조정할 때 자연스러운 픽셀 조정 효과가 있습니다.
