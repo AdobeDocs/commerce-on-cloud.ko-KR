@@ -4,14 +4,10 @@ description: ' [!DNL Commerce] 응용 프로그램 구성 파일에서 캐시 �
 feature: Cloud, Configuration, Cache, SCD
 exl-id: 0f577974-85d7-4972-8f03-856aa6accaae
 TQID: https://experienceleague.adobe.com/ZA0WRB9p4Gpi7kjWxNPS5uCSfaTmrkrqxc4SgC9y9og
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 131
 ht-degree: 0%
@@ -24,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->프로덕션 환경을 업데이트하기 전에 스테이징 환경에서 변경 사항을 테스트하는 것이 중요합니다. 이러한 환경에서 구성을 업데이트하는 데 도움이 필요하면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하십시오.
+>프로덕션 환경을 업데이트하기 전에 스테이징 환경에서 변경 사항을 테스트하는 것이 중요합니다. 이러한 환경에서 구성을 업데이트하는 데 도움이 필요하면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하십시오.
 
 1. `.magento.app.yaml` 파일의 [`web` 속성](web-property.md)에 TTL 시간(초)을 지정하십시오. `locations` 또는 `"/media"` 및 `"/static"`에서 `expires` 키를 추가할 수 있습니다.
 
@@ -48,3 +44,4 @@ ht-degree: 0%
    ```bash
    git add -A && git commit -m "Set cache TTL for static files" && git push origin <branch-name>
    ```
+

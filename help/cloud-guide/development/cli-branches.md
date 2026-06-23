@@ -5,14 +5,10 @@ role: Developer
 feature: Cloud, Install
 exl-id: d67e8802-8137-451f-b468-8b788afb01ea
 TQID: https://experienceleague.adobe.com/hCfTF-Vl9LLKgUet4hS3JZN3kX7ZF6BDJ4tsYnr44Fs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 688
 ht-degree: 0%
@@ -39,7 +35,7 @@ ht-degree: 0%
 
 **프로젝트 `master` 환경을 복제하려면**:
 
-1. [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ko) 계정으로 로컬 워크스테이션에 로그인합니다.
+1. [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) 계정으로 로컬 워크스테이션에 로그인합니다.
 
 1. 웹 서버 또는 가상 호스트 _docroot_ 디렉터리로 변경합니다.
 
@@ -205,3 +201,4 @@ ht-degree: 0%
 ## 원격 환경과 상호 작용
 
 [SSH 키를 설정](../development/secure-connections.md)한 후 [로컬 작업 공간에서 원격 환경에 연결](../development/secure-connections.md#connect-to-a-remote-environment)하고 프로젝트 서비스와 상호 작용하고 설정을 수정할 수 있습니다.
+

@@ -5,16 +5,11 @@ feature: Cloud, Auto Scaling
 topic: Architecture
 exl-id: 11bfde40-79d1-4d51-9233-150c4cfb80fd
 TQID: https://experienceleague.adobe.com/uL--0lHHJ-4SN3BkFU8reAefWhpMQOLBRVG7fX3jTM8
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 605
 ht-degree: 0%
@@ -69,14 +64,14 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 ## 자동 크기 조정 활성화
 
-클라우드 인프라 프로젝트에서 Adobe Commerce 자동 확장을 활성화하거나 비활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하십시오. 티켓에서 다음 이유를 선택하십시오.
+클라우드 인프라 프로젝트에서 Adobe Commerce 자동 확장을 활성화하거나 비활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하십시오. 티켓에서 다음 이유를 선택하십시오.
 
 - **연락처 이유**: 인프라 변경 요청
 - **Adobe Commerce 인프라 연락처 이유**: 기타 인프라 변경 요청
 
 >[!IMPORTANT]
 >
->자동 크기 조정 기능은 예상치 못한 이벤트를 캡처합니다. 자동 크기 조절을 활성화한 경우에도 예정된 이벤트가 예상되면 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 계속하는 것이 좋습니다.
+>자동 크기 조정 기능은 예상치 못한 이벤트를 캡처합니다. 자동 크기 조절을 활성화한 경우에도 예정된 이벤트가 예상되면 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 계속하는 것이 좋습니다.
 
 ### 로드 테스트
 
@@ -91,3 +86,4 @@ For example:
 - 허용 목록에 추가하다에 서비스 노드의 IP 주소(1, 3)가 포함되어 있으면 별도의 작업이 필요하지 않습니다.
 - 허용 목록에 서비스 노드(4, 5, 6)의 IP 주소(1, 2, 3)가 포함되어 있으면 별도의 조치가 필요 없습니다.
 - 허용 목록에 _웹 노드 4개, 5개, 6개의 IP 주소만 포함된 경우_&#x200B;에 해당 서비스의 IP 주소를 포함하도록 허용 목록을 업데이트해야 합니다.
+

@@ -5,13 +5,10 @@ feature: Cloud, Logs, Configuration
 role: Developer
 exl-id: 0d7fb653-468b-432c-9830-582b0fed8512
 TQID: https://experienceleague.adobe.com/4dowk2oMMCROVmEc8muHE7CzaZ-T3SaQi4sANVnMeWQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 235
 ht-degree: 0%
@@ -73,3 +70,4 @@ log:
 - **중요** - 사용할 수 없는 응용 프로그램 구성 요소나 예기치 않은 예외와 같은 중요한 조건입니다.
 - **경고** - SMS 경고를 트리거하는 즉각적인 조치(예: 웹 사이트가 다운되었거나 데이터베이스를 사용할 수 없음)가 필요합니다.
 - **긴급**—시스템을 사용할 수 없습니다.
+

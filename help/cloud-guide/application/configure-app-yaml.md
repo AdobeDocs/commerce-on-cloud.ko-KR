@@ -4,14 +4,10 @@ description: ' [!DNL Commerce] 응용 프로그램이 클라우드 환경에 빌
 feature: Cloud, Configuration, Build, Deploy
 exl-id: 47dcb13f-8873-495d-956f-08a5e04844d9
 TQID: https://experienceleague.adobe.com/LCTu-HeJCO1pp9trlZ7h74CxSQtyBr5SDmYP9DgCtkU
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 190
 ht-degree: 0%
@@ -34,3 +30,4 @@ ht-degree: 0%
 >[!NOTE]
 >
 >`.magento.app.yaml` 파일은 로컬에서 관리되거나 git 저장소에서 관리됩니다. 구성은 배포 및 빌드 프로세스용으로 읽기만 하며 배포가 완료된 후 제거되므로 서버에서 찾을 수 없습니다.
+
