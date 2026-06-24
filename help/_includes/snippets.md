@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020년 6월 5일 이전에 프로비저닝된 프로젝트에는 소규모 통합 환경이 여러 개 있었습니다. 테스트 및 개발을 위해 더 큰 통합 환경이 필요한 경우 향상된 통합 환경으로 업그레이드를 요청하십시오. 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [통합 환경 요청](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) 문서를 참조하십시오.
+>2020년 6월 5일 이전에 프로비저닝된 프로젝트에는 소규모 통합 환경이 여러 개 있었습니다. 테스트 및 개발을 위해 더 큰 통합 환경이 필요한 경우 향상된 통합 환경으로 업그레이드를 요청하십시오. 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [통합 환경 요청](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=ko) 문서를 참조하십시오.
 
 ## 병합 옵션 {#merge-options}
 
