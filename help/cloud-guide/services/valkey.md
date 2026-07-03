@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7828287703ea93d9b84f7991e316bd2286964b90
+source-git-commit: d962353ed14bd976cf19560edf1802836cb76c4b
 workflow-type: tm+mt
 source-wordcount: 229
 ht-degree: 0%
@@ -67,6 +67,8 @@ _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 구성](http
 1. [서비스 관계를 확인](services-yaml.md#service-relationships)합니다.
 
 {{service-change-tip}}
+
+{{valkey-newrelic}}
 
 ## Valkey CLI 사용
 
