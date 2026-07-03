@@ -4,14 +4,10 @@ description: Cloud Infrastructure의 Adobe Commerce에 대한 백엔드 캐시 �
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
 TQID: https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7828287703ea93d9b84f7991e316bd2286964b90
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d962353ed14bd976cf19560edf1802836cb76c4b
 workflow-type: tm+mt
 source-wordcount: 229
 ht-degree: 0%
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)은(는) Adobe Commerce에서 기본적으로 사용하는 `Zend Framework Zend_Cache_Backend_File`을(를) 대체하는 선택적 백엔드 캐시 솔루션입니다.
 
-_구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}을(를) 참조하십시오.
+_구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}을(를) 참조하십시오.
 
 {{service-instruction}}
 
@@ -67,6 +63,8 @@ _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 구성](http
 1. [서비스 관계를 확인](services-yaml.md#service-relationships)합니다.
 
 {{service-change-tip}}
+
+{{valkey-newrelic}}
 
 ## Valkey CLI 사용
 
