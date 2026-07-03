@@ -11,16 +11,16 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d962353ed14bd976cf19560edf1802836cb76c4b
+source-git-commit: f1e6c9da5dacb144dc3e1a09885c1a9b11ce54ee
 workflow-type: tm+mt
-source-wordcount: 229
+source-wordcount: 259
 ht-degree: 0%
 
 ---
 
 # Valkey 서비스 설정
 
-[Valkey](https://valkey.io)은(는) Adobe Commerce에서 기본적으로 사용하는 `Zend Framework Zend_Cache_Backend_File`을(를) 대체하는 선택적 백엔드 캐시 솔루션입니다.
+[Valkey](https://valkey.io)은(는) Adobe Commerce에서 기본적으로 사용하는 `Zend Framework Zend_Cache_Backend_File`을(를) 대체하는 선택적 백엔드 캐시 솔루션입니다. Commerce 버전 2.4.9 이상 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 이상 및 2.4.8-p5 릴리스 라인에서 기본값을 재정의하는 경우 Valkey를 사용해야 합니다.
 
 _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}을(를) 참조하십시오.
 

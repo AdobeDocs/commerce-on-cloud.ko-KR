@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: bec442a5b442adafbd23c7c8eac1adbdb7b93b65
+source-git-commit: 5951c3001d665423634f06cd7cc277cd0fd80bbd
 workflow-type: tm+mt
-source-wordcount: 328
+source-wordcount: 391
 ht-degree: 0%
 
 ---
@@ -25,7 +25,9 @@ ht-degree: 0%
 
 [Redis](https://redis.io)은(는) Adobe Commerce에서 기본적으로 사용하는 Zend 프레임워크 Zend_Cache_Backend_File을 대체하는 선택적 백엔드 캐시 솔루션입니다.
 
-_구현 플레이북 모범 사례 안내서_&#x200B;에서 [Redis 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)을 참조하십시오.
+>[!IMPORTANT]
+>
+>Redis 캐시는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p5 이상의 패치 릴리스에서는 지원되지 않습니다. Redis가 지원되지 않는 캐시 구성에 Valkey를 사용합니다. 릴리스별로 지원되는 캐시 서비스에 대해서는 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
 
 {{service-instruction}}
 
@@ -65,6 +67,10 @@ _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Redis 구성](https
 1. [서비스 관계를 확인](services-yaml.md#service-relationships)합니다.
 
 {{service-change-tip}}
+
+## Redis 구성 사용자 지정
+
+Redis 구성 사용자 지정에 대한 자세한 내용은 _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Redis 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)을 참조하십시오.
 
 ## Redis CLI 사용
 
@@ -141,6 +147,6 @@ echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 Redis 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서를 참조하십시오.
 
 - [Redis 문제 지연 관리자 로그인 또는 체크아웃](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
-- [확장된 Redis 캐시 구현 Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=ko)
+- [확장된 Redis 캐시 구현 Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html)
 - [Adobe Commerce에 대한 관리 경고: Redis 메모리 경고 경고](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=ko)
 - [Adobe Commerce에 대한 관리 경고: Redis 메모리 위험 경고](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=ko)
