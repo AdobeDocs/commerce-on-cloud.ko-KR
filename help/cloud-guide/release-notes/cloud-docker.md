@@ -18,9 +18,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
 workflow-type: tm+mt
-source-wordcount: 4496
+source-wordcount: 4509
 ht-degree: 0%
 
 ---
@@ -38,7 +38,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.8 {#latest}
+## v1.4.9 {#latest}
+
+릴리스 날짜: 2026년 7월 20일
+
+- ![새 아이콘](../../assets/new.svg) **RabbitMQ**—RabbitMQ 4.3 지원이 추가되었습니다.<!-- MCLOUD-15140 -->
+
+## v1.4.8
 
 릴리스 날짜: 2026년 5월 6일
 
@@ -159,9 +165,9 @@ ht-degree: 0%
 - ![새 아이콘](../../assets/new.svg) **작성기 2.1**—PHP 8.x 이미지에서 기본적으로 작성기 2.1.x를 설정합니다.
 - ![새 아이콘](../../assets/new.svg) **PHP 이미지 개선**—
 
-   - PHP 8.1 이미지가 추가되었습니다.
-   - 업그레이드된 xDebug 버전 3.1.2
-   - 업그레이드된 xmlrpc 1.0.0RC3
+  - PHP 8.1 이미지가 추가되었습니다.
+  - 업그레이드된 xDebug 버전 3.1.2
+  - 업그레이드된 xmlrpc 1.0.0RC3
 
 - ![수정 아이콘](../../assets/fix.svg) **Elasticsearch 및 OpenSearch 개선 사항**—Elasticsearch 및 OpenSearch Dockerfiles의 개선 사항; Elasticsearch 5.2 이미지를 제거했습니다.
 - ![수정 아이콘](../../assets/fix.svg) **나트륨 확장**—모든 PHP 이미지에서 기본적으로 `sodium` 확장을 사용하도록 설정했습니다.
@@ -174,9 +180,9 @@ ht-degree: 0%
 
 - ![수정 아이콘](../../assets/fix.svg) **개발자 모드 개선 워크플로**—이전에는 빌드 및 배포 단계에서 모드를 지정해야 했습니다. 이제 `build` 단계의 `--mode` 옵션에 따라 이후 `deploy` 단계의 모드가 결정됩니다. 배포 후 모드를 설정할 필요가 없습니다. [개발자 모드](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode).<!-- ACMP-1086 --> 보기
 - ![수정 아이콘](../../assets/fix.svg) **읽기 전용 파일 시스템 개선 사항**—<!-- ACMP-1106 -->
-   - 메일 구성에 대한 PHP 컨테이너를 시작하는 문제를 수정했습니다.
-   - INI 파일에서 환경 변수를 사용할 수 있습니다.
-   - PHP 진입점에 쓰기 권한이 필요하지 않은지 확인하십시오.
+  - 메일 구성에 대한 PHP 컨테이너를 시작하는 문제를 수정했습니다.
+  - INI 파일에서 환경 변수를 사용할 수 있습니다.
+  - PHP 진입점에 쓰기 권한이 필요하지 않은지 확인하십시오.
 - ![수정 아이콘](../../assets/fix.svg) **노드 업데이트**—번들 노드 버전을 업데이트합니다. PHP-CLI 이미지에 노드를 설치할 때 현재 LTS 버전을 사용합니다.<!-- ACMP-1539 -->
 - ![수정 아이콘](../../assets/fix.svg) **Symfony 업데이트**—Adobe Commerce 2.4.4와 호환되도록 Symfony 구성 종속성을 업데이트했습니다.<!-- ACMP-1533 -->
 
@@ -253,43 +259,43 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **컨테이너 업데이트—**
 
-   - ![새 아이콘](../../assets/new.svg) **PHP-FPM 컨테이너**—gnupg PHP 확장에 대한 지원을 추가했습니다. [Zilker Technology에서 G Arvind가 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->
+  - ![새 아이콘](../../assets/new.svg) **PHP-FPM 컨테이너**—gnupg PHP 확장에 대한 지원을 추가했습니다. [Zilker Technology에서 G Arvind가 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->
 
-   - ![수정 아이콘](../../assets/fix.svg) **데이터베이스 컨테이너**—상태 검사 명령에 필요한 데이터베이스 암호를 추가하여 데이터베이스 컨테이너 상태 검사를 해결했습니다.<!--MCLOUD-7122-->
+  - ![수정 아이콘](../../assets/fix.svg) **데이터베이스 컨테이너**—상태 검사 명령에 필요한 데이터베이스 암호를 추가하여 데이터베이스 컨테이너 상태 검사를 해결했습니다.<!--MCLOUD-7122-->
 
-   - ![새 아이콘](../../assets/new.svg) **Elasticsearch 컨테이너**
+  - ![새 아이콘](../../assets/new.svg) **Elasticsearch 컨테이너**
 
-      - 예정된 Adobe Commerce 릴리스와의 호환성을 위해 Elasticsearch 7.9에 대한 지원이 추가되었습니다.<!--MCLOUD-7190-->
+    - 예정된 Adobe Commerce 릴리스와의 호환성을 위해 Elasticsearch 7.9에 대한 지원이 추가되었습니다.<!--MCLOUD-7190-->
 
-      - **Elasticsearch 플러그 인 구성** - `services.yaml` 파일의 Elasticsearch 플러그 인 구성 정보를 사용하여 Commerce 환경용 Cloud Docker의 `docker-compose.yaml` 파일을 생성하는 지원이 추가되었습니다. [Elasticsearch 플러그인](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#elasticsearch-plugins).<!--MCLOUD-2789-->을 참조하세요.
+    - **Elasticsearch 플러그 인 구성** - `services.yaml` 파일의 Elasticsearch 플러그 인 구성 정보를 사용하여 Commerce 환경용 Cloud Docker의 `docker-compose.yaml` 파일을 생성하는 지원이 추가되었습니다. [Elasticsearch 플러그인](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#elasticsearch-plugins).<!--MCLOUD-2789-->을 참조하세요.
 
-      - **Elasticsearch 플러그인 지원**—다음 Elasticsearch 플러그인에 대한 지원이 추가되었습니다. `analysis-icu`, `analysis-phonetic`, `analysis-stempel` 및 `analysis-nori`. 기본적으로 `analysis-icu` 및 `analysis-phonetic` 플러그인이 설치됩니다. 필요에 따라 `analysis-stempel` 및 `analysis-nori` 플러그인을 추가하거나 제거할 수 있습니다.<!--MCLOUD-2789-->
+    - **Elasticsearch 플러그인 지원**—다음 Elasticsearch 플러그인에 대한 지원이 추가되었습니다. `analysis-icu`, `analysis-phonetic`, `analysis-stempel` 및 `analysis-nori`. 기본적으로 `analysis-icu` 및 `analysis-phonetic` 플러그인이 설치됩니다. 필요에 따라 `analysis-stempel` 및 `analysis-nori` 플러그인을 추가하거나 제거할 수 있습니다.<!--MCLOUD-2789-->
 
-   - ![새 아이콘](../../assets/new.svg) **CLI 컨테이너**
+  - ![새 아이콘](../../assets/new.svg) **CLI 컨테이너**
 
-      - **Docker PHP 컨테이너 내에서 명령 실행**—이제 Cloud Docker CLI를 사용하여 호스트에 PHP를 설치하지 않고도 Docker 환경의 PHP 컨테이너 내에서 명령을 실행할 수 있습니다. 예를 들어 `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose` 명령은 구성을 빌드합니다. [Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli)를 참조하십시오. [Zilker Technology에서 G Arvind가 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->
+    - **Docker PHP 컨테이너 내에서 명령 실행**—이제 Cloud Docker CLI를 사용하여 호스트에 PHP를 설치하지 않고도 Docker 환경의 PHP 컨테이너 내에서 명령을 실행할 수 있습니다. 예를 들어 `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose` 명령은 구성을 빌드합니다. [Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli)를 참조하십시오. [Zilker Technology에서 G Arvind가 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->
 
-      - PHP CLI 컨테이너에 OpenSSH-client를 추가했습니다. 이제 `composer.json` 파일에 Composer 명령을 사용하기 위해 ssh 클라이언트가 필요한 개인 git 저장소가 포함된 경우 Composer에 대해 ssh 에이전트 전달을 사용할 수 있습니다.<!--MCLOUD-6008-->
+    - PHP CLI 컨테이너에 OpenSSH-client를 추가했습니다. 이제 `composer.json` 파일에 Composer 명령을 사용하기 위해 ssh 클라이언트가 필요한 개인 git 저장소가 포함된 경우 Composer에 대해 ssh 에이전트 전달을 사용할 수 있습니다.<!--MCLOUD-6008-->
 
-   - ![수정 아이콘](../../assets/fix.svg) **TLS 컨테이너**—이제 [TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)은(는) CentOS 이미지 대신 `https://hub.docker.com/r/magento/magento-cloud-docker-nginx` 도커 이미지를 기반으로 합니다. 이 변경 사항은 Cloud Docker 환경의 컨테이너 간에 HTTPS 요청을 보낼 때 오류가 발생하는 문제를 해결합니다.<!--MCLOUD-6469-->
+  - ![수정 아이콘](../../assets/fix.svg) **TLS 컨테이너**—이제 [TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)은(는) CentOS 이미지 대신 `https://hub.docker.com/r/magento/magento-cloud-docker-nginx` 도커 이미지를 기반으로 합니다. 이 변경 사항은 Cloud Docker 환경의 컨테이너 간에 HTTPS 요청을 보낼 때 오류가 발생하는 문제를 해결합니다.<!--MCLOUD-6469-->
 
-   - ![새 아이콘](../../assets/new.svg) **테스트 컨테이너**—응용 프로그램 테스트를 위한 테스트 컨테이너를 추가하고 Docker `build:compose` 명령에 `--with-test` 옵션을 추가하여 Docker 환경에서 테스트할 때만 컨테이너를 만들었습니다. [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->를 참조하세요.
+  - ![새 아이콘](../../assets/new.svg) **테스트 컨테이너**—응용 프로그램 테스트를 위한 테스트 컨테이너를 추가하고 Docker `build:compose` 명령에 `--with-test` 옵션을 추가하여 Docker 환경에서 테스트할 때만 컨테이너를 만들었습니다. [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->를 참조하세요.
 
-   - ![새 아이콘](../../assets/new.svg) **FPM-XDEBUG 컨테이너**
+  - ![새 아이콘](../../assets/new.svg) **FPM-XDEBUG 컨테이너**
 
-      - ![새 아이콘](../../assets/new.svg) **Linux에서 Xdebug 구성**—Xdebug 컨테이너에서 `host.docker.internal` 값을 구성하기 위해 `ece-docker build:compose` 명령에 `--set-docker-host` 옵션을 추가했습니다. 이 옵션은 Linux 시스템에서 Xdebug를 사용하는 데 필요합니다. [Docker용 Xdebug 구성](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug)을 참조하십시오.<!--MCLOUD-6430-->
+    - ![새 아이콘](../../assets/new.svg) **Linux에서 Xdebug 구성**—Xdebug 컨테이너에서 `host.docker.internal` 값을 구성하기 위해 `ece-docker build:compose` 명령에 `--set-docker-host` 옵션을 추가했습니다. 이 옵션은 Linux 시스템에서 Xdebug를 사용하는 데 필요합니다. [Docker용 Xdebug 구성](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug)을 참조하십시오.<!--MCLOUD-6430-->
 
-      - ![수정 아이콘](../../assets/fix.svg) 로그에서 `uninitialized "with_xdebug" variable` 오류를 해결하기 위해 도커 진입점에 대한 Xdebug 변수 구성을 수정했습니다. [Florent Olivaud에서 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
+    - ![수정 아이콘](../../assets/fix.svg) 로그에서 `uninitialized "with_xdebug" variable` 오류를 해결하기 위해 도커 진입점에 대한 Xdebug 변수 구성을 수정했습니다. [Florent Olivaud에서 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
 
 - ![새 아이콘](../../assets/new.svg) **Docker 구성 변경**
 
-   - **MailHog 구성**—이제 `ece-docker build:compose` 명령 옵션을 사용하여 MailHog를 사용하지 않도록 설정하고 포트를 지정할 수 있습니다. `--no-mailhog`, `--mailhog-http-port` 및 `--mailhog-smtp-port`. [전자 메일 설정](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#set-up-email).<!--MCLOUD-6898, MCLOUD-6660-->을 참조하세요.
+  - **MailHog 구성**—이제 `ece-docker build:compose` 명령 옵션을 사용하여 MailHog를 사용하지 않도록 설정하고 포트를 지정할 수 있습니다. `--no-mailhog`, `--mailhog-http-port` 및 `--mailhog-smtp-port`. [전자 메일 설정](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#set-up-email).<!--MCLOUD-6898, MCLOUD-6660-->을 참조하세요.
 
-   - Commerce 1.2.0 이상용 Cloud Docker의 경우, 이제 Adobe에서 각 패치 버전에 대한 Docker 이미지를 제공하며, Docker 구성 생성기가 최신 버전을 사용하는 대신 지정된 패치 버전으로 Docker 구성을 생성합니다. 이전에는 도커 구성 생성기가 최신 패치 버전을 사용하여 구성을 빌드했습니다. 이로 인해 이전 버전을 사용하여 빌드된 Commerce 환경용 Cloud Docker가 중단될 수 있습니다.<!--MCLOUD-7093-->
+  - Commerce 1.2.0 이상용 Cloud Docker의 경우, 이제 Adobe에서 각 패치 버전에 대한 Docker 이미지를 제공하며, Docker 구성 생성기가 최신 버전을 사용하는 대신 지정된 패치 버전으로 Docker 구성을 생성합니다. 이전에는 도커 구성 생성기가 최신 패치 버전을 사용하여 구성을 빌드했습니다. 이로 인해 이전 버전을 사용하여 빌드된 Commerce 환경용 Cloud Docker가 중단될 수 있습니다.<!--MCLOUD-7093-->
 
-   - **사용자 지정 클라우드 도커 구성에서 사용자 지정 이미지 및 버전 지정**—사용자 지정 도커 구성 파일(`docker-compose.yaml`)을 생성할 때 사용자 지정 이미지 및 버전을 지정하는 옵션이 있는 `build:custom:compose` 명령을 업데이트했습니다. [사용자 지정 도커 구성 작성](https://developer.adobe.com/commerce/cloud-tools/docker/configure/custom-docker-compose)을 참조하십시오. <!--MCLOUD-7089-->
+  - **사용자 지정 클라우드 도커 구성에서 사용자 지정 이미지 및 버전 지정**—사용자 지정 도커 구성 파일(`docker-compose.yaml`)을 생성할 때 사용자 지정 이미지 및 버전을 지정하는 옵션이 있는 `build:custom:compose` 명령을 업데이트했습니다. [사용자 지정 도커 구성 작성](https://developer.adobe.com/commerce/cloud-tools/docker/configure/custom-docker-compose)을 참조하십시오. <!--MCLOUD-7089-->
 
-   - 모든 CLI 컨테이너에서 Adobe Commerce(`https://magento2.docker`)에 액세스할 수 있도록 포트 443을 표시하도록 도커 호스트 구성을 업데이트했습니다. 도커 구성 파일을 생성할 때 `--tls-port` 옵션을 추가하여 기본 포트를 변경할 수 있습니다.<!--MCLOUD-6806-->
+  - 모든 CLI 컨테이너에서 Adobe Commerce(`https://magento2.docker`)에 액세스할 수 있도록 포트 443을 표시하도록 도커 호스트 구성을 업데이트했습니다. 도커 구성 파일을 생성할 때 `--tls-port` 옵션을 추가하여 기본 포트를 변경할 수 있습니다.<!--MCLOUD-6806-->
 
 - ![수정 아이콘](../../assets/fix.svg) `app/etc/env.php` 파일이 있는 경우 Commerce용 Cloud Docker 빌드가 실패하는 문제를 해결했습니다.<!--MCLOUD-6732-->
 
@@ -334,49 +340,49 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **컨테이너 업데이트**
 
-   - **Varnish** - 이제 지원되는 버전의 클라우드 애플리케이션 템플릿을 사용하여 클라우드 도커 환경에서 Adobe Commerce을 배포할 때 Varnish가 기본 캐시가 됩니다. [바니시 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container).<!--MCLOUD-2634-->를 참조하세요.
+  - **Varnish** - 이제 지원되는 버전의 클라우드 애플리케이션 템플릿을 사용하여 클라우드 도커 환경에서 Adobe Commerce을 배포할 때 Varnish가 기본 캐시가 됩니다. [바니시 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container).<!--MCLOUD-2634-->를 참조하세요.
 
-   - Cloud Docker 구성 파일을 생성할 때 Varnish 서비스 설치를 건너뛰는 `--no-varnish` 옵션을 추가했습니다.<!--MCLOUD-2634-->
+  - Cloud Docker 구성 파일을 생성할 때 Varnish 서비스 설치를 건너뛰는 `--no-varnish` 옵션을 추가했습니다.<!--MCLOUD-2634-->
 
-   - ![새 아이콘](../../assets/new.svg) **데이터베이스**
+  - ![새 아이콘](../../assets/new.svg) **데이터베이스**
 
-      - MySQL 데이터베이스에 대한 지원이 추가되었습니다. 이제 MariaDB 또는 MySQL을 사용하여 Cloud Docker 환경을 구성할 수 있습니다. [서비스 구성 옵션](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-configuration-options).<!--MCLOUD-5691-->을 참조하세요.
+    - MySQL 데이터베이스에 대한 지원이 추가되었습니다. 이제 MariaDB 또는 MySQL을 사용하여 Cloud Docker 환경을 구성할 수 있습니다. [서비스 구성 옵션](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-configuration-options).<!--MCLOUD-5691-->을 참조하세요.
 
-      - Docker 구성 파일을 생성할 때 데이터베이스 복제에 대한 증가 및 오프셋 설정을 설정하는 기능이 추가되었습니다. [서비스 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers).<!--MCLOUD-5735-->를 참조하세요.
+    - Docker 구성 파일을 생성할 때 데이터베이스 복제에 대한 증가 및 오프셋 설정을 설정하는 기능이 추가되었습니다. [서비스 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers).<!--MCLOUD-5735-->를 참조하세요.
 
-   - ![새 아이콘](../../assets/new.svg) **PHP-FPM**
+  - ![새 아이콘](../../assets/new.svg) **PHP-FPM**
 
-      - PHP 7.4에 대한 지원이 추가되었습니다. [Zilker Technology에서 Mohanela Murugan이 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
+    - PHP 7.4에 대한 지원이 추가되었습니다. [Zilker Technology에서 Mohanela Murugan이 제출한 수정 사항](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
 
-      - 루트 프로젝트 디렉터리의 `php.ini` 파일을 Cloud Docker 환경에 복사하고 사용자 지정 PHP 설정을 PHP-FPM 및 CLI 컨테이너에 적용하는 기능이 추가되었습니다. [PHP 설정 사용자 지정](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings)을 참조하십시오. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
+    - 루트 프로젝트 디렉터리의 `php.ini` 파일을 Cloud Docker 환경에 복사하고 사용자 지정 PHP 설정을 PHP-FPM 및 CLI 컨테이너에 적용하는 기능이 추가되었습니다. [PHP 설정 사용자 지정](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings)을 참조하십시오. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
 
-      - 컨테이너 상태 검사를 추가했습니다. [Zilker Technology에서 Visanth Sampath가 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
+    - 컨테이너 상태 검사를 추가했습니다. [Zilker Technology에서 Visanth Sampath가 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
 
-   - ![수정 아이콘](../../assets/fix.svg) **Node.js** - 보안을 개선하기 위해 기본 Node.js 버전을 버전 8에서 버전 10으로 업데이트했습니다. Node.js 버전 8은 더 이상 사용되지 않으며 버그 수정 또는 보안 패치로 더 이상 업데이트되지 않습니다. [Zilker Technology에서 Mohan Elamurugan이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->
+  - ![수정 아이콘](../../assets/fix.svg) **Node.js** - 보안을 개선하기 위해 기본 Node.js 버전을 버전 8에서 버전 10으로 업데이트했습니다. Node.js 버전 8은 더 이상 사용되지 않으며 버그 수정 또는 보안 패치로 더 이상 업데이트되지 않습니다. [Zilker Technology에서 Mohan Elamurugan이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->
 
-   - ![새 아이콘](../../assets/new.svg) **Elasticsearch**
+  - ![새 아이콘](../../assets/new.svg) **Elasticsearch**
 
-      - Elasticsearch 6.8, 7.2, 7.5 및 7.6.<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860-->에 대한 지원이 추가되었습니다.
+    - Elasticsearch 6.8, 7.2, 7.5 및 7.6.<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860-->에 대한 지원이 추가되었습니다.
 
-      - 도커 구성 구성 파일을 생성할 때 [Elasticsearch 컨테이너 구성](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#elasticsearch-container)을(를) 사용자 지정하는 기능이 추가되었습니다.<!--MCLOUD-3059-->
+    - 도커 구성 구성 파일을 생성할 때 [Elasticsearch 컨테이너 구성](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#elasticsearch-container)을(를) 사용자 지정하는 기능이 추가되었습니다.<!--MCLOUD-3059-->
 
-      - 도커 작성 구성 파일을 생성하기 위한 서비스 구성 옵션에 `--no-es` 옵션을 추가했습니다. 이 옵션을 사용하여 Elasticsearch 컨테이너 설치를 건너뛰고 대신 MySQL 검색을 사용하십시오. 이 옵션은 Adobe Commerce 버전 2.3.5 이하에서만 지원됩니다.<!--MCLOUD-3766-->
+    - 도커 작성 구성 파일을 생성하기 위한 서비스 구성 옵션에 `--no-es` 옵션을 추가했습니다. 이 옵션을 사용하여 Elasticsearch 컨테이너 설치를 건너뛰고 대신 MySQL 검색을 사용하십시오. 이 옵션은 Adobe Commerce 버전 2.3.5 이하에서만 지원됩니다.<!--MCLOUD-3766-->
 
-   - ![새 아이콘](../../assets/new.svg) **FPM-XDEBUG 컨테이너**—Cloud Docker 환경에서 PHP를 디버깅하기 위해 Xdebug를 설치하고 구성하는 서비스 구성 옵션이 추가되었습니다. [Xdebug 구성](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug).<!--MCLOUD-4098-->을 참조하십시오.
+  - ![새 아이콘](../../assets/new.svg) **FPM-XDEBUG 컨테이너**—Cloud Docker 환경에서 PHP를 디버깅하기 위해 Xdebug를 설치하고 구성하는 서비스 구성 옵션이 추가되었습니다. [Xdebug 구성](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug).<!--MCLOUD-4098-->을 참조하십시오.
 
 - ![새 아이콘](../../assets/new.svg) **Docker 구성 변경**
 
-   - PHP-FPM, Redis, Elasticsearch 및 MySQL Docker 서비스 컨테이너에 대한 상태 검사를 추가했습니다.<!--MCLOUD-3335 and MCLOUD-5856-->
+  - PHP-FPM, Redis, Elasticsearch 및 MySQL Docker 서비스 컨테이너에 대한 상태 검사를 추가했습니다.<!--MCLOUD-3335 and MCLOUD-5856-->
 
-   - 개발자 모드에서 기본 파일 동기화 모드를 `native`(으)로 변경했습니다.<!--MCLOUD-3890 -->
+  - 개발자 모드에서 기본 파일 동기화 모드를 `native`(으)로 변경했습니다.<!--MCLOUD-3890 -->
 
-   - `docker-compose.yml` 파일을 생성할 때 일반 도커 서비스 컨테이너 이미지에 버전 정보를 추가했습니다.<!--MCLOUD-3878-->
+  - `docker-compose.yml` 파일을 생성할 때 일반 도커 서비스 컨테이너 이미지에 버전 정보를 추가했습니다.<!--MCLOUD-3878-->
 
-   - Nginx 서버의 `fastcgi_buffers` 값을 늘려 업스트림 PHP-FPM 컨테이너에서 큰 응답을 처리하는 기능이 향상되었습니다.<!--MCLOUD-5980-->
+  - Nginx 서버의 `fastcgi_buffers` 값을 늘려 업스트림 PHP-FPM 컨테이너에서 큰 응답을 처리하는 기능이 향상되었습니다.<!--MCLOUD-5980-->
 
-   - `vendor` 디렉터리의 파일을 동기화하는 두 번째 동기화 세션을 추가하여 가변 파일 동기화 성능을 개선했습니다. 이 변경 사항으로 인해 파일 동기화 프로세스 중에 돌연변이가 중단되는 것을 방지할 수 있습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
+  - `vendor` 디렉터리의 파일을 동기화하는 두 번째 동기화 세션을 추가하여 가변 파일 동기화 성능을 개선했습니다. 이 변경 사항으로 인해 파일 동기화 프로세스 중에 돌연변이가 중단되는 것을 방지할 수 있습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
 
-   - ![새 아이콘](../../assets/new.svg) **CLI 명령 업데이트**
+  - ![새 아이콘](../../assets/new.svg) **CLI 명령 업데이트**
 
 | 액션 | 명령 |
 | -------- | --------------- |
@@ -415,72 +421,72 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **컨테이너 업데이트**—
 
-   - ![새 아이콘](../../assets/new.svg) **PHP-FPM 컨테이너**—
+  - ![새 아이콘](../../assets/new.svg) **PHP-FPM 컨테이너**—
 
-      - ![새 아이콘](../../assets/new.svg) **Node.js 지원이 추가됨**—PHP 컨테이너 내의 node, npm 및 grunt-cli 기능을 지원하도록 PHP-FPM 이미지를 업데이트했습니다.<!--MAGECLOUD-3953-->
+    - ![새 아이콘](../../assets/new.svg) **Node.js 지원이 추가됨**—PHP 컨테이너 내의 node, npm 및 grunt-cli 기능을 지원하도록 PHP-FPM 이미지를 업데이트했습니다.<!--MAGECLOUD-3953-->
 
-      - ![새 아이콘](../../assets/new.svg) **[ionCube](https://www.ioncube.com/)**&#x200B;에 대한 지원이 추가됨—로컬 Docker 개발 환경에서 ionCube를 지원하도록 기본 Docker 구성이 업데이트되었습니다.<!--MAGECLOUD-4354-->
+    - ![새 아이콘](../../assets/new.svg) **[ionCube](https://www.ioncube.com/)**&#x200B;에 대한 지원이 추가됨—로컬 Docker 개발 환경에서 ionCube를 지원하도록 기본 Docker 구성이 업데이트되었습니다.<!--MAGECLOUD-4354-->
 
-   - ![새 아이콘](../../assets/new.svg) **웹 컨테이너**—
+  - ![새 아이콘](../../assets/new.svg) **웹 컨테이너**—
 
-      - ![새 아이콘](../../assets/new.svg) **NGINX 구성 사용자 지정**—사용자 지정 `nginx.conf` 파일을 Commerce 환경용 Cloud Docker에 탑재하는 기능이 추가되었습니다. [웹 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#web-container).<!--MAGECLOUD-4204-->를 참조하세요.
+    - ![새 아이콘](../../assets/new.svg) **NGINX 구성 사용자 지정**—사용자 지정 `nginx.conf` 파일을 Commerce 환경용 Cloud Docker에 탑재하는 기능이 추가되었습니다. [웹 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#web-container).<!--MAGECLOUD-4204-->를 참조하세요.
 
-      - ![새 아이콘](../../assets/new.svg) **자동으로 생성된 NGINX 인증서**—이제 Docker 구성 파일에 웹 컨테이너에 대한 NGINX 인증서를 자동으로 생성하는 구성이 포함됩니다.<!--MAGECLOUD-4258-->
+    - ![새 아이콘](../../assets/new.svg) **자동으로 생성된 NGINX 인증서**—이제 Docker 구성 파일에 웹 컨테이너에 대한 NGINX 인증서를 자동으로 생성하는 구성이 포함됩니다.<!--MAGECLOUD-4258-->
 
-   - ![새 아이콘](../../assets/new.svg) **새 Selenium 컨테이너**—MTF(Magento Functional Testing Framework)를 사용하여 Adobe Commerce 응용 프로그램 테스트를 지원하기 위해 [Selenium 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#selenium-container)를 추가했습니다.<!--MAGECLOUD-4040-->
+  - ![새 아이콘](../../assets/new.svg) **새 Selenium 컨테이너**—MTF(Magento Functional Testing Framework)를 사용하여 Adobe Commerce 응용 프로그램 테스트를 지원하기 위해 [Selenium 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#selenium-container)를 추가했습니다.<!--MAGECLOUD-4040-->
 
-   - ![새 아이콘](../../assets/new.svg) **[!DNL RabbitMQ]버전 지원**—[!DNL RabbitMQ] 버전 3.8을 지원하도록 [!DNL RabbitMQ] 컨테이너 구성을 업데이트했습니다.<!--MAGECLOUD-4674-->
+  - ![새 아이콘](../../assets/new.svg) **[!DNL RabbitMQ]버전 지원**—[!DNL RabbitMQ] 버전 3.8을 지원하도록 [!DNL RabbitMQ] 컨테이너 구성을 업데이트했습니다.<!--MAGECLOUD-4674-->
 
-   - ![수정 아이콘](../../assets/fix.svg) **영구 데이터베이스 컨테이너**—Docker 구성을 중지했다가 제거하고 Docker 구성을 다시 시작하면 `magento-db: /var/lib/mysql` 데이터베이스 볼륨이 이제 유지됩니다. 이제 데이터베이스 볼륨을 수동으로 삭제해야 합니다. [데이터베이스 컨테이너].<!--MAGECLOUD-3978-->를 참조하세요.
+  - ![수정 아이콘](../../assets/fix.svg) **영구 데이터베이스 컨테이너**—Docker 구성을 중지했다가 제거하고 Docker 구성을 다시 시작하면 `magento-db: /var/lib/mysql` 데이터베이스 볼륨이 이제 유지됩니다. 이제 데이터베이스 볼륨을 수동으로 삭제해야 합니다. [데이터베이스 컨테이너].<!--MAGECLOUD-3978-->를 참조하세요.
 
-   - ![새 아이콘](../../assets/new.svg) **TLS 컨테이너**—
+  - ![새 아이콘](../../assets/new.svg) **TLS 컨테이너**—
 
-      - ![새 아이콘](../../assets/new.svg) **공식 이미지를 사용하도록 컨테이너 기본 이미지를 업데이트했습니다**—이제 [Cloud TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container) 이미지가 공식 `debian:jessie` 도커 이미지를 기반으로 합니다.—<!--MAGECLOUD-4163-->
+    - ![새 아이콘](../../assets/new.svg) **공식 이미지를 사용하도록 컨테이너 기본 이미지를 업데이트했습니다**—이제 [Cloud TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container) 이미지가 공식 `debian:jessie` 도커 이미지를 기반으로 합니다.—<!--MAGECLOUD-4163-->
 
-      - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시&rbrack;**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.&lbrack;
+    - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시&rbrack;**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.&lbrack;
 
-         - **`TimeOut`** - 시간을 첫 번째 바이트(TTFB) 시간 초과 값으로 설정합니다. 기본값은 300초입니다.
+      - **`TimeOut`** - 시간을 첫 번째 바이트(TTFB) 시간 초과 값으로 설정합니다. 기본값은 300초입니다.
 
-         - **`RewriteLocation`** - 기본적으로 파운드 프록시가 위치를 요청 URL에 다시 쓸지 여부를 결정합니다. 다시 작성으로 인해 외부 SSO 사이트와 같은 외부 웹 사이트로의 리디렉션이 중단되지 않도록 하려면 기본값이 `0`입니다. [Sorin Sugar에서 수정 제출됨](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
+      - **`RewriteLocation`** - 기본적으로 파운드 프록시가 위치를 요청 URL에 다시 쓸지 여부를 결정합니다. 다시 작성으로 인해 외부 SSO 사이트와 같은 외부 웹 사이트로의 리디렉션이 중단되지 않도록 하려면 기본값이 `0`입니다. [Sorin Sugar에서 수정 제출됨](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
 
-      - ![새 아이콘](../../assets/new.svg) TLS 컨테이너 구성의 시간 제한 값을 15초에서 300초로 늘렸습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+    - ![새 아이콘](../../assets/new.svg) TLS 컨테이너 구성의 시간 제한 값을 15초에서 300초로 늘렸습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
-   - ![새 아이콘](../../assets/new.svg) **바니시 컨테이너**—
+  - ![새 아이콘](../../assets/new.svg) **바니시 컨테이너**—
 
-      - ![새 아이콘](../../assets/new.svg) **공식 이미지를 사용하도록 컨테이너 기본 이미지를 업데이트했습니다**—이제 [Cloud 바니시 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container)가 공식 `centos` 도커 이미지를 기반으로 합니다.<!--MAGECLOUD-4163-->
+    - ![새 아이콘](../../assets/new.svg) **공식 이미지를 사용하도록 컨테이너 기본 이미지를 업데이트했습니다**—이제 [Cloud 바니시 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container)가 공식 `centos` 도커 이미지를 기반으로 합니다.<!--MAGECLOUD-4163-->
 
-      - ![새 아이콘](../../assets/new.svg) **기본 시간 초과 구성 개선**-바니시 컨테이너에 `.first_byte_timeout` 및 `.between_bytes_timeout` 구성 추가 두 시간 제한 값은 모두 기본적으로 `300s`(5분)입니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+    - ![새 아이콘](../../assets/new.svg) **기본 시간 초과 구성 개선**-바니시 컨테이너에 `.first_byte_timeout` 및 `.between_bytes_timeout` 구성 추가 두 시간 제한 값은 모두 기본적으로 `300s`(5분)입니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
-      - ![수정 아이콘](../../assets/fix.svg) **Xdebug 세션 중 바니시 건너뛰기**—Xdebug가 활성화된 경우 받은 요청에 대해 `pass`을(를) 반환하도록 바니시 컨테이너 구성을 업데이트했습니다. 이전 릴리스에서는 도커 환경에 Varnish가 포함된 경우 Xdebug를 사용할 수 없었습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
+    - ![수정 아이콘](../../assets/fix.svg) **Xdebug 세션 중 바니시 건너뛰기**—Xdebug가 활성화된 경우 받은 요청에 대해 `pass`을(를) 반환하도록 바니시 컨테이너 구성을 업데이트했습니다. 이전 릴리스에서는 도커 환경에 Varnish가 포함된 경우 Xdebug를 사용할 수 없었습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
 
 - ![새 아이콘](../../assets/new.svg) **Docker 구성 변경**—
 
-   - ![새 아이콘](../../assets/new.svg) **프로젝트의 마운트 및 볼륨 관리**—로컬 개발을 위해 Docker 환경을 시작할 때 마운트 및 볼륨을 관리하는 기능을 추가했습니다. [프로젝트 데이터 공유]를 참조하십시오.<!--MAGECLOUD-3248-->
+  - ![새 아이콘](../../assets/new.svg) **프로젝트의 마운트 및 볼륨 관리**—로컬 개발을 위해 Docker 환경을 시작할 때 마운트 및 볼륨을 관리하는 기능을 추가했습니다. [프로젝트 데이터 공유]를 참조하십시오.<!--MAGECLOUD-3248-->
 
-   - ![새 아이콘](../../assets/new.svg) **네트워크 브리지 모드 지원**—로컬 네트워크를 통해 Docker 컨테이너 간 연결을 사용하도록 네트워크 브리지 모드에 대한 지원을 추가했습니다.<!--MAGECLOUD-4165-->
+  - ![새 아이콘](../../assets/new.svg) **네트워크 브리지 모드 지원**—로컬 네트워크를 통해 Docker 컨테이너 간 연결을 사용하도록 네트워크 브리지 모드에 대한 지원을 추가했습니다.<!--MAGECLOUD-4165-->
 
-   - ![새 아이콘](../../assets/new.svg) **Cron 컨테이너가 기본적으로 비활성화되어 있음**—성능을 개선하기 위해 Docker 환경을 빌드할 때 Cron 컨테이너가 더 이상 기본적으로 구성되지 않습니다. Docker 빌드 명령의 `--with-cron` 옵션을 사용하여 Cron 컨테이너를 환경에 추가할 수 있습니다. [cron 작업 관리](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#manage-cron-jobs).<!--MAGECLOUD-5181-->를 참조하십시오.
+  - ![새 아이콘](../../assets/new.svg) **Cron 컨테이너가 기본적으로 비활성화되어 있음**—성능을 개선하기 위해 Docker 환경을 빌드할 때 Cron 컨테이너가 더 이상 기본적으로 구성되지 않습니다. Docker 빌드 명령의 `--with-cron` 옵션을 사용하여 Cron 컨테이너를 환경에 추가할 수 있습니다. [cron 작업 관리](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#manage-cron-jobs).<!--MAGECLOUD-5181-->를 참조하십시오.
 
-   - ![새 아이콘](../../assets/new.svg) **대용량 백업 파일 동기화 중지**—DB 덤프 및 보관 파일(ZIP, SQL, GZ 및 BZ2)을 `dist/docker-sync.yml` 및 `dist/mutagen.sh` 파일의 제외 목록에 추가했습니다. 대용량 파일(>1GB)을 동기화하면 사용하지 않는 기간이 발생할 수 있으며 백업 파일을 다시 생성할 수 있으므로 동기화가 일반적으로 필요하지 않습니다.<!--MAGECLOUD-3979-->
+  - ![새 아이콘](../../assets/new.svg) **대용량 백업 파일 동기화 중지**—DB 덤프 및 보관 파일(ZIP, SQL, GZ 및 BZ2)을 `dist/docker-sync.yml` 및 `dist/mutagen.sh` 파일의 제외 목록에 추가했습니다. 대용량 파일(>1GB)을 동기화하면 사용하지 않는 기간이 발생할 수 있으며 백업 파일을 다시 생성할 수 있으므로 동기화가 일반적으로 필요하지 않습니다.<!--MAGECLOUD-3979-->
 
 - ![새 아이콘](../../assets/new.svg) **명령 변경**—
 
-   - ![수정 아이콘](../../assets/fix.svg) `./bin/docker` 파일이 기존 Docker 이진 파일을 덮어쓰므로 일부 Docker 환경이 중단되는 문제를 해결하기 위해 `./bin/docker` 파일의 이름을 `./bin/magento-docker`(으)로 변경했습니다. 스크립트와 명령을 업데이트해야 하는 [이전 버전과 호환되지 않는 변경 내용](backward-incompatible-changes.md)입니다.<!-- MAGECLOUD-4038 -->
+  - ![수정 아이콘](../../assets/fix.svg) `./bin/docker` 파일이 기존 Docker 이진 파일을 덮어쓰므로 일부 Docker 환경이 중단되는 문제를 해결하기 위해 `./bin/docker` 파일의 이름을 `./bin/magento-docker`(으)로 변경했습니다. 스크립트와 명령을 업데이트해야 하는 [이전 버전과 호환되지 않는 변경 내용](backward-incompatible-changes.md)입니다.<!-- MAGECLOUD-4038 -->
 
-   - ![새 아이콘](../../assets/new.svg) **데이터베이스 포트를 호스트에 표시하는 서비스 구성 옵션을 추가했습니다.**—`docker-compose.yml` 파일을 작성할 때 데이터베이스 포트를 호스트에 표시하려면 `--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>` 옵션을 사용하십시오. `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
+  - ![새 아이콘](../../assets/new.svg) **데이터베이스 포트를 호스트에 표시하는 서비스 구성 옵션을 추가했습니다.**—`docker-compose.yml` 파일을 작성할 때 데이터베이스 포트를 호스트에 표시하려면 `--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>` 옵션을 사용하십시오. `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-   - ![새 아이콘](../../assets/new.svg) **새 배포 후 명령** - 이전에는 `cloud-deploy` 명령을 사용하여 Adobe Commerce을 Cloud Docker 컨테이너에 배포한 후 `.magento.app.yaml` 파일에 정의된 배포 후 후크가 자동으로 실행되었습니다. 이제 배포한 후 배포 후 후크를 실행하려면 별도의 `cloud-post-deploy` 명령을 실행해야 합니다. [개발자](https://developer.adobe.com/commerce/cloud-tools/docker/deploy) 및 [프로덕션](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode) 모드에 대해 업데이트된 실행 지침을 참조하십시오.<!--MAGECLOUD-3996-->
+  - ![새 아이콘](../../assets/new.svg) **새 배포 후 명령** - 이전에는 `cloud-deploy` 명령을 사용하여 Adobe Commerce을 Cloud Docker 컨테이너에 배포한 후 `.magento.app.yaml` 파일에 정의된 배포 후 후크가 자동으로 실행되었습니다. 이제 배포한 후 배포 후 후크를 실행하려면 별도의 `cloud-post-deploy` 명령을 실행해야 합니다. [개발자](https://developer.adobe.com/commerce/cloud-tools/docker/deploy) 및 [프로덕션](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode) 모드에 대해 업데이트된 실행 지침을 참조하십시오.<!--MAGECLOUD-3996-->
 
-   - ![새 아이콘](../../assets/new.svg) 빌드 및 배포 컨테이너에 대한 `./bin/magento-docker` 명령에 `--rm` 옵션을 추가했습니다. 작업이 완료되면 컨테이너가 제거됩니다.<!--MAGECLOUD-4205-->
+  - ![새 아이콘](../../assets/new.svg) 빌드 및 배포 컨테이너에 대한 `./bin/magento-docker` 명령에 `--rm` 옵션을 추가했습니다. 작업이 완료되면 컨테이너가 제거됩니다.<!--MAGECLOUD-4205-->
 
-   - ![새 아이콘](../../assets/new.svg) **명령 `build:compose`에 대한 업데이트**—
+  - ![새 아이콘](../../assets/new.svg) **명령 `build:compose`에 대한 업데이트**—
 
-      - ![새 아이콘](../../assets/new.svg) 개발자 모드에서 Docker 구성 파일을 생성할 때 파일 동기화를 사용하지 않도록 하기 위해 `docker-build` 명령에 `--sync-engine="native"` 옵션을 추가했습니다. 로컬 도커 개발을 위해 파일 동기화가 필요하지 않은 Linux 시스템에서 개발할 때 이 옵션을 사용합니다. [도커 환경에서 데이터 동기화](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data)를 참조하십시오.<!--MCLOUD-3231, MCLOUD-3890-->
+    - ![새 아이콘](../../assets/new.svg) 개발자 모드에서 Docker 구성 파일을 생성할 때 파일 동기화를 사용하지 않도록 하기 위해 `docker-build` 명령에 `--sync-engine="native"` 옵션을 추가했습니다. 로컬 도커 개발을 위해 파일 동기화가 필요하지 않은 Linux 시스템에서 개발할 때 이 옵션을 사용합니다. [도커 환경에서 데이터 동기화](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data)를 참조하십시오.<!--MCLOUD-3231, MCLOUD-3890-->
 
-   - ![새 아이콘](../../assets/new.svg) 기본 파일 동기화 설정을 `docker-sync`에서 `native`(으)로 변경했습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
+  - ![새 아이콘](../../assets/new.svg) 기본 파일 동기화 설정을 `docker-sync`에서 `native`(으)로 변경했습니다. [Zilker Technology에서 Mathew Beane이 제출한 수정 내용](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
 
 - ![새 아이콘](../../assets/new.svg) **유효성 검사 개선 사항**—
 
-   - ![새 아이콘](../../assets/new.svg) 로컬 Docker 개발 환경에 대한 배포 프로세스에 유효성 검사를 추가하여 클라우드 환경 구성에 데이터베이스를 해독하는 데 필요한 암호화 키가 포함되어 있는지 확인했습니다. 이제 환경 구성이 암호화 키의 값을 지정하지 않으면 로그에 오류 메시지가 표시됩니다.<!--MAGECLOUD-4423-->
+  - ![새 아이콘](../../assets/new.svg) 로컬 Docker 개발 환경에 대한 배포 프로세스에 유효성 검사를 추가하여 클라우드 환경 구성에 데이터베이스를 해독하는 데 필요한 암호화 키가 포함되어 있는지 확인했습니다. 이제 환경 구성이 암호화 키의 값을 지정하지 않으면 로그에 오류 메시지가 표시됩니다.<!--MAGECLOUD-4423-->
 
-   - ![새 아이콘](../../assets/new.svg) 빌드 및 배포 처리를 계속하기 전에 서비스가 준비되었는지 확인하기 위해 Elasticsearch 서비스에 컨테이너 상태 검사를 추가했습니다. 상태 검사에서 오류가 반환되면 컨테이너가 자동으로 다시 시작됩니다.<!--MAGECLOUD-4456-->
+  - ![새 아이콘](../../assets/new.svg) 빌드 및 배포 처리를 계속하기 전에 서비스가 준비되었는지 확인하기 위해 Elasticsearch 서비스에 컨테이너 상태 검사를 추가했습니다. 상태 검사에서 오류가 반환되면 컨테이너가 자동으로 다시 시작됩니다.<!--MAGECLOUD-4456-->
