@@ -3,20 +3,12 @@ title: 클라우드 인프라의 Commerce
 description: 클라우드 인프라의 Commerce를 빌드하고, 배포하고, 관리하는 방법에 대해 알아봅니다.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: efe0f95c16d9aab9af6a9c263034b08dce4d7c93
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: bcac8986e748f6e513d4db22ee7eb7f64bac1a3a
 workflow-type: tm+mt
 source-wordcount: 323
 ht-degree: 3%
@@ -36,7 +28,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->보안에 대한 자세한 내용은 [보안 시작 검사 목록](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)을 참조하세요.
+>보안에 대한 자세한 내용은 [보안 시작 검사 목록](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)을 참조하세요.
 
 [기술 스택](architecture/tech-stack.md)을 자세히 보거나 [Commerce용 클라우드 아키텍처](architecture/cloud-architecture.md)의 특정 기능 및 지원 제품에 대해 자세히 알아보십시오.
 
@@ -73,8 +65,8 @@ Commerce on cloud infrastructure 안내서에서는 사용자가 Adobe Commerce 
 
 - [Adobe Commerce 개발자 설명서](https://developer.adobe.com/commerce/docs/)&#x200B;(Adobe Developer 사이트) - 고급 기능 개발, 사용자 지정, 통합, 확장 및 사용
 
-- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html?lang=ko)&#x200B;(Adobe Experience League) - [!DNL Commerce] 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
+- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html)&#x200B;(Adobe Experience League) - [!DNL Commerce] 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2026-05-13 23:38:24 -->
+<!-- Last updated from includes: 2026-07-13 20:49:04 -->
