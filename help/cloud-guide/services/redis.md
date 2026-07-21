@@ -14,20 +14,20 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 5951c3001d665423634f06cd7cc277cd0fd80bbd
+source-git-commit: 9e1fd3699623816ea3368816820daf799a43284f
 workflow-type: tm+mt
-source-wordcount: 391
+source-wordcount: 388
 ht-degree: 0%
 
 ---
 
 # Redis 서비스 설정
 
-[Redis](https://redis.io)은(는) Adobe Commerce에서 기본적으로 사용하는 Zend 프레임워크 Zend_Cache_Backend_File을 대체하는 선택적 백엔드 캐시 솔루션입니다.
+[Redis](https://redis.io)은(는) Adobe Commerce에서 기본적으로 사용하는 `Zend Framework Zend_Cache_Backend_File`을(를) 대체하는 선택적 백엔드 캐시 솔루션입니다.
 
 >[!IMPORTANT]
 >
->Redis 캐시는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p5 이상의 패치 릴리스에서는 지원되지 않습니다. Redis가 지원되지 않는 캐시 구성에 Valkey를 사용합니다. 릴리스별로 지원되는 캐시 서비스에 대해서는 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
+>Redis 캐시는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에서는 지원되지 않습니다. Redis가 지원되지 않는 캐시 구성에 Valkey를 사용합니다. 릴리스별로 지원되는 캐시 서비스에 대해서는 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
 
 {{service-instruction}}
 

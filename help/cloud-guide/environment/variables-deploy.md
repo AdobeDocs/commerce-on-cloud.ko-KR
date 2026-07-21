@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
+source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
 workflow-type: tm+mt
-source-wordcount: 2575
+source-wordcount: 2798
 ht-degree: 0%
 
 ---
@@ -792,6 +792,52 @@ stage:
   deploy:
     UPDATE_URLS: false
 ```
+
+## `USE_LUA`
+
+- **기본값**—`false`
+- **버전**—Adobe Commerce 2.4.7 이상
+
+기본 캐시 프론트엔드에 대해 `env.php`의 `use_lua` 캐시 백 엔드 옵션을 제어합니다(그리고 `symfony_l2` 백 엔드를 사용하는 경우 `stale_cache_enabled` 백 엔드의 원격 백 엔드 옵션). 이 옵션은 `page_cache` 프런트 엔드에 적용되지 않습니다.
+
+Adobe 지원이 명시적으로 다르게 지정하지 않는 한 기본값 `false`을(를) 사용하십시오.
+
+```yaml
+stage:
+  deploy:
+    USE_LUA: false
+```
+
+>[!WARNING]
+>
+>Adobe Commerce 2.4.7 및 2.4.8에서 `USE_LUA: true`을(를) 설정하면 캐시 손상 및 GraphQL 캐시 누락 문제가 발생할 수 있습니다.
+>
+>Adobe Commerce 2.4.9부터 Commerce 버전에 대해 Valkey 캐시 구성 지침을 사용하고 새 배포에 `USE_LUA`을(를) 사용하지 마십시오. [기본 및 페이지 캐시에 대한 Redis 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을 참조하십시오.
+
+## `LUA_KEY`
+
+`LUA_KEY` 변수는 더 이상 사용되지 않습니다. `LUA_KEY`이(가) `.magento.env.yaml`에 포함된 경우 마이그레이션하는 동안 제거하십시오. 대신 `USE_LUA` 및 `USE_LUA_ON_GC` 변수를 사용하십시오.
+
+## `USE_LUA_ON_GC`
+
+- **기본값**—`true`
+- **버전**—Adobe Commerce 2.4.8 이상
+
+가비지 수집을 위해 기본 캐시 프론트엔드에 대한 `env.php`의 `use_lua_on_gc` 캐시 백 엔드 옵션(및 `symfony_l2` 백 엔드를 사용하는 경우 `stale_cache_enabled` 백 엔드의 원격 백 엔드 옵션)을 제어합니다. 이 옵션은 `page_cache` 프런트 엔드에 적용되지 않습니다.
+
+`backend_clean_cache` cron 작업 동안 원자 캐시 태그 정리를 유지하려면 기본값 `true`을(를) 사용합니다.
+
+```yaml
+stage:
+  deploy:
+    USE_LUA_ON_GC: true
+```
+
+>[!WARNING]
+>
+>Adobe Commerce 2.4.8에서 `USE_LUA_ON_GC: false`을(를) 설정하면 태그 기반 캐시 무효화가 자동으로 실패하여 복구할 전체 캐시 플러시가 필요할 수 있습니다.
+>
+>2.4.9 이상에서는 설치된 버전의 [캐시 서비스 지침](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을(를) 따릅니다.
 
 ## `VERBOSE_COMMANDS`
 
