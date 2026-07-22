@@ -1,7 +1,7 @@
 ---
-source-git-commit: 55206749cd121ef6d6139a71af6ff905d4109859
+source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Adobe 콘텐츠에 대한 귀하의 기여 관련 정보
 
-[Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/ko/docs/contributor/contributor-guide/introduction)를 참조하세요.
+[Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)를 참조하세요.
 
 기여 방식은 기여자 및 기여 하고자 하는 변경 사항의 종류에 따라 다릅니다.
 
@@ -40,7 +40,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 
 커뮤니티 기여자는 기본 편집에 GitHub UI를 사용하거나 리포지토리를 포크하여 크게 기여할 수 있습니다.
 
-자세한 내용은 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/ko/docs/contributor/contributor-guide/introduction)를 참조하십시오.
+자세한 내용은 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)를 참조하십시오.
 
 ## Markdown을 사용하여 주제 서식을 지정하는 방법
 
@@ -134,7 +134,9 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 
 ## 사용 가능한 레이크 작업
 
-이 리포지토리는 `adobe-comdox-exl-rake-tasks` gem에서 제공하는 레이크 작업을 사용합니다. 사용 가능한 모든 작업을 보려면 다음을 실행합니다.
+이 저장소에서는
+[`adobe-comdox-exl-rake-tasks`](https://github.com/commerce-docs/adobe-comdox-exl-rake-tasks)
+보석 사용 가능한 모든 작업을 보려면 다음을 실행합니다.
 
 ```bash
 cd _jekyll
@@ -155,10 +157,11 @@ bundle exec rake --tasks
 
 ### 후크가 수행하는 작업
 
-- 스테이징된 이미지 파일(PNG, JPG, JPEG, GIF, SVG) 자동 감지
-- `image_optim`을(를) 실행하여 이미지 압축 및 최적화
+- 스테이징된 이미지 파일(PNG, JPEG, GIF, SVG) 자동 감지
+- `image_optim`을(를) 실행하여 래스터 이미지(PNG, JPEG, GIF)를 압축하고 최적화합니다.
 - 최적화된 이미지 자동 재스테이지
-- 커밋된 모든 이미지가 올바르게 최적화되었는지 확인
+- 커밋된 모든 래스터 이미지가 올바르게 최적화되었는지 확인
+- 크기 제한에 대해 준비된 SVG를 확인하고 SVG이 이를 초과하는 경우 커밋을 중단합니다.
 
 ### 이점
 
