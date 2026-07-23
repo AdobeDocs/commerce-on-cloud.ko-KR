@@ -6,27 +6,14 @@ topic: Architecture
 recommendations: noDisplay
 exl-id: 7c1e895d-0f88-4f11-919a-b3b5748ca5f0
 TQID: https://experienceleague.adobe.com/01S8Fhs8J-qy3nc0lXGg3u17h66rF2Qgs2bRG135tVE
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-subfeature_v2:
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+subfeature_v2: id: df5e974b-6742-4873-a687-a6bedaafdaa2id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
 workflow-type: tm+mt
-source-wordcount: 807
+source-wordcount: 803
 ht-degree: 0%
 
 ---
@@ -39,13 +26,13 @@ ht-degree: 0%
 
 |          | 스타터 | Pro |
 | -------- | --------------------| ------------------ |
-| 핵심 기능 | <ul><li>[모든 Adobe Commerce 기능](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=ko)</li><li>PayPal 온보딩 도구</li><li>[Commerce 보고](https://business.adobe.com/kr/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[모든 Adobe Commerce 기능](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=ko)</li><li>PayPal 온보딩 도구</li><li>[Commerce 보고](https://business.adobe.com/kr/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B 모듈](https://business.adobe.com/kr/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
-| 인프라 및 구축 | <ul><li>무제한 사용자가 포함된 지속적인 클라우드 통합 도구</li><li>Fastly CDN(Content Delivery Network), IO(이미지 최적화) 및 충분한 대역폭 허용으로 보안 강화 웹 응용 프로그램 방화벽(WAF) 서비스는 프로덕션 환경에서만 사용할 수 있습니다.</li><li>[New Relic](../monitor/new-relic-service.md) 선택한 분기 `master` 및 2개의 APM(성능 모니터링)<br>PaaS(Platform as a Service) 프로덕션, 스테이징 및 개발 환경(총 4개의 활성 환경)에서 Adobe Commerce에 최적화되었습니다.</li><li>이그레스 필터링(아웃바운드 방화벽)</li></ul> | <ul><li>무제한 사용자가 포함된 지속적인 클라우드 통합 도구</li><li>Fastly CDN(Content Delivery Network), IO(이미지 최적화) 및 충분한 대역폭 허용으로 보안 강화 웹 응용 프로그램 방화벽(WAF) 서비스는 프로덕션 환경에서만 사용할 수 있습니다.</li><li>프로덕션의 [New Relic](../monitor/new-relic-service.md) 인프라 + 스테이징 및 프로덕션의 APM(성능 모니터링). Adobe Commerce 정책에 대한 [관리 경고 정책](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)은(는) 모니터링 모범 사례를 구현하여 사이트 성능에 영향을 주는 응용 프로그램 및 인프라 문제에 대해 미리 알려줍니다.</li><li>Adobe Commerce에 최적화된 PaaS(Platform as a Service) 기반 [통합 개발](pro-architecture.md#integration-environment) 환경(총 2개의 활성 환경)</li><li>IaaS(Infrastructure as a Service)—스테이징 및 프로덕션 환경을 위한 전용 가상 인프라</li></ul> |
+| 핵심 기능 | <ul><li>[모든 Adobe Commerce 기능](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal 온보딩 도구</li><li>[Commerce 보고](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[모든 Adobe Commerce 기능](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal 온보딩 도구</li><li>[Commerce 보고](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B 모듈](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
+| 인프라 및 구축 | <ul><li>무제한 사용자가 포함된 지속적인 클라우드 통합 도구</li><li>Fastly CDN(Content Delivery Network), IO(이미지 최적화) 및 충분한 대역폭 허용으로 보안 강화 웹 응용 프로그램 방화벽(WAF) 서비스는 프로덕션 환경에서만 사용할 수 있습니다.</li><li>[New Relic](../monitor/new-relic-service.md) 선택한 분기 `master` 및 2개의 APM(성능 모니터링)<br>PaaS(Platform as a Service) 프로덕션, 스테이징 및 개발 환경(총 4개의 활성 환경)에서 Adobe Commerce에 최적화되었습니다.</li></ul> | <ul><li>무제한 사용자가 포함된 지속적인 클라우드 통합 도구</li><li>Fastly CDN(Content Delivery Network), IO(이미지 최적화) 및 충분한 대역폭 허용으로 보안 강화 웹 응용 프로그램 방화벽(WAF) 서비스는 프로덕션 환경에서만 사용할 수 있습니다.</li><li>프로덕션의 [New Relic](../monitor/new-relic-service.md) 인프라 + 스테이징 및 프로덕션의 APM(성능 모니터링). Adobe Commerce 정책에 대한 [관리 경고 정책](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)은(는) 모니터링 모범 사례를 구현하여 사이트 성능에 영향을 주는 응용 프로그램 및 인프라 문제에 대해 미리 알려줍니다.</li><li>Adobe Commerce에 최적화된 PaaS(Platform as a Service) 기반 [통합 개발](pro-architecture.md#integration-environment) 환경(총 2개의 활성 환경)</li><li>IaaS(Infrastructure as a Service)—스테이징 및 프로덕션 환경을 위한 전용 가상 인프라</li></ul> |
 | 고가용성 인프라 | | 엔터프라이즈급 안정성과 가용성을 제공하기 위해 기본 IaaS(Infrastructure as a Service)에서 3개의 서버를 설정한 [고가용성 아키텍처](pro-architecture.md#redundant-hardware) |
 | 전용 하드웨어 | | 기본 IaaS(Infrastructure as a Service)에 있는 전용 하드웨어를 격리하여 더욱 높은 수준의 안정성과 가용성을 제공합니다. |
 | 연중무휴 이메일 지원 | 핵심 애플리케이션 및 클라우드 인프라에 대한 24x7 모니터링 및 이메일 지원 | 핵심 애플리케이션 및 클라우드 인프라에 대한 24x7 모니터링 및 이메일 지원 |
 | 전담 고객 기술 자문 위원(CTA) | | 구독부터 최초 사이트 출시 전까지 최초 출시 기간 동안 전담 기술 계정 관리 |
-| 추가 기능\* | <ul><li>[B2B 모듈](https://business.adobe.com/kr/products/magento/b2b-ecommerce.html)</li></ul> | |
+| 추가 기능\* | <ul><li>[B2B 모듈](https://business.adobe.com/products/magento/b2b-ecommerce.html)</li></ul> | |
 
 \* _추가 요금으로 사용 가능_
 
@@ -67,7 +54,7 @@ ht-degree: 0%
 
 - **통합**—통합 환경은 데이터베이스, 웹 서버, 캐싱, 일부 서비스, 환경 변수 및 구성을 포함하는 테스트 가능한 환경을 제공합니다. 스테이징 환경으로 병합하기 전에 코드를 개발, 배포 및 테스트할 수 있습니다.
 
-   - _비활성_ - `integration` 환경을 기준으로 무제한으로 비활성 분기를 사용할 수 있지만 활성 분기는 하나만 사용할 수 있습니다( `integration` 제외).
+  - _비활성_ - `integration` 환경을 기준으로 무제한으로 비활성 분기를 사용할 수 있지만 활성 분기는 하나만 사용할 수 있습니다( `integration` 제외).
 
 - **스테이징**—스테이징 환경은 사전 프로덕션 테스트용이며 데이터베이스, 웹 서버, 캐싱, 타사 서비스, 환경 변수, 구성 및 서비스(예: Fastly)를 포함합니다.
 
@@ -96,7 +83,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->권장 버전은 _설치 안내서_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
+>권장 버전은 _설치 안내서_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)을 참조하십시오.
 
 Fastly CDN 모듈은 스테이징 및 프로덕션 환경에서 CDN 및 캐싱 서비스에 사용됩니다. [Fastly 서비스 구성](../cdn/fastly.md)을 참조하세요.
 
