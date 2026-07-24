@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 이 사이트에는 클라우드 인프라의 Commerce에 대한 최신 개발자 설명서가 포함되어 있습니다.
 
-- [Commerce on Cloud Infrastructure 안내서](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/overview)
-- 클라우드 인프라에서 [Commerce 시작](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/start/overview)
+- [Commerce on Cloud Infrastructure 안내서](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- 클라우드 인프라에서 [Commerce 시작](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source 행동 수칙
 
@@ -34,7 +34,7 @@ Adobe 커뮤니티에 소속되어 있고 새 문서를 만들거나 주요 변�
 
 ### Adobe 직원의 주요 변경 사항
 
-Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 리포지토리(`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.ko-KR`)를 사용해야 합니다.
+Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 리포지토리(`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`)를 사용해야 합니다.
 
 ## 도구 및 설정
 
@@ -70,7 +70,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 >**참고:**
 >
 >- 템플릿화된 콘텐츠를 생성하려면 터미널의 명령줄에서 작업해야 합니다.
->- 렌더링 스크립트를 실행하려면 루비가 설치되어 있어야 합니다. 필요한 버전은 [_jekyll/.ruby-version] (_jekyll/.ruby-version)을(를) 참조하십시오.
+>- 렌더링 스크립트를 실행하려면 루비가 설치되어 있어야 합니다. 필요한 버전은 [_jekyll/.ruby-version](_jekyll/.ruby-version)을(를) 참조하십시오.
 
 템플릿 컨텐츠의 파일 구조에 대한 설명은 다음을 참조하십시오.
 
@@ -157,11 +157,11 @@ bundle exec rake --tasks
 
 ### 후크가 수행하는 작업
 
-- 스테이징된 이미지 파일(PNG, JPEG, GIF, SVG) 자동 감지
-- `image_optim`을(를) 실행하여 래스터 이미지(PNG, JPEG, GIF)를 압축하고 최적화합니다.
+- 준비된 이미지 파일(`.png`, `.jpeg`, `.jpg`, `.gif`, `.svg`) 자동 감지
+- `image_optim`을(를) 실행하여 래스터 이미지(`.png`, `.jpeg`, `.jpg`, `.gif`)를 압축하고 최적화합니다.
 - 최적화된 이미지 자동 재스테이지
 - 커밋된 모든 래스터 이미지가 올바르게 최적화되었는지 확인
-- 크기 제한에 대해 준비된 SVG를 확인하고 SVG이 이를 초과하는 경우 커밋을 중단합니다.
+- 크기 제한에 대해 준비된 SVG를 확인하고 `help/`에서 크기가 초과된 SVG을 참조하는 경우 커밋을 중단합니다(그렇지 않으면 경고만 함).
 
 ### 이점
 
