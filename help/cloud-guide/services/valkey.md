@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 988a098ec800616898a4ad0ab460a09ec64c4fc3
+source-git-commit: a12aa37d41a68df2fd4c84b589a08e128e5ec103
 workflow-type: tm+mt
-source-wordcount: 259
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -57,6 +57,10 @@ _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 구성](http
         VALKEY_USE_SLAVE_CONNECTION: true
         VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
    ```
+
+   >[!TIP]
+   >
+   >Adobe Commerce 2.4.9 이상의 경우 `VALKEY_BACKEND: symfony_l2`을(를) 설정하여 `RemoteSynchronizedCache` 대신 최신 Symfony 캐시 기반 L2 캐시 구현을 사용할 수 있습니다. _변수 배포_ 참조에서 [`VALKEY_BACKEND`](../environment/variables-deploy.md#valkey_backend)을(를) 참조하십시오.
 
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
 

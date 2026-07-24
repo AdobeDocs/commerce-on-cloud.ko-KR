@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
 workflow-type: tm+mt
-source-wordcount: 855
+source-wordcount: 849
 ht-degree: 0%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 0%
 | [`crons`](crons-property.md) | 사양 업데이트 및 cron 작업 예약 | — | 아니요 |
 | [`dependencies`](#dependencies) | 추가 종속성 활성화 | `php:composer/composer: '2.2.4'` | 아니요 |
 | [`disk`](#disk) | 영구 디스크 크기 정의 | `5120` | 예 |
-| [`firewall`](firewall-property.md) | (초보자 전용) 아웃바운드 트래픽 제어 | — | 아니요 |
 | [`hooks`](hooks-property.md) | 빌드, 배포 및 배포 후 단계에 대해 셸 명령 사용자 지정 | — | 아니요 |
 | [`mounts`](#mounts) | 경로 설정 | 경로:<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | 아니요 |
 | [`name`](#name) | 응용 프로그램 이름 정의 | `mymagento` | 예 |

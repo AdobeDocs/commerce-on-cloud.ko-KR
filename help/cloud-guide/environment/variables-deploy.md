@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
+source-git-commit: 1aaf04500648a72b061db67af39a732871f4e886
 workflow-type: tm+mt
-source-wordcount: 2798
+source-wordcount: 3031
 ht-degree: 0%
 
 ---
@@ -495,17 +495,21 @@ stage:
 ## `VALKEY_BACKEND`
 
 - **기본값**—`Cm_Cache_Backend_Redis`
-- **버전**—Adobe Commerce 2.8.0 이상
+- **버전**—Adobe Commerce 2.4.8 이상
 
 `VALKEY_BACKEND`은(는) Valkey 캐시에 대한 백엔드 모델 구성을 지정합니다.
 
-Adobe Commerce 버전 2.8.0 이상에는 다음 백엔드 모델이 포함되어 있습니다.
+Adobe Commerce 버전 2.4.8 이상에는 다음 백엔드 모델이 포함되어 있습니다.
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-다음 예제에서는 `VALKEY_BACKEND`을(를) 설정하는 방법을 설명합니다.
+Adobe Commerce 2.4.9 이상 버전은 최신 Symfony 캐시 기반 L2 캐시 구현을 가능하게 하는 `symfony_l2` 백엔드 모델도 지원합니다.
+
+### 동기화된 원격 캐시 구성
+
+Adobe Commerce 2.4.8의 경우 다음 예제에서는 `VALKEY_BACKEND`을(를) 동기화된 원격 캐시로 설정하는 방법을 설명합니다.
 
 ```yaml
 stage:
@@ -514,9 +518,23 @@ stage:
   VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
+Valkey 백 엔드 모델로 원격 동기화 캐시를 지정하면 [L2 캐시](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko)가 활성화되고 `ece-tools`이(가) 캐시 구성을 자동으로 생성합니다. [예제 구성 파일](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko#configuration-example)을 참조하십시오. 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
+
+### 최신 Symfony L2 캐시 구현 구성
+
+Adobe Commerce 2.4.9 이상의 경우 다음 예제에서는 `VALKEY_BACKEND`을(를) 최신 Symfony L2 캐시 구현으로 설정하는 방법을 설명합니다.
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: symfony_l2
+```
+
+`symfony_l2`을(를) Valkey 백 엔드 모델로 지정하면 [L2 캐시](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko){target="_blank"}이(가) 활성화되고 `ece-tools`은(는) `default` 프런트 엔드와 `stale_cache_enabled` 프런트 엔드를 포함하여 Valkey 서비스 연결 세부 정보에서 L2 캐시 구성을 자동으로 생성합니다. `CACHE_CONFIGURATION`을(를) 정의하는 것은 선택 사항이며 로컬 캐시 디렉터리와 같은 특정 백엔드 옵션을 사용자 지정하는 데만 필요합니다. 맞춤화 예제는 _Adobe Commerce 구성 가이드_&#x200B;의 [최신 Symfony L2 캐시 구현](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko#modern-symfony-l2-cache-implementation){target="_blank"}과 _구현 플레이북_&#x200B;의 [Symfony L2 캐시 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}을 참조하십시오.
+
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`을(를) Valkey 백 엔드 모델로 지정하여 [L2 캐시](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko)을(를) 사용하도록 설정하면 `ece-tools`이(가) 캐시 구성을 자동으로 생성합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 예제 [구성 파일](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko#configuration-example)을(를) 참조하십시오. 생성된 캐시 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
+>Adobe Commerce 2.4.9에는 ACP2E-5132 패치를 통해 캐시 태그 저장, 무효화 및 압축 등 Symfony L2 캐시가 개선되어 디스크 I/O가 줄어들고 오래된 캐시 항목이 제거되며 메모리 및 네트워크 오버헤드가 감소합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 [향상된 Symfony L2 캐시 성능 및 안정성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko#enhanced-symfony-l2-cache-performance-and-reliability)을(를) 참조하십시오.
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
