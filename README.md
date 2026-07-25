@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -157,11 +157,11 @@ bundle exec rake --tasks
 
 ### 후크가 수행하는 작업
 
-- 스테이징된 이미지 파일(PNG, JPEG, GIF, SVG) 자동 감지
-- `image_optim`을(를) 실행하여 래스터 이미지(PNG, JPEG, GIF)를 압축하고 최적화합니다.
+- 준비된 이미지 파일(`.png`, `.jpeg`, `.jpg`, `.gif`, `.svg`) 자동 감지
+- `image_optim`을(를) 실행하여 래스터 이미지(`.png`, `.jpeg`, `.jpg`, `.gif`)를 압축하고 최적화합니다.
 - 최적화된 이미지 자동 재스테이지
 - 커밋된 모든 래스터 이미지가 올바르게 최적화되었는지 확인
-- 크기 제한에 대해 준비된 SVG를 확인하고 SVG이 이를 초과하는 경우 커밋을 중단합니다.
+- 크기 제한에 대해 준비된 SVG를 확인하고 `help/`에서 크기가 초과된 SVG을 참조하는 경우 커밋을 중단합니다(그렇지 않으면 경고만 함).
 
 ### 이점
 
