@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
+source-git-commit: 898bbc1b96478de6693d7634d4f0cff359ccc12f
 workflow-type: tm+mt
-source-wordcount: 2965
+source-wordcount: 3019
 ht-degree: 0%
 
 ---
@@ -44,7 +44,14 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.16 {#latest}
+## v1.1.17 {#latest}
+
+릴리스 날짜: 2026년 7월 29일
+
+- ![수정 아이콘](../../assets/fix.svg) **Symfony L2 캐시 성능, 안정성 및 태그 관리 최적화**—캐시 확장성 향상, 불필요한 파일 시스템 I/O 감소, 캐시 일관성 향상, 오래된 태그 멤버십 해결, 원격 쓰기 중복, L1 캐시 제거 정리.<!-- ACP2E-5132 -->
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—2026년 7월 격리된 보안 패치의 호환성을 개선했습니다.<!-- AC-17674 -->
+
+## v1.1.16
 
 릴리스 날짜: 2026년 7월 23일
 
