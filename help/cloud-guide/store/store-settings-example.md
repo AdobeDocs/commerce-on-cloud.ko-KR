@@ -4,7 +4,7 @@ description: 클라우드 인프라 환경의 모든 Adobe Commerce에서 스토
 hidefromtoc: true
 source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 _정적 파일 최적화_&#x200B;는 JavaScript 및 CSS(Cascading Style Sheet)를 병합하고 축소하고 HTML 템플릿을 축소하는 것을 의미합니다. [정적 콘텐츠 배포 전략](../deploy/static-content.md)을 참조하세요.
 
-## 전제 조건
+## 사전 요구 사항
 
 이러한 구성 관리 작업을 완료하려면 다음이 필요합니다.
 
