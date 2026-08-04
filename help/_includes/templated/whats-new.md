@@ -1,7 +1,7 @@
 ---
-source-git-commit: cb26cb9e3bf8b7d7c75509d8e3c3c02be439a3f4
+source-git-commit: d552a3e05d9cc81ceb546815c12aa52e7a9b1b40
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '223'
 ht-degree: 2%
 
 ---
@@ -95,28 +95,6 @@ ht-degree: 2%
         기술
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/17ecf47f8cad5dcb53ef92b32377a7074e16bb52">커밋</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026년 6월 1일
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>설명</th>
-      <th>유형</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p><a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Elasticsearch 지원 경고</a>에서 On-Prem에 대한 Elasticsearch 지원 문을 제거했습니다.</p>
-</td>
-      <td>
-        기술
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/65898d2007d69d5bd3b8a9eabb9872ced98b8ffc">커밋</a></td>
     </tr>
   </tbody>
 </table>
