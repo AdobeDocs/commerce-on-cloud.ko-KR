@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools 릴리스, v2002.2.12 이후에 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다. 버전 번호 외에 다른 변경 사항은 없습니다.</p>
+      <td><p>ECE-Tools 릴리스, v2002.2.12 이후에 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다. 버전 번호 외에 다른 변경 사항은 없습니다.</p>
 </td>
       <td>
         기술
@@ -45,7 +45,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>보다 명확한 사전 요구 사항, Cloud Console 초대 상태, 재배포 지침 및 관련 문제 해결을 통해 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access">사용자 액세스 관리</a>를 업데이트했습니다.</p>
+      <td><p>보다 명확한 사전 요구 사항, Cloud Console 초대 상태, 재배포 지침 및 관련 문제 해결을 통해 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/project/user-access">사용자 액세스 관리</a>를 업데이트했습니다.</p>
 </td>
       <td>
         피드백
