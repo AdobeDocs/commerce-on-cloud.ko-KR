@@ -1,8 +1,8 @@
 ---
-source-git-commit: d552a3e05d9cc81ceb546815c12aa52e7a9b1b40
+source-git-commit: c99769c36020dea4b7321c791fd47ee162075ef3
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 2%
+source-wordcount: '122'
+ht-degree: 3%
 
 ---
 # 새로운 기능 템플릿
@@ -51,50 +51,6 @@ ht-degree: 2%
         피드백
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/747367a8808b0b22f810f4e26b94a06ee995281d">커밋</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026년 6월 4일
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>설명</th>
-      <th>유형</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>제한 사항 및 관찰 가능성에 대한 정보로 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/cdn/advanced-security">고급 보안</a> 항목을 업데이트했습니다.</p>
-</td>
-      <td>
-        주요 업데이트
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/54fcde91fb6fd159edadf85146da375692cce0d6">커밋</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026년 6월 2일
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>설명</th>
-      <th>유형</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>기본 잠금 구성과 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> 및 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> 환경 변수가 Pro 및 Starter 환경에 미치는 영향을 명확히 설명했습니다.</p>
-</td>
-      <td>
-        기술
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/17ecf47f8cad5dcb53ef92b32377a7074e16bb52">커밋</a></td>
     </tr>
   </tbody>
 </table>
