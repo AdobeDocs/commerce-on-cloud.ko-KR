@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 898bbc1b96478de6693d7634d4f0cff359ccc12f
+source-git-commit: 643134d5bf2ab03b0c9cace884e9a020a2aebdb7
 workflow-type: tm+mt
-source-wordcount: 3019
+source-wordcount: 3054
 ht-degree: 0%
 
 ---
@@ -44,7 +44,14 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.17 {#latest}
+## v1.1.18 {#latest}
+
+릴리스 날짜: 2026년 8월 11일
+
+- ![수정 아이콘](../../assets/fix.svg) **향상된 패치 처리**—패치는 이제 `composer.json` `replace`을(를) 통해 제거된 Hunks 타깃팅 모듈을 건너뛰고 설치된 나머지 부분을 계속 적용합니다.<!-- MCLOUD-15325 -->
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선**-최신 보안 패치를 적용함<!--MCLOUD-15035 -->
+
+## v1.1.17
 
 릴리스 날짜: 2026년 7월 29일
 
