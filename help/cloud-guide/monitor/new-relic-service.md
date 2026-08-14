@@ -10,9 +10,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 83bab481da52667e8ffb81563109429c7c6b65dd
 workflow-type: tm+mt
-source-wordcount: 456
+source-wordcount: 457
 ht-degree: 0%
 
 ---
@@ -52,4 +52,4 @@ Pro 프로젝트에는 동적 서버 모니터링을 제공하기 위해 응용 
 
 ## New Relic 로그 관리
 
-모든 클라우드 인프라 프로젝트에는 [New Relic 로그 관리](log-management.md)가 포함됩니다. 이 서비스는 스테이징 및 프로덕션 환경에서 모든 로그 데이터를 집계하고 중앙 집중식 로그 관리 대시보드에 표시하도록 사전 구성되어 있습니다.
+모든 Pro Cloud 인프라 프로젝트에는 [New Relic 로그 관리](log-management.md)가 포함됩니다. 이 서비스는 스테이징 및 프로덕션 환경에서 모든 로그 데이터를 집계하고 중앙 집중식 로그 관리 대시보드에 표시하도록 사전 구성되어 있습니다.
