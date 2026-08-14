@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools 릴리스, v2002.2.12 이후에 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다. 버전 번호 외에 다른 변경 사항은 없습니다.</p>
+      <td><p>ECE-Tools 릴리스, v2002.2.12 이후에 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다. 버전 번호 외에 다른 변경 사항은 없습니다.</p>
 </td>
       <td>
         기술
