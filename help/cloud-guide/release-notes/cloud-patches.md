@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 956405dea6be29d239b663f5eebb19a8e043354d
+source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
 workflow-type: tm+mt
-source-wordcount: 2927
+source-wordcount: 2969
 ht-degree: 0%
 
 ---
@@ -44,12 +44,19 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.18 {#latest}
+## v1.1.19 {#latest}
+
+릴리스 날짜: 2026년 8월 19일
+
+- ![수정 아이콘](../../assets/fix.svg) **패치 안정성**—안정적인 클라우드 배포를 위한 향상된 패치 처리<!-- MCLOUD-15325/ACSEC-561/MCLOUD-15451/MCLOUD-15455 -->
+- ![아이콘 수정](../../assets/fix.svg) **캐싱 개선**—Redis 및 Valkey 슬레이브 연결에 대한 Symfony_l2 캐시 지원을 개선하고 관련 캐시, 태그 인덱스, 미리 로드 및 정적 배포 문제를 해결했습니다.<!-- MCLOUD-15433 -->
+
+## v1.1.18
 
 릴리스 날짜: 2026년 8월 11일
 
 - ![수정 아이콘](../../assets/fix.svg) **향상된 패치 처리**—패치는 이제 `composer.json` `replace`을(를) 통해 제거된 Hunks 타깃팅 모듈을 건너뛰고 설치된 나머지 부분을 계속 적용합니다.<!-- MCLOUD-15325 -->
-- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-92](https://helpx.adobe.com/kr/security/products/magento/apsb26-92.html)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15035 -->
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-92](https://helpx.adobe.com/security/products/magento/apsb26-92.html)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -252,7 +259,7 @@ Adobe Commerce 2.3.3-p1 이상 버전용 주요 패치:
 
 인증되지 않은 원격 코드 실행을 초래하는 **중요** 취약성을 해결하기 위해 패치를 업데이트했습니다.<!-- MCLOUD-8479 -->
 
-[Adobe 보안 게시판 APSB22-12](https://helpx.adobe.com/kr/security/products/magento/apsb22-12.html)을 참조하세요.
+[Adobe 보안 게시판 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)을 참조하세요.
 
 ## v1.0.15
 
@@ -269,7 +276,7 @@ Adobe Commerce 2.3.3-p1 이상 버전용 주요 패치:
 
 인증되지 않은 원격 코드 실행을 초래하는 **중요** 취약성을 해결하기 위한 패치를 추가했습니다.<!-- MCLOUD-8461 -->
 
-[Adobe 보안 게시판 APSB22-12](https://helpx.adobe.com/kr/security/products/magento/apsb22-12.html)을 참조하세요.
+[Adobe 보안 게시판 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)을 참조하세요.
 
 ## v1.0.13
 
