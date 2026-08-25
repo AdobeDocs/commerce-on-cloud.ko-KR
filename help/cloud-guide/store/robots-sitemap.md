@@ -57,7 +57,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` 파일에서 `404 error`이(가) 생성되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 `/robots.txt`에서 `/media/robots.txt`(으)로 리디렉션을 제거합니다.
+>`<domain.your.project>/robots.txt` 파일에서 `404 error`이(가) 생성되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 `/robots.txt`에서 `/media/robots.txt`(으)로 리디렉션을 제거합니다.
 
 ## Fastly VCL 코드 조각을 사용하여 다시 작성
 

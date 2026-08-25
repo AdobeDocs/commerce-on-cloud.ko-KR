@@ -28,7 +28,7 @@ Adobe이 클라우드 인프라 구독에서 Commerce을 활성화하면 라이�
 
 ## 클라우드 계정에 등록
 
-클라우드 인프라 계정에 Adobe Commerce이 없는 경우 [판매](https://business.adobe.com/products/magento/get-demo.html)에 문의하십시오. 등록하면 Adobe에서 계정을 만들고 프로젝트 인터페이스에 액세스하는 방법에 대한 지침을 제공하는 시작 이메일을 보냅니다. 이메일에는 계정에 로그인하여 초기 프로젝트 설정을 완료할 수 있는 링크가 포함되어 있습니다.
+클라우드 인프라 계정에 Adobe Commerce이 없는 경우 [판매](https://business.adobe.com/kr/products/magento/get-demo.html)에 문의하십시오. 등록하면 Adobe에서 계정을 만들고 프로젝트 인터페이스에 액세스하는 방법에 대한 지침을 제공하는 시작 이메일을 보냅니다. 이메일에는 계정에 로그인하여 초기 프로젝트 설정을 완료할 수 있는 링크가 포함되어 있습니다.
 
 ## 프로젝트 액세스 및 사용자 추가
 
@@ -40,7 +40,7 @@ Adobe이 클라우드 인프라 구독에서 Commerce을 활성화하면 라이�
 
 ### 공유 계정 액세스
 
-라이선스 소유자는 계정에 대한 공유 액세스를 설정할 수 있습니다. 공유 액세스를 통해 신뢰할 수 있는 직원과 서비스 공급자는 도움말 센터를 사용하여 클라우드 인프라 프로젝트에서 Adobe Commerce과 관련된 지원 티켓을 제출하고 추적할 수 있습니다. 설치 지침은 도움말 센터에서 [공유 액세스](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access) 문서를 참조하십시오.
+라이선스 소유자는 계정에 대한 공유 액세스를 설정할 수 있습니다. 공유 액세스를 통해 신뢰할 수 있는 직원과 서비스 공급자는 도움말 센터를 사용하여 클라우드 인프라 프로젝트에서 Adobe Commerce과 관련된 지원 티켓을 제출하고 추적할 수 있습니다. 설치 지침은 도움말 센터에서 [공유 액세스](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access) 문서를 참조하십시오.
 
 ### [!DNL Cloud Console]
 
@@ -48,7 +48,7 @@ Adobe이 클라우드 인프라 구독에서 Commerce을 활성화하면 라이�
 
 ## Adobe 상태 등록
 
-[상태 페이지](https://status.adobe.com/products/503473)에서 클라우드 인프라 플랫폼 환경 및 관련 서비스의 Adobe Commerce에 대한 업데이트를 가져옵니다.
+[상태 페이지](https://status.adobe.com/kr/products/503473)에서 클라우드 인프라 플랫폼 환경 및 관련 서비스의 Adobe Commerce에 대한 업데이트를 가져옵니다.
 
 이 페이지에서는 Adobe Commerce 구성 요소 및 서비스에 대한 상태 다음에 사고 보고서, 서비스 업그레이드, 계획된 중단 및 예정된 유지 관리에 대한 알림을 제공합니다. 프로젝트에서 작업 중인 모든 사용자는 Adobe Commerce 상태 사이트에 가입하여 이메일 또는 Slack을 통해 이벤트 알림 및 업데이트를 받을 수 있습니다. 지역 및 이벤트별로 특정 제품을 추적하도록 Adobe 상태 구독을 사용자 지정할 수 있습니다.
 

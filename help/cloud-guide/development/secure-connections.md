@@ -38,7 +38,7 @@ SSH(Secure Shell)는 원격 서버 및 시스템에 안전하게 로그인하는
 
 ## 계정에 SSH 공개 키 추가
 
-클라우드 인프라 계정의 Adobe Commerce에 SSH 공개 키를 추가하거나 업데이트한 후, 계정에 [모든 활성 환경을 다시 배포](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)하여 키를 설치하십시오.
+클라우드 인프라 계정의 Adobe Commerce에 SSH 공개 키를 추가하거나 업데이트한 후, 계정에 [모든 활성 환경을 다시 배포](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)하여 키를 설치하십시오.
 
 Cloud CLI 또는 [!DNL Cloud Console] 방법 중 하나를 사용하여 계정에 SSH 키를 추가할 수 있습니다.
 
@@ -164,10 +164,10 @@ sFTP를 구성할 때 SSH 액세스 환경 명령의 정보를 사용하십시�
 
 **Starter 환경 및 Pro 통합 환경**&#x200B;의 경우 [특정 디렉터리에 액세스할 수 있도록 `mount`](../application/properties.md#mounts)을(를) 추가하는 것도 고려해 볼 수 있습니다. 마운트를 `.magento.app.yaml` 파일에 추가합니다. 쓰기 가능한 디렉터리 목록은 [프로젝트 구조](../project/file-structure.md)를 참조하십시오. 이 마운트 지점은 해당 환경에서만 작동합니다.
 
-**Pro 스테이징 및 프로덕션 환경**&#x200B;의 경우 환경에 대한 SSH 액세스 권한이 없는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 sFTP 액세스를 요청하고 탑재 지점에서 특정 폴더(예: `pub/media`)에 액세스해야 합니다.
+**Pro 스테이징 및 프로덕션 환경**&#x200B;의 경우 환경에 대한 SSH 액세스 권한이 없는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 sFTP 액세스를 요청하고 탑재 지점에서 특정 폴더(예: `pub/media`)에 액세스해야 합니다.
 
 >[!NOTE]
->Pro Staging 및 프로덕션의 경우, sFTP 연결이 **not**&#x200B;이(가) 필요한 _일반_ 사용자용인 경우[클라우드 프로젝트에 추가](../project/user-access.md)해야 합니다. **공개** 키가 첨부된 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다. **개인 SSH 키를 제공하지 않습니다.**
+>Pro Staging 및 프로덕션의 경우, sFTP 연결이 **not**&#x200B;이(가) 필요한 _일반_ 사용자용인 경우[클라우드 프로젝트에 추가](../project/user-access.md)해야 합니다. **공개** 키가 첨부된 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다. **개인 SSH 키를 제공하지 않습니다.**
 
 ## SSH 터널링
 

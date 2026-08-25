@@ -24,9 +24,9 @@ ht-degree: 0%
 
 Adobe Commerce은 `crons` 속성을 사용하여 반복 활동을 예약합니다. 특정 작업이 하루 중 특정 시간에 실행되도록 예약하는 데 이상적입니다. 읽기 전용 환경의 특성으로 인해 클라우드 인프라 프로젝트의 Adobe Commerce에 대한 웹 인스턴스에서는 한 번에 하나의 cron 작업만 실행할 수 있습니다. 장기 실행 작업을 대기열에 추가된 더 작은 작업으로 분류하는 것이 좋습니다. 또는 [작업자 인스턴스](workers-property.md)를 빌드할 수 있습니다.
 
-Adobe에서는 `crons`을(를) [파일 시스템 소유자](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)&#x200B;(으)로 실행할 것을 권장합니다. `root` 또는 웹 서버 사용자로 `crons`을(를) _실행 안 함_&#x200B;하세요.
+Adobe에서는 `crons`을(를) [파일 시스템 소유자](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)&#x200B;(으)로 실행할 것을 권장합니다. `root` 또는 웹 서버 사용자로 `crons`을(를) _실행 안 함_&#x200B;하세요.
 
-이 구성은 여러 기본 cron 작업이 있는 Adobe Commerce의 온-프레미스 배포와 다릅니다. _구성 가이드_&#x200B;에서 [cron 작업 구성](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs)을 참조하십시오.
+이 구성은 여러 기본 cron 작업이 있는 Adobe Commerce의 온-프레미스 배포와 다릅니다. _구성 가이드_&#x200B;에서 [cron 작업 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs)을 참조하십시오.
 
 ## cron 작업 설정
 
@@ -66,7 +66,7 @@ Adobe Commerce은 스테이징 및 프로덕션 환경에서 셀프서비스 `cr
 
    >[!NOTE]
    >
-   >`crontab -l` 명령이 `Command not found` 오류를 반환하는 경우(Pro 스테이징 및 프로덕션 환경에만 해당) 프로젝트에서 자동 Crons 셀프 서비스 구성 옵션을 활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
+   >`crontab -l` 명령이 `Command not found` 오류를 반환하는 경우(Pro 스테이징 및 프로덕션 환경에만 해당) 프로젝트에서 자동 Crons 셀프 서비스 구성 옵션을 활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
 
 다음 예제에서는 기본 `crons` 구성만 있는 환경에 대한 `crontab` 출력을 보여 줍니다.
 
@@ -134,7 +134,7 @@ crons:
 >
 >Starter 환경 및 Pro `integration` 환경의 경우 최소 간격은 5분당 한 번입니다. Pro 스테이징 및 프로덕션 환경의 경우 최소 간격은 분당 1회입니다. 기본 최소 간격보다 더 빈번한 간격을 구성할 수는 없습니다.
 
-`.magento.app.yaml` 파일을 사용하여 스테이징 및 프로덕션 환경에 사용자 지정 크론 작업을 추가하려면 먼저 Adobe Commerce Pro 프로젝트에서 [자동 크론 기능](#set-up-cron-jobs)을(를) 사용하도록 설정해야 합니다. 이 기능이 활성화되어 있지 않으면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 자동 크론을 활성화하십시오.
+`.magento.app.yaml` 파일을 사용하여 스테이징 및 프로덕션 환경에 사용자 지정 크론 작업을 추가하려면 먼저 Adobe Commerce Pro 프로젝트에서 [자동 크론 기능](#set-up-cron-jobs)을(를) 사용하도록 설정해야 합니다. 이 기능이 활성화되어 있지 않으면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 자동 크론을 활성화하십시오.
 
 **사용자 지정 크론 작업을 추가하려면**:
 
@@ -208,7 +208,7 @@ Adobe은 Adobe Commerce on cloud infrastructure platform에서 cron 처리를 �
 
 cron 관련 문제를 해결하는 데 도움이 필요하면 다음 Adobe Commerce 지원 문서를 참조하십시오.
 
-- [Cron 작업은 다른 그룹의 작업을 잠급니다.](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups)
+- [Cron 작업은 다른 그룹의 작업을 잠급니다.](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups)
 
-- [클라우드에서 수동으로 중단된 크론 작업 재설정](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud)
+- [클라우드에서 수동으로 중단된 크론 작업 재설정](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud)
 

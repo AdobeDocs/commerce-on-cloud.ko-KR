@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # [!DNL RabbitMQ] 서비스 설정
 
-[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)은(는) [모듈](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
+[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)은(는) [모듈](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
 
 MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사용하여 메시지를 보내고 받는 확장 가능한 플랫폼을 제공합니다. 게재되지 않은 메시지를 저장하는 메커니즘도 포함됩니다. [!DNL RabbitMQ]은(는) AMQP(고급 메시지 대기열 프로토콜) 0.9.1 사양을 기반으로 합니다.
 
@@ -163,7 +163,7 @@ PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 소스 트�
 
 ## [!DNL RabbitMQ] 서비스 문제 해결
 
-[Adobe Commerce Cloud에서 RabbitMQ에 연결할 수 없음](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688)을 참조하십시오.
+[Adobe Commerce Cloud에서 RabbitMQ에 연결할 수 없음](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27688)을 참조하십시오.
 
 ## [!DNL RabbitMQ] 서비스 업그레이드 중
 
@@ -173,4 +173,4 @@ PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 소스 트�
 >
 >업그레이드 또는 다운그레이드를 포함하여 RabbitMQ 서비스 버전을 변경한 후 환경을 다시 배포합니다. 배포 중에 Adobe Commerce은 필요한 RabbitMQ 큐, 교환 및 바인딩을 다시 만드는 설치 작업을 실행합니다.
 >
->일반적인 서비스 업그레이드 지침은 [서비스 버전 변경](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)을 참조하십시오.
+>일반적인 서비스 업그레이드 지침은 [서비스 버전 변경](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)을 참조하십시오.

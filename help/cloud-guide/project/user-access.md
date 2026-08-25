@@ -258,7 +258,7 @@ Adobe Commerce on cloud infrastructure는 다음 애플리케이션 중 하나�
 
      >[!WARNING]
      >
-     >TFA가 있는 계정에 액세스할 수 없고 복구 코드 목록이 없는 경우 프로젝트 관리자에게 문의하거나 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 TFA 애플리케이션을 재설정해야 합니다.
+     >TFA가 있는 계정에 액세스할 수 없고 복구 코드 목록이 없는 경우 프로젝트 관리자에게 문의하거나 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 TFA 애플리케이션을 재설정해야 합니다.
 
 1. TFA 설정을 완료한 후 **저장**&#x200B;을 클릭하여 계정을 업데이트합니다.
 
@@ -311,4 +311,4 @@ MFA 적용이 활성화된 프로젝트의 경우 컴퓨터 사용자 및 자동
 
 ## 이 항목에 대한 추가 도움말
 
-- [Adobe Commerce 클라우드 프로젝트에 사용자를 추가할 수 없습니다](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project) — 사용자 추가에 실패할 때 문제를 해결합니다.
+- [Adobe Commerce 클라우드 프로젝트에 사용자를 추가할 수 없습니다](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project) — 사용자 추가에 실패할 때 문제를 해결합니다.

@@ -32,7 +32,7 @@ _빌드_ 단계는 구성 파일에 정의된 서비스에 대한 컨테이너�
 
 ## ![배포 단계](../../assets/status-deploy.png) 배포 단계
 
-_배포_ 단계에서는 들어오는 요청에 대해 일시적으로 대기 상태로 전환하고 사이트를 [유지 관리 모드](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/setup/application-modes)&#x200B;(으)로 전환합니다. 배포 단계는 새 컨테이너를 사용하며 파일 시스템을 탑재한 후 네트워크 연결을 열고 `.magento.app.yaml` 파일의 `relationships` 섹션에 정의된 서비스를 활성화하고 `.magento.app.yaml` 파일에 정의된 배포 후크를 실행합니다. `.magento.app.yaml` 파일에 정의된 디렉터리를 제외한 모든 항목이 _읽기 전용_&#x200B;입니다. 기본적으로 [`mounts` 속성](../application/properties.md#mounts)에는 다음 디렉터리가 포함됩니다.
+_배포_ 단계에서는 들어오는 요청에 대해 일시적으로 대기 상태로 전환하고 사이트를 [유지 관리 모드](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/setup/application-modes)&#x200B;(으)로 전환합니다. 배포 단계는 새 컨테이너를 사용하며 파일 시스템을 탑재한 후 네트워크 연결을 열고 `.magento.app.yaml` 파일의 `relationships` 섹션에 정의된 서비스를 활성화하고 `.magento.app.yaml` 파일에 정의된 배포 후크를 실행합니다. `.magento.app.yaml` 파일에 정의된 디렉터리를 제외한 모든 항목이 _읽기 전용_&#x200B;입니다. 기본적으로 [`mounts` 속성](../application/properties.md#mounts)에는 다음 디렉터리가 포함됩니다.
 
 - `app/etc` - `env.php` 및 `config.php` 구성 파일을 포함합니다.
 - `pub/media` - 제품 또는 범주와 같은 모든 미디어 데이터를 포함합니다.

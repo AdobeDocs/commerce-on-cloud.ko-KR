@@ -26,7 +26,7 @@ Nginx 인스턴스를 실행하지 않고 웹 인스턴스와 독립적으로 �
 
 작업자는 Pro Staging 및 프로덕션 환경에서만 사용할 수 있습니다. Pro 통합 및 Starter 환경에서는 [CRON_CONSUMER_RUNNER](../environment/variables-deploy.md#cron_consumers_runner) 변수를 사용하도록 선택할 수 있습니다.
 
-Pro 스테이징 또는 프로덕션에서 작업자를 구성하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하고 다음 정보를 포함하십시오.
+Pro 스테이징 또는 프로덕션에서 작업자를 구성하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하고 다음 정보를 포함하십시오.
 
 - 프로젝트 ID
 - 환경 ID

@@ -51,7 +51,7 @@ ht-degree: 0%
 - Adobe Commerce 지원에서는 초기 지원 외에 AWS PrivateLink 문제 해결을 다루지 않습니다.
 - 고객은 자체 VPC 관리와 관련된 비용을 부담합니다.
 - 플랫폼별 **HTTPS 프로토콜(포트 443) 지원:**
-  - **Azure 개인 링크**: [빠른 원본 클로킹](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)&#x200B;(으)로 인해 HTTPS 프로토콜(포트 443)을 사용하여 클라우드 인프라의 Adobe Commerce에 연결할 수 없습니다.
+  - **Azure 개인 링크**: [빠른 원본 클로킹](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/cdn/fastly)&#x200B;(으)로 인해 HTTPS 프로토콜(포트 443)을 사용하여 클라우드 인프라의 Adobe Commerce에 연결할 수 없습니다.
   - **AWS PrivateLink**: HTTPS 프로토콜(포트 443) 연결이 지원됩니다.
 - PrivateDNS를 사용할 수 없습니다.
 
@@ -219,7 +219,7 @@ Telnet 애플리케이션을 사용하여 VPC 엔드포인트 서비스에 대�
 
 ## PrivateLink 구성 변경
 
-기존 PrivateLink 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하십시오. 예를 들어 다음과 같은 변경 사항을 요청할 수 있습니다.
+기존 PrivateLink 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하십시오. 예를 들어 다음과 같은 변경 사항을 요청할 수 있습니다.
 
 - Adobe Commerce on cloud infrastructure Pro 프로덕션 또는 스테이징 환경에서 PrivateLink 연결을 제거합니다.
 - Adobe 엔드포인트 서비스에 액세스하기 위해 고객 클라우드 플랫폼 계정 번호를 변경합니다.
