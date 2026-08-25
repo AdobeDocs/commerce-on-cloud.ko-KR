@@ -1,23 +1,16 @@
 ---
 title: Commerce 관리 패널 액세스
-description: Commerce 관리 패널에 액세스하는 방법을 알아봅니다.
+description: Adobe Commerce 클라우드 인프라 프로젝트에 대한 관리자 액세스를 보호하고, 라이선스 소유자 암호를 재설정하고, 관리 패널에 로그인하는 방법에 대해 알아봅니다.
 recommendations: noDisplay, catalog
 exl-id: 827417b0-9048-44d8-8c82-07befba476c7
 TQID: https://experienceleague.adobe.com/V3BXuCc9aqT5YuyIS8WAZgUdPAYNhQunAgg2i2FCaOs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 362
+source-wordcount: 379
 ht-degree: 0%
 
 ---
@@ -38,8 +31,8 @@ Commerce 관리 패널에 대한 관리 액세스 권한이 있는 사용자는 
 
 >[!TIP]
 >
->암호 재설정이 실패하거나 [관리] 패널에 로그인할 수 없는 경우 관리자 액세스 권한이 있는 사용자는 SSH를 사용하여 프로젝트에 연결할 수 있고 `admin:user:create` CLI 명령을 사용하여 관리자 사용자를 추가할 수 있습니다. _설치 안내서_&#x200B;에서 [관리자 계정 만들기, 편집 또는 잠금 해제](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/tutorials/admin)를 참조하십시오.
+>암호 재설정이 실패하거나 [관리] 패널에 로그인할 수 없는 경우 관리자 액세스 권한이 있는 사용자는 SSH를 사용하여 프로젝트에 연결할 수 있고 `admin:user:create` CLI 명령을 사용하여 관리자 사용자를 추가할 수 있습니다. _설치 안내서_&#x200B;에서 [관리자 계정 만들기, 편집 또는 잠금 해제](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/admin)를 참조하십시오.
 
 ## 사이트 상태 모니터링
 
-[사이트 전체 분석 도구](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/site-wide-analysis-tool/intro)는 Adobe Commerce 설치의 보안 및 운영을 보장하기 위한 자세한 시스템 통찰력과 권장 사항이 포함된 사전 예방적 셀프서비스 도구이자 중앙 저장소입니다. 24시간 연중무휴 실시간 성능 모니터링, 보고서 및 조언을 제공하여 잠재적인 문제를 식별하고 사이트 상태, 안전 및 애플리케이션 구성에 대한 가시성을 향상시킵니다. 이는 해결 시간을 줄이고 사이트 안정성과 성능을 개선하는 데 도움이 됩니다. [관리 패널](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel)에서 바로 사이트 전체 분석 도구에 액세스할 수 있습니다.
+[사이트 전체 분석 도구](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/intro)는 Adobe Commerce 설치의 보안 및 운영을 보장하기 위한 자세한 시스템 통찰력과 권장 사항이 포함된 사전 예방적 셀프서비스 도구이자 중앙 저장소입니다. 24시간 연중무휴 실시간 성능 모니터링, 보고서 및 조언을 제공하여 잠재적인 문제를 식별하고 사이트 상태, 안전 및 애플리케이션 구성에 대한 가시성을 향상시킵니다. 이는 해결 시간을 줄이고 사이트 안정성과 성능을 개선하는 데 도움이 됩니다. [관리 패널](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel)에서 바로 사이트 전체 분석 도구에 액세스할 수 있습니다.
