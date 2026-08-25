@@ -104,7 +104,7 @@ Adobe은 각 환경에 대해 Let&#39;s Encrypt SSL/TLS 인증서를 제공합�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **참고**: 관리자로부터 기본 URL을 업데이트할 수도 있습니다. _Adobe Commerce 스토어 및 구매 경험 가이드_&#x200B;에서 [스토어 URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)을(를) 참조하십시오.
+   **참고**: 관리자로부터 기본 URL을 업데이트할 수도 있습니다. _Adobe Commerce 스토어 및 구매 경험 가이드_&#x200B;에서 [스토어 URL](https://experienceleague.adobe.com/ko/docs/commerce-admin/stores-sales/site-store/store-urls)을(를) 참조하십시오.
 
 1. 사이트가 업데이트될 때까지 몇 분 정도 기다립니다.
 
@@ -118,7 +118,7 @@ Adobe은 각 환경에 대해 Let&#39;s Encrypt SSL/TLS 인증서를 제공합�
 
 - [발신 이메일 테스트 완료](../project/outgoing-emails.md)
 
-- [관리자 자격 증명 및 기본 관리자 URL에 대한 보안 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [관리자 자격 증명 및 기본 관리자 URL에 대한 보안 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/security/security-admin)
 
 - [웹에 대한 모든 이미지 최적화](../cdn/fastly-image-optimization.md)
 
@@ -150,9 +150,9 @@ Adobe은 각 환경에 대해 Let&#39;s Encrypt SSL/TLS 인증서를 제공합�
 
 - [보안 검사 설정](overview.md#set-up-the-security-scan-tool)
 
-- [관리 사용자에 대한 보안 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [관리 사용자에 대한 보안 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/security/security-admin)
 
-- [관리자 URL에 대한 보안 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [관리자 URL에 대한 보안 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [Adobe Commerce on cloud infrastructure 프로젝트에서 더 이상 존재하지 않는 사용자 제거](../project/user-access.md)
 
