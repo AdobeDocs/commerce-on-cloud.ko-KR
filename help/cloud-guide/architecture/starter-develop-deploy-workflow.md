@@ -4,10 +4,17 @@ description: 스타터 개발 및 배포 워크플로우를 사용하는 방법�
 feature: Cloud, Paas
 exl-id: 75d170b6-1ec2-4099-82c8-5c4df3442843
 TQID: https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 2170
@@ -35,7 +42,7 @@ ht-degree: 0%
 
 개발 워크플로우는 다음과 같이 구성됩니다.
 
-- `master`에서 [분기 및 ](#clone-and-branch)을(를) 복제하여 `staging` 및 개발 분기를 만듭니다.
+- `master`에서 [분기 및 &#x200B;](#clone-and-branch)을(를) 복제하여 `staging` 및 개발 분기를 만듭니다.
 - [코드를 개발](#develop-code)하고 [!DNL Composer] 업데이트를 포함하여 개발 분기에 확장을 로컬로 설치합니다.
 - 저장소 및 확장 설정을 [구성](#configure-store)합니다.
 - [구성 생성](#generate-configuration-management-files) 관리 파일
