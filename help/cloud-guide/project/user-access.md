@@ -20,9 +20,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 30e6d068126e2713dcaa23292db5704c23c272ad
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1690
+source-wordcount: 1694
 ht-degree: 0%
 
 ---
@@ -258,7 +258,7 @@ Adobe Commerce on cloud infrastructure는 다음 애플리케이션 중 하나�
 
      >[!WARNING]
      >
-     >TFA가 있는 계정에 액세스할 수 없고 복구 코드 목록이 없는 경우 프로젝트 관리자에게 문의하거나 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 TFA 애플리케이션을 재설정해야 합니다.
+     >TFA가 있는 계정에 액세스할 수 없고 복구 코드 목록이 없는 경우 프로젝트 관리자에게 문의하거나 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 TFA 애플리케이션을 재설정해야 합니다.
 
 1. TFA 설정을 완료한 후 **저장**&#x200B;을 클릭하여 계정을 업데이트합니다.
 

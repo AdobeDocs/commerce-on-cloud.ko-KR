@@ -13,9 +13,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 860
+source-wordcount: 862
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 **`magento-cloud` CLI를 설치하려면**:
 
-1. _로컬 워크스테이션_&#x200B;에서 클라우드 프로젝트를 복제하려는 디렉터리와 [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ko)에게 _쓰기_ 액세스 권한이 있는 디렉터리로 변경합니다.
+1. _로컬 워크스테이션_&#x200B;에서 클라우드 프로젝트를 복제하려는 디렉터리와 [파일 시스템 소유자](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)에게 _쓰기_ 액세스 권한이 있는 디렉터리로 변경합니다.
 
 1. `magento-cloud` CLI를 설치합니다.
 
@@ -148,7 +148,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. 로컬 워크스테이션에서 프로젝트 디렉터리로 변경합니다.
 
-1. [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ko)&#x200B;(으)로 전환합니다.
+1. [파일 시스템 소유자](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)&#x200B;(으)로 전환합니다.
 
 1. 프로젝트에 로그인.
 

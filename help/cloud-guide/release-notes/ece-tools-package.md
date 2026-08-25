@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 3631
 ht-degree: 0%
@@ -206,7 +206,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2022년 10월 27일
 
-- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 Adobe I/O Events 지원이 추가되었습니다**. 이제 확장 개발자는 [Adobe I/O Events](https://developer.adobe.com/events/docs/) 프레임워크를 사용하여 클라우드 인스턴스에서 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)용으로 작성된 응용 프로그램으로 Commerce 이벤트 정보를 보낼 수 있습니다. Adobe Commerce용 Adobe I/O Events이 파트너 미리 보기에 있습니다.<!-- CEXT-932 -->
+- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 Adobe I/O Events 지원이 추가되었습니다**. 이제 확장 개발자는 [Adobe I/O Events](https://developer.adobe.com/events/docs/) 프레임워크를 사용하여 클라우드 인스턴스에서 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/)용으로 작성된 응용 프로그램으로 Commerce 이벤트 정보를 보낼 수 있습니다. Adobe Commerce용 Adobe I/O Events이 파트너 미리 보기에 있습니다.<!-- CEXT-932 -->
 - ![새 아이콘](../../assets/new.svg) **OPcache 구성에 대한 유효성 검사기** - 제외된 경로에 대해 OPcache 구성을 확인하는 유효성 검사기를 추가했습니다.<!-- MCLOUD-9485 -->
 - ![수정 아이콘](../../assets/fix.svg) **GraphQL 캐시 구성 문제를 해결했습니다**—이제 ECE-Tools가 `app/etc/env.php` 파일의 `cache` 구성에서 GraphQL `id_salt` 값을 유지합니다.<!-- MCLOUD-9486 -->
 

@@ -13,7 +13,7 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 574
 ht-degree: 0%
@@ -74,7 +74,7 @@ magento-cloud integration:list
 
 ## Commerce webhooks
 
-[ENABLE_WEBHOOKS 전역 변수](../environment/variables-global.md#enable_webhooks)을(를) 사용하여 클라우드 프로젝트에서 Commerce 웹후크를 구성할 수 있습니다. Commerce 웹후크는 Commerce에서 생성한 이벤트에 대한 응답으로 외부 서버에 요청을 보냅니다. [_Webhooks 안내서_](https://developer.adobe.com/commerce/extensibility/webhooks)에서는 이 기능에 대해 자세히 설명합니다.
+[ENABLE_WEBHOOKS 전역 변수](../environment/variables-global.md#enable_webhooks)을(를) 사용하여 클라우드 프로젝트에서 Commerce 웹후크를 구성할 수 있습니다. Commerce 웹후크는 Commerce에서 생성한 이벤트에 대한 응답으로 외부 서버에 요청을 보냅니다. [_Webhooks 안내서_](https://developer.adobe.com/commerce/extensibility/webhooks/)에서는 이 기능에 대해 자세히 설명합니다.
 
 ## 일반 웹후크
 

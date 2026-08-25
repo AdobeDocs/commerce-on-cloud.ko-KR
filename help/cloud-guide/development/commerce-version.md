@@ -15,24 +15,24 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1020
+source-wordcount: 1024
 ht-degree: 0%
 
 ---
 
 # Commerce 버전 업그레이드
 
-Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 있습니다. 환경을 업그레이드하기 전에 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)에서 최신 소프트웨어 버전 요구 사항을 검토하십시오.
+Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 있습니다. 환경을 업그레이드하기 전에 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)에서 최신 소프트웨어 버전 요구 사항을 검토하십시오.
 
 환경 유형(개발, 스테이징 또는 프로덕션)에 따라 업그레이드 작업에는 다음이 포함될 수 있습니다.
 
 - 타사 확장을 지원되는 최신 버전으로 업그레이드하십시오.
 - Pro 프로젝트의 경우 Adobe Commerce 지원 티켓을 제출하여 스테이징 및 프로덕션 환경에서 서비스를 설치하거나 업데이트해야 합니다.
 - 개발/통합/PR 분기의 경우:
-   - 새 Adobe Commerce 버전과의 호환성을 위해 MariaDB(MySQL), OpenSearch, RabbitMQ 및 Redis의 새 버전으로 `.magento/services.yaml` 파일을 업데이트하십시오.
-   - 후크 및 환경 변수에 대한 새로운 설정으로 `.magento.app.yaml` 파일을 업데이트합니다.
+  - 새 Adobe Commerce 버전과의 호환성을 위해 MariaDB(MySQL), OpenSearch, RabbitMQ 및 Redis의 새 버전으로 `.magento/services.yaml` 파일을 업데이트하십시오.
+  - 후크 및 환경 변수에 대한 새로운 설정으로 `.magento.app.yaml` 파일을 업데이트합니다.
 
 {{upgrade-tip}}
 
@@ -156,7 +156,7 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
 
 1. 현재 적용된 패치를 검토합니다.
 
-   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
+   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
 
    - `.magento.env.yaml` 파일에 [품질 패치]가 적용된 경우 새 버전에 계속 적용할 수 있는지 확인하십시오. `.magento.env.yaml` 파일의 `QUALITY_PATCHES` 섹션에서 적용할 수 없는 패치를 제거합니다.
 

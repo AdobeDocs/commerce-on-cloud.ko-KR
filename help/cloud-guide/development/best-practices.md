@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 696
+source-wordcount: 705
 ht-degree: 0%
 
 ---
@@ -26,29 +26,29 @@ ht-degree: 0%
 
 - **호환성 문제 확인**-
 
-   - 모든 사용자 지정 테마가 새 Adobe Commerce 버전과 호환되는지 확인합니다
+  - 모든 사용자 지정 테마가 새 Adobe Commerce 버전과 호환되는지 확인합니다
 
-   - 타사 및 사용자 지정 확장을 업그레이드한 후 `magento-cloud local:build` 명령을 사용하여 배포하기 전에 Composer 종속성을 확인하고 [호환성 업그레이드 도구](#use-the-upgrade-compatibility-tool)를 실행하여 현재 버전과 대상 버전 간의 코드 수준 비호환성을 식별합니다. 그런 다음 통합, 스테이징 또는 프로덕션에 배포하기 전에 [호환성 업그레이드 도구](https://fluffyjaws.adobe.com/#use-the-upgrade-compatibility-tool)를 사용하여 코드 수준 비호환성을 식별하고 우선 순위를 지정하십시오.
+  - 타사 및 사용자 지정 확장을 업그레이드한 후 `magento-cloud local:build` 명령을 사용하여 배포하기 전에 Composer 종속성을 확인하고 [호환성 업그레이드 도구](#use-the-upgrade-compatibility-tool)를 실행하여 현재 버전과 대상 버전 간의 코드 수준 비호환성을 식별합니다. 그런 다음 통합, 스테이징 또는 프로덕션에 배포하기 전에 [호환성 업그레이드 도구](https://fluffyjaws.adobe.com/#use-the-upgrade-compatibility-tool)를 사용하여 코드 수준 비호환성을 식별하고 우선 순위를 지정하십시오.
 
-   - Adobe Commerce 릴리스 노트 및 확장 설명서 를 검토하여 업그레이드된 Adobe Commerce 버전 및 확장과 관련된 알려진 기능 문제 및 버그를 해결하는 데 필요한 해결 방법 또는 구성 변경 사항을 구현했는지 확인하십시오.
+  - Adobe Commerce 릴리스 노트 및 확장 설명서 를 검토하여 업그레이드된 Adobe Commerce 버전 및 확장과 관련된 알려진 기능 문제 및 버그를 해결하는 데 필요한 해결 방법 또는 구성 변경 사항을 구현했는지 확인하십시오.
 
-   - 설치된 서비스 버전이 새 Adobe Commerce 버전과 호환되는지 확인하고 필요에 따라 서비스를 업그레이드합니다. [서비스](../services/services-yaml.md)를 참조하세요.
+  - 설치된 서비스 버전이 새 Adobe Commerce 버전과 호환되는지 확인하고 필요에 따라 서비스를 업그레이드합니다. [서비스](../services/services-yaml.md)를 참조하세요.
 
-   - 데이터베이스를 테스트하여 Adobe Commerce 버전 및 확장에 대한 업데이트로 인해 발생한 문제를 해결합니다.
+  - 데이터베이스를 테스트하여 Adobe Commerce 버전 및 확장에 대한 업데이트로 인해 발생한 문제를 해결합니다.
 
-   - 원격 환경에 배포하기 전에 환경별 설정을 필요한 대로 업데이트하십시오.
+  - 원격 환경에 배포하기 전에 환경별 설정을 필요한 대로 업데이트하십시오.
 
-   - 검색 서비스 버전이 PHP 클라이언트 버전과 호환되는지 확인하십시오. [Elasticsearch 설정](../services/elasticsearch.md) 또는 [OpenSearch 설정](../services/opensearch.md)을 참조하십시오.
+  - 검색 서비스 버전이 PHP 클라이언트 버전과 호환되는지 확인하십시오. [Elasticsearch 설정](../services/elasticsearch.md) 또는 [OpenSearch 설정](../services/opensearch.md)을 참조하십시오.
 
 - **원격 환경에서 데이터베이스 연결 및 사용 가능한 저장소 확인**-
 
-   - SSH를 사용하여 원격 서버에 로그인하고 MySQL 데이터베이스에 대한 연결을 확인합니다. [데이터베이스에 연결](../services/mysql.md#connect-to-the-database)을 참조하십시오.
+  - SSH를 사용하여 원격 서버에 로그인하고 MySQL 데이터베이스에 대한 연결을 확인합니다. [데이터베이스에 연결](../services/mysql.md#connect-to-the-database)을 참조하십시오.
 
-   - 원격 환경에서 사용 가능한 저장소 확인 - `disk free` 명령을 사용하여 클라우드 환경에서 사용 가능한 디스크 공간을 보고 관리합니다. [디스크 공간 관리](../storage/manage-disk-space.md)를 참조하십시오.
+  - 원격 환경에서 사용 가능한 저장소 확인 - `disk free` 명령을 사용하여 클라우드 환경에서 사용 가능한 디스크 공간을 보고 관리합니다. [디스크 공간 관리](../storage/manage-disk-space.md)를 참조하십시오.
 
-      - 업그레이드된 데이터베이스의 크기를 확인하고 `services.yaml` 파일에 할당된 디스크 공간이 충분한지 확인하십시오.
+    - 업그레이드된 데이터베이스의 크기를 확인하고 `services.yaml` 파일에 할당된 디스크 공간이 충분한지 확인하십시오.
 
-      - 디스크 공간 확보 - 캐시를 지우고 배포하기 전에 `/log` 및 `/tmp` 디렉터리를 정리합니다.
+    - 디스크 공간 확보 - 캐시를 지우고 배포하기 전에 `/log` 및 `/tmp` 디렉터리를 정리합니다.
 
 - **스테이징에 배포하기 전에 로컬 및 통합 환경에서 업그레이드를 계획하고 수행합니다**-업그레이드 후 배포를 테스트하고 문제를 해결합니다.
 
@@ -56,14 +56,14 @@ ht-degree: 0%
 
 - **업그레이드 후 작업 완료**-
 
-   - SSH를 사용하여 원격 서버에 로그인하고 다음을 확인합니다.
+  - SSH를 사용하여 원격 서버에 로그인하고 다음을 확인합니다.
 
-      - 인덱서 상태를 확인하고 필요에 따라 다시 인덱싱합니다. _구성 가이드_&#x200B;에서 [인덱서 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=ko)를 참조하십시오.
+    - 인덱서 상태를 확인하고 필요에 따라 다시 인덱싱합니다. _구성 가이드_&#x200B;에서 [인덱서 관리](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/manage-indexers)를 참조하십시오.
 
-      - Adobe Commerce 데이터베이스에서 `cron` 로그 및 `cron_schedule` 테이블을 확인하여 cron 상태를 확인하고 필요에 따라 cron 작업을 다시 실행하십시오.
-_구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=ko#logging)을 참조하십시오.
+    - Adobe Commerce 데이터베이스에서 `cron` 로그 및 `cron_schedule` 테이블을 확인하여 cron 상태를 확인하고 필요에 따라 cron 작업을 다시 실행하십시오.
+      _구성 가이드_&#x200B;에서 [로깅](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs#logging)을 참조하십시오.
 
-   - 스테이징 및 프로덕션 환경에서 업그레이드 후 사용자 승인 테스트 UAT를 완료하고 서드파티 및 사용자 정의 확장 업그레이드와 관련된 문제를 수정합니다.
+  - 스테이징 및 프로덕션 환경에서 업그레이드 후 사용자 승인 테스트 UAT를 완료하고 서드파티 및 사용자 정의 확장 업그레이드와 관련된 문제를 수정합니다.
 
 ## 업그레이드 호환성 도구 사용
 

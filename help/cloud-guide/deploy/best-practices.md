@@ -18,9 +18,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1979
+source-wordcount: 1982
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 - **서비스 버전 및 관계 및 연결 기능을 확인합니다**
 
-  응용 프로그램에서 사용할 수 있는 서비스를 확인하고 호환되는 최신 버전을 사용 중인지 확인하십시오. 권장 버전은 _설치 안내서_&#x200B;의 [서비스 관계](../services/services-yaml.md#service-relationships) 및 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
+  응용 프로그램에서 사용할 수 있는 서비스를 확인하고 호환되는 최신 버전을 사용 중인지 확인하십시오. 권장 버전은 _설치 안내서_&#x200B;의 [서비스 관계](../services/services-yaml.md#service-relationships) 및 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
 
 - **스테이징 및 프로덕션에 배포하기 전에 로컬에서 및 통합 환경에서 테스트합니다**
 
@@ -95,11 +95,11 @@ ht-degree: 0%
 
   프로덕션에 배포하기 전에 다음 작업을 완료하십시오.
 
-   - [SSH](../development/secure-connections.md)을(를) 사용하여 프로덕션 환경의 세 노드에 모두 연결할 수 있는지 확인하십시오.
+  - [SSH](../development/secure-connections.md)을(를) 사용하여 프로덕션 환경의 세 노드에 모두 연결할 수 있는지 확인하십시오.
 
-   - 인덱서가 _일정에 따라 업데이트_(으)로 설정되어 있는지 확인하십시오. _Extension Developer Guide_&#x200B;에서 [인덱싱 모드](https://developer.adobe.com/commerce/php/development/components/indexing/)를 참조하십시오.
+  - 인덱서가 _일정에 따라 업데이트_(으)로 설정되어 있는지 확인하십시오. _Extension Developer Guide_&#x200B;에서 [인덱싱 모드](https://developer.adobe.com/commerce/php/development/components/indexing/)를 참조하십시오.
 
-   - 프로덕션 코드에서 환경별 변수를 업데이트하고, 서비스 가용성 및 호환성을 확인하고, 기타 필요한 구성을 변경하여 환경을 준비합니다.
+  - 프로덕션 코드에서 환경별 변수를 업데이트하고, 서비스 가용성 및 호환성을 확인하고, 기타 필요한 구성을 변경하여 환경을 준비합니다.
 
 - **배포 프로세스 모니터링**
 
@@ -186,13 +186,13 @@ ht-degree: 0%
 
 두 개의 배포 후크가 있습니다. `pre-deploy.php` 후크는 빌드 후크에서 생성된 리소스 및 코드의 필요한 정리 및 검색을 완료합니다. `php ./vendor/bin/ece-tools deploy` 후크는 일련의 명령과 스크립트를 실행합니다.
 
-- Adobe Commerce이 **설치되지 않음**&#x200B;인 경우 `bin/magento setup:install`과(와) 함께 설치되고 배포 구성, `app/etc/env.php` 및 지정한 환경에 대한 데이터베이스를 업데이트합니다(예: Redis 및 웹 사이트 URL). **중요:** 설치 중에 [처음 배포](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=ko)를 완료하면 Adobe Commerce이 모든 환경에 설치되고 배포되었습니다.
+- Adobe Commerce이 **설치되지 않음**&#x200B;인 경우 `bin/magento setup:install`과(와) 함께 설치되고 배포 구성, `app/etc/env.php` 및 지정한 환경에 대한 데이터베이스를 업데이트합니다(예: Redis 및 웹 사이트 URL). **중요:** 설치 중에 [처음 배포](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/launch/overview)를 완료하면 Adobe Commerce이 모든 환경에 설치되고 배포되었습니다.
 
 - Adobe Commerce **이(가) 설치**&#x200B;된 경우 필요한 업그레이드를 수행하십시오. 배포 스크립트는 `bin/magento setup:upgrade`을(를) 실행하여 데이터베이스 스키마 및 데이터(확장 또는 핵심 코드 업데이트 후 필요)를 업데이트하고 환경에 대한 배포 구성, `app/etc/env.php` 및 데이터베이스도 업데이트합니다. 마지막으로 배포 스크립트는 Adobe Commerce 캐시를 지웁니다.
 
 - 스크립트는 선택적으로 `magento setup:static-content:deploy` 명령을 사용하여 정적 웹 콘텐츠를 생성합니다.
 
-- 정적 콘텐츠 배포 전략에 기본 설정인 `quick`의 범위(빌드 스크립트의 `-s` 플래그)를 사용합니다. 환경 변수 [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)을(를) 사용하여 전략을 사용자 지정할 수 있습니다. 이러한 옵션 및 기능에 대한 자세한 내용은 [정적 파일 배포 전략](../deploy/static-content.md) 및 [정적 보기 파일 배포](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ko)에 대한 `-s` 플래그를 참조하십시오.
+- 정적 콘텐츠 배포 전략에 기본 설정인 `quick`의 범위(빌드 스크립트의 `-s` 플래그)를 사용합니다. 환경 변수 [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)을(를) 사용하여 전략을 사용자 지정할 수 있습니다. 이러한 옵션 및 기능에 대한 자세한 내용은 [정적 파일 배포 전략](../deploy/static-content.md) 및 [정적 보기 파일 배포](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)에 대한 `-s` 플래그를 참조하십시오.
 
 >[!NOTE]
 >

@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2168
+source-wordcount: 2170
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ Adobe Commerce 버전 2.2 이상을 사용하는 경우 구성 관리 명령은 
 
 스테이징 및 통합 환경에서 사용할 테스트 데이터로 프로덕션 데이터를 내보내려면 다음을 수행합니다.
 
-- Adobe Commerce 암호화 키를 사용하여 고객의 보호된 백업을 내보내고 데이터를 저장할 때 [지원 유틸리티를 실행](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ko) CLI 명령(권장)
+- Adobe Commerce 암호화 키를 사용하여 고객의 보호된 백업을 내보내고 데이터를 저장할 때 [지원 유틸리티를 실행](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/run-support-utilities) CLI 명령(권장)
 
 - 데이터를 생성하고 내보내는 [데이터 수집](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/tools/support#data-collector) 도구
 
@@ -185,7 +185,7 @@ Adobe Commerce 버전 2.2 이상을 사용하는 경우 구성 관리 명령은 
 
 >[!NOTE]
 >
->데이터를 다른 환경으로 푸시하기 전에 데이터를 삭제하는 것을 고려해야 합니다. [지원 유틸리티 사용](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ko) 또는 스크립트를 개발하여 고객 데이터를 삭제하는 등 몇 가지 옵션이 있습니다.
+>데이터를 다른 환경으로 푸시하기 전에 데이터를 삭제하는 것을 고려해야 합니다. [지원 유틸리티 사용](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/run-support-utilities) 또는 스크립트를 개발하여 고객 데이터를 삭제하는 등 몇 가지 옵션이 있습니다.
 
 >[!WARNING]
 >

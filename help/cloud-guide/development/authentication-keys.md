@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 318
+source-wordcount: 319
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 Adobe Commerce 저장소에 액세스하고 Adobe Commerce on cloud infrastructure 프로젝트에 대한 설치 및 업데이트 명령을 활성화하려면 인증 키가 있어야 합니다. 작성기 인증 자격 증명을 지정하는 방법에는 두 가지가 있습니다.
 
-- **인증 파일**—cloud infrastructure 루트 디렉터리의 Adobe Commerce에 Adobe Commerce [인증 자격 증명](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=ko)이 들어 있는 파일입니다.
+- **인증 파일**—cloud infrastructure 루트 디렉터리의 Adobe Commerce에 Adobe Commerce [인증 자격 증명](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/prerequisites/authentication-keys)이 들어 있는 파일입니다.
 - **환경 변수** - 실수로 노출되는 것을 방지하기 위해 Adobe Commerce on cloud infrastructure 프로젝트에서 인증 키를 설정하는 환경 변수입니다.
 
 >[!BEGINSHADEBOX]

@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 362
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Commerce 관리 패널에 대한 관리 액세스 권한이 있는 사용자는 
 
 >[!TIP]
 >
->암호 재설정이 실패하거나 [관리] 패널에 로그인할 수 없는 경우 관리자 액세스 권한이 있는 사용자는 SSH를 사용하여 프로젝트에 연결할 수 있고 `admin:user:create` CLI 명령을 사용하여 관리자 사용자를 추가할 수 있습니다. _설치 안내서_&#x200B;에서 [관리자 계정 만들기, 편집 또는 잠금 해제](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ko)를 참조하십시오.
+>암호 재설정이 실패하거나 [관리] 패널에 로그인할 수 없는 경우 관리자 액세스 권한이 있는 사용자는 SSH를 사용하여 프로젝트에 연결할 수 있고 `admin:user:create` CLI 명령을 사용하여 관리자 사용자를 추가할 수 있습니다. _설치 안내서_&#x200B;에서 [관리자 계정 만들기, 편집 또는 잠금 해제](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/tutorials/admin)를 참조하십시오.
 
 ## 사이트 상태 모니터링
 

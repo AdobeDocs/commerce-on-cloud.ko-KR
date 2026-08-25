@@ -21,9 +21,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: e0e1d3994a6b9ceef9e45b55cc9946bc62203ddb
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1667
+source-wordcount: 1650
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->클라우드 플랫폼에 배포된 Adobe Commerce 사이트에 대한 PCI 규정 준수를 유지 관리하려면 스타터 주 분기, Pro 프로덕션 및 Pro 스테이징 환경에서 Fastly를 설정하십시오. Headless 배포에서 Adobe Commerce을 사용하는 경우 Fastly를 사용하여 GraphQL 응답을 캐시하는 것이 좋습니다. *GraphQL 개발자 안내서*&#x200B;에서 [Fastly로 캐싱](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly)을 참조하십시오.
+>클라우드 플랫폼에 배포된 Adobe Commerce 사이트에 대한 PCI 규정 준수를 유지 관리하려면 스타터 주 분기, Pro 프로덕션 및 Pro 스테이징 환경에서 Fastly를 설정하십시오. Headless 배포에서 Adobe Commerce을 사용하는 경우 Fastly를 사용하여 GraphQL 응답을 캐시하는 것이 좋습니다. *GraphQL 개발자 안내서*&#x200B;에서 [Fastly로 캐싱](https://developer.adobe.com/commerce/webapi/graphql/usage/caching#caching-with-fastly)을 참조하십시오.
 
 Fastly는 클라우드 인프라 프로젝트에서 Adobe Commerce에 대한 콘텐츠 전달 작업을 최적화하고 보호하기 위해 다음 서비스를 제공합니다. 이러한 서비스는 추가 비용 없이 클라우드 인프라의 Adobe Commerce에 포함됩니다.
 
@@ -40,25 +40,25 @@ Fastly는 클라우드 인프라 프로젝트에서 Adobe Commerce에 대한 콘
 
 - **캐시 관리** - 대역폭 부하 및 비용을 줄이기 위해 설정한 백엔드 데이터 센터에 사이트 페이지, 자산, CSS 등을 캐시합니다.
 
-   - [Fastly 사용자 지정 VCL 코드 조각](fastly-vcl-custom-snippets.md)(Varnish 2.1 호환)을 사용하여 캐싱이 요청에 응답하는 방식을 수정합니다
+  - [Fastly 사용자 지정 VCL 코드 조각](fastly-vcl-custom-snippets.md)(Varnish 2.1 호환)을 사용하여 캐싱이 요청에 응답하는 방식을 수정합니다
 
-   - [GeoIP 서비스 지원 설정](fastly-custom-cache-configuration.md#configure-geoip-handling)
+  - [GeoIP 서비스 지원 설정](fastly-custom-cache-configuration.md#configure-geoip-handling)
 
-   - [암호화되지 않은 요청을 TLS로 강제 전송](fastly-custom-cache-configuration.md#force-tls)
+  - [암호화되지 않은 요청을 TLS로 강제 전송](fastly-custom-cache-configuration.md#force-tls)
 
-   - 대량 작업 요청에 대해 503 응답을 방지하도록 [Fastly 시간 초과 사용자 지정](fastly-custom-cache-configuration.md#extend-fastly-timeout) 설정
+  - 대량 작업 요청에 대해 503 응답을 방지하도록 [Fastly 시간 초과 사용자 지정](fastly-custom-cache-configuration.md#extend-fastly-timeout) 설정
 
-   - [사용자 지정 오류 응답 페이지 만들기](fastly-custom-response.md)
+  - [사용자 지정 오류 응답 페이지 만들기](fastly-custom-response.md)
 
 - **보안**—Adobe Commerce 사이트에 대해 Fastly 서비스를 사용하도록 설정하면 사이트 및 네트워크를 보호하는 추가 보안 기능을 사용할 수 있습니다.
 
-   - [웹 응용 프로그램 방화벽](fastly-waf-service.md)(WAF) - 클라우드 인프라 사이트 및 네트워크에서 프로덕션 Adobe Commerce을 손상시킬 수 있기 전에 악성 트래픽을 차단하는 PCI 호환 보호 기능을 제공하는 관리되는 웹 응용 프로그램 방화벽 서비스입니다. WAF 서비스는 Pro 및 Starter 프로덕션 환경에서만 사용할 수 있습니다.
+  - [웹 응용 프로그램 방화벽](fastly-waf-service.md)(WAF) - 클라우드 인프라 사이트 및 네트워크에서 프로덕션 Adobe Commerce을 손상시킬 수 있기 전에 악성 트래픽을 차단하는 PCI 호환 보호 기능을 제공하는 관리되는 웹 응용 프로그램 방화벽 서비스입니다. WAF 서비스는 Pro 및 Starter 프로덕션 환경에서만 사용할 수 있습니다.
 
-   - [DDoS(Distributed Denial of Service) 보호](#ddos-protection)—Ping of Death, Smurf 공격 및 기타 ICMP 기반 플러드 공격과 같은 일반적인 레이어 3 및 4 공격에 대한 기본 제공 DDoS 보호입니다. 기본 제공 보호에는 Layer 7 공격에 대한 보호가 포함되지 않습니다. [DDoS 보호](#ddos-protection)를 참조하세요.
+  - [DDoS(Distributed Denial of Service) 보호](#ddos-protection)—Ping of Death, Smurf 공격 및 기타 ICMP 기반 플러드 공격과 같은 일반적인 레이어 3 및 4 공격에 대한 기본 제공 DDoS 보호입니다. 기본 제공 보호에는 Layer 7 공격에 대한 보호가 포함되지 않습니다. [DDoS 보호](#ddos-protection)를 참조하세요.
 
-   - [SSL/TLS 인증서](fastly-configuration.md#provision-ssltls-certificates)—Fastly 서비스를 사용하려면 HTTPS에서 보안 트래픽을 제공하는 SSL/TLS 인증서가 필요합니다.
+  - [SSL/TLS 인증서](fastly-configuration.md#provision-ssltls-certificates)—Fastly 서비스를 사용하려면 HTTPS에서 보안 트래픽을 제공하는 SSL/TLS 인증서가 필요합니다.
 
-     Adobe Commerce은 각 스테이징 및 프로덕션 환경에 대해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe Commerce은 Fastly 설정 프로세스 중에 도메인 유효성 검사 및 인증서 프로비저닝을 완료합니다.
+    Adobe Commerce은 각 스테이징 및 프로덕션 환경에 대해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe Commerce은 Fastly 설정 프로세스 중에 도메인 유효성 검사 및 인증서 프로비저닝을 완료합니다.
 
 - **원본 차단** — Fastly를 통한 모든 트래픽 흐름을 보장하고 원본 서버에 대한 직접 액세스를 차단하는 보안 기능입니다. 아래의 [원본 클로킹](#origin-cloaking) 섹션을 참조하십시오.
 
@@ -128,7 +128,7 @@ Adobe Commerce 프로젝트의 초기 프로비저닝 또는 업그레이드 시
 
 **Fastly API 토큰 자격 증명을 변경하려면**:
 
-1. 새 Fastly API 자격 증명을 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)합니다.
+1. 새 Fastly API 자격 증명을 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)합니다.
 
    새 자격 증명이 필요한 환경 및 클라우드 인프라 프로젝트 ID에 Adobe Commerce을 포함하십시오.
 
@@ -176,18 +176,16 @@ DDOS 보호는 Fastly CDN 서비스에 내장되어 있습니다. Adobe Commerce
 
 >[!NOTE]
 >
->Layer 7 공격에 대한 보호는 Adobe Commerce과 통합된 Fastly CDN 서비스에서 다루지 않습니다. 레이어 7 공격으로부터 보호하는 방법은 *Adobe Commerce 기술 자료*&#x200B;에서 [DDoS 공격 확인](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli) 및 [악의적인 공격을 차단하는 방법](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)을 참조하세요.
+>Layer 7 공격에 대한 보호는 Adobe Commerce과 통합된 Fastly CDN 서비스에서 다루지 않습니다. 레이어 7 공격으로부터 보호하는 방법은 *Adobe Commerce 기술 자료*&#x200B;에서 [악의적인 공격을 차단하는 방법](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)을 참조하세요.
 
 <!--Link definitions-->
 
-[Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
-
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=ko
+[Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching#caching-with-fastly
 
 [Magento 2용 Fastly CDN 모듈]: https://github.com/fastly/fastly-magento2
 
 [Fastly 지원 티켓]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=ko
+[How to block malicious traffic]: https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level
 
 [도메인 작업]: https://docs.fastly.com/en/guides/working-with-domains

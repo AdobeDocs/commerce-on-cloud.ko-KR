@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 5fefabb5795e68abd467a7115bc2a6e554e0d832
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2714'
 ht-degree: 4%
 
 ---
@@ -53,8 +53,8 @@ ht-degree: 4%
 | 104 |  | `.magento.env.yaml` 파일을 구문 분석하지 못했습니다 | `./vendor/magento/ece-tools/config/schema.yaml` 파일에 구성이 정의되지 않았습니다. 구성 변수 이름이 올바르고 정의되어 있는지 확인합니다. |
 | 105 |  | `.magento.env.yaml` 파일을 읽을 수 없습니다. | `./.magento.env.yaml` 파일을 읽을 수 없습니다. 파일 권한을 확인합니다. |
 | 106 |  | `.schema.yaml` 파일을 읽을 수 없습니다. |  |
-| 107 | 사전 배포: clean-redis-cache | Redis 캐시 정리 실패 | Redis 캐시를 정리하지 못했습니다. Redis 캐시 구성이 올바르고 Redis 서비스를 사용할 수 있는지 확인합니다. [Redis 서비스 설정](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html?lang=ko)을 참조하세요. |
-| 140 | 사전 배포: clean-valkey-cache | Valkey 캐시를 정리하지 못했습니다. | Valkey 캐시를 정리하지 못했습니다. Valkey 캐시 구성이 올바르고 Valkey 서비스를 사용할 수 있는지 확인하십시오. [Setup Valkey 서비스](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/valkey.html?lang=ko)를 참조하십시오. |
+| 107 | 사전 배포: clean-redis-cache | Redis 캐시 정리 실패 | Redis 캐시를 정리하지 못했습니다. Redis 캐시 구성이 올바르고 Redis 서비스를 사용할 수 있는지 확인합니다. [Redis 서비스 설정](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/redis)을 참조하세요. |
+| 140 | 사전 배포: clean-valkey-cache | Valkey 캐시를 정리하지 못했습니다. | Valkey 캐시를 정리하지 못했습니다. Valkey 캐시 구성이 올바르고 Valkey 서비스를 사용할 수 있는지 확인하십시오. [Setup Valkey 서비스](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/valkey)를 참조하십시오. |
 | 108 | 사전 배포: set-production-mode | `/bin/magento maintenance:enable` 명령이 실패했습니다. | 자세한 내용은 `cloud.log`을(를) 확인하십시오. 자세한 명령 출력을 보려면 `VERBOSE_COMMANDS: '-vvv'` 옵션을 `.magento.env.yaml` 파일에 추가하십시오. |
 | 109 | validate-config | 잘못된 데이터베이스 구성 | `DATABASE_CONFIGURATION` 환경 변수가 올바르게 구성되어 있는지 확인하십시오. |
 | 110 | validate-config | 잘못된 세션 구성 | `SESSION_CONFIGURATION` 환경 변수가 올바르게 구성되어 있는지 확인하십시오. 구성에는 `save` 매개 변수가 적어도 포함되어야 합니다. |
@@ -78,7 +78,7 @@ ht-degree: 4%
 | 128 | 유지 관리 모드 비활성화 | `/bin/magento maintenance:disable` 명령이 실패했습니다. | 자세한 내용은 `cloud.log`을(를) 확인하십시오. 자세한 명령 출력을 위해 `VERBOSE_COMMANDS: '-vvv'`을(를) `.magento.env.yaml`에 추가하십시오. |
 | 129 | install-update: reset-password | 암호 재설정 템플릿을 읽을 수 없음 |  |
 | 130 | install-update: cache_type | 명령 실패: `php ./bin/magento cache:enable` | `php ./bin/magento cache:enable` 명령은 Adobe Commerce이 설치되어 있지만 배포 시작 시 `./app/etc/env.php` 파일이 없거나 비어 있을 때만 실행됩니다. 자세한 내용은 `cloud.log`을(를) 확인하십시오. 자세한 명령 출력을 위해 `VERBOSE_COMMANDS: '-vvv'`을(를) `.magento.env.yaml`에 추가하십시오. |
-| 131 | install-update | `crypt/key` 키 값이 `./app/etc/env.php` 파일 또는 `CRYPT_KEY` 클라우드 환경 변수에 없습니다. | 이 오류는 Adobe Commerce 배포가 시작될 때 `./app/etc/env.php` 파일이 없거나 `crypt/key` 값이 정의되지 않은 경우 발생합니다. 다른 환경에서 데이터베이스를 마이그레이션한 경우 해당 환경에서 암호화 키 값을 검색합니다. 그런 다음 현재 환경의 [CRYPT_KEY](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=ko#crypt_key) 클라우드 환경 변수에 값을 추가합니다. [Adobe Commerce 암호화 키](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html?lang=ko#gather-credentials)를 참조하세요. 실수로 `./app/etc/env.php` 파일을 제거한 경우 다음 명령을 사용하여 이전 배포에서 만든 백업 파일에서 파일을 복원합니다. `./vendor/bin/ece-tools backup:restore` CLI 명령.&quot; |
+| 131 | install-update | `crypt/key` 키 값이 `./app/etc/env.php` 파일 또는 `CRYPT_KEY` 클라우드 환경 변수에 없습니다. | 이 오류는 Adobe Commerce 배포가 시작될 때 `./app/etc/env.php` 파일이 없거나 `crypt/key` 값이 정의되지 않은 경우 발생합니다. 다른 환경에서 데이터베이스를 마이그레이션한 경우 해당 환경에서 암호화 키 값을 검색합니다. 그런 다음 현재 환경의 [CRYPT_KEY](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#crypt_key) 클라우드 환경 변수에 값을 추가합니다. [Adobe Commerce 암호화 키](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/overview#gather-credentials)를 참조하세요. 실수로 `./app/etc/env.php` 파일을 제거한 경우 다음 명령을 사용하여 이전 배포에서 만든 백업 파일에서 파일을 복원합니다. `./vendor/bin/ece-tools backup:restore` CLI 명령.&quot; |
 | 132 |  | Elasticsearch 서비스에 연결할 수 없음 | 유효한 Elasticsearch 자격 증명을 확인하고 서비스가 실행 중인지 확인하십시오 |
 | 137 |  | OpenSearch 서비스에 연결할 수 없습니다. | 올바른 OpenSearch 자격 증명을 확인하고 서비스가 실행 중인지 확인하십시오. |
 | 133 | validate-config | Adobe Commerce 또는 Magento Open Source 2.4 이상 버전에서 더 이상 지원되지 않는 Magento Braintree 모듈 구성을 제거합니다. | Braintree 모듈에 대한 지원은 더 이상 Adobe Commerce 또는 Magento Open Source 2.4.0 이상에 포함되지 않습니다. `.magento.app.yaml` 파일의 변수 섹션에서 CONFIG__STORES__DEFAULT__PAYMENT_BRAINTREE__CHANNEL 변수를 제거합니다. Braintree 지원의 경우 Commerce Marketplace의 공식 Braintree 결제 확장 프로그램을 대신 사용하십시오. |
@@ -124,7 +124,7 @@ ht-degree: 4%
 | 오류 코드 | 빌드 단계 | 오류 설명(제목) | 제안된 작업 |
 | - | - | - | - |
 | 1001 | validate-config | 파일 app/etc/config.php 이(가) 없습니다. |  |
-| 1002 | validate-config | 입니다./build_options.ini 파일은 더 이상 지원되지 않습니다. |  |
+| 1002 | validate-config | ./build_options.ini 파일은 더 이상 지원되지 않습니다. |  |
 | 1003 | validate-config | 공유 구성 파일에 모듈 섹션이 없습니다. |  |
 | 1004 | validate-config | 구성이 이 버전의 Magento과 호환되지 않습니다. |  |
 | 1005 | validate-config | SCD 옵션이 무시됨 |  |
@@ -135,11 +135,11 @@ ht-degree: 4%
 
 | 오류 코드 | 배포 단계 | 오류 설명(제목) | 제안된 작업 |
 | - | - | - | - |
-| 2001 | 사전 배포:캐시 | 사용할 수 없는 Redis 서비스에 대해 캐시가 구성되었습니다. 구성이 무시됩니다. |  |
-| 2032 | 사전 배포:캐시 | 사용할 수 없는 유효성 검사 서비스에 대해 캐시가 구성되었습니다. 구성이 무시됩니다. |  |
+| 2001 | 사전 배포:cache | 사용할 수 없는 Redis 서비스에 대해 캐시가 구성되었습니다. 구성이 무시됩니다. |  |
+| 2032 | 사전 배포:cache | 사용할 수 없는 유효성 검사 서비스에 대해 캐시가 구성되었습니다. 구성이 무시됩니다. |  |
 | 2002 | validate-config | 구성된 상태가 이상적이지 않음 |  |
 | 2003 | validate-config | 오류 보고를 위한 디렉터리 중첩 수준 값이 구성되지 않았습니다 |  |
-| 2004 | validate-config | 의 잘못된 구성./pub/errors/local.xml 파일입니다. |  |
+| 2004 | validate-config | ./pub/errors/local.xml 파일에 잘못된 구성이 있습니다. |  |
 | 2005 | validate-config | 관리자 데이터는 초기 설치 시에만 관리자 사용자를 만드는 데 사용됩니다. 업그레이드 프로세스 중에 관리 데이터에 대한 모든 변경 사항은 무시됩니다. | 초기 설치 후 구성에서 관리 데이터를 제거할 수 있습니다. |
 | 2006 | validate-config | 관리자 이메일이 설정되지 않았으므로 관리자 사용자가 생성되지 않았습니다. | 설치 후 관리 사용자를 수동으로 만들 수 있습니다. ssh를 사용하여 환경에 연결합니다. 그런 다음 `bin/magento admin:user:create` 명령을 실행합니다. |
 | 2007 | validate-config | php 버전을 권장 버전으로 업데이트 |  |
@@ -162,7 +162,7 @@ ht-degree: 4%
 | 2023 | install-update:split-db | 분할 데이터베이스 활성화가 생략되었습니다. |  |
 | 2024 | install-update:split-db | SPLIT_DB 변수에 분할 연결 유형에 대한 구성이 없습니다. |  |
 | 2025 | install-update:split-db | 슬레이브 연결이 설정되지 않았습니다. |  |
-| 2026 | 사전 배포:복원-쓰기 가능-dirs | 빌드 단계 중에 생성된 일부 데이터를 마운트된 디렉터리에 복원하지 못했습니다. | 자세한 내용은 `cloud.log`을(를) 확인하십시오. |
+| 2026 | 사전 배포:restore-writable-dirs | 빌드 단계 중에 생성된 일부 데이터를 마운트된 디렉터리에 복원하지 못했습니다. | 자세한 내용은 `cloud.log`을(를) 확인하십시오. |
 | 2027 | validate-config:mage-mode-variable | MAGE_MODE 환경 변수의 모드 값이 지원되지 않음 | MAGE_MODE 환경 변수를 제거하거나 값을 &quot;production&quot;으로 변경합니다. Adobe Commerce on cloud infrastructure는 &quot;프로덕션&quot; 모드만 지원합니다. |
 | 2028 | 원격 스토리지 | 원격 저장소를 사용하도록 설정할 수 없습니다. | 원격 스토리지 자격 증명을 확인합니다. |
 | 2030 | validate-config | Elasticsearch 및 OpenSearch 서비스는 모두 인프라 계층에 설치됩니다. Adobe Commerce 및 Magento Open Source 2.4.4 이상 버전은 기본적으로 OpenSearch를 사용합니다 | 리소스 사용을 최적화하려면 인프라 계층에서 Elasticsearch 또는 OpenSearch 서비스를 제거하는 것이 좋습니다. |

@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1186
+source-wordcount: 1187
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ mysql:
 
 ## 서비스 버전
 
-클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원은 클라우드 인프라에서 배포되고 테스트된 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ko)을 참조하십시오.
+클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원은 클라우드 인프라에서 배포되고 테스트된 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
 
 ### 소프트웨어 EOL 확인
 

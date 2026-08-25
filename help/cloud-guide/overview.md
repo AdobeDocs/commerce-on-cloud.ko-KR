@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2026-08-14
-source-git-commit: 95e742c5e1fcdc3f95457a70527a41a5b5a3b677
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 323
+source-wordcount: 324
 ht-degree: 3%
 
 ---
@@ -74,7 +74,7 @@ Commerce on cloud infrastructure 안내서에서는 사용자가 Adobe Commerce 
 
 - [Adobe Commerce 개발자 설명서](https://developer.adobe.com/commerce/docs/)&#x200B;(Adobe Developer 사이트) - 고급 기능 개발, 사용자 지정, 통합, 확장 및 사용
 
-- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html?lang=ko)&#x200B;(Adobe Experience League) - [!DNL Commerce] 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
+- [Adobe Commerce 설명서](https://experienceleague.adobe.com/ko/docs/commerce)&#x200B;(Adobe Experience League) - [!DNL Commerce] 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
 
 {{$include /help/_includes/templated/whats-new.md}}
 

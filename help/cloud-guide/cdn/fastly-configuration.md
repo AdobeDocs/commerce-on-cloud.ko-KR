@@ -16,9 +16,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2234
+source-wordcount: 2254
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Adobe Commerce 관리자로부터 Fastly CDN 서비스를 구성하고 Fastly AP
 
 클라우드 인프라의 Adobe Commerce을 사용하면 Fastly 관리 대시보드에 직접 액세스할 수 없습니다.
 
-Adobe Commerce 관리자를 사용하여 환경에 대한 Fastly 구성을 검토하고 업데이트합니다. 관리자의 Fastly 기능을 사용하여 문제를 해결할 수 없는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko)을 제출하세요.
+Adobe Commerce 관리자를 사용하여 환경에 대한 Fastly 구성을 검토하고 업데이트합니다. 관리자의 Fastly 기능을 사용하여 문제를 해결할 수 없는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)을 제출하세요.
 
 ## Fastly 자격 증명 가져오기
 
@@ -75,9 +75,9 @@ Cloud Starter 프로젝트에서 Cloud Console 또는 Cloud CLI를 사용하여 
 
 - [!DNL Cloud Console]에서 [환경 구성](../project/overview.md#configure-environment)에서 다음 환경 변수를 확인하십시오.
 
-   - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
+  - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
 
-   - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
+  - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
 
 - 로컬 작업 영역의 명령줄에서 `magento-cloud` CLI를 사용하여 Fastly 환경 변수를 [나열하고 검토](../environment/variables-cloud.md#viewing-environment-variables)합니다.
 
@@ -198,12 +198,12 @@ Adobe Commerce 환경에 대한 SSL/TLS 인증서를 활성화하기 위해 Adob
 
 - Pro Staging 및 프로덕션의 경우
 
-   - `mcprod.<your-domain>.com`
-   - `mcstaging.<your-domain>.com`
+  - `mcprod.<your-domain>.com`
+  - `mcstaging.<your-domain>.com`
 
 - 스타터 프로덕션의 경우:
 
-   - `mcprod.<your-domain>.com`
+  - `mcprod.<your-domain>.com`
 
 이러한 기본 사전 프로덕션 URL은 프로젝트가 프로비저닝된 후에 사용할 수 있습니다. `"your-domain"`의 값은 온보딩 프로세스 중에 지정한 도메인 이름입니다.
 
@@ -350,4 +350,4 @@ Adobe에서는 스테이징 및 프로덕션 환경의 Fastly 모듈을 [최신 
 
 >[!TIP]
 >
-> Adobe Commerce 환경에서 Fastly 서비스에 문제가 있는 경우 [Adobe Commerce Fastly 문제 해결사](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter)를 참조하세요.
+> Adobe Commerce 환경에서 Fastly 서비스에 문제가 있는 경우 [Adobe Commerce Fastly 문제 해결사](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-29661)를 참조하세요.

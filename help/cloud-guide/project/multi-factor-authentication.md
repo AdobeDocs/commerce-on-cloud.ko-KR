@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1080
+source-wordcount: 1084
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->MFA는 기본적으로 클라우드 프로젝트에서 활성화되지 않습니다. 클라우드 인프라 프로젝트의 Adobe Commerce 계정 소유자가 활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다. MFA가 활성화되면 프로젝트 환경에 대한 SSH 액세스를 위해 모든 사용자는 Adobe Commerce on cloud infrastructure 계정에서 TFA(2단계 인증)가 활성화되어 있어야 합니다.
+>MFA는 기본적으로 클라우드 프로젝트에서 활성화되지 않습니다. 클라우드 인프라 프로젝트의 Adobe Commerce 계정 소유자가 활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다. MFA가 활성화되면 프로젝트 환경에 대한 SSH 액세스를 위해 모든 사용자는 Adobe Commerce on cloud infrastructure 계정에서 TFA(2단계 인증)가 활성화되어 있어야 합니다.
 
 ## SSH 액세스용 인증서
 

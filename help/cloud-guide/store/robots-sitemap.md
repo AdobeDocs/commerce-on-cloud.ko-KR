@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 612
+source-wordcount: 616
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` 파일에서 `404 error`이(가) 생성되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하여 `/robots.txt`에서 `/media/robots.txt`(으)로 리디렉션을 제거합니다.
+>`<domain.your.project>/robots.txt` 파일에서 `404 error`이(가) 생성되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 `/robots.txt`에서 `/media/robots.txt`(으)로 리디렉션을 제거합니다.
 
 ## Fastly VCL 코드 조각을 사용하여 다시 작성
 

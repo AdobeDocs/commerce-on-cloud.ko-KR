@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 849
+source-wordcount: 857
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ disk: 5120
 
 >[!NOTE]
 >
->Pro 스테이징 및 프로덕션 환경의 경우 응용 프로그램에 대한 `mounts` 및 `disk` 구성을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다. 티켓을 제출할 때 필요한 구성 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 파일 버전을 포함하십시오.
+>Pro 스테이징 및 프로덕션 환경의 경우 응용 프로그램에 대한 `mounts` 및 `disk` 구성을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다. 티켓을 제출할 때 필요한 구성 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 파일 버전을 포함하십시오.
 >
 >스태이징 또는 프로덕션의 디스크 저장소를 일시적으로 늘릴 수는 없으며, 이 프로세스는 되돌릴 수 없습니다.
 
@@ -198,7 +198,7 @@ mounts:
 
 >[!NOTE]
 >
->Pro 스테이징 및 프로덕션 환경의 경우 응용 프로그램에 대한 `mounts` 및 `disk` 구성을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다. 티켓을 제출할 때 필요한 구성 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 파일 버전을 포함하십시오.
+>Pro 스테이징 및 프로덕션 환경의 경우 응용 프로그램에 대한 `mounts` 및 `disk` 구성을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다. 티켓을 제출할 때 필요한 구성 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 파일 버전을 포함하십시오.
 
 마운트 웹을 [`web`](web-property.md) 위치 블록에 추가하여 액세스할 수 있도록 할 수 있습니다.
 

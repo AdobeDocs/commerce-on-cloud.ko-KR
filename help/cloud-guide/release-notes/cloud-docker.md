@@ -18,7 +18,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 4509
 ht-degree: 0%
@@ -475,7 +475,7 @@ ht-degree: 0%
 
   - ![새 아이콘](../../assets/new.svg) **데이터베이스 포트를 호스트에 표시하는 서비스 구성 옵션을 추가했습니다.**—`docker-compose.yml` 파일을 작성할 때 데이터베이스 포트를 호스트에 표시하려면 `--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>` 옵션을 사용하십시오. `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-  - ![새 아이콘](../../assets/new.svg) **새 배포 후 명령** - 이전에는 `cloud-deploy` 명령을 사용하여 Adobe Commerce을 Cloud Docker 컨테이너에 배포한 후 `.magento.app.yaml` 파일에 정의된 배포 후 후크가 자동으로 실행되었습니다. 이제 배포한 후 배포 후 후크를 실행하려면 별도의 `cloud-post-deploy` 명령을 실행해야 합니다. [개발자](https://developer.adobe.com/commerce/cloud-tools/docker/deploy) 및 [프로덕션](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode) 모드에 대해 업데이트된 실행 지침을 참조하십시오.<!--MAGECLOUD-3996-->
+  - ![새 아이콘](../../assets/new.svg) **새 배포 후 명령** - 이전에는 `cloud-deploy` 명령을 사용하여 Adobe Commerce을 Cloud Docker 컨테이너에 배포한 후 `.magento.app.yaml` 파일에 정의된 배포 후 후크가 자동으로 실행되었습니다. 이제 배포한 후 배포 후 후크를 실행하려면 별도의 `cloud-post-deploy` 명령을 실행해야 합니다. [개발자](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/) 및 [프로덕션](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode) 모드에 대해 업데이트된 실행 지침을 참조하십시오.<!--MAGECLOUD-3996-->
 
   - ![새 아이콘](../../assets/new.svg) 빌드 및 배포 컨테이너에 대한 `./bin/magento-docker` 명령에 `--rm` 옵션을 추가했습니다. 작업이 완료되면 컨테이너가 제거됩니다.<!--MAGECLOUD-4205-->
 

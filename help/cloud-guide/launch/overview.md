@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 966
+source-wordcount: 970
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Adobe Commerce on cloud infrastructure 구독의 일부로 Adobe은 Let&#39;s En
 
 >[!NOTE]
 >
->Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)에 문의하십시오.
+>Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)에 문의하십시오.
 
 ## 보안 검색 도구 설정
 

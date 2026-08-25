@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 873
+source-wordcount: 874
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Edge ACL은 사이트에 대한 액세스를 관리하기 위한 IP 주소 목�
 }
 ```
 
-이 예제에서 [사용자 지정 코드 조각을 만들기](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=ko#add-the-custom-vcl-snippet)하기 전에 값을 검토하여 변경해야 하는지 확인하십시오. 그런 다음 각 값을 각 필드에 입력합니다(예: `type`은(는) 유형 필드에, `content`은(는) 콘텐츠 필드에).
+이 예제에서 [사용자 지정 코드 조각을 만들기](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet)하기 전에 값을 검토하여 변경해야 하는지 확인하십시오. 그런 다음 각 값을 각 필드에 입력합니다(예: `type`은(는) 유형 필드에, `content`은(는) 콘텐츠 필드에).
 
 - `name` — VCL 코드 조각의 이름입니다. 이 예제의 경우 `allowlist`입니다.
 

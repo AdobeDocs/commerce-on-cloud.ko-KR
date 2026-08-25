@@ -3,9 +3,9 @@ title: Adobe Commerce 고급 보안
 description: 고급 보안이 클라우드 인프라의 Adobe Commerce에 보트 관리, 고급 속도 제한 및 L7 DDoS 보호를 추가하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 0b3ef117f85c990c2a01ecb655c930b8c4f61acb
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2482'
 ht-degree: 0%
 
 ---
@@ -254,7 +254,7 @@ Adobe 및 고객 보안 책임에 대한 전체 개요는 [공유 책임 모델]
 
 1. 프로젝트의 [!DNL Advanced Security]에 대해 논의하려면 Adobe 계정 팀이나 Adobe 영업 담당자에게 문의하십시오.
 
-1. [!DNL Advanced Security]을(를) 구매한 후 [!DNL Advanced Security] 활성화를 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)합니다. [!DNL Adobe Commerce on Cloud Infrastructure] 프로젝트 ID와 지원이 필요한 환경(예: 프로덕션 및 스테이징)을 포함하십시오.
+1. [!DNL Advanced Security]을(를) 구매한 후 [!DNL Advanced Security] 활성화를 요청하는 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)합니다. [!DNL Adobe Commerce on Cloud Infrastructure] 프로젝트 ID와 지원이 필요한 환경(예: 프로덕션 및 스테이징)을 포함하십시오.
 
 1. Adobe은 Fastly 서비스에서 [!DNL Advanced Security]을(를) 활성화하고 초기 보호 정책을 구성합니다. 활성화는 일반적으로 티켓 제출 후 영업일 기준으로 몇 일 이내에 완료됩니다.
 
@@ -262,7 +262,7 @@ Adobe 및 고객 보안 책임에 대한 전체 개요는 [공유 책임 모델]
 
 >[!NOTE]
 >
->[!DNL Advanced Security]에 대한 구성을 변경하려면 현재 [지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다. 관리 UI를 통한 셀프서비스 구성은 향후 릴리스에 포함될 예정입니다.
+>[!DNL Advanced Security]에 대한 구성을 변경하려면 현재 [지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다. 관리 UI를 통한 셀프서비스 구성은 향후 릴리스에 포함될 예정입니다.
 
 ## 제한 사항
 

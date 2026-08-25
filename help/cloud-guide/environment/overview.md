@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 280
+source-wordcount: 284
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Adobe Commerce on cloud infrastructure의 환경에는 Adobe Commerce 애플리�
 
 ## Pro 환경에 대한 구성 업데이트
 
-클라우드 인프라 Pro 스테이징 및 프로덕션 환경의 Adobe Commerce의 경우 로컬 개발 환경에서 많은 구성 옵션을 업데이트하고 변경 사항을 커밋하여 이러한 환경에 적용할 수 있습니다. 그러나 다음 구성 옵션을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
+클라우드 인프라 Pro 스테이징 및 프로덕션 환경의 Adobe Commerce의 경우 로컬 개발 환경에서 많은 구성 옵션을 업데이트하고 변경 사항을 커밋하여 이러한 환경에 적용할 수 있습니다. 그러나 다음 구성 옵션을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
 
 - `.magento/services.yaml` 파일에서 서비스를 설치하거나 업데이트합니다.
 - `.magento.app.yaml` 파일에서 `mounts` 및 `disk` 속성에 대한 구성을 변경합니다.

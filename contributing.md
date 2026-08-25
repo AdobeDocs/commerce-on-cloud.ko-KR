@@ -1,8 +1,8 @@
 ---
-source-git-commit: 305df8acb8c41369b34e2c20d9c7df6824222931
+source-git-commit: eab32e2f5155e3aa6c0924fa332cbef6e4dc502d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 1%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 # 기여
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 ## 행동 수칙
 
-이 프로젝트는 Adobe [수행 코드](code-of-conduct.md)를 준수합니다. 참여함으로써,
+이 프로젝트는 Adobe [행동 수칙](code-of-conduct.md)을 준수합니다. 참여함으로써,
 이 코드를 준수해야 합니다. 허용되지 않는 행동을 (으)로 보고하십시오.
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## 기여자 안내서 설명서
 
-[기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ko)를 참조하세요.
+[기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)를 참조하세요.
 
 ## 질문이 있습니까?
 
@@ -38,7 +38,7 @@ Adobe CLA는 한 번만 제출하면 됩니다. 따라서 이전에 제출한 �
 ## 코드 검토
 
 모든 제출 사항은 끌어오기 요청 양식으로 제출해야 하며 검토해야 합니다
-프로젝트 커미터별. [GitHub의 끌어오기 요청 설명서](https://docs.github.com/articles/about-pull-requests/) 읽기
+프로젝트 커미터별. [GitHub의 끌어오기 요청 문서 읽기](https://docs.github.com/articles/about-pull-requests/)
 끌어오기 요청 전송에 대한 자세한 내용.
 
 마지막으로 다음과 같은 경우 [가져오기 요청 템플릿](PULL_REQUEST_TEMPLATE.md)을(를) 따르십시오.
@@ -59,7 +59,7 @@ Adobe CLA는 한 번만 제출하면 됩니다. 따라서 이전에 제출한 �
 
 ## 새로운 기능
 
-변경 사항으로 인해 강조 표시해야 하는 새로운 주제, 중요한 업데이트 또는 수정 사항이 있는 경우 끌어오기 요청 본문에서 바로 [새로운 기능 섹션](https://experienceleague.adobe.com/ko/docs/commerce-cloud-service/user-guide/overview#whats-new)에 간단한 설명을 추가할 수 있습니다.
+변경 사항으로 인해 강조 표시해야 하는 새로운 주제, 중요한 업데이트 또는 수정 사항이 있는 경우 끌어오기 요청 본문에서 바로 [새로운 기능 섹션](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/overview#whats-new)에 간단한 설명을 추가할 수 있습니다.
 
 새로운 기능 강조 표시를 추가하려면:
 
@@ -67,29 +67,29 @@ Adobe CLA는 한 번만 제출하면 됩니다. 따라서 이전에 제출한 �
 
    ```text
    whatsnew
-   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html).
+   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html).
    ```
 
    또는 여러 주제가 있는 경우:
 
    ```text
    whatsnew
-   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/third-target-topic.html).
+   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/third-target-topic.html).
    ```
 
    여러 강조 표시에 목록을 사용할 수도 있습니다.
 
    ```text
    whatsnew
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
    ```text
    whatsnew
    The following changes were made to the documentation:
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
 1. 변경 유형을 나타내는 지원되는 레이블을 추가합니다. 지원되는 레이블에는 다음과 같은 각 변경 유형에 대한 레이블이 포함됩니다.
@@ -103,4 +103,4 @@ Adobe CLA는 한 번만 제출하면 됩니다. 따라서 이전에 제출한 �
 1. `whatsnew` 파트는 `whatsnew` 태그에서 시작하여 끌어오기 요청 본문의 맨 끝에 있어야 합니다.
 1. 변경 사항에 대한 설명에는 작업 링크가 포함되어야 합니다. 링크가 올바르고 의도한 주제로 이어졌는지 확인하십시오. 새로운 항목인 경우 끌어오기 요청을 병합하고 새 항목을 게시한 후 링크가 작동하는지 확인하십시오. 끌어오기 요청이 병합된 후에 링크를 수정해도 됩니다.
 
-예를 들어, 저장소에서 닫힌 끌어오기 요청을 검색하여 기존 하이라이트의 서식을 확인하고, 이를 [새로운 기능 섹션](https://experienceleague.adobe.com/ko/docs/commerce-cloud-service/user-guide/overview#whats-new)과 비교하여 설명서에 어떻게 표시되는지 확인하십시오.
+예를 들어, 저장소에서 닫힌 끌어오기 요청을 검색하여 기존 하이라이트의 서식을 확인하고, 이를 [새로운 기능 섹션](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/overview#whats-new)과 비교하여 설명서에 어떻게 표시되는지 확인하십시오.

@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1155
+source-wordcount: 1180
 ht-degree: 0%
 
 ---
@@ -85,7 +85,8 @@ Adobe은 각 환경에 대해 Let&#39;s Encrypt SSL/TLS 인증서를 제공합�
 
 >[!IMPORTANT]
 >
->[RFC1034](https://www.rfc-editor.org/rfc/rfc1912)&#x200B;(**섹션 2.4**)의 DNS 지침 상태:>_CNAME 레코드는 다른 데이터와 함께 사용할 수 없습니다. 즉, suzy.podunk.xx가 sue.podunk.xx에 대한 별칭인 경우, suzy.podunk.edu에 대한 MX 레코드나 A 레코드 또는 TXT 레코드도 가질 수 없습니다._
+>[RFC1034](https://www.rfc-editor.org/rfc/rfc1912)&#x200B;(**섹션 2.4**)의 DNS 지침 상태:
+>_CNAME 레코드는 다른 데이터와 함께 사용할 수 없습니다. 즉, suzy.podunk.xx가 sue.podunk.xx에 대한 별칭인 경우 suzy.podunk.edu에 대한 MX 레코드나 A 레코드 또는 TXT 레코드도 가질 수 없습니다._
 >
 >따라서 DNS 레코드는 하위 도메인의 경우 유형 `CNAME`이고 Apex 도메인(루트 도메인)의 경우 유형 `A`이어야 합니다. 이 규칙을 무시하면 MX 또는 NS와 같은 다른 레코드를 추가할 수 없으므로 메일 서비스 또는 DNS 전파가 중단될 수 있습니다. 일부 DNS 공급자는 내부 사용자 지정을 사용하여 이를 우회할 수 있지만, 표준을 준수하면 안정성과 유연성(예: DNS 공급자 변경)이 보장됩니다.
 
@@ -103,7 +104,7 @@ Adobe은 각 환경에 대해 Let&#39;s Encrypt SSL/TLS 인증서를 제공합�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **참고**: 관리자로부터 기본 URL을 업데이트할 수도 있습니다. _Adobe Commerce 스토어 및 구매 경험 가이드_&#x200B;에서 [스토어 URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ko)을(를) 참조하십시오.
+   **참고**: 관리자로부터 기본 URL을 업데이트할 수도 있습니다. _Adobe Commerce 스토어 및 구매 경험 가이드_&#x200B;에서 [스토어 URL](https://experienceleague.adobe.com/ko/docs/commerce-admin/stores-sales/site-store/store-urls)을(를) 참조하십시오.
 
 1. 사이트가 업데이트될 때까지 몇 분 정도 기다립니다.
 
@@ -155,7 +156,7 @@ Adobe은 각 환경에 대해 Let&#39;s Encrypt SSL/TLS 인증서를 제공합�
 
 - [Adobe Commerce on cloud infrastructure 프로젝트에서 더 이상 존재하지 않는 사용자 제거](../project/user-access.md)
 
-- [이중 인증 구성](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
+- [이중 인증 구성](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication)
 
 ## 성능 모니터링
 

@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1587
+source-wordcount: 1619
 ht-degree: 0%
 
 ---
@@ -155,10 +155,10 @@ Pro 프로젝트에서 `master` 분기는 프로덕션 환경과 함께 활성 P
 
 - **GlusterFS**—모든 정적 파일 배포 및 4개의 디렉터리 마운트를 사용한 동기화를 관리하기 위한 파일 서버:
 
-   - `var`
-   - `pub/media`
-   - `pub/static`
-   - `app/etc`
+  - `var`
+  - `pub/media`
+  - `pub/static`
+  - `app/etc`
 
 - **Redis**—VM당 하나의 서버만 활성 상태이고 나머지 두 서버는 복제본입니다.
 
@@ -225,4 +225,4 @@ Pro 클러스터 크기 조정 및 _compute_ 구성은 선택한 클라우드 �
 
 중복 아키텍처는 Adobe 클라우드 인프라가 가동 중지 시간 없이 확장될 수 있도록 합니다. 세 가지 인스턴스는 사이트 운영에 영향을 주지 않고 용량을 업그레이드하기 위해 각각 회전합니다. 예를 들어, 제한이 데이터베이스 수준이 아닌 PHP 수준에 있는 경우 기존 클러스터에 웹 서버를 추가할 수 있습니다. 데이터베이스 수준에서 추가 CPU가 제공하는 세로 크기 조절을 보완하는 _가로 크기 조절_&#x200B;을 제공합니다. [조정된 아키텍처](scaled-architecture.md)를 참조하십시오.
 
-이벤트나 기타 이유로 트래픽이 크게 증가할 것으로 예상되면 일시적으로 용량을 증가하도록 요청할 수 있습니다. _Commerce 도움말 센터_&#x200B;에서 [임시 업사이징을 요청하는 방법](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ko)을 참조하세요.
+이벤트나 기타 이유로 트래픽이 크게 증가할 것으로 예상되면 일시적으로 용량을 증가하도록 요청할 수 있습니다. _Commerce 도움말 센터_&#x200B;에서 [임시 업사이징을 요청하는 방법](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)을 참조하세요.
