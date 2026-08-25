@@ -4,22 +4,13 @@ description: PrivateLink 서비스를 사용하여 동일한 지역에서 사설
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
 TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1798
+source-wordcount: 1799
 ht-degree: 0%
 
 ---
@@ -30,7 +21,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->PrivateLink는 데이터베이스 또는 파일 전송과 같은 비 HTTP(S) 통합에 대한 연결을 보호하는 데 가장 적합합니다. 애플리케이션을 Adobe Commerce API와 통합하려면 _Adobe Developer App Builder용 API Mesh_&#x200B;에서 [Adobe API Mesh](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/)을(를) 만드는 방법을 참조하십시오.
+>PrivateLink는 데이터베이스 또는 파일 전송과 같은 비 HTTP(S) 통합에 대한 연결을 보호하는 데 가장 적합합니다. 애플리케이션을 Adobe Commerce API와 통합하려면 _Adobe Developer App Builder용 API Mesh_&#x200B;에서 [Adobe API Mesh](https://developer.adobe.com/graphql-mesh-gateway/mesh/basic/)을(를) 만드는 방법을 참조하십시오.
 
 ## 기능 및 지원
 
@@ -40,9 +31,9 @@ ht-degree: 0%
 - Adobe과 고객 VPC에서 사용할 수 있는 엔드포인트 서비스 간의 단방향 또는 양방향 통신을 지원합니다.
 - 서비스 지원:
 
-   - Adobe Commerce on cloud infrastructure 환경에서 필요한 포트 열기
-   - 고객과 Adobe VPC 간의 초기 연결 설정
-   - 활성화 중 연결 문제 해결
+  - Adobe Commerce on cloud infrastructure 환경에서 필요한 포트 열기
+  - 고객과 Adobe VPC 간의 초기 연결 설정
+  - 활성화 중 연결 문제 해결
 
 ## 제한 사항
 
@@ -51,8 +42,8 @@ ht-degree: 0%
 - Adobe Commerce 지원에서는 초기 지원 외에 AWS PrivateLink 문제 해결을 다루지 않습니다.
 - 고객은 자체 VPC 관리와 관련된 비용을 부담합니다.
 - 플랫폼별 **HTTPS 프로토콜(포트 443) 지원:**
-   - **Azure 개인 링크**: [빠른 원본 클로킹](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=ko)&#x200B;(으)로 인해 HTTPS 프로토콜(포트 443)을 사용하여 클라우드 인프라의 Adobe Commerce에 연결할 수 없습니다.
-   - **AWS PrivateLink**: HTTPS 프로토콜(포트 443) 연결이 지원됩니다.
+  - **Azure 개인 링크**: [빠른 원본 클로킹](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)&#x200B;(으)로 인해 HTTPS 프로토콜(포트 443)을 사용하여 클라우드 인프라의 Adobe Commerce에 연결할 수 없습니다.
+  - **AWS PrivateLink**: HTTPS 프로토콜(포트 443) 연결이 지원됩니다.
 - PrivateDNS를 사용할 수 없습니다.
 
 ## PrivateLink 연결 유형
@@ -66,8 +57,8 @@ ht-degree: 0%
 - **단방향 PrivateLink**-클라우드 인프라 저장소의 Adobe Commerce에서 데이터를 안전하게 검색하려면 이 구성을 선택하십시오.
 - **양방향 PrivateLink**-클라우드 인프라 환경에서 Adobe Commerce 외부 시스템과의 보안 연결을 설정하려면 이 구성을 선택하십시오. 양방향 옵션을 사용하려면 다음 두 개의 연결이 필요합니다.
 
-   - 고객 VPC과 Adobe VPC 간의 연결
-   - Adobe VPC과 고객 VPC 간의 연결
+  - 고객 VPC과 Adobe VPC 간의 연결
+  - Adobe VPC과 고객 VPC 간의 연결
 
 >[!TIP]
 >
@@ -106,12 +97,12 @@ PrivateLink 활성화에 필요한 다음 데이터 수집:
 - 클러스터 ID를 제공합니다. SSH를 사용하여 원격으로 로그인하고 `cat /etc/platform_cluster` 명령을 사용하십시오.
 - 외부 서비스가 Adobe Commerce Pro 클러스터에 연결하려면 다음이 필요합니다.
 
-   - 새 외부 개인 끝점에 표시할 Pro 클러스터의 포트 목록
-   - 개인 끝점 연결을 위한 Azure 구독 ID 목록
+  - 새 외부 개인 끝점에 표시할 Pro 클러스터의 포트 목록
+  - 개인 끝점 연결을 위한 Azure 구독 ID 목록
 
 - Adobe Commerce Pro 클러스터를 외부 서비스에 연결하려면 다음이 필요합니다.
 
-   - 대상 서비스의 리소스 ID 목록입니다. 외부 개인 링크 서비스 ID는 다음과 비슷합니다.
+  - 대상 서비스의 리소스 ID 목록입니다. 외부 개인 링크 서비스 ID는 다음과 비슷합니다.
 
   ```text
   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{svcNameID}
@@ -142,12 +133,12 @@ PrivateLink 활성화에 필요한 다음 데이터 수집:
    - **Adobe**&#x200B;에서 Adobe 계정 사용자(AWS 또는 Azure 계정의 루트 사용자)를 제공하고 고객 VPC 끝점 서비스에 대한 액세스를 요청합니다.
    - **Customer**&#x200B;을(를) 통해 Adobe에서 고객 VPC의 끝점 서비스에 액세스할 수 있습니다. 이전에 **Endpoint Service 액세스 권한 부여** 전제 조건에 설명된 대로 Adobe 계정 주체가 `arn:aws:iam::402592597372:root`에 액세스할 수 있다고 가정합니다.
 
-      - Adobe 계정에서 시작된 요청을 수락하도록 고객 엔드포인트 서비스 구성을 업데이트합니다. 지침이 필요하면 Cloud Platform 설명서 를 참조하십시오.
+     - Adobe 계정에서 시작된 요청을 수락하도록 고객 엔드포인트 서비스 구성을 업데이트합니다. 지침이 필요하면 Cloud Platform 설명서 를 참조하십시오.
 
-         - AWS의 경우 [끝점 서비스에 대한 권한 추가 및 제거]를 참조하십시오.
-         - Azure의 경우 [개인 끝점 연결 관리]를 참조하십시오.
+       - AWS의 경우 [끝점 서비스에 대한 권한 추가 및 제거]를 참조하십시오.
+       - Azure의 경우 [개인 끝점 연결 관리]를 참조하십시오.
 
-      - 고객 VPC에 대한 엔드포인트 서비스 이름을 Adobe에 제공합니다.
+     - 고객 VPC에 대한 엔드포인트 서비스 이름을 Adobe에 제공합니다.
 
    - **Adobe**&#x200B;은(는) 고객 끝점 서비스를 Adobe 플랫폼 계정(AWS 또는 Azure)에 추가하여 고객 VPC에 대한 연결 요청을 트리거합니다.
    - **고객**&#x200B;이(가) 설정을 완료하기 위해 Adobe의 연결 요청을 승인합니다.
@@ -219,7 +210,7 @@ Telnet 애플리케이션을 사용하여 VPC 엔드포인트 서비스에 대�
 
 ## PrivateLink 구성 변경
 
-기존 PrivateLink 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하십시오. 예를 들어 다음과 같은 변경 사항을 요청할 수 있습니다.
+기존 PrivateLink 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하십시오. 예를 들어 다음과 같은 변경 사항을 요청할 수 있습니다.
 
 - Adobe Commerce on cloud infrastructure Pro 프로덕션 또는 스테이징 환경에서 PrivateLink 연결을 제거합니다.
 - Adobe 엔드포인트 서비스에 액세스하기 위해 고객 클라우드 플랫폼 계정 번호를 변경합니다.
@@ -241,14 +232,14 @@ Telnet 애플리케이션을 사용하여 VPC 엔드포인트 서비스에 대�
 PrivateLink 설정 지침은 클라우드 플랫폼 설명서를 참조하십시오.
 
 - **AWS PrivateLink 설명서**
-   - [네트워크 부하 분산 장치 만들기]
-   - [끝점 서비스 구성 만들기]
-   - [인터페이스 끝점 만들기]
-   - [인터페이스 끝점 주기]
+  - [네트워크 부하 분산 장치 만들기]
+  - [끝점 서비스 구성 만들기]
+  - [인터페이스 끝점 만들기]
+  - [인터페이스 끝점 주기]
 
 - **Azure PrivateLink 설명서**
-   - [부하 분산 장치 만들기]
-   - [Azure 개인 링크 워크플로]
+  - [부하 분산 장치 만들기]
+  - [Azure 개인 링크 워크플로]
 
 <!--Link definitions-->
 

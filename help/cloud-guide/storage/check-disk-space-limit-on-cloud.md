@@ -2,7 +2,8 @@
 title: 클라우드 인프라에서 Adobe Commerce의 디스크 공간 제한 확인
 description: Cloud Console을 사용하여 Adobe Commerce on Cloud Infrastructure 프로젝트에 사용할 수 있는 디스크 공간을 확인하는 방법에 대해 알아봅니다.
 feature: REST
-source-git-commit: f8fafa7a3660b9c3661a54ef76a4e013a50d71e9
+exl-id: 2c83f469-ca45-4ba8-a2c3-5ca1e633c16d
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -20,5 +21,4 @@ ht-degree: 0%
 
 ## 관련 읽기
 
-개발자 설명서에서 [디스크 공간 관리](https://experienceleague.adobe.com/ko/docs/commerce-cloud-service/user-guide/develop/storage/manage-disk-space?lang=en).
-
+개발자 설명서에서 [디스크 공간 관리](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space?lang=en).

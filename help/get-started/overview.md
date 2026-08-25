@@ -4,14 +4,11 @@ description: 클라우드 인프라에서 새로운 셀프서비스 Adobe Commer
 recommendations: noDisplay, catalog
 exl-id: be93ef73-ae10-4d87-83ed-8da90bb5527c
 TQID: https://experienceleague.adobe.com/Dc7EadNPF5I2NrEZKD2TvV9otmLoN6-gnTF-c2k20wA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 172
+source-wordcount: 173
 ht-degree: 0%
 
 ---
@@ -26,7 +23,7 @@ Adobe Commerce에 오신 것을 환영합니다!
 
 - [Adobe Commerce 개발자 설명서](https://developer.adobe.com/commerce/docs/)&#x200B;(Adobe Developer 사이트) - 고급 기능 개발, 사용자 지정, 통합, 확장 및 사용
 
-- [Adobe Commerce 설명서](https://experienceleague.adobe.com/docs/commerce.html?lang=ko)&#x200B;(Adobe Experience League) - Commerce 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
+- [Adobe Commerce 설명서](https://experienceleague.adobe.com/en/docs/commerce)&#x200B;(Adobe Experience League) - Commerce 프로젝트를 계획, 구현, 운영, 업그레이드 및 유지 관리합니다.
 
 >[!TIP]
 >

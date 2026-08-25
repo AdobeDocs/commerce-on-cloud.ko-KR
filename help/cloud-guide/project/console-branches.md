@@ -1,25 +1,18 @@
 ---
-title: ' [!DNL Cloud Console] (으)로 분기 관리'
+title: ' [!DNL Cloud Console](으)로 분기 관리'
 description: ' [!DNL Cloud Console]을(를) 사용하여 클라우드 인프라에서 Adobe Commerce의 환경 분기를 관리하는 방법을 알아봅니다.'
 role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
 TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1638
+source-wordcount: 1642
 ht-degree: 0%
 
 ---
@@ -47,7 +40,7 @@ ht-degree: 0%
 
 귀하의 계정은 제한된 수의 ![활성 분기](../../assets/icon-active.png){width="32"}(활성)와 무제한의 ![비활성 분기](../../assets/icon-inactive.png){width="32"}(비활성) 개발 분기를 지원합니다. [!DNL Cloud Console] 또는 Cloud CLI만 사용하여 분기를 추가하거나 삭제하여 활성 및 비활성 분기를 관리합니다. 분기를 삭제하려면 먼저 _환경_ 목록에 _비활성_(으)로 남아 있는 분기를 비활성화합니다. 나중에 분기를 다시 활성화하거나 환경 설정에서 또는 Cloud CLI를 사용하여 [분기를 삭제](../dev-tools/cloud-cli-overview.md#)할 수 있습니다.
 
-개발을 위해 추가 활성 환경이 필요한 경우 [지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하세요.
+개발을 위해 추가 활성 환경이 필요한 경우 [지원 티켓](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)을 제출하세요.
 
 **분기를 추가하려면**:
 
@@ -101,7 +94,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 1. 상단 탐색 막대의 오른쪽에 있는 구성 아이콘을 클릭하면 환경 설정이 열립니다.
 
-1. _[!UICONTROL General]_&#x200B;탭에서&#x200B;_[!UICONTROL Deactivate environment]_ 섹션으로 스크롤한 다음 **[!UICONTROL Deactivate environment and delete data]**&#x200B;을(를) 클릭하고 지침을 따릅니다.
+1. _[!UICONTROL General]_탭에서_[!UICONTROL Deactivate environment]_ 섹션으로 스크롤한 다음 **[!UICONTROL Deactivate environment and delete data]**&#x200B;을(를) 클릭하고 지침을 따릅니다.
 
 ## 환경 동기화
 

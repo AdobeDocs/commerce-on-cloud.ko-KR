@@ -4,17 +4,12 @@ description: 클라우드 인프라에서 Adobe Commerce에 대한 여러 웹 �
 feature: Cloud, Configuration, Routes, Site Navigation
 exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
 TQID: https://experienceleague.adobe.com/532nrO6XkiqiNDfRMT6gZ4mVRqlv5PszegPJLuemmyc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1094
+source-wordcount: 1105
 ht-degree: 0%
 
 ---
@@ -45,7 +40,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->사이트 기본 URL에 저장소 보기를 추가하려면 여러 디렉터리를 만들 필요가 없습니다. _구성 가이드_&#x200B;에서 [기본 URL에 스토어 코드 추가](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ko)를 참조하십시오.
+>사이트 기본 URL에 저장소 보기를 추가하려면 여러 디렉터리를 만들 필요가 없습니다. _구성 가이드_&#x200B;에서 [기본 URL에 스토어 코드 추가](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)를 참조하십시오.
 
 ## 도메인 추가
 
@@ -55,15 +50,15 @@ https://store.com/second/
 
 - Pro Staging 및 프로덕션용
 
-  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains)를 참조하거나 지원 티켓을 열어 지원을 요청하세요. 또한 클러스터에 추가할 새 도메인을 요청하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
+  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains)를 참조하거나 지원 티켓을 열어 지원을 요청하세요. 또한 클러스터에 추가할 새 도메인을 요청하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
 
 - 스타터 프로덕션용
 
-  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains) 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 참조하여 지원을 요청하세요. 또한 [!DNL Cloud Console]의 **도메인** 탭에 새 도메인을 추가해야 합니다. `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  새 도메인을 Fastly에 추가하거나 [도메인 관리](../cdn/fastly-custom-cache-configuration.md#manage-domains) 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)을 참조하여 지원을 요청하세요. 또한 [!DNL Cloud Console]의 **도메인** 탭에 새 도메인을 추가해야 합니다. `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 로컬 설치 구성
 
-여러 스토어를 사용하도록 로컬 설치를 구성하려면 _구성 가이드_&#x200B;에서 [여러 웹 사이트 또는 스토어](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=ko)를 참조하십시오.
+여러 스토어를 사용하도록 로컬 설치를 구성하려면 _구성 가이드_&#x200B;에서 [여러 웹 사이트 또는 스토어](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-overview)를 참조하십시오.
 
 여러 스토어를 사용하도록 로컬 설치를 성공적으로 만들고 테스트한 후 통합 환경을 준비해야 합니다.
 
@@ -222,7 +217,7 @@ https://store.com/second/
 
 ### 웹 사이트, 스토어 및 스토어 조회수 설정
 
-_관리 UI_&#x200B;에서 Adobe Commerce **웹 사이트**, **스토어** 및 **스토어 보기**&#x200B;를 설정합니다. _구성 가이드_&#x200B;의 [Admin에서 여러 웹 사이트, 스토어 및 스토어 보기 설정](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ko)을 참조하십시오.
+_관리 UI_&#x200B;에서 Adobe Commerce **웹 사이트**, **스토어** 및 **스토어 보기**&#x200B;를 설정합니다. _구성 가이드_&#x200B;의 [Admin에서 여러 웹 사이트, 스토어 및 스토어 보기 설정](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)을 참조하십시오.
 
 로컬 설치를 설정할 때 관리자의 웹 사이트, 스토어 및 스토어 조회수와 동일한 이름과 코드를 사용하는 것이 중요합니다. `magento-vars.php` 파일을 업데이트할 때 이러한 값이 필요합니다.
 
@@ -278,8 +273,8 @@ NGINX 가상 호스트를 구성하는 대신 프로젝트 루트 디렉터리�
    - `example.com`—_웹 사이트_&#x200B;의 기본 URL 사용
    - `default`—_웹 사이트_ 또는 _스토어 보기_&#x200B;에 대한 고유 코드 사용
    - `store`—다음 값 중 하나를 사용합니다.
-      - `website`—상점 첫 화면에서 _웹 사이트_ 로드
-      - `store`—상점 전면에서 _스토어 보기_&#x200B;를 로드합니다.
+     - `website`—상점 첫 화면에서 _웹 사이트_ 로드
+     - `store`—상점 전면에서 _스토어 보기_&#x200B;를 로드합니다.
 
    고유 도메인을 사용하는 여러 사이트의 경우:
 

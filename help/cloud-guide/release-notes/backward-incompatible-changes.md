@@ -5,17 +5,12 @@ feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
 TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 822
+source-wordcount: 823
 ht-degree: 0%
 
 ---
@@ -67,7 +62,7 @@ ht-degree: 0%
 
 ## 클라우드 패치 변경 사항
 
-- **다운로드한 패치 제거**-`magento/magento-cloud-patches` 패키지는 [소프트웨어 다운로드](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=ko) 페이지에서 사용할 수 있는 모든 패치를 번들로 제공하고 클라우드에 배포할 때 자동으로 적용합니다. ECE-Tools 2002.1.0 이상으로 업그레이드한 후 패치 충돌을 방지하려면 다운로드하여 프로젝트에 추가한 Adobe 제공 패치를 수동으로 제거합니다.
+- **다운로드한 패치 제거**-`magento/magento-cloud-patches` 패키지는 [소프트웨어 다운로드](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/commerce) 페이지에서 사용할 수 있는 모든 패치를 번들로 제공하고 클라우드에 배포할 때 자동으로 적용합니다. ECE-Tools 2002.1.0 이상으로 업그레이드한 후 패치 충돌을 방지하려면 다운로드하여 프로젝트에 추가한 Adobe 제공 패치를 수동으로 제거합니다.
 
 - **패치 적용 명령 업데이트**-패치 적용 명령을 `vendor/bin/ece-tools` 디렉터리에서 `vendor/bin/ece-patches` 디렉터리로 이동했습니다. 이 명령을 사용하여 패치를 수동으로 적용하는 경우 새 경로를 사용합니다.
 
@@ -83,45 +78,45 @@ ht-degree: 0%
 
 - **Commerce 명령 변경용 Cloud Docker**-
 
-   - **도커 빌드 작업을 위해 Commerce용 Cloud Docker 명령을 업데이트하는 중**-Commerce용 Cloud Docker 명령을 `vendor/bin/ece-tools` 디렉터리에서 `vendor/bin/ece-docker` 디렉터리로 이동했습니다. 새 경로를 사용하도록 스크립트 및 명령을 업데이트합니다.
+  - **도커 빌드 작업을 위해 Commerce용 Cloud Docker 명령을 업데이트하는 중**-Commerce용 Cloud Docker 명령을 `vendor/bin/ece-tools` 디렉터리에서 `vendor/bin/ece-docker` 디렉터리로 이동했습니다. 새 경로를 사용하도록 스크립트 및 명령을 업데이트합니다.
 
-     `ece-tools` 2002.1.0으로 업그레이드한 후 다음 명령을 사용하여 사용 가능한 `ece-docker` 명령을 확인합니다.
+    `ece-tools` 2002.1.0으로 업그레이드한 후 다음 명령을 사용하여 사용 가능한 `ece-docker` 명령을 확인합니다.
 
-     ```bash
-     php ./vendor/bin/ece-docker list
-     ```
+    ```bash
+    php ./vendor/bin/ece-docker list
+    ```
 
-   - **Cloud Docker 구성 명령 업데이트**-명령 파일에 대한 경로 이름을 `./bin/docker`에서 `./bin/magento-docker`(으)로 변경했습니다. 새 경로를 사용하도록 스크립트 및 명령을 업데이트합니다.
+  - **Cloud Docker 구성 명령 업데이트**-명령 파일에 대한 경로 이름을 `./bin/docker`에서 `./bin/magento-docker`(으)로 변경했습니다. 새 경로를 사용하도록 스크립트 및 명령을 업데이트합니다.
 
-   - **Cron 컨테이너가 더 이상 기본 Docker 구성에 포함되지 않습니다**-이제 `ece-docker build:compose` 명령에 `--with-cron` 옵션을 추가하여 Cron 컨테이너를 Docker 환경 구성에 포함해야 합니다. _Commerce용 Cloud Docker_ 안내서의 [크론 작업 관리](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)를 참조하십시오.
+  - **Cron 컨테이너가 더 이상 기본 Docker 구성에 포함되지 않습니다**-이제 `ece-docker build:compose` 명령에 `--with-cron` 옵션을 추가하여 Cron 컨테이너를 Docker 환경 구성에 포함해야 합니다. _Commerce용 Cloud Docker_ 안내서의 [크론 작업 관리](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)를 참조하십시오.
 
-     cron 작업이 있는 이전에 생성된 컨테이너에 이제 cron 컨테이너가 없는 스크립트입니다.
+    cron 작업이 있는 이전에 생성된 컨테이너에 이제 cron 컨테이너가 없는 스크립트입니다.
 
-   - **임시 컨테이너 사용**-이전 버전에서는 `bin/magento-docker` 명령 작업으로 만든 컨테이너가 제거되지 않았으므로 다른 작업에 사용할 수 있습니다. 이제 `magento-docker` 명령은 명령이 완료된 후 만들어진 모든 컨테이너를 제거합니다.
+  - **임시 컨테이너 사용**-이전 버전에서는 `bin/magento-docker` 명령 작업으로 만든 컨테이너가 제거되지 않았으므로 다른 작업에 사용할 수 있습니다. 이제 `magento-docker` 명령은 명령이 완료된 후 만들어진 모든 컨테이너를 제거합니다.
 
-     도커 작성 작업으로 생성된 컨테이너를 유지하려면 `bin/magento-docker` 명령 대신 `docker-compose run` 명령을 사용합니다.
+    도커 작성 작업으로 생성된 컨테이너를 유지하려면 `bin/magento-docker` 명령 대신 `docker-compose run` 명령을 사용합니다.
 
-   - **배포 후 후크 실행** - `cloud-deploy` 명령은 더 이상 배포 후 후크를 실행하지 않습니다. 배포한 후 새 `cloud-post-deploy` 명령을 사용하여 배포 후 후크를 실행합니다. 스크립트를 업데이트하여 배포 후 후크를 실행하는 명령을 추가합니다.
+  - **배포 후 후크 실행** - `cloud-deploy` 명령은 더 이상 배포 후 후크를 실행하지 않습니다. 배포한 후 새 `cloud-post-deploy` 명령을 사용하여 배포 후 후크를 실행합니다. 스크립트를 업데이트하여 배포 후 후크를 실행하는 명령을 추가합니다.
 
-     ```shell
-     bin/magento-docker ece-deploy
-     bin/magento-docker ece-post-deploy
-     ```
+    ```shell
+    bin/magento-docker ece-deploy
+    bin/magento-docker ece-post-deploy
+    ```
 
-     또는 `docker-compose` 명령을 직접 사용하는 경우 deploy 명령 뒤에 `docker-compose run deploy cloud-post-deploy` 명령을 실행합니다.
+    또는 `docker-compose` 명령을 직접 사용하는 경우 deploy 명령 뒤에 `docker-compose run deploy cloud-post-deploy` 명령을 실행합니다.
 
 - **데이터베이스를 새로 고치는 중**-데이터베이스 컨테이너가 이제 `magento-db` 영구 도커 볼륨에 저장됩니다. Docker 환경을 새로 고치면 데이터베이스가 더 이상 자동으로 삭제되지 않습니다. 필요한 경우 다음 명령 중 하나를 사용하여 수동으로 제거합니다.
 
-   - `magento-db` 컨테이너 제거:
+  - `magento-db` 컨테이너 제거:
 
-     ```bash
-     docker volume rm magento-db
-     ```
+    ```bash
+    docker volume rm magento-db
+    ```
 
-   - Docker 컨테이너를 종료할 때 연결된 모든 볼륨을 제거합니다.
+  - Docker 컨테이너를 종료할 때 연결된 모든 볼륨을 제거합니다.
 
-     ```bash
-     docker-compose down -v
-     ```
+    ```bash
+    docker-compose down -v
+    ```
 
 - **보관 및 백업 파일에 대한 파일 동기화 설정 무시**-docker-sync 또는 mutagen을 사용할 때 다음 확장명을 가진 보관 및 백업 파일은 더 이상 동기화되지 않습니다(SQL, GZ, ZIP 및 BZ2). 다른 확장자로 끝나도록 파일 이름을 변경하여 이러한 파일 유형에 대한 기본 파일 동기화를 재정의할 수 있습니다. 예: `synchronize-me.zip-backup`

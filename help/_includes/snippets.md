@@ -1,7 +1,7 @@
 ---
-source-git-commit: 020a2699befa042a37170a638ded9657a72933e8
+source-git-commit: 5fefabb5795e68abd467a7115bc2a6e554e0d832
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1392'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020년 6월 5일 이전에 프로비저닝된 프로젝트에는 소규모 통합 환경이 여러 개 있었습니다. 테스트 및 개발을 위해 더 큰 통합 환경이 필요한 경우 향상된 통합 환경으로 업그레이드를 요청하십시오. 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [통합 환경 요청](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=ko) 문서를 참조하십시오.
+>2020년 6월 5일 이전에 프로비저닝된 프로젝트에는 소규모 통합 환경이 여러 개 있었습니다. 테스트 및 개발을 위해 더 큰 통합 환경이 필요한 경우 향상된 통합 환경으로 업그레이드를 요청하십시오. 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [통합 환경 요청](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27242) 문서를 참조하십시오.
 
 ## 병합 옵션 {#merge-options}
 
@@ -41,15 +41,15 @@ ht-degree: 0%
 >일부 **Pro 프로젝트**&#x200B;에서는 `routes.yaml` 파일의 경로 구성과 `.magento.app.yaml` 파일의 cron 구성을 업데이트하려면 Adobe 지원 팀의 지원이 필요합니다. Adobe에서는 먼저 통합 환경에서 모든 YAML 구성 변경 작업을 수행하고 유효성을 검사한 다음, 이를 스테이징 환경에 배포할 것을 권장합니다.
 >
 >
->변경 사항이 재배포 후 스테이징 사이트에 반영되지 않고 로그에 관련 오류 메시지가 없는 경우 **해야** [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)합니다. 티켓에서 시도한 구성 변경 사항을 명확하게 설명하고 업데이트된 YAML 구성 파일을 티켓에 첨부합니다.
+>변경 사항이 재배포 후 스테이징 사이트에 반영되지 않고 로그에 관련 오류 메시지가 없는 경우 **해야** [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)합니다. 티켓에서 시도한 구성 변경 사항을 명확하게 설명하고 업데이트된 YAML 구성 파일을 티켓에 첨부합니다.
 
 ## Pro 서비스 지원 {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- Pro 프로젝트의 경우 `Staging` 및 `Production` 환경에서만 [서비스](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=ko)를 설치하거나 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
+- Pro 프로젝트의 경우 `Staging` 및 `Production` 환경에서만 [서비스](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)를 설치하거나 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
 
-- 필요한 서비스 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 및 `services.yaml` 파일을 포함하고 티켓에 PHP 버전을 명시하십시오. PHP 버전, 확장, 환경 설정에 대한 셀프 서비스 변경 내용은 _응용 프로그램 구성_&#x200B;의 [PHP 설정](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=ko)을 참조하십시오.
+- 필요한 서비스 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 및 `services.yaml` 파일을 포함하고 티켓에 PHP 버전을 명시하십시오. PHP 버전, 확장, 환경 설정에 대한 셀프 서비스 변경 내용은 _응용 프로그램 구성_&#x200B;의 [PHP 설정](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings)을 참조하십시오.
 
   >[!IMPORTANT]
   >
@@ -67,8 +67,8 @@ ht-degree: 0%
 
   Adobe Commerce 지원은 원활하고 조정된 업그레이드 프로세스를 보장하기 위해 모든 프로덕션 환경 업그레이드에 대해 두 부분으로 구성된 핸드셰이크 프로세스를 따릅니다.
 
-   1. **고객 확인**: Adobe 지원에서는 먼저 고객이 업그레이드할 날짜와 시간을 확인하도록 요청합니다. 이 단계에서는 고객의 비즈니스 요구 사항 및 유지 관리 기간에 따라 타이밍이 맞춰집니다.
-   2. **예약 및 최종 확인**: 고객이 시간을 확인하면 Adobe 지원 팀이 인프라 팀에 요청을 제출하고 인프라 팀이 요청을 검토한 후 예약된 업그레이드 기간에 대한 최종 확인을 제공합니다.
+  1. **고객 확인**: Adobe 지원에서는 먼저 고객이 업그레이드할 날짜와 시간을 확인하도록 요청합니다. 이 단계에서는 고객의 비즈니스 요구 사항 및 유지 관리 기간에 따라 타이밍이 맞춰집니다.
+  2. **예약 및 최종 확인**: 고객이 시간을 확인하면 Adobe 지원 팀이 인프라 팀에 요청을 제출하고 인프라 팀이 요청을 검토한 후 예약된 업그레이드 기간에 대한 최종 확인을 제공합니다.
 
 인프라 팀이 최종 확인을 제공할 때까지 업그레이드가 예약된 것으로 간주되지 않습니다. 고객은 업그레이드 기간 최소 48시간 전에 신속히 응답하여 지연을 방지하고 적절한 알림을 받는 것이 좋습니다.
 
@@ -78,9 +78,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Pro 스테이징 및 프로덕션 환경에서는 티켓의 날짜, 시간 및 시간대를 나타내는 특정 백업을 검색하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)해야 합니다.
+>Pro 스테이징 및 프로덕션 환경에서는 티켓의 날짜, 시간 및 시간대를 나타내는 특정 백업을 검색하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
 >
->Adobe은 자동 백업에서 환경을 복원하지 **않습니다**. 스테이징 또는 프로덕션 스냅숏을 복원하는 방법을 선택하는 데 도움이 필요하면 [스테이징 또는 프로덕션에서 DB 스냅숏 복원](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=ko)을 참조하십시오.
+>Adobe은 자동 백업에서 환경을 복원하지 **않습니다**. 스테이징 또는 프로덕션 스냅숏을 복원하는 방법을 선택하는 데 도움이 필요하면 [스테이징 또는 프로덕션에서 DB 스냅숏 복원](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)을 참조하십시오.
 
 ## 재배포 경고 {#redeploy-warning}
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Pro 프로덕션 및 스테이징 환경에서 서비스 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하십시오.
+>Pro 프로덕션 및 스테이징 환경에서 서비스 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하십시오.
 
 ## 서비스 변경 {#service-change-tip}
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->중단 배포에 대한 도움말을 보려면 _Adobe Commerce 도움말 센터_&#x200B;에서 [Commerce 배포 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ko)를 사용하십시오.
+>중단 배포에 대한 도움말을 보려면 _Adobe Commerce 도움말 센터_&#x200B;에서 [Commerce 배포 문제 해결사](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640)를 사용하십시오.
 
 ## ECE-Tools 업데이트 {#ece-tools-package}
 

@@ -4,19 +4,13 @@ description: Fastly 서비스 설정이 완료된 후 캐시 구성 설정을 �
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
 TQID: https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2126
+source-wordcount: 2130
 ht-degree: 0%
 
 ---
@@ -202,7 +196,7 @@ Starter 및 Pro 프로젝트 모두 [!UICONTROL Domains] 옵션을 사용하여 
 
 - 시작 프로젝트의 경우 [!DNL Cloud Console]의 [!UICONTROL Domains] 탭 아래에 있는 프로젝트 URL로 이동하여 프로젝트 URL을 추가하십시오.
 
-- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
+- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
 
 **관리자로부터 Fastly 도메인 구성을 관리하려면**:
 

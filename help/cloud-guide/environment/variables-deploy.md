@@ -6,19 +6,13 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
 TQID: https://experienceleague.adobe.com/TNuUxXzCiXnKefww0DmKbjfJygEz2HFG-0PjCsCy2nA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: f09934f41676922dc4b4001f24ee94062a5e9c0a
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 3035
+source-wordcount: 3049
 ht-degree: 0%
 
 ---
@@ -74,7 +68,7 @@ stage:
             database: 11
 ```
 
-다음 예제에서는 _구성 안내서_&#x200B;에 정의된 대로 [Redis 미리 로드 기능](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=ko#redis-preload-feature)을 사용합니다.
+다음 예제에서는 _구성 안내서_&#x200B;에 정의된 대로 [Redis 미리 로드 기능](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)을 사용합니다.
 
 ```yaml
 stage:
@@ -109,7 +103,7 @@ stage:
 - **기본값**—`true`
 - **버전**—Adobe Commerce 2.1.4 이상
 
-빌드 또는 배포 단계에서 생성된 [정적 콘텐츠 파일](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ko)을(를) 정리하거나 사용하지 않도록 설정합니다. 개발에서 기본값 _true_&#x200B;을(를) 사용하는 것이 좋습니다.
+빌드 또는 배포 단계에서 생성된 [정적 콘텐츠 파일](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)을(를) 정리하거나 사용하지 않도록 설정합니다. 개발에서 기본값 _true_&#x200B;을(를) 사용하는 것이 좋습니다.
 
 - **`true`** - 업데이트된 정적 콘텐츠를 배포하기 전에 기존 정적 콘텐츠를 모두 제거합니다.
 - **`false`** - 생성된 콘텐츠에 최신 버전이 포함된 경우 배포는 기존 정적 콘텐츠 파일만 덮어씁니다.
@@ -122,7 +116,7 @@ stage:
     CLEAN_STATIC_FILES: false
 ```
 
-배포 전에 정적 보기 파일을 정리하지 않으면 이전 버전을 제거하지 않고 기존 파일에 업데이트를 배포할 경우 문제가 발생할 수 있습니다. [정적 파일 대체](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) 규칙으로 인해 디렉터리에 동일한 파일의 버전이 여러 개 있는 경우 대체 작업에 잘못된 파일이 표시될 수 있습니다.
+배포 전에 정적 보기 파일을 정리하지 않으면 이전 버전을 제거하지 않고 기존 파일에 업데이트를 배포할 경우 문제가 발생할 수 있습니다. [정적 파일 대체](https://developer.adobe.com/commerce/frontend-core/guide/css/preprocess#clean-static-view-files) 규칙으로 인해 디렉터리에 동일한 파일의 버전이 여러 개 있는 경우 대체 작업에 잘못된 파일이 표시될 수 있습니다.
 
 ## `CRON_CONSUMERS_RUNNER`
 
@@ -168,7 +162,7 @@ stage:
       consumers: []
 ```
 
-기본적으로 배포 프로세스는 `env.php` 파일의 모든 설정을 덮어씁니다. 온-프레미스 Adobe Commerce에 대해서는 _Commerce 구성 가이드_&#x200B;의 [메시지 큐 관리](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=ko)를 참조하세요.
+기본적으로 배포 프로세스는 `env.php` 파일의 모든 설정을 덮어씁니다. 온-프레미스 Adobe Commerce에 대해서는 _Commerce 구성 가이드_&#x200B;의 [메시지 큐 관리](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)를 참조하세요.
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -198,7 +192,7 @@ stage:
 
 >[!WARNING]
 >
->`.magento.env.yaml` 파일 대신 [!DNL Cloud Console]을(를) 통해 `CRYPT_KEY` 값을 설정하여 환경에 대한 소스 코드 리포지토리의 키가 노출되지 않도록 하십시오. [환경 및 프로젝트 변수 설정](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=ko#configure-environment)을 참조하십시오.
+>`.magento.env.yaml` 파일 대신 [!DNL Cloud Console]을(를) 통해 `CRYPT_KEY` 값을 설정하여 환경에 대한 소스 코드 리포지토리의 키가 노출되지 않도록 하십시오. [환경 및 프로젝트 변수 설정](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)을 참조하십시오.
 
 설치 프로세스 없이 데이터베이스를 한 환경에서 다른 환경으로 이동할 때는 해당 암호화 정보가 필요합니다. Adobe Commerce에서는 [!DNL Cloud Console]에 설정된 암호화 키 값을 `env.php` 파일의 `crypt/key` 값으로 사용합니다.
 
@@ -289,7 +283,7 @@ stage:
 
 >[!NOTE]
 >
->세 개의 노드(또는 [크기 조정된 아키텍처](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)에 세 개의 서비스 노드)가 있는 Pro Staging/Production 클러스터에서는 `indices_settings`을(를) 다음과 같이 설정해야 합니다.
+>세 개의 노드(또는 [크기 조정된 아키텍처](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)에 세 개의 서비스 노드)가 있는 Pro Staging/Production 클러스터에서는 `indices_settings`을(를) 다음과 같이 설정해야 합니다.
 >
 >```yaml
 >           indices_settings:
@@ -467,7 +461,7 @@ stage:
 
 >[!NOTE]
 >
->[L2 캐시](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko)를 사용하도록 Redis 백 엔드 모델로 `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`을(를) 지정하면 `ece-tools`에서 캐시 구성을 자동으로 생성합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 예제 [구성 파일](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko#configuration-example)을(를) 참조하십시오. 생성된 캐시 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
+>[L2 캐시](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/level-two-cache)를 사용하도록 Redis 백 엔드 모델로 `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`을(를) 지정하면 `ece-tools`에서 캐시 구성을 자동으로 생성합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 예제 [구성 파일](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/level-two-cache#configuration-example)을(를) 참조하십시오. 생성된 캐시 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -518,7 +512,7 @@ stage:
   VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Valkey 백 엔드 모델로 원격 동기화 캐시를 지정하면 [L2 캐시](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko)가 활성화되고 `ece-tools`이(가) 캐시 구성을 자동으로 생성합니다. [예제 구성 파일](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko#configuration-example)을 참조하십시오. 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
+Valkey 백 엔드 모델로 원격 동기화 캐시를 지정하면 [L2 캐시](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/level-two-cache)가 활성화되고 `ece-tools`이(가) 캐시 구성을 자동으로 생성합니다. [예제 구성 파일](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/level-two-cache#configuration-example)을 참조하십시오. 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
 
 ### 최신 Symfony L2 캐시 구현 구성
 
@@ -530,11 +524,11 @@ stage:
     VALKEY_BACKEND: symfony_l2
 ```
 
-`symfony_l2`을(를) Valkey 백 엔드 모델로 지정하면 [L2 캐시](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko){target="_blank"}이(가) 활성화되고 `ece-tools`은(는) `default` 프런트 엔드와 `stale_cache_enabled` 프런트 엔드를 포함하여 Valkey 서비스 연결 세부 정보에서 L2 캐시 구성을 자동으로 생성합니다. `CACHE_CONFIGURATION`을(를) 정의하는 것은 선택 사항이며 로컬 캐시 디렉터리와 같은 특정 백엔드 옵션을 사용자 지정하는 데만 필요합니다. 맞춤화 예제는 _Adobe Commerce 구성 가이드_&#x200B;의 [최신 Symfony L2 캐시 구현](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko#modern-symfony-l2-cache-implementation){target="_blank"}과 _구현 플레이북_&#x200B;의 [Symfony L2 캐시 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}을 참조하십시오.
+`symfony_l2`을(를) Valkey 백 엔드 모델로 지정하면 [L2 캐시](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/level-two-cache){target="_blank"}이(가) 활성화되고 `ece-tools`은(는) `default` 프런트 엔드와 `stale_cache_enabled` 프런트 엔드를 포함하여 Valkey 서비스 연결 세부 정보에서 L2 캐시 구성을 자동으로 생성합니다. `CACHE_CONFIGURATION`을(를) 정의하는 것은 선택 사항이며 로컬 캐시 디렉터리와 같은 특정 백엔드 옵션을 사용자 지정하는 데만 필요합니다. 맞춤화 예제는 _Adobe Commerce 구성 가이드_&#x200B;의 [최신 Symfony L2 캐시 구현](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/level-two-cache#modern-symfony-l2-cache-implementation){target="_blank"}과 _구현 플레이북_&#x200B;의 [Symfony L2 캐시 구성](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}을 참조하십시오.
 
 >[!NOTE]
 >
->Adobe Commerce 2.4.9에는 ACP2E-5132 패치를 통해 캐시 태그 저장, 무효화 및 압축 등 Symfony L2 캐시가 개선되어 디스크 I/O가 줄어들고 오래된 캐시 항목이 제거되며 메모리 및 네트워크 오버헤드가 감소합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 [향상된 Symfony L2 캐시 성능 및 안정성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ko#enhanced-symfony-l2-cache-performance-and-reliability)을(를) 참조하십시오.
+>Adobe Commerce 2.4.9에는 ACP2E-5132 패치를 통해 캐시 태그 저장, 무효화 및 압축 등 Symfony L2 캐시가 개선되어 디스크 I/O가 줄어들고 오래된 캐시 항목이 제거되며 메모리 및 네트워크 오버헤드가 감소합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 [향상된 Symfony L2 캐시 성능 및 안정성](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/level-two-cache#enhanced-symfony-l2-cache-performance-and-reliability)을(를) 참조하십시오.
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -669,7 +663,7 @@ stage:
 - **기본값**—`quick`
 - **버전**—Adobe Commerce 2.2.0 이상
 
-정적 콘텐츠에 대한 [배포 전략](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ko)을(를) 사용자 지정할 수 있습니다. [정적 보기 파일 배포](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ko)를 참조하세요.
+정적 콘텐츠에 대한 [배포 전략](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)을(를) 사용자 지정할 수 있습니다. [정적 보기 파일 배포](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)를 참조하세요.
 
 로케일이 두 개 이상인 경우 _only_ 옵션을 사용합니다.
 
@@ -830,7 +824,7 @@ stage:
 >
 >Adobe Commerce 2.4.7 및 2.4.8에서 `USE_LUA: true`을(를) 설정하면 캐시 손상 및 GraphQL 캐시 누락 문제가 발생할 수 있습니다.
 >
->Adobe Commerce 2.4.9부터 Commerce 버전에 대해 Valkey 캐시 구성 지침을 사용하고 새 배포에 `USE_LUA`을(를) 사용하지 마십시오. [기본 및 페이지 캐시에 대한 Redis 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을 참조하십시오.
+>Adobe Commerce 2.4.9부터 Commerce 버전에 대해 Valkey 캐시 구성 지침을 사용하고 새 배포에 `USE_LUA`을(를) 사용하지 마십시오. [기본 및 페이지 캐시에 대한 Redis 구성](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을 참조하십시오.
 
 ## `LUA_KEY`
 
@@ -855,7 +849,7 @@ stage:
 >
 >Adobe Commerce 2.4.8에서 `USE_LUA_ON_GC: false`을(를) 설정하면 태그 기반 캐시 무효화가 자동으로 실패하여 복구할 전체 캐시 플러시가 필요할 수 있습니다.
 >
->2.4.9 이상에서는 설치된 버전의 [캐시 서비스 지침](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을(를) 따릅니다.
+>2.4.9 이상에서는 설치된 버전의 [캐시 서비스 지침](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을(를) 따릅니다.
 
 ## `VERBOSE_COMMANDS`
 

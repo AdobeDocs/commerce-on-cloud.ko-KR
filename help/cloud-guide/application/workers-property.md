@@ -4,16 +4,12 @@ description: ' [!DNL Commerce] 응용 프로그램 구성 파일에서 작업자
 feature: Cloud, Configuration
 exl-id: 62d9dfaf-6265-4016-8d68-26362cf6a63a
 TQID: https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 357
+source-wordcount: 361
 ht-degree: 0%
 
 ---
@@ -26,7 +22,7 @@ Nginx 인스턴스를 실행하지 않고 웹 인스턴스와 독립적으로 �
 
 작업자는 Pro Staging 및 프로덕션 환경에서만 사용할 수 있습니다. Pro 통합 및 Starter 환경에서는 [CRON_CONSUMER_RUNNER](../environment/variables-deploy.md#cron_consumers_runner) 변수를 사용하도록 선택할 수 있습니다.
 
-Pro 스테이징 또는 프로덕션에서 작업자를 구성하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하고 다음 정보를 포함하십시오.
+Pro 스테이징 또는 프로덕션에서 작업자를 구성하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하고 다음 정보를 포함하십시오.
 
 - 프로젝트 ID
 - 환경 ID

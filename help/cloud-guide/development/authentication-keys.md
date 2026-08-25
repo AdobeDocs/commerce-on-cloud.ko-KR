@@ -5,19 +5,13 @@ feature: Cloud, Security
 topic: Security
 exl-id: b5a24fcd-9b43-4ec9-8a0c-52956a74e45e
 TQID: https://experienceleague.adobe.com/nYBr0uvw1SZPSQqAU6uHTiitjZ0kcudsLdWagiWRLP8
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 318
+source-wordcount: 319
 ht-degree: 0%
 
 ---
@@ -26,7 +20,7 @@ ht-degree: 0%
 
 Adobe Commerce 저장소에 액세스하고 Adobe Commerce on cloud infrastructure 프로젝트에 대한 설치 및 업데이트 명령을 활성화하려면 인증 키가 있어야 합니다. 작성기 인증 자격 증명을 지정하는 방법에는 두 가지가 있습니다.
 
-- **인증 파일**—cloud infrastructure 루트 디렉터리의 Adobe Commerce에 Adobe Commerce [인증 자격 증명](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=ko)이 들어 있는 파일입니다.
+- **인증 파일**—cloud infrastructure 루트 디렉터리의 Adobe Commerce에 Adobe Commerce [인증 자격 증명](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys)이 들어 있는 파일입니다.
 - **환경 변수** - 실수로 노출되는 것을 방지하기 위해 Adobe Commerce on cloud infrastructure 프로젝트에서 인증 키를 설정하는 환경 변수입니다.
 
 >[!BEGINSHADEBOX]
@@ -69,7 +63,7 @@ Adobe에서는 인증 자격 증명이 실수로 노출되지 않도록 클라�
 
 **환경 변수를 사용하여 인증 키를 추가하려면**:
 
-1. _[!DNL Cloud Console]_&#x200B;에서 프로젝트 탐색 오른쪽의 구성 아이콘을 클릭합니다.
+1. _[!DNL Cloud Console]_에서 프로젝트 탐색 오른쪽의 구성 아이콘을 클릭합니다.
 
    ![프로젝트 구성](../../assets/icon-configure.png){width="36"}
 

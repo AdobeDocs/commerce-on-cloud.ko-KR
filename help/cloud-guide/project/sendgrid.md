@@ -3,21 +3,13 @@ title: SendGrid 이메일 서비스
 description: 클라우드 인프라의 Adobe Commerce용 SendGrid 이메일 서비스와 DNS 구성을 테스트하는 방법에 대해 알아봅니다.
 exl-id: 06236068-df32-468f-99ec-c379984be136
 TQID: https://experienceleague.adobe.com/I4giHpOngkQ0KZYBXZoGJGBXLWme2fxE39uIOGnON-k
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1702
+source-wordcount: 1713
 ht-degree: 0%
 
 ---
@@ -44,7 +36,7 @@ Cloud Console 또는 명령줄에서 각 환경에 대해 발신 이메일을 �
 
 기본적으로 발신 이메일은 Pro 프로덕션 및 스테이징 환경에서 활성화됩니다. 그러나 [명령줄](outgoing-emails.md#enable-emails-in-the-cli) 또는 [클라우드 콘솔](outgoing-emails.md#enable-emails-in-the-cloud-console)을 통해 `enable_smtp` 속성을 설정할 때까지 [!UICONTROL Outgoing emails]이(가) 환경 설정에서 비활성화되어 표시될 수 있습니다. 통합 및 스테이징 환경에 대해 발신 이메일을 활성화하여 Cloud 프로젝트 사용자에 대해 이중 인증 또는 암호 재설정 이메일을 보낼 수 있습니다. [테스트를 위한 전자 메일 구성](outgoing-emails.md)을 참조하세요.
 
-Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하지 않도록 설정하거나 다시 사용하도록 설정해야 하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)을 제출할 수 있습니다.
+Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하지 않도록 설정하거나 다시 사용하도록 설정해야 하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)을 제출할 수 있습니다.
 
 >[!TIP]
 >
@@ -54,7 +46,7 @@ Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하�
 
 모든 클라우드 프로젝트는 중앙 계정에서 관리되므로 지원만 SendGrid 대시보드에 액세스할 수 있습니다. SendGrid는 하위 계정 제한 기능을 제공하지 않습니다.
 
-활동 로그에서 게재 상태 또는 반송되거나 거부되거나 차단된 전자 메일 주소 목록을 검토하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하십시오. 지원 팀 **은(는) 30일 넘는 활동 로그를 검색할 수 없습니다**.
+활동 로그에서 게재 상태 또는 반송되거나 거부되거나 차단된 전자 메일 주소 목록을 검토하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하십시오. 지원 팀 **은(는) 30일 넘는 활동 로그를 검색할 수 없습니다**.
 
 가능한 경우 요청에 다음 정보를 포함하십시오.
 
@@ -62,13 +54,13 @@ Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하�
 * 해당 일정(지난 30일 이내만)
 * 이메일 제목
 
-전자 메일 배달 설정을 더 잘 관리하려면 [SMTP 서버 또는 전자 메일 배달 서비스 공급자](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/communications/email-communications)를 사용하세요. 또한 고유한 SendGrid 서비스에 등록하여 클라우드 서비스 스택을 바짝 따라갈 수도 있습니다.
+전자 메일 배달 설정을 더 잘 관리하려면 [SMTP 서버 또는 전자 메일 배달 서비스 공급자](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)를 사용하세요. 또한 고유한 SendGrid 서비스에 등록하여 클라우드 서비스 스택을 바짝 따라갈 수도 있습니다.
 
 >[!IMPORTANT]
 >
 >자체 SendGrid 계정을 사용하는 경우 더 이상 Adobe을 통해 SendGrid 지원을 받지 않게 됩니다.
 >
->독점 SendGrid 서비스를 사용하거나 기존 API 키를 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하고 SendGrid 계정에 대한 API 키를 포함하십시오.
+>독점 SendGrid 서비스를 사용하거나 기존 API 키를 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하고 SendGrid 계정에 대한 API 키를 포함하십시오.
 
 ## 식별된 메일 도메인 키(DKIM)
 
@@ -80,7 +72,7 @@ DKIM은 인터넷 서비스 공급자(ISP)가 합법적인 발신자 주소와 �
 >
 >이러한 이유로 스타터 환경에서 전송된 트랜잭션 이메일은 완전히 인증될 수 없으므로 스팸으로 표시될 가능성이 더 높습니다.  Pro 환경에서 DKIM을 활성화하면 전송 도메인이 인증되므로 이메일 전달성이 크게 향상되고 메시지가 스팸으로 필터링되는 기회가 줄어듭니다.
 >
->메시지 게재율을 향상시키려면 Starter에서 Pro로 업그레이드하거나 자체 SMTP 서버 또는 이메일 게재 서비스 공급자를 사용하십시오. _관리 시스템 안내서_&#x200B;에서 [전자 메일 연결 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/communications/email-communications)을 참조하십시오.
+>메시지 게재율을 향상시키려면 Starter에서 Pro로 업그레이드하거나 자체 SMTP 서버 또는 이메일 게재 서비스 공급자를 사용하십시오. _관리 시스템 안내서_&#x200B;에서 [전자 메일 연결 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)을 참조하십시오.
 
 ### 보낸 사람 및 도메인 인증
 
@@ -88,11 +80,11 @@ SendGrid가 Pro 프로덕션 또는 스테이징 환경에서 사용자를 대�
 
 >[!TIP]
 >
->**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;에서 올바른 도메인으로 **[!UICONTROL S저장된 전자 메일 주소]**&#x200B;을(를) 구성해야 합니다. 도메인 인증은 발신자의 이메일 주소에 대해 수행됩니다. 기본 설정(`example.com`)이 구성된 경우 `example.com`의 전자 메일이 Sendgrid에 의해 차단됩니다.
+>**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;에서 올바른 도메인으로 **[!UICONTROLS저장된 전자 메일 주소]**&#x200B;을(를) 구성해야 합니다. 도메인 인증은 발신자의 이메일 주소에 대해 수행됩니다. 기본 설정(`example.com`)이 구성된 경우 `example.com`의 전자 메일이 Sendgrid에 의해 차단됩니다.
 
 **도메인 인증을 사용하려면**:
 
-1. 특정 도메인(**Pro 스테이징 및 프로덕션 환경만**)에 대해 DKIM 활성화를 요청하려면 [지원 티켓](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)을 제출하십시오.
+1. 특정 도메인(**Pro 스테이징 및 프로덕션 환경만**)에 대해 DKIM 활성화를 요청하려면 [지원 티켓](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)을 제출하십시오.
 1. 지원 티켓에서 제공한 `TXT` 및 `CNAME` 레코드로 DNS 구성을 업데이트합니다.
 
 **계정 ID가**&#x200B;인 `TXT` 레코드 예:
@@ -143,7 +135,7 @@ dig CNAME s2._domainkey.domain_name
 
 트랜잭션 이메일 임계값은 비프로덕션 환경에서 매월 12,000개의 이메일을 보내는 것과 같이 특정 기간 내에 Pro 환경에서 보낼 수 있는 트랜잭션 이메일 메시지 수를 나타냅니다. 임계값은 스팸 전송을 방지하고 이메일 평판을 손상시킬 수 있는 가능성을 방지하기 위해 설계되었습니다.
 
-보낸 사람의 신뢰도 점수가 95% 이상인 한 프로덕션 환경에서 보낼 수 있는 이메일 수에는 엄격한 제한이 없습니다. 이러한 신뢰도는 반송되거나 거부된 이메일 수와 DNS 기반 스팸 레지스트리가 도메인을 잠재적인 스팸 소스로 플래그를 지정했는지 여부에 따라 영향을 받습니다. _Commerce 지원 기술 자료_&#x200B;에서 [Adobe Commerce에서 SendGrid 크레딧이 초과되면 전송되지 않은 전자 메일](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)을(를) 참조하십시오.
+보낸 사람의 신뢰도 점수가 95% 이상인 한 프로덕션 환경에서 보낼 수 있는 이메일 수에는 엄격한 제한이 없습니다. 이러한 신뢰도는 반송되거나 거부된 이메일 수와 DNS 기반 스팸 레지스트리가 도메인을 잠재적인 스팸 소스로 플래그를 지정했는지 여부에 따라 영향을 받습니다. _Commerce 지원 기술 자료_&#x200B;에서 [Adobe Commerce에서 SendGrid 크레딧이 초과되면 전송되지 않은 전자 메일](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-25701)을(를) 참조하십시오.
 
 **최대 크레딧이 초과되었는지 확인**:
 
@@ -157,7 +149,7 @@ dig CNAME s2._domainkey.domain_name
 
 1. `authentication failed : Maxium credits exceeded`개 항목에 대한 `/var/log/mail.log`을(를) 확인하십시오.
 
-   `authentication failed`개의 로그 항목이 표시되고 **이메일 전송 신뢰도**&#x200B;가 최소 95개라면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하여 크레딧 배분을 늘릴 수 있습니다.
+   `authentication failed`개의 로그 항목이 표시되고 **이메일 전송 신뢰도**&#x200B;가 최소 95개라면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 크레딧 배분을 늘릴 수 있습니다.
 
 >[!NOTE]
 >
@@ -173,6 +165,6 @@ dig CNAME s2._domainkey.domain_name
 
 이메일이 스팸 폴더로 전송되지 않도록 하려면 Sendgrid의 모범 사례 문서 [내 이메일이 스팸으로 이어지는 이유](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder)를 따르십시오.
 
-일부 받는 사람이 전자 메일을 받지 못하는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하여 금지 목록 검토를 요청하고 필요한 경우 받는 사람을 제거할 수 있습니다.
+일부 받는 사람이 전자 메일을 받지 못하는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 금지 목록 검토를 요청하고 필요한 경우 받는 사람을 제거할 수 있습니다.
 
 자세한 내용은 [제외 목록이란?](https://sendgrid.com/en-us/blog/what-is-a-suppression-list)을 참조하세요.

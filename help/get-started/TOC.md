@@ -5,9 +5,9 @@ user-guide-description: 클라우드 인프라에서  [!DNL Commerce] 응용 프
 feature: Cloud
 product: magento
 recommendations: noDisplay, noCatalog
-source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '53'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 + [Commerce 시작](overview.md)
 + [클라우드에서 Commerce 프로비저닝](new-project.md)
 + [온보딩](onboarding.md)
-+ [&#x200B; [!DNL Cloud Console]에 로그인](cloud-console.md)
++ [ [!DNL Cloud Console]에 로그인](cloud-console.md)
 + [상점 첫 화면](access-storefront.md)
 + [개발 준비](prepare-workspace.md)
-+ [클라우드 인프라로 돌아가기 안내서](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=ko)
++ [클라우드 인프라로 돌아가기 안내서](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)

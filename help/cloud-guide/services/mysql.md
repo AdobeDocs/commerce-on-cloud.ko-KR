@@ -4,19 +4,13 @@ description: 클라우드 인프라의 Adobe Commerce을 사용하여 영구 데
 feature: Cloud, Services, Storage
 exl-id: 37b893ef-43cf-466b-9d18-ee3b80fdf2d8
 TQID: https://experienceleague.adobe.com/xPikS7qhOEhhWDRuUYBJEqL7EUPObzPDxJEZ4xjKkuE
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 921
+source-wordcount: 928
 ht-degree: 1%
 
 ---
@@ -25,7 +19,7 @@ ht-degree: 1%
 
 `mysql` 서비스는 [MariaDB](https://mariadb.com/) 버전 10.2~10.4를 기반으로 영구 데이터 저장소를 제공하여 [XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html) 저장소 엔진을 지원하고 MySQL 5.6 및 5.7에서 기능을 다시 구현했습니다.
 
-MariaDB 10.4에 대한 리인덱싱은 다른 MariaDB 또는 MySQL 버전에 비해 시간이 더 걸립니다. _성능 모범 사례_ 안내서에서 [인덱서](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=ko#indexers)를 참조하세요.
+MariaDB 10.4에 대한 리인덱싱은 다른 MariaDB 또는 MySQL 버전에 비해 시간이 더 걸립니다. _성능 모범 사례_ 안내서에서 [인덱서](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration#indexers)를 참조하세요.
 
 >[!WARNING]
 >
@@ -84,7 +78,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-위의 예에서 `properties`은(는) 기본 `optimizer` 설정을 성능 모범 사례 안내서[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=ko#indexers)에서 권장하는 로 수정합니다.
+위의 예에서 `properties`은(는) 기본 `optimizer` 설정을 성능 모범 사례 안내서](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration#indexers)에서 권장하는 [로 수정합니다.
 
 **MariaDB 구성 옵션**:
 
@@ -100,7 +94,7 @@ mysql:
 
 선택적으로 `main` 데이터베이스에 액세스할 수 있는 다양한 권한을 가진 여러 사용자를 설정할 수 있습니다.
 
-기본적으로 데이터베이스에 대한 관리자 액세스 권한이 있는 `mysql`(이)라는 엔드포인트가 한 개 있습니다. 여러 데이터베이스 사용자를 설정하려면 `services.yaml` 파일에 여러 끝점을 정의하고 `.magento.app.yaml` 파일에 관계를 선언해야 합니다. Pro 스테이징 및 프로덕션 환경의 경우 추가 사용자를 요청하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)하십시오.
+기본적으로 데이터베이스에 대한 관리자 액세스 권한이 있는 `mysql`(이)라는 엔드포인트가 한 개 있습니다. 여러 데이터베이스 사용자를 설정하려면 `services.yaml` 파일에 여러 끝점을 정의하고 `.magento.app.yaml` 파일에 관계를 선언해야 합니다. Pro 스테이징 및 프로덕션 환경의 경우 추가 사용자를 요청하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하십시오.
 
 중첩된 배열을 사용하여 특정 사용자 액세스에 대한 끝점을 정의합니다. 각 끝점은 하나 이상의 스키마(데이터베이스)에 대한 액세스와 각 항목에 대한 서로 다른 권한 수준을 지정할 수 있습니다.
 
@@ -224,13 +218,13 @@ MariaDB 데이터베이스에 직접 액세스하려면 SSH를 사용하여 원�
 >
 >이 기능은 프로프로덕션 및 스테이징 클러스터에서만 사용할 수 있습니다.
 
-데이터베이스 성능을 향상시키거나 데이터베이스 잠금 문제를 해결하기 위해 보조 데이터베이스에 연결해야 하는 경우가 있습니다. 이 구성이 필요한 경우 `"port" : 3304`을(를) 사용하여 연결을 설정하십시오. _구현 모범 사례_ 안내서에서 [MySQL 슬레이브 연결을 구성하는 모범 사례](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration.html?lang=ko) 항목을 참조하십시오.
+데이터베이스 성능을 향상시키거나 데이터베이스 잠금 문제를 해결하기 위해 보조 데이터베이스에 연결해야 하는 경우가 있습니다. 이 구성이 필요한 경우 `"port" : 3304`을(를) 사용하여 연결을 설정하십시오. _구현 모범 사례_ 안내서에서 [MySQL 슬레이브 연결을 구성하는 모범 사례](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration) 항목을 참조하십시오.
 
 ## 문제 해결
 
 MySQL 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서를 참조하십시오.
 
-- [느린 쿼리 및 프로세스 MySQL 확인](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html?lang=ko)
-- [클라우드에서 데이터베이스 덤프 만들기](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html?lang=ko)
-- [데이터 마이그레이션 도구 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=ko)
-- [Adobe Commerce 업그레이드: 컴팩트에서 다이내믹 테이블 2.2.x, 2.3.x에서 2.4.x로](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=ko)
+- [느린 쿼리 및 프로세스 MySQL 확인](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
+- [클라우드에서 데이터베이스 덤프 만들기](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
+- [데이터 마이그레이션 도구 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+- [Adobe Commerce 업그레이드: 컴팩트에서 다이내믹 테이블 2.2.x, 2.3.x에서 2.4.x로](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)

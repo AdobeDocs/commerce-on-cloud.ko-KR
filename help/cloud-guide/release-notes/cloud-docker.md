@@ -6,19 +6,11 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
 TQID: https://experienceleague.adobe.com/H-A-2jStZ7GuPn2oE-OrZWhScp1GsjEUU1NHDQKhRBU
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 4509
 ht-degree: 0%
@@ -443,7 +435,7 @@ ht-degree: 0%
 
     - ![새 아이콘](../../assets/new.svg) **공식 이미지를 사용하도록 컨테이너 기본 이미지를 업데이트했습니다**—이제 [Cloud TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container) 이미지가 공식 `debian:jessie` 도커 이미지를 기반으로 합니다.—<!--MAGECLOUD-4163-->
 
-    - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시&rbrack;**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.&lbrack;
+    - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시]**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.[
 
       - **`TimeOut`** - 시간을 첫 번째 바이트(TTFB) 시간 초과 값으로 설정합니다. 기본값은 300초입니다.
 
@@ -475,7 +467,7 @@ ht-degree: 0%
 
   - ![새 아이콘](../../assets/new.svg) **데이터베이스 포트를 호스트에 표시하는 서비스 구성 옵션을 추가했습니다.**—`docker-compose.yml` 파일을 작성할 때 데이터베이스 포트를 호스트에 표시하려면 `--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>` 옵션을 사용하십시오. `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-  - ![새 아이콘](../../assets/new.svg) **새 배포 후 명령** - 이전에는 `cloud-deploy` 명령을 사용하여 Adobe Commerce을 Cloud Docker 컨테이너에 배포한 후 `.magento.app.yaml` 파일에 정의된 배포 후 후크가 자동으로 실행되었습니다. 이제 배포한 후 배포 후 후크를 실행하려면 별도의 `cloud-post-deploy` 명령을 실행해야 합니다. [개발자](https://developer.adobe.com/commerce/cloud-tools/docker/deploy) 및 [프로덕션](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode) 모드에 대해 업데이트된 실행 지침을 참조하십시오.<!--MAGECLOUD-3996-->
+  - ![새 아이콘](../../assets/new.svg) **새 배포 후 명령** - 이전에는 `cloud-deploy` 명령을 사용하여 Adobe Commerce을 Cloud Docker 컨테이너에 배포한 후 `.magento.app.yaml` 파일에 정의된 배포 후 후크가 자동으로 실행되었습니다. 이제 배포한 후 배포 후 후크를 실행하려면 별도의 `cloud-post-deploy` 명령을 실행해야 합니다. [개발자](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/) 및 [프로덕션](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode) 모드에 대해 업데이트된 실행 지침을 참조하십시오.<!--MAGECLOUD-3996-->
 
   - ![새 아이콘](../../assets/new.svg) 빌드 및 배포 컨테이너에 대한 `./bin/magento-docker` 명령에 `--rm` 옵션을 추가했습니다. 작업이 완료되면 컨테이너가 제거됩니다.<!--MAGECLOUD-4205-->
 

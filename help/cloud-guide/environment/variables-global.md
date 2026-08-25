@@ -6,19 +6,13 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
 TQID: https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 774
+source-wordcount: 775
 ht-degree: 0%
 
 ---
@@ -65,7 +59,7 @@ stage:
 - **기본값**-_설정되지 않음_
 - **버전**—Adobe Commerce 2.4.4 이상
 
-`true`(으)로 설정된 경우 Commerce 웹후크를 활성화합니다. 웹후크는 App Builder 런타임 작업 또는 서드파티 인벤토리 관리 시스템과 같은 외부 엔드포인트에서 실행됩니다. [_Webhooks 안내서_](https://developer.adobe.com/commerce/extensibility/webhooks)에서는 이 기능에 대해 자세히 설명합니다.
+`true`(으)로 설정된 경우 Commerce 웹후크를 활성화합니다. 웹후크는 App Builder 런타임 작업 또는 서드파티 인벤토리 관리 시스템과 같은 외부 엔드포인트에서 실행됩니다. [_Webhooks 안내서_](https://developer.adobe.com/commerce/extensibility/webhooks/)에서는 이 기능에 대해 자세히 설명합니다.
 
 ```yaml
 stage:
@@ -167,8 +161,8 @@ stage:
 ## `SKIP_HTML_MINIFICATION`
 
 - **기본값**:
-   - `true` - `ece-tools` 2002.0.13 이상
-   - `false`—이전 버전의 `ece-tools`에 대해
+  - `true` - `ece-tools` 2002.0.13 이상
+  - `false`—이전 버전의 `ece-tools`에 대해
 - **버전**—Adobe Commerce 2.1.4 이상
 
 빌드 단계가 끝날 때 정적 보기 파일을 `<magento_root>/init/` 디렉터리에 복사하는 것을 활성화하거나 비활성화합니다. `true`(으)로 설정하면 파일이 복사되지 않으며 요청 시 HTML 축소를 사용할 수 있습니다. 스테이징 및 프로덕션 환경에 배포할 때 가동 중지 시간을 줄이려면 이 값을 `true`(으)로 설정하십시오.
@@ -189,7 +183,7 @@ stage:
 - **기본값**—_설정되지 않음_
 - **버전**—Adobe Commerce 2.1.4 이상
 
-`X_FRAME_CONFIGURATION` 변수를 사용하여 Adobe Commerce 사이트에 대한 [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=ko) 헤더 구성을 변경합니다. 이 구성은 브라우저가 `<frame>`, `<iframe>` 또는 `<object>`에서 페이지를 렌더링하는 방법을 제어합니다. 다음 옵션 중 하나를 사용합니다.
+`X_FRAME_CONFIGURATION` 변수를 사용하여 Adobe Commerce 사이트에 대한 [`X-Frame-Options`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/security/xframe-options) 헤더 구성을 변경합니다. 이 구성은 브라우저가 `<frame>`, `<iframe>` 또는 `<object>`에서 페이지를 렌더링하는 방법을 제어합니다. 다음 옵션 중 하나를 사용합니다.
 
 - `DENY` - 프레임에 페이지를 표시할 수 없습니다.
 - `SAMEORIGIN`—(기본 Adobe Commerce 설정) 페이지는 페이지 자체와 동일한 원점의 프레임에만 표시될 수 있습니다.

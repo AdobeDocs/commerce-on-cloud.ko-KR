@@ -4,18 +4,13 @@ description: 사용자 지정 구성 파일을 사용하여 클라우드 인프�
 feature: Cloud, Configuration, Deploy, Build
 exl-id: 44c2a73e-4ea2-49a6-86c1-9fa8cfc8b66e
 TQID: https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -51,7 +46,7 @@ hooks:
 
 >[!NOTE]
 >
->`ece-tools` 2002.1.x 릴리스에는 새로운 [후크 구성](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=ko) 형식이 있습니다. `ece-tools` 2002.0.x 릴리스의 레거시 형식은 계속 지원됩니다. 그러나 시나리오 기반 배포 기능을 사용하려면 새 형식으로 업데이트해야 합니다.
+>`ece-tools` 2002.1.x 릴리스에는 새로운 [후크 구성](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property) 형식이 있습니다. `ece-tools` 2002.0.x 릴리스의 레거시 형식은 계속 지원됩니다. 그러나 시나리오 기반 배포 기능을 사용하려면 새 형식으로 업데이트해야 합니다.
 
 ## 시나리오 단계 검토
 
@@ -92,9 +87,9 @@ hooks:
 
   이 예제에서 시나리오에는 다음 우선순위가 있습니다.
 
-   1. `vendor/vendor-name/module-name/deploy2.xml`
-   1. `vendor/vendor-name/module-name/deploy.xml`
-   1. `scenario/deploy.xml`(기본 또는 기준 시나리오)
+  1. `vendor/vendor-name/module-name/deploy2.xml`
+  1. `vendor/vendor-name/module-name/deploy.xml`
+  1. `scenario/deploy.xml`(기본 또는 기준 시나리오)
 
 - 우선 순위가 가장 높은 시나리오의 단계는 다른 시나리오에서 동일한 이름으로 단계를 재정의합니다. 새 단계가 구성에 추가됩니다. 동일한 규칙이 두 개 이상의 시나리오에 적용되며 각 시나리오는 오른쪽에서 왼쪽으로 우선 순위가 지정됩니다(예: (C → B → A).
 

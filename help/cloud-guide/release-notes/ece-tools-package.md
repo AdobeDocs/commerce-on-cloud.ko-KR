@@ -5,18 +5,11 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 3631
 ht-degree: 0%
@@ -206,7 +199,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2022년 10월 27일
 
-- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 Adobe I/O Events 지원이 추가되었습니다**. 이제 확장 개발자는 [Adobe I/O Events](https://developer.adobe.com/events/docs/) 프레임워크를 사용하여 클라우드 인스턴스에서 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)용으로 작성된 응용 프로그램으로 Commerce 이벤트 정보를 보낼 수 있습니다. Adobe Commerce용 Adobe I/O Events이 파트너 미리 보기에 있습니다.<!-- CEXT-932 -->
+- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 Adobe I/O Events 지원이 추가되었습니다**. 이제 확장 개발자는 [Adobe I/O Events](https://developer.adobe.com/events/docs/) 프레임워크를 사용하여 클라우드 인스턴스에서 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/)용으로 작성된 응용 프로그램으로 Commerce 이벤트 정보를 보낼 수 있습니다. Adobe Commerce용 Adobe I/O Events이 파트너 미리 보기에 있습니다.<!-- CEXT-932 -->
 - ![새 아이콘](../../assets/new.svg) **OPcache 구성에 대한 유효성 검사기** - 제외된 경로에 대해 OPcache 구성을 확인하는 유효성 검사기를 추가했습니다.<!-- MCLOUD-9485 -->
 - ![수정 아이콘](../../assets/fix.svg) **GraphQL 캐시 구성 문제를 해결했습니다**—이제 ECE-Tools가 `app/etc/env.php` 파일의 `cache` 구성에서 GraphQL `id_salt` 값을 유지합니다.<!-- MCLOUD-9486 -->
 

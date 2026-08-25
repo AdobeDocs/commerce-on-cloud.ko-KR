@@ -4,20 +4,13 @@ description: 스타터 개발 및 배포 워크플로우를 사용하는 방법�
 feature: Cloud, Paas
 exl-id: 75d170b6-1ec2-4099-82c8-5c4df3442843
 TQID: https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2168
+source-wordcount: 2170
 ht-degree: 0%
 
 ---
@@ -42,7 +35,7 @@ ht-degree: 0%
 
 개발 워크플로우는 다음과 같이 구성됩니다.
 
-- `master`에서 [분기 및 &#x200B;](#clone-and-branch)을(를) 복제하여 `staging` 및 개발 분기를 만듭니다.
+- `master`에서 [분기 및 ](#clone-and-branch)을(를) 복제하여 `staging` 및 개발 분기를 만듭니다.
 - [코드를 개발](#develop-code)하고 [!DNL Composer] 업데이트를 포함하여 개발 분기에 확장을 로컬로 설치합니다.
 - 저장소 및 확장 설정을 [구성](#configure-store)합니다.
 - [구성 생성](#generate-configuration-management-files) 관리 파일
@@ -117,9 +110,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 구성에 대한 최상의 정보는 Adobe Commerce 및 설치된 확장에 대한 설명서를 참조하십시오. 시작하는 데 도움이 되는 몇 가지 링크 및 아이디어는 다음과 같습니다.
 
 - 클라우드의 특정 모범 사례에 대한 [저장소 구성 모범 사례](../store/best-practices.md)
-- 저장소 관리자 액세스, 이름, 언어, 통화, 브랜딩, 사이트, 저장소 보기 등에 대한 [기본 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/start/setup/store-details)
-- CSS와 레이아웃을 포함한 사이트 및 스토어의 모양과 느낌을 위한 [테마](https://experienceleague.adobe.com/ko/docs/commerce-admin/content-design/content-menu#design-features)
-- 데이터베이스의 역할, 도구, 알림 및 암호화 키에 대한 [시스템 구성](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/guide-overview)
+- 저장소 관리자 액세스, 이름, 언어, 통화, 브랜딩, 사이트, 저장소 보기 등에 대한 [기본 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details)
+- CSS와 레이아웃을 포함한 사이트 및 스토어의 모양과 느낌을 위한 [테마](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features)
+- 데이터베이스의 역할, 도구, 알림 및 암호화 키에 대한 [시스템 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview)
 - 해당 설명서를 사용한 확장 설정
 
 단순한 저장소 설정 외에도 여러 사이트 및 저장소, 구성된 서비스 등을 추가로 구성할 수 있습니다. [스토어 구성](../store/overview.md)을 참조하세요.
@@ -175,9 +168,9 @@ Adobe Commerce 버전 2.2 이상을 사용하는 경우 구성 관리 명령은 
 
 스테이징 및 통합 환경에서 사용할 테스트 데이터로 프로덕션 데이터를 내보내려면 다음을 수행합니다.
 
-- Adobe Commerce 암호화 키를 사용하여 고객의 보호된 백업을 내보내고 데이터를 저장할 때 [지원 유틸리티를 실행](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ko) CLI 명령(권장)
+- Adobe Commerce 암호화 키를 사용하여 고객의 보호된 백업을 내보내고 데이터를 저장할 때 [지원 유틸리티를 실행](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/run-support-utilities) CLI 명령(권장)
 
-- 데이터를 생성하고 내보내는 [데이터 수집](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/tools/support#data-collector) 도구
+- 데이터를 생성하고 내보내는 [데이터 수집](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) 도구
 
 이 데이터를 마이그레이션하려면 [정적 파일 및 데이터 마이그레이션 및 배포](../deploy/staging-production.md#migrate-static-files)를 참조하세요.
 
@@ -185,7 +178,7 @@ Adobe Commerce 버전 2.2 이상을 사용하는 경우 구성 관리 명령은 
 
 >[!NOTE]
 >
->데이터를 다른 환경으로 푸시하기 전에 데이터를 삭제하는 것을 고려해야 합니다. [지원 유틸리티 사용](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ko) 또는 스크립트를 개발하여 고객 데이터를 삭제하는 등 몇 가지 옵션이 있습니다.
+>데이터를 다른 환경으로 푸시하기 전에 데이터를 삭제하는 것을 고려해야 합니다. [지원 유틸리티 사용](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/run-support-utilities) 또는 스크립트를 개발하여 고객 데이터를 삭제하는 등 몇 가지 옵션이 있습니다.
 
 >[!WARNING]
 >

@@ -3,23 +3,13 @@ title: 사이트 시작
 description: 사이트 시작 준비를 시작하는 방법에 대해 알아봅니다.
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
 TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c32adafa-ed01-4b31-997e-2413013911b0
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 966
+source-wordcount: 970
 ht-degree: 0%
 
 ---
@@ -58,7 +48,7 @@ Adobe Commerce on cloud infrastructure 구독의 일부로 Adobe은 Let&#39;s En
 
 >[!NOTE]
 >
->Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ko#submit-ticket)에 문의하십시오.
+>Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)에 문의하십시오.
 
 ## 보안 검색 도구 설정
 
@@ -84,7 +74,7 @@ Security Scan Tool을 사용하면 스토어 웹 사이트를 정기적으로 �
 >
 >Adobe에서는 조사 결과를 조사하는 동안 최상의 서비스 품질을 보장하기 위해 다른 서드파티 도구보다 보안 검색 도구를 사용하는 것이 좋습니다.
 
-보안 검색 도구 설정 및 사용에 대한 자세한 내용은 [사용 안내서](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/security/security-scan)를 참조하세요. 일반적으로 UAT(사용자 승인 테스트)를 시작할 때 이 도구를 사용하기 시작합니다.
+보안 검색 도구 설정 및 사용에 대한 자세한 내용은 [사용 안내서](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)를 참조하세요. 일반적으로 UAT(사용자 승인 테스트)를 시작할 때 이 도구를 사용하기 시작합니다.
 
 검색하는 각 사이트는 Security Scan 탭을 통해 등록해야 합니다. 등록 프로세스 중에 면책조항에 동의해야 스캔을 시작할 수 있습니다. 각 검사가 완료되면 사용자에게 알림을 수신하도록 예약과 인증을 모두 제어합니다. 특정 반복 날짜 및 시간에 대한 검사를 예약하거나 필요에 따라 요청 시 검사를 실행할 수 있습니다.
 

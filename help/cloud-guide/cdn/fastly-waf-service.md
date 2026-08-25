@@ -4,26 +4,14 @@ description: Fastly WAF 서비스가 Adobe Commerce 네트워크 또는 사이�
 feature: Cloud, Configuration, Security
 exl-id: f00e35f2-9800-4e24-a4d0-d36fde59a003
 TQID: https://experienceleague.adobe.com/GhpLOxZbJMYhBTmj8W4a90wfmFYq-8h2bvrKQWj6ZWk
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-subfeature_v2:
-  - id: f2261633-201d-46c5-8a66-999e70527a83
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+subfeature_v2: id: f2261633-201d-46c5-8a66-999e70527a83
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 987
+source-wordcount: 990
 ht-degree: 0%
 
 ---
@@ -38,13 +26,13 @@ WAF 서비스는 다음과 같은 이점을 제공합니다.
 - **기본 WAF 정책** - Fastly에서 구성 및 유지 관리하는 기본 WAF 정책은 주입 공격, 악의적인 입력, 교차 사이트 스크립팅, 데이터 내보내기, HTTP 프로토콜 위반 및 기타 [OWASP Top Ten](https://owasp.org/www-project-top-ten/) 보안 위협을 포함한 광범위한 공격으로부터 Adobe Commerce 웹 애플리케이션을 보호하기 위해 맞춤화된 보안 규칙 모음을 제공합니다.
 - **WAF 온보딩 및 지원** - Adobe은 프로비저닝이 완료된 후 2~3주 내에 프로덕션 환경에서 기본 WAF 정책을 배포하고 활성화합니다.
 - **작업 및 유지 관리 지원**—
-   - Adobe 및 Fastly는 WAF 서비스에 대한 로그, 규칙 및 경고를 설정하고 관리합니다.
-   - Adobe은 적법한 트래픽을 차단하는 WAF 서비스 문제와 관련된 고객 지원 티켓을 우선 순위 1 문제로 분류합니다.
-   - WAF 서비스 버전으로 자동 업그레이드하면 새롭거나 진화하는 악용에 대한 즉각적인 적용이 보장됩니다. [WAF 유지 관리 및 업그레이드](#waf-maintenance-and-updates)를 참조하세요.
+  - Adobe 및 Fastly는 WAF 서비스에 대한 로그, 규칙 및 경고를 설정하고 관리합니다.
+  - Adobe은 적법한 트래픽을 차단하는 WAF 서비스 문제와 관련된 고객 지원 티켓을 우선 순위 1 문제로 분류합니다.
+  - WAF 서비스 버전으로 자동 업그레이드하면 새롭거나 진화하는 악용에 대한 즉각적인 적용이 보장됩니다. [WAF 유지 관리 및 업그레이드](#waf-maintenance-and-updates)를 참조하세요.
 
 >[!TIP]
 >
->클라우드 인프라 스토어의 Adobe Commerce에 대한 PCI 규정 준수 유지 관리에 대한 자세한 내용은 [PCI 규정 준수](https://business.adobe.com/kr/products/magento/pci-compliance.html)를 참조하십시오.
+>클라우드 인프라 스토어의 Adobe Commerce에 대한 PCI 규정 준수 유지 관리에 대한 자세한 내용은 [PCI 규정 준수](https://business.adobe.com/products/magento/pci-compliance.html)를 참조하십시오.
 
 ## WAF 활성화
 
@@ -68,7 +56,7 @@ WAF 서비스가 활성화되면 WAF 규칙과 비교하여 모든 웹 및 관�
 
 책임자로부터 이 오류 응답 페이지를 사용자 지정할 수 있습니다. [WAF 응답 페이지 사용자 지정](fastly-custom-response.md#customize-the-waf-error-page)을 참조하세요.
 
-Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
+Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
 
 New Relic을 사용하여 특정 요청에 대한 WAF 응답을 식별하려면 다음을 참조하십시오.
 
@@ -90,7 +78,7 @@ WAF이 합법적인 요청을 차단하고 있는 경우 이러한 요청은 종
 Fastly에서 제공하는 표준 WAF 서비스는 다음 기능을 지원하지 않습니다.
 
 - 맬웨어 또는 봇 완화 방지 - [액세스 제어 목록](./fastly-vcl-allowlist.md) 또는 서드파티 서비스를 사용하는 것이 좋습니다.
-- 속도 제한—Fastly 설명서에서 [속도 제한](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)을 참조하거나 _Commerce Web API_ 보안 섹션에서 [속도 제한](https://developer.adobe.com/commerce/webapi/get-started/rate-limiting/)을 참조하십시오.
+- 속도 제한—Fastly 설명서에서 [속도 제한](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)을 참조하거나 _Commerce Web API_ 보안 섹션에서 [속도 제한](https://developer.adobe.com/commerce/webapi/get-started/rate-limiting)을 참조하십시오.
 - 고객에 대한 로깅 끝점 구성—대체 방법으로 [PrivateLink 서비스](../development/privatelink-service.md)를 참조하십시오.
 
 WAF 서비스를 사용하면 IP 주소를 기반으로 트래픽을 차단하거나 허용할 수 있습니다. Fastly 서비스에 ACL(액세스 제어 목록) 및 사용자 지정 VCL 코드 조각을 추가하여 트래픽을 차단하거나 허용하는 IP 주소와 VCL 논리를 지정할 수 있습니다. [사용자 지정 Fastly VCL 코드 조각](fastly-vcl-custom-snippets.md)을 참조하세요.

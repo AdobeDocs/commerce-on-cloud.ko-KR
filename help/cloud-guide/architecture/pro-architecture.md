@@ -5,22 +5,14 @@ feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
 TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1587
+source-wordcount: 1619
 ht-degree: 0%
 
 ---
@@ -155,10 +147,10 @@ Pro 프로젝트에서 `master` 분기는 프로덕션 환경과 함께 활성 P
 
 - **GlusterFS**—모든 정적 파일 배포 및 4개의 디렉터리 마운트를 사용한 동기화를 관리하기 위한 파일 서버:
 
-   - `var`
-   - `pub/media`
-   - `pub/static`
-   - `app/etc`
+  - `var`
+  - `pub/media`
+  - `pub/static`
+  - `app/etc`
 
 - **Redis**—VM당 하나의 서버만 활성 상태이고 나머지 두 서버는 복제본입니다.
 
@@ -191,7 +183,7 @@ Adobe Commerce on cloud infrastructure는 각 영역에 별도의 데이터 센�
 
 >[!NOTE]
 >
->마운트된 볼륨에는 [쓰기 가능한 마운트](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)만 포함/참조되며 `app/` 디렉터리의 일부만 포함됩니다. 다른 파일의 경우 [빌드 및 배포 프로세스](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)에서 생성/생성되며 나머지 파일에 대해서도 Git 저장소를 확인해야 합니다.
+>마운트된 볼륨에는 [쓰기 가능한 마운트](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)만 포함/참조되며 `app/` 디렉터리의 일부만 포함됩니다. 다른 파일의 경우 [빌드 및 배포 프로세스](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)에서 생성/생성되며 나머지 파일에 대해서도 Git 저장소를 확인해야 합니다.
 
 {{pro-backups}}
 
@@ -225,4 +217,4 @@ Pro 클러스터 크기 조정 및 _compute_ 구성은 선택한 클라우드 �
 
 중복 아키텍처는 Adobe 클라우드 인프라가 가동 중지 시간 없이 확장될 수 있도록 합니다. 세 가지 인스턴스는 사이트 운영에 영향을 주지 않고 용량을 업그레이드하기 위해 각각 회전합니다. 예를 들어, 제한이 데이터베이스 수준이 아닌 PHP 수준에 있는 경우 기존 클러스터에 웹 서버를 추가할 수 있습니다. 데이터베이스 수준에서 추가 CPU가 제공하는 세로 크기 조절을 보완하는 _가로 크기 조절_&#x200B;을 제공합니다. [조정된 아키텍처](scaled-architecture.md)를 참조하십시오.
 
-이벤트나 기타 이유로 트래픽이 크게 증가할 것으로 예상되면 일시적으로 용량을 증가하도록 요청할 수 있습니다. _Commerce 도움말 센터_&#x200B;에서 [임시 업사이징을 요청하는 방법](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ko)을 참조하세요.
+이벤트나 기타 이유로 트래픽이 크게 증가할 것으로 예상되면 일시적으로 용량을 증가하도록 요청할 수 있습니다. _Commerce 도움말 센터_&#x200B;에서 [임시 업사이징을 요청하는 방법](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)을 참조하세요.
