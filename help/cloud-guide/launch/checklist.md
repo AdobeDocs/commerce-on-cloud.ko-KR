@@ -1,6 +1,6 @@
 ---
 title: 시작 체크리스트
-description: 사이트 실행에 대한 체크리스트 항목을 검토합니다.
+description: 프로덕션에 배포하기 전에 Adobe Commerce 클라우드 인프라에 대한 Launch 체크리스트를 검토하여 구성, 테스트 및 Fastly 설정을 확인하십시오.
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
 TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
 product_v2:
@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 1180
+source-wordcount: 1194
 ht-degree: 0%
 
 ---

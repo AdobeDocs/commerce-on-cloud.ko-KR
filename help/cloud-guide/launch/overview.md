@@ -1,6 +1,6 @@
 ---
 title: 사이트 시작
-description: 사이트 시작 준비를 시작하는 방법에 대해 알아봅니다.
+description: 체크리스트, 모범 사례, 스테이징 및 프로덕션 테스트를 포함하여 Adobe Commerce 클라우드 인프라에서 사이트 실행을 준비하는 방법에 대해 알아봅니다.
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
 TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
 product_v2:
@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 970
+source-wordcount: 984
 ht-degree: 0%
 
 ---
