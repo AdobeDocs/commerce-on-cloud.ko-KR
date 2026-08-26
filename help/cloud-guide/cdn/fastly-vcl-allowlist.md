@@ -4,10 +4,16 @@ description: Fastly Edge ACL 목록 및 사용자 지정 VCL 코드 조각을 �
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
 TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2026-08-25
 source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
 workflow-type: tm+mt
@@ -97,7 +103,7 @@ Edge ACL은 사이트에 대한 액세스를 관리하기 위한 IP 주소 목�
 
 환경에 대한 코드를 검토하고 업데이트한 후 다음 방법 중 하나를 사용하여 사용자 지정 VCL 코드 조각을 Fastly 서비스 구성에 추가합니다.
 
-- [관리자로부터 사용자 지정 VCL 코드 조각을 추가](#add-the-custom-vcl-snippet)합니다. 관리자에 액세스할 수 있는 경우 이 방법이 권장됩니다. (Magento 2 버전 1.2.58](fastly-configuration.md#upgrade) 이상을 위한 [Fastly CDN 모듈이 필요합니다.)
+- [관리자로부터 사용자 지정 VCL 코드 조각을 추가](#add-the-custom-vcl-snippet)합니다. 관리자에 액세스할 수 있는 경우 이 방법이 권장됩니다. (Magento 2 버전 1.2.58[&#128279;](fastly-configuration.md#upgrade) 이상을 위한 Fastly CDN 모듈이 필요합니다.)
 
 - JSON 코드 예제를 파일(예: `allowlist.json`)에 저장하고 [Fastly API를 사용하여 업로드](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)합니다. 관리자에 액세스할 수 없는 경우 이 메서드를 사용합니다.
 
