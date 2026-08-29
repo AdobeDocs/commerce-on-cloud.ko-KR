@@ -232,5 +232,5 @@ MySQL 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서�
 
 - [느린 쿼리 및 프로세스 MySQL 확인](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
 - [클라우드에서 데이터베이스 덤프 만들기](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
-- [데이터 마이그레이션 도구 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+- [데이터 마이그레이션 도구 문제 해결](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=ko)
 - [Adobe Commerce 업그레이드: 컴팩트에서 다이내믹 테이블 2.2.x, 2.3.x에서 2.4.x로](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)
