@@ -48,11 +48,11 @@ stage:
 
 `VALKEY_BACKEND` 또는 `REDIS_BACKEND`을(를) 사용하여 정확한 Adobe Commerce 릴리스에 대해 지원되는 캐시 또는 L2 구현을 선택하십시오. `CACHE_CONFIGURATION`을(를) 사용하여 연결 다시 시도, 읽기 시간 초과, 캐시 접두사 또는 미리 로드 키와 같은 옵션을 사용자 지정합니다.
 
-지원되는 백엔드 및 캐시 서비스 조합은 Commerce 릴리스 및 패치 수준에 따라 다릅니다. Redis는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에서는 지원되지 않습니다. [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)이 필요한 릴리스에 Valkey를 사용합니다.
+지원되는 백엔드 및 캐시 서비스 조합은 Commerce 릴리스 및 패치 수준에 따라 다릅니다. Redis는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에서는 지원되지 않습니다. [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)이 필요한 릴리스에 Valkey를 사용합니다.
 
 >[!NOTE]
 >
->Redis 및 Redis 서비스 구성 지침에 대한 자세한 내용은 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하세요.
+>Redis 및 Redis 서비스 구성 지침에 대한 자세한 내용은 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하세요.
 
 기본적으로 배포 프로세스는 해당 캐시 구성을 덮어씁니다. 지정된 값을 생성된 구성과 병합하려면 `_merge`을(를) `true`(으)로 설정합니다.
 
@@ -91,7 +91,7 @@ stage:
             database: 11
 ```
 
-다음 예제에서는 _구성 안내서_&#x200B;에 정의된 대로 [Redis 미리 로드 기능](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)을 사용합니다. Valkey를 사용하는 릴리스에 대해 해당 Valkey 지침을 사용하십시오.
+다음 예제에서는 _구성 안내서_&#x200B;에 정의된 대로 [Redis 미리 로드 기능](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)을 사용합니다. Valkey를 사용하는 릴리스에 대해 해당 Valkey 지침을 사용하십시오.
 
 ```yaml
 stage:
@@ -125,7 +125,7 @@ stage:
 
 - **기본값**—`true`
 
-빌드 또는 배포 단계에서 생성된 [정적 콘텐츠 파일](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)을(를) 정리하거나 사용하지 않도록 설정합니다. 개발에서 기본값 _true_&#x200B;을(를) 사용하는 것이 좋습니다.
+빌드 또는 배포 단계에서 생성된 [정적 콘텐츠 파일](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)을(를) 정리하거나 사용하지 않도록 설정합니다. 개발에서 기본값 _true_&#x200B;을(를) 사용하는 것이 좋습니다.
 
 - **`true`** - 업데이트된 정적 콘텐츠를 배포하기 전에 기존 정적 콘텐츠를 모두 제거합니다.
 - **`false`** - 생성된 콘텐츠에 최신 버전이 포함된 경우 배포는 기존 정적 콘텐츠 파일만 덮어씁니다.
@@ -182,7 +182,7 @@ stage:
       consumers: []
 ```
 
-기본적으로 배포 프로세스는 `env.php` 파일의 해당 설정을 덮어씁니다. 온-프레미스 Adobe Commerce에 대해서는 _Commerce 구성 가이드_&#x200B;의 [메시지 큐 관리](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)를 참조하세요.
+기본적으로 배포 프로세스는 `env.php` 파일의 해당 설정을 덮어씁니다. 온-프레미스 Adobe Commerce에 대해서는 _Commerce 구성 가이드_&#x200B;의 [메시지 큐 관리](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)를 참조하세요.
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -210,7 +210,7 @@ stage:
 
 >[!WARNING]
 >
->소스 코드 리포지토리의 키가 노출되지 않도록 하려면 `.magento.env.yaml` 파일 대신 [!DNL Cloud Console]을(를) 통해 `CRYPT_KEY` 값을 설정하십시오. [환경 및 프로젝트 변수 설정](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)을 참조하십시오.
+>소스 코드 리포지토리의 키가 노출되지 않도록 하려면 `.magento.env.yaml` 파일 대신 [!DNL Cloud Console]을(를) 통해 `CRYPT_KEY` 값을 설정하십시오. [환경 및 프로젝트 변수 설정](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)을 참조하십시오.
 
 설치 프로세스 없이 데이터베이스를 한 환경에서 다른 환경으로 이동할 때는 해당 암호화 정보가 필요합니다. Adobe Commerce에서는 [!DNL Cloud Console]에 설정된 암호화 키 값을 `env.php` 파일의 `crypt/key` 값으로 사용합니다.
 
@@ -299,7 +299,7 @@ stage:
 
 >[!NOTE]
 >
->세 개의 노드(또는 [크기 조정된 아키텍처](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)에 세 개의 서비스 노드)가 있는 Pro Staging/Production 클러스터에서는 `indices_settings`을(를) 다음과 같이 설정해야 합니다.
+>세 개의 노드(또는 [크기 조정된 아키텍처](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)에 세 개의 서비스 노드)가 있는 Pro Staging/Production 클러스터에서는 `indices_settings`을(를) 다음과 같이 설정해야 합니다.
 >
 >```yaml
 >           indices_settings:
@@ -455,7 +455,7 @@ stage:
 
 Redis 캐시에 대한 백엔드 모델 구성을 지정합니다.
 
-Redis 캐시는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에는 지원되지 않습니다. 이러한 릴리스의 경우 Valkey 및 해당 `VALKEY_BACKEND` 구성을 사용하십시오. [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)에서 지원되는 캐시 서비스를 항상 확인하십시오.
+Redis 캐시는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에는 지원되지 않습니다. 이러한 릴리스의 경우 Valkey 및 해당 `VALKEY_BACKEND` 구성을 사용하십시오. [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)에서 지원되는 캐시 서비스를 항상 확인하십시오.
 
 Redis 지원 릴리스의 경우 사용 가능한 백엔드 모델은 다음과 같습니다.
 
@@ -522,7 +522,7 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-원격 동기화 백엔드를 지정하면 L2 캐시가 활성화되고 `ece-tools`에서 자동으로 캐시 구성을 생성합니다. [예제 구성 파일](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#customize-the-symfony-l2-cache-configuration)을 참조하십시오. 생성된 구성을 사용자 지정하려면 [`CACHE_CONFIGURATION`](#cache_configuration)을(를) 사용합니다.
+원격 동기화 백엔드를 지정하면 L2 캐시가 활성화되고 `ece-tools`에서 자동으로 캐시 구성을 생성합니다. [예제 구성 파일](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#customize-the-symfony-l2-cache-configuration)을 참조하십시오. 생성된 구성을 사용자 지정하려면 [`CACHE_CONFIGURATION`](#cache_configuration)을(를) 사용합니다.
 
 ### 최신 Symfony L2 캐시 구현 구성
 
@@ -534,7 +534,7 @@ stage:
     VALKEY_BACKEND: 'symfony_l2'
 ```
 
-`symfony_l2`을(를) Valkey 백 엔드 모델로 지정하면 L2 캐시가 활성화되고 `ece-tools`은(는) `default` 및 `stale_cache_enabled` 프론트엔드를 포함하여 Valkey 서비스 연결 세부 정보에서 L2 캐시 구성을 자동으로 생성합니다. 로컬 캐시 디렉터리와 같이 지원되는 백엔드 옵션을 사용자 정의해야 하는 경우에만 `CACHE_CONFIGURATION`을(를) 정의합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 [Symfony L2 캐시 구현](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}을 참조하십시오.
+`symfony_l2`을(를) Valkey 백 엔드 모델로 지정하면 L2 캐시가 활성화되고 `ece-tools`은(는) `default` 및 `stale_cache_enabled` 프론트엔드를 포함하여 Valkey 서비스 연결 세부 정보에서 L2 캐시 구성을 자동으로 생성합니다. 로컬 캐시 디렉터리와 같이 지원되는 백엔드 옵션을 사용자 정의해야 하는 경우에만 `CACHE_CONFIGURATION`을(를) 정의합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 [Symfony L2 캐시 구현](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}을 참조하십시오.
 
 >[!NOTE]
 >
@@ -672,7 +672,7 @@ stage:
 
 - **기본값**—`quick`
 
-정적 콘텐츠에 대한 [배포 전략](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)을(를) 사용자 지정할 수 있습니다. [정적 보기 파일 배포](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)를 참조하세요.
+정적 콘텐츠에 대한 [배포 전략](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)을(를) 사용자 지정할 수 있습니다. [정적 보기 파일 배포](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)를 참조하세요.
 
 로케일이 두 개 이상인 경우 _only_ 옵션을 사용합니다.
 
@@ -749,7 +749,7 @@ stage:
 
 - **기본값**—_설정되지 않음_
 
-`SESSION_CONFIGURATION`을(를) 사용하여 세션 저장소를 구성합니다. 아래 예에서는 Redis 호환 세션 구성 구조를 사용합니다. 정확한 Commerce 릴리스에서 지원하는 세션-스토리지 이름 지정 및 서비스 조합에서만 사용하십시오. Valkey 지원 세션의 경우 [Valkey session-storage 예제](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#apply-all-best-practice-recommendations)를 따르십시오.
+`SESSION_CONFIGURATION`을(를) 사용하여 세션 저장소를 구성합니다. 아래 예에서는 Redis 호환 세션 구성 구조를 사용합니다. 정확한 Commerce 릴리스에서 지원하는 세션-스토리지 이름 지정 및 서비스 조합에서만 사용하십시오. Valkey 지원 세션의 경우 [Valkey session-storage 예제](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#apply-all-best-practice-recommendations)를 따르십시오.
 
 `VALKEY_BACKEND` 또는 `REDIS_BACKEND`과(와) 같은 캐시 변수가 세션을 구성한다고 가정하지 마십시오. 캐시와 세션 구성은 독립적입니다. 클라우드 프로젝트에서 가능한 경우 서비스 관계 및 생성된 구성을 사용하십시오. 예제 호스트 및 포트를 대체하지 않고 환경별 값을 하드 코딩하지 마십시오.
 
@@ -857,7 +857,7 @@ stage:
 >
 >Adobe Commerce 2.4.8에서 `USE_LUA_ON_GC: false`을(를) 설정하면 태그 기반 캐시 무효화가 자동으로 실패하여 복구할 전체 캐시 플러시가 필요할 수 있습니다.
 >
->2.4.9 이상에서는 설치된 버전의 [캐시 서비스 지침](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을(를) 따릅니다.
+>2.4.9 이상에서는 설치된 버전의 [캐시 서비스 지침](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을(를) 따릅니다.
 
 ## `VERBOSE_COMMANDS`
 

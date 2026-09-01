@@ -98,7 +98,7 @@ git push origin <branch-name>
 
 ## Valkey 구성 사용자 지정
 
-캐시, 세션, L2 및 복제본 연결 권장 사항에 대해서는 _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하십시오.
+캐시, 세션, L2 및 복제본 연결 권장 사항에 대해서는 _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하십시오.
 
 ## 서비스 관계 확인
 
