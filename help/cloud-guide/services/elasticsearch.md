@@ -4,18 +4,13 @@ description: 클라우드 인프라에서 Adobe Commerce용 Elasticsearch 서비
 feature: Cloud, Search, Services
 exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
 TQID: https://experienceleague.adobe.com/RYv3SjF62YHhPtM9vFrlPD0MVwfPS7EIhHxQXaMEeuI
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 739
+source-wordcount: 783
 ht-degree: 0%
 
 ---
@@ -204,7 +199,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
    - `services.yaml` 파일의 Elasticsearch 서비스 버전을 Elasticsearch PHP 클라이언트와 호환되는 버전으로 변경하십시오.
 
-     {{pro-update-service}}
+     Pro 서비스 업그레이드 일정 요구 사항 및 고객 가용성 지침에 대해서는 _서비스 구성_&#x200B;에서 [Pro 서비스 지원](services-yaml.md#pro-services-support)을 참조하십시오.
 
 ## Elasticsearch 서비스 다시 시작
 

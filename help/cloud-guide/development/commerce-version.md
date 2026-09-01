@@ -4,43 +4,36 @@ description: 클라우드 인프라 환경에서 Adobe Commerce 버전을 업그
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
 TQID: https://experienceleague.adobe.com/XCHw9c0bX8UE8LLmFOYjMFRLTaIk8sT57dESptRTUXs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 1024
+source-wordcount: 1050
 ht-degree: 0%
 
 ---
 
 # Commerce 버전 업그레이드
 
-Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 있습니다. 환경을 업그레이드하기 전에 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)에서 최신 소프트웨어 버전 요구 사항을 검토하십시오.
+Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 있습니다. 환경을 업그레이드하기 전에 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)에서 최신 소프트웨어 버전 요구 사항을 검토하십시오.
 
 환경 유형(개발, 스테이징 또는 프로덕션)에 따라 업그레이드 작업에는 다음이 포함될 수 있습니다.
 
 - 타사 확장을 지원되는 최신 버전으로 업그레이드하십시오.
-- Pro 프로젝트의 경우 Adobe Commerce 지원 티켓을 제출하여 스테이징 및 프로덕션 환경에서 서비스를 설치하거나 업데이트해야 합니다.
-- 개발/통합/PR 분기의 경우:
-  - 새 Adobe Commerce 버전과의 호환성을 위해 MariaDB(MySQL), OpenSearch, RabbitMQ 및 Redis의 새 버전으로 `.magento/services.yaml` 파일을 업데이트하십시오.
-  - 후크 및 환경 변수에 대한 새로운 설정으로 `.magento.app.yaml` 파일을 업데이트합니다.
+- 대상 Adobe Commerce 버전과 계속 호환될 수 있도록 `.magento/services.yaml` 파일을 MariaDB(MySQL), OpenSearch, RabbitMQ, Redis 또는 Valkey에 필요한 서비스 버전으로 업데이트하십시오.
+  - 개발/통합/PR 분기의 경우 이러한 변경 사항은 환경 구성의 일부로 직접 사용됩니다.
+  - Pro Staging 및 프로덕션 환경의 경우 Adobe Commerce 지원에서 실제 서비스 설치 또는 업데이트를 수행하지만 배포 중에 해당 내용이 확인되므로 `.magento/services.yaml`을(를) 최신 상태, 전체 상태 및 유효한 상태로 유지해야 합니다.
+- 후크 및 환경 변수에 대한 새로운 설정으로 `.magento.app.yaml` 파일을 업데이트합니다.
 
 {{upgrade-tip}}
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## 구성 파일
 
-애플리케이션을 업그레이드하기 전에 클라우드 인프라 또는 애플리케이션에서 Adobe Commerce의 기본 구성 설정을 변경하기 위해 프로젝트 구성 파일을 업데이트해야 합니다. 최신 기본값은 [magento-cloud GitHub 저장소](https://github.com/magento/magento-cloud)에서 찾을 수 있습니다.
+클라우드 인프라 또는 애플리케이션에서 Adobe Commerce의 기본 구성 설정을 변경하려면 애플리케이션을 업그레이드하기 전에 프로젝트 구성 파일을 업데이트하십시오. 최신 기본값은 [magento-cloud GitHub 저장소](https://github.com/magento/magento-cloud)에서 찾을 수 있습니다.
 
 ### composer.json
 
@@ -84,7 +77,7 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
 
 ## 환경 백업
 
-업그레이드 전에 인스턴스의 백업을 만드는 것이 좋습니다. 다음 단계를 사용하여 통합, 스테이징 및 프로덕션 환경을 백업합니다.
+Adobe은 업그레이드 전에 인스턴스의 백업을 만들 것을 권장합니다. 다음 단계를 사용하여 통합, 스테이징 및 프로덕션 환경을 백업합니다.
 
 **통합 환경 데이터베이스 및 코드를 백업하려면**:
 
@@ -142,7 +135,7 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. B2B를 사용하는 경우 `composer.json` 파일을 Commerce용 [지원되는 버전](https://experienceleague.adobe.com/ko/docs/commerce-operations/release/product-availability#adobe-authored-extensions)&#x200B;(으)로 업데이트하십시오.
+1. B2B를 사용하는 경우 `composer.json` 파일을 Commerce용 [지원되는 버전](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)&#x200B;(으)로 업데이트하십시오.
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -156,15 +149,15 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
 
 1. 현재 적용된 패치를 검토합니다.
 
-   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
+   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
 
    - `.magento.env.yaml` 파일에 [품질 패치]가 적용된 경우 새 버전에 계속 적용할 수 있는지 확인하십시오. `.magento.env.yaml` 파일의 `QUALITY_PATCHES` 섹션에서 적용할 수 없는 패치를 제거합니다.
 
-   **메서드 1**: [품질 패치 릴리스 정보에서 해당 버전을 확인](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **메서드 1**: [품질 패치 릴리스 정보에서 해당 버전을 확인](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **메서드 2**: [사용 가능한 패치와 상태 보기](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **메서드 2**: [사용 가능한 패치와 상태 보기](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **메서드 3**: [패치 검색](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ko)
+   **메서드 3**: [패치 검색](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)
 
 
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
@@ -185,7 +178,7 @@ Adobe Commerce 버전 2.4.4 이상의 `composer.json` 파일을 업데이트하�
 
    작성기가 마샬링하는 파일은 새 버전의 Adobe Commerce에 속하므로 동일한 파일의 오래된 버전을 덮어씁니다. 현재 Adobe Commerce에서는 마샬링을 사용할 수 없으므로 마샬링된 파일을 소스 제어에 추가해야 합니다.
 
-1. 배포가 완료될 때까지 기다립니다.
+1. 업그레이드를 완료하려면 배포를 기다리십시오.
 
 1. SSH를 사용하여 로그인하고 버전을 확인하여 통합, 스테이징 또는 프로덕션 환경에서 업그레이드를 확인합니다.
 
@@ -213,7 +206,7 @@ Marketplace 또는 기타 회사 사이트에서 타사 확장 및 모듈 페이
 
 1. 을 푸시하고 통합 환경에서 테스트합니다.
 
-1. 스테이징 환경으로 푸시하여 사전 프로덕션 환경에서 테스트합니다.
+1. 사전 프로덕션 환경에서 테스트하려면 스테이징 환경으로 푸시합니다.
 
 Adobe에서는 사이트 실행 프로세스에서 업그레이드된 확장을 포함하여 프로덕션 환경을 _before_ 업그레이드하는 것이 좋습니다.
 
@@ -223,7 +216,7 @@ Adobe에서는 사이트 실행 프로세스에서 업그레이드된 확장을 
 
 ## 업그레이드 문제 해결
 
-업그레이드가 실패하는 경우 브라우저에 상점 또는 관리 패널에 액세스할 수 없다는 오류 메시지가 표시됩니다.
+업그레이드가 실패하면 상점 또는 관리 패널에 액세스할 수 없다는 오류 메시지가 브라우저에 표시됩니다.
 
 ```
 There has been an error processing your request
