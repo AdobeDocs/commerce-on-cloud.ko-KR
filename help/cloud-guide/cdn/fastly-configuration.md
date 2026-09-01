@@ -1,24 +1,16 @@
 ---
 title: Fastly 서비스 구성
-description: Adobe Commerce 프로젝트에 대한 Fastly 서비스를 설정하고 구성하는 방법에 대해 알아봅니다.
+description: 스테이징 및 프로덕션 환경에 대한 Fastly 캐싱, VCL 코드 조각 및 웹 애플리케이션 방화벽(WAF)을 설정, 구성 및 테스트하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2254
+source-wordcount: 2216
 ht-degree: 0%
 
 ---
@@ -33,7 +25,7 @@ Fastly는 Vannish와 함께 작동하여 정적 에셋에 대한 빠른 캐싱 �
 >
 >Fastly는 통합 환경에서 사용할 수 없습니다.
 
-다음 단계를 완료하여 사이트 개발 프로세스 초기에 Fastly를 활성화, 구성 및 테스트하여 사이트에 대한 보안 액세스를 활성화합니다.
+다음 단계를 완료하여 사이트 개발 프로세스의 초기 단계에서 Fastly를 활성화, 구성 및 테스트하여 사이트에 대한 보안 액세스를 활성화합니다.
 
 - 스테이징 및 프로덕션 환경에 대한 Fastly 자격 증명 가져오기
 - Fastly CDN 캐싱 활성화
@@ -53,7 +45,7 @@ Adobe Commerce 관리자로부터 Fastly CDN 서비스를 구성하고 Fastly AP
 
 클라우드 인프라의 Adobe Commerce을 사용하면 Fastly 관리 대시보드에 직접 액세스할 수 없습니다.
 
-Adobe Commerce 관리자를 사용하여 환경에 대한 Fastly 구성을 검토하고 업데이트합니다. 관리자의 Fastly 기능을 사용하여 문제를 해결할 수 없는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)을 제출하세요.
+Adobe Commerce 관리자를 사용하여 환경에 대한 Fastly 구성을 검토하고 업데이트합니다. 관리자의 Fastly 기능을 사용하여 문제를 해결할 수 없는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)을 제출하세요.
 
 ## Fastly 자격 증명 가져오기
 
@@ -89,7 +81,7 @@ Cloud Starter 프로젝트에서 Cloud Console 또는 Cloud CLI를 사용하여 
 
 - 스테이징 또는 프로덕션 환경에 대한 Fastly 자격 증명을 찾을 수 없는 경우 Adobe 고객 기술 관리자(CTA)에 문의하십시오.
 
-- [Fastly 자격 증명을 확인하는 동안 오류가 발생했습니다](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution).
+- [Fastly 자격 증명을 확인하는 동안 오류가 발생했습니다](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution).
 
 ## 자격 증명 보호
 
@@ -103,7 +95,7 @@ API 토큰이 공개적으로 공유되거나 지원 티켓에 첨부된 경우 
 
 Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필요합니다.
 
-- Magento 2 모듈[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)용 Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
+- Magento 2 모듈](fastly.md#fastly-cdn-module-for-magento-2)용 [Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
 
 - 클라우드 인프라 스테이징 및 프로덕션 환경의 Adobe Commerce에 대한 [Fastly 자격 증명](#get-fastly-credentials)
 
@@ -111,27 +103,27 @@ Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필�
 
 {{admin-login-step}}
 
-1. **저장** > 설정 > **구성** > **고급** > **시스템**&#x200B;을 클릭하고 **전체 페이지 캐시**&#x200B;를 확장합니다.
+1. **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]**&#x200B;을(를) 클릭하고 **[!UICONTROL Full Page Cache]**&#x200B;을(를) 확장합니다.
 
    ![빠르게 선택하려면 확장](../../assets/cdn/fastly-menu.png)
 
-1. _응용 프로그램 캐싱_ 섹션의 **시스템 값 사용**&#x200B;에서 선택 항목을 제거한 다음 드롭다운 목록에서 **Fastly CDN**&#x200B;을 선택합니다.
+1. _[!UICONTROL Caching Application]_섹션의&#x200B;**[!UICONTROL Use system value]**에서 선택 항목을 제거한 다음 드롭다운 목록에서&#x200B;**[!UICONTROL Fastly CDN]**을(를) 선택합니다.
 
    ![빠르게 선택](../../assets/cdn/fastly-enable-admin.png)
 
-1. **빠른 구성**&#x200B;을 확장하고 [캐싱 옵션을 선택](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)합니다.
+1. **[!UICONTROL Fastly Configuration]**&#x200B;을(를) 확장하고 [캐싱 옵션을 선택](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)합니다.
 
-1. 캐싱 옵션을 구성한 후 페이지 상단에서 **구성 저장**&#x200B;을 클릭합니다.
+1. 캐싱 옵션을 구성한 후 페이지 상단의 **[!UICONTROL Save Config]**&#x200B;을(를) 클릭합니다.
 
 1. 알림에 따라 캐시를 지웁니다.
 
-1. **스토어** > **설정** > **구성** > **고급** > **시스템** > **Fastly 구성**(으)로 다시 이동하여 Fastly 구성을 계속합니다.
+1. **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**(으)로 다시 이동하여 Fastly를 계속 구성합니다.
 
 ### Fastly 자격 증명 테스트
 
-1. 관리자의 경우 **스토어** > 설정 > **구성** > **고급** > **시스템** > **빠른 구성**&#x200B;으로 이동합니다.
+1. 관리자의 경우 **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**(으)로 이동합니다.
 
-1. 필요한 경우 프로젝트 환경에 대해 **Fastly 서비스 ID** 및 **API 토큰** 값을 추가하십시오.
+1. 필요한 경우 프로젝트 환경에 대한 **[!UICONTROL Fastly service ID]** 및 **[!UICONTROL API token]** 값을 추가합니다.
 
    ![Fastly 자격 증명 관리자](../../assets/cdn/fastly-credentials-admin-ui.png)
 
@@ -139,9 +131,9 @@ Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필�
    >
    >Fastly API 토큰을 만들 링크를 선택하지 마십시오. 대신 Adobe에서 제공한 [Fastly 자격 증명(서비스 ID 및 API 토큰)을 사용합니다](#get-fastly-credentials).
 
-1. **자격 증명 테스트**&#x200B;를 클릭합니다.
+1. **[!UICONTROL Test credentials]**&#x200B;을(를) 클릭합니다.
 
-1. 테스트가 성공하면 **구성 저장**&#x200B;을 클릭한 다음 캐시를 지웁니다.
+1. 테스트가 성공하면 **[!UICONTROL Save Config]**&#x200B;을(를) 클릭한 다음 캐시를 지웁니다.
 
    테스트가 실패하면 올바른 서비스 ID 및 API 토큰 값이 현재 환경의 자격 증명과 일치하는지 확인하십시오.
 
@@ -161,7 +153,7 @@ Fastly 모듈을 사용하도록 설정한 후 기본 [VCL 코드](https://githu
 
 **가장 빠른 VCL을 업로드하려면**:
 
-1. 다음 그림과 같이 _Fastly 구성_ 섹션에서 **Fastly에 VCL 업로드**&#x200B;를 클릭합니다.
+1. 다음 그림과 같이 _[!UICONTROL Fastly Configuration]_섹션에서&#x200B;**[!UICONTROL Upload VCL to Fastly]**을(를) 클릭합니다.
 
    ![Magento VCL을 Fastly에 업로드](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -169,7 +161,7 @@ Fastly 모듈을 사용하도록 설정한 후 기본 [VCL 코드](https://githu
 
 ## SSL/TLS 인증서 프로비저닝
 
-Adobe은 Fastly에서 보안 HTTPS 트래픽을 제공하기 위해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe은 각 Pro Production, Staging 및 Starter 프로덕션 환경에 대해 하나의 인증서를 제공하여 해당 환경의 모든 도메인을 보호합니다. 제공된 인증서에 대한 자세한 내용은 [클라우드 인프라의 Adobe Commerce용 Adobe SSL(TLS) 인증서](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)를 참조하십시오.
+Adobe은 Fastly에서 보안 HTTPS 트래픽을 제공하기 위해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe은 각 Pro Production, Staging 및 Starter 프로덕션 환경에 대해 하나의 인증서를 제공하여 해당 환경의 모든 도메인을 보호합니다. 제공된 인증서에 대한 자세한 내용은 [클라우드 인프라의 Adobe Commerce용 Adobe SSL(TLS) 인증서](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -190,7 +182,7 @@ Adobe Commerce 환경에 대한 SSL/TLS 인증서를 활성화하기 위해 Adob
 >
 >활성화되지 않은 프로덕션 도메인이 있는 경우 도메인 유효성 검사에 ACME 챌린지 CNAME 레코드를 사용합니다. 일찍 DNS 구성에 레코드를 추가하면 Adobe은 사이트를 시작하기 전에 올바른 도메인에 SSL/TLS 인증서를 프로비저닝할 수 있습니다. 프로덕션에 시작하기 전에 이러한 자리 표시자 레코드를 Adobe에서 제공하는 CNAME 레코드로 바꿔야 합니다.
 
-도메인 유효성 검사가 완료되면 Adobe은 Let&#39;s Encrypt TLS/SSL 인증서를 프로비저닝하고 라이브 스테이징 또는 프로덕션 환경에 업로드합니다. 이 프로세스는 최대 12시간 정도 소요될 수 있습니다. Adobe은 사이트 개발 및 사이트 실행이 지연되지 않도록 며칠 전에 DNS 구성 업데이트를 완료할 것을 권장합니다.
+도메인 유효성 검사가 완료되면 Adobe은 Let&#39;s Encrypt TLS/SSL 인증서를 프로비저닝하고 라이브 스테이징 또는 프로덕션 환경에 업로드합니다. 이 프로세스는 최대 12시간 정도 소요될 수 있습니다. Adobe은 사이트 개발 및 실행 지연을 방지하기 위해 며칠 전에 DNS 구성 업데이트를 완료할 것을 권장합니다.
 
 ## 개발 설정으로 DNS 구성 업데이트
 
@@ -273,7 +265,7 @@ Adobe Commerce 환경에 대한 SSL/TLS 인증서를 활성화하기 위해 Adob
 
    >[!NOTE]
    >
-   >Cloud CLI를 사용하는 대신 [관리자](https://experienceleague.adobe.com/ko/docs/commerce-admin/stores-sales/site-store/store-urls)에서 기본 URL을 업데이트할 수 있습니다
+   >Cloud CLI를 사용하는 대신 [관리자](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)에서 기본 URL을 업데이트할 수 있습니다
 
 1. 웹 브라우저를 다시 시작합니다.
 
@@ -297,7 +289,7 @@ DNS 구성 변경을 완료한 후 [cURL](https://curl.se/) 명령줄 도구를 
    curl -vo /dev/null -H Fastly-Debug:1 --resolve <live-URL-hostname>:443:<live-IP-address>
    ```
 
-1. 응답에서 [headers](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)을(를) 확인하여 Fastly가 작동하는지 확인하십시오. 예를 들어 응답에 다음의 고유한 헤더가 표시되어야 합니다.
+1. 응답에서 [headers](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)을(를) 확인하여 Fastly가 작동하는지 확인하십시오. 예를 들어 응답에서 다음의 고유한 헤더를 참조하십시오.
 
    ```http
    < Fastly-Magento-VCL-Uploaded: 1.2.228
@@ -350,4 +342,4 @@ Adobe에서는 스테이징 및 프로덕션 환경의 Fastly 모듈을 [최신 
 
 >[!TIP]
 >
-> Adobe Commerce 환경에서 Fastly 서비스에 문제가 있는 경우 [Adobe Commerce Fastly 문제 해결사](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-29661)를 참조하세요.
+> Adobe Commerce 환경에서 Fastly 서비스에 문제가 있는 경우 [Adobe Commerce Fastly 문제 해결사](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29661)를 참조하세요.
