@@ -11,11 +11,11 @@ ht-degree: 0%
 
 스테이징 또는 프로덕션에서 Pro 서비스 업그레이드를 요청하고 완료하려면 다음 단계를 따르십시오.
 
-1. **`Staging` 및 `Production` 환경에서만 [서비스](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)를 설치하거나 업데이트하려면** [Adobe Commerce 지원 티켓을 제출하세요](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
+1. **`Staging` 및 `Production` 환경에서만 [서비스](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)를 설치하거나 업데이트하려면** [Adobe Commerce 지원 티켓을 제출하세요](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
 
    티켓에서 필요한 서비스 변경 사항을 지정하고 업데이트된 `.magento.app.yaml` 및 `.magento/services.yaml` 파일을 포함한 다음 대상 PHP 버전을 확인합니다.
 
-   PHP 버전, Composer 업데이트, 확장, 환경 설정 등은 셀프서비스 변경 사항입니다. Adobe에서 PHP 버전 호환성을 위해 New Relic 에이전트를 업데이트해야 할 수 있습니다. _응용 프로그램 구성_&#x200B;에서 [PHP 설정](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings)을 참조하십시오.
+   PHP 버전, Composer 업데이트, 확장, 환경 설정 등은 셀프서비스 변경 사항입니다. Adobe에서 PHP 버전 호환성을 위해 New Relic 에이전트를 업데이트해야 할 수 있습니다. _응용 프로그램 구성_&#x200B;에서 [PHP 설정](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/app/php-settings)을 참조하십시오.
 
    >[!IMPORTANT]
    >
