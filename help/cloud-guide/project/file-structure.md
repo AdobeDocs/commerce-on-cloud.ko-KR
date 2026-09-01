@@ -3,19 +3,13 @@ title: 프로젝트 구조
 description: 클라우드 인프라의 Adobe Commerce에 대한 파일 구조 및 프로젝트 템플릿에 대해 알아봅니다.
 exl-id: 364e40e4-a5b3-4d23-b86d-74fc0696ac19
 TQID: https://experienceleague.adobe.com/B6fTvmHLFa5THSgLKsjl1smPC8ekPdXB9A-vyqFVwG8
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 473
+source-wordcount: 475
 ht-degree: 0%
 
 ---
@@ -29,7 +23,7 @@ ht-degree: 0%
 | 파일 | 설명 |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | HTTP를 제공할 Apex 도메인 및 `php` 응용 프로그램으로 `www`을(를) 리디렉션하는 구성 파일입니다. [경로 구성](../routes/routes-yaml.md)을 참조하세요. |
-| `/.magento/services.yaml` | MySQL 인스턴스(MariaDB), Redis 및 OpenSearch 또는 Elasticsearch을 정의하는 구성 파일입니다. [서비스 구성](../services/services-yaml.md)을 참조하세요. |
+| `/.magento/services.yaml` | MySQL 인스턴스(MariaDB), Redis 또는 Valkey 및 OpenSearch 또는 Elasticsearch을 정의하는 구성 파일입니다. [서비스 구성](../services/services-yaml.md)을 참조하세요. |
 | `/app` | `code` 폴더는 사용자 지정 모듈에 사용됩니다. `design` 폴더는 [사용자 지정 테마](../store/custom-theme.md)에 사용됩니다. `etc` 폴더에 응용 프로그램의 구성 파일이 있습니다. |
 | `/m2-hotfixes` | 사용자 지정 패치에 사용됩니다. |
 | `/update` | 지원 모듈에서 사용하는 서비스 폴더입니다. |
@@ -92,7 +86,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 기본 템플릿용으로 설계된 `.gitignore` 파일을 추가합니다. 예를 들어 버전 2.2.6 템플릿에 `.gitignore` 파일이 필요한 경우 2.2.6[&#128279;](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) 파일에 대한 .gignore를 참조로 사용하십시오.
+1. 기본 템플릿용으로 설계된 `.gitignore` 파일을 추가합니다. 예를 들어 버전 2.2.6 템플릿에 `.gitignore` 파일이 필요한 경우 2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) 파일에 대한 [.gignore를 참조로 사용하십시오.
 
 1. git 캐시를 지웁니다.
 

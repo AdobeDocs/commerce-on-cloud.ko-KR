@@ -4,21 +4,13 @@ description: Starter 아키텍처에서 지원하는 환경에 대해 알아봅�
 feature: Cloud, Paas
 exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
 TQID: https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 8465292300c871aaa85e57cbb25e7ae5358bcd2f
 workflow-type: tm+mt
-source-wordcount: 1007
+source-wordcount: 1010
 ht-degree: 0%
 
 ---
@@ -104,13 +96,12 @@ Adobe에서는 `master`에서 `staging`(이)라는 분기를 만들 것을 권�
 
 - HTTP 캐싱 및 CDN용 Fastly
 - PHP-FPM과 대화하는 Nginx 웹 서버, 여러 작업자가 있는 하나의 인스턴스
-- Redis 서버
-- Elasticsearch for catalog Adobe Commerce 2.2 - 2.4.3-p2 검색
-- Adobe Commerce 2.3.7-p3, 2.4.3-p2 및 2.4.4 이상에 대한 카탈로그 검색 OpenSearch
+- Redis 또는 Valkey 서버
+- Adobe Commerce 2.4.4 이상의 카탈로그 검색 OpenSearch
 
 ### 서비스
 
-클라우드 인프라의 Adobe Commerce은 현재 PHP, MySQL(MariaDB), Elasticsearch(Adobe Commerce 2.2 ~ 2.4.3-p2), OpenSearch(2.3.7-p3, 2.4.3-p2, 2.4.4 이상), Redis 및 [!DNL RabbitMQ] 서비스를 지원합니다.
+클라우드 인프라의 Adobe Commerce은 현재 PHP, MySQL(MariaDB), OpenSearch(2.4.4 이상), Redis 또는 Valkey 및 [!DNL RabbitMQ] 서비스를 지원합니다.
 
 각 서비스는 별도의 보안 컨테이너에서 실행됩니다. 컨테이너는 프로젝트에서 함께 관리됩니다. 다음과 같은 일부 서비스는 표준입니다.
 
@@ -130,7 +121,7 @@ Adobe에서는 `master`에서 `staging`(이)라는 분기를 만들 것을 권�
 
 - [MySQL](../services/mysql.md)
 
-- [레디스](../services/redis.md)
+- [Redis](../services/redis.md) 또는 [Valkey](../services/valkey.md)
 
 - [래빗MQ](../services/rabbitmq.md)
 
@@ -138,7 +129,7 @@ Adobe에서는 `master`에서 `staging`(이)라는 분기를 만들 것을 권�
 
 - [OpenSearch](../services/opensearch.md)
 
-스테이징 및 프로덕션 환경에서는 CDN 및 캐싱에 Fastly를 사용합니다. Fastly CDN 확장의 최신 버전은 프로젝트의 초기 프로비저닝 중에 설치됩니다. 확장을 업그레이드하여 최신 버그 수정 및 개선 사항을 얻을 수 있습니다. Magento 2[&#128279;](https://github.com/fastly/fastly-magento2)용 Fastly CDN 모듈을 참조하십시오. 또한 성능 모니터링을 위해 [New Relic](../monitor/account-management.md)에 액세스할 수 있습니다.
+스테이징 및 프로덕션 환경에서는 CDN 및 캐싱에 Fastly를 사용합니다. Fastly CDN 확장의 최신 버전은 프로젝트의 초기 프로비저닝 중에 설치됩니다. 확장을 업그레이드하여 최신 버그 수정 및 개선 사항을 얻을 수 있습니다. Magento 2](https://github.com/fastly/fastly-magento2)용 [Fastly CDN 모듈을 참조하십시오. 또한 성능 모니터링을 위해 [New Relic](../monitor/account-management.md)에 액세스할 수 있습니다.
 
 다음 파일을 사용하여 구현에 사용할 소프트웨어 버전을 구성합니다.
 
