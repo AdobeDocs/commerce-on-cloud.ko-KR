@@ -4,10 +4,18 @@ description: 스테이징 및 프로덕션 환경에 대한 Fastly 캐싱, VCL �
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
 source-wordcount: 2216
@@ -95,7 +103,7 @@ API 토큰이 공개적으로 공유되거나 지원 티켓에 첨부된 경우 
 
 Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필요합니다.
 
-- Magento 2 모듈](fastly.md#fastly-cdn-module-for-magento-2)용 [Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
+- Magento 2 모듈[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)용 Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
 
 - 클라우드 인프라 스테이징 및 프로덕션 환경의 Adobe Commerce에 대한 [Fastly 자격 증명](#get-fastly-credentials)
 
@@ -107,7 +115,7 @@ Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필�
 
    ![빠르게 선택하려면 확장](../../assets/cdn/fastly-menu.png)
 
-1. _[!UICONTROL Caching Application]_섹션의&#x200B;**[!UICONTROL Use system value]**에서 선택 항목을 제거한 다음 드롭다운 목록에서&#x200B;**[!UICONTROL Fastly CDN]**을(를) 선택합니다.
+1. _[!UICONTROL Caching Application]_&#x200B;섹션의&#x200B;**[!UICONTROL Use system value]**&#x200B;에서 선택 항목을 제거한 다음 드롭다운 목록에서&#x200B;**[!UICONTROL Fastly CDN]**&#x200B;을(를) 선택합니다.
 
    ![빠르게 선택](../../assets/cdn/fastly-enable-admin.png)
 
@@ -153,7 +161,7 @@ Fastly 모듈을 사용하도록 설정한 후 기본 [VCL 코드](https://githu
 
 **가장 빠른 VCL을 업로드하려면**:
 
-1. 다음 그림과 같이 _[!UICONTROL Fastly Configuration]_섹션에서&#x200B;**[!UICONTROL Upload VCL to Fastly]**을(를) 클릭합니다.
+1. 다음 그림과 같이 _[!UICONTROL Fastly Configuration]_&#x200B;섹션에서&#x200B;**[!UICONTROL Upload VCL to Fastly]**&#x200B;을(를) 클릭합니다.
 
    ![Magento VCL을 Fastly에 업로드](../../assets/cdn/fastly-upload-vcl-admin.png)
 
