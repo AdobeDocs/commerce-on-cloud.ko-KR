@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Redis 캐시는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에서는 지원되지 않습니다. Redis가 지원되지 않는 캐시 구성에 [Valkey](valkey.md)을(를) 사용합니다. 릴리스별로 지원되는 캐시 서비스에 대해서는 [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
+>Redis 캐시는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에서는 지원되지 않습니다. Redis가 지원되지 않는 캐시 구성에 [Valkey](valkey.md)을(를) 사용합니다. 릴리스별로 지원되는 캐시 서비스에 대해서는 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
 
 {{service-instruction}}
 
@@ -54,7 +54,7 @@ cache:
   type: redis:7.2
 ```
 
-예제 버전이 일반적이지 않습니다. 실제 기본 및 지원되는 서비스 버전은 Adobe Commerce 버전, 패치 수준 및 현재 클라우드 템플릿에 따라 다릅니다. [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)에서 지원되는 조합과 현재 프로젝트 템플릿을 확인하십시오.
+예제 버전이 일반적이지 않습니다. 실제 기본 및 지원되는 서비스 버전은 Adobe Commerce 버전, 패치 수준 및 현재 클라우드 템플릿에 따라 다릅니다. [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)에서 지원되는 조합과 현재 프로젝트 템플릿을 확인하십시오.
 
 ### 서비스 관계 구성
 
@@ -142,7 +142,7 @@ printf '%s' "$MAGENTO_CLOUD_RELATIONSHIPS" \
 
 ## Redis 구성 사용자 지정
 
-캐시, 세션, L2 및 복제본 연결 권장 사항에 대해서는 _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하십시오.
+캐시, 세션, L2 및 복제본 연결 권장 사항에 대해서는 _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하십시오.
 
 ## Redis CLI 사용
 
@@ -203,8 +203,8 @@ Redis server v=<installed-version> ...
 
 Redis 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서를 참조하십시오.
 
-- [Adobe Commerce에 대한 관리 경고: Redis 메모리 경고 경고](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
-- [Adobe Commerce에 대한 관리 경고: Redis 메모리 위험 경고](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
+- [Adobe Commerce에 대한 관리 경고: Redis 메모리 경고 경고](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
+- [Adobe Commerce에 대한 관리 경고: Redis 메모리 위험 경고](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
 
 ### Valkey가 구성한 캐시에 대한 캐시 정리 오류 참조 Redis
 

@@ -36,7 +36,7 @@ Adobe Commerce on cloud infrastructure의 환경에는 Adobe Commerce 애플리�
 
 ## Pro 환경에 대한 구성 업데이트
 
-클라우드 인프라 Pro 스테이징 및 프로덕션 환경의 Adobe Commerce의 경우 로컬 개발 환경에서 많은 구성 옵션을 업데이트하고 변경 사항을 커밋하여 이러한 환경에 적용할 수 있습니다. 그러나 다음 구성 옵션을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
+클라우드 인프라 Pro 스테이징 및 프로덕션 환경의 Adobe Commerce의 경우 로컬 개발 환경에서 많은 구성 옵션을 업데이트하고 변경 사항을 커밋하여 이러한 환경에 적용할 수 있습니다. 그러나 다음 구성 옵션을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
 
 - `.magento/services.yaml` 파일에서 서비스를 설치하거나 업데이트합니다.
 - `.magento.app.yaml` 파일에서 `mounts` 및 `disk` 속성에 대한 구성을 변경합니다.
