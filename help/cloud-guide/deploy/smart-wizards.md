@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 326
+source-wordcount: 328
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 스마트 마법사는 클라우드 구성이 모범 사례를 따르는지 여부를 확인하는 데 도움이 됩니다. 사용 가능한 마법사는 다음 구성을 지원합니다.
 
 - 배포 가동 중지 시간을 최소화하는 데 이상적인 상태
-- 데이터베이스 및 Redis에 대한 로드 밸런싱 구성
+- 데이터베이스 및 Redis 또는 Valkey에 대한 로드 밸런싱 구성
 - 온디맨드, 빌드 단계 또는 배포 단계에 대한 정적 콘텐츠 배포(SCD)
 
 각 스마트 마법사 명령은 올바른 구성에 대한 권장 사항과 확인 응답을 제공합니다(해당하는 경우).

@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: c754e69243236bbf862ea636261c6d2a6cae9eb7
 workflow-type: tm+mt
 source-wordcount: 706
 ht-degree: 0%
@@ -33,14 +33,14 @@ ht-degree: 0%
 `.magento.env.yaml` 파일에 두 개의 섹션(`stage` 및 `log`)이 있습니다. `stage` 섹션은 [클라우드 배포 프로세스](../deploy/process.md)의 단계 동안 발생하는 작업을 제어합니다.
 
 - `stage` - 단계 섹션을 사용하여 다음 배포 단계에 대한 특정 작업을 정의합니다.
-   - `global` - 빌드, 배포 및 배포 후 단계 모두에서 작업을 제어합니다. 빌드, 배포 및 사후 배포 섹션에서 이러한 설정을 재정의할 수 있습니다.
-   - `build` - 빌드 단계에서만 작업을 제어합니다. 이 섹션에서 설정을 지정하지 않으면 빌드 단계에서 전역 섹션의 설정을 사용합니다.
-   - `deploy` - 배포 단계의 작업만 제어합니다. 이 섹션에서 설정을 지정하지 않으면 배포 단계에서 전역 섹션의 설정을 사용합니다.
-   - `post-deploy` - 응용 프로그램을 배포하는 _후_ 및 컨테이너가 연결을 수락하는 _후_ 작업을 제어합니다.
+  - `global` - 빌드, 배포 및 배포 후 단계 모두에서 작업을 제어합니다. 빌드, 배포 및 사후 배포 섹션에서 이러한 설정을 재정의할 수 있습니다.
+  - `build` - 빌드 단계에서만 작업을 제어합니다. 이 섹션에서 설정을 지정하지 않으면 빌드 단계에서 전역 섹션의 설정을 사용합니다.
+  - `deploy` - 배포 단계의 작업만 제어합니다. 이 섹션에서 설정을 지정하지 않으면 배포 단계에서 전역 섹션의 설정을 사용합니다.
+  - `post-deploy` - 응용 프로그램을 배포하는 _후_ 및 컨테이너가 연결을 수락하는 _후_ 작업을 제어합니다.
 - `log`—로그 섹션을 사용하여 알림 유형 및 세부 정보 수준을 포함하여 [알림](set-up-notifications.md)을(를) 구성합니다.
-   - `slack` - Slack 봇에 보낼 메시지를 구성합니다.
-   - `email` - 하나 이상의 전자 메일 받는 사람에게 보낼 전자 메일을 구성합니다.
-   - [로그 처리기](log-handlers.md)—원격 로깅 서버로 전송되는 하드웨어 및 소프트웨어 응용 프로그램 메시지를 구성합니다.
+  - `slack` - Slack 봇에 보낼 메시지를 구성합니다.
+  - `email` - 하나 이상의 전자 메일 받는 사람에게 보낼 전자 메일을 구성합니다.
+  - [로그 처리기](log-handlers.md)—원격 로깅 서버로 전송되는 하드웨어 및 소프트웨어 응용 프로그램 메시지를 구성합니다.
 
 ### 환경 변수
 
@@ -172,7 +172,7 @@ stage:
     SCD_STRATEGY: compact
     SCD_MATRIX:
       ...
-    REDIS_USE_SLAVE_CONNECTION: 1
+    MYSQL_USE_SLAVE_CONNECTION: 1
 ```
 
 >구성 관리를 활성화한 후 SCD_* 변수를 빌드 단계로 이동합니다.
@@ -182,10 +182,9 @@ stage:
     CRON_CONSUMERS_RUNNER:
       cron_run: true
       consumers: []
-    REDIS_USE_SLAVE_CONNECTION: 1
+    MYSQL_USE_SLAVE_CONNECTION: 1
   build:
     SCD_STRATEGY: compact
     SCD_MATRIX:
       ...
 ```
-

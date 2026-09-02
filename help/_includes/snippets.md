@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5fefabb5795e68abd467a7115bc2a6e554e0d832
+source-git-commit: 67ed09e3b7c5f5218407b6648e8ca2c32933bbda
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Elasticsearch 7 이상 버전은 클라우드 인프라의 Adobe Commerce에서 지원되지 않습니다. Adobe Commerce 버전 2.3.7-p3, 2.4.3-p2 및 2.4.4 이상 버전은 OpenSearch 서비스를 지원합니다.
+>Elasticsearch 7 이상 버전은 클라우드 인프라의 Adobe Commerce에서 지원되지 않습니다. Adobe Commerce 2.4.4 이상 버전은 OpenSearch 서비스를 지원합니다.
 
 ## 향상된 통합 {#enhanced-integration-envs}
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe은 Adobe Commerce on cloud infrastructure 프로젝트에 개인 저장소를 사용하여 확장 및 중요한 구성과 같은 독점 정보 또는 개발 작업을 보호할 것을 강력히 권장합니다.
+>Adobe에서는 Adobe Commerce on cloud infrastructure 프로젝트에 개인 저장소를 사용하여 확장 및 중요한 구성과 같은 독점 정보 또는 개발 작업을 보호하는 것이 좋습니다.
 
 ## Pro 셀프 서비스 경고 {#pro-self-service-warning}
 
@@ -41,44 +41,13 @@ ht-degree: 0%
 >일부 **Pro 프로젝트**&#x200B;에서는 `routes.yaml` 파일의 경로 구성과 `.magento.app.yaml` 파일의 cron 구성을 업데이트하려면 Adobe 지원 팀의 지원이 필요합니다. Adobe에서는 먼저 통합 환경에서 모든 YAML 구성 변경 작업을 수행하고 유효성을 검사한 다음, 이를 스테이징 환경에 배포할 것을 권장합니다.
 >
 >
->변경 사항이 재배포 후 스테이징 사이트에 반영되지 않고 로그에 관련 오류 메시지가 없는 경우 **해야** [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)합니다. 티켓에서 시도한 구성 변경 사항을 명확하게 설명하고 업데이트된 YAML 구성 파일을 티켓에 첨부합니다.
-
-## Pro 서비스 지원 {#pro-update-service}
-
->[!BEGINSHADEBOX]
-
-- Pro 프로젝트의 경우 `Staging` 및 `Production` 환경에서만 [서비스](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)를 설치하거나 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
-
-- 필요한 서비스 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 및 `services.yaml` 파일을 포함하고 티켓에 PHP 버전을 명시하십시오. PHP 버전, 확장, 환경 설정에 대한 셀프 서비스 변경 내용은 _응용 프로그램 구성_&#x200B;의 [PHP 설정](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/app/php-settings)을 참조하십시오.
-
-  >[!IMPORTANT]
-  >
-  >새 티켓 양식에서 환경 필드를 선택할 때 Adobe의 환경 이름 지정을 사용합니다. 예를 들어 내부적으로 해당 환경 **Dev**&#x200B;을(를) 호출하는 경우에도 [스테이징]을 선택합니다. 설명에 내부 이름을 언급할 수 있지만 환경 필드 자체는 Adobe의 명명법을 사용해야 합니다.
-
-- 라이브 프로덕션 환경(**Pro 전용**)을 변경하려면 최소 48시간 이상 알림이 필요합니다. 이를 통해 클라우드 인프라 팀은 리소스를 마샬링하고 보안 업그레이드를 수행할 수 있는 충분한 시간을 확보할 수 있습니다. 공지 기간은 인프라 팀이 요청을 승인하고 주말을 제외하고 업그레이드 일정을 잡을 때 시작됩니다. 예를 들어 월요일에 서비스 업그레이드를 완료하려면 예약된 업그레이드에 대한 승인을 수요일까지 받아야 합니다. 최대 수요 기간 동안 요청을 처리하는 데 더 많은 시간이 걸릴 수 있습니다.
-
-  >[!NOTE]
-  >
-  >모든 예약된 유지 관리 창은 모든 통신에 걸쳐 명확성과 일관성을 보장하기 위해 UTC 형식으로 제공되어야 합니다. 스테이징 환경에서는 서비스 업그레이드를 예약할 수 없습니다. 대부분의 경우 스테이징의 업그레이드는 요청과 동일한 날에 수행됩니다.
-  >
-  >RabbitMQ 업그레이드를 요청하는 경우 메시지 큐가 다시 초기화되도록 업그레이드가 완료된 후 환경을 다시 배포해야 합니다.
-
-- **업그레이드 일정을 예약하기 위한 두 부분으로 구성된 핸드셰이크 프로세스**
-
-  Adobe Commerce 지원은 원활하고 조정된 업그레이드 프로세스를 보장하기 위해 모든 프로덕션 환경 업그레이드에 대해 두 부분으로 구성된 핸드셰이크 프로세스를 따릅니다.
-
-  1. **고객 확인**: Adobe 지원에서는 먼저 고객이 업그레이드할 날짜와 시간을 확인하도록 요청합니다. 이 단계에서는 고객의 비즈니스 요구 사항 및 유지 관리 기간에 따라 타이밍이 맞춰집니다.
-  2. **예약 및 최종 확인**: 고객이 시간을 확인하면 Adobe 지원 팀이 인프라 팀에 요청을 제출하고 인프라 팀이 요청을 검토한 후 예약된 업그레이드 기간에 대한 최종 확인을 제공합니다.
-
-인프라 팀이 최종 확인을 제공할 때까지 업그레이드가 예약된 것으로 간주되지 않습니다. 고객은 업그레이드 기간 최소 48시간 전에 신속히 응답하여 지연을 방지하고 적절한 알림을 받는 것이 좋습니다.
-
->[!ENDSHADEBOX]
+>재배포 후 변경 사항이 스테이징 사이트에 반영되지 않고 로그에 관련 오류 메시지가 없는 경우 **해야** [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)합니다. 티켓에서 시도한 구성 변경 사항을 명확하게 설명하고 업데이트된 YAML 구성 파일을 티켓에 첨부합니다.
 
 ## Pro 백업 {#pro-backups}
 
 >[!TIP]
 >
->Pro 스테이징 및 프로덕션 환경에서는 티켓의 날짜, 시간 및 시간대를 나타내는 특정 백업을 검색하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다.
+>Pro 스테이징 및 프로덕션 환경에서 특정 백업을 검색하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 티켓의 날짜, 시간 및 시간대를 기록합니다.
 >
 >Adobe은 자동 백업에서 환경을 복원하지 **않습니다**. 스테이징 또는 프로덕션 스냅숏을 복원하는 방법을 선택하는 데 도움이 필요하면 [스테이징 또는 프로덕션에서 DB 스냅숏 복원](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)을 참조하십시오.
 
@@ -118,13 +87,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Pro 프로덕션 및 스테이징 환경에서 서비스 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하십시오.
+>Pro 프로덕션 및 스테이징 환경에서 서비스 구성을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하십시오. 예약 요구 사항 및 고객 가용성 지침은 _서비스 구성_&#x200B;에서 [Pro 서비스 지원](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)을 참조하십시오.
 
 ## 서비스 변경 {#service-change-tip}
 
 >[!TIP]
 >
->초기 서비스를 설정한 후 `services.yaml` 및 `.magento.app.yaml` 구성 파일을 업데이트하여 설치된 서비스의 소프트웨어 버전을 변경할 수 있습니다. 서비스 업그레이드 또는 다운그레이드에 대한 지침은 [서비스 버전 변경](/help/cloud-guide/services/services-yaml.md#change-service-version)을 참조하세요.
+>초기 서비스를 설정한 후 `services.yaml` 및 `.magento.app.yaml` 구성 파일을 업데이트하여 설치된 서비스의 소프트웨어 버전을 변경할 수 있습니다. 서비스 업그레이드 또는 다운그레이드에 대한 지침은 [서비스 버전 변경](/help/cloud-guide/services/services-yaml.md#change-service-version)을 참조하세요. 이 셀프 서비스 방법은 Pro 스테이징 또는 프로덕션 환경에는 적용되지 않습니다. _서비스 구성_&#x200B;에서 [Pro 서비스 지원](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)을 참조하십시오.
 
 ## 중단된 배포 팁 {#stuck-deployment-tip}
 
@@ -136,7 +105,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`ece-tools` 패키지가 포함되지 않은 클라우드 인프라의 Adobe Commerce 버전을 사용하는 경우 더 이상 사용되지 않는 패키지를 제거하려면 클라우드 프로젝트에 대해 [1회 업그레이드](/help/cloud-guide/dev-tools/install-package.md)를 수행해야 합니다. 현재 `ece-tools` 패키지를 사용 중인데 업데이트해야 하는 경우 [ECE-Tools 패키지 업데이트](/help/cloud-guide/dev-tools/update-package.md)를 참조하십시오.
+>`ece-tools` 패키지가 포함되지 않은 클라우드 인프라 버전의 Adobe Commerce에서 더 이상 사용되지 않는 패키지를 제거하려면 클라우드 프로젝트에 대해 [1회 업그레이드](/help/cloud-guide/dev-tools/install-package.md)를 수행해야 합니다. 현재 `ece-tools` 패키지를 사용 중인데 업데이트해야 하는 경우 [ECE-Tools 패키지 업데이트](/help/cloud-guide/dev-tools/update-package.md)를 참조하십시오.
 
 ## 업그레이드 팁 {#upgrade-tip}
 
@@ -150,9 +119,9 @@ ht-degree: 0%
 >
 >New Relic은 Valkey로 마이그레이션한 후에도 여전히 Redis를 보여줄 수 있습니다.
 >
->환경이 Valkey로 마이그레이션된 후에도 New Relic에서 Redis로 캐시 서비스를 계속 참조할 수 있습니다.
+>환경이 Valkey로 마이그레이션된 후에도 New Relic에서 Redis로 캐시 서비스를 계속 참조할 것으로 예상됩니다.
 >
->Valkey는 Redis의 오픈 소스 포크이며 일부 도구 및 통합은 고유한 Valkey 레이블이 아닌 Redis 이름 지정을 사용하여 서비스를 계속 식별합니다. Redis가 여전히 설치되어 있다는 의미는 아닙니다.
+>Valkey는 Redis의 오픈 소스 포크이며 일부 도구 및 통합은 고유한 Valkey 레이블이 아닌 Redis 이름 지정을 사용하여 서비스를 계속 식별합니다. 이러한 동작이 반드시 Redis가 여전히 설치되어 있음을 나타내지는 않습니다.
 
 <!-- Fastly-related snippets begin -->
 

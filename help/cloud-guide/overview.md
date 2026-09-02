@@ -1,6 +1,6 @@
 ---
 title: 클라우드 인프라의 Commerce
-description: 클라우드 인프라의 Commerce를 빌드하고, 배포하고, 관리하는 방법에 대해 알아봅니다.
+description: AWS 및 Azure 지역에 걸쳐 호스팅되는 보안 PaaS(Platform as a Service)인 클라우드 인프라에서 Adobe Commerce을 구축, 배포 및 관리하는 방법에 대해 알아봅니다.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
 product_v2:
@@ -16,19 +16,19 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+last-update: 2026-08-28
+source-git-commit: d5d947f9858ab15e2e5daed7848163846580f883
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 3%
+source-wordcount: 356
+ht-degree: 0%
 
 ---
 
 # 클라우드 인프라의 Commerce
 
-클라우드 인프라의 Adobe Commerce은 클라우드 기반 환경에서 [!DNL Commerce] 애플리케이션을 구축, 배포 및 관리하는 **셀프서비스** 접근 방식을 사용하는 자동화된 호스팅 플랫폼을 제공합니다. Adobe Commerce on cloud infrastructure에는 온-프레미스 Adobe Commerce 및 Magento Open Source 플랫폼과 구별되는 추가 기능이 포함되어 있습니다.
+클라우드 인프라의 Adobe Commerce은 클라우드 기반 환경에서 [!DNL Commerce] 애플리케이션을 구축, 배포 및 관리하는 **셀프서비스** 접근 방식을 사용하는 자동화된 호스팅 플랫폼을 제공합니다. Adobe Commerce on cloud infrastructure에는 온프레미스 Adobe Commerce 및 Magento Open Source 플랫폼과 구별되는 추가 기능이 포함되어 있습니다.
 
-- PHP, MySQL(MariaDB), Redis, 메시지 큐 서비스([!DNL RabbitMQ] 또는 [!DNL ActiveMQ]) 및 지원되는 검색 엔진 기술을 포함하는 미리 제공된 인프라입니다.
+- PHP, MySQL(MariaDB), Redis 또는 Valkey, 메시지 큐 서비스([!DNL RabbitMQ] 또는 [!DNL ActiveMQ]) 및 지원되는 검색 엔진 기술을 포함하는 사전 제공된 인프라입니다.
 - PaaS(Platform as a Service) 환경에서 코드 변경 사항을 푸시할 때마다 효율적인 신속한 개발 및 지속적인 배포를 위해 자동 빌드 및 배포가 포함된 Git 기반 워크플로우입니다.
 - 사용자 지정이 용이한 환경 구성 파일 및 CLI(명령줄 인터페이스)를 통해 툴을 관리하고 구축할 수 있습니다.
 - 온라인 판매 및 소매를 위한 확장 가능하고 안전한 환경을 제공하는 Amazon Web Services(AWS) 호스팅.
@@ -58,7 +58,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 중국과 러시아에만 온프레미스.
+> 중국 또는 러시아에서는 클라우드 인프라의 Adobe Commerce을 사용할 수 없습니다. 해당 국가에서는 온-프레미스 배포만 지원됩니다.
 
 ## Azure 지역
 
@@ -66,7 +66,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 중국과 러시아에만 온프레미스. 통합 환경이 필요한 모든 판매자는 미국 지역을 사용해야 합니다.
+> 중국과 러시아에서는 온프레미스 배포만 지원됩니다. 통합 환경이 필요한 모든 가맹점은 미국 지역을 사용해야 한다.
 
 ## Adobe Commerce 설명서
 

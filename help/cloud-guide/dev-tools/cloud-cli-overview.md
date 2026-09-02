@@ -13,9 +13,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 862
+source-wordcount: 859
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->로컬 도구이며 Unix 기반 운영 체제에서만 지원됩니다. Windows는 지원되지 않습니다. 이 페이지에 설명된 방법을 사용하여 클라우드 환경(읽기 전용)에 설치할 수 없습니다. 다음 **배포 워크플로** 중 하나를 통해서만 클라우드 환경에 모듈을 설치할 수 있습니다.
+>이 로컬 도구는 Unix 기반 운영 체제에서만 지원됩니다. Windows는 지원되지 않습니다. 이 페이지에 설명된 방법을 사용하여 클라우드 환경(읽기 전용)에 설치할 수 없습니다. 다음 **배포 워크플로** 중 하나를 통해서만 클라우드 환경에 모듈을 설치할 수 있습니다.
 >
 >- [Pro 배포 워크플로](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
 >- [스타터 배포 워크플로](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
@@ -43,7 +43,7 @@ ht-degree: 0%
    curl -sS https://accounts.magento.cloud/cli/installer | php
    ```
 
-1. 기본 프로필에 `magento-cloud` CLI를 추가합니다.
+1. Bash 프로필에 `magento-cloud` CLI를 추가합니다.
 
    ```bash
    export PATH=$PATH:$HOME/.magento-cloud/bin
@@ -105,7 +105,11 @@ magento-cloud environment:list
 
 ### 환경 재배포
 
-푸시를 사용하지 않고 재배포를 트리거합니다. 재배포할 환경을 확인하고 확인합니다. 보류 중인 상태의 빌드가 있는 경우 재배포를 사용하지 마십시오.
+푸시를 사용하지 않고 재배포를 트리거합니다. 재배포할 환경을 확인하고 확인합니다.
+
+>[!CAUTION]
+>
+>보류 중인 상태의 빌드가 있는 경우 재배포를 사용하지 마십시오.
 
 ```bash
 magento-cloud environment:redeploy
@@ -190,7 +194,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
    >
    >`magento-cloud environment:branch <environment-name> <parent-environment-ID>` 명령 구문을 사용하여 환경 분기를 만들 수 있습니다. 환경 분기를 만들고 활성화하는 데 약간의 추가 시간이 걸릴 수 있습니다.
 
-1. 환경 ID를 사용하여 업데이트된 코드를 로컬로 가져옵니다. 환경 분기가 새로운 경우에는 필요하지 않습니다.
+1. 환경 ID를 사용하여 업데이트된 코드를 로컬 환경으로 가져옵니다. 환경 분기가 새로운 경우 이 단계는 필요하지 않습니다.
 
    ```bash
    git pull origin <environment-ID>

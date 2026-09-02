@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 50c653aa6f78056f3fa8fe300fd224693a4460b0
 workflow-type: tm+mt
-source-wordcount: 1369
+source-wordcount: 1371
 ht-degree: 0%
 
 ---
@@ -283,6 +283,7 @@ Pro 스테이징 및 프로덕션 환경의 경우 배포, 사후 배포 및 Cro
 각 서비스는 별도의 컨테이너에서 실행되므로 통합 환경에서 서비스 로그를 사용할 수 없습니다. Adobe Commerce on cloud infrastructure는 통합 환경에서만 웹 서버 컨테이너에 액세스할 수 있습니다. 다음 서비스 로그 위치는 Pro 프로덕션 및 스테이징 환경용입니다.
 
 - **Redis 로그**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
+- **Valkey 로그**: `/var/log/platform/<project-ID>*/valkey-server-<project-ID>*.log`
 - **Elasticsearch 로그**: `/var/log/elasticsearch/elasticsearch.log`
 - **Java 가비지 수집 로그**: `/var/log/elasticsearch/gc.log`
 - **메일 로그**: `/var/log/mail.log`

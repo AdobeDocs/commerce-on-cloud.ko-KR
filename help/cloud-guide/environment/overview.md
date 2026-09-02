@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 284
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Commerce on cloud infrastructure의 환경에는 Adobe Commerce 애플리�
 | [응용 프로그램](../application/configure-app-yaml.md) | `.magento.app.yaml` | 서비스, 후크 및 cron 작업을 포함하여 Adobe Commerce을 빌드하고 배포하는 방법을 정의합니다. |
 | [환경](configure-env-yaml.md) | `.magento.env.yaml` | 환경 변수를 사용하여 Pro Staging 및 프로덕션을 포함하여 모든 환경에서 빌드 및 배포 작업을 중앙 집중화합니다. |
 | [경로](../routes/routes-yaml.md) | `.magento/routes.yaml` | 캐싱, 리디렉션 및 서버측 포함을 구성합니다. |
-| [서비스](../services/services-yaml.md) | `.magento/services.yaml` | Adobe Commerce이 사용하는 서비스를 이름 및 버전별로 정의합니다. 예를 들어, 이 파일에는 MariaDB, PHP 확장, Redis, RabbitMQ, Elasticsearch 또는 OpenSearch 버전이 포함될 수 있습니다. 이러한 변경 사항을 Pro 계획 스테이징 및 프로덕션 환경에 푸시하려면 지원 티켓을 열어야 합니다. |
+| [서비스](../services/services-yaml.md) | `.magento/services.yaml` | Adobe Commerce이 사용하는 서비스를 이름 및 버전별로 정의합니다. 예를 들어, 이 파일에는 MariaDB, PHP 확장, Redis 또는 Valkey, RabbitMQ 및 Elasticsearch 또는 OpenSearch 버전이 포함될 수 있습니다. 이러한 변경 사항을 Pro 계획 스테이징 및 프로덕션 환경에 푸시하려면 지원 티켓을 열어야 합니다. |
 | [PHP 설정](../application/php-settings.md#configure-php) | `php.ini` | 프로젝트에 추가할 수 있는 선택적 파일입니다. 이 파일에 포함된 설정은 클라우드 인프라에서 유지 관리하는 설정에 추가됩니다. |
 
 {style="table-layout:auto"}

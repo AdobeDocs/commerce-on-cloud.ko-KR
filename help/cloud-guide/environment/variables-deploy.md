@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 3049
+source-wordcount: 3106
 ht-degree: 0%
 
 ---
@@ -41,24 +41,41 @@ stage:
 ## `CACHE_CONFIGURATION`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
-Redis 페이지 및 기본 캐싱을 구성합니다. `cm_cache_backend_redis` 매개 변수를 설정할 때는 `server`, `port` 및 `database` 옵션을 지정해야 합니다.
+`CACHE_CONFIGURATION`을(를) 사용하여 배포 중에 생성된 캐시 프론트엔드 및 백 엔드 옵션을 병합하거나 재정의합니다.
+
+클라우드 인프라의 Adobe Commerce의 경우 `app/etc/env.php`을(를) 직접 편집하지 마십시오. `ece-tools` 패키지는 `.magento.env.yaml`, 서비스 관계 및 지원되는 배포 변수에서 배포 구성을 생성합니다.
+
+`VALKEY_BACKEND` 또는 `REDIS_BACKEND`을(를) 사용하여 정확한 Adobe Commerce 릴리스에 대해 지원되는 캐시 또는 L2 구현을 선택하십시오. `CACHE_CONFIGURATION`을(를) 사용하여 연결 다시 시도, 읽기 시간 초과, 캐시 접두사 또는 미리 로드 키와 같은 옵션을 사용자 지정합니다.
+
+지원되는 백엔드 및 캐시 서비스 조합은 Commerce 릴리스 및 패치 수준에 따라 다릅니다. Redis는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에서는 지원되지 않습니다. [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)이 필요한 릴리스에 Valkey를 사용합니다.
+
+>[!NOTE]
+>
+>Redis 및 Redis 서비스 구성 지침에 대한 자세한 내용은 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하세요.
+
+기본적으로 배포 프로세스는 해당 캐시 구성을 덮어씁니다. 지정된 값을 생성된 구성과 병합하려면 `_merge`을(를) `true`(으)로 설정합니다.
 
 ```yaml
 stage:
   deploy:
     CACHE_CONFIGURATION:
+      _merge: true
       frontend:
         default:
-          backend: file
-        page_cache:
-          backend: file
+          backend_options:
+            connect_retries: 3
+          remote_backend_options:
+            read_timeout: 10
 ```
 
-{{merge-options}}
+기존 구성을 `CACHE_CONFIGURATION`에 지정된 값으로 바꾸려면 `_merge`을(를) `false`(으)로 설정하십시오.
 
-다음 예제에서는 새 값을 기존 구성에 병합합니다.
+>[!IMPORTANT]
+>
+> `cm_cache_backend_redis`과(와) 같은 온-프레미스 `bin/magento setup:config:set` 옵션을 `CACHE_CONFIGURATION`에 직접 복사하지 마십시오. 클라우드 프로젝트에서 `ece-tools`은(는) 구성된 관계에서 서비스 연결 세부 정보를 가져옵니다. 선택한 Commerce 릴리스 및 캐시 구현에 대해 문서화된 구조를 사용합니다.
+
+다음 예제에서는 데이터베이스 할당을 기존 캐시 구성에 병합합니다. 선택한 백엔드 및 Commerce 릴리스가 지원하는 경우에만 이 유형의 재정의를 사용합니다. 현재 Symfony L2 설명서가 옵션을 명시적으로 지원하는 경우에만 `symfony_l2`에 프론트엔드 설정을 적용하십시오.
 
 ```yaml
 stage:
@@ -74,7 +91,7 @@ stage:
             database: 11
 ```
 
-다음 예제에서는 _구성 안내서_&#x200B;에 정의된 대로 [Redis 미리 로드 기능](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)을 사용합니다.
+다음 예제에서는 _구성 안내서_&#x200B;에 정의된 대로 [Redis 미리 로드 기능](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)을 사용합니다. Valkey를 사용하는 릴리스에 대해 해당 Valkey 지침을 사용하십시오.
 
 ```yaml
 stage:
@@ -92,7 +109,7 @@ stage:
               - '061_SYSTEM_DEFAULT:hash'
 ```
 
-사용자 지정 [REDIS_BACKEND](#redis_backend) 모델(허용 목록에서만)을 사용하려면 `_custom_redis_backend` 옵션을 `true`(으)로 설정하여 다음 예제와 같이 올바른 유효성 검사를 사용하도록 설정하십시오.
+허용 목록에 없는 사용자 지정 [REDIS_BACKEND](#redis_backend) 모델을 사용하려면 ece-tools가 적절한 유효성 검사를 적용하도록 `_custom_redis_backend`을(를) `true`(으)로 설정하십시오.
 
 ```yaml
 stage:
@@ -107,7 +124,6 @@ stage:
 ## `CLEAN_STATIC_FILES`
 
 - **기본값**—`true`
-- **버전**—Adobe Commerce 2.1.4 이상
 
 빌드 또는 배포 단계에서 생성된 [정적 콘텐츠 파일](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)을(를) 정리하거나 사용하지 않도록 설정합니다. 개발에서 기본값 _true_&#x200B;을(를) 사용하는 것이 좋습니다.
 
@@ -127,21 +143,19 @@ stage:
 ## `CRON_CONSUMERS_RUNNER`
 
 - **기본값**—`cron_run = false`, `max_messages = 1000`
-- **버전**—Adobe Commerce 2.2.0 이상
 
 이 환경 변수를 사용하여 배포 후 메시지 큐가 실행 중인지 확인하십시오.
 
-- `cron_run`—`consumers_runner` cron 작업을 활성화하거나 비활성화하는 부울 값입니다(기본값 = `false`).
-- `max_messages`—종료하기 전에 각 소비자가 처리해야 하는 최대 메시지 수를 지정하는 숫자입니다(기본값 = `1000`). 이 값을 `0`(으)로 설정하여 소비자가 종료되는 것을 방지할 수 있습니다.
-- `consumers`—실행할 소비자를 지정하는 문자열 배열입니다. 빈 배열은 _모두_ 소비자를 실행합니다.
-
-- `multiple_processes`-각 소비자에 대해 생성할 프로세스 수를 지정하는 숫자입니다. Commerce **2.4.4** 이상에서 지원됩니다.
+- `cron_run` - `consumers_runner` cron 작업을 활성화하거나 비활성화하는 부울 값입니다. 기본값은 `false`입니다.
+- `max_messages`—종료하기 전에 각 소비자가 처리하는 최대 메시지 수입니다. 기본값은 `1000`입니다. 소비자가 종료하지 않도록 하려면 `0`(으)로 설정하십시오.
+- `consumers`—실행할 소비자의 이름을 지정하는 문자열 배열입니다. 빈 배열은 _모두_ 소비자를 실행합니다.
+- `multiple_processes`-각 소비자에 대해 생성할 프로세스 수입니다. 이 옵션은 Adobe Commerce 2.4.4 이상에서 지원됩니다.
 
 >[!NOTE]
 >
->메시지 큐 `consumers` 목록을 반환하려면 원격 환경에서 `./bin/magento queue:consumers:list` 명령을 실행하십시오.
+>사용 가능한 메시지 큐 소비자를 나열하려면 원격 환경에서 `./bin/magento queue:consumers:list` 명령을 실행하십시오.
 
-각 소비자에 대해 생성할 특정 `consumers` 및 `multiple_processes`을(를) 실행하는 예제 배열:
+다음 예제에서는 선택한 소비자를 실행하고 각 소비자에 대해 여러 프로세스를 시작합니다.
 
 ```yaml
 stage:
@@ -150,14 +164,14 @@ stage:
       cron_run: true
       max_messages: 1000
       consumers:
-        - example_consumer_1
-        - example_consumer_2
--     multiple_processes:
+       example_consumer_1
+       example_consumer_2
+      multiple_processes:
         example_consumer_1: 4
         example_consumer_2: 3
 ```
 
-`consumers`을(를) 모두 실행하는 빈 배열의 예:
+다음 예제는 모든 소비자를 실행합니다.
 
 ```yaml
 stage:
@@ -168,16 +182,15 @@ stage:
       consumers: []
 ```
 
-기본적으로 배포 프로세스는 `env.php` 파일의 모든 설정을 덮어씁니다. 온-프레미스 Adobe Commerce에 대해서는 _Commerce 구성 가이드_&#x200B;의 [메시지 큐 관리](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)를 참조하세요.
+기본적으로 배포 프로세스는 `env.php` 파일의 해당 설정을 덮어씁니다. 온-프레미스 Adobe Commerce에 대해서는 _Commerce 구성 가이드_&#x200B;의 [메시지 큐 관리](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)를 참조하세요.
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
 - **기본값**—`false`
-- **버전**—Adobe Commerce 2.2.0 이상
 
 다음 옵션 중 하나를 선택하여 `consumers`에서 메시지 큐의 메시지를 처리하는 방법을 구성하십시오.
 
-- `false`—`Consumers`이(가) 큐에서 사용 가능한 메시지를 처리하고 TCP 연결을 닫고 종료합니다. `Consumers`은(는) 처리된 메시지 수가 `CRON_CONSUMERS_RUNNER` 배포 변수에 지정된 `max_messages` 값보다 작더라도 추가 메시지가 대기열에 들어갈 때까지 기다리지 않습니다.
+- `false`—`Consumers`이(가) 사용 가능한 메시지를 처리하고 TCP 연결을 닫고 `CRON_CONSUMERS_RUNNER` 배포 변수에 지정된 `max_messages` 제한에 관계없이 종료합니다.
 
 - `true`—`Consumers`은(는) TCP 연결을 닫고 소비자 프로세스를 종료하기 전에 `CRON_CONSUMERS_RUNNER` 배포 변수에 지정된 최대 메시지 수(`max_messages`)에 도달할 때까지 메시지 큐에서 메시지를 계속 처리합니다. `max_messages`에 도달하기 전에 큐를 비우면 소비자는 더 많은 메시지가 도착할 때까지 기다립니다.
 
@@ -194,18 +207,16 @@ stage:
 ## `CRYPT_KEY`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
 >[!WARNING]
 >
->`.magento.env.yaml` 파일 대신 [!DNL Cloud Console]을(를) 통해 `CRYPT_KEY` 값을 설정하여 환경에 대한 소스 코드 리포지토리의 키가 노출되지 않도록 하십시오. [환경 및 프로젝트 변수 설정](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)을 참조하십시오.
+>소스 코드 리포지토리의 키가 노출되지 않도록 하려면 `.magento.env.yaml` 파일 대신 [!DNL Cloud Console]을(를) 통해 `CRYPT_KEY` 값을 설정하십시오. [환경 및 프로젝트 변수 설정](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)을 참조하십시오.
 
 설치 프로세스 없이 데이터베이스를 한 환경에서 다른 환경으로 이동할 때는 해당 암호화 정보가 필요합니다. Adobe Commerce에서는 [!DNL Cloud Console]에 설정된 암호화 키 값을 `env.php` 파일의 `crypt/key` 값으로 사용합니다.
 
 ## `DATABASE_CONFIGURATION`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
 `.magento.app.yaml` 파일의 [관계 속성](../application/properties.md#relationships)에서 데이터베이스를 정의한 경우 배포를 위해 데이터베이스 연결을 사용자 지정할 수 있습니다.
 
@@ -272,7 +283,6 @@ MariaDB [main]> SHOW TABLES;
 ## `ELASTICSUITE_CONFIGURATION`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.2.0 이상
 
 배포 간에 사용자 지정된 [!DNL Elastic Suite] 서비스 설정을 유지하고 기본 [!DNL Elastic Suite] 구성의 &#39;system/default/smile_elasticsuite_core_base_settings&#39; 섹션에서 사용합니다. [!DNL Elastic Suite] 작성기 패키지가 설치되어 있으면 자동으로 구성됩니다.
 
@@ -323,7 +333,6 @@ stage:
 ## `ENABLE_GOOGLE_ANALYTICS`
 
 - **기본값**—`false`
-- **버전**—Adobe Commerce 2.1.4 이상
 
 스테이징 및 통합 환경에 배포할 때 Google Analytics을 활성화하고 비활성화합니다. 기본적으로 Google Analytics은 프로덕션 환경에만 true입니다. 스테이징 및 통합 환경에서 Google Analytics을 사용하려면 이 값을 `true`(으)로 설정하십시오.
 
@@ -345,9 +354,8 @@ stage:
 ## `FORCE_UPDATE_URLS`
 
 - **기본값**—`true`
-- **버전**—Adobe Commerce 2.1.4 이상
 
-Pro 또는 스타터 스테이징 및 프로덕션 환경에 배포할 때 이 변수는 데이터베이스의 Adobe Commerce 기본 URL을 [`MAGENTO_CLOUD_ROUTES`](variables-cloud.md) 변수에 지정된 프로젝트 URL로 바꿉니다. 스테이징 또는 프로덕션 환경에 배포할 때 무시되는 [UPDATE_URLS](#update_urls) 배포 변수의 기본 동작을 무시하려면 이 설정을 사용합니다.
+Pro 또는 스타터 스테이징 및 프로덕션 환경에 배포할 때 이 변수는 데이터베이스의 Adobe Commerce 기본 URL을 [`MAGENTO_CLOUD_ROUTES`](variables-cloud.md) 변수에 지정된 프로젝트 URL로 바꿉니다. [UPDATE_URLS](#update_urls) 배포 변수의 기본 동작을 무시하려면 이 설정을 사용하십시오.
 
 ```yaml
 stage:
@@ -358,28 +366,26 @@ stage:
 ## `LOCK_PROVIDER`
 
 - **기본값**— 프로덕션 및 스테이징 환경에서 기본값은 `file`이며 변경할 수 없습니다. Pro 통합 및 스타터 환경의 경우 기본값은 `db`입니다.
-- **버전**—Adobe Commerce 2.2.5 이상
 
-잠금 공급자는 중복 크론 작업 및 크론 그룹의 시작을 방지합니다. Commerce on Cloud는 `file` 및 `db` 잠금 공급자만 지원합니다.
+잠금 공급자는 중복 cron 작업과 cron 그룹이 실행되지 않도록 합니다. Adobe Commerce on Cloud는 `file` 및 `db` 잠금 공급자를 지원합니다.
 
-프로덕션 및 스테이징 환경의 경우 기본값 `file`이(가) [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md)에 의해 설정되어 재정의할 수 없습니다. Starter 환경 및 Pro 통합 환경의 경우 `ece-tools`에서 `db` 잠금 공급자를 자동으로 설정합니다. 이러한 환경에서 기본값을 `file`(으)로 변경하여 로컬 성능 및 미러 프로덕션 아키텍처를 최적화할 수 있습니다.
+Pro 스테이징 및 프로덕션 환경에서 `MAGENTO_CLOUD_LOCKS_DIR`은(는) `file` 공급자를 구성합니다. 이 설정을 재정의할 수 없습니다. Pro 통합 및 스타터 환경에서 `ece-tools`은(는) 기본적으로 `db` 공급자를 설정합니다. 로컬 성능을 최적화하고 프로덕션 아키텍처를 미러링하려면 해당 환경에서 공급자를 `file`(으)로 설정하십시오.
 
 ```yaml
 stage:
   deploy:
-    LOCK_PROVIDER: "file"
+    LOCK_PROVIDER: 'file'
 ```
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
 - **기본값**—`false`
-- **버전**—Adobe Commerce 2.1.4 이상
 
 >[!TIP]
 >
->`MYSQL_USE_SLAVE_CONNECTION` 변수는 클라우드 인프라 스테이징 및 Production Pro 클러스터 환경의 Adobe Commerce에서만 지원되며 시작 프로젝트에서는 지원되지 않습니다.
+>`MYSQL_USE_SLAVE_CONNECTION` 변수는 클라우드 인프라 스테이징 및 Production Pro 클러스터의 Adobe Commerce에서만 지원됩니다. 초보자 프로젝트에서는 지원되지 않습니다.
 
-Adobe Commerce은 여러 데이터베이스를 비동기식으로 읽을 수 있습니다. 데이터베이스에 대한 _읽기 전용_ 연결을 자동으로 사용하여 마스터가 아닌 노드에서 읽기 전용 트래픽을 받도록 `true`(으)로 설정하십시오. 이 연결은 한 노드만 읽기/쓰기 트래픽을 처리하기 때문에 로드 밸런싱을 통해 성능을 향상시킵니다. `env.php` 파일에서 기존 읽기 전용 연결 배열을 제거하려면 `false`(으)로 설정하십시오.
+Adobe Commerce은 여러 데이터베이스를 비동기식으로 읽을 수 있습니다. 데이터베이스에 대한 _읽기 전용_ 연결을 사용하여 마스터가 아닌 노드에서 읽기 전용 트래픽을 자동으로 수신하려면 `true`(으)로 설정하십시오. 이 연결은 한 노드만 읽기/쓰기 트래픽을 처리하기 때문에 로드 밸런싱을 통해 성능을 향상시킵니다. `env.php` 파일에서 기존 읽기 전용 연결 배열을 제거하려면 `false`(으)로 설정하십시오.
 
 ```yaml
 stage:
@@ -387,12 +393,11 @@ stage:
     MYSQL_USE_SLAVE_CONNECTION: true
 ```
 
-`MYSQL_USE_SLAVE_CONNECTION` 변수가 `true`(으)로 설정되면 Pro 스테이징 및 프로덕션 환경의 `env.php` 파일에서 `synchronous_replication` 매개 변수는 기본적으로 `true`(으)로 설정됩니다. `MYSQL_USE_SLAVE_CONNECTION`을(를) `false`(으)로 설정하면 `synchronous_replication` 매개 변수가 구성되지 않습니다.
+`MYSQL_USE_SLAVE_CONNECTION` 변수가 `true`(으)로 설정되면 시스템은 Pro 스테이징 및 프로덕션 환경의 `env.php` 파일에서 기본적으로 `synchronous_replication` 매개 변수를 `true`(으)로 설정합니다. `MYSQL_USE_SLAVE_CONNECTION`을(를) `false`(으)로 설정하면 `synchronous_replication` 매개 변수가 구성되지 않습니다.
 
 ## `QUEUE_CONFIGURATION`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
 이 환경 변수를 사용하여 배포 간에 사용자 지정된 큐 서비스 설정을 유지합니다. 이 변수는 AMQP(RabbitMQ의 경우) 및 STOMP(ActiveMQ Artemis의 경우) 프로토콜을 모두 지원합니다. 예를 들어, 클라우드 인프라에 의존하지 않고 기존 메시지 큐 서비스를 사용하여 자동으로 만들고자 하는 경우 `QUEUE_CONFIGURATION` 환경 변수를 사용하여 사이트에 연결하십시오.
 
@@ -447,17 +452,18 @@ stage:
 ## `REDIS_BACKEND`
 
 - **기본값**—`Cm_Cache_Backend_Redis`
-- **버전**—Adobe Commerce 2.3.0 이상
 
 Redis 캐시에 대한 백엔드 모델 구성을 지정합니다.
 
-Adobe Commerce 버전 2.3.0 이상에는 다음 백엔드 모델이 포함되어 있습니다.
+Redis 캐시는 Adobe Commerce 2.4.9 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에는 지원되지 않습니다. 이러한 릴리스의 경우 Valkey 및 해당 `VALKEY_BACKEND` 구성을 사용하십시오. [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)에서 지원되는 캐시 서비스를 항상 확인하십시오.
+
+Redis 지원 릴리스의 경우 사용 가능한 백엔드 모델은 다음과 같습니다.
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-`REDIS_BACKEND`을(를) 설정하는 방법의 예
+다음 예제에서는 원격 동기화 캐시 백엔드와 L2 캐시를 활성화합니다.
 
 ```yaml
 stage:
@@ -467,18 +473,17 @@ stage:
 
 >[!NOTE]
 >
->[L2 캐시](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/level-two-cache)를 사용하도록 Redis 백 엔드 모델로 `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`을(를) 지정하면 `ece-tools`에서 캐시 구성을 자동으로 생성합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 예제 [구성 파일](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/level-two-cache#configuration-example)을(를) 참조하십시오. 생성된 캐시 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
+> `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`을(를) 선택하면 `ece-tools`에서 L2 캐시 구성을 자동으로 생성합니다. 생성된 구성을 사용자 지정하려면 [`CACHE_CONFIGURATION`](#cache_configuration)을(를) 사용합니다.
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
 - **기본값**—`false`
-- **버전**—Adobe Commerce 2.1.16 이상
 
 >[!TIP]
 >
->`REDIS_USE_SLAVE_CONNECTION` 변수는 클라우드 인프라 스테이징 및 Production Pro 클러스터 환경의 Adobe Commerce에서만 지원되며 시작 프로젝트에서는 지원되지 않습니다.
+>`REDIS_USE_SLAVE_CONNECTION`은(는) 클라우드 스테이징 및 Production Pro 클러스터의 Adobe Commerce에서만 지원됩니다. 초보자 프로젝트에서는 지원되지 않습니다.
 
-Adobe Commerce은 여러 Redis 인스턴스를 비동기식으로 읽을 수 있습니다. Redis 인스턴스에 대한 _읽기 전용_ 연결을 자동으로 사용하여 마스터가 아닌 노드에서 읽기 전용 트래픽을 받도록 하려면 `true`(으)로 설정하십시오. 이 연결은 한 노드만 읽기/쓰기 트래픽을 처리하기 때문에 로드 밸런싱을 통해 성능을 향상시킵니다. `env.php` 파일에서 기존 읽기 전용 연결 배열을 제거하려면 `false`(으)로 설정하십시오.
+Adobe Commerce은 여러 Redis 인스턴스를 비동기식으로 읽을 수 있습니다. 주 인스턴스가 읽기/쓰기 트래픽을 처리하는 동안 읽기 트래픽에 대해 Redis 복제본에 대한 읽기 전용 연결을 사용하려면 이 변수를 `true`(으)로 설정하십시오. `env.php`에서 기존 읽기 전용 연결 배열을 제거하려면 `false`(으)로 설정하십시오.
 
 ```yaml
 stage:
@@ -486,55 +491,54 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-`.magento.app.yaml` 파일 및 `services.yaml` 파일에 Redis 서비스가 구성되어 있어야 합니다.
+`.magento.app.yaml` 및 `services.yaml` 파일에 [Redis 서비스를 구성](../services/redis.md)해야 합니다.
 
-[ECE-Tools 버전 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) 이상에서는 내결함성 설정을 더 많이 사용합니다. Adobe Commerce에서 Redis _슬레이브_ 인스턴스에서 데이터를 읽을 수 없는 경우 Redis _마스터_ 인스턴스에서 데이터를 읽습니다.
+[ECE-Tools 버전 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) 이상에서는 내결함성 설정을 더 많이 사용합니다. Adobe Commerce에서 Redis 복제본에서 데이터를 읽을 수 없는 경우 Redis 기본 인스턴스로 돌아갑니다.
 
-통합 환경에서 또는 [`CACHE_CONFIGURATION` 변수](#cache_configuration)을(를) 사용하는 경우 읽기 전용 연결을 사용할 수 없습니다.
+통합 환경에서는 읽기 전용 연결을 사용할 수 없습니다. [`CACHE_CONFIGURATION`](#cache_configuration)을(를) 사용하는 경우 생성된 구성에 변경 내용을 병합하고 결과 구성에 복제본 연결이 유지되는지 확인하십시오.
 
 ## `VALKEY_BACKEND`
 
 - **기본값**—`Cm_Cache_Backend_Redis`
-- **버전**—Adobe Commerce 2.4.8 이상
+- **버전** - Valkey를 지원하는 Adobe Commerce 릴리스
 
-`VALKEY_BACKEND`은(는) Valkey 캐시에 대한 백엔드 모델 구성을 지정합니다.
+`VALKEY_BACKEND`은(는) Valkey 캐시 구성에 대한 백 엔드 모델을 지정합니다. 기본값은 기존 Redis 호환 클래스 이름을 사용하지만 서비스가 Redis여야 한다는 의미는 아닙니다.
 
-Adobe Commerce 버전 2.4.8 이상에는 다음 백엔드 모델이 포함되어 있습니다.
+Valkey를 지원하는 2.4.9 이전 Adobe Commerce 버전의 경우 백엔드 모델은 다음과 같습니다.
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-Adobe Commerce 2.4.9 이상 버전은 최신 Symfony 캐시 기반 L2 캐시 구현을 가능하게 하는 `symfony_l2` 백엔드 모델도 지원합니다.
+Adobe Commerce 2.4.9 이상에서는 Symfony 캐시 기반 L2 구현인 `symfony_l2`도 지원합니다. `symfony_l2`은(는) Valkey로만 지원됩니다.
 
 ### 동기화된 원격 캐시 구성
 
-Adobe Commerce 2.4.8의 경우 다음 예제에서는 `VALKEY_BACKEND`을(를) 동기화된 원격 캐시로 설정하는 방법을 설명합니다.
+Adobe Commerce 2.4.8의 경우, 원격으로 동기화된 캐시 구현이 적절할 때 다음 구성을 사용하십시오.
 
 ```yaml
 stage:
   deploy:
-  VALKEY_USE_SLAVE_CONNECTION: true
-  VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Valkey 백 엔드 모델로 원격 동기화 캐시를 지정하면 [L2 캐시](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/level-two-cache)가 활성화되고 `ece-tools`이(가) 캐시 구성을 자동으로 생성합니다. [예제 구성 파일](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/level-two-cache#configuration-example)을 참조하십시오. 구성을 재정의하려면 [CACHE_CONFIGURATION](#cache_configuration) 배포 변수를 사용하십시오.
+원격 동기화 백엔드를 지정하면 L2 캐시가 활성화되고 `ece-tools`에서 자동으로 캐시 구성을 생성합니다. [예제 구성 파일](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#customize-the-symfony-l2-cache-configuration)을 참조하십시오. 생성된 구성을 사용자 지정하려면 [`CACHE_CONFIGURATION`](#cache_configuration)을(를) 사용합니다.
 
 ### 최신 Symfony L2 캐시 구현 구성
 
-Adobe Commerce 2.4.9 이상의 경우 다음 예제에서는 `VALKEY_BACKEND`을(를) 최신 Symfony L2 캐시 구현으로 설정하는 방법을 설명합니다.
+Adobe Commerce 2.4.9 이상의 경우 Symfony L2 구현을 사용합니다.
 
 ```yaml
 stage:
   deploy:
-    VALKEY_BACKEND: symfony_l2
+    VALKEY_BACKEND: 'symfony_l2'
 ```
 
-`symfony_l2`을(를) Valkey 백 엔드 모델로 지정하면 [L2 캐시](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/level-two-cache){target="_blank"}이(가) 활성화되고 `ece-tools`은(는) `default` 프런트 엔드와 `stale_cache_enabled` 프런트 엔드를 포함하여 Valkey 서비스 연결 세부 정보에서 L2 캐시 구성을 자동으로 생성합니다. `CACHE_CONFIGURATION`을(를) 정의하는 것은 선택 사항이며 로컬 캐시 디렉터리와 같은 특정 백엔드 옵션을 사용자 지정하는 데만 필요합니다. 맞춤화 예제는 _Adobe Commerce 구성 가이드_&#x200B;의 [최신 Symfony L2 캐시 구현](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/level-two-cache#modern-symfony-l2-cache-implementation){target="_blank"}과 _구현 플레이북_&#x200B;의 [Symfony L2 캐시 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}을 참조하십시오.
+`symfony_l2`을(를) Valkey 백 엔드 모델로 지정하면 L2 캐시가 활성화되고 `ece-tools`은(는) `default` 및 `stale_cache_enabled` 프론트엔드를 포함하여 Valkey 서비스 연결 세부 정보에서 L2 캐시 구성을 자동으로 생성합니다. 로컬 캐시 디렉터리와 같이 지원되는 백엔드 옵션을 사용자 정의해야 하는 경우에만 `CACHE_CONFIGURATION`을(를) 정의합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 [Symfony L2 캐시 구현](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}을 참조하십시오.
 
 >[!NOTE]
 >
->Adobe Commerce 2.4.9에는 ACP2E-5132 패치를 통해 캐시 태그 저장, 무효화 및 압축 등 Symfony L2 캐시가 개선되어 디스크 I/O가 줄어들고 오래된 캐시 항목이 제거되며 메모리 및 네트워크 오버헤드가 감소합니다. _Adobe Commerce 구성 가이드_&#x200B;에서 [향상된 Symfony L2 캐시 성능 및 안정성](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/level-two-cache#enhanced-symfony-l2-cache-performance-and-reliability)을(를) 참조하십시오.
+>Adobe Commerce 2.4.9에는 ACP2E-5132 패치를 통해 캐시 태그 저장, 무효화 및 압축 등 Symfony L2 캐시가 개선되어 디스크 I/O가 줄어들고 오래된 캐시 항목이 제거되며 메모리 및 네트워크 오버헤드가 감소합니다.
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -543,9 +547,9 @@ stage:
 
 >[!TIP]
 >
->`VALKEY_USE_SLAVE_CONNECTION` 변수는 클라우드 인프라 스테이징 및 Production Pro 클러스터 환경의 Adobe Commerce에서만 지원되며 시작 프로젝트에서는 지원되지 않습니다.
+>`VALKEY_USE_SLAVE_CONNECTION`은(는) 클라우드 스테이징 및 Production Pro 클러스터의 Adobe Commerce에서만 지원됩니다. 초보자 프로젝트에서는 지원되지 않습니다.
 
-Adobe Commerce은 여러 Redis 인스턴스를 비동기식으로 읽을 수 있습니다. `VALKEY_USE_SLAVE_CONNECTION` Redis 인스턴스에 대한 _읽기 전용_ 연결을 자동으로 사용하여 마스터가 아닌 노드에서 읽기 전용 트래픽을 받도록 하려면 `true`(으)로 설정하십시오. 이 연결은 한 노드만 읽기/쓰기 트래픽을 처리하기 때문에 로드 밸런싱을 통해 성능을 향상시킵니다. `env.php` 파일에서 기존 읽기 전용 연결 배열을 제거하려면 `VALKEY_USE_SLAVE_CONNECTION`을(를) `false`(으)로 설정하십시오.
+Adobe Commerce은 여러 Valkey 인스턴스를 비동기식으로 읽을 수 있습니다. 기본 인스턴스가 읽기/쓰기 트래픽을 처리하는 동안 읽기 전용 트래픽에 대해 Valkey 복제본에 대한 _읽기 전용_ 연결을 사용하도록 `VALKEY_USE_SLAVE_CONNECTION`을(를) `true`(으)로 설정하십시오. 이 연결은 한 노드만 읽기/쓰기 트래픽을 처리하기 때문에 로드 밸런싱을 통해 성능을 향상시킵니다. `env.php`에서 기존 읽기 전용 연결 배열을 제거하려면 `false`(으)로 설정하십시오.
 
 ```yaml
 stage:
@@ -553,16 +557,21 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-`.magento.app.yaml` 파일 및 `services.yaml` 파일에 Redis 서비스가 구성되어 있어야 합니다.
+`.magento.app.yaml` 및 `.magento/services.yaml`에 [Valkey 서비스를 구성](../services/valkey.md)해야 합니다. 복제본 연결을 사용할 수 있는지 여부는 프로젝트 토폴로지와 설치된 `ece-tools` 버전에 따라 다릅니다.
 
-[ECE-Tools 버전 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) 이상에서는 내결함성 설정을 더 많이 사용합니다. Adobe Commerce에서 Valkey _slave_ 인스턴스에서 데이터를 읽을 수 없는 경우 Redis _master_ 인스턴스에서 데이터를 읽습니다.
+이 설정을 사용하기 전에 디코딩한 `MAGENTO_CLOUD_RELATIONSHIPS` 값을 검사하고 복제본 관계가 있는지 확인하십시오. For example:
 
-통합 환경에서 또는 [`CACHE_CONFIGURATION` 변수](#cache_configuration)을(를) 사용하는 경우 읽기 전용 연결을 사용할 수 없습니다.
+```bash
+echo "$MAGENTO_CLOUD_RELATIONSHIPS" | base64 -d | json_pp
+```
+
+`symfony_l2`의 경우 복제본 지원에는 관련 `ece-tools` 및 클라우드 패치 업데이트가 필요합니다. 이 설정을 활성화하기 전에 최신 `ece-tools` 버전으로 업데이트하십시오. 재배포 후 복제본 관계가 없으면 Adobe Commerce 지원에 문의하십시오.
+
+[`CACHE_CONFIGURATION`](#cache_configuration)을(를) 사용하는 경우, 생성된 연결 구조를 바꾸는 대신 병합 지원되는 재정의를 생성된 구성으로 병합합니다.
 
 ## `RESOURCE_CONFIGURATION`
 
 - **기본값**—설정되지 않음
-- **버전**—Adobe Commerce 2.1.4 이상
 
 리소스 이름을 데이터베이스 연결에 매핑합니다. 이 구성은 `env.php` 파일의 `resource` 섹션에 해당합니다.
 
@@ -582,9 +591,8 @@ stage:
 ## `SCD_COMPRESSION_LEVEL`
 
 - **기본값**—`4`
-- **버전**—Adobe Commerce 2.1.4 이상
 
-정적 콘텐츠를 압축할 때 사용할 [gzip](https://www.gnu.org/software/gzip) 압축 수준(`0` ~ `9`)을 지정합니다. `0`은(는) 압축을 사용하지 않도록 설정합니다.
+정적 콘텐츠를 압축할 때 사용할 [gzip](https://www.gnu.org/software/gzip) 압축 수준(`0` ~ `9`)을 지정합니다. 압축을 비활성화하려면 `0`(으)로 설정하십시오.
 
 ```yaml
 stage:
@@ -595,7 +603,6 @@ stage:
 ## `SCD_COMPRESSION_TIMEOUT`
 
 - **기본값**—`600`
-- **버전**—Adobe Commerce 2.1.4 이상
 
 정적 자산을 압축하는 데 걸리는 시간이 압축 시간 제한 을 초과하면 배포 프로세스를 중단합니다. 정적 콘텐츠 압축 명령의 최대 실행 시간(초)을 설정합니다.
 
@@ -608,7 +615,6 @@ stage:
 ## `SCD_MATRIX`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
 테마당 여러 로케일을 구성할 수 있습니다. 이 맞춤화는 불필요한 테마 파일의 수를 줄여 배포 프로세스를 가속화합니다. 예를 들어 _magento/backend_ 테마는 영어로, 사용자 지정 테마는 다른 언어로 배포할 수 있습니다.
 
@@ -637,11 +643,10 @@ stage:
 ## `SCD_MAX_EXECUTION_TIME`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.2.0 이상
 
 정적 콘텐츠 배포에 대한 최대 예상 실행 시간을 늘릴 수 있습니다.
 
-기본적으로 Adobe Commerce은 최대 예상 실행을 900초로 설정하지만, 일부 시나리오에서는 클라우드 프로젝트에 대한 정적 콘텐츠 배포를 완료하는 데 더 많은 시간이 필요할 수 있습니다.
+기본적으로 Adobe Commerce은 최대 예상 실행을 900초로 설정하지만 일부 시나리오에서는 클라우드 프로젝트에 대한 정적 콘텐츠 배포를 완료하는 데 더 많은 시간이 필요합니다.
 
 ```yaml
 stage:
@@ -654,7 +659,6 @@ stage:
 ## `SCD_NO_PARENT`
 
 - **기본값**—`false`
-- **버전**—Adobe Commerce 2.4.2 이상
 
 배포 단계에서 부모 테마에 대한 정적 콘텐츠 생성이 배포 단계 동안 발생하지 않도록 `SCD_NO_PARENT: true`을(를) 설정하십시오. 이 설정은 배포 시간을 최소화하고, 배포 중에 정적 콘텐츠 빌드가 실패할 경우 발생할 수 있는 사이트 가동 중단을 방지합니다. [정적 콘텐츠 배포](../deploy/static-content.md)를 참조하세요.
 
@@ -667,7 +671,6 @@ stage:
 ## `SCD_STRATEGY`
 
 - **기본값**—`quick`
-- **버전**—Adobe Commerce 2.2.0 이상
 
 정적 콘텐츠에 대한 [배포 전략](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)을(를) 사용자 지정할 수 있습니다. [정적 보기 파일 배포](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)를 참조하세요.
 
@@ -675,7 +678,7 @@ stage:
 
 - `standard` - 모든 패키지에 대한 모든 정적 보기 파일을 배포합니다.
 - `quick`—(_default_)은(는) 배포 시간을 최소화합니다.
-- `compact` - 서버의 디스크 공간을 절약합니다. Adobe Commerce 버전 2.2.4 및 이전 버전에서 이 설정은 값이 `1`인 `scd_threads`의 값을 재정의합니다.
+- `compact` - 서버의 디스크 공간을 절약합니다.
 
 ```yaml
 stage:
@@ -686,9 +689,8 @@ stage:
 ## `SCD_THREADS`
 
 - **기본값**—자동
-- **버전**—Adobe Commerce 2.1.4 이상
 
-정적 콘텐츠 배포를 위한 스레드 수를 설정합니다. 기본값은 감지된 CPU 스레드 수를 기반으로 설정되며 값 4를 초과하지 않습니다. 스레드 수를 늘리면 정적 콘텐츠 배포 속도가 빨라지고 스레드 수를 줄이면 속도가 느려집니다. 다음과 같이 스레드 값을 설정할 수 있습니다.
+정적 콘텐츠 배포를 위한 스레드 수를 설정합니다. 기본값은 감지된 CPU 스레드 수를 기반으로 설정되며 값 4를 초과하지 않습니다. 스레드 수를 늘리면 정적 콘텐츠 배포 속도가 빨라집니다. 스레드 수를 줄이면 속도가 느려집니다. 다음과 같이 스레드 값을 설정할 수 있습니다.
 
 ```yaml
 stage:
@@ -701,7 +703,6 @@ stage:
 ## `SEARCH_CONFIGURATION`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
 이 환경 변수를 사용하여 배포 간에 사용자 지정된 검색 서비스 설정을 유지합니다. For example:
 
@@ -747,9 +748,10 @@ stage:
 ## `SESSION_CONFIGURATION`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
-Redis 세션 저장소를 구성합니다. 세션 저장소 변수에 `save`, `redis`, `host`, `port` 및 `database` 옵션이 필요합니다. For example:
+`SESSION_CONFIGURATION`을(를) 사용하여 세션 저장소를 구성합니다. 아래 예에서는 Redis 호환 세션 구성 구조를 사용합니다. 정확한 Commerce 릴리스에서 지원하는 세션-스토리지 이름 지정 및 서비스 조합에서만 사용하십시오. Valkey 지원 세션의 경우 [Valkey session-storage 예제](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#apply-all-best-practice-recommendations)를 따르십시오.
+
+`VALKEY_BACKEND` 또는 `REDIS_BACKEND`과(와) 같은 캐시 변수가 세션을 구성한다고 가정하지 마십시오. 캐시와 세션 구성은 독립적입니다. 클라우드 프로젝트에서 가능한 경우 서비스 관계 및 생성된 구성을 사용하십시오. 예제 호스트 및 포트를 대체하지 않고 환경별 값을 하드 코딩하지 마십시오.
 
 ```yaml
 stage:
@@ -760,13 +762,15 @@ stage:
         bot_lifetime: 10001
         database: 0
         disable_locking: 1
-        host: redis.internal
+        host: 'redis.internal'
         max_concurrency: 10
         max_lifetime: 10001
         min_lifetime: 100
         port: 6379
       save: redis
 ```
+
+배포 구성에 명시적 연결 세부 정보가 필요한 경우 `redis.internal` 및 `6379`을(를) 대상 환경의 세션 서비스 호스트 및 포트로 바꾸십시오.
 
 {{merge-options}}
 
@@ -784,7 +788,6 @@ stage:
 ## `SKIP_SCD`
 
 - **기본값**— _설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
 배포 단계 동안 정적 콘텐츠 배포를 건너뛰려면 `true`(으)로 설정하십시오.
 
@@ -799,7 +802,6 @@ stage:
 ## `UPDATE_URLS`
 
 - **기본값**—`true`
-- **버전**—Adobe Commerce 2.1.4 이상
 
 배포 시 데이터베이스의 Adobe Commerce 기본 URL을 [`MAGENTO_CLOUD_ROUTES`](variables-cloud.md) 변수에 지정된 프로젝트 URL로 바꾸십시오. 이 구성은 로컬 환경에 대한 기본 URL이 설정되는 로컬 개발에 유용합니다. Cloud 환경에 배포하면 프로젝트 URL을 사용하여 상점 및 관리자에 액세스할 수 있도록 URL이 업데이트됩니다.
 
@@ -830,7 +832,7 @@ stage:
 >
 >Adobe Commerce 2.4.7 및 2.4.8에서 `USE_LUA: true`을(를) 설정하면 캐시 손상 및 GraphQL 캐시 누락 문제가 발생할 수 있습니다.
 >
->Adobe Commerce 2.4.9부터 Commerce 버전에 대해 Valkey 캐시 구성 지침을 사용하고 새 배포에 `USE_LUA`을(를) 사용하지 마십시오. [기본 및 페이지 캐시에 대한 Redis 구성](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)을 참조하십시오.
+>Adobe Commerce 2.4.9부터 Commerce 버전에 대해 Valkey 캐시 구성 지침을 사용하고 새 배포에 `USE_LUA`을(를) 사용하지 마십시오.
 
 ## `LUA_KEY`
 
@@ -860,7 +862,6 @@ stage:
 ## `VERBOSE_COMMANDS`
 
 - **기본값**—_설정되지 않음_
-- **버전**—Adobe Commerce 2.1.4 이상
 
 배포 단계에서 수행되는 `bin/magento` CLI 명령에 대해 [Symfony](https://symfony.com/doc/current/console/verbosity.html) 디버그 세부 정보 수준을 활성화하거나 비활성화합니다.
 

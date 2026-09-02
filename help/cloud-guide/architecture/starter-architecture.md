@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
+source-git-commit: 8465292300c871aaa85e57cbb25e7ae5358bcd2f
 workflow-type: tm+mt
-source-wordcount: 1007
+source-wordcount: 1010
 ht-degree: 0%
 
 ---
@@ -104,13 +104,12 @@ Adobe에서는 `master`에서 `staging`(이)라는 분기를 만들 것을 권�
 
 - HTTP 캐싱 및 CDN용 Fastly
 - PHP-FPM과 대화하는 Nginx 웹 서버, 여러 작업자가 있는 하나의 인스턴스
-- Redis 서버
-- Elasticsearch for catalog Adobe Commerce 2.2 - 2.4.3-p2 검색
-- Adobe Commerce 2.3.7-p3, 2.4.3-p2 및 2.4.4 이상에 대한 카탈로그 검색 OpenSearch
+- Redis 또는 Valkey 서버
+- Adobe Commerce 2.4.4 이상의 카탈로그 검색 OpenSearch
 
 ### 서비스
 
-클라우드 인프라의 Adobe Commerce은 현재 PHP, MySQL(MariaDB), Elasticsearch(Adobe Commerce 2.2 ~ 2.4.3-p2), OpenSearch(2.3.7-p3, 2.4.3-p2, 2.4.4 이상), Redis 및 [!DNL RabbitMQ] 서비스를 지원합니다.
+클라우드 인프라의 Adobe Commerce은 현재 PHP, MySQL(MariaDB), OpenSearch(2.4.4 이상), Redis 또는 Valkey 및 [!DNL RabbitMQ] 서비스를 지원합니다.
 
 각 서비스는 별도의 보안 컨테이너에서 실행됩니다. 컨테이너는 프로젝트에서 함께 관리됩니다. 다음과 같은 일부 서비스는 표준입니다.
 
@@ -130,7 +129,7 @@ Adobe에서는 `master`에서 `staging`(이)라는 분기를 만들 것을 권�
 
 - [MySQL](../services/mysql.md)
 
-- [레디스](../services/redis.md)
+- [Redis](../services/redis.md) 또는 [Valkey](../services/valkey.md)
 
 - [래빗MQ](../services/rabbitmq.md)
 

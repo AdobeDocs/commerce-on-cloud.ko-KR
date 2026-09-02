@@ -1,6 +1,6 @@
 ---
 title: Commerce용 클라우드 패치
-description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
+description: 보안 수정 사항, 캐시 개선 사항 및 패치 안정성 업데이트를 포함하여 Commerce용 Cloud Patches 패키지에 대한 최신 개선 사항에 대해 알아봅니다.
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2969
+source-wordcount: 2978
 ht-degree: 0%
 
 ---
@@ -300,7 +300,7 @@ Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
 - **B2B 계층화된 탐색 패치를 적용하여 발생하는 문제를 해결했습니다**—이 수정 사항은 스토어 보기를 전환한 후 검색 페이지에 표시되는 `Undefined offset` 오류를 해결합니다.<!--MCLOUD-5287-->
 
-- **Paypal 체크아웃 패치**—이전에 주문한 주문 가격이 표시되는 PayPal Express의 Adobe Commerce 2.3.7 문제를 해결합니다.<!--MC-42674-->
+- **PayPal 체크아웃 패치**—이전에 주문한 주문 가격이 표시되는 PayPal Express의 Adobe Commerce 2.3.7 문제를 수정합니다.<!--MC-42674-->
 
 - **패치 범주 지원** - 품질 패치에 할당된 패치 범주 및 원본 소스를 처리하는 데 대한 지원이 추가되었습니다. 범주를 사용하면 고객이 [품질 패치 도구](https://github.com/magento/quality-patches) 및 사이트 전체 분석 도구(SWAT)를 사용할 때 필터 및 정렬을 사용하여 패치를 더 빨리 찾을 수 있습니다. <!--MC-38577-->
 

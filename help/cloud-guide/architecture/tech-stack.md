@@ -21,9 +21,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 413
+source-wordcount: 415
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
    Adobe은 정기적으로 가상 컴퓨팅 리소스(vCPU) 사용을 분석하고 리소스를 자동으로 할당하여 장기 사용을 최적화하고 최대 연간 vCPU 일 허용량을 초과할 위험을 완화합니다. 특정 기간 동안 사이트 트래픽이 증가할 것으로 예상되면 [임시 업사이징을 요청](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)할 지원 티켓을 계속 열어야 합니다.
 
 1. [**Platform as a Service**](cloud-architecture.md): 클라우드 인프라 프로젝트의 각 Adobe Commerce은 서비스 개발, 테스트 및 통합을 위한 PaaS(Platform as a Service) 통합 환경을 제공합니다.
-1. [**Adobe Commerce**](../project/overview.md): 클라우드 인프라의 Adobe Commerce은 PHP, MySQL(MariaDB), Redis, 메시지 큐 서비스([!DNL RabbitMQ] 또는 [!DNL ActiveMQ]) 및 지원되는 검색 엔진 기술을 포함하는 사전 제공된 인프라를 제공합니다.
+1. [**Adobe Commerce**](../project/overview.md): 클라우드 인프라의 Adobe Commerce은 PHP, MySQL(MariaDB), Redis 또는 Valkey, 메시지 큐 서비스([!DNL RabbitMQ] 또는 [!DNL ActiveMQ]) 및 지원되는 검색 엔진 기술을 포함하는 사전 제공된 인프라를 제공합니다.
 1. [**성능 도구**](../monitor/new-relic-service.md): New Relic 성능 도구를 사용하면 Adobe Commerce에서 클라우드 인프라 프로젝트를 통해 데이터를 수집, 분석 및 표시하여 응용 프로그램과 인프라를 디버그, 모니터링 및 관리할 수 있습니다.
 1. [**CDN(콘텐츠 전송 네트워크), 웹 응용 프로그램 방화벽([!DNL WAF]) 및 이미지 최적화(IO)**](../cdn/fastly.md):
 

@@ -3,16 +3,16 @@ title: Adobe Commerce 고급 보안
 description: 고급 보안이 클라우드 인프라의 Adobe Commerce에 보트 관리, 고급 속도 제한 및 L7 DDoS 보호를 추가하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: '2482'
+source-wordcount: '2487'
 ht-degree: 0%
 
 ---
 
 # [!DNL Adobe Commerce Advanced Security]
 
-[!DNL Adobe Commerce Advanced Security]은(는) [!DNL Adobe Commerce on Cloud Infrastructure]과(와) 함께 온라인 스토어를 빠르고, 사용 가능하며, 안전하게 유지하는 제품입니다. 이를 통해 최대 트래픽 이벤트 및 자동화된 공격 동안 매출을 보호하고 다운타임을 줄이고 고객의 신뢰를 유지하는 데 도움이 될 수 있습니다.
+[!DNL Adobe Commerce Advanced Security]은(는) [!DNL Adobe Commerce on Cloud Infrastructure]과(와) 함께 온라인 스토어를 빠르고, 사용 가능하며, 안전하게 유지하는 제품입니다. 이러한 기능을 통해 최대 트래픽 이벤트 및 자동화된 공격 동안 매출을 보호하고 다운타임을 줄이고 고객의 신뢰를 유지할 수 있습니다.
 
 [!DNL Adobe Commerce on Cloud Infrastructure]에 기본 제공 [레이어 3 및 4 DDoS 보호](./fastly.md#ddos-protection) 및 [웹 응용 프로그램 방화벽(WAF)](./fastly-waf-service.md)이(가) 포함되어 있습니다. [공유 책임 모델](https://experienceleague.adobe.com/ko/docs/commerce-operations/security-and-compliance/shared-responsibility)에서 L7 DDoS 탐지, 보트 보호 및 사전 IP 차단은 판매자 책임이며, [!DNL Adobe Commerce Advanced Security]은(는) 이를 해결하기 위해 설계되었습니다.
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 - **[DDoS 보호](https://docs.fastly.com/products/fastly-ddos-protection)**—모든 [!DNL Adobe Commerce on Cloud Infrastructure] 프로젝트에 포함된 기존 레이어 3 및 4 보호 이상의 레이어 7(응용 프로그램 레이어) DDoS 보호를 제공합니다. DDoS Protection 서비스는 대규모 볼륨 공격을 흡수하고 DDoS(Distributed Denial-of-Service) 이벤트 동안 지속적인 애플리케이션 가용성을 보장하여 트래픽 최대 기간 동안 매출을 보호합니다.
 
-- **[고급 속도 제한](https://www.fastly.com/documentation/guides/next-gen-waf/rules/working-with-advanced-rate-limiting-rules/)**—특정 URL, API 끝점 및 응용 프로그램 리소스를 남용으로부터 보호하는 구성 가능한 속도 제한 규칙을 제공합니다. Advanced Rate Limiting 서비스는 Fastly CDN 모듈을 통해 사용할 수 있는 [기본 속도 제한](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)을 넘어 특정 트래픽 패턴 및 공격 벡터를 타겟팅하므로 인프라 긴장과 클라우드 비용을 줄입니다.
+- **[고급 속도 제한](https://www.fastly.com/documentation/guides/next-gen-waf/rules/working-with-advanced-rate-limiting-rules/)**—특정 URL, API 끝점 및 응용 프로그램 리소스를 남용으로부터 보호하는 구성 가능한 속도 제한 규칙을 제공합니다. Advanced Rate Limiting 서비스는 Fastly CDN 모듈을 통해 사용할 수 있는 [기본 속도 제한](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)을 확장하여 특정 트래픽 패턴 및 공격 벡터를 대상으로 하므로 인프라 긴장과 클라우드 비용을 줄입니다.
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ Fastly의 Signal Sciences 대시보드를 통해 다음과 같은 기본 보트 
 | 특정 API 또는 URL 패턴에 대한 동적 문제 | 고객과의 협업에 필요한 경우에만 구성 | 차단된 트래픽이 `Agent_response` 아래의 New Relic 로그에 표시됨 |
 | 브라우저 문제 | 고객과의 협업에 필요한 경우에만 구성 | 차단된 트래픽이 `Agent_response` 아래의 New Relic 로그에 표시됨 |
 
-## 가시성 — 보트 보호 및 NGWAF 활동 모니터링
+## 보트 보호 및 NGWAF 활동 모니터링
 
 CDN 로그는 자동으로 고객의 New Relic 계정에 전달됩니다. 자세한 내용은 [로그 관리](../monitor/log-management.md)를 참조하세요.
 
@@ -139,7 +139,7 @@ CDN 로그에는 Signal Sciences(Bot Protection/차세대 WAF)의 기본 제공 
 
 ### 추가 기능
 
-- **동적 문제** - 의심스러운 트래픽에 최적의 문제를 자동으로 할당합니다. PAT(Private Access Tokens)를 활용하여 사용자 경험에 영향을 주지 않고 요청의 일부를 원활하게 확인할 수 있습니다.
+- **동적 문제** - 의심스러운 트래픽에 최적의 문제를 자동으로 할당합니다. PAT(Private Access Tokens)를 활용하여 사용자 환경에 영향을 주지 않고 요청의 일부를 원활하게 검증할 수 있습니다.
 - **기만 기술**—공격자에게 거짓 정보를 반환하여 공격자의 공격을 완화하고 대규모로 운영하는 능력을 방해하여 계정 탈취 시도를 해결합니다.
 
 ## 올바른 보호 선택
@@ -198,7 +198,7 @@ CDN 로그에는 Signal Sciences(Bot Protection/차세대 WAF)의 기본 제공 
 - **[원본 차단](./fastly.md#origin-cloaking)**—Fastly를 통한 모든 트래픽 경로를 보장하여 원본 서버에 대한 직접 액세스를 차단합니다.
 - **[VCL 기반 보안 조각](./fastly-vcl-custom-snippets.md)**—IP 차단, 허용 목록에 추가 및 요청 필터링에 대한 사용자 지정 VCL(Varnish Configuration Language) 규칙입니다.
 
-### [!DNL Advanced Security]
+### 고급 보안으로부터 추가 보호
 
 [!DNL Advanced Security]은(는) [!DNL Adobe Commerce on Cloud Infrastructure]에 포함된 기본 제공 보호 이상의 향상된 보호를 제공하지만 추가 비용으로:
 
@@ -269,7 +269,7 @@ Adobe 및 고객 보안 책임에 대한 전체 개요는 [공유 책임 모델]
 [!DNL Advanced Security]은(는) Edge-Layer Storefront 보호를 제공합니다. 다음 기능은 사용할 수 없으며 보완 솔루션으로 가장 잘 해결됩니다.
 
 - **거래 수준 사기 점수**—[!DNL Advanced Security]는 사기 위험에 대한 개별 결제 거래를 평가하지 않습니다. 거래 수준 채점을 위해 전용 사기 방지 플랫폼을 사용합니다.
-- **IAM(Identity and Access Management)**—[!DNL Advanced Security]은(는) 사용자 인증, 권한 부여 또는 세션 관리를 관리하지 않습니다. 이는 고객의 책임입니다.
+- **IAM(Identity and Access Management)**—[!DNL Advanced Security]은(는) 사용자 인증, 권한 부여 또는 세션 관리를 관리하지 않습니다. 이러한 항목은 고객의 책임입니다.
 - **SAST/DAST(정적 및 동적 응용 프로그램 보안 테스트)**—[!DNL Advanced Security]에는 코드 수준 취약성 검사 또는 침투 테스트가 포함되어 있지 않습니다.
 - **API 보안** - 고급 속도 제한은 API 끝점을 남용으로부터 보호할 수 있지만 스키마 유효성 검사 및 API 게이트웨이 관리와 같은 포괄적인 API 보안 기능은 제공되지 않습니다.
 - **전체 사기 방지**—[!DNL Advanced Security]는 Edge-Layer 상점 보호에 중점을 두며 완전한 사기 행위 관리 플랫폼이 아닙니다.

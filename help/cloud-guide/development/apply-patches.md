@@ -1,6 +1,6 @@
 ---
 title: 패치 적용
-description: Adobe Commerce on cloud infrastructure 프로젝트에서 패치를 적용하는 방법에 대해 알아봅니다.
+description: ECE-Tools 및 Quality Patches Tool을 사용하여 Adobe Commerce on Cloud Infrastructure 프로젝트에 필수, 선택적 및 사용자 지정 패치를 적용하는 방법을 알아봅니다.
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
 TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: f3a3403ffd55c2e08e20592fa719f42a9473e72d
 workflow-type: tm+mt
-source-wordcount: 911
+source-wordcount: 922
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **로컬 개발 환경에서 개별 패치를 적용하려면**:
 
-1. `.magento.env.yaml` 파일에 &#39;QUALITY_PATCHES&#39; 변수를 추가하고 아래에 필요한 패치를 나열합니다.
+1. `QUALITY_PATCHES` 변수를 `.magento.env.yaml` 파일에 추가하고 아래에 필요한 패치를 나열합니다.
 
    ```yaml
    stage:

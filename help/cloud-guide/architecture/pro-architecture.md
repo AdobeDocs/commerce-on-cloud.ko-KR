@@ -1,6 +1,6 @@
 ---
 title: Pro 아키텍처
-description: Pro 아키텍처에서 지원하는 환경에 대해 알아봅니다.
+description: 기본, 통합, 스테이징 및 프로덕션 환경, 클러스터 확장 및 백업을 포함한 Pro 환경 아키텍처에 대해 알아봅니다.
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 1619
+source-wordcount: 1621
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Adobe Commerce on cloud infrastructure Pro 아키텍처는 스토어를 개발, 
 | New Relic 서비스 포함 | 아니요 | APM | APM + NRI |
 | 자동 백업 | 아니요 | 예 | 예 |
 
+**APM**&#x200B;은(는) 응용 프로그램 성능 모니터링을 [!DNL New Relic's]합니다.
+
 >[!NOTE]
 >
 >Adobe은 Adobe Commerce 프로젝트를 개발 및 테스트할 수 있도록 로컬 Cloud Docker 환경에 배포할 Commerce Cloud Docker 도구를 제공합니다. [Docker 개발](../dev-tools/cloud-docker.md)을 참조하세요.
@@ -64,7 +66,7 @@ Pro 프로젝트에서 `master` 분기는 프로덕션 환경과 함께 활성 P
 
 - `master` 분기를 기반으로 분기를 **만들지**&#x200B;마십시오. 통합 환경을 사용하여 개발을 위한 활성 분기를 만듭니다.
 
-- 개발, UAT 또는 성능 테스트에 `master` 환경을 사용하지 마십시오.
+- 개발, UAT(사용자 승인 테스트) 또는 성능 테스트에 `master` 환경을 사용하지 마십시오.
 
 ### 통합 환경
 
@@ -99,11 +101,11 @@ Pro 프로젝트에서 `master` 분기는 프로덕션 환경과 함께 활성 P
 
 - 통합 환경 아키텍처가 스테이징 및 프로덕션 아키텍처와 일치하지 않습니다.
 
-- 개발 테스트, 성능 테스트 또는 UAT(사용자 승인 테스트)에 `integration` 환경을 사용하지 마십시오.
+- 개발 테스트, 성능 테스트 또는 UAT에 `integration` 환경을 사용하지 마십시오.
 
 - `integration` 환경을 사용하여 Adobe Commerce 기능에 대한 B2B를 테스트하지 마십시오.
 
-- 통합 환경의 데이터베이스를 데이터베이스 프로덕션 또는 스테이징에서 복원할 수 없습니다
+- 프로덕션 또는 스테이징 데이터베이스에서 통합 환경의 데이터베이스를 복원할 수 없습니다
 
 {{enhanced-integration-envs}}
 
@@ -160,11 +162,9 @@ Pro 프로젝트에서 `master` 분기는 프로덕션 환경과 함께 활성 P
   - `pub/static`
   - `app/etc`
 
-- **Redis**—VM당 하나의 서버만 활성 상태이고 나머지 두 서버는 복제본입니다.
+- **Redis** 또는 **Valkey**—VM당 하나의 서버만 활성 상태이고 나머지 두 서버는 복제본입니다.
 
-- **Elasticsearch**—cloud infrastructure 2.2 - 2.4.3-p2에서 Adobe Commerce 검색
-
-- **OpenSearch**—클라우드 인프라 2.3.7-p3, 2.4.3-p2, 2.4.4 이상에서 Adobe Commerce 검색
+- **OpenSearch**—클라우드 인프라 2.4.4 이상에서 Adobe Commerce 검색
 
 - **Galera**—노드당 하나의 MariaDB MySQL 데이터베이스가 있는 데이터베이스 클러스터로, 모든 데이터베이스의 고유 ID에 대해 3의 자동 증분 설정을 사용합니다.
 
@@ -191,7 +191,7 @@ Adobe Commerce on cloud infrastructure는 각 영역에 별도의 데이터 센�
 
 >[!NOTE]
 >
->마운트된 볼륨에는 [쓰기 가능한 마운트](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)만 포함/참조되며 `app/` 디렉터리의 일부만 포함됩니다. 다른 파일의 경우 [빌드 및 배포 프로세스](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)에서 생성/생성되며 나머지 파일에 대해서도 Git 저장소를 확인해야 합니다.
+>마운트된 볼륨에는 [쓰기 가능한 마운트](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)만 포함되거나 참조되며 `app/` 디렉터리의 일부는 포함되지 않습니다. 다른 파일의 경우 [빌드 및 배포 프로세스](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)에서 생성/생성되며 나머지 파일에 대해서도 Git 저장소를 확인해야 합니다.
 
 {{pro-backups}}
 
@@ -213,11 +213,11 @@ Adobe은 다음 데이터 보존 정책에 따라 자동 백업을 유지합니�
 | 8~12주 | 격주 백업 1회 |
 | 3개월~5개월 | 매월 1회 백업 |
 
-이 정책은 클라우드 인프라 계획에 따라 달라질 수 있습니다.
+이 정책은 클라우드 인프라 계획에 따라 다릅니다.
 
 ### 복구 시간 목표
 
-RTO는 스토리지 크기에 따라 다릅니다. 대용량 EBS 볼륨은 리스토어에 더 많은 시간이 소요됩니다. 복원 시간은 데이터베이스 크기에 따라 달라질 수 있습니다. 자세한 내용은 Adobe 고객 성공 관리자에게 문의하십시오.
+RTO는 스토리지 크기에 따라 다릅니다. 대용량 EBS 볼륨은 리스토어에 더 많은 시간이 소요됩니다. 복원 시간은 데이터베이스 크기에 따라 다릅니다. 자세한 내용은 Adobe 고객 성공 관리자에게 문의하십시오.
 
 ## Pro 클러스터 확장
 
