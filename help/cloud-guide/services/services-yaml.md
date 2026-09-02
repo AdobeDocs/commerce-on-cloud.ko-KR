@@ -4,17 +4,12 @@ description: MySQL, Redis 및 Elasticsearch과 같은 클라우드 인프라에�
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 660f62d8bb809675ec872da2e87301308d333ba8
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+last-update: 2026-09-01
+source-git-commit: 0f88ef7d75bc2a02eb7988dc815071c5894a4662
 workflow-type: tm+mt
 source-wordcount: 1176
 ht-degree: 0%
@@ -54,7 +49,7 @@ Adobe Commerce on cloud infrastructure는 프로젝트에 대해 구성할 수 �
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->[사용 가능한 버전 간에 순차적으로 RabbitMQ를 업그레이드합니다](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). 예를 들어 3.9에서 4.1로 바로 업그레이드하지 마십시오.
+>[사용 가능한 버전 간에 순차적으로 RabbitMQ를 업그레이드합니다](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). 예를 들어 3.9에서 4.1로 바로 업그레이드하지 마십시오.
 >
 >새 버전으로 업그레이드한 후 RabbitMQ에서 사용자 지정 메시지 대기열을 다시 만들려면 전체 배포를 트리거합니다.
 
@@ -200,7 +195,7 @@ mysql:
 
 ## 서비스 버전
 
-클라우드 인프라에서 배포되고 테스트된 버전은 클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원을 결정합니다. 이는 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
+클라우드 인프라에서 배포되고 테스트된 버전은 클라우드 인프라에서 Adobe Commerce에 대한 서비스 버전 및 호환성 지원을 결정합니다. 이는 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. Adobe이 특정 Adobe Commerce 및 Magento Open Source 릴리스에서 테스트한 타사 소프트웨어 종속성 목록은 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.
 
 ### 소프트웨어 EOL 확인
 

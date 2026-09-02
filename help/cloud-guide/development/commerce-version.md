@@ -4,18 +4,12 @@ description: 클라우드 인프라 환경에서 Adobe Commerce 버전을 업그
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
 TQID: https://experienceleague.adobe.com/XCHw9c0bX8UE8LLmFOYjMFRLTaIk8sT57dESptRTUXs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+last-update: 2026-09-01
+source-git-commit: 0f88ef7d75bc2a02eb7988dc815071c5894a4662
 workflow-type: tm+mt
 source-wordcount: 1050
 ht-degree: 0%
@@ -24,7 +18,7 @@ ht-degree: 0%
 
 # Commerce 버전 업그레이드
 
-Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 있습니다. 환경을 업그레이드하기 전에 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)에서 최신 소프트웨어 버전 요구 사항을 검토하십시오.
+Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 있습니다. 환경을 업그레이드하기 전에 _설치_ 안내서의 [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)에서 최신 소프트웨어 버전 요구 사항을 검토하십시오.
 
 환경 유형(개발, 스테이징 또는 프로덕션)에 따라 업그레이드 작업에는 다음이 포함될 수 있습니다.
 
@@ -142,7 +136,7 @@ Adobe은 업그레이드 전에 인스턴스의 백업을 만들 것을 권장�
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. B2B를 사용하는 경우 `composer.json` 파일을 Commerce용 [지원되는 버전](https://experienceleague.adobe.com/ko/docs/commerce-operations/release/product-availability#adobe-authored-extensions)&#x200B;(으)로 업데이트하십시오.
+1. B2B를 사용하는 경우 `composer.json` 파일을 Commerce용 [지원되는 버전](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)&#x200B;(으)로 업데이트하십시오.
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -156,15 +150,15 @@ Adobe은 업그레이드 전에 인스턴스의 백업을 만들 것을 권장�
 
 1. 현재 적용된 패치를 검토합니다.
 
-   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
+   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
 
    - `.magento.env.yaml` 파일에 [품질 패치]가 적용된 경우 새 버전에 계속 적용할 수 있는지 확인하십시오. `.magento.env.yaml` 파일의 `QUALITY_PATCHES` 섹션에서 적용할 수 없는 패치를 제거합니다.
 
-   **메서드 1**: [품질 패치 릴리스 정보에서 해당 버전을 확인](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **메서드 1**: [품질 패치 릴리스 정보에서 해당 버전을 확인](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **메서드 2**: [사용 가능한 패치와 상태 보기](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **메서드 2**: [사용 가능한 패치와 상태 보기](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **메서드 3**: [패치 검색](https://experienceleague.adobe.com/ko/tools/commerce-quality-patches)
+   **메서드 3**: [패치 검색](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)
 
 
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
