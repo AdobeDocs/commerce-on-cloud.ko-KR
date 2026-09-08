@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
 workflow-type: tm+mt
-source-wordcount: 3631
+source-wordcount: 3685
 ht-degree: 0%
 
 ---
@@ -40,11 +40,19 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.13 {#latest}
+## v2002.2.14 {#latest}
+
+릴리스 날짜: 2026년 9월 08일
+
+- ![수정 아이콘](../../assets/fix.svg) **Valkey 8.5 기능 테스트 적용 범위**—Symfony L2 캐시 구성에 대한 적용 범위가 개선되었습니다.<!-- MCLOUD-15487 -->
+- ![아이콘 수정](../../assets/fix.svg) **캐싱 개선**—페이지 캐시 격리 문제를 해결했습니다.<!-- MCLOUD-15509 -->
+- ![수정 아이콘](../../assets/fix.svg) **Redis 및 Valkey 개선 사항**—기존 및 최신(Symfony Cache, 2.4.9+) Redis 및 Valkey 캐시 구성을 모두 지원하도록 `REDIS_BACKEND` 및 `VALKEY_BACKEND` 처리가 개선되었습니다.<!-- MCLOUD-15546 -->
+
+## v2002.2.13
 
 릴리스 날짜: 2026년 8월 19일
 
-- ![아이콘 수정](../../assets/fix.svg) **캐싱 개선** Redis 및 Valkey 슬레이브 연결에 대한 향상된 Symfony_l2 캐시 지원 및 관련 캐시, 태그 인덱스, 미리 로드 및 정적 배포 문제를 해결했습니다.<!-- MCLOUD-15433 -->
+- ![아이콘 수정](../../assets/fix.svg) **캐싱 개선**—Redis 및 Valkey 슬레이브 연결에 대한 Symfony_l2 캐시 지원을 개선하고 관련 캐시, 태그 인덱스, 미리 로드 및 정적 배포 문제를 해결했습니다.<!-- MCLOUD-15433 -->
 
 ## v2002.2.12
 

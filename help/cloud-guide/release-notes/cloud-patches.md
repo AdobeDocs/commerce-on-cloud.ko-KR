@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
 workflow-type: tm+mt
-source-wordcount: 2978
+source-wordcount: 2997
 ht-degree: 0%
 
 ---
@@ -44,7 +44,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.19 {#latest}
+## v1.1.20 {#latest}
+
+릴리스 날짜: 2026년 9월 08일
+
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—2026년 9월 격리된 보안 패치에 대한 지원이 포함되었습니다.<!-- MCLOUD-15053 -->
+
+## v1.1.19
 
 릴리스 날짜: 2026년 8월 19일
 
