@@ -5,23 +5,13 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
 workflow-type: tm+mt
-source-wordcount: 2978
+source-wordcount: 2997
 ht-degree: 0%
 
 ---
@@ -44,7 +34,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.19 {#latest}
+## v1.1.20 {#latest}
+
+릴리스 날짜: 2026년 9월 08일
+
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—2026년 9월 격리된 보안 패치에 대한 지원이 포함되었습니다.<!-- MCLOUD-15053 -->
+
+## v1.1.19
 
 릴리스 날짜: 2026년 8월 19일
 
@@ -75,7 +71,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2026년 7월 14일
 
-- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-73](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-37421)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15066 -->
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-73](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-37421)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
@@ -97,7 +93,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 릴리스 날짜: 2025년 11월 13일
 
 - ![수정 아이콘](../../assets/fix.svg) **Symfony 패키지**—최신 Symfony YAML 패키지에 대한 지원이 추가되었습니다.<!-- MCLOUD-14020 -->
-- ![수정 아이콘](../../assets/fix.svg) **패치**—JS 축소 및 번들링을 사용할 때 [체크 아웃을 수정할 수 없습니다](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27997) *Commerce 기술 자료*&#x200B;에 설명된 문제.
+- ![수정 아이콘](../../assets/fix.svg) **패치**—JS 축소 및 번들링을 사용할 때 [체크 아웃을 수정할 수 없습니다](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997) *Commerce 기술 자료*&#x200B;에 설명된 문제.
 - ![수정 아이콘](../../assets/fix.svg) **개선된 범주 보기**—MCLOUD-13752: 범주 보기를 개선합니다.<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
@@ -129,13 +125,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2025년 5월 5일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.8로 업데이트된 패치**—1.1.7<!-- MCLOUD-13619 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27148)용 업데이트된 패치입니다.
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.8로 업데이트된 패치**—1.1.7<!-- MCLOUD-13619 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27148)용 업데이트된 패치입니다.
 
 ## v1.1.6
 
 릴리스 날짜: 2025년 4월 24일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—이 업데이트는 1.1.4<!-- MCLOUD-13240 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27149)용 업데이트된 패치입니다.
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—이 업데이트는 1.1.4<!-- MCLOUD-13240 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)용 업데이트된 패치입니다.
 
 ## v1.1.5
 
@@ -147,7 +143,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2025년 2월 13일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7로 패치가 추가되었습니다**—이 업데이트는 패치 [CVE-2025-24434](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27149).<!-- MCLOUD-13240     - -->
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7로 패치가 추가되었습니다**—이 업데이트는 패치 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149).<!-- MCLOUD-13240     - -->
 
 ## v1.1.3
 
@@ -159,13 +155,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2024년 11월 5일
 
-- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치 추가—이 업데이트는 B2B 모듈을 사용할 때 Adobe Commerce에 대한 중요한 [CVE-2024-45115](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27151) 취약점을 수정합니다.<!-- MCLOUD-12980 - -->
+- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치 추가—이 업데이트는 B2B 모듈을 사용할 때 Adobe Commerce에 대한 중요한 [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27151) 취약점을 수정합니다.<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 릴리스 날짜: 2024년 11월 5일
 
-- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치가 추가되었습니다. 이 업데이트는 중요한 [CVE-2024-34102](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting 취약성을 패치합니다.<!-- MCLOUD-12980 - -->
+- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치가 추가되었습니다. 이 업데이트는 중요한 [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting 취약성을 패치합니다.<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -204,7 +200,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2023년 7월 31일
 
-- **MCLOUD-106041&rbrace; 패치를 제거했습니다. 이 패치는 QPT로 이동되었습니다.<!-- MCLOUD-10736 -->**
+- **MCLOUD-106041} 패치를 제거했습니다. 이 패치는 QPT로 이동되었습니다.<!-- MCLOUD-10736 -->**
 
 ## v1.0.22
 
@@ -243,7 +239,7 @@ Adobe Commerce 2.4.5용 중요 패치:
 
 - **Braintree 결제를 사용한 주문 문제**—이 패치는 관리자가 새로운 주문이나 재주문을 할 수 없도록 하는 중요한 문제를 해결합니다.<!-- MCLOUD-9137 -->
 
-[Braintree 결제가 활성화된 경우 관리자가 주문/순서를 만들 수 없습니다](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27169).
+[Braintree 결제가 활성화된 경우 관리자가 주문/순서를 만들 수 없습니다](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27169).
 
 ## v1.0.17
 
@@ -292,7 +288,7 @@ Adobe Commerce 2.3.3-p1 이상 버전용 주요 패치:
 
 Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
-- **API 속도 제한 문제**—이 패치는 배열에 있는 항목이 20개가 넘는 요청을 웹 API에서 처리하지 못하게 하는 기본 속도 제한을 수정합니다. 이 패치는 속도 제한의 기본값을 높입니다. Adobe Commerce [2.4.3 릴리스 정보](https://experienceleague.adobe.com/ko/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->를 참조하세요.
+- **API 속도 제한 문제**—이 패치는 배열에 있는 항목이 20개가 넘는 요청을 웹 API에서 처리하지 못하게 하는 기본 속도 제한을 수정합니다. 이 패치는 속도 제한의 기본값을 높입니다. Adobe Commerce [2.4.3 릴리스 정보](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->를 참조하세요.
 
 ## v1.0.11
 
