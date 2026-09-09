@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+source-git-commit: 2b2dee7e34c753ad18c7df6886557de1e57508d6
 workflow-type: tm+mt
-source-wordcount: 2997
+source-wordcount: 3027
 ht-degree: 0%
 
 ---
@@ -44,7 +44,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.20 {#latest}
+## v1.1.21 {#latest}
+
+릴리스 날짜: 2026년 9월 08일
+
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-146](https://helpx.adobe.com/security/products/magento/apsb26-146.html)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15587 -->
+
+## v1.1.20
 
 릴리스 날짜: 2026년 9월 08일
 

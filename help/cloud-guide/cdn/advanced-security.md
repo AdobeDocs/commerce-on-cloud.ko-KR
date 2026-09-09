@@ -3,9 +3,9 @@ title: Adobe Commerce 고급 보안
 description: 고급 보안이 클라우드 인프라의 Adobe Commerce에 보트 관리, 고급 속도 제한 및 L7 DDoS 보호를 추가하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2514'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 0%
 # [!DNL Adobe Commerce Advanced Security]
 
 [!DNL Adobe Commerce Advanced Security]은(는) [!DNL Adobe Commerce on Cloud Infrastructure]과(와) 함께 온라인 스토어를 빠르고, 사용 가능하며, 안전하게 유지하는 제품입니다. 이러한 기능을 통해 최대 트래픽 이벤트 및 자동화된 공격 동안 매출을 보호하고 다운타임을 줄이고 고객의 신뢰를 유지할 수 있습니다.
+
+>[!TIP]
+>
+>New Relic의 [Adobe Commerce 트래픽 인사이트](../monitor/traffic-insights/overview.md) 앱을 사용하여 Fastly 트래픽 및 봇 패턴을 분석하고 고급 보안이 적합한지 판별하십시오.
 
 [!DNL Adobe Commerce on Cloud Infrastructure]에 기본 제공 [레이어 3 및 4 DDoS 보호](./fastly.md#ddos-protection) 및 [웹 응용 프로그램 방화벽(WAF)](./fastly-waf-service.md)이(가) 포함되어 있습니다. [공유 책임 모델](https://experienceleague.adobe.com/ko/docs/commerce-operations/security-and-compliance/shared-responsibility)에서 L7 DDoS 탐지, 보트 보호 및 사전 IP 차단은 판매자 책임이며, [!DNL Adobe Commerce Advanced Security]은(는) 이를 해결하기 위해 설계되었습니다.
 

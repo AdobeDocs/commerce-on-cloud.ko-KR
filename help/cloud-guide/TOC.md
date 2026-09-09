@@ -6,10 +6,10 @@ breadcrumb-title: 클라우드의 Commerce
 user-guide-description: 클라우드 인프라에서 Adobe Commerce 애플리케이션을 관리하는 방법에 대해 알아봅니다.
 product: magento
 feature: Cloud
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 8%
+source-wordcount: '398'
+ht-degree: 9%
 
 ---
 
@@ -183,3 +183,7 @@ ht-degree: 8%
       + [데이터 수집](monitor/ingest-data.md)
       + [배포 추적](monitor/track-deployments.md)
     + [로그 관리](monitor/log-management.md)
+    + 트래픽 인사이트 {#traffic-insights}
+      + [개요](monitor/traffic-insights/overview.md)
+      + [앱 이해](monitor/traffic-insights/understanding-the-app.md)
+      + [조사 플레이북](monitor/traffic-insights/investigation-playbook.md)
