@@ -5,30 +5,24 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9e10bdbdc726a85bea99a9b5f23d9211ac09c661
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 1195121d2c83da858744839e82e14bd423ea5528
 workflow-type: tm+mt
-source-wordcount: 3043
+source-wordcount: 3067
 ht-degree: 0%
 
 ---
 
 # Commerce용 클라우드 패치
 
-[클라우드 패치](https://github.com/magento/magento-cloud-patches) 패키지는 모든 Adobe Commerce 버전과 클라우드 환경의 통합을 개선하고 중요한 수정 사항의 빠른 전달을 지원하는 필수 패치 집합을 제공합니다.
+`magento/magento-cloud-patches` Composer 패키지는 모든 Adobe Commerce 버전과 클라우드 환경의 통합을 개선하고 중요한 수정 사항의 빠른 전달을 지원하는 필수 패치 집합을 제공합니다. Adobe은 `repo.magento.com`의 Commerce Composer 저장소를 통해 이 패키지를 배포합니다.
+
+>[!NOTE]
+>
+>버전 1.1.15부터 Adobe은 `repo.magento.com`의 Commerce Composer 저장소를 통해 `magento/magento-cloud-patches` 패키지를 독점적으로 배포합니다. 이 패키지를 다운로드하려면 Adobe Commerce EE 권한이 있어야 합니다.
 
 Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며 ECE-Tools 패키지를 설치하거나 업데이트할 때 설치 및 업데이트됩니다. 또한 Commerce용 클라우드 패치 를 독립형 패키지로 사용 및 관리하여 Cloud Platform에 없는 Adobe Commerce 프로젝트에 패치를 적용할 수도 있습니다. 이 릴리스 노트는 이 패키지에 대한 최신 개선 사항을 설명합니다.
 
@@ -87,7 +81,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2026년 7월 14일
 
-- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-73](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-37421)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15066 -->
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-73](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-37421)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
@@ -109,7 +103,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 릴리스 날짜: 2025년 11월 13일
 
 - ![수정 아이콘](../../assets/fix.svg) **Symfony 패키지**—최신 Symfony YAML 패키지에 대한 지원이 추가되었습니다.<!-- MCLOUD-14020 -->
-- ![수정 아이콘](../../assets/fix.svg) **패치**—JS 축소 및 번들링을 사용할 때 [체크 아웃을 수정할 수 없습니다](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27997) *Commerce 기술 자료*&#x200B;에 설명된 문제.
+- ![수정 아이콘](../../assets/fix.svg) **패치**—JS 축소 및 번들링을 사용할 때 [체크 아웃을 수정할 수 없습니다](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997) *Commerce 기술 자료*&#x200B;에 설명된 문제.
 - ![수정 아이콘](../../assets/fix.svg) **개선된 범주 보기**—MCLOUD-13752: 범주 보기를 개선합니다.<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
@@ -141,13 +135,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2025년 5월 5일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.8로 업데이트된 패치**—1.1.7<!-- MCLOUD-13619 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27148)용 업데이트된 패치입니다.
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.8**(으)로 업데이트된 패치—이 업데이트는 1.1.7<!-- MCLOUD-13619 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27148)의 패치를 수정합니다.
 
 ## v1.1.6
 
 릴리스 날짜: 2025년 4월 24일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—이 업데이트는 1.1.4<!-- MCLOUD-13240 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27149)용 업데이트된 패치입니다.
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7**(으)로 업데이트된 패치—이 업데이트는 1.1.4<!-- MCLOUD-13240 -->에 릴리스된 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)용 업데이트된 패치입니다.
 
 ## v1.1.5
 
@@ -159,7 +153,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2025년 2월 13일
 
-- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7로 패치가 추가되었습니다**—이 업데이트는 패치 [CVE-2025-24434](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27149).<!-- MCLOUD-13240     - -->
+- ![새 아이콘](../../assets/new.svg) **Commerce 2.4.4에서 2.4.7로 패치가 추가되었습니다**—이 업데이트는 패치 [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149).<!-- MCLOUD-13240     - -->
 
 ## v1.1.3
 
@@ -171,13 +165,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2024년 11월 5일
 
-- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치 추가—이 업데이트는 B2B 모듈을 사용할 때 Adobe Commerce에 대한 중요한 [CVE-2024-45115](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27151) 취약점을 수정합니다.<!-- MCLOUD-12980 - -->
+- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치 추가—이 업데이트는 B2B 모듈을 사용할 때 Adobe Commerce에 대한 중요한 [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27151) 취약점을 수정합니다.<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 릴리스 날짜: 2024년 11월 5일
 
-- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치가 추가되었습니다. 이 업데이트는 중요한 [CVE-2024-34102](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting 취약성을 패치합니다.<!-- MCLOUD-12980 - -->
+- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치가 추가되었습니다. 이 업데이트는 중요한 [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting 취약성을 패치합니다.<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -216,7 +210,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2023년 7월 31일
 
-- **MCLOUD-106041&rbrace; 패치를 제거했습니다. 이 패치는 QPT로 이동되었습니다.<!-- MCLOUD-10736 -->**
+- **MCLOUD-106041} 패치를 제거했습니다. 이 패치는 QPT로 이동되었습니다.<!-- MCLOUD-10736 -->**
 
 ## v1.0.22
 
@@ -255,7 +249,7 @@ Adobe Commerce 2.4.5용 중요 패치:
 
 - **Braintree 결제를 사용한 주문 문제**—이 패치는 관리자가 새로운 주문이나 재주문을 할 수 없도록 하는 중요한 문제를 해결합니다.<!-- MCLOUD-9137 -->
 
-[Braintree 결제가 활성화된 경우 관리자가 주문/순서를 만들 수 없습니다](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27169).
+[Braintree 결제가 활성화된 경우 관리자가 주문/순서를 만들 수 없습니다](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27169).
 
 ## v1.0.17
 
@@ -304,7 +298,7 @@ Adobe Commerce 2.3.3-p1 이상 버전용 주요 패치:
 
 Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
-- **API 속도 제한 문제**—이 패치는 배열에 있는 항목이 20개가 넘는 요청을 웹 API에서 처리하지 못하게 하는 기본 속도 제한을 수정합니다. 이 패치는 속도 제한의 기본값을 높입니다. Adobe Commerce [2.4.3 릴리스 정보](https://experienceleague.adobe.com/ko/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->를 참조하세요.
+- **API 속도 제한 문제**—이 패치는 배열에 있는 항목이 20개가 넘는 요청을 웹 API에서 처리하지 못하게 하는 기본 속도 제한을 수정합니다. 이 패치는 속도 제한의 기본값을 높입니다. Adobe Commerce [2.4.3 릴리스 정보](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->를 참조하세요.
 
 ## v1.0.11
 
@@ -436,7 +430,7 @@ Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
 - **Elasticsearch 카탈로그 페이지 매김 수정 사항** —magento/magento-cloud-patches v1.0에 제공된 Elasticsearch 카탈로그 페이지 매김 패치를 더 효과적인 수정 사항으로 교체했습니다.<!--MAGECLOUD-4847-->
 
-- **Page Builder 패치** - Commerce 1.0.0용 Cloud 패치에서는 Adobe Commerce 2.3.3을 기반으로 초기 수정 시 알려진 Page Builder RCE(원격 코드 실행) 취약점을 해결하기 위해 Page Builder 패치가 번들로 제공되었습니다. 이러한 패치는 Adobe Commerce 2.3.4.를 기반으로 보다 안정적인 구현으로 업데이트되었으며, 이 경우 문제를 해결하기 위한 여러 최적화가 포함됩니다.<!--MAGECLOUD-4884-->
+- **Page Builder 패치** - Commerce 1.0.0용 Cloud 패치에서는 Adobe Commerce 2.3.3을 기반으로 초기 수정 시 알려진 Page Builder RCE(원격 코드 실행) 취약점을 해결하기 위해 Page Builder 패치가 번들로 제공되었습니다. 이러한 패치는 Adobe Commerce 2.3.4를 기반으로 보다 안정적인 구현으로 업데이트되었으며, 이 경우 문제를 해결하기 위한 여러 최적화가 포함됩니다.<!--MAGECLOUD-4884-->
 
   magento/magento-cloud-patches 1.0.0 패키지가 있는 경우 여전히 Page Builder RCE 취약성 문제로부터 보호됩니다. 1.0.1 이상으로 업데이트하면 동일한 수정 사항을 더 잘 구현할 수 있습니다.
 
@@ -444,7 +438,7 @@ Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
 릴리스 날짜: 2019년 11월 14일
 
-이 릴리스는 [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches) 패키지의 첫 번째 릴리스이며, 이 릴리스는 `ece-tools` 패키지 버전 2002.0.22 이상 릴리스에 대한 새 종속입니다.
+이 릴리스는 `magento/magento-cloud-patches` 패키지의 첫 번째 릴리스이며, 이 릴리스는 `ece-tools` 패키지 버전 2002.0.22 이상 릴리스에 대한 새로운 종속입니다.
 
 이번 릴리스에는 다음과 같은 패치 및 주요 수정 사항이 포함되어 있습니다.
 

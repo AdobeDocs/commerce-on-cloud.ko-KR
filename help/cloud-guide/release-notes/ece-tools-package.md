@@ -5,20 +5,13 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
 workflow-type: tm+mt
-source-wordcount: 3685
+source-wordcount: 3676
 ht-degree: 0%
 
 ---
@@ -461,7 +454,7 @@ ht-degree: 0%
 
   - ![새 아이콘](../../assets/new.svg) **Commerce용 Cloud Docker에 대한 개별 패키지 추가**—코드 품질을 유지하고 독립적인 릴리스를 제공하기 위해 `ece-tools` 패키지에서 Docker 패키지를 분리했습니다. `ece-tools`과(와) 관련된 업데이트 및 수정 사항은 [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub 리포지토리에서 관리합니다.<!--MAGECLOUD-2927-->
 
-  - ![새 아이콘](../../assets/new.svg) **패치 기능 업데이트됨**—ECE-Tools 패키지에서 별도의 [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) 패키지로 패치 기능을 이동했습니다. 배포 중에 `ece-tools`은(는) 새 패키지를 사용하여 패치를 적용합니다. [클라우드 패치 릴리스 정보](cloud-patches.md).<!--MAGECLOUD-4567-->를 참조하세요.
+  - ![새 아이콘](../../assets/new.svg) **패치 기능 업데이트됨**—ECE-Tools 패키지에서 별도의 `magento-cloud-patches` 패키지로 패치 기능을 이동했습니다. 배포 중에 `ece-tools`은(는) 새 패키지를 사용하여 패치를 적용합니다. [클라우드 패치 릴리스 정보](cloud-patches.md).<!--MAGECLOUD-4567-->를 참조하세요.
 
   - ![새 아이콘](../../assets/new.svg) **Updated Composer 종속성**—클라우드 인프라의 Adobe Commerce에 대한 `composer.json` 파일을 `magento/magento-cloud-docker` 패키지에 대한 종속으로 업데이트했습니다. 이제 `ece-tools`에 [`Cloud Tools Suite for Commerce`](cloud-tools-suite.md)의 모든 패키지에 대한 종속성이 포함됩니다. 이러한 패키지는 `ece-tools`을(를) 설치하거나 업데이트할 때 자동으로 설치 및 업데이트됩니다.
 
