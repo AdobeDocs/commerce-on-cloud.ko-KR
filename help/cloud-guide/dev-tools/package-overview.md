@@ -10,9 +10,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 32426a82db5a81306c1dcc670a8268a9f5959874
 workflow-type: tm+mt
-source-wordcount: 450
+source-wordcount: 449
 ht-degree: 0%
 
 ---
@@ -101,5 +101,5 @@ Ideal state is configured
 
 ## Adobe 패치 및 사용자 정의 패치
 
-`ece-tools` 패키지에는 [magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches) 패키지에 대한 종속성이 포함되어 있습니다. 이 패키지는 모든 Adobe Commerce 버전과 클라우드 환경의 통합을 향상하고 중요한 수정 사항의 빠른 전달을 지원하는 Adobe 패치 및 핫픽스를 제공합니다. 또한 은 Adobe Commerce on cloud infrastructure 프로젝트에 추가하는 사용자 정의 패치를 제공합니다. [패치 적용](../development/apply-patches.md)을 참조하세요.
+`ece-tools` 패키지에는 모든 Commerce 버전과 클라우드 환경의 통합을 개선하고 중요한 수정 사항의 빠른 전달을 지원하는 Adobe 패치 및 핫픽스를 제공하는 `magento/magento-cloud-patches` Composer 패키지([Cloud Patches for Adobe Commerce 릴리스 정보](../release-notes/cloud-patches.md) 참조)에 대한 종속성이 포함되어 있습니다. 이 패키지는 또한 Adobe Commerce on cloud infrastructure 프로젝트에 추가하는 사용자 정의 패치를 제공합니다. [패치 적용](../development/apply-patches.md)을 참조하세요.
 
