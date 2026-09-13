@@ -52,13 +52,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2026년 9월 08일
 
-- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-146](https://helpx.adobe.com/security/products/magento/apsb26-146.html)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15587 -->
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-146](https://helpx.adobe.com/kr/security/products/magento/apsb26-146.html)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15587 -->
 
 ## v1.1.20
 
 릴리스 날짜: 2026년 9월 08일
 
-- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항** - [Adobe Commerce 보안 업데이트 APSB26-138](https://helpx.adobe.com/security/products/magento/apsb26-138.html)에서 참조되는 2026년 9월 격리된 보안 패치에 대한 지원이 포함되었습니다.<!-- MCLOUD-15053 -->
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항** - [Adobe Commerce 보안 업데이트 APSB26-138](https://helpx.adobe.com/kr/security/products/magento/apsb26-138.html)에서 참조되는 2026년 9월 격리된 보안 패치에 대한 지원이 포함되었습니다.<!-- MCLOUD-15053 -->
 
 ## v1.1.19
 
