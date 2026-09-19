@@ -1,9 +1,8 @@
 ---
-source-git-commit: 8370be461f731f73fcb382d74f5e20886abde2db
+source-git-commit: ad0b2ef144a1ad8579eb5e8d0c5a98690fd91fdd
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '454'
 ht-degree: 1%
-
 ---
 # 새로운 기능 템플릿
 
@@ -133,28 +132,6 @@ ht-degree: 1%
         주요 업데이트
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/cd222546c1c57f5250408d9e423dc586284a34fc">커밋</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026년 7월 20일
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>설명</th>
-      <th>유형</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>ECE-Tools 릴리스, v2002.2.12 이후에 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다. 버전 번호 외에 다른 변경 사항은 없습니다.</p>
-</td>
-      <td>
-        기술
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/136f8312d1c125a49538ee050394c722ab68d9b6">커밋</a></td>
     </tr>
   </tbody>
 </table>
