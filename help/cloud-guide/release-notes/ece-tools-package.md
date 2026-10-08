@@ -7,22 +7,27 @@ exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+    internal-label: Reporting
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
+    internal-label: Data management
+source-git-commit: a0962ad43c0f496dbd687460ef1d4dbd0da4dacb
 workflow-type: tm+mt
-source-wordcount: 3676
+source-wordcount: '3715'
 ht-degree: 0%
-
 ---
-
 # ECE-Tools 릴리스 노트
 
 [ece-tools](https://github.com/magento/ece-tools) 패키지는 클라우드 프로젝트를 관리하고 배포하도록 설계된 스크립트 및 도구 세트입니다. 이 릴리스 노트는 [Commerce용 Cloud Tools 제품군](cloud-tools-suite.md)에 포함된 이 패키지에 대한 최신 개선 사항을 설명합니다.
@@ -40,7 +45,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.14 {#latest}
+## v2002.2.15 {#latest}
+
+릴리스 날짜: 2026년 10월 08일
+
+- ![새 아이콘](../../assets/new.svg) **서비스에 대한 기능 테스트** 추가된 Magento 2.4.10 기능 테스트 범위: ActiveMQ Artemis, OpenSearch, RabbitMQ, MariaDB 및 Valkey.<!-- MCLOUD-15399 -->
+- ![수정 아이콘](../../assets/fix.svg) **EOL 유효성 검사기**-Opensearch에 대한 EOL(서비스 종료) 날짜가 업데이트되었습니다.<!-- MCLOUD-15384 -->
+
+## v2002.2.14
 
 릴리스 날짜: 2026년 9월 08일
 
