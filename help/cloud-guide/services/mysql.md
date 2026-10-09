@@ -94,7 +94,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-위의 예에서 `properties`은(는) 기본 `optimizer` 설정을 성능 모범 사례 안내서](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration#indexers)에서 권장하는 [로 수정합니다.
+위의 예에서 `properties`은(는) 기본 `optimizer` 설정을 성능 모범 사례 안내서[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration#indexers)에서 권장하는 로 수정합니다.
 
 **MariaDB 구성 옵션**:
 

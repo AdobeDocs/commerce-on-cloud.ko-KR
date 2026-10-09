@@ -120,7 +120,7 @@ API 토큰이 공개적으로 공유되거나 지원 티켓에 첨부된 경우 
 
 Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필요합니다.
 
-- Magento 2 모듈](fastly.md#fastly-cdn-module-for-magento-2)에 대한 [Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
+- Magento 2 모듈[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)에 대한 Fastly CDN의 최신 버전이 스테이징 및 프로덕션 환경에 설치되어 있습니다. [빠르게 업그레이드](#upgrade-the-fastly-module)를 참조하세요.
 
 - 클라우드 인프라 스테이징 및 프로덕션 환경의 Adobe Commerce에 대한 [Fastly 자격 증명](#get-fastly-credentials)
 
@@ -132,7 +132,7 @@ Fastly 서비스를 활성화하고 구성하려면 다음 구성 요소가 필�
 
    ![빠르게 선택하려면 확장](../../assets/cdn/fastly-menu.png)
 
-1. _[!UICONTROL Caching Application]_섹션의&#x200B;**[!UICONTROL Use system value]**에서 선택 항목을 제거한 다음 드롭다운 목록에서&#x200B;**[!UICONTROL Fastly CDN]**을(를) 선택합니다.
+1. _[!UICONTROL Caching Application]_&#x200B;섹션의&#x200B;**[!UICONTROL Use system value]**&#x200B;에서 선택 항목을 제거한 다음 드롭다운 목록에서&#x200B;**[!UICONTROL Fastly CDN]**&#x200B;을(를) 선택합니다.
 
    ![빠르게 선택](../../assets/cdn/fastly-enable-admin.png)
 
@@ -178,7 +178,7 @@ Fastly 모듈을 사용하도록 설정한 후 기본 [VCL 코드](https://githu
 
 **가장 빠른 VCL을 업로드하려면**:
 
-1. 다음 그림과 같이 _[!UICONTROL Fastly Configuration]_섹션에서&#x200B;**[!UICONTROL Upload VCL to Fastly]**을(를) 클릭합니다.
+1. 다음 그림과 같이 _[!UICONTROL Fastly Configuration]_&#x200B;섹션에서&#x200B;**[!UICONTROL Upload VCL to Fastly]**&#x200B;을(를) 클릭합니다.
 
    ![Fastly에 Magento VCL 업로드](../../assets/cdn/fastly-upload-vcl-admin.png)
 
