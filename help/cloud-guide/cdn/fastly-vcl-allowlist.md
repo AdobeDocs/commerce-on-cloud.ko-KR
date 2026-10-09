@@ -3,7 +3,7 @@ title: 요청을 허용하기 위한 사용자 지정 VCL
 description: Fastly Edge ACL 목록 및 사용자 지정 VCL 코드 조각을 사용하여 수신 요청을 필터링하고 Adobe Commerce 사이트에 대한 IP 주소별 액세스를 허용합니다.
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-last-update: 2026-08-25T00:00:00.000Z
+last-update: 2026-08-25
 TQID: 'https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
@@ -23,7 +23,7 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Edge ACL은 사이트에 대한 액세스를 관리하기 위한 IP 주소 목�
 }
 ```
 
-이 예제에서 [사용자 지정 코드 조각을 만들기](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet)하기 전에 값을 검토하여 변경해야 하는지 확인하십시오. 그런 다음 각 값을 각 필드에 입력합니다(예: `type`은(는) 유형 필드에, `content`은(는) 콘텐츠 필드에).
+이 예제에서 [사용자 지정 코드 조각을 만들기](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet)하기 전에 값을 검토하여 변경해야 하는지 확인하십시오. 그런 다음 각 값을 각 필드에 입력합니다(예: `type`은(는) 유형 필드에, `content`은(는) 콘텐츠 필드에).
 
 - `name` — VCL 코드 조각의 이름입니다. 이 예제의 경우 `allowlist`입니다.
 
@@ -109,7 +109,7 @@ Edge ACL은 사이트에 대한 액세스를 관리하기 위한 IP 주소 목�
 
 환경에 대한 코드를 검토하고 업데이트한 후 다음 방법 중 하나를 사용하여 사용자 지정 VCL 코드 조각을 Fastly 서비스 구성에 추가합니다.
 
-- [관리자로부터 사용자 지정 VCL 코드 조각을 추가](#add-the-custom-vcl-snippet)합니다. 관리자에 액세스할 수 있는 경우 이 방법이 권장됩니다. (Magento 2 버전 1.2.58[&#128279;](fastly-configuration.md#upgrade) 이상에 대해 Fastly CDN 모듈이 필요합니다.)
+- [관리자로부터 사용자 지정 VCL 코드 조각을 추가](#add-the-custom-vcl-snippet)합니다. 관리자에 액세스할 수 있는 경우 이 방법이 권장됩니다. (Magento 2 버전 1.2.58](fastly-configuration.md#upgrade) 이상에 대해 [Fastly CDN 모듈이 필요합니다.)
 
 - JSON 코드 예제를 파일(예: `allowlist.json`)에 저장하고 [Fastly API를 사용하여 업로드](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)합니다. 관리자에 액세스할 수 없는 경우 이 메서드를 사용합니다.
 
