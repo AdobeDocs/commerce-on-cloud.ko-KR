@@ -3,21 +3,30 @@ title: 환경 변수
 description: 클라우드 인프라의 Adobe Commerce과 관련된 환경 변수 목록을 참조하십시오.
 feature: Cloud, Build, Configuration, Deploy
 exl-id: 38b2cdc2-1a98-48bd-90b2-13ef179da26f
-TQID: https://experienceleague.adobe.com/qRdv72nxgkwRjRz0lXqs33rSmZKc3akq2W0pJK4CM7k
+TQID: 'https://experienceleague.adobe.com/qRdv72nxgkwRjRz0lXqs33rSmZKc3akq2W0pJK4CM7k'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 266
+source-wordcount: '266'
 ht-degree: 0%
-
 ---
-
 # 환경 변수
 
 Adobe Commerce on cloud infrastructure를 사용하면 환경 변수를 할당하여 구성 옵션을 재정의할 수 있습니다. `ece-tools` 패키지는 [클라우드 변수](variables-cloud.md), [!DNL Cloud Console]에 설정된 변수 및 `.magento.env.yaml` 구성 파일의 값을 기반으로 `env.php` 파일에 값을 설정합니다.
@@ -27,12 +36,12 @@ Adobe Commerce on cloud infrastructure를 사용하면 환경 변수를 할당�
 환경 변수의 유형은 다음과 같습니다.
 
 - [ADMIN](variables-admin.md)—변수가 프로젝트 관리자 변수를 재정의합니다.
-- [MAGENTO_CLOUD](variables-cloud.md) - 클라우드 인프라와 관련된 변수
+- [MAGENTO_CLOUD](variables-cloud.md)—클라우드 인프라와 관련된 변수
 - `.magento.env.yaml` 파일에 사용된 변수:
-   - [전역](variables-global.md)—변수가 빌드, 배포 및 배포 후 단계에 영향을 줍니다.
-   - [빌드](variables-build.md)—변수가 빌드 작업을 제어합니다.
-   - [배포](variables-deploy.md)—변수가 배포 작업을 제어합니다.
-   - [사후 배포](variables-post-deploy.md)—변수는 배포 후 작업을 제어합니다.
+  - [전역](variables-global.md)—변수가 빌드, 배포 및 배포 후 단계에 영향을 줍니다.
+  - [빌드](variables-build.md)—변수가 빌드 작업을 제어합니다.
+  - [배포](variables-deploy.md)—변수가 배포 작업을 제어합니다.
+  - [사후 배포](variables-post-deploy.md)—변수는 배포 후 작업을 제어합니다.
 
 변수는 _hierarchical_&#x200B;입니다. 즉, 변수가 재정의되지 않으면 부모 환경에서 상속됩니다.
 

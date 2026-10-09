@@ -3,28 +3,47 @@ title: 스테이징 및 프로덕션에 배포
 description: 추가 테스트를 위해 클라우드 인프라 코드에서 Adobe Commerce을 스테이징 및 프로덕션 환경에 배포하는 방법에 대해 알아봅니다.
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
-TQID: https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM
+TQID: 'https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
 subfeature_v2:
   - id: b01a71b7-d17a-42b2-a9ac-af4b8d9d2ef5
+    internal-label: 2FA
+  - id: c4af0798-d497-5e6b-8380-19812c26d00a
+    internal-label: Console
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1374
+source-wordcount: '1374'
 ht-degree: 0%
-
 ---
-
 # 스테이징 및 프로덕션에 배포
 
 배포 및 라이브 진행 프로세스는 개발에서 시작하여 스테이징으로 이어지고 프로덕션에서 라이브로 끝납니다. Adobe은 일관된 구성을 보장하는 엔드 투 엔드 환경 솔루션을 제공합니다. 모든 환경에서는 Storefront 및 Admin에 대한 직접 URL 액세스와 CLI 명령에 대한 SSH 액세스를 지원합니다.

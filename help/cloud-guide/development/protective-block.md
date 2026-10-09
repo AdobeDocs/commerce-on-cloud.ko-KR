@@ -4,24 +4,30 @@ description: 클라우드 인프라에서 Adobe Commerce의 보호 블록 기능
 feature: Cloud, Configuration, Security
 topic: Security
 exl-id: 4a470e75-0b42-4ab7-b3dc-9f50b63bea14
-TQID: https://experienceleague.adobe.com/E0lyCu6cFEaHR0KoauRFmQi9QThzoGDmNetnzYv3hVg
+TQID: 'https://experienceleague.adobe.com/E0lyCu6cFEaHR0KoauRFmQi9QThzoGDmNetnzYv3hVg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 311
+source-wordcount: '311'
 ht-degree: 0%
-
 ---
-
 # 보호 블럭
 
 클라우드 인프라의 Adobe Commerce에는 특정 상황에서 보안 취약점이 있는 웹 사이트에 대한 액세스를 제한하는 보호 차단 기능이 있습니다. 이러한 부분 차단 방식은 알려진 보안 취약점의 악용을 방지한다. 오래된 소프트웨어에는 종종 악용물이 포함되어 있으므로 이러한 사이트에 대한 액세스를 부분적으로 차단하여 이러한 악용으로부터 보호하는 것이 중요합니다.

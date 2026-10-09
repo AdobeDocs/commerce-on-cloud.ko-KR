@@ -3,21 +3,27 @@ title: 경로 구성
 description: 클라우드 인프라 환경에서 Adobe Commerce에 대한 수신 HTTPS 요청의 경로를 정의하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Routes
 exl-id: f0d6eefa-1122-4753-8a7c-1fa0c77590f0
-TQID: https://experienceleague.adobe.com/4EUSHNE6YAfXk4e7ooGRjZiICgHueLKrEA-tDskIPl0
+TQID: 'https://experienceleague.adobe.com/4EUSHNE6YAfXk4e7ooGRjZiICgHueLKrEA-tDskIPl0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 915
+source-wordcount: '915'
 ht-degree: 0%
-
 ---
-
 # 경로 구성
 
 `.magento/routes.yaml` 디렉터리의 `routes.yaml` 파일은 클라우드 인프라 통합, 스테이징 및 프로덕션 환경에서 Adobe Commerce의 경로를 정의합니다. 경로는 애플리케이션이 수신 HTTP 및 HTTPS 요청을 처리하는 방법을 결정합니다.

@@ -3,21 +3,31 @@ title: 다운타임 없는 배포
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce을 배포할 때 전반적인 가동 중지 시간을 줄이는 방법을 알아봅니다.
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
-TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
+TQID: 'https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+  - id: 8b440f30-6794-5ed6-981f-391de4e9b0cc
+    internal-label: Themes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 503
+source-wordcount: '503'
 ht-degree: 0%
-
 ---
-
 # 다운타임 없는 배포
 
 클라우드 인프라의 Adobe Commerce은 배포 단계 동안 [_유지 관리_ 모드](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/setup/application-modes#production-mode)로 응용 프로그램을 실행하며, 배포가 완료될 때까지 사이트를 오프라인으로 전환합니다. 프로덕션 사이트가 유지 관리 모드에 있는 시간은 사이트 크기, 배포 중 적용된 변경 사항 수 및 정적 콘텐츠 배포에 대한 구성에 따라 다릅니다. 프로젝트가 **제로** 중단 시간 효과로 배포되도록 구성할 수 있습니다.

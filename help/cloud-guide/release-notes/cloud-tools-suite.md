@@ -3,33 +3,41 @@ title: Cloud Tools 제품군 릴리스 정보
 description: Adobe Commerce용 Cloud Tools 제품군의 최신 개선 사항에 대해 알아봅니다.
 feature: Cloud, Release Notes
 exl-id: ee2bc2e9-bdf4-4f7b-9724-8f4dd1e61378
-TQID: https://experienceleague.adobe.com/eQQvGGEwj4D6pOlhZqNA-SMdc6JxH-Wg-hBRZaR1C-M
+TQID: 'https://experienceleague.adobe.com/eQQvGGEwj4D6pOlhZqNA-SMdc6JxH-Wg-hBRZaR1C-M'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: adedf70c-c1e1-5734-acdc-c5c43b114964
+    internal-label: Release Notes
 subfeature_v2:
   - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+    internal-label: Auto Scaling
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 69b0202e06bcf18c758a00d5ce203fbec783a8fd
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 233
+source-wordcount: '233'
 ht-degree: 3%
-
 ---
-
 # Commerce Cloud 도구 세트 릴리스 정보
 
 이 릴리스 정보는 Commerce 플랫폼에서의 Adobe Commerce 설치 및 업그레이드를 배포하고 관리하도록 설계된 Cloud Tools Suite for Cloud Platform 패키지에 대한 최신 개선 사항을 자세히 설명합니다.
 
 | 릴리스 정보 | 버전 | 설명 | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
-| [ece-tools 패키지](ece-tools-package.md) | 2002.2.14 | 클라우드 프로젝트를 관리 및 배포하도록 설계된 스크립트 및 도구 세트 | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.14) |
+| [ece-tools 패키지](ece-tools-package.md) | 2002.2.15 | 클라우드 프로젝트를 관리 및 배포하도록 설계된 스크립트 및 도구 세트 | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.15) |
 | Commerce용 [클라우드 패치](cloud-patches.md) | 1.1.21 | 모든 Adobe Commerce 버전과 클라우드 환경의 통합을 개선하는 패치 세트입니다. 이 패키지에는 `ece-tools`을(를) 사용하여 배포할 때 적용되는 Adobe Commerce 패치와 사용 가능한 핫픽스가 포함되어 있습니다. | `repo.magento.com`의 Commerce Composer 저장소를 통해 `magento/magento-cloud-patches`(클라우드 인프라 권한 부여에 Adobe Commerce 필요. [Commerce용 클라우드 패치 릴리스 정보](cloud-patches.md) 참조) |
-| Commerce용 [Cloud Docker](cloud-docker.md) | 1.4.9 | Adobe Commerce을 로컬 클라우드 환경에 배포하기 위한 도커 이미지용 기능 및 구성 파일 | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.9) |
+| Commerce용 [Cloud Docker](cloud-docker.md) | 1.4.10 | Adobe Commerce을 로컬 클라우드 환경에 배포하기 위한 도커 이미지용 기능 및 구성 파일 | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.10) |
 | [Commerce의 클라우드 구성 요소](cloud-components.md) | 1.1.4 | 클라우드 인프라에 배포된 사이트를 위한 확장된 Adobe Commerce 핵심 기능 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.4) |
 
 ECE-Tools 2002.1.0 이상으로 업데이트하면 `ece-tools` 패키지에 종속된 다른 패키지의 최신 버전으로 자동 업데이트됩니다. 종속성 목록은 [클라우드 메타패키지](../development/overview.md#cloud-metapackage)를 참조하세요.

@@ -3,23 +3,30 @@ title: Fastly 이미지 최적화
 description: Fastly 이미지 최적화를 활성화하고 구성하여 Adobe Commerce 사이트에 대한 이미지 제공을 최적화하고 이미지 관리를 간소화하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Media
 exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
-TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
+TQID: 'https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4ca54350-01cb-5b22-8966-5f2873dc6d90
+    internal-label: Media
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1211
+source-wordcount: '1290'
 ht-degree: 0%
-
 ---
-
 # Fastly 이미지 최적화
 
 Fastly 이미지 최적화(Fastly IO)는 실시간 이미지 조작 및 최적화를 제공하여 이미지 전달 속도를 높이고 응답형 웹 애플리케이션의 이미지 소스 세트 유지 관리를 간소화합니다. 구성된 Fastly IO는 다음과 같은 이미지 최적화 기능을 제공합니다.
@@ -89,11 +96,11 @@ Fastly IO VCL 코드 조각을 업로드하여 관리 패널에서 Fastly 이미
 
    - **필터 크기 조정**—기본 설정(`Lancsoz3`)을 그대로 유지하거나 다른 설정을 선택하세요. 이 설정은 크기 조정된 이미지를 전달하는 데 사용되는 필터를 지정합니다. 선택한 필터에 따라 크기 조정된 이미지가 더 많거나 더 적은 픽셀 수를 가질 수 있습니다.
 
-      - `Lanczos3`(기본값) - 최상의 품질 이미지를 제공합니다. 이미지 내의 가장자리와 선형 기능을 감지하는 기능이 향상되고 _[!DNL sinc]_&#x200B;리샘플링을 사용하여 가능한 최상의 재구성을 제공합니다.
-      - `Lanczos2` - `Lancsoz3`과(와) 동일한 필터를 사용하지만 _[!DNL sinc]_&#x200B;리샘플링 함수의 정확도는 낮습니다.
-      - `Bicubic` - 이미지를 더 작게 만들 때 자연스럽게 선명하게 합니다.
-      - `Bilinear` - 이미지를 더 크게 만들 때 자연스럽게 매끄럽게 하는 효과가 있습니다.
-      - `Nearest` - 픽셀 아트 크기를 조정할 때 자연스러운 픽셀 조정 효과가 있습니다.
+     - `Lanczos3`(기본값) - 최상의 품질 이미지를 제공합니다. 이미지 내의 가장자리와 선형 기능을 감지하는 기능이 향상되고 _[!DNL sinc]_&#x200B;리샘플링을 사용하여 가능한 최상의 재구성을 제공합니다.
+     - `Lanczos2` - `Lancsoz3`과(와) 동일한 필터를 사용하지만 _[!DNL sinc]_&#x200B;리샘플링 함수의 정확도는 낮습니다.
+     - `Bicubic` - 이미지를 더 작게 만들 때 자연스럽게 선명하게 합니다.
+     - `Bilinear` - 이미지를 더 크게 만들 때 자연스럽게 매끄럽게 하는 효과가 있습니다.
+     - `Nearest` - 픽셀 아트 크기를 조정할 때 자연스러운 픽셀 조정 효과가 있습니다.
 
 1. Fastly 서비스에 대한 IO 구성 설정을 지정한 후 **취소**&#x200B;를 선택하여 Fastly 구성 설정으로 돌아갑니다.
 
@@ -119,7 +126,7 @@ Fastly IO VCL 코드 조각을 업로드하여 관리 패널에서 Fastly 이미
 손실 변환을 강제하는 이점은 더 작은 이미지가 제공된다는 것입니다.
 예를 들어 PNG 대신 JPEG 또는 WEBp 형식을 사용하면 Fastly IO 구성에 지정된 품질 수준에 따라 크기가 60~70% 줄어들 수 있습니다.
 
-이미지 최적화를 위해 선택한 품질 수준에 따라 이미지의 시각적 차이가 감지될 수 있습니다. 예를 들어 테마의 배경색을 사용하는 딥 이미지 최적화를 사용하지 않는 한 Alpha 채널/투명도는 제거되고 흰색 배경으로 대체됩니다.
+이미지 최적화를 위해 선택한 품질 수준에 따라 이미지의 시각적 차이가 감지될 수 있습니다. 예를 들어, 테마의 배경색을 사용하는 딥 이미지 최적화를 사용하지 않는 한 알파 채널/투명도는 제거되고 흰색 배경으로 대체됩니다.
 
 손실 변환(`WebP Auto? = No`)을 끄면 Fastly IO는 JPEG 이미지만 호환 가능한 브라우저에 대해 WEBP 형식으로 변경합니다. 다른 이미지 유형은 변경되지 않습니다. 예를 들어 원본 이미지가 PNG인 경우 Fastly IO 서비스의 출력은 PNG입니다.
 

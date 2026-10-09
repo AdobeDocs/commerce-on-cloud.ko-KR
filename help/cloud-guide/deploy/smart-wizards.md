@@ -3,21 +3,32 @@ title: 스마트 마법사
 description: 스마트 마법사를 사용하여 Adobe Commerce on cloud infrastructure 프로젝트가 배포 모범 사례를 준수하는지 평가하는 방법을 알아봅니다.
 feature: Cloud, Build, Deploy, SCD
 exl-id: a9f042cd-861f-4b1c-b80f-2569f12bcde8
-TQID: https://experienceleague.adobe.com/hgBYQsTM3WkX2p9SJ4UeWM1IGRwiPOUTwWBEwSnPq5A
+TQID: 'https://experienceleague.adobe.com/hgBYQsTM3WkX2p9SJ4UeWM1IGRwiPOUTwWBEwSnPq5A'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 328
+source-wordcount: '328'
 ht-degree: 0%
-
 ---
-
 # 스마트 마법사
 
 스마트 마법사는 클라우드 구성이 모범 사례를 따르는지 여부를 확인하는 데 도움이 됩니다. 사용 가능한 마법사는 다음 구성을 지원합니다.

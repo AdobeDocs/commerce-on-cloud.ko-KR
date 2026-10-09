@@ -1,29 +1,38 @@
 ---
-title: ' [!DNL Cloud Console] (으)로 분기 관리'
-description: ' [!DNL Cloud Console]을(를) 사용하여 클라우드 인프라에서 Adobe Commerce의 환경 분기를 관리하는 방법을 알아봅니다.'
+title: '[!DNL Cloud Console] (으)로 분기 관리'
+description: '[!DNL Cloud Console]을(를) 사용하여 클라우드 인프라에서 Adobe Commerce의 환경 분기를 관리하는 방법을 알아봅니다.'
 role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
-TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
+TQID: 'https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
 subfeature_v2:
   - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+    internal-label: Cloud architecture
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1642
+source-wordcount: '1642'
 ht-degree: 0%
-
 ---
-
 # [!DNL Cloud Console]&#x200B;(으)로 분기 관리
 
 [!DNL Cloud Console] 또는 `magento-cloud` CLI를 사용하여 환경을 관리할 수 있습니다. 프로젝트 파일은 Git 저장소에 저장됩니다. Git 명령을 사용하여 코드를 관리할 수 있지만, `magento-cloud` CLI는 플랫폼 기능과 상호 작용하도록 설계된 반면 Git 명령은 그렇지 않습니다. 클라우드 CLI 항목에서 [Git 명령](../dev-tools/cloud-cli-overview.md#git-commands)을(를) 참조하십시오.

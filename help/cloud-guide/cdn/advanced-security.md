@@ -3,13 +3,26 @@ title: Adobe Commerce 고급 보안
 description: 고급 보안이 클라우드 인프라의 Adobe Commerce에 보트 관리, 고급 속도 제한 및 L7 DDoS 보호를 추가하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '2514'
 ht-degree: 0%
-
 ---
-
 # [!DNL Adobe Commerce Advanced Security]
 
 [!DNL Adobe Commerce Advanced Security]은(는) [!DNL Adobe Commerce on Cloud Infrastructure]과(와) 함께 온라인 스토어를 빠르고, 사용 가능하며, 안전하게 유지하는 제품입니다. 이러한 기능을 통해 최대 트래픽 이벤트 및 자동화된 공격 동안 매출을 보호하고 다운타임을 줄이고 고객의 신뢰를 유지할 수 있습니다.

@@ -3,25 +3,34 @@ title: 스타터 프로젝트 워크플로
 description: 스타터 개발 및 배포 워크플로우를 사용하는 방법을 알아봅니다.
 feature: Cloud, Paas
 exl-id: 75d170b6-1ec2-4099-82c8-5c4df3442843
-TQID: https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ
+TQID: 'https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Data collection
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2170
+source-wordcount: '2170'
 ht-degree: 0%
-
 ---
-
 # 스타터 프로젝트 워크플로
 
 클라우드 인프라의 Adobe Commerce에는 테스트 및 개발 작업을 위한 스테이징 및 다중 통합 환경을 만들기 위해 분기할 수 있는 프로덕션 환경용 `master` 분기가 있는 단일 Git 저장소가 포함되어 있습니다. 프로덕션 서버용 `master` 환경을 포함하여 최대 4개의 활성 환경을 가질 수 있습니다. 개요는 [Starter 아키텍처](starter-architecture.md)를 참조하십시오.

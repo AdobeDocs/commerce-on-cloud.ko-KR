@@ -3,26 +3,41 @@ title: Fastly 문제 해결
 description: Adobe Commerce용 Fastly CDN 모듈 및 서비스의 문제를 해결하고 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Cache, Services
 exl-id: 69954ef9-9ece-411e-934e-814a56542290
-TQID: https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c
+TQID: 'https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1911
+source-wordcount: '1911'
 ht-degree: 0%
-
 ---
-
 # Fastly 문제 해결
 
 다음 정보를 사용하여 클라우드 인프라 프로젝트 환경의 Adobe Commerce에서 Magento 2용 Fastly CDN 모듈의 문제를 해결하고 관리하십시오. 예를 들어 응답 헤더 값과 캐싱 동작을 조사하여 Fastly 서비스 및 성능 문제를 해결할 수 있습니다.
@@ -53,9 +68,9 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
 - **스토어 메뉴가 표시되지 않거나 작동하지 않음**—라이브 사이트 URL을 사용하는 대신 원본 서버에 직접 연결된 링크 또는 임시 링크를 사용하거나 [cURL 명령](#check-live-site-through-fastly)에서 `-H "host:URL"`을(를) 사용했을 수 있습니다. 원본 서버로 Fastly를 무시하면 기본 메뉴가 작동하지 않고 브라우저측에서 캐싱을 허용하는 잘못된 헤더가 표시됩니다.
 
-- **위쪽 탐색이 작동하지 않습니다**—위쪽 탐색은 기본 Magento Fastly VCL 스니펫을 업로드할 때 사용할 수 있는 ESI(Edge Side Includes) 처리를 사용합니다. 탐색이 작동하지 않으면 [Fastly VCL을 업로드](fastly-configuration.md#upload-vcl-to-fastly)하고 사이트를 다시 확인하십시오.
+- **위쪽 탐색이 작동하지 않습니다**—위쪽 탐색은 기본 Magento Fastly VCL 코드 조각을 업로드할 때 사용할 수 있는 ESI(Edge Side Includes) 처리를 사용합니다. 탐색이 작동하지 않으면 [Fastly VCL을 업로드](fastly-configuration.md#upload-vcl-to-fastly)하고 사이트를 다시 확인하십시오.
 
-- **지리적 위치/지리적 IP가 작동하지 않습니다**— 기본 Magento Fastly VCL 코드 조각은 국가 코드를 URL에 추가합니다. 국가 코드가 작동하지 않으면 [Fastly VCL을 업로드](fastly-configuration.md#upload-vcl-to-fastly)하고 사이트를 다시 확인하십시오.
+- **지리적 위치/지리적 IP가 작동하지 않습니다**— 기본 Magento Fastly VCL 코드 조각은 URL에 국가 코드를 추가합니다. 국가 코드가 작동하지 않으면 [Fastly VCL을 업로드](fastly-configuration.md#upload-vcl-to-fastly)하고 사이트를 다시 확인하십시오.
 
 - **페이지가 캐싱되지 않음** - 기본적으로 Fastly는 `Set-Cookies` 헤더로 페이지를 캐싱하지 않습니다. Adobe Commerce은 캐시 가능한 페이지에서도 쿠키를 설정합니다(TTL > 0). 기본 Magento Fastly VCL은 캐시 가능한 페이지에서 이러한 쿠키를 제거합니다. 페이지를 캐싱하지 않는 경우 [Fastly VCL을 업로드](fastly-configuration.md#upload-vcl-to-fastly)하고 사이트를 다시 확인하십시오.
 
@@ -69,8 +84,8 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
   이 문제는 다음 문제 중 하나로 인해 발생할 수 있습니다.
 
-   - 클라우드 인프라 프로젝트 환경의 Adobe Commerce에 대한 Fastly 서비스 구성에서 잘못된 Fastly 자격 증명
-   - 사용자 지정 VCL 코드 조각의 잘못된 코드
+  - 클라우드 인프라 프로젝트 환경의 Adobe Commerce에 대한 Fastly 서비스 구성에서 잘못된 Fastly 자격 증명
+  - 사용자 지정 VCL 코드 조각의 잘못된 코드
 
   이 문제를 해결하려면 Adobe Commerce 도움말 센터에서 [클라우드에서 Fastly 캐시를 제거하는 동안 오류 발생](https://support.magento.com/hc/en-us/articles/115001853194-Error-purging-Fastly-cache-on-Cloud-The-purge-request-was-not-processed-successfully-)을 참조하십시오.
 
@@ -189,7 +204,7 @@ VCL 코드 조각을 추가한 후 cURL 명령을 사용하여 지정된 IP 주�
 
 - `X-Magento-Tags` 헤더 포함
 
-- `Fastly-Module-Enabled` 헤더의 값은 프로젝트 환경에 설치된 CDN Magento 2 Fastly의 버전 번호 또는 `Yes`입니다
+- `Fastly-Module-Enabled` 헤더의 값은 프로젝트 환경에 설치된 CDN Magento 2 모듈의 Fastly 버전 번호 또는 `Yes`입니다.
 
 - [캐시 제어: max-age](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)이(가) 0보다 큽니다.
 
@@ -250,7 +265,7 @@ php bin/magento module:status Fastly_Cdn
 
 반환된 상태에 따라 다음 지침에 따라 Fastly 구성을 업데이트합니다.
 
-- `Module does not exist`—모듈이 없는 경우 [통합 분기에 Magento 2용 Fastly CDN 모듈을 설치 및 구성](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)하십시오. 설치가 완료되면 모듈을 활성화하고 구성합니다. [빠르게 설정](fastly-configuration.md)을 참조하세요.
+- `Module does not exist`—모듈이 없는 경우 [설치 및 구성](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md) 통합 분기에 Magento 2용 Fastly CDN 모듈을 설치합니다. 설치가 완료되면 모듈을 활성화하고 구성합니다. [빠르게 설정](fastly-configuration.md)을 참조하세요.
 
 - `Module is disabled`—Fastly 모듈이 비활성화되어 있으면 로컬 환경의 `integration` 분기에서 환경 구성을 업데이트하여 활성화하십시오. 그런 다음 변경 사항을 스테이징 및 프로덕션에 푸시합니다. [확장 관리](../store/extensions.md#install-an-extension)를 참조하십시오.
 

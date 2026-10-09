@@ -1,25 +1,30 @@
 ---
 title: Crons 속성
-description: ' [!DNL Commerce] 응용 프로그램 구성 파일에서 ''crons'' 속성을 구성하는 방법에 대한 예를 참조하십시오.'
+description: '[!DNL Commerce] 응용 프로그램 구성 파일에서 ''crons'' 속성을 구성하는 방법에 대한 예를 참조하십시오.'
 feature: Cloud, Configuration
 exl-id: ff176cb1-5b6c-48a0-ad3c-56cc1d606c97
-TQID: https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo
+TQID: 'https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1190
+source-wordcount: '1191'
 ht-degree: 0%
-
 ---
-
 # Crons 속성
 
 Adobe Commerce은 `crons` 속성을 사용하여 반복 활동을 예약합니다. 특정 작업이 하루 중 특정 시간에 실행되도록 예약하는 데 이상적입니다. 읽기 전용 환경의 특성으로 인해 클라우드 인프라 프로젝트의 Adobe Commerce에 대한 웹 인스턴스에서는 한 번에 하나의 cron 작업만 실행할 수 있습니다. 장기 실행 작업을 대기열에 추가된 더 작은 작업으로 분류하는 것이 좋습니다. 또는 [작업자 인스턴스](workers-property.md)를 빌드할 수 있습니다.

@@ -1,23 +1,27 @@
 ---
 title: 작업자
-description: ' [!DNL Commerce] 응용 프로그램 구성 파일에서 작업자 속성을 구성하는 방법을 알아봅니다.'
+description: '[!DNL Commerce] 응용 프로그램 구성 파일에서 작업자 속성을 구성하는 방법을 알아봅니다.'
 feature: Cloud, Configuration
 exl-id: 62d9dfaf-6265-4016-8d68-26362cf6a63a
-TQID: https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o
+TQID: 'https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: '362'
 ht-degree: 0%
-
 ---
-
 # Workers 속성
 
 Nginx 인스턴스를 실행하지 않고 웹 인스턴스와 독립적으로 실행할 작업자를 정의할 수 있지만 작업자는 [!DNL Commerce] 응용 프로그램에서 사용하는 것과 동일한 네트워크 저장소를 사용합니다. 라우터가 공용 요청을 작업자에게 전달할 수 없으므로 Node.js 또는 Go를 사용하여 작업자 인스턴스에 웹 서버를 설정할 필요가 없습니다. 따라서 작업자 인스턴스가 백그라운드 작업 또는 배포 차단의 위험이 있는 작업을 지속적으로 실행하는 데 이상적입니다.

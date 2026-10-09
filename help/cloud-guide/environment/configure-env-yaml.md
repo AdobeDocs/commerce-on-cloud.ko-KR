@@ -4,22 +4,33 @@ description: 환경 변수를 사용하여 Pro 스테이징 및 프로덕션을 
 feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
 exl-id: f39c73fc-351a-41ed-9e74-2c3f14871246
-TQID: https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E
+TQID: 'https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: c754e69243236bbf862ea636261c6d2a6cae9eb7
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 706
+source-wordcount: '706'
 ht-degree: 0%
-
 ---
-
 # 배포를 위한 환경 변수 구성
 
 `.magento.env.yaml` 파일은 환경 변수를 사용하여 Pro Staging 및 Production을 비롯한 모든 환경에서 빌드 및 배포 작업을 중앙 집중식으로 관리합니다. 각 환경에서 고유한 작업을 구성하려면 각 환경에서 이 파일을 수정해야 합니다.
