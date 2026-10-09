@@ -4,21 +4,27 @@ description: Adobe Commerce on cloud infrastructure 프로젝트를 GitHub와 �
 feature: Cloud, Integration
 last-substantial-update: 2023-05-25T00:00:00.000Z
 exl-id: 08e569fa-5ab4-45c0-82e6-476f25c17fe0
-TQID: https://experienceleague.adobe.com/7Lt2uWkU1kD8VoZAX--lGcJawdg3VEy9U39IS45dBvY
+TQID: 'https://experienceleague.adobe.com/7Lt2uWkU1kD8VoZAX--lGcJawdg3VEy9U39IS45dBvY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: cc04bd17-78d5-5120-8c3d-1b8a57e49280
+    internal-label: Integration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 972
+source-wordcount: '972'
 ht-degree: 0%
-
 ---
-
 # GitHub 통합
 
 GitHub 통합을 사용하면 GitHub 저장소에서 직접 클라우드 인프라 환경의 Adobe Commerce을 관리할 수 있습니다. 통합은 GitHub에 이미 있는 콘텐츠를 관리하고 클라우드 인프라 코드 저장소의 Adobe Commerce과 동기화합니다. 본질적으로 코드 리포지토리는 GitHub 리포지토리의 미러가 됩니다.

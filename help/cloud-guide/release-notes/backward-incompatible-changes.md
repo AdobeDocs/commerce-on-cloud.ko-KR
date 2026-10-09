@@ -4,22 +4,29 @@ description: 기존 클라우드 프로젝트를 업그레이드할 때 이전 �
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
-TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
+TQID: 'https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: adedf70c-c1e1-5734-acdc-c5c43b114964
+    internal-label: Release Notes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 823
+source-wordcount: '823'
 ht-degree: 0%
-
 ---
-
 # 이전 버전과 호환 불가능한 변경 사항
 
 `ece-tools` 패키지의 최신 릴리스나 Commerce용 클라우드 도구 세트 패키지로 업그레이드할 때 이전 버전과 호환되지 않는 변경 사항에 따라 기존 클라우드 프로젝트에 대한 클라우드 구성 및 프로세스를 조정해야 할 수 있습니다.
@@ -67,7 +74,7 @@ ht-degree: 0%
 
 ## 클라우드 패치 변경 사항
 
-- **다운로드한 패치 제거**-`magento/magento-cloud-patches` 패키지는 [소프트웨어 다운로드](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/prerequisites/commerce) 페이지에서 사용할 수 있는 모든 패치를 번들로 제공하고 클라우드에 배포할 때 자동으로 적용합니다. ECE-Tools 2002.1.0 이상으로 업그레이드한 후 패치 충돌을 방지하려면 다운로드하여 프로젝트에 추가한 Adobe 제공 패치를 수동으로 제거합니다.
+- **다운로드한 패치 제거**-`magento/magento-cloud-patches` 패키지는 [소프트웨어 다운로드](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/commerce) 페이지에서 사용할 수 있는 모든 패치를 번들로 제공하고 클라우드에 배포할 때 자동으로 적용합니다. ECE-Tools 2002.1.0 이상으로 업그레이드한 후 패치 충돌을 방지하려면 다운로드하여 프로젝트에 추가한 Adobe 제공 패치를 수동으로 제거합니다.
 
 - **패치 적용 명령 업데이트**-패치 적용 명령을 `vendor/bin/ece-tools` 디렉터리에서 `vendor/bin/ece-patches` 디렉터리로 이동했습니다. 이 명령을 사용하여 패치를 수동으로 적용하는 경우 새 경로를 사용합니다.
 

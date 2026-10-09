@@ -3,25 +3,37 @@ title: Valkey 서비스 설정
 description: Redis 대체 및 캐시 백엔드 설정 맞춤화를 포함하여 클라우드 인프라에서 Adobe Commerce을 위한 백엔드 캐시 솔루션으로서의 Valkey를 설정하고 최적화하는 방법에 대해 알아봅니다.
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
-TQID: https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk
+TQID: 'https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: d5d947f9858ab15e2e5daed7848163846580f883
+    internal-label: Troubleshooting
+source-git-commit: 03cf9c6427ffff359396687545dd8829275f6bc7
 workflow-type: tm+mt
-source-wordcount: 701
+source-wordcount: '701'
 ht-degree: 0%
-
 ---
-
 # Valkey 서비스 설정
 
 [Valkey](https://valkey.io)은(는) 클라우드 인프라의 Adobe Commerce에 대한 선택적 백엔드 캐시 솔루션입니다. Adobe Commerce 2.4.9 이상 또는 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 및 2.4.8-p4 이상의 패치 릴리스에서 기본 캐시 구성을 재정의하는 경우 Valkey가 필요합니다.
@@ -98,7 +110,7 @@ git push origin <branch-name>
 
 ## Valkey 구성 사용자 지정
 
-캐시, 세션, L2 및 복제본 연결 권장 사항에 대해서는 _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하십시오.
+캐시, 세션, L2 및 복제본 연결 권장 사항에 대해서는 _구현 플레이북 모범 사례 안내서_&#x200B;에서 [Valkey 및 Redis 서비스 구성에 대한 모범 사례](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)를 참조하십시오.
 
 ## 서비스 관계 확인
 

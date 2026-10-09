@@ -3,24 +3,37 @@ title: 정적 콘텐츠 배포
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce에 이미지, 스크립트 및 CSS와 같은 정적 콘텐츠를 배포하는 전략에 대해 알아봅니다.
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
-TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
+TQID: 'https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 860
+source-wordcount: '860'
 ht-degree: 0%
-
 ---
-
 # 정적 콘텐츠 배포 전략
 
 정적 콘텐츠 배포(SCD)는 이미지, 스크립트, CSS, 비디오, 테마, 로케일 및 웹 페이지와 같은 생성할 콘텐츠의 양과 콘텐츠 생성 시기에 따라 저장소 배포 프로세스에 상당한 영향을 줍니다. 예를 들어 기본 전략은 사이트가 유지 관리 모드에 있는 경우 [배포 단계](process.md#deploy-phase-deploy-phase) 동안 정적 콘텐츠를 생성합니다. 그러나 이 배포 전략은 탑재된 `pub/static` 디렉터리에 콘텐츠를 직접 작성하는 데 시간이 소요됩니다. 필요에 따라 배포 시간을 개선하는 데 도움이 되는 몇 가지 옵션 또는 전략이 있습니다.
@@ -52,8 +65,8 @@ ht-degree: 0%
 정적 콘텐츠를 생성하려면 테마 및 로케일에 액세스해야 합니다. Adobe Commerce은 빌드 단계에서 액세스할 수 있는 파일 시스템에 테마를 저장하지만 Adobe Commerce은 로케일을 데이터베이스에 저장합니다. 빌드 단계에서 데이터베이스를 _사용할 수 없습니다_. 빌드 단계에서 정적 콘텐츠를 생성하려면 `ece-tools` 패키지의 `config:dump` 명령을 사용하여 로케일을 파일 시스템으로 이동해야 합니다. 로케일을 읽고 `app/etc/config.php` 파일에 저장합니다.
 
 >[!NOTE]
->`ece-tools` 패키지에서 `config:dump` 명령을 실행한 후 `config.php` 파일 [에 덤프된 구성이 관리 대시보드에서 잠김(회색으로 표시)됩니다](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-26879). 관리자에서 이러한 구성을 업데이트하는 유일한 방법은 파일에서 로컬로 구성을 삭제하고 프로젝트를 다시 배포하는 것입니다.
->또한 인스턴스에 새 저장소/저장소 그룹/웹 사이트를 추가할 때마다 `config:dump` 명령을 실행하여 데이터베이스가 동기화되어 있는지 확인해야 합니다. [어떤 구성을 `config.php` 파일에 덤프할지](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)를 선택할 수도 있습니다.
+>`ece-tools` 패키지에서 `config:dump` 명령을 실행한 후 `config.php` 파일 [에 덤프된 구성이 관리 대시보드에서 잠김(회색으로 표시)됩니다](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26879). 관리자에서 이러한 구성을 업데이트하는 유일한 방법은 파일에서 로컬로 구성을 삭제하고 프로젝트를 다시 배포하는 것입니다.
+>또한 인스턴스에 새 저장소/저장소 그룹/웹 사이트를 추가할 때마다 `config:dump` 명령을 실행하여 데이터베이스가 동기화되어 있는지 확인해야 합니다. [어떤 구성을 `config.php` 파일에 덤프할지](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)를 선택할 수도 있습니다.
 >필드가 회색으로 표시되지만 이 단계를 수행하지 않아 `config.php` 파일에서 저장소/저장소 그룹/웹 사이트 구성을 삭제하면 덤프되지 않은 새 엔터티가 다음 배포의 데이터베이스에서 삭제됩니다.
 
 **빌드에서 SCD를 생성하도록 프로젝트를 구성하려면**:

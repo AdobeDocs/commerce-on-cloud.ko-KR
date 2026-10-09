@@ -3,25 +3,31 @@ title: 차단 요청에 대한 사용자 지정 VCL
 description: 사용자 지정 VCL 코드 조각과 함께 Edge ACL(액세스 제어 목록)을 사용하여 IP 주소별 수신 요청을 차단합니다.
 feature: Cloud, Configuration, Security
 exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
-TQID: https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg
+last-update: 2025-01-29T00:00:00.000Z
+TQID: 'https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1026
+source-wordcount: '1026'
 ht-degree: 0%
-
 ---
-
 # 차단 요청에 대한 사용자 지정 VCL
 
 Magento 2용 Fastly CDN 모듈을 사용하여 차단하려는 IP 주소 목록과 함께 Edge ACL을 만들 수 있습니다. 그런 다음 VCL 코드 조각과 함께 해당 목록을 사용하여 들어오는 요청을 차단할 수 있습니다. 이 코드는 수신 요청의 IP 주소를 확인합니다. ACL 목록에 포함된 IP 주소와 일치하는 경우 Fastly는 요청이 사이트에 액세스하지 못하도록 차단하고 `403 Forbidden error`을(를) 반환합니다. 다른 모든 클라이언트 IP 주소는 액세스가 허용됩니다.
@@ -51,7 +57,7 @@ VCL 코드 조각에서 이름별 Edge ACL을 참조합니다.
 
 >[!NOTE]
 >
->이 예는 고급 사용자가 VCL 코드 조각을 만들어 Fastly 서비스에 업로드할 사용자 지정 차단 규칙을 구성하는 방법을 보여줍니다. Magento 2 모듈용 Fastly CDN에서 사용할 수 있는 [차단](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md) 기능을 사용하여 Adobe Commerce 관리자의 국가 기반 차단 목록에 추가하다 또는 허용 목록에 추가하다를 구성할 수 있습니다.
+>이 예는 고급 사용자가 VCL 코드 조각을 만들어 Fastly 서비스에 업로드할 사용자 지정 차단 규칙을 구성하는 방법을 보여줍니다. Magento 2 모듈에 대해 Fastly CDN에서 사용할 수 있는 [차단](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md) 기능을 사용하여 Adobe Commerce 관리자의 국가 기반 차단 목록에 추가하다 또는 허용 목록에 추가하다를 구성할 수 있습니다.
 
 Edge ACL을 정의한 후 이 ACL을 사용하여 ACL에 지정된 IP 주소에 대한 액세스를 차단하는 VCL 코드 조각을 만들 수 있습니다. 스테이징 및 프로덕션 환경 모두에서 동일한 VCL 코드 조각을 사용할 수 있지만 각 환경에 별도로 코드 조각을 업로드해야 합니다.
 
@@ -71,7 +77,7 @@ Edge ACL을 정의한 후 이 ACL을 사용하여 ACL에 지정된 IP 주소에 
 
 - `name`: VCL 코드 조각의 이름입니다. 이 예제에서는 `blocklist` 이름을 사용했습니다.
 
-- `priority`: VCL 코드 조각이 실행되는 시기를 결정합니다. 관리자 요청이 허용된 IP 주소에서 오는지 여부를 즉시 실행하고 확인하는 우선 순위는 `5`입니다. 이 코드 조각은 기본 Magento VCL 코드 조각(`magentomodule_*`)에 우선 순위 50이 할당되기 전에 실행됩니다. 코드 조각을 실행할 시기에 따라 각 사용자 지정 코드 조각의 우선 순위를 50보다 높거나 낮게 설정합니다. 우선 순위가 낮은 번호가 있는 코드 조각이 먼저 실행됩니다.
+- `priority`: VCL 코드 조각이 실행되는 시기를 결정합니다. 관리자 요청이 허용된 IP 주소에서 오는지 여부를 즉시 실행하고 확인하는 우선 순위는 `5`입니다. 코드 조각은 기본 Magento VCL 코드 조각(`magentomodule_*`)에 우선 순위 50이 할당되기 전에 실행됩니다. 코드 조각을 실행할 시기에 따라 각 사용자 지정 코드 조각의 우선 순위를 50보다 높거나 낮게 설정합니다. 우선 순위가 낮은 번호가 있는 코드 조각이 먼저 실행됩니다.
 
 - `type`: 생성된 VCL 코드에서 코드 조각의 위치를 결정하는 VCL 코드 조각 유형을 지정합니다. 이 예제에서는 `recv`을(를) 사용합니다. 이 은(는) `vcl_recv` 서브루틴에 보일러판 VCL 아래와 모든 개체 위에 VCL 코드를 삽입합니다. 코드 조각 형식 목록은 [Fastly VCL 코드 조각 참조](https://docs.fastly.com/api/config#api-section-snippet)를 참조하십시오.
 

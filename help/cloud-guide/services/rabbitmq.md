@@ -3,27 +3,35 @@ title: RabbitMQ 서비스 설정
 description: RabbitMQ 서비스가 클라우드 인프라에서 Adobe Commerce에 대한 메시지 대기열을 관리할 수 있도록 하는 방법을 알아봅니다.
 feature: Cloud, Services
 exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
-TQID: https://experienceleague.adobe.com/oweBbN2F8xg9ISmnP-31-ymXpHIdBzQsDbYHDPK-SSM
+TQID: 'https://experienceleague.adobe.com/oweBbN2F8xg9ISmnP-31-ymXpHIdBzQsDbYHDPK-SSM'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 573
+source-wordcount: '573'
 ht-degree: 0%
-
 ---
-
 # [!DNL RabbitMQ] 서비스 설정
 
-[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)은(는) [모듈](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
+[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)은(는) [모듈](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
 
 MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사용하여 메시지를 보내고 받는 확장 가능한 플랫폼을 제공합니다. 게재되지 않은 메시지를 저장하는 메커니즘도 포함됩니다. [!DNL RabbitMQ]은(는) AMQP(고급 메시지 대기열 프로토콜) 0.9.1 사양을 기반으로 합니다.
 
@@ -141,7 +149,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사�
    ssh -L 15672:rabbitmq.internal:15672 <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-1. 세션이 열려 있는 동안 로컬 워크스테이션에서 원하는 RabbitMQ 클라이언트를 시작할 수 있습니다. 이 클라이언트는 MAGENTO_CLOUD_RELATIONSHIPS 변수의 포트 번호, 사용자 이름 및 암호 정보를 사용하여 `localhost:<portnumber>`에 연결하도록 구성됩니다.
+1. 세션이 열려 있는 동안에는 MAGENTO_CLOUD_RELATIONSHIPS 변수의 포트 번호, 사용자 이름 및 암호 정보를 사용하여 `localhost:<portnumber>`에 연결하도록 구성된 로컬 워크스테이션에서 원하는 RabbitMQ 클라이언트를 시작할 수 있습니다.
 
 ### 응용 프로그램에서 연결
 
@@ -163,7 +171,7 @@ PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 소스 트�
 
 ## [!DNL RabbitMQ] 서비스 문제 해결
 
-[Adobe Commerce Cloud에서 RabbitMQ에 연결할 수 없음](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-27688)을 참조하십시오.
+[Adobe Commerce Cloud에서 RabbitMQ에 연결할 수 없음](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688)을 참조하십시오.
 
 ## [!DNL RabbitMQ] 서비스 업그레이드 중
 
@@ -173,4 +181,4 @@ PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 소스 트�
 >
 >업그레이드 또는 다운그레이드를 포함하여 RabbitMQ 서비스 버전을 변경한 후 환경을 다시 배포합니다. 배포 중에 Adobe Commerce은 필요한 RabbitMQ 큐, 교환 및 바인딩을 다시 만드는 설치 작업을 실행합니다.
 >
->일반적인 서비스 업그레이드 지침은 [서비스 버전 변경](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)을 참조하십시오.
+>일반적인 서비스 업그레이드 지침은 [서비스 버전 변경](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)을 참조하십시오.

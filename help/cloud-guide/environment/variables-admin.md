@@ -4,23 +4,32 @@ description: 클라우드 인프라에 Adobe Commerce을 설치할 때 사용되
 feature: Cloud, Configuration, Install, Roles/Permissions
 role: Developer
 exl-id: d2746185-bc59-4d30-a088-73df1bd2c0b2
-TQID: https://experienceleague.adobe.com/gCq40IqrBWMNPSy8eLBQhXFIXmgmUWQjQ8bWZK7fIcQ
+TQID: 'https://experienceleague.adobe.com/gCq40IqrBWMNPSy8eLBQhXFIXmgmUWQjQ8bWZK7fIcQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+  - id: e439352c-5b67-587d-b34e-d2a0aa5a0242
+    internal-label: Roles/Permissions
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 792
+source-wordcount: '792'
 ht-degree: 0%
-
 ---
-
 # 관리자 변수
 
 클라우드 인프라 프로젝트의 Adobe Commerce에 대한 관리 액세스 권한이 있는 사용자는 다음 프로젝트 환경 변수를 사용하여 관리 UI에 액세스하기 위한 관리 사용자 계정에 대한 구성 설정을 재정의할 수 있습니다.
@@ -29,7 +38,7 @@ ht-degree: 0%
 
 다음 표의 ADMIN 변수를 사용하여 Commerce 설치 중에 관리자 사용자 자격 증명을 재정의할 수 있습니다.
 
-설치 후 값을 변경하려면 SSH를 사용하여 환경에 연결한 다음 Adobe Commerce CLI [`admin:user` 명령](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/tutorials/admin)을 사용하여 관리자 자격 증명을 만들거나 편집하십시오.
+설치 후 값을 변경하려면 SSH를 사용하여 환경에 연결한 다음 Adobe Commerce CLI [`admin:user` 명령](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/admin)을 사용하여 관리자 자격 증명을 만들거나 편집하십시오.
 
 | 변수 | 기본값 | 설명 |
 | -------------- | --------------------------- | ----------- |
@@ -48,9 +57,9 @@ ht-degree: 0%
 
 ### 관리자 URL 변경
 
-기본적으로 [Commerce 관리자](https://experienceleague.adobe.com/ko/docs/commerce-admin/start/admin/admin) URL은 *&lt;domain_name>/admin*(으)로 설정됩니다. 보안상의 이유로 Adobe에서는 쉽게 추측할 수 없는 고유한 사용자 지정 관리자 URL로 변경할 것을 권장합니다.
+기본적으로 [Commerce 관리자](https://experienceleague.adobe.com/en/docs/commerce-admin/start/admin/admin) URL은 *&lt;domain_name>/admin*(으)로 설정됩니다. 보안상의 이유로 Adobe에서는 쉽게 추측할 수 없는 고유한 사용자 지정 관리자 URL로 변경할 것을 권장합니다.
 
-**클라우드 인프라의 [!DNL Adobe Commerce]에서**&#x200B;의 `ADMIN_URL` 환경 변수를 사용하여 관리 URL을 변경해야 합니다([!DNL Cloud Console] 또는 [!DNL Cloud CLI]). [!DNL Admin]에서 설정을 수정하는 것은 온-프레미스 설치에만 적용할 수 있습니다. 온-프레미스 설치의 경우 [사용자 지정 관리자 URL을 사용](https://experienceleague.adobe.com/ko/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)하세요.
+**클라우드 인프라의 [!DNL Adobe Commerce]에서**&#x200B;의 `ADMIN_URL` 환경 변수를 사용하여 관리 URL을 변경해야 합니다([!DNL Cloud Console] 또는 [!DNL Cloud CLI]). [!DNL Admin]에서 설정을 수정하는 것은 온-프레미스 설치에만 적용할 수 있습니다. 온-프레미스 설치의 경우 [사용자 지정 관리자 URL을 사용](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)하세요.
 
 Adobe은 설치 후 관리 URL에 대한 환경 수준 변수를 변경할 것을 권장합니다. 복제된 `master` 환경에서 분기하기 전에 보안상의 이유로 이 설정을 구성하십시오. 상속을 false로 설정하지 않는 한 `master` 분기에서 만든 모든 분기는 환경 수준 변수와 해당 값을 상속합니다.
 
@@ -60,12 +69,12 @@ Adobe은 설치 후 관리 URL에 대한 환경 수준 변수를 변경할 것�
 
 ##### 통합 환경
 
-[클라우드 콘솔](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/project/overview)에서 다음을 사용하여 새 변수를 추가합니다.
+[클라우드 콘솔](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/overview)에서 다음을 사용하여 새 변수를 추가합니다.
 
 - **이름:** `ADMIN_URL`
 - **값:** 새 관리자 URL(예: `magento_A8v10`)
 
-- 자세한 단계는 개발자 설명서에서 [환경 변수 추가](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/project/overview#configure-environment) 또는 [환경 변수 추가](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin)를 참조하십시오.
+- 자세한 단계는 개발자 설명서에서 [환경 변수 추가](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/overview#configure-environment) 또는 [환경 변수 추가](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin)를 참조하십시오.
 
 ##### [!DNL Cloud Console]에서 관리자 URL 설정
 
@@ -83,7 +92,7 @@ Adobe은 설치 후 관리 URL에 대한 환경 수준 변수를 변경할 것�
 
 ##### [!DNL Cloud Console]에서 스테이징 및 프로덕션을 사용할 수 없는 경우
 
-스테이징 또는 프로덕션 환경에 대한 `ADMIN_URL` 변수를 추가하도록 요청하는 [지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). [!DNL Cloud Console]에서 스테이징 및 프로덕션에 액세스할 수 있는 경우 [통합 환경](#integration-environment)에 설명된 대로 변수를 추가하십시오.
+스테이징 또는 프로덕션 환경에 대한 `ADMIN_URL` 변수를 추가하도록 요청하는 [지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). [!DNL Cloud Console]에서 스테이징 및 프로덕션에 액세스할 수 있는 경우 [통합 환경](#integration-environment)에 설명된 대로 변수를 추가하십시오.
 
 #### 옵션 B: [!DNL Cloud CLI]을(를) 사용하여 관리자 URL 변경
 
@@ -96,7 +105,7 @@ magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master --inher
 ```
 
 - **재배포:** [!DNL Cloud CLI]에서 `ADMIN_URL` 변수를 변경하면 환경의 재배포가 트리거됩니다.
-- **상속:** 변수는 기본적으로 상속할 수 있습니다. 값이 하위 환경에 상속되지 않도록 하려면 표시된 대로 `--inheritable false` 옵션을 사용합니다. 자세한 내용은 [변수 수준 가시성](https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/env/variable-levels#visibility)을 참조하세요.
+- **상속:** 변수는 기본적으로 상속할 수 있습니다. 값이 하위 환경에 상속되지 않도록 하려면 표시된 대로 `--inheritable false` 옵션을 사용합니다. 자세한 내용은 [변수 수준 가시성](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/variable-levels#visibility)을 참조하세요.
 
 >[!NOTE]
 >

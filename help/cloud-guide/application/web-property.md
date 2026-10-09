@@ -1,23 +1,27 @@
 ---
 title: 웹 속성
-description: ' [!DNL Commerce] 응용 프로그램 구성 파일에서 웹 속성을 구성하는 방법에 대한 예를 참조하십시오.'
+description: '[!DNL Commerce] 응용 프로그램 구성 파일에서 웹 속성을 구성하는 방법에 대한 예를 참조하십시오.'
 feature: Cloud, Configuration
 exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
-TQID: https://experienceleague.adobe.com/IFmzGyuOpqIc9Fq4vLp1JEgrfSWORDtERWdisL4dyT8
+TQID: 'https://experienceleague.adobe.com/IFmzGyuOpqIc9Fq4vLp1JEgrfSWORDtERWdisL4dyT8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 462
+source-wordcount: '463'
 ht-degree: 0%
-
 ---
-
 # 웹 속성
 
 `web` 속성은 응용 프로그램이 웹에 노출되는 방법(HTTP)을 정의하고, 웹 응용 프로그램이 콘텐츠를 제공하는 방법을 결정하며, 각 위치 _block_&#x200B;에서 규칙을 설정하여 응용 프로그램 컨테이너가 들어오는 요청에 응답하는 방법을 제어합니다. 블록은 슬래시(`/`)로 이어지는 절대 경로를 나타냅니다.

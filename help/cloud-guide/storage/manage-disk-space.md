@@ -3,24 +3,32 @@ title: 디스크 공간 관리
 description: 명령줄 인터페이스를 사용하여 디스크 공간을 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Storage
 exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
-TQID: https://experienceleague.adobe.com/645o-d3ZvMtaYOwy0IKwAjSxUyUgkrI36OGLWtZR--g
+TQID: 'https://experienceleague.adobe.com/645o-d3ZvMtaYOwy0IKwAjSxUyUgkrI36OGLWtZR--g'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 806
+source-wordcount: '806'
 ht-degree: 0%
-
 ---
-
 # 디스크 공간 관리
 
 Adobe Commerce on cloud infrastructure 계약과 [계정 페이지](https://accounts.magento.cloud/user)에서 클라우드 프로젝트에 대한 총 스토리지 용량을 찾을 수 있습니다. 계정의 각 프로젝트 카드는 _환경_&#x200B;개, _저장소_ 용량(GB) 및 _사용자_&#x200B;개를 표시합니다. 또는 다음 클라우드 명령을 사용할 수 있습니다.
@@ -143,7 +151,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->- Pro 프로덕션 및 스테이징 환경의 경우 디스크 공간 할당을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다. Pro 프로덕션 및 스테이징 환경의 크기 증가는 특정 간격으로만 이루어질 수 있으므로 현재 디스크 공간 사용량에 따라 디스크 공간 할당을 최소 10GB 늘리는 것이 좋습니다. 할당되면 Pro 스테이징 및 프로덕션에 대한 스토리지 증가는 되돌릴 수 없습니다. 리소스 간에 스토리지를 재할당하거나 재배포할 수 없습니다. 파일 저장 공간을 더 추가하려면 MySQL에 할당된 디스크 공간을 줄이십시오.
+>- Pro 프로덕션 및 스테이징 환경의 경우 디스크 공간 할당을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)해야 합니다. Pro 프로덕션 및 스테이징 환경의 크기 증가는 특정 간격으로만 이루어질 수 있으므로 현재 디스크 공간 사용량에 따라 디스크 공간 할당을 최소 10GB 늘리는 것이 좋습니다. 할당되면 Pro 스테이징 및 프로덕션에 대한 스토리지 증가는 되돌릴 수 없습니다. 리소스 간에 스토리지를 재할당하거나 재배포할 수 없습니다. 파일 저장 공간을 더 추가하려면 MySQL에 할당된 디스크 공간을 줄이십시오.
 >- AWS에서 호스팅되는 Pro 프로덕션 및 스테이징 환경에는 디스크 공간 증가에 적용되는 [필수 6시간 쿨다운](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html)이 있습니다. 마운트에서 디스크 공간이 증가하면 해당 마운트에서 디스크 공간을 다시 늘릴 때까지 6시간을 기다려야 합니다.
 
 ### 응용 프로그램 디스크 공간
@@ -200,7 +208,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## 디스크 공간 모니터링
 
-Pro 프로덕션 환경에서는 New Relic에 대한 Adobe Commerce 경고 관리 정책을 사용하여 디스크 공간 및 기타 성능 지표를 모니터링할 수 있습니다. 자세한 내용은 [관리 경고로 성능 모니터링](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)을 참조하십시오. 자세한 지침은 [데이터베이스 성능 문제를 해결하는 모범 사례](https://experienceleague.adobe.com/ko/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues)를 참조하세요.
+Pro 프로덕션 환경에서는 New Relic에 대한 Adobe Commerce 경고 관리 정책을 사용하여 디스크 공간 및 기타 성능 지표를 모니터링할 수 있습니다. 자세한 내용은 [관리 경고로 성능 모니터링](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)을 참조하십시오. 자세한 지침은 [데이터베이스 성능 문제를 해결하는 모범 사례](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues)를 참조하세요.
 
 ## 남은 공간 없음
 

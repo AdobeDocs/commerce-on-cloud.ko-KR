@@ -3,21 +3,32 @@ title: 캐싱
 description: 클라우드 인프라 환경에서 Adobe Commerce에 대한 캐싱을 활성화하는 방법을 알아봅니다.
 feature: Cloud, Cache, Routes
 exl-id: e73c36d6-9a58-45c0-9220-86074c1f46f0
-TQID: https://experienceleague.adobe.com/dCr0px-0XWXIznsg1w8tUnBaAeXvanY1h-mwiu6GfzU
+TQID: 'https://experienceleague.adobe.com/dCr0px-0XWXIznsg1w8tUnBaAeXvanY1h-mwiu6GfzU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 431
+source-wordcount: '431'
 ht-degree: 0%
-
 ---
-
 # 캐싱
 
 클라우드 인프라 프로젝트 환경에서 캐싱을 활성화할 수 있습니다. 캐싱을 비활성화하면 Adobe Commerce이 파일을 직접 제공합니다.
@@ -139,7 +150,7 @@ cache:
 
 쿠키에는 다음과 같은 제한 사항이 있습니다.
 
-- 시스템에 설정된 최대 **50개의 쿠키**&#x200B;가 있습니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Maximum number of cookies would be exceeded` 예외가 발생합니다. 쿠키 수를 200개로 늘리려면 [품질 패치 도구](https://experienceleague.adobe.com/ko/docs/commerce-learn/tutorials/tools/quality-patch-tool)를 사용하여 [MDVA-12304 패치](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/quality-patches-tool/release-notes)를 적용하세요.
+- 시스템에 설정된 최대 **50개의 쿠키**&#x200B;가 있습니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Maximum number of cookies would be exceeded` 예외가 발생합니다. 쿠키 수를 200개로 늘리려면 [품질 패치 도구](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool)를 사용하여 [MDVA-12304 패치](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)를 적용하세요.
 - 최대 쿠키 크기는 **4,096바이트**&#x200B;입니다. 그렇지 않으면 응용 프로그램에서 `Unable to send the cookie. Size of '%name' is %size bytes` 예외가 발생합니다.
 
 ### `default_ttl`

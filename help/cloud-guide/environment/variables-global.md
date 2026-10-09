@@ -5,24 +5,41 @@ feature: Cloud, Configuration, Build, Deploy, Eventing, Logs, SCD
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
-TQID: https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ
+TQID: 'https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: 5594f40c-5dc7-522f-a0e0-f84045197b3c
+    internal-label: Eventing
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
+  - id: 3c398179-d35a-51ba-b317-6c5b95feef5e
+    internal-label: Logs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 775
+source-wordcount: '775'
 ht-degree: 0%
-
 ---
-
 # 전역 변수
 
 전역 변수는 [!DNL Commerce] 배포 프로세스의 각 단계(빌드, 배포 및 배포 후)에서 작업을 제어합니다. 전역 변수는 모든 단계에 영향을 주므로 `.magento.env.yaml` 파일의 `global` 단계에서 전역 변수를 설정해야 합니다.
@@ -189,7 +206,7 @@ stage:
 - **기본값**—_설정되지 않음_
 - **버전**—Adobe Commerce 2.1.4 이상
 
-`X_FRAME_CONFIGURATION` 변수를 사용하여 Adobe Commerce 사이트에 대한 [`X-Frame-Options`](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/security/xframe-options) 헤더 구성을 변경합니다. 이 구성은 브라우저가 `<frame>`, `<iframe>` 또는 `<object>`에서 페이지를 렌더링하는 방법을 제어합니다. 다음 옵션 중 하나를 사용합니다.
+`X_FRAME_CONFIGURATION` 변수를 사용하여 Adobe Commerce 사이트에 대한 [`X-Frame-Options`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/security/xframe-options) 헤더 구성을 변경합니다. 이 구성은 브라우저가 `<frame>`, `<iframe>` 또는 `<object>`에서 페이지를 렌더링하는 방법을 제어합니다. 다음 옵션 중 하나를 사용합니다.
 
 - `DENY` - 프레임에 페이지를 표시할 수 없습니다.
 - `SAMEORIGIN`—(기본 Adobe Commerce 설정) 페이지는 페이지 자체와 동일한 원점의 프레임에만 표시될 수 있습니다.

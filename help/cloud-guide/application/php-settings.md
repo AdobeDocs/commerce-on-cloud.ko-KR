@@ -3,25 +3,34 @@ title: PHP 설정
 description: 클라우드 인프라에서 Commerce 애플리케이션 구성에 대한 최적의 PHP 설정에 대해 알아봅니다.
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
-TQID: https://experienceleague.adobe.com/2UjlXGZV6AJQuNf0XOdzZ09aF-23TSk7Q0NqvLyhGRs
+last-update: 2026-08-25T00:00:00.000Z
+TQID: 'https://experienceleague.adobe.com/2UjlXGZV6AJQuNf0XOdzZ09aF-23TSk7Q0NqvLyhGRs'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: f08fa0de-a550-4acd-b570-f81cf1d03aaf
+    internal-label: Commerce ecosystem
+subfeature_v2:
+  - id: dad884f1-e840-49a1-970e-2f965bdbc410
+    internal-label: Extensions
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 612
+source-wordcount: '612'
 ht-degree: 0%
-
 ---
-
 # PHP 설정
 
-`.magento.app.yaml` 파일에서 실행할 [PHP 버전](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)을(를) 선택할 수 있습니다.
+`.magento.app.yaml` 파일에서 실행할 [PHP 버전](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)을(를) 선택할 수 있습니다.
 
 ```yaml
 name: mymagento
@@ -72,7 +81,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->권장 PHP 구성 설정 목록은 _설치 가이드_&#x200B;의 [필수 PHP 설정](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/prerequisites/php-settings)을 참조하십시오.
+>권장 PHP 구성 설정 목록은 _설치 가이드_&#x200B;의 [필수 PHP 설정](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/php-settings)을 참조하십시오.
 
 ### 사용자 정의 PHP 설정 확인
 
@@ -127,7 +136,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP 모듈 요구 사항은 Adobe Commerce 버전에 연결되어 있습니다. [PHP 요구 사항](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/prerequisites/php-settings)을 참조하세요.
+PHP 모듈 요구 사항은 Adobe Commerce 버전에 연결되어 있습니다. [PHP 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/php-settings)을 참조하세요.
 
 ### 확장 지원
 
@@ -145,7 +154,7 @@ sourceguardian.restrict_unencoded = "1"
 
 SourceGuardian 설명서의 [섹션 3.5를 참조하십시오](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _PDF 링크입니다_.
 
-[Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 모든 프로덕션 환경 및 Pro 스테이징 환경에서 이러한 PHP 확장을 설치하는 데 도움을 받으십시오. 업데이트된 `.magento/services.yaml` 파일, 업데이트된 PHP 버전 및 추가 PHP 확장명을 포함하는 `.magento.app.yaml` 파일을 포함하십시오. 라이브 프로덕션 환경을 변경하는 경우 최소 48시간 이상 알림을 제공해야 합니다. 클라우드 인프라 팀이 프로젝트를 업데이트하는 데 최대 48시간이 걸릴 수 있습니다.
+[Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 모든 프로덕션 환경 및 Pro 스테이징 환경에서 이러한 PHP 확장을 설치하는 데 도움을 받으십시오. 업데이트된 `.magento/services.yaml` 파일, 업데이트된 PHP 버전 및 추가 PHP 확장명을 포함하는 `.magento.app.yaml` 파일을 포함하십시오. 라이브 프로덕션 환경을 변경하는 경우 최소 48시간 이상 알림을 제공해야 합니다. 클라우드 인프라 팀이 프로젝트를 업데이트하는 데 최대 48시간이 걸릴 수 있습니다.
 
 >[!WARNING]
 >

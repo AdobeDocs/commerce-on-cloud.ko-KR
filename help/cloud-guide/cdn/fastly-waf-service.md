@@ -3,31 +3,43 @@ title: 웹 애플리케이션 방화벽(WAF)
 description: Fastly WAF 서비스가 Adobe Commerce 네트워크 또는 사이트를 손상시키기 전에 악의적인 요청 트래픽을 탐지하고 로그하고 차단하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Security
 exl-id: f00e35f2-9800-4e24-a4d0-d36fde59a003
-TQID: https://experienceleague.adobe.com/GhpLOxZbJMYhBTmj8W4a90wfmFYq-8h2bvrKQWj6ZWk
+TQID: 'https://experienceleague.adobe.com/GhpLOxZbJMYhBTmj8W4a90wfmFYq-8h2bvrKQWj6ZWk'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+    internal-label: Compliance
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 subfeature_v2:
   - id: f2261633-201d-46c5-8a66-999e70527a83
+    internal-label: PCI
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 990
+source-wordcount: '990'
 ht-degree: 0%
-
 ---
-
 # 웹 애플리케이션 방화벽(WAF)
 
 Fastly를 기반으로 하는 클라우드 인프라의 Adobe Commerce용 웹 애플리케이션 방화벽(WAF) 서비스는 사이트 또는 네트워크를 손상시키기 전에 악의적인 요청 트래픽을 감지하고 기록하며 차단합니다. WAF 서비스는 프로덕션 환경에서만 사용할 수 있습니다.
@@ -44,7 +56,7 @@ WAF 서비스는 다음과 같은 이점을 제공합니다.
 
 >[!TIP]
 >
->클라우드 인프라 스토어의 Adobe Commerce에 대한 PCI 규정 준수 유지 관리에 대한 자세한 내용은 [PCI 규정 준수](https://business.adobe.com/kr/products/magento/pci-compliance.html)를 참조하십시오.
+>클라우드 인프라 스토어의 Adobe Commerce에 대한 PCI 규정 준수 유지 관리에 대한 자세한 내용은 [PCI 규정 준수](https://business.adobe.com/products/magento/pci-compliance.html)를 참조하십시오.
 
 ## WAF 활성화
 
@@ -68,7 +80,7 @@ WAF 서비스가 활성화되면 WAF 규칙과 비교하여 모든 웹 및 관�
 
 책임자로부터 이 오류 응답 페이지를 사용자 지정할 수 있습니다. [WAF 응답 페이지 사용자 지정](fastly-custom-response.md#customize-the-waf-error-page)을 참조하세요.
 
-Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
+Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
 
 New Relic을 사용하여 특정 요청에 대한 WAF 응답을 식별하려면 다음을 참조하십시오.
 

@@ -4,24 +4,32 @@ description: New Relic 대시보드에 액세스하고 Adobe Commerce on cloud i
 feature: Cloud, Observability
 topic: Performance
 exl-id: b9d806c4-f659-4e10-8dcb-b320a61de5e1
-TQID: https://experienceleague.adobe.com/Ih9Y5JqsurZqdXK-vpPGxVe2erbexdQxAlLpDjCBTCg
+TQID: 'https://experienceleague.adobe.com/Ih9Y5JqsurZqdXK-vpPGxVe2erbexdQxAlLpDjCBTCg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Data collection
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 896
+source-wordcount: '896'
 ht-degree: 0%
-
 ---
-
 # New Relic 모니터링
 
 New Relic은 PHP 에이전트를 사용하여 인프라와 [!DNL Commerce] 응용 프로그램을 연결하고 모니터링합니다. 클라우드 환경이 New Relic에 연결되면 New Relic 계정에 로그인하여 에이전트가 수집한 데이터를 검토할 수 있습니다.
@@ -42,7 +50,7 @@ _APM 및 서비스_ 페이지에서 **요약**&#x200B;을 선택하여 응용 �
 
 >[!TIP]
 >
->이 데이터를 사용하여 응용 프로그램 성능 문제를 해결하는 방법에 대한 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;에서 [New Relic을 사용하여 성능 문제 해결](https://experienceleague.adobe.com/ko/docs/experience-cloud-kcs/kbarticles/ka-40830)을 참조하십시오.
+>이 데이터를 사용하여 응용 프로그램 성능 문제를 해결하는 방법에 대한 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;에서 [New Relic을 사용하여 성능 문제 해결](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-40830)을 참조하십시오.
 
 ## 관리 경고로 성능 모니터링
 
@@ -58,7 +66,7 @@ Adobe은 성능 지표를 추적하기 위해 _Adobe Commerce에 대한 관리 �
 | MariaDB 쿼리 로드 | NRI | Pro |
 | 레디스 메모리 | NRI | Pro |
 
-사이트 인프라 또는 애플리케이션 조건에서 경고 임계값을 트리거하면 New Relic에서 사전 예방적으로 문제를 해결할 수 있도록 경고 알림을 보냅니다. 경고 임계값 및 경고를 트리거한 문제를 해결하기 위한 문제 해결 단계에 대한 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [Adobe Commerce에 대한 관리 경고](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)를 참조하십시오.
+사이트 인프라 또는 애플리케이션 조건에서 경고 임계값을 트리거하면 New Relic에서 사전 예방적으로 문제를 해결할 수 있도록 경고 알림을 보냅니다. 경고 임계값 및 경고를 트리거한 문제를 해결하기 위한 문제 해결 단계에 대한 자세한 내용은 _Adobe Commerce 도움말 센터_&#x200B;의 [Adobe Commerce에 대한 관리 경고](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)를 참조하십시오.
 
 >[!TIP]
 >
@@ -88,7 +96,7 @@ Adobe은 성능 지표를 추적하기 위해 _Adobe Commerce에 대한 관리 �
 
      >[!NOTE]
      >
-     >_Adobe Commerce에 대한 관리 경고_ 정책을 사용할 수 없는 경우 _Adobe Commerce 도움말 센터_&#x200B;에서 [Adobe Commerce에 대한 관리 경고](https://experienceleague.adobe.com/ko/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)을(를) 참조하십시오.
+     >_Adobe Commerce에 대한 관리 경고_ 정책을 사용할 수 없는 경우 _Adobe Commerce 도움말 센터_&#x200B;에서 [Adobe Commerce에 대한 관리 경고](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)을(를) 참조하십시오.
 
 1. 정책에 정의된 경고 조건을 검토하려면 **[!UICONTROL Alert conditions]** 탭을 클릭하십시오.
 

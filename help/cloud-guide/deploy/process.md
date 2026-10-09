@@ -3,23 +3,35 @@ title: 배포 프로세스
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce에 대한 배포가 작동하는 방식을 알아봅니다.
 feature: Cloud, Build, Deploy, SCD
 exl-id: 76806381-0ecc-4d76-974a-f203d3bf44da
-TQID: https://experienceleague.adobe.com/mSJOsLfNVGbkSNSrUzJgszxsqc07c-4KFhrJxm5I72U
+TQID: 'https://experienceleague.adobe.com/mSJOsLfNVGbkSNSrUzJgszxsqc07c-4KFhrJxm5I72U'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: '414'
 ht-degree: 0%
-
 ---
-
 # 배포 프로세스
 
 환경의 병합, 푸시 또는 동기화를 수행하거나 [수동 재배포](../dev-tools/cloud-cli-overview.md#redeploy-the-environment)를 트리거할 때 배포 프로세스가 시작됩니다. 배포 프로세스에 시간이 걸리지만 개발 및 테스트 중인지 또는 라이브 사이트를 사용하여 작업하고 있는지에 따라 배포를 최적화하는 방법이 있습니다. 특히 [정적 콘텐츠 배포](static-content.md)를 제어할 수 있습니다.
@@ -32,7 +44,7 @@ _빌드_ 단계는 구성 파일에 정의된 서비스에 대한 컨테이너�
 
 ## ![배포 단계](../../assets/status-deploy.png) 배포 단계
 
-_배포_ 단계에서는 들어오는 요청에 대해 일시적으로 대기 상태로 전환하고 사이트를 [유지 관리 모드](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/setup/application-modes)&#x200B;(으)로 전환합니다. 배포 단계는 새 컨테이너를 사용하며 파일 시스템을 탑재한 후 네트워크 연결을 열고 `.magento.app.yaml` 파일의 `relationships` 섹션에 정의된 서비스를 활성화하고 `.magento.app.yaml` 파일에 정의된 배포 후크를 실행합니다. `.magento.app.yaml` 파일에 정의된 디렉터리를 제외한 모든 항목이 _읽기 전용_&#x200B;입니다. 기본적으로 [`mounts` 속성](../application/properties.md#mounts)에는 다음 디렉터리가 포함됩니다.
+_배포_ 단계에서는 들어오는 요청에 대해 일시적으로 대기 상태로 전환하고 사이트를 [유지 관리 모드](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/setup/application-modes)&#x200B;(으)로 전환합니다. 배포 단계는 새 컨테이너를 사용하며 파일 시스템을 탑재한 후 네트워크 연결을 열고 `.magento.app.yaml` 파일의 `relationships` 섹션에 정의된 서비스를 활성화하고 `.magento.app.yaml` 파일에 정의된 배포 후크를 실행합니다. `.magento.app.yaml` 파일에 정의된 디렉터리를 제외한 모든 항목이 _읽기 전용_&#x200B;입니다. 기본적으로 [`mounts` 속성](../application/properties.md#mounts)에는 다음 디렉터리가 포함됩니다.
 
 - `app/etc` - `env.php` 및 `config.php` 구성 파일을 포함합니다.
 - `pub/media` - 제품 또는 범주와 같은 모든 미디어 데이터를 포함합니다.

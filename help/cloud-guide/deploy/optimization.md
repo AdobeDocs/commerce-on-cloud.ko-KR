@@ -3,23 +3,32 @@ title: 클라우드 배포 최적화
 description: 가동 중지 시간 감소, 정적 콘텐츠 배포, 시나리오 기반 배포 및 스마트 마법사를 포함하여 클라우드 인프라 프로젝트에서 Adobe Commerce의 배포 프로세스를 최적화하는 방법에 대해 알아봅니다.
 feature: Cloud, Deploy, SCD
 exl-id: 4315e2f4-06af-4a5c-9db9-e7b2f63660df
-TQID: https://experienceleague.adobe.com/bd9n9CFrpyn1UZG6SX8qkoZGBOFd2N7z9Hoa1hQ8rew
+TQID: 'https://experienceleague.adobe.com/bd9n9CFrpyn1UZG6SX8qkoZGBOFd2N7z9Hoa1hQ8rew'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 230
+source-wordcount: '230'
 ht-degree: 0%
-
 ---
-
 # 배포 최적화
 
 배포 프로세스 중에 사이트 성능이 저하될 수 있습니다. 프로덕션 사이트에 배포할 때 사이트가 유지 관리 모드에 있는 시간은 환경 구성 및 사이트에 포함된 콘텐츠의 양과 같은 많은 요인에 따라 달라집니다. 클라우드 배포를 최적화하는 첫 번째 모범 사례는 데이터베이스의 백업을 만들고 환경 구성을 확인하는 명령과 같은 패키지 기능을 활용하도록 [업그레이드하여 `ece-tools`](../dev-tools/install-package.md)을(를) 사용하는 것입니다.

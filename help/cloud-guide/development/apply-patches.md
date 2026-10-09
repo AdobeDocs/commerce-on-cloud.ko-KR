@@ -3,33 +3,39 @@ title: 패치 적용
 description: ECE-Tools 및 Quality Patches Tool을 사용하여 Adobe Commerce on Cloud Infrastructure 프로젝트에 필수, 선택적 및 사용자 지정 패치를 적용하는 방법을 알아봅니다.
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
-TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
+TQID: 'https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: a8ae7a5a-6cdc-5922-bd0d-6feb44b04984
+    internal-label: Upgrade
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 8b6f9dbc2010ec0afe5904490a2f6d6a22ad2b39
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 922
+source-wordcount: '922'
 ht-degree: 0%
-
 ---
-
 # 패치 적용
 
 `magento/magento-cloud-patches` 작성기 패키지([Commerce 릴리스 노트](../release-notes/cloud-patches.md)용 클라우드 패치 참조) 및 [품질 패치 도구](https://github.com/magento/quality-patches)는 설치된 Adobe Commerce 애플리케이션에 패치를 제공합니다.
 
 - Commerce용 클라우드 패치 패키지는 중요한 수정 사항이 있는 필요한 패치를 제공합니다
-- 품질 패치는 이전 버전과 호환되지 않는 변경 사항이 포함되지 않은 [개별 패치](https://experienceleague.adobe.com/ko/docs/commerce-operations/release/planning/versioning-policy#individual-patch)와(과) 같이 영향이 적은 선택적 품질 수정 사항을 제공합니다.
+- 품질 패치는 이전 버전과 호환되지 않는 변경 사항이 포함되지 않은 [개별 패치](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/versioning-policy#individual-patch)와(과) 같이 영향이 적은 선택적 품질 수정 사항을 제공합니다.
 
-릴리스된 패치의 전체 목록을 검토하려면 _Commerce 작업 도구 안내서_&#x200B;의 [사용 가능한 패치](https://experienceleague.adobe.com/ko/tools/commerce-quality-patches)를 참조하십시오.
+릴리스된 패치의 전체 목록을 검토하려면 _Commerce 작업 도구 안내서_&#x200B;의 [사용 가능한 패치](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)를 참조하십시오.
 
 두 패키지 모두 클라우드 환경과 모든 Adobe Commerce 버전의 통합을 개선하고 중요, 선택 사항 및 사용자 지정 수정 사항의 빠른 전달을 지원합니다. 이 패키지를 사용하여 Commerce에 사용할 수 있는 모든 개별 패치에 대한 일반 정보를 적용, 되돌리기 및 볼 수 있습니다.
 
 >[!TIP]
 >
->[품질 패치 도구](https://experienceleague.adobe.com/ko/tools/commerce-quality-patches) 및 Commerce용 클라우드 패치를 Magento Open Source 및 Adobe Commerce 프로젝트에 대한 독립 패키지로 사용할 수 있습니다. Adobe은 비클라우드 프로젝트에 품질 패치 도구를 사용하는 것을 권장합니다.
+>[품질 패치 도구](https://experienceleague.adobe.com/en/tools/commerce-quality-patches) 및 Commerce용 클라우드 패치를 Magento Open Source 및 Adobe Commerce 프로젝트에 대한 독립 패키지로 사용할 수 있습니다. Adobe은 비클라우드 프로젝트에 품질 패치 도구를 사용하는 것을 권장합니다.
 
 원격 환경에 변경 내용을 배포할 때 `ece-tools` 패키지는 `magento/magento-cloud-patches` 및 `magento/quality-patches`을(를) 사용하여 보류 중인 패치를 확인하고 다음 순서로 자동으로 적용합니다.
 

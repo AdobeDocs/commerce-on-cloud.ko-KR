@@ -5,7 +5,7 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-TQID: https://experienceleague.adobe.com/H-A-2jStZ7GuPn2oE-OrZWhScp1GsjEUU1NHDQKhRBU
+TQID: 'https://experienceleague.adobe.com/H-A-2jStZ7GuPn2oE-OrZWhScp1GsjEUU1NHDQKhRBU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
     internal-label: Commerce
@@ -16,6 +16,12 @@ feature_v2:
     internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
     internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 8b9bbb36-cedc-5e11-a32c-96dd81cfc81d
+    internal-label: Docker
+  - id: adedf70c-c1e1-5734-acdc-c5c43b114964
+    internal-label: Release Notes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
@@ -26,7 +32,7 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e8754280e9df523442d29f0a6d203a183407cff5
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '4535'
 ht-degree: 0%
@@ -455,7 +461,7 @@ ht-degree: 0%
 
     - ![새 아이콘](../../assets/new.svg) **공식 이미지를 사용하도록 컨테이너 기본 이미지를 업데이트했습니다**—이제 [Cloud TLS 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container) 이미지가 공식 `debian:jessie` 도커 이미지를 기반으로 합니다.—<!--MAGECLOUD-4163-->
 
-    - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시&rbrack;**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.&lbrack;
+    - ![새 아이콘](../../assets/new.svg) **파운드 TLS 종료 프록시]**&#x200B;에 대한 지원이 추가됨-[파운드 구성 파일](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)은(는) 다음 ENV 변수를 추가하여 TLS 컨테이너의 도커 구성을 사용자 지정합니다.[
 
       - **`TimeOut`** - 시간을 첫 번째 바이트(TTFB) 시간 초과 값으로 설정합니다. 기본값은 300초입니다.
 

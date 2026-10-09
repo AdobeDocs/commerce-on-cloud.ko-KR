@@ -3,31 +3,45 @@ title: 기술 스택
 description: 클라우드 인프라에서 Commerce을 구성하는 기술 스택을 참조하십시오.
 feature: Cloud, Iaas, Paas
 exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
-TQID: https://experienceleague.adobe.com/2-uZdx1Oi-3LQUK-L7rC4kZWYcYobEhnVcUDNwOHpFs
+TQID: 'https://experienceleague.adobe.com/2-uZdx1Oi-3LQUK-L7rC4kZWYcYobEhnVcUDNwOHpFs'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+    internal-label: Compliance
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 subfeature_v2:
   - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
   - id: f2261633-201d-46c5-8a66-999e70527a83
+    internal-label: PCI
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 415
+source-wordcount: '415'
 ht-degree: 0%
-
 ---
-
 # 기술 스택
 
 아래와 같이 클라우드 인프라의 Adobe Commerce을 5개의 기능 계층으로 생각해 보십시오.
@@ -36,7 +50,7 @@ ht-degree: 0%
 
 1. [**클라우드 인프라**](pro-architecture.md): Adobe Commerce on cloud infrastructure Pro 프로젝트를 위해 Amazon Web Services(AWS) 또는 Microsoft Azure을 IaaS(Infrastructure as a Service) 기반으로 선택합니다.
 
-   Adobe은 정기적으로 가상 컴퓨팅 리소스(vCPU) 사용을 분석하고 리소스를 자동으로 할당하여 장기 사용을 최적화하고 최대 연간 vCPU 일 허용량을 초과할 위험을 완화합니다. 특정 기간 동안 사이트 트래픽이 증가할 것으로 예상되면 [임시 업사이징을 요청](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)할 지원 티켓을 계속 열어야 합니다.
+   Adobe은 정기적으로 가상 컴퓨팅 리소스(vCPU) 사용을 분석하고 리소스를 자동으로 할당하여 장기 사용을 최적화하고 최대 연간 vCPU 일 허용량을 초과할 위험을 완화합니다. 특정 기간 동안 사이트 트래픽이 증가할 것으로 예상되면 [임시 업사이징을 요청](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)할 지원 티켓을 계속 열어야 합니다.
 
 1. [**Platform as a Service**](cloud-architecture.md): 클라우드 인프라 프로젝트의 각 Adobe Commerce은 서비스 개발, 테스트 및 통합을 위한 PaaS(Platform as a Service) 통합 환경을 제공합니다.
 1. [**Adobe Commerce**](../project/overview.md): 클라우드 인프라의 Adobe Commerce은 PHP, MySQL(MariaDB), Redis 또는 Valkey, 메시지 큐 서비스([!DNL RabbitMQ] 또는 [!DNL ActiveMQ]) 및 지원되는 검색 엔진 기술을 포함하는 사전 제공된 인프라를 제공합니다.

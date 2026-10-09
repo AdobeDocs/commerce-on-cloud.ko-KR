@@ -5,20 +5,28 @@ feature: Cloud, Configuration, Cache
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 42523ff9-d8ca-470a-ac7b-d2ce21edd830
-TQID: https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg
+TQID: 'https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 516
+source-wordcount: '516'
 ht-degree: 0%
-
 ---
-
 # 사후 배포 변수
 
 다음 _사후 배포_ 변수는 사후 배포 단계에서 작업을 제어하며 [전역 변수](variables-global.md)에서 값을 상속하고 재정의할 수 있습니다. `.magento.env.yaml` 파일의 `post-deploy` 단계에 다음 변수를 삽입합니다.
@@ -104,54 +112,54 @@ stage:
   <entity_type>:<pattern|url|product_sku>:<store_id|store_code>
   ```
 
-   - `entity_type`: 가능한 변형 `category`, `cms-page`, `product`, `store-page`
-   - `pattern|url|product_sku`: `regexp` 패턴 또는 정확히 일치하는 `url`을(를) 사용하여 URL을 필터링하거나 모든 페이지에 별표(\*)를 사용하십시오. `product` 엔터티 형식에 제품 sku 사용
-   - `store_id|store_code`: 저장소의 ID 또는 코드를 사용하거나 모든 저장소의 별표(\*)를 사용합니다. `|`(으)로 구분된 여러 저장소 ID 또는 코드를 전달할 수 있습니다
+  - `entity_type`: 가능한 변형 `category`, `cms-page`, `product`, `store-page`
+  - `pattern|url|product_sku`: `regexp` 패턴 또는 정확히 일치하는 `url`을(를) 사용하여 URL을 필터링하거나 모든 페이지에 별표(\*)를 사용하십시오. `product` 엔터티 형식에 제품 sku 사용
+  - `store_id|store_code`: 저장소의 ID 또는 코드를 사용하거나 모든 저장소의 별표(\*)를 사용합니다. `|`(으)로 구분된 여러 저장소 ID 또는 코드를 전달할 수 있습니다
 
   다음 예제에서는 이러한 조건을 기반으로 `category` 및 `cms-page` 엔터티 형식을 캐시합니다.
-   - ID가 `1`인 저장소의 모든 범주 페이지
-   - 코드가 `store1` 및 `store2`인 저장소의 모든 범주 페이지
-   - 코드가 `store_en`인 스토어의 범주 페이지 `cars`
-   - 모든 스토어의 cms 페이지 `contact`
-   - ID가 `1` 및 `2`인 저장소의 cms 페이지 `contact`
-   - `car_`이(가) 포함되어 있고 ID 2의 저장소에 대해 `html`(으)로 끝나는 모든 범주 페이지
-   - 코드가 `store_gb`인 스토어의 `tires_`이(가) 포함된 모든 범주 페이지
+  - ID가 `1`인 저장소의 모든 범주 페이지
+  - 코드가 `store1` 및 `store2`인 저장소의 모든 범주 페이지
+  - 코드가 `store_en`인 스토어의 범주 페이지 `cars`
+  - 모든 스토어의 cms 페이지 `contact`
+  - ID가 `1` 및 `2`인 저장소의 cms 페이지 `contact`
+  - `car_`이(가) 포함되어 있고 ID 2의 저장소에 대해 `html`(으)로 끝나는 모든 범주 페이지
+  - 코드가 `store_gb`인 스토어의 `tires_`이(가) 포함된 모든 범주 페이지
 
-     ```yaml
-     stage:
-       post-deploy:
-         WARM_UP_PAGES:
-           - "category:*:1"
-           - "category:*:store1|store2"
-           - "category:cars:store_en"
-           - "cms-page:contact:*"
-           - "cms-page:contact:1|2"
-           - "category:|car_.*?\\.html$|:2"
-           - "category:|tires_.*|:store_gb"
-     ```
+    ```yaml
+    stage:
+      post-deploy:
+        WARM_UP_PAGES:
+          - "category:*:1"
+          - "category:*:store1|store2"
+          - "category:cars:store_en"
+          - "cms-page:contact:*"
+          - "cms-page:contact:1|2"
+          - "category:|car_.*?\\.html$|:2"
+          - "category:|tires_.*|:store_gb"
+    ```
 
   다음 예제에서는 이러한 조건을 기반으로 `product` 엔터티 형식에 대해 캐싱합니다.
-   - 모든 스토어의 모든 제품(성능 문제를 방지하기 위해 스토어당 100개로 프로그래밍 방식으로 제한)
-   - `store1` 스토어의 모든 제품
-   - 모든 스토어에 대해 `sku1`을(를) 사용하는 제품
-   - 코드가 `store1` 및 `store2`인 스토어에 대해 `sku1`이(가) 있는 제품
-   - 코드가 `store1` 및 `store2`인 스토어의 경우 `sku1`, `sku2` 및 `sku3`인 제품
+  - 모든 스토어의 모든 제품(성능 문제를 방지하기 위해 스토어당 100개로 프로그래밍 방식으로 제한)
+  - `store1` 스토어의 모든 제품
+  - 모든 스토어에 대해 `sku1`을(를) 사용하는 제품
+  - 코드가 `store1` 및 `store2`인 스토어에 대해 `sku1`이(가) 있는 제품
+  - 코드가 `store1` 및 `store2`인 스토어의 경우 `sku1`, `sku2` 및 `sku3`인 제품
 
-     ```yaml
-     stage:
-       post-deploy:
-         WARM_UP_PAGES:
-           - "product:*:*"
-           - "product:*:store1"
-           - "product:sku1:*"
-           - "product:sku1:store1|store2"
-           - "product:sku1|sku2|sku3:store1|store2"
-     ```
+    ```yaml
+    stage:
+      post-deploy:
+        WARM_UP_PAGES:
+          - "product:*:*"
+          - "product:*:store1"
+          - "product:sku1:*"
+          - "product:sku1:store1|store2"
+          - "product:sku1|sku2|sku3:store1|store2"
+    ```
 
   다음 예제에서는 이러한 조건을 기반으로 `store-page` 엔터티 형식에 대해 캐싱합니다.
-   - 모든 스토어의 `/contact-us` 페이지
-   - ID가 `1`인 저장소의 `/contact-us` 페이지
-   - 코드가 `code1` 및 `code2`인 스토어의 `/contact-us` 페이지
+  - 모든 스토어의 `/contact-us` 페이지
+  - ID가 `1`인 저장소의 `/contact-us` 페이지
+  - 코드가 `code1` 및 `code2`인 스토어의 `/contact-us` 페이지
 
   ```yaml
         stage:

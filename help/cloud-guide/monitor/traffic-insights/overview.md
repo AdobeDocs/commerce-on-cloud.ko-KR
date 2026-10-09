@@ -3,13 +3,22 @@ title: Adobe Commerce 트래픽 인사이트
 description: Adobe Commerce 트래픽 인사이트 도구에 대해 알아보고, Adobe Commerce on cloud infrastructure 프로젝트의 트래픽을 이해하는 데 어떻게 도움이 되는지에 대해 알아봅니다.
 feature: Cloud, Observability
 role: Admin
-source-git-commit: 119c9415abd22221e3ae785445d537f0609eba14
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
-
 ---
-
 # 트래픽 인사이트
 
 Adobe Commerce Traffic Insights는 [!DNL Adobe Commerce on Cloud Infrastructure] Fastly CDN 트래픽을 시각화하는 New Relic One 앱입니다. 이미 `Log` 이벤트로 New Relic에 전달되는 Fastly CDN 액세스 로그 줄을 읽고 선택한 New Relic 계정 및 플랫폼 시간 범위로 범위가 지정된 조정된 조정된 차트 집합을 렌더링합니다. 이렇게 하면 New Relic의 쿼리 언어인 NRQL을 직접 작성하지 않고도 스토어의 에지 트래픽을 시각화할 수 있습니다.

@@ -5,28 +5,40 @@ role: Admin
 feature: Cloud, Roles/Permissions
 level: Beginner
 short-description: Cloud Console 또는 CLI에서 사용자를 추가하고 프로젝트 및 환경 역할을 할당합니다.
-last-substantial-update: 2026-06-11
+last-substantial-update: 2026-06-11T00:00:00.000Z
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
+TQID: 'https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+    internal-label: Compliance
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e439352c-5b67-587d-b34e-d2a0aa5a0242
+    internal-label: Roles/Permissions
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1694
+source-wordcount: '1694'
 ht-degree: 0%
-
 ---
-
 # 사용자 액세스 관리
 
 클라우드 인프라의 Adobe Commerce 프로젝트는 역할 기반 액세스를 사용합니다. 프로젝트 수준에서 사용할 수 있는 두 가지 역할이 있습니다.
@@ -157,7 +169,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. _액세스_ 보기에서 **[!UICONTROL Add]**&#x200B;을(를) 클릭합니다.
 
-1. _[!UICONTROL Add User]_&#x200B;양식을 작성합니다.
+1. _[!UICONTROL Add User]_양식을 작성합니다.
 
    - 사용자 이메일 주소를 입력합니다.
 
@@ -258,7 +270,7 @@ Adobe Commerce on cloud infrastructure는 다음 애플리케이션 중 하나�
 
      >[!WARNING]
      >
-     >TFA가 있는 계정에 액세스할 수 없고 복구 코드 목록이 없는 경우 프로젝트 관리자에게 문의하거나 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 TFA 애플리케이션을 재설정해야 합니다.
+     >TFA가 있는 계정에 액세스할 수 없고 복구 코드 목록이 없는 경우 프로젝트 관리자에게 문의하거나 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 TFA 애플리케이션을 재설정해야 합니다.
 
 1. TFA 설정을 완료한 후 **저장**&#x200B;을 클릭하여 계정을 업데이트합니다.
 
@@ -311,4 +323,4 @@ MFA 적용이 활성화된 프로젝트의 경우 컴퓨터 사용자 및 자동
 
 ## 이 항목에 대한 추가 도움말
 
-- [Adobe Commerce 클라우드 프로젝트에 사용자를 추가할 수 없습니다](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project) — 사용자 추가에 실패할 때 문제를 해결합니다.
+- [Adobe Commerce 클라우드 프로젝트에 사용자를 추가할 수 없습니다](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project) — 사용자 추가에 실패할 때 문제를 해결합니다.

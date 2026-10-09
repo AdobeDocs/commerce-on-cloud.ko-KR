@@ -3,22 +3,29 @@ title: 사용자 정의 테마
 description: 클라우드 인프라에 Adobe Commerce을 사용하여 사용자 지정 테마를 설치하는 방법을 알아봅니다.
 feature: Cloud, Themes
 exl-id: 3ae4b0d5-9179-42c4-bb07-8ec09bd057d0
-TQID: https://experienceleague.adobe.com/rk-VP6z1tQSY-HMU-dD9hv6O9Wpesbp1o5KQMYapCJE
+TQID: 'https://experienceleague.adobe.com/rk-VP6z1tQSY-HMU-dD9hv6O9Wpesbp1o5KQMYapCJE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 8b440f30-6794-5ed6-981f-391de4e9b0cc
+    internal-label: Themes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 296
+source-wordcount: '296'
 ht-degree: 0%
-
 ---
-
 # 사용자 정의 테마
 
 프로젝트에 있는 하나 이상의 상점 및 사이트에 사용할 하나 이상의 테마를 설치할 수 있습니다. 테마에는 이미지, 글꼴, CSS, JavaScript, PHP 등을 포함하여 스토어를 완전히 디자인하는 여러 정적 파일이 포함됩니다. 테마의 코드를 파일 시스템에 추출하거나 작성기를 사용하여 테마를 추가할 수 있습니다.

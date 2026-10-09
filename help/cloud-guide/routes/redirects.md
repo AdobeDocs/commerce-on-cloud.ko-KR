@@ -3,23 +3,30 @@ title: 리디렉션
 description: Adobe Commerce on cloud infrastructure 프로젝트에 대한 리디렉션 규칙을 관리하는 방법을 알아봅니다.
 feature: Cloud, Routes
 exl-id: f70a9035-bbae-4d23-bb7c-c0de6a7ccf6c
-TQID: https://experienceleague.adobe.com/53acuGMa93oysIKX-agqJCttbxCdIFgyRpmeZh-G9gI
+TQID: 'https://experienceleague.adobe.com/53acuGMa93oysIKX-agqJCttbxCdIFgyRpmeZh-G9gI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 706
+source-wordcount: '706'
 ht-degree: 0%
-
 ---
-
 # 리디렉션
 
 리디렉션 규칙 관리는 웹 애플리케이션의 일반적인 요구 사항이며, 특히 시간이 지남에 따라 변경되거나 제거된 수신 링크를 잃지 않으려는 경우에 유용합니다.
@@ -34,7 +41,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->클라우드 인프라 프로젝트의 Adobe Commerce의 경우 `routes.yaml` 파일에서 regex가 아닌 리디렉션 및 다시 쓰기를 많이 구성하면 성능 문제가 발생할 수 있습니다. `routes.yaml` 파일이 32KB 이상인 경우 Fastly로 regex가 아닌 리디렉션 및 다시 쓰기를 오프로드하십시오. _Adobe Commerce 도움말 센터_&#x200B;에서 [Nginx(경로) 대신 Fastly로 리디렉션 오프로드](https://experienceleague.adobe.com/ko/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)를 참조하십시오.
+>클라우드 인프라 프로젝트의 Adobe Commerce의 경우 `routes.yaml` 파일에서 regex가 아닌 리디렉션 및 다시 쓰기를 많이 구성하면 성능 문제가 발생할 수 있습니다. `routes.yaml` 파일이 32KB 이상인 경우 Fastly로 regex가 아닌 리디렉션 및 다시 쓰기를 오프로드하십시오. _Adobe Commerce 도움말 센터_&#x200B;에서 [Nginx(경로) 대신 Fastly로 리디렉션 오프로드](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)를 참조하십시오.
 
 ## 전체 경로 리디렉션
 

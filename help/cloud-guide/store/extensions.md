@@ -3,24 +3,37 @@ title: 확장 관리
 description: 클라우드 인프라의 Adobe Commerce에서 확장을 설치하고 관리하는 방법을 알아봅니다.
 feature: Cloud, Extensions, Upgrade
 exl-id: 88c5ea06-fe79-4105-8b67-f16e9ef06210
-TQID: https://experienceleague.adobe.com/7ZNXOai-hYkUS4ff3bNW32Ny63DfJLMBG2Zti5OVxRM
+TQID: 'https://experienceleague.adobe.com/7ZNXOai-hYkUS4ff3bNW32Ny63DfJLMBG2Zti5OVxRM'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: a8ae7a5a-6cdc-5922-bd0d-6feb44b04984
+    internal-label: Upgrade
+  - id: f08fa0de-a550-4acd-b570-f81cf1d03aaf
+    internal-label: Commerce ecosystem
+subfeature_v2:
+  - id: dad884f1-e840-49a1-970e-2f965bdbc410
+    internal-label: Extensions
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 675
+source-wordcount: '675'
 ht-degree: 0%
-
 ---
-
 # 확장 관리
 
 [Adobe Commerce](https://marketplace.magento.com)에서 확장을 추가하여 Commerce Marketplace 응용 프로그램 기능을 확장할 수 있습니다. 예를 들어 테마를 추가하여 Storefront의 모양과 느낌을 변경하거나 언어 패키지를 추가하여 Storefront 및 관리자를 현지화할 수 있습니다.
@@ -61,7 +74,7 @@ ht-degree: 0%
 
 ## 확장 설치
 
-Adobe에서는 구현에 확장을 추가할 때 개발 분기에서 작업하는 것을 권장합니다. 확장을 설치할 때 확장 이름(`<VendorName>_<ComponentName>`)이 [`app/etc/config.php`](https://experienceleague.adobe.com/ko/docs/commerce-operations/configuration-guide/files/deployment-files) 파일에 자동으로 삽입됩니다. 파일을 직접 편집할 필요는 없습니다.
+Adobe에서는 구현에 확장을 추가할 때 개발 분기에서 작업하는 것을 권장합니다. 확장을 설치할 때 확장 이름(`<VendorName>_<ComponentName>`)이 [`app/etc/config.php`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/deployment-files) 파일에 자동으로 삽입됩니다. 파일을 직접 편집할 필요는 없습니다.
 
 **확장을 설치하려면**:
 
@@ -167,7 +180,7 @@ Composer를 사용하여 확장을 추가하면 배포 프로세스에서 확장
 
 ## 확장 업그레이드
 
-계속하기 전에 확장에 대한 작성기 이름과 버전이 필요합니다. 또한 확장이 프로젝트 및 Adobe Commerce 버전과 호환되는지 확인하십시오. 특히 시작하기 전에 [필요한 PHP 버전을 확인](https://experienceleague.adobe.com/ko/docs/commerce-operations/installation-guide/system-requirements)하세요.
+계속하기 전에 확장에 대한 작성기 이름과 버전이 필요합니다. 또한 확장이 프로젝트 및 Adobe Commerce 버전과 호환되는지 확인하십시오. 특히 시작하기 전에 [필요한 PHP 버전을 확인](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)하세요.
 
 **확장을 업데이트하려면**:
 
@@ -201,4 +214,4 @@ Composer를 사용하여 확장을 추가하면 배포 프로세스에서 확장
    git push origin <branch-names>
    ```
 
-오류가 발생하면 [구성 요소 오류에서 복구](../deploy/recover-failed-deployment.md)를 참조하십시오. Adobe Commerce에서 확장을 사용하는 방법에 대한 자세한 내용은 _관리 안내서_&#x200B;의 [확장](https://experienceleague.adobe.com/ko/docs/commerce-admin/start/resources/extensions)을 참조하세요.
+오류가 발생하면 [구성 요소 오류에서 복구](../deploy/recover-failed-deployment.md)를 참조하십시오. Adobe Commerce에서 확장을 사용하는 방법에 대한 자세한 내용은 _관리 안내서_&#x200B;의 [확장](https://experienceleague.adobe.com/en/docs/commerce-admin/start/resources/extensions)을 참조하세요.

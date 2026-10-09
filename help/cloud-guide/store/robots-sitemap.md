@@ -3,21 +3,30 @@ title: 사이트 맵 및 검색 엔진 로봇 추가
 description: 클라우드 인프라의 Adobe Commerce에 사이트 맵 및 검색 엔진 로봇을 추가하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-TQID: https://experienceleague.adobe.com/Nve-76Ow3rv0PrGEUVTSfr3eyJcw8IFj9bbpS10HnNY
+TQID: 'https://experienceleague.adobe.com/Nve-76Ow3rv0PrGEUVTSfr3eyJcw8IFj9bbpS10HnNY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 48c59cc5-3c2e-5df1-8756-f5c139a28932
+    internal-label: Site Navigation
+subfeature_v2:
+  - id: a1d22079-48b9-5e69-9ee6-eb236068ef34
+    internal-label: Search
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 616
+source-wordcount: '616'
 ht-degree: 0%
-
 ---
-
 # 사이트 맵 및 검색 엔진 로봇 추가
 
 `sitemap.xml` 파일을 생성하여 루트 디렉터리에 쓰려고 하면 다음 오류가 발생합니다.
@@ -57,7 +66,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` 파일에서 `404 error`이(가) 생성되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 `/robots.txt`에서 `/media/robots.txt`(으)로 리디렉션을 제거합니다.
+>`<domain.your.project>/robots.txt` 파일에서 `404 error`이(가) 생성되면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)하여 `/robots.txt`에서 `/media/robots.txt`(으)로 리디렉션을 제거합니다.
 
 ## Fastly VCL 코드 조각을 사용하여 다시 작성
 

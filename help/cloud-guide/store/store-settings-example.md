@@ -1,14 +1,20 @@
 ---
 title: 시스템별 설정 관리의 예
 description: 클라우드 인프라 환경의 모든 Adobe Commerce에서 스토어 구성 설정을 관리하고 동기화하는 방법에 대한 예를 참조하십시오.
-hidefromtoc: true
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+hidefromtoc: 'yes'
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 0%
-
 ---
-
 
 # 시스템별 설정 관리의 예
 
@@ -56,7 +62,7 @@ _정적 파일 최적화_&#x200B;는 JavaScript 및 CSS(Cascading Style Sheet)�
    ![로케일 변경](../../assets/locale-options.png)
 
 1. **구성 저장**&#x200B;을 클릭합니다.
-1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/tools/cache-management)합니다.
+1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)합니다.
 1. 관리자에서 로그아웃합니다.
 
 ## 값을 내보내고 config.php를 로컬 시스템으로 전송합니다.
@@ -159,7 +165,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 오른쪽 창에서 **JavaScript 설정**&#x200B;을 확장합니다.
 1. **JavaScript 파일 병합** 목록에서 **예**&#x200B;를 클릭합니다.
 1. **구성 저장**&#x200B;을 클릭합니다.
-1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/ko/docs/commerce-admin/systems/tools/cache-management)합니다.
+1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)합니다.
 1. 관리자에서 로그아웃합니다.
 
 dump 명령을 다시 실행하면 새 구성이 파일에 추가됩니다.

@@ -3,24 +3,39 @@ title: 캐시 구성 사용자 정의
 description: Fastly 서비스 설정이 완료된 후 캐시 구성 설정을 검토하고 사용자 지정하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-TQID: https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU
+TQID: 'https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2130
+source-wordcount: '2130'
 ht-degree: 0%
-
 ---
-
 # 캐시 구성 사용자 정의
 
 스테이징 및 프로덕션 환경에서 Fastly 서비스를 설정하고 테스트한 후 캐시 구성 설정을 검토하고 사용자 지정합니다. 예를 들어 설정을 업데이트하여 TLS가 HTTP 요청을 Fastly로 리디렉션하도록 하고, 제거 설정을 업데이트하며, 기본 인증을 활성화하여 개발 중에 사이트를 암호로 보호할 수 있습니다.
@@ -29,11 +44,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Fastly 캐시를 구성하는 데 사용할 수 있는 관리 옵션은 설치된 Magento 2용 Fastly CDN 모듈 버전에 따라 다릅니다. Adobe은 스테이징 및 프로덕션 환경에서 [Fastly 모듈을 업그레이드](fastly-configuration.md#upgrade)할 것을 권장합니다. 최신 정보는 [Magento2 모듈용 Fastly CDN에 대한 릴리스 노트](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)를 참조하십시오.
+>Fastly 캐시를 구성하는 데 사용할 수 있는 관리 옵션은 설치된 Magento 2용 Fastly CDN 모듈 버전에 따라 다릅니다. Adobe은 스테이징 및 프로덕션 환경에서 [Fastly 모듈을 업그레이드](fastly-configuration.md#upgrade)할 것을 권장합니다. 최신 정보는 [Magento2 모듈에 대한 Fastly CDN에 대한 릴리스 정보](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)를 참조하십시오.
 
 ## TLS 강제 실행
 
-Fastly는 암호화되지 않은 요청(HTTP)을 Fastly로 리디렉션하기 위한 _TLS 강제 적용_ 옵션을 제공합니다. 스테이징 또는 프로덕션 환경에 [유효한 SSL/TLS 인증서](fastly-configuration.md#provision-ssltls-certificates)가 제공되면 스토어의 Fastly 구성을 업데이트하여 TLS 강제 적용 옵션을 활성화할 수 있습니다. Magento 2 _설명서의_ Fastly CDN 모듈에서 Fastly [Force TLS 안내서](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)를 참조하십시오.
+Fastly는 암호화되지 않은 요청(HTTP)을 Fastly로 리디렉션하기 위한 _TLS 강제 적용_ 옵션을 제공합니다. 스테이징 또는 프로덕션 환경에 [유효한 SSL/TLS 인증서](fastly-configuration.md#provision-ssltls-certificates)가 제공되면 스토어의 Fastly 구성을 업데이트하여 TLS 강제 적용 옵션을 활성화할 수 있습니다. Magento 2 _설명서의_ Fastly CDN 모듈에서 Fastly [Force TLS 안내서](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)을(를) 참조하십시오.
 
 >[!NOTE]
 >
@@ -73,7 +88,7 @@ Fastly 서비스 구성은 관리자에 대한 HTTPS 요청에 대한 기본 시
 
 ## 제거 옵션 구성
 
-Fastly는 제품 범주, 제품 에셋 및 콘텐츠를 제거하는 옵션을 포함하여 Magento 캐시 관리 페이지에 여러 유형의 제거 옵션을 제공합니다. 활성화되면 Fastly는 이벤트가 해당 캐시를 자동으로 제거하는지 감시합니다. 제거 옵션을 비활성화하면 [캐시 관리] 페이지를 통해 업데이트를 완료한 후 Fastly 캐시를 수동으로 제거할 수 있습니다.
+Fastly는 제품 범주, 제품 에셋 및 콘텐츠를 제거하는 옵션을 포함하여 Magento Cache Management 페이지에 여러 유형의 제거 옵션을 제공합니다. 활성화되면 Fastly는 이벤트가 해당 캐시를 자동으로 제거하는지 감시합니다. 제거 옵션을 비활성화하면 [캐시 관리] 페이지를 통해 업데이트를 완료한 후 Fastly 캐시를 수동으로 제거할 수 있습니다.
 
 지우기 옵션은 다음과 같습니다.
 
@@ -202,7 +217,7 @@ Starter 및 Pro 프로젝트 모두 [!UICONTROL Domains] 옵션을 사용하여 
 
 - 시작 프로젝트의 경우 [!DNL Cloud Console]의 [!UICONTROL Domains] 탭 아래에 있는 프로젝트 URL로 이동하여 프로젝트 URL을 추가하십시오.
 
-- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
+- Pro 프로젝트의 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)을 제출하여 클라우드 프로젝트 구성에 도메인을 추가하십시오. 또한 지원 팀은 Adobe Commerce Fastly 계정 구성을 업데이트하여 도메인을 추가합니다.
 
 **관리자로부터 Fastly 도메인 구성을 관리하려면**:
 
