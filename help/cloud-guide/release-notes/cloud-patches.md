@@ -7,25 +7,33 @@ exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 1195121d2c83da858744839e82e14bd423ea5528
+    internal-label: Security
+source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
 workflow-type: tm+mt
-source-wordcount: 3067
+source-wordcount: '3097'
 ht-degree: 0%
-
 ---
-
 # Commerce용 클라우드 패치
 
 `magento/magento-cloud-patches` Composer 패키지는 모든 Adobe Commerce 버전과 클라우드 환경의 통합을 개선하고 중요한 수정 사항의 빠른 전달을 지원하는 필수 패치 집합을 제공합니다. Adobe은 `repo.magento.com`의 Commerce Composer 저장소를 통해 이 패키지를 배포합니다.
@@ -48,7 +56,13 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.21 {#latest}
+## v1.1.22 {#latest}
+
+릴리스 날짜: 2026년 10월 13일
+
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15727 -->
+
+## v1.1.21
 
 릴리스 날짜: 2026년 9월 08일
 
@@ -394,7 +408,7 @@ Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
 - **사이트 성능 개선**—사이트 성능에 영향을 주는 긴 로드 시간이 주기적으로 발생하는 `Magento\Framework\App\DeploymentConfig\Reader::load` 함수의 성능 문제를 수정합니다. <!--MCLOUD-5650-->
 
-- 결제 모듈이 있는 경우에만 결제 패치가 적용되도록 결제 방법 패치에 대한 패치 할당을 Magento 기본 패키지(magento/magento2-base) 대신 결제 모듈을 대상으로 업데이트했습니다.<!--MCLOUD-5666-->
+- 결제 모듈이 있는 경우에만 결제 패치가 적용되도록 결제 방법 패치에 대한 패치 할당이 Magento 기본 패키지(magento/magento2-base) 대신 결제 모듈을 대상으로 업데이트되었습니다.<!--MCLOUD-5666-->
 
 - Magento Open Source과의 호환성을 위해 패치를 업데이트했습니다.<!--MCLOUD-5701-->
 

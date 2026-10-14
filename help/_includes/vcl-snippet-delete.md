@@ -3,7 +3,6 @@ source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
-
 ---
 # Fastly용 사용자 지정 VCL 삭제를 위한 파일 포함
 
@@ -19,7 +18,7 @@ ht-degree: 0%
 
 1. _Action_ 열에서 삭제할 코드 조각 옆에 있는 휴지통 아이콘을 클릭합니다.
 
-1. 다음 모달 창에서 **DELETE**&#x200B;를 클릭하고 새 버전을 활성화합니다.
+1. 다음 모달 창에서 **DELETE**&#x200B;을(를) 클릭하고 새 버전을 활성화합니다.
 
 >[!WARNING]
 >

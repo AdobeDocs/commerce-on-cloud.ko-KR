@@ -25,9 +25,9 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: f25bd014c1b6f546d3395db1691128b3e63bfa85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '555'
 ht-degree: 0%
 ---
 # 개발 개요
@@ -75,7 +75,6 @@ Composer는 `vendor` 디렉터리에 프로젝트에 필요한 라이브러리 �
 - **vendor/magento/ece-tools** - `ece-tools` 패키지는 Adobe Commerce 버전 2.1.4 이상과 호환되므로 Adobe Commerce on cloud infrastructure 프로젝트를 관리하는 데 사용할 수 있는 다양한 기능을 제공합니다. 코드를 관리하고 프로젝트를 자동으로 빌드 및 배포하는 데 도움이 되도록 설계된 클라우드 인프라 명령의 스크립트와 Adobe Commerce이 포함되어 있습니다. [`ece-tools` 패키지 개요](../dev-tools/package-overview.md)를 참조하세요.
 - **vendor/magento/product-enterprise-edition**—이 메타패키지에는 모듈, 프레임워크, 테마 등을 비롯한 애플리케이션 구성 요소가 필요합니다.
 - **vendor/fastly2/magento2**—이 모듈은 Pro 스테이징 및 프로덕션 및 스타터 프로덕션 환경에 대한 Fastly CDN 및 서비스를 관리합니다. [Fastly 서비스](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)를 참조하세요.
-- **vendor/magento/module-paypal-on-boarding**—이 모듈은 PayPal 가맹점 계정에 연결하여 PayPal 결제 게이트웨이 체크아웃을 제공합니다. [PayPal 온보딩 도구](../store/paypal.md)를 참조하세요.
 - **공급업체/aem/rum**—이 모듈은 [운영 원격 분석](../monitor/operational-telemetry.md) 데이터 수집 도구를 관리합니다.
 
 >[!TIP]
