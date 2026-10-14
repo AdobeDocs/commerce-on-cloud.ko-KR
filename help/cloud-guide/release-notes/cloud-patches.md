@@ -29,9 +29,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
+source-git-commit: df46dbad973a1042e02fccc47c3fc17227a453a5
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3098'
 ht-degree: 0%
 ---
 # Commerce용 클라우드 패치
@@ -60,7 +60,7 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 릴리스 날짜: 2026년 10월 13일
 
-- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15727 -->
+- ![수정 아이콘](../../assets/fix.svg) **보안 개선 사항**—[Adobe Commerce 보안 업데이트 APSB26-153](https://www.adobe.com/trust/security/products/commerce/apsb26-153.html)에서 참조된 보안 수정 사항이 적용되었습니다.<!--MCLOUD-15727 -->
 
 ## v1.1.21
 
@@ -408,7 +408,7 @@ Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
 - **사이트 성능 개선**—사이트 성능에 영향을 주는 긴 로드 시간이 주기적으로 발생하는 `Magento\Framework\App\DeploymentConfig\Reader::load` 함수의 성능 문제를 수정합니다. <!--MCLOUD-5650-->
 
-- 결제 모듈이 있는 경우에만 결제 패치가 적용되도록 결제 방법 패치에 대한 패치 할당이 Magento 기본 패키지(magento/magento2-base) 대신 결제 모듈을 대상으로 업데이트되었습니다.<!--MCLOUD-5666-->
+- 결제 모듈이 있는 경우에만 결제 패치가 적용되도록 결제 방법 패치에 대한 패치 할당을 Magento 기본 패키지(magento/magento2-base) 대신 결제 모듈을 대상으로 업데이트했습니다.<!--MCLOUD-5666-->
 
 - Magento Open Source과의 호환성을 위해 패치를 업데이트했습니다.<!--MCLOUD-5701-->
 
