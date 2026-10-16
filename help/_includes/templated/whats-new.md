@@ -1,7 +1,7 @@
 ---
-source-git-commit: ad0b2ef144a1ad8579eb5e8d0c5a98690fd91fdd
+source-git-commit: 2e4b0e29f89050cddd138865dbd7f5b823c0427b
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '514'
 ht-degree: 1%
 ---
 # 새로운 기능 템플릿
@@ -9,6 +9,28 @@ ht-degree: 1%
 ## 새로운 기능
 
 이 페이지에는 지난 60일 동안의 변경 사항이 포함되어 있습니다. 복사 편집과 같은 모든 부분 업데이트는 이 목록에서 제외합니다.
+
+### 2026년 10월 13일
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>설명</th>
+      <th>유형</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>ECE-Tools v2002.2.15 릴리스 이후 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a> 및 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">오류 메시지</a>를 업데이트했습니다.</p>
+</td>
+      <td>
+        기술
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5">커밋</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026년 9월 10일
 
@@ -22,7 +44,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>버전 1.1.15부터 고객은 GitHub가 아닌 <code>repo.magento.com</code>의 Composer를 통해 Commerce용 Cloud Patches for Commerce 패키지를 다운로드해야 하며, 클라우드 인프라 권한에 대한 Adobe Commerce이 필요하다는 것을 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Commerce Cloud용 클라우드 패치</a> 및 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">도구 세트용 릴리스 정보</a>에 명확히 했습니다.</p>
+      <td><p>버전 1.1.15부터 고객은 GitHub가 아닌 <code>repo.magento.com</code>의 Composer를 통해 Commerce용 Cloud Patches for Commerce 패키지를 다운로드해야 하며, 클라우드 인프라 권한에 대한 Adobe Commerce이 필요하다는 것을 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Commerce Cloud용 클라우드 패치</a> 및 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">도구 세트용 릴리스 정보</a>에 명확히 했습니다.</p>
 </td>
       <td>
         피드백, 기술
@@ -44,7 +66,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools 릴리스, v2002.2.14 이후에 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a> 및 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">오류 메시지</a>가 업데이트되었습니다.</p>
+      <td><p>ECE-Tools 릴리스, v2002.2.14 이후에 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a> 및 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">오류 메시지</a>가 업데이트되었습니다.</p>
 </td>
       <td>
         기술
@@ -66,7 +88,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>새로운 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/monitor/new-relic/traffic-insights/overview">트래픽 인사이트</a> 앱은 사용자가 CDN 트래픽을 시각화하는 데 도움이 됩니다.</p>
+      <td><p>새로운 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/traffic-insights/overview">트래픽 인사이트</a> 앱은 사용자가 CDN 트래픽을 시각화하는 데 도움이 됩니다.</p>
 </td>
       <td>
         주요 업데이트, 새 주제
@@ -88,7 +110,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>현재 버전 및 패치 수준 지원을 반영하도록 Redis 및 Valkey 서비스 설명서를 업데이트하고 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/redis">Redis 서비스 설정</a>, <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/valkey">Valkey 서비스 설정</a> 및 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">변수 배포</a>를 포함하여 Cloud Guide 아키텍처 및 서비스 페이지에 Valkey 참조를 추가했습니다.</p>
+      <td><p>현재 버전 및 패치 수준 지원을 반영하도록 Redis 및 Valkey 서비스 설명서를 업데이트하고 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis">Redis 서비스 설정</a>, <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey">Valkey 서비스 설정</a> 및 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">변수 배포</a>를 포함하여 Cloud Guide 아키텍처 및 서비스 페이지에 Valkey 참조를 추가했습니다.</p>
 </td>
       <td>
         피드백, 주요 업데이트
@@ -96,7 +118,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/89a9594b50dfeacc4e0e7765f195d9bade00413d">커밋</a></td>
     </tr>
     <tr>
-      <td><p>Commerce 업그레이드 기간 동안 고객 가용성 요구 사항에 대한 지침을 추가하고 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Commerce 버전 업그레이드</a> 및 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/configure/service/services-yaml">서비스 구성</a>에서 Pro 서비스 업그레이드 요청 및 예약 프로세스를 명확히 했습니다.</p>
+      <td><p>Commerce 업그레이드 기간 동안 고객 가용성 요구 사항에 대한 지침을 추가하고 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Commerce 버전 업그레이드</a> 및 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml">서비스 구성</a>에서 Pro 서비스 업그레이드 요청 및 예약 프로세스를 명확히 했습니다.</p>
 </td>
       <td>
         피드백
@@ -118,7 +140,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools 릴리스, v2002.2.13 이후에 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다.</p>
+      <td><p>ECE-Tools 릴리스, v2002.2.13 이후에 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI 참조</a>가 업데이트되었습니다.</p>
 </td>
       <td>
         기술
@@ -126,7 +148,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0ac31574952505e92744535f861591abcdd8ac56">커밋</a></td>
     </tr>
     <tr>
-      <td><p>클라우드 인프라의 Adobe Commerce에 <a href="https://experienceleague.adobe.com/ko/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">수직 자동 크기 조정</a> 가용성을 추가했습니다.</p>
+      <td><p>클라우드 인프라의 Adobe Commerce에 <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">수직 자동 크기 조정</a> 가용성을 추가했습니다.</p>
 </td>
       <td>
         주요 업데이트
