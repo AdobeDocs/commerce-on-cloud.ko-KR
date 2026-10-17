@@ -5,6 +5,7 @@ solution-title: Commerce
 solution: Commerce
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: "Commerce"
 usetq: true
 landing-page-name: commerce
 landing-page-breadcrumb-title: Commerce
@@ -12,17 +13,15 @@ feature-set: Commerce
 role: Admin, Developer
 topic: Commerce, Development
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/commerce-on-cloud.ko-KR
+git-repo: https://github.com/AdobeDocs/commerce-on-cloud.en
 description: Adobe Commerce on Cloud Infrastructure 안내서
 index: true
-badgePaas: label="PaaS만" type="Informative" url="https://experienceleague.adobe.com/ko/docs/commerce/user-guides/product-solutions" tooltip="Adobe Commerce 온 클라우드 프로젝트(Adobe 관리 PaaS 인프라) 및 온프레미스 프로젝트에만 적용됩니다."
+badgePaas: label="PaaS만" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Adobe Commerce 온 클라우드 프로젝트(Adobe 관리 PaaS 인프라) 및 온프레미스 프로젝트에만 적용됩니다."
 source-git-commit: 15897d0d0ae489d5ec2bb73f71d5e0916274f293
 workflow-type: tm+mt
-source-wordcount: 74
+source-wordcount: '68'
 ht-degree: 0%
-
 ---
-
 
 # 내부 사용을 위한 메타데이터
 
