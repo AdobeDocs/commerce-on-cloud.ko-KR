@@ -24,7 +24,7 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
+source-git-commit: b8340500872006bee0181c7bb92d89f0ff47abd7
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 3%
@@ -36,7 +36,7 @@ ht-degree: 3%
 | 릴리스 정보 | 버전 | 설명 | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
 | [ece-tools 패키지](ece-tools-package.md) | 2002.2.15 | 클라우드 프로젝트를 관리 및 배포하도록 설계된 스크립트 및 도구 세트 | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.15) |
-| Commerce용 [클라우드 패치](cloud-patches.md) | 1.1.22 | 모든 Adobe Commerce 버전과 클라우드 환경의 통합을 개선하는 패치 세트입니다. 이 패키지에는 `ece-tools`을(를) 사용하여 배포할 때 적용되는 Adobe Commerce 패치와 사용 가능한 핫픽스가 포함되어 있습니다. | `repo.magento.com`의 Commerce Composer 저장소를 통해 `magento/magento-cloud-patches`(클라우드 인프라 권한 부여에 Adobe Commerce 필요. [Commerce용 클라우드 패치 릴리스 정보](cloud-patches.md) 참조) |
+| Commerce용 [클라우드 패치](cloud-patches.md) | 1.1.23 | 모든 Adobe Commerce 버전과 클라우드 환경의 통합을 개선하는 패치 세트입니다. 이 패키지에는 `ece-tools`을(를) 사용하여 배포할 때 적용되는 Adobe Commerce 패치와 사용 가능한 핫픽스가 포함되어 있습니다. | `repo.magento.com`의 Commerce Composer 저장소를 통해 `magento/magento-cloud-patches`(클라우드 인프라 권한 부여에 Adobe Commerce 필요. [Commerce용 클라우드 패치 릴리스 정보](cloud-patches.md) 참조) |
 | Commerce용 [Cloud Docker](cloud-docker.md) | 1.4.10 | Adobe Commerce을 로컬 클라우드 환경에 배포하기 위한 도커 이미지용 기능 및 구성 파일 | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.10) |
 | [Commerce의 클라우드 구성 요소](cloud-components.md) | 1.1.4 | 클라우드 인프라에 배포된 사이트를 위한 확장된 Adobe Commerce 핵심 기능 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.4) |
 
