@@ -18,9 +18,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 800e5c27d4d0879bafd32101fd70ec0f00f1880c
 workflow-type: tm+mt
-source-wordcount: '2514'
+source-wordcount: '2599'
 ht-degree: 0%
 ---
 # [!DNL Adobe Commerce Advanced Security]
@@ -57,11 +57,11 @@ ht-degree: 0%
 >
 >**현재 제한 사항**
 >
->2026년 3분기가 끝날 때까지 고객은 보트 관리 규칙을 직접 수정하거나 관리할 수 없습니다.
+>현재 고객은 보트 관리 규칙을 직접 수정하거나 관리할 수 없습니다.
 >
 >규칙을 추가, 수정 또는 조정하려면 [지원 티켓](https://experienceleague.adobe.com/home?lang=ko&support-tab=home#support)을 통해 Adobe Commerce 지원에 문의하십시오. 지원 팀이 요청된 변경 사항을 구현합니다.
 >
->2026년 4분기부터 Fastly는 고객이 Commerce 관리 패널에서 보트 관리 규칙을 관리할 수 있는 추가 기능 기능을 출시할 예정입니다.
+>2027년 1분기부터 Fastly는 고객이 Commerce 관리에서 보트 관리 규칙을 관리할 수 있는 추가 기능 기능을 출시할 예정입니다.
 
 ## 기본 규칙 및 보호
 
@@ -174,6 +174,12 @@ CDN 로그에는 Signal Sciences(Bot Protection/차세대 WAF)의 기본 제공 
 | 특정 URL 또는 API 끝점은 IP로 차단할 수 없는 대량 분산 트래픽에 의해 타깃팅됩니다 | 고급 속도 제한은 특정 끝점 및 트래픽 패턴에 대한 세분화된 제어를 제공합니다 |
 | 상점 첫 화면 콘텐츠에 액세스하는 AI 웹 크롤러 및 페처를 관리하려는 경우 | 보트 관리에는 구성 가능한 AI 보트 탐지 및 적용 정책이 포함되어 있습니다 |
 | 기존 Fastly CDN과 통합된 Adobe 지원 에지 보안 솔루션이 필요합니다 | [!DNL Advanced Security]은(는) 이미 상점을 제공하는 동일한 Fastly 에지 플랫폼에서 실행됩니다. |
+
+#### Headless 구현을 위한 지침
+
+Adobe Commerce 사이트에서 Storefront가 기본 Adobe Commerce Storefront가 아니고 별도의 Storefront 공급자를 통해 호스팅 또는 전달되는 Headless 구현을 사용하는 경우 보트 보호 솔루션을 선택하기 전에 영향을 받는 트래픽이 제공되는 위치를 고려하십시오.
+
+Storefront 트래픽의 경우 보트 또는 웹 크롤러 활동이 주로 제품 세부 사항 페이지(PDP), 제품 목록 페이지(PLP) 또는 카테고리 페이지와 같은 프론트엔드 Storefront 페이지를 타겟팅하는 경우 Storefront 공급자와 협력하여 해당 Storefront에서 사용할 수 있는 보트 관리 또는 보안 기능을 평가하십시오.
 
 ### 기존 보호 사용 시기
 
