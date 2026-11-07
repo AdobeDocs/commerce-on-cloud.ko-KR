@@ -57,7 +57,7 @@ ht-degree: 0%
 
 모든 시작 환경 및 Pro 통합 환경에 직접 [!DNL Xdebug]을(를) 사용하도록 설정할 수 있습니다. 이 구성 단계는 Pro 프로덕션 및 스테이징 환경에는 필요하지 않습니다. [Pro 스테이징 및 프로덕션용 디버그](#debug-for-pro-staging-and-production)를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505681?captions=kor&learn=on)
 
 프로젝트에 대해 [!DNL Xdebug]을(를) 사용하려면 `.magento.app.yaml` 파일의 `runtime:extensions` 섹션에 `xdebug`을(를) 추가하십시오.
 
@@ -97,7 +97,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
 ### PhpStorm 서버 구성
 
->[!VIDEO](https://video.tv.adobe.com/v/3437409?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505699?captions=kor&learn=on)
 
 [!DNL Xdebug]에서 제대로 작동하도록 [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE를 구성해야 합니다.
 
@@ -137,7 +137,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
 이렇게 하면 응용 프로그램이 Adobe Commerce 응용 프로그램의 요청을 처리할 수 있는 올바른 디버그 설정을 가질 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437426?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505744?captions=kor&learn=on)
 
 1. PHPStorm 애플리케이션을 열고 화면 오른쪽 상단의 **[!UICONTROL Add Configuration]**&#x200B;을(를) 클릭합니다.
 
@@ -154,7 +154,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
 ### 포트 전달 설정
 
->[!VIDEO](https://video.tv.adobe.com/v/3437410?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505690?captions=kor&learn=on)
 
 서버에서 로컬 시스템에 `XDEBUG` 연결을 매핑합니다. 모든 유형의 디버깅을 수행하려면 Adobe Commerce on cloud infrastructure 서버에서 로컬 시스템으로 포트 9000을 전달해야 합니다. 다음 섹션 중 하나를 참조하십시오.
 
@@ -323,7 +323,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
 이는 사용된 구성에 대한 데모뿐만 아니라 원격 디버깅 세션을 시작하기 위한 GET 매개 변수에 대한 데모입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505718?captions=kor&learn=on)
 
 1. 원격 디버깅을 사용하도록 설정합니다. 브라우저의 사이트를 방문하여 `KEY`이(가) `xdebug_key`의 값인 URL에 다음을 추가하십시오.
 
